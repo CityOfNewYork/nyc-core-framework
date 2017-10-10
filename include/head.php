@@ -37,6 +37,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="/examples">Articles</a>
                 <a class="dropdown-item" href="/examples/forms.php">Forms</a>
+                <a class="dropdown-item" href="/examples/accordions.php">Accordions</a>
                 <a class="dropdown-item" href="/examples/tables.php">Tables</a>
               </div>
 

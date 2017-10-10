@@ -5390,7 +5390,7 @@ dd:last-child {
   margin-right: 3rem !important;
   margin-left: 3rem !important; }
 
-.my-5, hr.divider {
+.my-5 {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important; }
 
@@ -6548,10 +6548,12 @@ body {
       border-color: orange; } }
 
 @media (min-width: 576px) {
+  #marquee,
   #content {
     font-size: 1.125rem; } }
 
 @media (min-width: 768px) {
+  #marquee,
   #content {
     font-size: 1.25rem; } }
 
@@ -6622,3 +6624,12 @@ table {
     margin: 0;
     position: static;
     background: black; } }
+
+.text-white a {
+  color: white; }
+
+a.card-body:hover {
+  text-decoration: none; }
+
+a.card-body:hover p.card-link {
+  text-decoration: underline; }

@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25900",
 "files": {
+	"\/.gitattributes": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -49,12 +55,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/tables.php",
-		"oF": 0
-		},
-	"\/examples\/untitled": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/examples\/untitled",
 		"oF": 0
 		},
 	"\/grid\/index.php": {
@@ -1227,12 +1227,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"\/typography.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/typography.html",
-		"oF": 0
 		},
 	"\/typography\/index.php": {
 		"ft": 8192,

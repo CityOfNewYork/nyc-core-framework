@@ -8,7 +8,9 @@
 
 #{$article}{}
 
-#{$content}{
+#marquee, 
+#{$content}
+{
 	@include media-breakpoint-up(sm) { font-size: 1.125rem; }
 	@include media-breakpoint-up(md) { font-size: 1.25rem; }
 }
@@ -32,11 +34,13 @@ dd{
 // Color overrides
 
 #main-navigation{
+	
 	a.nav-link{ @extend .text-primary; }
 	a.nav-link.active{ @extend .text-dark; }
 }
 
 .list-group-item.active{
+
 	a{ color: white; }
 }
 
@@ -59,19 +63,13 @@ dd{
 	}
 }
 
-#{$global-header} {
-	@extend .py-2; 
-}
+#{$global-header} { @extend .py-2; }
 
 #{$article-header}{
 	@extend .bg-light;
 	@extend .p-4;
 	@extend .p-md-5;
 	@extend .mb-5;
-}
-
-hr.divider{
-	@extend .my-5;
 }
 
 .related-articles{
@@ -127,7 +125,6 @@ hr.divider{
 	}
 }
 
-
 .carousel-control-prev, 
 .carousel-control-next{ width: 10%; }
 .carousel-caption{ left: 10%; right: 10%; bottom: 10%; }
@@ -145,4 +142,13 @@ hr.divider{
 		position: static; 
 		background: black;
 	}
+}
+
+.text-white{
+	a{ color: white; }
+}
+
+a.card-body{
+	&:hover{ text-decoration: none; }
+	&:hover p.card-link{ text-decoration: underline; }
 }

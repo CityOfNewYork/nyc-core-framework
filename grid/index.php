@@ -30,13 +30,13 @@
           </div>
 
           <div class="row">
-            <div class="col-md">
+            <div class="col-lg">
               <p>1 of 3</p>
             </div>
-            <div class="col-md">
+            <div class="col-lg">
               <p>2 of 3</p>
             </div>
-            <div class="col-md">
+            <div class="col-lg">
               <p>3 of 3</p>
             </div>
           </div>
