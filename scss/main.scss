@@ -1,0 +1,148 @@
+
+@import "project-variables";
+@import "bootstrap";
+
+@import "helpers";
+
+//Typography
+
+#{$article}{}
+
+#{$content}{
+	@include media-breakpoint-up(sm) { font-size: 1.125rem; }
+	@include media-breakpoint-up(md) { font-size: 1.25rem; }
+}
+
+#{$nav},
+#{$form},
+#{$table} 
+{ font-size: 18px; }
+
+// Generic Selectors
+
+p,
+a, 
+ul, 
+li, 
+dl, 
+dd{
+	&:last-child{ @extend .mb-0; }
+}
+
+// Color overrides
+
+#main-navigation{
+	a.nav-link{ @extend .text-primary; }
+	a.nav-link.active{ @extend .text-dark; }
+}
+
+.list-group-item.active{
+	a{ color: white; }
+}
+
+// Customization
+
+[class*="row"],
+[class*="row-"]
+{
+	@extend .no-gutters;
+}
+
+#content{
+	&.grid, 
+	&.mixed{
+		[class*="col-"]{
+			@extend .border;
+			@extend .border-info;
+			@extend .p-4;
+		}
+	}
+}
+
+#{$global-header} {
+	@extend .py-2; 
+}
+
+#{$article-header}{
+	@extend .bg-light;
+	@extend .p-4;
+	@extend .p-md-5;
+	@extend .mb-5;
+}
+
+hr.divider{
+	@extend .my-5;
+}
+
+.related-articles{
+
+	div.card-footer{
+		border: none;
+		background: none;
+		@extend .pb-4;
+	}
+}
+
+// Accessibility
+
+#accordion.accessible {
+
+	a[aria-expanded="true"], 
+	a[aria-expanded="false"]{
+		
+		&:before, 
+		&:after{
+		    font-family: 'FontAwesome';
+		    float: right;
+		    color: grey;
+		}
+	}
+
+	a[aria-expanded="true"]:after { content: "\f106"; }
+	a[aria-expanded="false"]:after { content: "\f107"; }
+}
+
+.responsive-wrapper{
+
+	min-width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+
+	th { min-width: 80px; }
+}
+
+@include media-breakpoint-down(sm){
+
+	.display-1{ font-size: $h1-font-size; }
+	.display-2{ font-size: $h2-font-size; }
+	.display-3{ font-size: $h3-font-size; }
+	.display-4{ font-size: $h4-font-size; }
+
+	.display-1, 
+	.display-2, 
+	.display-3, 
+	.display-4
+	{ 
+		font-weight: $headings-font-weight; 
+	}
+}
+
+
+.carousel-control-prev, 
+.carousel-control-next{ width: 10%; }
+.carousel-caption{ left: 10%; right: 10%; bottom: 10%; }
+
+@include media-breakpoint-down(md){
+	
+	.carousel-control-prev, 
+	.carousel-control-next{ display: none; }
+
+	.carousel-indicators{ padding-bottom: 1.5rem; }
+
+	.carousel-indicators, 
+	.carousel-caption{
+		margin: 0;
+		position: static; 
+		background: black;
+	}
+}

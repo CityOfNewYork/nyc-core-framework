@@ -1,0 +1,13 @@
+// Breakpoints
+
+body{ border-top: 12px solid;
+	@include media-breakpoint-up(sm) { border-color:blue; }
+	@include media-breakpoint-up(md) { border-color:purple; }
+	@include media-breakpoint-up(lg) { border-color:red; }
+	@include media-breakpoint-up(xl) { border-color:orange; }
+}
+
+#{$content}{ }
+
+
+
