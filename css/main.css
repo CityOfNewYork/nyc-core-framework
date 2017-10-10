@@ -522,14 +522,11 @@ pre {
   margin-right: -15px;
   margin-left: -15px; }
 
-.no-gutters, [class*="row"],
-[class*="row-"] {
+.no-gutters, [class*="row"] {
   margin-right: 0;
   margin-left: 0; }
   .no-gutters > .col, [class*="row"] > .col,
-  [class*="row-"] > .col,
-  .no-gutters > [class*="col-"], [class*="row"] > [class*="col-"],
-  [class*="row-"] > [class*="col-"] {
+  .no-gutters > [class*="col-"], [class*="row"] > [class*="col-"] {
     padding-right: 0;
     padding-left: 0; }
 
@@ -6564,6 +6561,16 @@ table {
 
 .list-group-item.active a {
   color: white; }
+
+body > footer nav.flex-column > a {
+  display: inline-block;
+  background: rgba(255, 255, 0, 0.5); }
+  body > footer nav.flex-column > a:hover {
+    text-decoration: underline; }
+
+.link-list a {
+  padding: 0.5rem 1rem;
+  display: inline-block; }
 
 .related-articles div.card-footer {
   border: none;

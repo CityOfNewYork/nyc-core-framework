@@ -60,10 +60,10 @@
             <div class="col-md-8">
              <p>1 of 2</p>
              <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg">
                 1 of 2
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg">
                 <p>2 of 2</p>
               </div>
             </div>

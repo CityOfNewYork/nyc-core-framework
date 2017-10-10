@@ -46,11 +46,11 @@ dd{
 
 // Customization
 
-[class*="row"],
-[class*="row-"]
-{
+[class*="row"]{
 	@extend .no-gutters;
 }
+
+[class*="col"]{}
 
 #content{
 	&.grid, 
@@ -64,6 +64,21 @@ dd{
 }
 
 #{$global-header} { @extend .py-2; }
+
+#{$global-footer} nav.flex-column > a{
+	display: inline-block;
+	background: fade-out(yellow, $amount);
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.link-list{
+	a{
+		padding: 0.5rem 1rem;
+		display: inline-block;
+	}
+}
 
 #{$article-header}{
 	@extend .bg-light;
