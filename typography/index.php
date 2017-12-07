@@ -12,8 +12,8 @@
 
     <article>
 
-      <header class="bg-secondary text-white">
-        <h1 class="display-1 text-center">Typography</h1>
+      <header class="p-4 p-md-5 mb-5 bg-deep-blue text-white">
+        <h1 class="display-1 text-center"><?php echo $section; ?></h1>
       </header>
 
       <div class="container">
@@ -47,6 +47,8 @@
 
       <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat parturient scelerisque.</p>
 
+      <h5>Generic list</h5>
+
       <ul>
         <li>List Item 1</li>
         <li>List Item 2</li>
@@ -54,14 +56,29 @@
         <li>List Item 4</li>
       </ul>
 
+      <h5>Unstyled list with nested list</h5>
+
+      <ul class="list-unstyled">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4
+          <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+          </ul>
+        </li>
+      </ul>
+
       <dl>
-        <dt>Description lists</dt>
+        <dt>Description list</dt>
         <dd>A description list is perfect for defining terms.</dd>
-        <dt>Euismod</dt>
-        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd>
-        <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-        <dt>Malesuada porta</dt>
-        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+        <dt>Description list</dt>
+        <dd>A description list is perfect for defining terms.</dd>
+        <dt>Description list</dt>
+        <dd>A description list is perfect for defining terms.</dd>
       </dl>
 
       <blockquote class="blockquote blockquote text-right bg-light p-5">
@@ -82,5 +99,4 @@
 </div><!-- content -->
 
 <?php include_once($path . 'foot.php'); ?>
-
 <?php include_once($path . 'global-footer.php'); ?>

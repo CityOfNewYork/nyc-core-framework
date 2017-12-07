@@ -1,0 +1,323 @@
+//
+// Functions (required)
+//
+
+// Default Bootstrap functions - get values from color maps
+
+@function color($key: "blue") {
+  @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function gray($key: "100") {
+  @return map-get($grays, $key);
+}
+
+@function theme-color-level($color-name: "primary", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, #000, #fff);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+//
+// Accessible color overrides
+// (define before Bootstrap import)
+//
+
+// Default grays
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Default colors
+
+$blue: #0072ED;
+$blue: #006fe6;
+$pink: #E21B76;
+$orange: #D64309;
+$green: #218838;
+$cyan: #008295;
+
+// Accessible gray overrides
+
+$secondary: $gray-700; 
+$dark: $gray-900;
+$text-muted: $gray-700;
+$blockquote-small-color: $gray-700;
+$input-placeholder-color: $gray-700;
+$dropdown-header-color: $gray-700;
+$figure-caption-color: $gray-700;
+$breadcrumb-active-color: $gray-700;
+
+$carousel-control-opacity: 1;
+
+// Shared variables
+
+@import "global-variables.scss";
+@import "custom-functions.scss";
+
+//
+// Import Bootstrap 4.0.0
+//
+
+@import "../bootstrap.4.0.0/scss/bootstrap";
+
+//
+// Theme variables
+//
+
+$narrow-width: 700px;
+$wide-width: 1400px;
+
+// HTML and Body tag improvements
+
+html{ 
+	-webkit-font-smoothing: antialiased;
+	background: $gray-200;
+	overflow-x: hidden;
+}
+
+body{
+	font-size: 1.25rem;
+	color: $black;
+}
+
+img{ vertical-align: top; }
+
+// Custom classes added for accessibility
+
+.narrow,
+.wide
+{ @extend .mx-auto; }
+
+.narrow{ max-width: $narrow-width; }
+.wide{ max-width: $wide-width; }
+
+.has-shadow{ @include boxShadow; }
+
+.has-arrow{
+
+	&:hover{ text-decoration: none; } 
+	&:after{ 
+	   content: '\f0da';
+	   font-family: FontAwesome;
+	   font-weight: normal;
+	   font-style: normal;
+	   text-decoration: none ;
+	   margin-left:15px;
+	}
+}
+
+// Opacity Classes
+
+.opacity-10{ @include opacity(0.10); }
+.opacity-20{ @include opacity(0.20); }
+.opacity-30{ @include opacity(0.30); }
+.opacity-40{ @include opacity(0.40); }
+.opacity-50{ @include opacity(0.50); }
+.opacity-60{ @include opacity(0.60); }
+.opacity-70{ @include opacity(0.70); }
+.opacity-80{ @include opacity(0.80); }
+.opacity-90{ @include opacity(0.90); }
+
+// Remove margin bottom on last-child pseudo elements
+
+p,
+a, 
+ul, 
+li, 
+dl, 
+dd
+{
+	&:last-child{ margin-bottom: 0; }
+}
+
+// Remove default margins to <hr> tags 
+
+hr{ margin: 0; }
+
+.text-white a, 
+.text-white a:hover, 
+{ color: white; }
+
+// Extras 
+
+.featured-panel{
+
+	position: relative;
+
+	.image,
+	.message, 
+	.row
+	{ @extend .w-100; }
+
+	.image{
+		@extend	.image;
+
+		img{
+			@extend	.w-100;
+			@extend	.d-block;
+		}
+	}
+
+	&.cover{
+		
+		@extend .d-md-flex;
+
+		.message{
+			@extend .align-self-md-center;
+			@extend .d-md-flex;
+		}
+
+		@include media-breakpoint-up(md){
+			.message{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+      			transform: translate(-50%,-50%);
+      		}
+
+			img{ @include opacity(0.25); }
+		}
+	}
+
+	&.box{
+		
+		@extend .d-lg-flex;
+
+		.message{
+			@extend .d-lg-flex;
+			@extend .align-self-lg-center;
+			@extend .mx-auto;
+		}
+
+		@include media-breakpoint-down(md){
+			text-align: center;
+			div.message{ max-width: 540px; }
+		}
+
+		@include media-breakpoint-up(lg){
+			div.message{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+      			transform: translate(-50%,-50%);
+			}
+		}
+	}
+}
+
+.link-list{
+	a{
+		padding: 0.5rem 1rem;
+		display: inline-block;
+	}
+}
+
+// Accessibility
+
+// Responsive display-* classes
+
+@include media-breakpoint-down(sm){
+	.display-1{ font-size: $h1-font-size; }
+	.display-2{ font-size: $h2-font-size; }
+	.display-3{ font-size: $h3-font-size; }
+	.display-4{ font-size: $h4-font-size; }
+}
+
+// Accessible accordions
+
+#accordion.accessible{
+	a[aria-expanded="true"], 
+	a[aria-expanded="false"]{
+		
+		&:after{
+		    font-family: 'FontAwesome';
+		    float: right;
+		    color: grey;
+		}
+	}
+
+	a[aria-expanded="true"]:after { content: "\f077"; }
+	a[aria-expanded="false"]:after { content: "\f078"; }
+}
+
+a.btn[data-toggle="collapse"]{
+
+	overflow: hidden;
+	
+
+	&:after{
+	    font-family: 'FontAwesome';
+	    float: right;
+	    color: white;
+	}
+
+	&[aria-expanded="true"]:after { content: "\f068"; }
+	&[aria-expanded="false"]:after { content: "\f067"; }
+}
+
+.toggle-title{
+	text-align: left;
+	width: 90%;
+	white-space: normal;
+	display: inline-block
+}
+
+// Carousel
+
+.carousel-control-prev, 
+.carousel-control-next{ width: 10%; }
+.carousel-caption{ left: 10%; right: 10%; bottom: 10%; }
+
+@include media-breakpoint-down(md){
+	
+	.carousel-control-prev, 
+	.carousel-control-next{ display: none; }
+
+	.carousel-indicators{ padding-bottom: 1.5rem; }
+
+	.carousel-indicators, 
+	.carousel-caption{
+		margin: 0;
+		position: static; 
+		background: black;
+	}
+}
+
+// Fixes responsive table bug
+
+.responsive-wrapper{
+
+	min-width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+
+	th { min-width: 80px; }
+}
+
+//
+// Project styles
+//
+
+#main-navigation.navbar{
+	.nav-link{
+		color: $black;
+		
+		&.active{
+			color: $teal;
+		}
+	}
+}

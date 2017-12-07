@@ -1,0 +1,43 @@
+article > header {
+  text-transform: capitalize; }
+
+.bg-primary {
+  background: green; }
+
+.color-swatches .card {
+  border: none;
+  border-radius: 0;
+  border-color: white;
+  margin-bottom: 0; }
+  .color-swatches .card .card-header,
+  .color-swatches .card .card-footer {
+    background-color: transparent; }
+
+.search-toggler,
+.navigation-toggler {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: 0; }
+  .search-toggler:focus,
+  .navigation-toggler:focus {
+    outline: none; }
+
+.navigation-toggler > span {
+  background: url("/images/btn-menu.svg"); }
+
+.navigation-toggler > span {
+  width: 30px;
+  height: 30px;
+  display: block; }
+
+.navigation-toggler[aria-expanded="true"] > span {
+  background-position: -30px; }
+
+.wrap-main-navigation .nav-link {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+#global-navigation-device .nav-link {
+  padding-left: 0;
+  padding-right: 0; }

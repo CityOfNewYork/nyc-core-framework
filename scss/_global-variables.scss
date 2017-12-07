@@ -1,0 +1,78 @@
+$amount: 0.5;
+
+//
+// Global Colors
+//
+
+$white: white;
+$black: black;
+
+// Theme colors
+
+$nyc-blue-shade: #003558;
+$brand-secondary: #126BB2;
+$brand-tertiary: #00857b;
+$brand-quinary: #FFE540;
+$brand-senary: #D93600;
+
+// NYC Colors
+
+$crimson: #D9003D;
+$brick-red: #881728;
+$emergency-red: #D61F27;
+$red-orange: #EE412F;
+$tech-orange: #F26E23;
+$empire-yellow: #F2AE1C;
+$sun-yellow: #FCED20;
+$lime-green: #B2E92E;
+$park-green: #75BD1D;
+$olive-green: #3A4420;
+$forest-green: #19502C;
+$spring-green: #0F8417;
+$clean-green: #00A35D;
+$teal: #008080;
+$aqua: #3CDCBE;
+$sky-blue: #44C8F5;
+$true-blue: #1461FF;
+$royal-blue: #00529A;
+$deep-blue: #1D2252;
+$deep-violet: #32006B;
+$violet: #6931BA;
+$purple: #782F92;
+$deep-magenta: #6C0053;
+$fuschia: #ED0F69;
+$pearl: #EDEAD8;
+
+$theme-colors: (
+
+  "white": $white,
+  "black": $black,
+
+  // NYC Colors
+
+  "crimson": $crimson,
+  "brick-red": $brick-red,
+  "emergency-red": $emergency-red,
+  "red-orange": $red-orange,
+  "tech-orange": $tech-orange,
+  "empire-yellow": $empire-yellow,
+  "sun-yellow": $sun-yellow,
+  "lime-green": $lime-green,
+  "park-green": $park-green,
+  "olive-green": $olive-green,
+  "forest-green": $forest-green,
+  "spring-green": $spring-green,
+  "clean-green": $clean-green,
+  "teal": $teal,
+  "aqua": $aqua,
+  "sky-blue": $sky-blue,
+  "true-blue": $true-blue,
+  "royal-blue": $royal-blue,
+  "deep-blue": $deep-blue,
+  "deep-violet": $deep-violet,
+  "violet": $violet,
+  "purple": $purple,
+  "deep-magenta": $deep-magenta,
+  "fuschia": $fuschia,
+  "pearl": $pearl,
+);

@@ -1,53 +1,72 @@
-<header>
+<header role="banner">
 
-  <div class="container">
+  <div class="container-fluid wide">
 
-    <nav class="navbar navbar-expand-md navbar-light" id="main-navigation">
+    <div class="row no-gutters py-3">
 
-      <a class="navbar-brand" href="/">Bootstrap Templates</a>
+      <div class="col d-flex">
+        <a class="align-self-center" href="/"><img src="/images/nyc-logo.svg"></a>
+      </div>
 
-      <button class="navbar-toggler" 
-      type="button" data-toggle="collapse" 
-      data-target="#target" 
-      aria-controls="target" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
+      <div class="col-auto d-flex">
 
-      <div class="collapse navbar-collapse" id="target">
+          <div class="wrap-main-navigation d-none d-md-block">
+          
+          <nav class="nav">
+            <?php include($path . 'global-navigation.php'); ?>
+          </nav>
 
-        <div class="navbar-nav ml-auto">
+        </div><!-- .wrap-navigation -->
 
-            <a href="/grid" class="nav-item nav-link <?php if($section == 'grid'){ echo 'active' ;} ?>">Grid</a>
-            <a href="/typography" class="nav-item nav-link <?php if($section == 'typography'){ echo 'active' ;} ?>">Typography</a>
-            <a href="/mixed" class="nav-item nav-link <?php if($section == 'mixed'){ echo 'active' ;} ?>">Mixed</a>
-
-            <div class="nav-item dropdown">
-
-              <a class="nav-link dropdown-toggle <?php if($section == 'examples'){ echo 'active' ;} ?>" 
-              href="http://example.com" 
-              id="navbarDropdownMenuLink" 
-              data-toggle="dropdown" 
-              aria-haspopup="true" 
-              aria-expanded="false">
-                Examples
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/examples">Articles</a>
-                <a class="dropdown-item" href="/examples/forms.php">Forms</a>
-                <a class="dropdown-item" href="/examples/accordions.php">Accordions</a>
-                <a class="dropdown-item" href="/examples/tables.php">Tables</a>
-              </div>
-
-            </div>
-        </div>
+        <button class="navigation-toggler align-self-center d-md-none" 
+        type="button" data-toggle="collapse" 
+        data-target="#global-navigation-device" 
+        aria-controls="target" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+          <span class="custom-icon"><span class="sr-only">Main Menu</span></span>
+        </button>
 
       </div>
 
-    </nav>
+      <div class="col-auto d-flex ml-3">
+
+        <button class="search-toggler align-self-center" 
+        type="button" data-toggle="collapse" 
+        data-target="#global-search" 
+        aria-controls="search" 
+        aria-expanded="false" 
+        aria-label="Toggle Search">
+          <span class="custom-icon"><span class="sr-only">Global Search</span>
+          <img src="/images/btn-global-search.svg" alt="Global Search">
+        </button>
+
+      </div>
 
   </div>
+
+
+  </div><!-- .container-fluid -->
+
+  <div class="collapse bg-black" id="global-search">
+
+    <form class="narrow p-4">
+      <div class="input-group">
+        <input class="form-control form-control-lg rounded-0 border-0" placeholder="What are you looking for?">
+        <div class="input-group-btn">
+          <button type="button" class="btn-true-blue btn-lg rounded-0 border-0">Search</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="collapse d-md-none" id="global-navigation-device">
+    <hr>
+    <nav class="nav flex-column p-3">
+      <?php include($path . 'global-navigation.php'); ?>
+    </nav>
+  </div>
+
 
 </header>
