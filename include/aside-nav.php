@@ -2,7 +2,7 @@
 data-toggle="collapse" 
 href="#aside-nav" 
 aria-expanded="false"
-aria-controls="collapseExample "><p class="toggle-title">Topics</p></a>
+aria-controls="collapseExample "><p class="toggle-title">Elements</p></a>
 
 <div class="collapse d-lg-block pt-3 sticky-top" id="aside-nav">
 

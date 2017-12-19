@@ -1,72 +1,38 @@
-<header role="banner">
+<?php include_once($path . 'nyc-top-header.php'); ?>
 
-  <div class="container-fluid wide">
+<?
 
-    <div class="row no-gutters py-3">
+  /*
 
-      <div class="col d-flex">
-        <a class="align-self-center" href="/"><img src="/images/nyc-logo.svg"></a>
-      </div>
+  // Header Types
+  
+  nav_primary_right
+  nav_primary_below
+  nav_secondary_right_primary_below
+  nav_navbar_only
+  
+  */
 
-      <div class="col-auto d-flex">
+  $header_type = 'nav_secondary_right_primary_below';
 
-          <div class="wrap-main-navigation d-none d-md-block">
-          
-          <nav class="nav">
-            <?php include($path . 'global-navigation.php'); ?>
-          </nav>
+  switch($header_type){
 
-        </div><!-- .wrap-navigation -->
+      case "nav_primary_right":
+        include_once($path . 'nav_primary_right.php');
+        break;
 
-        <button class="navigation-toggler align-self-center d-md-none" 
-        type="button" data-toggle="collapse" 
-        data-target="#global-navigation-device" 
-        aria-controls="target" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation">
-          <span class="custom-icon"><span class="sr-only">Main Menu</span></span>
-        </button>
+      case "nav_primary_below":
+        include_once($path . 'nav_primary_below.php');
+        break;
 
-      </div>
+      case "nav_secondary_right_primary_below":
+        include_once($path . 'nav_secondary_right_primary_below.php');
+        break;
 
-      <div class="col-auto d-flex ml-3">
+      case "nav_navbar_only":
+        include_once($path . 'nav_navbar_only.php');
+        break;
+  }
 
-        <button class="search-toggler align-self-center" 
-        type="button" data-toggle="collapse" 
-        data-target="#global-search" 
-        aria-controls="search" 
-        aria-expanded="false" 
-        aria-label="Toggle Search">
-          <span class="custom-icon"><span class="sr-only">Global Search</span>
-          <img src="/images/btn-global-search.svg" alt="Global Search">
-        </button>
+?>
 
-      </div>
-
-  </div>
-
-
-  </div><!-- .container-fluid -->
-
-  <div class="collapse bg-black" id="global-search">
-
-    <form class="narrow p-4">
-      <div class="input-group">
-        <input class="form-control form-control-lg rounded-0 border-0" placeholder="What are you looking for?">
-        <div class="input-group-btn">
-          <button type="button" class="btn-true-blue btn-lg rounded-0 border-0">Search</button>
-        </div>
-      </div>
-    </form>
-
-  </div>
-
-  <div class="collapse d-md-none" id="global-navigation-device">
-    <hr>
-    <nav class="nav flex-column p-3">
-      <?php include($path . 'global-navigation.php'); ?>
-    </nav>
-  </div>
-
-
-</header>

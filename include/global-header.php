@@ -13,6 +13,9 @@
         $section = 'home'; // set as default
     }
 
+    if (empty($header_type)) {
+        $header_type = 'nav_primary_right'; // set as default
+    }
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900,900i" rel="stylesheet">
