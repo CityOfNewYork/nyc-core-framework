@@ -1,8 +1,7 @@
 //
-// Functions (required)
+// Default Bootstrap functions (required)
+// Get values from color maps
 //
-
-// Default Bootstrap functions - get values from color maps
 
 @function color($key: "blue") {
   @return map-get($colors, $key);
@@ -52,6 +51,7 @@ $cyan: #008295;
 
 // Accessible gray overrides
 
+$light: $gray-200;
 $secondary: $gray-700; 
 $dark: $gray-900;
 $text-muted: $gray-700;
@@ -66,7 +66,8 @@ $carousel-control-opacity: 1;
 // Shared variables
 
 @import "global-variables.scss";
-@import "custom-functions.scss";
+@import "custom-mixins.scss";
+@import "off-the-rack.scss";
 
 //
 // Import Bootstrap 4.0.0
@@ -75,7 +76,8 @@ $carousel-control-opacity: 1;
 @import "../bootstrap.4.0.0/scss/bootstrap";
 
 //
-// Theme variables
+// Width Helpers
+// (can be used independently or with container and container-fluid)
 //
 
 $narrow-width: 700px;
@@ -90,13 +92,17 @@ html{
 }
 
 body{
-	font-size: 1.25rem;
+	font-size: 1.25rem; // 20px
+	min-width: 340px;
 	color: $black;
 }
 
+.fs-small{ font-size: 1rem; } // 16px
+.fs-tiny{ font-size: 0.875rem; } // 14px
+
 img{ vertical-align: top; }
 
-// Custom classes added for accessibility
+// Custom classes for aesthetic improvement
 
 .narrow,
 .wide
@@ -106,31 +112,7 @@ img{ vertical-align: top; }
 .wide{ max-width: $wide-width; }
 
 .has-shadow{ @include boxShadow; }
-
-.has-arrow{
-
-	&:hover{ text-decoration: none; } 
-	&:after{ 
-	   content: '\f0da';
-	   font-family: FontAwesome;
-	   font-weight: normal;
-	   font-style: normal;
-	   text-decoration: none ;
-	   margin-left:15px;
-	}
-}
-
-// Opacity Classes
-
-.opacity-10{ @include opacity(0.10); }
-.opacity-20{ @include opacity(0.20); }
-.opacity-30{ @include opacity(0.30); }
-.opacity-40{ @include opacity(0.40); }
-.opacity-50{ @include opacity(0.50); }
-.opacity-60{ @include opacity(0.60); }
-.opacity-70{ @include opacity(0.70); }
-.opacity-80{ @include opacity(0.80); }
-.opacity-90{ @include opacity(0.90); }
+.has-inset-shadow{ @include boxShadow(true); }
 
 // Remove margin bottom on last-child pseudo elements
 
@@ -152,152 +134,7 @@ hr{ margin: 0; }
 .text-white a:hover, 
 { color: white; }
 
-// Extras 
-
-.featured-panel{
-
-	position: relative;
-
-	.image,
-	.message, 
-	.row
-	{ @extend .w-100; }
-
-	.image{
-		@extend	.image;
-
-		img{
-			@extend	.w-100;
-			@extend	.d-block;
-		}
-	}
-
-	&.cover{
-		
-		@extend .d-md-flex;
-
-		.message{
-			@extend .align-self-md-center;
-			@extend .d-md-flex;
-		}
-
-		@include media-breakpoint-up(md){
-			.message{
-				position: absolute;
-				top: 50%;
-				left: 50%;
-      			transform: translate(-50%,-50%);
-      		}
-
-			img{ @include opacity(0.25); }
-		}
-	}
-
-	&.box{
-		
-		@extend .d-lg-flex;
-
-		.message{
-			@extend .d-lg-flex;
-			@extend .align-self-lg-center;
-			@extend .mx-auto;
-		}
-
-		@include media-breakpoint-down(md){
-			text-align: center;
-			div.message{ max-width: 540px; }
-		}
-
-		@include media-breakpoint-up(lg){
-			div.message{
-				position: absolute;
-				top: 50%;
-				left: 50%;
-      			transform: translate(-50%,-50%);
-			}
-		}
-	}
-}
-
-.link-list{
-	a{
-		padding: 0.5rem 1rem;
-		display: inline-block;
-	}
-}
-
-// Accessibility
-
-// Responsive display-* classes
-
-@include media-breakpoint-down(sm){
-	.display-1{ font-size: $h1-font-size; }
-	.display-2{ font-size: $h2-font-size; }
-	.display-3{ font-size: $h3-font-size; }
-	.display-4{ font-size: $h4-font-size; }
-}
-
-// Accessible accordions
-
-#accordion.accessible{
-	a[aria-expanded="true"], 
-	a[aria-expanded="false"]{
-		
-		&:after{
-		    font-family: 'FontAwesome';
-		    float: right;
-		    color: grey;
-		}
-	}
-
-	a[aria-expanded="true"]:after { content: "\f077"; }
-	a[aria-expanded="false"]:after { content: "\f078"; }
-}
-
-a.btn[data-toggle="collapse"]{
-
-	overflow: hidden;
-	
-
-	&:after{
-	    font-family: 'FontAwesome';
-	    float: right;
-	    color: white;
-	}
-
-	&[aria-expanded="true"]:after { content: "\f068"; }
-	&[aria-expanded="false"]:after { content: "\f067"; }
-}
-
-.toggle-title{
-	text-align: left;
-	width: 90%;
-	white-space: normal;
-	display: inline-block
-}
-
-// Carousel
-
-.carousel-control-prev, 
-.carousel-control-next{ width: 10%; }
-.carousel-caption{ left: 10%; right: 10%; bottom: 10%; }
-
-@include media-breakpoint-down(md){
-	
-	.carousel-control-prev, 
-	.carousel-control-next{ display: none; }
-
-	.carousel-indicators{ padding-bottom: 1.5rem; }
-
-	.carousel-indicators, 
-	.carousel-caption{
-		margin: 0;
-		position: static; 
-		background: black;
-	}
-}
-
-// Fixes responsive table bug
+// Fixes Bootstrap responsive table bug
 
 .responsive-wrapper{
 
@@ -308,16 +145,41 @@ a.btn[data-toggle="collapse"]{
 	th { min-width: 80px; }
 }
 
-//
-// Project styles
-//
+// Citywide Header and Footer
 
-#main-navigation.navbar{
+#nyc-top-header{ @extend .fs-tiny; }
+#nyc-bottom-footer{ @extend .fs-small; }
+
+#nyc-top-header,
+#nyc-bottom-footer{
+
+	font-family: $font-family-sans-serif;
+
+	@extend .bg-black;
+	@extend .text-white;
+}
+
+#nyc-top-header{
+
 	.nav-link{
-		color: $black;
-		
-		&.active{
-			color: $teal;
-		}
+		padding: 0; 
+		margin-left: 1rem;
 	}
+
+	p,
+	a{
+		font-weight: bold;
+		line-height:1;
+	}
+
+	a:hover{ text-decoration: none; }
+}
+
+// Media queries for display-* font sizes
+
+@include media-breakpoint-down(md){
+  .display-1{ font-size: $display1-size * 0.75; }
+  .display-2{ font-size: $display2-size * 0.75; }
+  .display-3{ font-size: $display3-size * 0.75; }
+  .display-4{ font-size: $display4-size * 0.75; }
 }

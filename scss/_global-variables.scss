@@ -1,21 +1,21 @@
 $amount: 0.5;
 
 //
-// Global Colors
+// Global
 //
 
 $white: white;
 $black: black;
 
-// Theme colors
+// Social Media
 
-$nyc-blue-shade: #003558;
-$brand-secondary: #126BB2;
-$brand-tertiary: #00857b;
-$brand-quinary: #FFE540;
-$brand-senary: #D93600;
+$facebook: #3b5999;
+$twitter: #4dc8f1;
+$instagram: $black;
+$youtube: #ff0000;
+$flickr: #ff0084;
 
-// NYC Colors
+// NYC Accessible
 
 $crimson: #D9003D;
 $brick-red: #881728;
@@ -47,6 +47,24 @@ $theme-colors: (
 
   "white": $white,
   "black": $black,
+
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+
+  // Social Media Colors
+
+  "facebook": $facebook,
+  "twitter": $twitter,
+  "instagram": $instagram,
+  "youtube": $youtube,
+  "flickr": $flickr,
 
   // NYC Colors
 

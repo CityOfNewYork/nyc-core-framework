@@ -1,0 +1,124 @@
+
+//
+// Featured panels
+//
+
+.featured-panel{
+
+  position: relative;
+
+  .image,
+  .message, 
+  .row
+  { @extend .w-100; }
+
+  .image{
+    @extend .image;
+
+    img{
+      @extend .w-100;
+      @extend .d-block;
+    }
+  }
+
+  &.cover{
+    
+    @extend .d-md-flex;
+
+    .message{
+      @extend .align-self-md-center;
+      @extend .d-md-flex;
+    }
+
+    @include media-breakpoint-up(md){
+      .message{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+            transform: translate(-50%,-50%);
+          }
+
+      img{ @include opacity(0.25); }
+    }
+  }
+
+  &.box{
+    
+    @extend .d-lg-flex;
+
+    .message{
+      @extend .d-lg-flex;
+      @extend .align-self-lg-center;
+      @extend .mx-auto;
+    }
+
+    @include media-breakpoint-down(md){
+      text-align: center;
+      div.message{ max-width: 540px; }
+    }
+
+    @include media-breakpoint-up(lg){
+      div.message{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+}
+
+//
+// Toggle buttons
+//
+
+.toggle-title{
+  display: inline-block;
+  width: 90%;
+  text-align: left;
+  white-space: normal;
+}
+
+.toggle-icon{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+
+  float: right;
+}
+
+//
+// Accordions
+//
+
+.accessible-accordion{
+
+  a[data-toggle="collapse"]{
+
+    &:after{ @extend .toggle-icon }
+
+    // Change the right icon here. Go to https://fontawesome.com/icons
+    // Find your icons and paste the unicode below
+
+    &[aria-expanded="true"]:after{ content: "\f106"; }
+    &[aria-expanded="false"]:after{ content: "\f107"; }
+  }
+
+}
+
+// Generic Toggle Button
+
+a.btn[data-toggle="collapse"]{
+
+  overflow: hidden;
+
+  &:after{
+    @extend .toggle-icon;
+    color: white;
+  }
+
+  &[aria-expanded="true"]:after { content: "\f068"; }
+  &[aria-expanded="false"]:after { content: "\f067"; }
+
+  .toggle-title{ float: left; }
+}

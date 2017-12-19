@@ -1,166 +1,154 @@
-// @import "global-customizations.scss";
+@import "custom-mixins.scss";
 
 //
-// Required Bootstrap Variables, Functions, and Mixins
+// Theme colors
 //
 
-// Bootstrap breakpoint variables
-// Found in bootstrap.4.0.0/scss/mixins/_breakpoints)
+$clean-green: #00A35D;
+$true-blue: #1461FF;
+$spring-green: #0F8417;
+$royal-blue: #00529A;
+$deep-blue: #1D2252;
+$teal: #008080;
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
+// Default grays
 
-// Bootstrap breakpoint mixins
-// (found in /scss/mixins/_breakpoints)
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
 
-@mixin _assert-ascending($map, $map-name) {
-  $prev-key: null;
-  $prev-num: null;
-  @each $key, $num in $map {
-    @if $prev-num == null {
-      // Do nothing
-    } @else if not comparable($prev-num, $num) {
-      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    } @else if $prev-num >= $num {
-      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+//
+// Header Navigation
+//
+
+$nav-link-color: black;
+$nav-link-active-color: $clean-green;
+$nav-pill-border-color: $gray-200;
+
+#global-header{
+
+  .wrap-header{
+    position: relative;
+    z-index: 500;
+  }
+
+  .btn-toggle{
+    
+    color: $nav-link-color;
+    
+    cursor: pointer;
+    outline: 0;
+    padding: 0; 
+    border: none;
+    background: none;
+
+    &:focus{ outline: none; }
+    &[aria-expanded="true"]{ color: $nav-link-active-color; }
+  }
+
+  nav a, 
+  nav a:hover,
+  nav a:visited
+
+  { color: $nav-link-color; }
+
+  nav a.active{ color: $nav-link-active-color; }
+
+  nav.nav-pills a.active{
+    background: $nav-link-active-color;
+    color: white;
+  }
+
+  // Remove Bootstrap default border-radius on nav-pills 
+
+  .dropdown-menu.show,
+  .nav.nav-pills .nav-link
+  { @include border-radius(0); }
+
+  .nav.nav-pills{
+
+     .nav-link{
+      padding: 0.85rem;
+      border-right:1px solid $nav-pill-border-color;
+      &:last-child{ border: none; }
     }
-    $prev-key: $key;
-    $prev-num: $num;
+
+    // Remove Bootstrap default blue background on 'show'
+    
+    > .show .nav-link:not(.active){  background: none; }
+  }
+
+  // Resets dropdown functionality on mobile navigation
+
+  .primary-navigation-device{
+
+    .dropdown-menu.show{
+
+      position: static !important;
+
+      -webkit-transform: none !important; /* Safari and Chrome */
+         -moz-transform: none !important; /* Firefox */
+          -ms-transform: none !important; /* IE 9 */
+           -o-transform: none !important; /* Opera */
+              transform: none !important;
+
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0 1rem;
+
+      a.dropdown-item{
+        display: inline-block !important;
+        width: auto !important;
+        float: left;
+        padding:0.25rem 1.25rem;
+        color: black;
+
+        &:hover,
+        &:active,
+        &:visited
+        { background: none; }
+      }
+    }
+  }
+
+} /* #global-header */ 
+
+// Improves .dropdown-menu when present within .nav-pills
+
+.nav-fill .dropdown-menu.show{
+  left: 0;
+  right: 0;
+  margin:0;
+  width:100%;
+  border-top: none;
+  
+  a.dropdown-item{
+
+    &:hover,
+    &:active,
+    &:visited
+    { background: none; }
   }
 }
 
-// Starts at zero
-// Another grid mixin that ensures the min-width of the lowest breakpoint starts at 0.
-@mixin _assert-starts-at-zero($map) {
-  $values: map-values($map);
-  $first-value: nth($values, 1);
-  @if $first-value != 0 {
-    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
-  }
-}
-
-// Breakpoint viewport sizes and media queries.
-
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
-  $n: index($breakpoint-names, $name);
-  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
-}
-
-// Minimum breakpoint width. Null for the smallest (first) breakpoint.
-
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
-}
-
-// Maximum breakpoint width. Null for the largest (last) breakpoint.
-
-@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $next: breakpoint-next($name, $breakpoints);
-  @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
-}
-
-// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash infront
-
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
-}
-
-// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
-
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (min-width: $min) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-
-// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
-
-@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-  $max: breakpoint-max($name, $breakpoints);
-  @if $max {
-    @media (max-width: $max) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
-}
-
-// Media that spans multiple breakpoint widths.
-
-@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($lower, $breakpoints);
-  $max: breakpoint-max($upper, $breakpoints);
-
-  @if $min != null and $max != null {
-    @media (min-width: $min) and (max-width: $max) {
-      @content;
-    }
-  } @else if $max == null {
-    @include media-breakpoint-up($lower) {
-      @content;
-    }
-  } @else if $min == null {
-    @include media-breakpoint-down($upper) {
-      @content;
-    }
-  }
-}
-
-// Media between the breakpoint's minimum and maximum widths.
-
-@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  $max: breakpoint-max($name, $breakpoints);
-
-  @if $min != null and $max != null {
-    @media (min-width: $min) and (max-width: $max) {
-      @content;
-    }
-  } @else if $max == null {
-    @include media-breakpoint-up($name) {
-      @content;
-    }
-  } @else if $min == null {
-    @include media-breakpoint-down($name) {
-      @content;
-    }
-  }
-}
-
 //
-// Selector variables
+// Font styles 
 //
 
-$nav: 'nav';
-$global-header: 'body > header';
-$global-footer: 'body > footer';
-$article-header: 'article > header'; 
-$article-footer: 'article > footer';
+body{ font-family: 'Roboto', sans-serif; }
 
-$content: '#content';
-$article: '#{$content} > article';
-$form: '#{$content} form';
-$table: 'table';
+article > header{ text-transform: capitalize; }
 
 //
-// Theme styles
+// General styles
 //
-
-#{$article-header}{ text-transform: capitalize; }
-
-.bg-primary{ background: green; }
 
 .color-swatches{
 
@@ -175,50 +163,10 @@ $table: 'table';
   }
 }
 
-
-// body{ font-family: 'Roboto', sans-serif; }
-
-
-// Main Navigation
-
-.search-toggler, 
-.navigation-toggler{
-  background: none;
-  border: none;
-  padding: 0; 
-  outline: 0;
-  &:focus{ outline: none; }
-}
-
-.navigation-toggler > span{
-  background: url('/images/btn-menu.svg');
-}
-
-.navigation-toggler{
-  > span{
-    width: 30px;
-    height: 30px;
-    display: block;
-  }
-
-  &[aria-expanded="true"]{
-    > span{ background-position: -30px; }
+#social-media{
+  a.nav-link{
+    &:not(:hover){
+      color: black !important;
+    }
   }
 }
-
-.wrap-main-navigation{
-  .nav-link{
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-
-#global-navigation-device{
-  .nav-link{
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-}
-
