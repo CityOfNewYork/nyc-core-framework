@@ -13,9 +13,7 @@ $section = 'elements';
 
   <article>
 
-    <header class="p-4 p-md-5 mb-5 bg-deep-blue text-white">
-      <h1 class="display-1 text-center"><?php echo $section; ?></h1>
-    </header>
+    <?php include_once($path . 'sub-page-header.php'); ?>
 
     <div class="container-fluid wide">
 
@@ -33,22 +31,22 @@ $section = 'elements';
               <h2 class="h1 mb-4">Accordions</h2>
             </header>
 
-            <div id="accordion" class="accessible" role="tablist">
+            <div id="accordion" class="accessible-accordion" role="tablist">
 
               <!-- 01 -->
 
               <div class="card mb-2">
 
                 <div class="card-header p-0" role="tab" id="headingOne">
-                  <h5 class="mb-0">
+                  <h4 class="mb-0">
                     <a class="collapse d-block py-3 px-4" 
                     data-toggle="collapse" 
                     href="#accordion-one" 
                     aria-expanded="true" 
                     aria-controls="accordion-one">
-                      <span class="toggle-title">Lorem ipsum dolor sit amet consectetur adipiscing</span>
+                      <span class="toggle-title">Accordion One</span>
                     </a>
-                  </h5>
+                  </h4>
                 </div>
 
                 <div id="accordion-one" 
@@ -69,15 +67,15 @@ $section = 'elements';
               <div class="card mb-2">
 
                 <div class="card-header p-0" role="tab" id="headingTwo">
-                  <h5 class="mb-0">
+                  <h4 class="mb-0">
                     <a class="collapsed d-block py-3 px-4" 
                     data-toggle="collapse" 
                     href="#accordion-two" 
                     aria-expanded="false" 
                     aria-controls="accordion-two">
-                      Accordion Two
+                      <span class="toggle-title">Accordion Two</span>
                     </a>
-                  </h5>
+                  </h4>
                 </div>
 
                 <div id="accordion-two" 
@@ -99,15 +97,16 @@ $section = 'elements';
               <div class="card mb-2">
 
                 <div class="card-header p-0" role="tab" id="headingThree">
-                  <h5 class="mb-0">
+                  <h4 class="mb-0">
                     <a class="collapsed d-block py-3 px-4" 
                     data-toggle="collapse" 
                     href="#accordion-three" 
                     aria-expanded="false" 
                     aria-controls="accordion-three">
-                      Accordion Three
+                      <span class="toggle-title">Accordion Three</span>
                     </a>
-                  </h5>
+
+                  </h4>
                 </div>
 
                 <div id="accordion-three" 
@@ -124,26 +123,56 @@ $section = 'elements';
 
               </div>
 
-              <!-- 03 -->
+              <!-- 04 -->
               
-              <div class="card">
+              <div class="card mb-2">
 
-                <div class="card-header p-0" role="tab" id="headingThree">
-                  <h5 class="mb-0">
+                <div class="card-header p-0" role="tab" id="headingFour">
+                  <h4 class="mb-0">
                     <a class="collapsed d-block py-3 px-4" 
                     data-toggle="collapse" 
                     href="#collapseFour" 
                     aria-expanded="false" 
                     aria-controls="collapseFour">
-                      Accordion Four
+                      <span class="toggle-title">Accordion Four</span>
                     </a>
-                  </h5>
+                  </h4>
                 </div>
 
                 <div id="collapseFour" 
                 class="collapse" 
                 role="tabpanel" 
                 aria-labelledby="headingThree" 
+                data-parent="#accordion">
+
+                  <div class="card-body">
+                     <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat parturient scelerisque.</p>
+                  </div>
+                
+                </div>
+
+              </div>
+
+              <!-- 05 -->
+              
+              <div class="card">
+
+                <div class="card-header p-0" role="tab" id="headingFive">
+                  <h4 class="mb-0">
+                    <a class="collapsed d-block py-3 px-4" 
+                    data-toggle="collapse" 
+                    href="#collapseFour" 
+                    aria-expanded="false" 
+                    aria-controls="collapseFive">
+                      <span class="toggle-title">Accordion Five</span>
+                    </a>
+                  </h4>
+                </div>
+
+                <div id="collapseFive" 
+                class="collapse" 
+                role="tabpanel" 
+                aria-labelledby="headingFive" 
                 data-parent="#accordion">
 
                   <div class="card-body">

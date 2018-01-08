@@ -12,25 +12,8 @@
 
   <article>
 
-    <header class="p-4 p-md-5 mb-5 bg-deep-blue text-white">
-      <h1 class="display-1 text-center"><?php echo $section; ?></h1>
-    </header>
-
-    <div class="container-fluid wide mb-5">
-
-      <ul class="nav nav-pills justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Featured panels</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Carousels</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cards</a>
-        </li>
-      </ul>
-
-    </div>
+    <?php include_once($path . 'sub-page-header.php'); ?>
+    <?php include_once($path . 'nav-extras.php'); ?>
 
     <section class="container-fluid p-0">
 
@@ -93,7 +76,7 @@
 
       </div>
 
-      <div class="featured-panel box mb-5 bg-emergency-red">
+      <div class="featured-panel box bg-emergency-red">
 
         <div class="image">
           <img src="/images/feature/04.jpg" alt="Placeholder">
@@ -113,64 +96,6 @@
         </div>
 
       </div>
-
-    </section>
-
-    <hr class="mb-5">
-
-    <section class="d-none">
-
-      <h2 class="text-center mb-4">Carousel</h2>
-
-      <div id="marquee" class="carousel slide mb-5 container" data-ride="carousel">
-
-        <div class="carousel-inner">
-
-          <div class="carousel-item active">
-              <img class="d-block w-100" src="http://via.placeholder.com/1200x600/003558/FFFFFF" alt="First slide">
-              <div class="carousel-caption px-3">
-                <h1 class="h2">Slide 1</h1>
-                <p>Mus malesuada dapibus ac condimentum habitasse</p>
-              </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="http://via.placeholder.com/1200x600/126BB2/FFFFFF" alt="Second slide">
-              <div class="carousel-caption px-3">
-                <h1 class="h2">Slide 2</h1>
-                <p>Mus malesuada dapibus ac condimentum habitasse</p>
-              </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="http://via.placeholder.com/1200x600/00857b/FFFFFF" alt="Third slide">
-              <div class="carousel-caption px-3">
-                <h1 class="h2">Slide 3</h1>
-                <p>Mus malesuada dapibus ac condimentum habitasse</p>
-              </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="http://via.placeholder.com/1200x600/FFE540/000000" alt="Fourth slide">
-              <div class="carousel-caption px-3">
-                <h1 class="h2">Slide 3</h1>
-                <p>Mus malesuada dapibus ac condimentum habitasse</p>
-              </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="http://via.placeholder.com/1200x600/CC2929/000000" alt="Fifth slide">
-              <div class="carousel-caption px-3">
-                <h1 class="h2">Slide 3</h1>
-                <p>Mus malesuada dapibus ac condimentum habitasse</p>
-              </div>
-          </div>
-
-        </div>
-
-        <ol class="carousel-indicators">
-          <li data-target="#marquee" data-slide-to="0" class="active"></li>
-          <li data-target="#marquee" data-slide-to="1"></li>
-          <li data-target="#marquee" data-slide-to="2"></li>
-        </ol>
-
-      </div><!-- #marquee -->
 
     </section>
 

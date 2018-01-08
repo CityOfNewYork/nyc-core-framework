@@ -1115,14 +1115,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/bower.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/bower-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"\/css\/nyc-bootstrap.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1185,6 +1177,20 @@
 		"oAP": "\/elements\/tabs.php",
 		"oF": 0
 		},
+	"\/extras\/cards.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/extras\/cards.php",
+		"oF": 0
+		},
+	"\/extras\/carousels.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/extras\/carousels.php",
+		"oF": 0
+		},
 	"\/extras\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1199,216 +1205,6 @@
 		"oAP": "\/grid\/index.php",
 		"oF": 0
 		},
-	"\/images\/btn-facebook-reverse.png": {
-		"ft": 32768,
-		"iS": 405,
-		"oA": 0,
-		"oAP": "\/images\/btn-facebook-reverse.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-facebook-reverse.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-facebook-reverse.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-facebook.png": {
-		"ft": 32768,
-		"iS": 412,
-		"oA": 0,
-		"oAP": "\/images\/btn-facebook.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-facebook.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-facebook.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-global-search.png": {
-		"ft": 32768,
-		"iS": 442,
-		"oA": 0,
-		"oAP": "\/images\/btn-global-search.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-global-search.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-global-search.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-instagram-reverse.png": {
-		"ft": 32768,
-		"iS": 574,
-		"oA": 0,
-		"oAP": "\/images\/btn-instagram-reverse.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-instagram-reverse.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-instagram-reverse.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-instagram.png": {
-		"ft": 32768,
-		"iS": 579,
-		"oA": 0,
-		"oAP": "\/images\/btn-instagram.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-instagram.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-instagram.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-linkedin-reverse.png": {
-		"ft": 32768,
-		"iS": 613,
-		"oA": 0,
-		"oAP": "\/images\/btn-linkedin-reverse.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-linkedin-reverse.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-linkedin-reverse.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-linkedin.png": {
-		"ft": 32768,
-		"iS": 621,
-		"oA": 0,
-		"oAP": "\/images\/btn-linkedin.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-linkedin.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-linkedin.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-menu.png": {
-		"ft": 32768,
-		"iS": 657,
-		"oA": 0,
-		"oAP": "\/images\/btn-menu.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-menu.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-menu.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-twitter-reverse.png": {
-		"ft": 32768,
-		"iS": 662,
-		"oA": 0,
-		"oAP": "\/images\/btn-twitter-reverse.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-twitter-reverse.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-twitter-reverse.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/btn-twitter.png": {
-		"ft": 32768,
-		"iS": 664,
-		"oA": 0,
-		"oAP": "\/images\/btn-twitter.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/btn-twitter.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/btn-twitter.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/images\/feature\/01.jpg": {
 		"ft": 16384,
 		"iS": 162590,
@@ -1416,7 +1212,7 @@
 		"oAP": "\/images\/feature\/01.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/feature\/02.jpg": {
@@ -1426,7 +1222,7 @@
 		"oAP": "\/images\/feature\/02.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/feature\/03.jpg": {
@@ -1436,7 +1232,7 @@
 		"oAP": "\/images\/feature\/03.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/feature\/04.jpg": {
@@ -1444,6 +1240,16 @@
 		"iS": 173282,
 		"oA": 0,
 		"oAP": "\/images\/feature\/04.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/images\/feature\/05.jpg": {
+		"ft": 16384,
+		"iS": 313741,
+		"oA": 0,
+		"oAP": "\/images\/feature\/05.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1459,6 +1265,27 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/images\/nyc-gov-lab-and-studio-logo-72.png": {
+		"ft": 32768,
+		"iS": 3432,
+		"oA": 0,
+		"oAP": "\/images\/nyc-gov-lab-and-studio-logo-72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/nyc-gov-lab-and-studio-logo-72.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/nyc-gov-lab-and-studio-logo-72.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/images\/nyc-logo.png": {
 		"ft": 32768,
@@ -1481,6 +1308,48 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/images\/nyc-white-15.png": {
+		"ft": 32768,
+		"iS": 370,
+		"oA": 0,
+		"oAP": "\/images\/nyc-white-15.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/nyc-white-15.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/nyc-white-15.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/nyc-white-30.png": {
+		"ft": 32768,
+		"iS": 607,
+		"oA": 0,
+		"oAP": "\/images\/nyc-white-30.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/nyc-white-30.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/nyc-white-30.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/images\/square\/01.jpg": {
 		"ft": 16384,
 		"iS": 172783,
@@ -1488,7 +1357,7 @@
 		"oAP": "\/images\/square\/01.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/square\/02.jpg": {
@@ -1498,7 +1367,7 @@
 		"oAP": "\/images\/square\/02.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/include\/aside-nav.php": {
@@ -1529,18 +1398,88 @@
 		"oAP": "\/include\/global-header.php",
 		"oF": 0
 		},
-	"\/include\/global-navigation.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/include\/global-navigation.php",
-		"oF": 0
-		},
 	"\/include\/head.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/include\/head.php",
+		"oF": 0
+		},
+	"\/include\/nav-extras.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nav-extras.php",
+		"oF": 0
+		},
+	"\/include\/nav-primary.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nav-primary.php",
+		"oF": 0
+		},
+	"\/include\/nav-secondary.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nav-secondary.php",
+		"oF": 0
+		},
+	"\/include\/nav_primary_below.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nav_primary_below.php",
+		"oF": 0
+		},
+	"\/include\/nav_primary_navbar.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nav_primary_navbar.php",
+		"oF": 0
+		},
+	"\/include\/nav_primary_right.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nav_primary_right.php",
+		"oF": 0
+		},
+	"\/include\/nav_secondary_right_primary_below.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nav_secondary_right_primary_below.php",
+		"oF": 0
+		},
+	"\/include\/nyc-bottom-footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nyc-bottom-footer.php",
+		"oF": 0
+		},
+	"\/include\/nyc-top-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/nyc-top-header.php",
+		"oF": 0
+		},
+	"\/include\/search-bar.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/search-bar.php",
+		"oF": 0
+		},
+	"\/include\/sub-page-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/include\/sub-page-header.php",
 		"oF": 0
 		},
 	"\/index.php": {
@@ -1561,7 +1500,7 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/scss\/_custom-functions.scss": {
+	"\/scss\/_custom-mixins.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1569,7 +1508,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/scss\/_custom-functions.css",
+		"oAP": "\/scss\/_custom-mixins.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1627,7 +1566,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 528126274,
-	"displayValue": "bootstrap-templates-nyc",
+	"displayValue": "nyc-bootstrap-framework",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "\/project-icon.png"
 	},
