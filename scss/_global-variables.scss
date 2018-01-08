@@ -94,3 +94,15 @@ $theme-colors: (
   "fuschia": $fuschia,
   "pearl": $pearl,
 );
+
+// This variable affects the `.h-*` and `.w-*` classes.
+
+$sizes: (
+  25: 25%,
+  33: 33.3333%,
+  50: 50%,
+  66: 66.6666%,
+  75: 75%,
+  100: 100%,
+
+) !default;

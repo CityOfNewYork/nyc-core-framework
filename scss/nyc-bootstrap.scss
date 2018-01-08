@@ -67,7 +67,6 @@ $carousel-control-opacity: 1;
 
 @import "global-variables.scss";
 @import "custom-mixins.scss";
-@import "off-the-rack.scss";
 
 //
 // Import Bootstrap 4.0.0
@@ -97,12 +96,16 @@ body{
 	color: $black;
 }
 
-.fs-small{ font-size: 1rem; } // 16px
-.fs-tiny{ font-size: 0.875rem; } // 14px
+.fs-small{ font-size: 0.875rem; } // 14px
+.fs-medium{ font-size: 1rem; } // 16px
+.fs-regular{ font-size: 1.25rem; } // 20px
+.fs-large{ font-size: 1.5rem; } // 20px
 
 img{ vertical-align: top; }
 
+//
 // Custom classes for aesthetic improvement
+//
 
 .narrow,
 .wide
@@ -114,8 +117,30 @@ img{ vertical-align: top; }
 .has-shadow{ @include boxShadow; }
 .has-inset-shadow{ @include boxShadow(true); }
 
+.bg-none{ background: none; }
+
+.pill{ @include border-radius(3rem); }
+
+// Opacity classes
+
+.opacity-10{ @include opacity(0.10); }
+.opacity-20{ @include opacity(0.20); }
+.opacity-30{ @include opacity(0.30); }
+.opacity-40{ @include opacity(0.40); }
+.opacity-50{ @include opacity(0.50); }
+.opacity-60{ @include opacity(0.60); }
+.opacity-70{ @include opacity(0.70); }
+.opacity-80{ @include opacity(0.80); }
+.opacity-90{ @include opacity(0.90); }
+
 // Remove margin bottom on last-child pseudo elements
 
+h1, 
+h2, 
+h3, 
+h4,
+h5, 
+h6,
 p,
 a, 
 ul, 
@@ -145,18 +170,18 @@ hr{ margin: 0; }
 	th { min-width: 80px; }
 }
 
-// Citywide Header and Footer
+//
+// Citywide Global Header and Footer
+//
 
-#nyc-top-header{ @extend .fs-tiny; }
-#nyc-bottom-footer{ @extend .fs-small; }
+#nyc-top-header{ @extend .fs-small; }
+#nyc-bottom-footer{ @extend .fs-medium; }
 
 #nyc-top-header,
 #nyc-bottom-footer{
-
-	font-family: $font-family-sans-serif;
-
 	@extend .bg-black;
 	@extend .text-white;
+	font-family: $font-family-sans-serif;
 }
 
 #nyc-top-header{
@@ -175,11 +200,126 @@ hr{ margin: 0; }
 	a:hover{ text-decoration: none; }
 }
 
-// Media queries for display-* font sizes
+//
+// Toggle buttons
+//
 
-@include media-breakpoint-down(md){
-  .display-1{ font-size: $display1-size * 0.75; }
-  .display-2{ font-size: $display2-size * 0.75; }
-  .display-3{ font-size: $display3-size * 0.75; }
-  .display-4{ font-size: $display4-size * 0.75; }
+.toggle-title{
+  display: inline-block;
+  width: 90%;
+  text-align: left;
+  white-space: normal;
+}
+
+.toggle-icon{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+
+  float: right;
+}
+
+//
+// Accordions
+//
+
+.accessible-accordion{
+
+  a[data-toggle="collapse"]{
+
+    &:after{ @extend .toggle-icon }
+
+    // Change the right icon here. Go to https://fontawesome.com/icons
+    // Find your icons and paste the unicode below
+
+    &[aria-expanded="true"]:after{ content: "\f106"; }
+    &[aria-expanded="false"]:after{ content: "\f107"; }
+  }
+
+}
+
+// Generic Toggle Button
+
+a.btn[data-toggle="collapse"]{
+
+  overflow: hidden;
+
+  &:after{
+    @extend .toggle-icon;
+    color: white;
+  }
+
+  &[aria-expanded="true"]:after { content: "\f068"; }
+  &[aria-expanded="false"]:after { content: "\f067"; }
+
+  .toggle-title{ float: left; }
+}
+
+//
+// Featured panels
+//
+
+.featured-panel{
+
+  position: relative;
+
+  .image,
+  .message, 
+  .row
+  { @extend .w-100; }
+
+  .image{
+    @extend .image;
+
+    img{
+      @extend .w-100;
+      @extend .d-block;
+    }
+  }
+
+  &.cover{
+    
+    @extend .d-md-flex;
+
+    .message{
+      @extend .align-self-md-center;
+      @extend .d-md-flex;
+    }
+
+    @include media-breakpoint-up(md){
+      .message{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+            transform: translate(-50%,-50%);
+          }
+
+      img{ @include opacity(0.25); }
+    }
+  }
+
+  &.box{
+    
+    @extend .d-lg-flex;
+
+    .message{
+      @extend .d-lg-flex;
+      @extend .align-self-lg-center;
+      @extend .mx-auto;
+    }
+
+    @include media-breakpoint-down(md){
+      text-align: center;
+      div.message{ max-width: 540px; }
+    }
+
+    @include media-breakpoint-up(lg){
+      div.message{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
 }

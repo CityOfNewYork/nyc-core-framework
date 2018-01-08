@@ -1,6 +1,9 @@
-//
-// Bootstrap variables, functions, and mixins (required)
-//
+
+////////////////////////////////////////
+//                                    //
+// Bootstrap mixins (for breakpoints) //
+//                                    //
+////////////////////////////////////////
 
 // Bootstrap breakpoint variables
 // (found in bootstrap.4.0.0/scss/mixins/_breakpoints)
@@ -137,9 +140,11 @@ $grid-breakpoints: (
   }
 }
 
-//
-// Custom Mixins
-//
+///////////////////
+//               //
+// Custom Mixins //
+//               //
+///////////////////
 
 @mixin opacity($value){
   $IEValue: $value*100;
@@ -166,4 +171,54 @@ $grid-breakpoints: (
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   -o-border-radius: $radius;
+}
+
+//////////////////////
+//                  //
+// Gradient Overlay //
+//                  //
+//////////////////////
+ 
+$starts-at: top;
+ 
+$first-color: black;
+$second-color: black;
+ 
+$first-color-opacity: 0;
+$second-color-opacity: 1;
+ 
+$first-color-position: 50%;
+$second-color-position: 100%;
+ 
+.gradient-overlay{ position: relative; }
+
+.gradient-overlay::before {
+   
+  background-image: linear-gradient(
+    $starts-at, 
+    rgba( $first-color, $first-color-opacity ) $first-color-position, 
+    rgba( $second-color, $second-color-opacity ) $second-color-position );
+  background-image: -moz-linear-gradient( 
+    $starts-at, 
+    rgba( $first-color, $first-color-opacity ) $first-color-position, 
+    rgba( $second-color, $second-color-opacity ) $second-color-position );
+  background-image: -ms-linear-gradient( 
+    $starts-at, 
+    rgba( $first-color, $first-color-opacity ) $first-color-position, 
+    rgba( $second-color, $second-color-opacity ) $second-color-position );
+  background-image: -o-linear-gradient(
+    $starts-at, 
+    rgba( $first-color, $first-color-opacity ) $first-color-position, 
+    rgba( $second-color, $second-color-opacity ) $second-color-position );
+  background-image: -webkit-linear-gradient( 
+    $starts-at, 
+    rgba( $first-color, $first-color-opacity ) $first-color-position, 
+    rgba( $second-color, $second-color-opacity ) $second-color-position );
+ 
+  content: "\00a0";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
 }

@@ -1,15 +1,10 @@
 @import "custom-mixins.scss";
 
-//
-// Theme colors
-//
-
-$clean-green: #00A35D;
-$true-blue: #1461FF;
-$spring-green: #0F8417;
-$royal-blue: #00529A;
-$deep-blue: #1D2252;
-$teal: #008080;
+/////////////////////
+//                 //
+// Theme Variables //
+//                 //
+/////////////////////
 
 // Default grays
 
@@ -23,13 +18,30 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 
-//
-// Header Navigation
-//
+// Theme specific colors 
 
-$nav-link-color: black;
-$nav-link-active-color: $clean-green;
-$nav-pill-border-color: $gray-200;
+$clean-green: #00A35D;
+$true-blue: #1461FF;
+$spring-green: #0F8417;
+$royal-blue: #00529A;
+$deep-blue: #1D2252;
+$teal: #008080;
+
+$display1-size: 6rem;
+$display2-size: 5.5rem;
+$display3-size: 4.5rem;
+$display4-size: 3.5rem;
+
+///////////////////////////
+//                       //
+// NYC Header Navigation //
+//                       //
+///////////////////////////
+
+$header-link-color: black;
+$header-pill-border-color: $gray-200;
+$header-link-active-color: $royal-blue;
+$header-dropdown-background-color: darken($header-link-active-color, 10%);
 
 #global-header{
 
@@ -37,37 +49,43 @@ $nav-pill-border-color: $gray-200;
     position: relative;
     z-index: 500;
   }
+    
+  // Color, active state, and style of .btn-toggle
 
   .btn-toggle{
-    
-    color: $nav-link-color;
     
     cursor: pointer;
     outline: 0;
     padding: 0; 
     border: none;
     background: none;
+    color: $header-link-color;
 
     &:focus{ outline: none; }
-    &[aria-expanded="true"]{ color: $nav-link-active-color; }
+    &[aria-expanded="true"]{ color: $header-link-active-color; }
   }
 
+  // Color and active state of links
+  
   nav a, 
   nav a:hover,
   nav a:visited
 
-  { color: $nav-link-color; }
+  {
+    color: $header-link-color;
+    &.active{ color: $header-link-active-color; }
+  }
 
-  nav a.active{ color: $nav-link-active-color; }
+  // Color, active state, and background of links in #global-header
 
-  nav.nav-pills a.active{
-    background: $nav-link-active-color;
+  .nav.nav-pills a.active{
     color: white;
+    background: $header-link-active-color;
   }
 
   // Remove Bootstrap default border-radius on nav-pills 
 
-  .dropdown-menu.show,
+  .dropdown-menu,
   .nav.nav-pills .nav-link
   { @include border-radius(0); }
 
@@ -75,18 +93,23 @@ $nav-pill-border-color: $gray-200;
 
      .nav-link{
       padding: 0.85rem;
-      border-right:1px solid $nav-pill-border-color;
-      &:last-child{ border: none; }
+      border:1px solid $header-pill-border-color;
+      border-left-color: transparent;
+      border-top: none;
+      border-bottom: none;
+
+      &.active{ border-right-color: $header-link-active-color; }
+      &:last-child { border: none; }
     }
 
     // Remove Bootstrap default blue background on 'show'
     
-    > .show .nav-link:not(.active){  background: none; }
+    > .show .nav-link:not(.active){ background: none; }
   }
 
   // Resets dropdown functionality on mobile navigation
 
-  .primary-navigation-device{
+  #device-menu{
 
     .dropdown-menu.show{
 
@@ -118,28 +141,124 @@ $nav-pill-border-color: $gray-200;
     }
   }
 
+  // Improves .dropdown-menu when present within .nav-pills
+
+  .nav-pills .dropdown-menu{
+    left: 0;
+    margin:0;
+    width:100%;
+    border: none;
+    background: $header-dropdown-background-color;
+    
+    a.dropdown-item{
+
+      color: white;
+      background: none;
+      &:hover,
+      &:active,
+      &:visited
+      { background: none; }
+    }
+  }
+
 } /* #global-header */ 
 
-// Improves .dropdown-menu when present within .nav-pills
+#nav-primary{
 
-.nav-fill .dropdown-menu.show{
-  left: 0;
-  right: 0;
-  margin:0;
-  width:100%;
-  border-top: none;
-  
-  a.dropdown-item{
-
-    &:hover,
-    &:active,
-    &:visited
-    { background: none; }
+  &.navbar,
+  .nav-link{
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
+#nav-primary.navbar{
+
+  .navbar-toggler{
+    outline: 0;
+    border: none;
+    @include border-radius(0);
+    padding: .5rem 0;
+    line-height:1.5;
+    color: black;
+  }
+  
+  .nav-item {
+    margin-right: 1em;
+  }
+
+  li.active a.nav-link{
+    color: $header-link-active-color;
+  }
+}
+
+////////////////////////////////
+//                            //
+// Optional Responsive styles //
+//                            //
+////////////////////////////////
+
+// Display-* font sizes 
+
+@include media-breakpoint-down(sm){
+  .display-1{ font-size: $display1-size * 0.5; }
+  .display-2{ font-size: $display2-size * 0.5; }
+  .display-3{ font-size: $display3-size * 0.5; }
+  .display-4{ font-size: $display4-size * 0.5; }
+}
+
+@include media-breakpoint-down(md){
+  .display-1{ font-size: $display1-size * 0.75; }
+  .display-2{ font-size: $display2-size * 0.75; }
+  .display-3{ font-size: $display3-size * 0.75; }
+  .display-4{ font-size: $display4-size * 0.75; }
+}
+
+// carousel
+
+.carousel{
+
+  a[class^="carousel-control-"]{ width: 50px; }
+
+  .carousel-indicators{
+    width:100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    background: black;
+
+    > li{ cursor: pointer; }
+  }
+
+  @include media-breakpoint-down(md){
+
+    a[class^="carousel-control-"], 
+    div.gradient-overlay::before
+    { display: none; }
+
+    .carousel-caption{
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0;
+      color: white;
+      background: black;
+    }
+  }
+
+}
+
+///////////////////////////
+//                       //
+// Theme specific styles //
+//                       //
+///////////////////////////
+
 //
-// Font styles 
+// Fonts 
 //
 
 body{ font-family: 'Roboto', sans-serif; }
@@ -149,6 +268,11 @@ article > header{ text-transform: capitalize; }
 //
 // General styles
 //
+
+#nav-extras a.nav-link{
+  &.active
+  { color: grey; }
+}
 
 .color-swatches{
 
@@ -160,13 +284,5 @@ article > header{ text-transform: capitalize; }
     .card-header, 
     .card-footer, 
     { background-color: transparent; }
-  }
-}
-
-#social-media{
-  a.nav-link{
-    &:not(:hover){
-      color: black !important;
-    }
   }
 }
