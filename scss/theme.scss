@@ -2,7 +2,7 @@
 
 /////////////////////
 //                 //
-// Theme Variables //
+// Theme variables //
 //                 //
 /////////////////////
 
@@ -32,11 +32,11 @@ $display2-size: 5.5rem;
 $display3-size: 4.5rem;
 $display4-size: 3.5rem;
 
-///////////////////////////
-//                       //
-// NYC Header Navigation //
-//                       //
-///////////////////////////
+/////////////////////////////////////
+//                                 //
+// NYC header & primary navigation //
+//                                 //
+/////////////////////////////////////
 
 $header-link-color: black;
 $header-pill-border-color: $gray-200;
@@ -192,11 +192,11 @@ $header-dropdown-background-color: darken($header-link-active-color, 10%);
   }
 }
 
-////////////////////////////////
-//                            //
-// Optional Responsive styles //
-//                            //
-////////////////////////////////
+////////////////////////////////////////////
+//                                        //
+// Responsive font style sizes (optional) //
+//                                        //
+////////////////////////////////////////////
 
 // Display-* font sizes 
 
@@ -214,7 +214,11 @@ $header-dropdown-background-color: darken($header-link-active-color, 10%);
   .display-4{ font-size: $display4-size * 0.75; }
 }
 
-// carousel
+////////////////////////////////
+//                            //
+// Carousel styles (optional) //
+//                            //
+////////////////////////////////
 
 .carousel{
 
@@ -248,7 +252,6 @@ $header-dropdown-background-color: darken($header-link-active-color, 10%);
       background: black;
     }
   }
-
 }
 
 ///////////////////////////
@@ -257,17 +260,13 @@ $header-dropdown-background-color: darken($header-link-active-color, 10%);
 //                       //
 ///////////////////////////
 
-//
 // Fonts 
-//
 
 body{ font-family: 'Roboto', sans-serif; }
 
 article > header{ text-transform: capitalize; }
 
-//
 // General styles
-//
 
 #nav-extras a.nav-link{
   &.active

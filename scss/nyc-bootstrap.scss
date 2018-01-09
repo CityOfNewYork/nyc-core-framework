@@ -1,7 +1,11 @@
-//
-// Default Bootstrap functions (required)
+
+////////////////////////////////////////////
+//                                        //
+// Default Bootstrap functions (required) //
+//                                        //
+////////////////////////////////////////////
+
 // Get values from color maps
-//
 
 @function color($key: "blue") {
   @return map-get($colors, $key);
@@ -23,10 +27,13 @@
   @return mix($color-base, $color, $level * $theme-color-interval);
 }
 
-//
-// Accessible color overrides
-// (define before Bootstrap import)
-//
+////////////////////////////////
+//                            //
+// Accessible color overrides //
+//                            //
+////////////////////////////////
+
+// Define before Bootstrap import
 
 // Default grays
 
@@ -40,7 +47,7 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 
-// Default colors
+// Default Bootstrap colors
 
 $blue: #0072ED;
 $blue: #006fe6;
@@ -61,28 +68,31 @@ $dropdown-header-color: $gray-700;
 $figure-caption-color: $gray-700;
 $breadcrumb-active-color: $gray-700;
 
-$carousel-control-opacity: 1;
+/////////////
+//         //
+// Imports //
+//         //
+/////////////
 
-// Shared variables
+// Shared variables and mixins
 
 @import "global-variables.scss";
 @import "custom-mixins.scss";
 
-//
 // Import Bootstrap 4.0.0
-//
 
 @import "../bootstrap.4.0.0/scss/bootstrap";
 
-//
-// Width Helpers
-// (can be used independently or with container and container-fluid)
-//
+//////////////////////////////////////////////////////////
+//                                                      //
+// Global font sizes, HTML, body, and img tag defaults  //
+//                                                      //
+//////////////////////////////////////////////////////////
 
-$narrow-width: 700px;
-$wide-width: 1400px;
-
-// HTML and Body tag improvements
+.fs-small{ font-size: $fs-small; } // 14px
+.fs-medium{ font-size: $fs-medium; } // 16px
+.fs-regular{ font-size: $fs-regular; } // 20px
+.fs-large{ font-size: $fs-large; } // 20px
 
 html{ 
 	-webkit-font-smoothing: antialiased;
@@ -91,31 +101,81 @@ html{
 }
 
 body{
+  min-width: 340px;
 	font-size: 1.25rem; // 20px
-	min-width: 340px;
 	color: $black;
 }
 
-.fs-small{ font-size: 0.875rem; } // 14px
-.fs-medium{ font-size: 1rem; } // 16px
-.fs-regular{ font-size: 1.25rem; } // 20px
-.fs-large{ font-size: 1.5rem; } // 20px
-
 img{ vertical-align: top; }
 
-//
-// Custom classes for aesthetic improvement
-//
+/////////////////////////////////////////////////
+//                                             //
+// Remove margin bottom on last-child elements //
+//                                             //
+/////////////////////////////////////////////////
+
+h1, 
+h2, 
+h3, 
+h4,
+h5, 
+h6,
+p,
+a, 
+ul, 
+li, 
+dl, 
+dd
+{
+  &:last-child{ margin-bottom: 0; }
+}
+
+// Remove default margins to <hr> tags 
+
+hr{ margin: 0; }
+
+// Fixes Bootstrap responsive table bug
+
+.responsive-wrapper{
+
+  min-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  th { min-width: 80px; }
+}
+
+// Ensure child links of .text-white remain white
+
+.text-white a, 
+.text-white a:hover, 
+{ color: white; }
+
+///////////////////////////////
+//                           //
+// Custom classes (optional) //
+//                           //
+///////////////////////////////
+
+// Width helpers
+// (can be used independently or with container and container-fluid)
+
+$narrow-width: 700px;
+$wide-width: 1400px;
+
+.narrow{ max-width: $narrow-width; }
+.wide{ max-width: $wide-width; }
 
 .narrow,
 .wide
 { @extend .mx-auto; }
 
-.narrow{ max-width: $narrow-width; }
-.wide{ max-width: $wide-width; }
+// Box shadow
 
 .has-shadow{ @include boxShadow; }
 .has-inset-shadow{ @include boxShadow(true); }
+
+// Miscellaneous
 
 .bg-none{ background: none; }
 
@@ -133,46 +193,11 @@ img{ vertical-align: top; }
 .opacity-80{ @include opacity(0.80); }
 .opacity-90{ @include opacity(0.90); }
 
-// Remove margin bottom on last-child pseudo elements
-
-h1, 
-h2, 
-h3, 
-h4,
-h5, 
-h6,
-p,
-a, 
-ul, 
-li, 
-dl, 
-dd
-{
-	&:last-child{ margin-bottom: 0; }
-}
-
-// Remove default margins to <hr> tags 
-
-hr{ margin: 0; }
-
-.text-white a, 
-.text-white a:hover, 
-{ color: white; }
-
-// Fixes Bootstrap responsive table bug
-
-.responsive-wrapper{
-
-	min-width: 100%;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-
-	th { min-width: 80px; }
-}
-
-//
-// Citywide Global Header and Footer
-//
+/////////////////////////////////////
+//                                 //
+// Citywide global header & footer //
+//                                 //
+/////////////////////////////////////
 
 #nyc-top-header{ @extend .fs-small; }
 #nyc-bottom-footer{ @extend .fs-medium; }
@@ -200,9 +225,11 @@ hr{ margin: 0; }
 	a:hover{ text-decoration: none; }
 }
 
-//
-// Toggle buttons
-//
+/////////////////////////////////
+//                             //
+// Toggle buttons & accordions //
+//                             //
+/////////////////////////////////
 
 .toggle-title{
   display: inline-block;
@@ -219,9 +246,7 @@ hr{ margin: 0; }
   float: right;
 }
 
-//
-// Accordions
-//
+// Accessible accordions
 
 .accessible-accordion{
 
@@ -238,7 +263,7 @@ hr{ margin: 0; }
 
 }
 
-// Generic Toggle Button
+// Generic toggle button
 
 a.btn[data-toggle="collapse"]{
 
@@ -255,9 +280,11 @@ a.btn[data-toggle="collapse"]{
   .toggle-title{ float: left; }
 }
 
-//
-// Featured panels
-//
+/////////////////////
+//                 //
+// Featured panels //
+//                 //
+/////////////////////
 
 .featured-panel{
 

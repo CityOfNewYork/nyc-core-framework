@@ -1,13 +1,17 @@
 $amount: 0.5;
 
-//
-// Global
-//
+//////////////////////////
+//                      //
+// Global color palette //
+//                      //
+//////////////////////////
 
-$white: white;
+// Black & white
+
 $black: black;
+$white: white;
 
-// Social Media
+// Social media 
 
 $facebook: #3b5999;
 $twitter: #4dc8f1;
@@ -15,7 +19,7 @@ $instagram: $black;
 $youtube: #ff0000;
 $flickr: #ff0084;
 
-// NYC Accessible
+// NYC accessible colors
 
 $crimson: #D9003D;
 $brick-red: #881728;
@@ -57,8 +61,8 @@ $theme-colors: (
   "gray-700": $gray-700,
   "gray-800": $gray-800,
   "gray-900": $gray-900,
-
-  // Social Media Colors
+  
+  // Social media 
 
   "facebook": $facebook,
   "twitter": $twitter,
@@ -66,7 +70,7 @@ $theme-colors: (
   "youtube": $youtube,
   "flickr": $flickr,
 
-  // NYC Colors
+  // NYC accessible colors
 
   "crimson": $crimson,
   "brick-red": $brick-red,
@@ -95,7 +99,13 @@ $theme-colors: (
   "pearl": $pearl,
 );
 
-// This variable affects the `.h-*` and `.w-*` classes.
+//////////////////////////////
+//                          //
+// Additional size defaults //
+//                          //
+//////////////////////////////
+
+// These variables affect the `.h-*` and `.w-*` classes.
 
 $sizes: (
   25: 25%,
@@ -105,4 +115,34 @@ $sizes: (
   75: 75%,
   100: 100%,
 
+);
+
+////////////////////////
+//                    //
+// Additional spacers //
+//                    //
+////////////////////////
+
+$spacer: 1rem !default; // 16px
+
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),   // 4px
+  2: ($spacer * .5),    // 8px
+  3: $spacer,           // 16px
+  4: ($spacer * 1.5),   // 24px
+  5: ($spacer * 3),     // 48px
+  6: ($spacer * 4)      // 64px
+
 ) !default;
+
+///////////////////////
+//                   //
+// Global font sizes //
+//                   //
+///////////////////////
+
+$fs-small: 0.875rem;    // 14px
+$fs-medium: 1rem;       // 16px
+$fs-regular: 1.25rem;   // 20px
+$fs-large: 1.5rem;      // 20px
