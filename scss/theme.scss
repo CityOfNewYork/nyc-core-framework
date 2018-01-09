@@ -178,9 +178,7 @@ $header-dropdown-background-color: darken($header-link-active-color, 10%);
     color: black;
   }
   
-  .nav-item {
-    margin-right: 1em;
-  }
+  .nav-item { margin-right: 1rem; }
 
   li.active a.nav-link{
     color: $header-link-active-color;
