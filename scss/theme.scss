@@ -27,11 +27,6 @@ $royal-blue: #00529A;
 $deep-blue: #1D2252;
 $teal: #008080;
 
-$display1-size: 6rem;
-$display2-size: 5.5rem;
-$display3-size: 4.5rem;
-$display4-size: 3.5rem;
-
 /////////////////////////////////////
 //                                 //
 // NYC header & primary navigation //
@@ -198,16 +193,21 @@ $header-dropdown-background-color: darken($header-link-active-color, 10%);
 //                                        //
 ////////////////////////////////////////////
 
-// Display-* font sizes 
+// Display-* font sizes
 
-@include media-breakpoint-down(sm){
+$display1-size: 6rem;
+$display2-size: 5.5rem;
+$display3-size: 4.5rem;
+$display4-size: 3.5rem; 
+
+@include media-breakpoint-down(md){
   .display-1{ font-size: $display1-size * 0.5; }
   .display-2{ font-size: $display2-size * 0.5; }
   .display-3{ font-size: $display3-size * 0.5; }
   .display-4{ font-size: $display4-size * 0.5; }
 }
 
-@include media-breakpoint-down(md){
+@include media-breakpoint-down(lg){
   .display-1{ font-size: $display1-size * 0.75; }
   .display-2{ font-size: $display2-size * 0.75; }
   .display-3{ font-size: $display3-size * 0.75; }
