@@ -35,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900,900i" rel="stylesheet">
 
     <!-- NYC Bootstrap CDN -->
-    <link rel="stylesheet" href="/css/nyc-bootstrap.css">
+    <link rel="stylesheet" href="http://www1.nyc.gov/assets/home/css/libs/nyc-style/core.css">
 
     <!-- Theme Styles -->
     <link rel="stylesheet" href="/css/theme.css">
