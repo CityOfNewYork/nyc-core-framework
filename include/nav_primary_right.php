@@ -9,8 +9,8 @@
 
         <div class="col d-flex">
           <a class="align-self-center" href="/">
-            <img src="/images/nyc-logo.svg" alt="NYC Logo">
-            <!-- <img src="http://via.placeholder.com/320x84/000000/ffffff" alt="NYC Logo"> -->
+            <!-- <img src="/images/nyc-logo.svg" alt="NYC Logo"> -->
+            <img src="http://via.placeholder.com/320x84/000000/ffffff" alt="NYC Logo">
           </a>
         </div>
 
