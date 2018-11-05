@@ -1,285 +1,280 @@
-@import "custom-mixins.scss";
+////////////////////////////////////////////////////////////////////////////////
+//
+// Imports (Required)
+//
+////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////
-//                 //
-// Theme variables //
-//                 //
-/////////////////////
+// Global Variables
+@import "a-global-variables.scss";
+@import "b-bootstrap-imports.scss";
+@import "c-custom-mixins.scss";
+@import "d-enhancements.scss";
+@import "e-ui-elements.scss";
+@import "f-dev-tools.scss";
 
-// Default grays
+////////////////////////////////////////////////////////////////////////////////
+//
+// Theme Styles 
+//
+////////////////////////////////////////////////////////////////////////////////
 
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #868e96;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
+////////////////////////////////////////
+// Navigation
+////////////////////////////////////////
 
-// Theme specific colors 
+#aside-nav{
+    .link-list{
+        a{
+            @extend .text-muted;
+            
+            &.active{
+                @extend .text-info;
+                @extend .font-weight-bold;
+            }
+        }
+    }
+}
 
-$clean-green: #00A35D;
-$true-blue: #1461FF;
-$spring-green: #0F8417;
-$royal-blue: #00529A;
-$deep-blue: #1D2252;
-$teal: #008080;
+#tear-sheet-top-nav{
+    a{
+        @extend .text-secondary;
+        &.active{
+            @extend .text-white;
+        }
+    }
+}
 
-/////////////////////////////////////
-//                                 //
-// NYC header & primary navigation //
-//                                 //
-/////////////////////////////////////
+#global-links{
+    .link-list{
+        a{
+            @extend .text-body;
+            &.active{
+                @extend .text-primary;
+                @extend .font-weight-bold;
+            }
+        }
+    }
+}
 
-$header-link-color: black;
-$header-pill-border-color: $gray-200;
-$header-link-active-color: $royal-blue;
-$header-dropdown-background-color: darken($header-link-active-color, 10%);
+////////////////////////////////////////
+// Tables
+////////////////////////////////////////
 
-#global-header{
+// table{ min-width: 600px; }
 
-  .wrap-header{
-    position: relative;
-    z-index: 500;
-  }
+th, td{ @extend .fs-md; }
+
+th, td{ white-space: nowrap; }
+
+////////////////////////////////////////
+// Forms
+////////////////////////////////////////
+
+.mobile-margin-offset-x{
+        
+    @include media-breakpoint-down('xs') {
+
+        fieldset,
+        .fieldset, 
+        .card
+        {
+            margin-left: -(($grid-gutter-width/2) + $border-width);
+            margin-right: -(($grid-gutter-width/2) + $border-width);
+        }
+    }
+}
+
+fieldset, 
+.fieldset
+{
+    @extend .mb-5;
+    @extend .border;
+    @extend .clearfix;
+}
+
+legend, 
+.legend
+{
+    @extend .bg-info;
+    @extend .text-white;
+    @extend .px-4;
+    @extend .py-3;
+    @extend .fs-md;
+    @extend .font-weight-normal;
+    @extend .mb-0;
+}
+
+// Note: Checkboxes and radios are wrapped in a list to ensure spacing
+
+ul.checkbox-radio-list{
+    @extend .list-unstyled;
     
-  // Color, active state, and style of .btn-toggle
-
-  .btn-toggle{
     
-    cursor: pointer;
-    outline: 0;
-    padding: 0; 
-    border: none;
-    background: none;
-    color: $header-link-color;
-
-    &:focus{ outline: none; }
-    &[aria-expanded="true"]{ color: $header-link-active-color; }
-  }
-
-  // Color and active state of links
+    li{ 
+        @extend .mx-0; 
+        @extend .mb-3; 
+    }
+}
   
-  nav a, 
-  nav a:hover,
-  nav a:visited
 
-  {
-    color: $header-link-color;
-    &.active{ color: $header-link-active-color; }
-  }
-
-  // Color, active state, and background of links in #global-header
-
-  .nav.nav-pills a.active{
-    color: white;
-    background: $header-link-active-color;
-  }
-
-  // Remove Bootstrap default border-radius on nav-pills 
-
-  .dropdown-menu,
-  .nav.nav-pills .nav-link
-  { @include border-radius(0); }
-
-  .nav.nav-pills{
-
-     .nav-link{
-      padding: 0.85rem;
-      border:1px solid $header-pill-border-color;
-      border-left-color: transparent;
-      border-top: none;
-      border-bottom: none;
-
-      &.active{ border-right-color: $header-link-active-color; }
-      &:last-child { border: none; }
-    }
-
-    // Remove Bootstrap default blue background on 'show'
-    
-    > .show .nav-link:not(.active){ background: none; }
-  }
-
-  // Resets dropdown functionality on mobile navigation
-
-  #device-menu{
-
-    .dropdown-menu.show{
-
-      position: static !important;
-
-      -webkit-transform: none !important; /* Safari and Chrome */
-         -moz-transform: none !important; /* Firefox */
-          -ms-transform: none !important; /* IE 9 */
-           -o-transform: none !important; /* Opera */
-              transform: none !important;
-
-      width: 100%;
-      border: none;
-      margin: 0;
-      padding: 0 1rem;
-
-      a.dropdown-item{
-        display: inline-block !important;
-        width: auto !important;
-        float: left;
-        padding:0.25rem 1.25rem;
-        color: black;
-
-        &:hover,
-        &:active,
-        &:visited
-        { background: none; }
-      }
-    }
-  }
-
-  // Improves .dropdown-menu when present within .nav-pills
-
-  .nav-pills .dropdown-menu{
-    left: 0;
-    margin:0;
-    width:100%;
-    border: none;
-    background: $header-dropdown-background-color;
-    
-    a.dropdown-item{
-
-      color: white;
-      background: none;
-      &:hover,
-      &:active,
-      &:visited
-      { background: none; }
-    }
-  }
-
-} /* #global-header */ 
-
-#nav-primary{
-
-  &.navbar,
-  .nav-link{
-    padding-left: 0;
-    padding-right: 0;
-  }
+.modal-content{
+    @extend .border-0;
+    @extend .shadow-lg; 
 }
 
-#nav-primary.navbar{
+// Remove Bootstrap's default modal-footer flex property
 
-  .navbar-toggler{
-    outline: 0;
-    border: none;
-    @include border-radius(0);
-    padding: .5rem 0;
-    line-height:1.5;
-    color: black;
-  }
+.modal-footer{ @extend .d-block; }
   
-  .nav-item { margin-right: 1rem; }
+////////////////////////////////////////
+// Tabs
+////////////////////////////////////////
 
-  li.active a.nav-link{
-    color: $header-link-active-color;
+.nav-pills[role="tablist"]{
+    @extend .bg-light;
+    .nav-link{
+        @extend .text-body;
+        &.active{ @extend .text-secondary; }
+    }
+}
+
+////////////////////////////////////////
+// Alerts
+////////////////////////////////////////
+
+.alert{
+    
+    @extend .px-4;
+
+    // padding-top: inherit !important;
+    // padding-bottom: inherit !important;
+    border-color: $transparent;
+    
+    p, 
+    ul, 
+    a
+    { @extend .fs-md; }
+    
+    a{ @extend .blended-link; }
+    .alert-heading{ @extend .h5; }
+
+    &.rg-button-height{
+        @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+    }
+    
+}
+
+.submit-success-icon {
+    font-size: 4rem;
+    line-height: 0;
+    @extend .text-success;
+    @extend .text-success;
   }
-}
 
-////////////////////////////////////////////
-//                                        //
-// Responsive font style sizes (optional) //
-//                                        //
-////////////////////////////////////////////
+.modal-confirm{
+    @extend .position-absolute; 
+    @extend .w-100; 
+    @extend .h-100;
+    @extend.bg-opacity-white-80;
+    @extend .bg-white;
 
-// Display-* font sizes
-
-$display1-size: 6rem;
-$display2-size: 5.5rem;
-$display3-size: 4.5rem;
-$display4-size: 3.5rem; 
-
-@include media-breakpoint-down(md){
-  .display-1{ font-size: $display1-size * 0.5; }
-  .display-2{ font-size: $display2-size * 0.5; }
-  .display-3{ font-size: $display3-size * 0.5; }
-  .display-4{ font-size: $display4-size * 0.5; }
-}
-
-@include media-breakpoint-down(lg){
-  .display-1{ font-size: $display1-size * 0.75; }
-  .display-2{ font-size: $display2-size * 0.75; }
-  .display-3{ font-size: $display3-size * 0.75; }
-  .display-4{ font-size: $display4-size * 0.75; }
-}
-
-////////////////////////////////
-//                            //
-// Carousel styles (optional) //
-//                            //
-////////////////////////////////
-
-.carousel{
-
-  a[class^="carousel-control-"]{ width: 50px; }
-
-  .carousel-indicators{
-    width:100%;
-    position: relative;
     left: 0;
-    right: 0;
     top: 0;
-    margin: 0;
-    background: black;
+}
 
-    > li{ cursor: pointer; }
-  }
+.highlight{
 
-  @include media-breakpoint-down(md){
+  text-shadow:
+  -1px -1px 0 theme-color("info"),  
+   1px -1px 0 theme-color("info"),
+   -1px 1px 0 theme-color("info"),
+    1px 1px 0 theme-color("info");
 
-    a[class^="carousel-control-"], 
-    div.gradient-overlay::before
-    { display: none; }
+    background: linear-gradient(to top, theme-color("secondary") 0%, theme-color("secondary") 100% ) no-repeat bottom left/100% 2px;
+}
 
-    .carousel-caption{
-      position: relative;
-      left: 0;
-      right: 0;
-      top: 0;
-      margin: 0;
-      color: white;
-      background: black;
+.hard-shadow{
+    position: relative; 
+  
+    &::before {
+      content: "\00a0";
+      @extend .position-absolute;
+      @extend .h-100;
+      @extend .w-100;
+      @extend .bg-info;
+      @extend .opacity-20;
+
+      top: 0.75rem;
+      left: 0.75rem;
+
     }
+
+    @include media-breakpoint-down(sm) {
+        &::before { display: none; }
+    }
+}
+
+.wrap-file-input{
+
+    @extend .position-relative;
+
+    input[type="file"]{
+        
+        &:focus + label{
+            outline: 0;
+            box-shadow: $btn-focus-box-shadow;
+        }
+    }
+
+    .file-input-label{
+        @extend .border;
+        @extend .d-block;
+
+        &:hover{
+            .file-choose,
+            .file-name
+            { text-decoration: none; }
+        }
+
+        .file-choose,
+        .file-name{
+            @extend .btn;
+            @extend .w-100;
+            @extend .text-center;
+        }
+
+        .file-choose{ 
+            @extend .btn-light;
+            @extend .text-info;
+        }
+
+        .file-name{ 
+            @extend .font-weight-normal;
+            display: inline-block;
+            white-space: normal;
+        }
+
+    }
+
+    @include media-breakpoint-down(md) {
+
+        .file-choose,
+        .file-name{ display: block !important;
+        }
+        // .file-choose {  }
+    }
+
+}
+
+
+.custom-underline {
+    background-image: linear-gradient(to right, $mfta-green 0%, $mfta-green 100%);
+    background-repeat: no-repeat;
+    background-size: 100% ($border-width*2);
+    background-position: 0 100%;
+    padding: 0.25rem 0;
+
+    // &:hover {
+    //   background-size: 100% 100%;
+    // }
   }
-}
-
-///////////////////////////
-//                       //
-// Theme specific styles //
-//                       //
-///////////////////////////
-
-// Fonts 
-
-body{ font-family: 'Roboto', sans-serif; }
-
-article > header{ text-transform: capitalize; }
-
-// General styles
-
-#nav-extras a.nav-link{
-  &.active
-  { color: grey; }
-}
-
-.color-swatches{
-
-  .card{
-    border: none;
-    border-radius: 0;
-    border-color: white;
-    margin-bottom: 0;
-    .card-header, 
-    .card-footer, 
-    { background-color: transparent; }
-  }
-}

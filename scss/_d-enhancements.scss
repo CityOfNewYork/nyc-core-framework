@@ -1,0 +1,468 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// General HTML Tags
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// Generic Tags
+////////////////////////////////////////
+
+html{ 
+  @extend .bg-info;
+
+  // Note: RTL Language Translation
+
+  &[dir="rtl"]{
+
+    .text-right{ @extend .text-left; }
+    .float-left{ @extend .float-right; }
+
+    // Flip Select tag background from left to right
+    
+    select:not(.notranslate){
+      background-position-x: 0.75rem !important;
+      padding: 0.375rem 0.75rem 0.375rem 1.75rem;
+    }
+
+    select.notranslate{
+      @extend .text-left;
+    }
+
+    body,
+    .dropdown-item
+    { @extend .text-right; }
+
+    .link-list:not(.justify-content-center){
+      .horizontal{
+        @extend .justify-content-start;
+      }
+    }
+    
+    .accordion-group,  
+    .btn-toggle
+    { 
+      a[data-toggle="collapse"]{
+        &::after {
+          @extend .ml-0;
+          @extend .mr-auto;
+        }
+      }
+    }
+
+    // Note: Remove Google's added padding and margin for rtl translation
+
+    ul, 
+    ol, 
+    dl 
+    { -webkit-padding-start: 0 !important;  }
+
+    dd { -webkit-margin-start: 0 !important; }
+
+    // Mobile Menu Float
+
+    #device-menu a.dropdown-item{ @extend .float-right; }
+
+    // Note: Flip Custom Control Background from left to right
+
+    .custom-control-label{
+      &::before, 
+      &::after
+      {
+        right: -$custom-control-gutter;
+      }
+    }
+  }
+}
+
+body{
+  @extend .position-relative;
+
+  // Font smoothing
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  // Set Overflow (optional) 
+  overflow-x: hidden;
+
+  // Set min and max width of body
+	min-width: 375px;
+  max-width: $site-width;
+  
+  // Set body font-size to accessible size
+  @extend .fs-rg;
+
+  // Center body
+	@extend .mx-auto;
+}
+
+// Make all images responsive by default
+img{ @extend .img-fluid; }
+
+////////////////////////////////////////
+// Sticky Top
+////////////////////////////////////////
+
+// Use .stick-top with caution as it's not compatible with Google translate
+
+// Note: Fixes Bootstraps 'sticky-top' class in Safari
+
+@supports (position: -webkit-sticky) or (position: sticky) {
+  .sticky-top {
+    position: sticky;
+    position:-webkit-sticky;
+    top: 0;
+    z-index: 1020; 
+  }
+}
+
+////////////////////////////////////////
+// Forms
+////////////////////////////////////////
+
+// Note: Remove unusual negative margin on default 'Legend' selectors
+
+legend, 
+.legend{
+  @extend .d-table;
+  @extend .float-left;
+  @extend .m-0;
+  @extend .p-0;
+  @extend .w-100;
+  line-height: 1.5;
+  
+  + * { clear: both; }
+}
+
+// Note: Add 'custom-select' class to all select boxes
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @extend .custom-select;
+}
+
+label{ @extend .fs-md; }
+
+// Note: Add padding to custom checkboxes and radios '.custom-control selector'
+// to ensure spacing during rtl translation  
+
+.custom-control {
+  padding-left: $custom-control-gutter;
+  padding-right: $custom-control-gutter;
+}
+
+.custom-control-label{
+
+  &::before{ 
+    box-shadow: $accessible-box-shadow;
+  }
+}
+
+// Google Translate dropdown
+
+#google_translate_element{
+  @extend .text-center;
+
+  select{
+    @extend .text-left;
+    @extend .form-control;
+    @extend .form-control-lg;
+    @extend .mb-2;
+  }
+
+  .goog-logo-link{
+    @extend .mx-auto;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Margin bottom 
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Note: Remove Bootstrap default bottom margins to 'last-child' selectors 
+
+h1, 
+h2, 
+h3,
+h4,
+h5,
+p,
+a, 
+ul, 
+li, 
+dl, 
+dd, 
+address
+{ 
+	&:last-child{ margin-bottom: 0; }
+}
+
+// Remove Bootstrap default to <hr> tags 
+
+hr{ margin: 0; }
+
+.list-group-flush .list-group-item{
+  @extend .px-0;
+
+  &:first-child{ border-top: none; }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Accessibility (Tabbing and Visual Cues)
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Note: We add 'text-decoration: underline' on particular :focus selectors
+
+$accessible-hover-focus: true;
+
+@if($accessible-hover-focus){
+
+  a, 
+  .btn, 
+  .nav-link,
+  .na-item, 
+  .dropdown-item
+  {
+    &:focus,
+    &:hover
+    { 
+      text-decoration: underline; 
+    }
+  }
+
+  .btn-toggle a,
+  .accordion-group a,
+  .btn.d-flex.align-items-center
+  a.card
+  {
+    &:focus,
+    &:hover
+    { 
+      text-decoration: none;
+      > span.title{ text-decoration: underline; }
+    }
+  }
+
+  .disabled{
+    &:focus,
+    &:hover
+    { box-shadow: none;
+      outline: none;
+      text-decoration: none;
+    }
+
+  }
+
+  section p > a,
+  section p > a:hover,
+  section p > a:focus,
+  { text-decoration: underline; }
+
+} // end if
+
+section > ul{
+  li{ @extend .mb-2; }
+}
+
+// Forms
+
+.form-group{
+  
+  &.custom-invalid{
+    input{ @extend .border-danger; }
+  }
+  
+}
+
+// Allow .btn selectors to wrap
+
+.btn{ white-space: normal !important; }
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Supplementary classes 
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// Fonts and Sizes
+////////////////////////////////////////
+
+// Note: Define Font Awesome for use in psuedo classes
+
+.font-awesome{
+	font-family: $font-awesome;
+	font-weight: 900;
+	font-style: normal;
+	font-size: inherit;
+}
+
+// Font-size classes
+// Note: Define Font Awesome for use in psuedo classes
+
+.fs-sm{ font-size: $fs-sm; }
+.fs-md{ font-size: $fs-md; }
+.fs-rg{ font-size: $fs-rg; }
+.fs-lg{ font-size: $fs-lg; }
+.fs-xl{ font-size: $fs-xl; }
+
+////////////////////////////////////////
+// Font Size Media Queries
+////////////////////////////////////////
+
+@include media-breakpoint-down(md){
+  .display-1{ font-size: $display1-size * 0.75; }
+  .display-2{ font-size: $display2-size * 0.75; }
+  .display-3{ font-size: $display3-size * 0.75; }
+  .display-4{ font-size: $display4-size * 0.75; }
+}
+
+@include media-breakpoint-down(sm){
+  main{
+    .fs-xl{ font-size: $fs-lg; }
+    .fs-lg{ font-size: $fs-rg; }
+  }
+}
+
+////////////////////////////////////////
+// Opacity
+////////////////////////////////////////
+
+.opacity-10{ @include opacity(0.10); }
+.opacity-20{ @include opacity(0.20); }
+.opacity-30{ @include opacity(0.30); }
+.opacity-40{ @include opacity(0.40); }
+.opacity-50{ @include opacity(0.50); }
+.opacity-60{ @include opacity(0.60); }
+.opacity-70{ @include opacity(0.70); }
+.opacity-80{ @include opacity(0.80); }
+.opacity-90{ @include opacity(0.90); }
+
+////////////////////////////////////////
+// Z-index
+////////////////////////////////////////
+
+.z-index-100,
+.z-index-200,
+.z-index-300,
+.z-index-400,
+.z-index-500,
+.z-index-600,
+.z-index-700,
+.z-index-800,
+.z-index-900
+
+{ position: relative; }
+
+.z-index-100{ z-index: 100; }
+.z-index-200{ z-index: 200; }
+.z-index-300{ z-index: 300; }
+.z-index-400{ z-index: 400; }
+.z-index-500{ z-index: 500; }
+.z-index-600{ z-index: 600; }
+.z-index-700{ z-index: 700; }
+.z-index-800{ z-index: 800; }
+.z-index-900{ z-index: 900; }
+
+////////////////////////////////////////
+// Background Opacity Classes
+////////////////////////////////////////
+
+.bg-opacity-black-10{ @include background-opacity(black, 0.1); }
+.bg-opacity-black-20{ @include background-opacity(black, 0.2); }
+.bg-opacity-black-80{ @include background-opacity(black, 0.8); }
+.bg-opacity-black-90{ @include background-opacity(black, 0.9); }
+
+.bg-opacity-white-80{ @include background-opacity(white, 0.8); }
+
+////////////////////////////////////////
+// Narrow and Wide Classes
+////////////////////////////////////////
+
+.narrow,
+.wide,
+.narrow
+{ @extend .mx-auto; }
+
+.narrow{ max-width: $narrow-width; }
+.wide{ max-width: $wide-width; }
+
+////////////////////////////////////////
+// Text Shadow
+////////////////////////////////////////
+
+.text-shadow{ @include text-shadow; }
+
+.text-shadow-border{ @include text-shadow( 0, 0, $border-width, black ); }
+
+////////////////////////////////////////
+// Border Offset (Left and Right)
+////////////////////////////////////////
+
+// Note: Apply left and right negative margin to parent selector
+// when child selectors have border applied 
+
+.offset-border-x{
+  margin-left: -$border-width;
+  margin-right: -$border-width;
+}
+// Note: Apply left and right negative margin to selector
+// for edge to edge look witout using 'no-gutters' on '.row' 
+
+.offset-gutter-x{
+  margin-left: -$grid-gutter-width/2;
+  margin-right: -$grid-gutter-width/2;
+}
+
+////////////////////////////////////////
+// No Button Style
+////////////////////////////////////////
+
+// Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
+
+.no-btn-style{
+  color: currentColor;
+  font-weight: inherit;
+  border-color: transparent;
+  background-color: transparent;
+  line-height: 100%;
+  @extend .p-0;
+
+  @include hover-focus {
+    color: currentColor;
+    border-color: transparent;
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+
+////////////////////////////////////////
+// Buttons, links, and lists
+////////////////////////////////////////
+
+// Blended Link
+// Note: Apply to <a> to inherit color from parent and add text decoration 
+
+.blended-link,
+.blended-link:hover{
+  color: currentColor;
+  text-decoration: underline;
+}
+
+////////////////////////////////////////
+// IE 10 and 11 Fixes 
+////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+  // Fixes display flex bug 
+  .card,
+  .figure{ display: block !important; }
+
+  // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
+  .narrow{ max-width: $narrow-width-ie; }
+}

@@ -1,0 +1,85 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Custom Mixins
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// Opacity
+////////////////////////////////////////
+
+// Note: The opacity mixins can be called anytime, 
+// however there are preset opacity classes available from (see 'd-enhancements.scss')
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin background-opacity($color, $opacity: 0.5) {
+  background-color: $color; /* The Fallback */
+  background-color: rgba($color, $opacity);
+}
+
+////////////////////////////////////////
+// Text shadow
+////////////////////////////////////////
+
+@mixin text-shadow($x: 0, $y: 0, $blur: 6px, $color: rgb(0, 0, 0)) {
+  text-shadow: $x $y $blur $color;
+}
+
+////////////////////////////////////////
+// Linear Gradient
+////////////////////////////////////////
+
+@mixin linear-gradient(
+  
+  $direction: to bottom,
+
+  $first-color: black,
+  $second-color: black,
+
+  $first-color-opacity: 0,
+  $second-color-opacity: 0.9,
+
+  $first-color-position: 50%,
+  $second-color-position: 100%
+
+){
+  background-image: linear-gradient(
+    $direction,
+    rgba( $first-color, $first-color-opacity ) $first-color-position, 
+    rgba( $second-color, $second-color-opacity ) $second-color-position );
+}
+
+////////////////////////////////////////
+// Background image
+////////////////////////////////////////
+
+$background-image-path: '/images/hero/';
+
+@mixin apply-background-image(
+    $image: '01', 
+    $extension: '.jpg',
+    $cover: true
+  ){
+  
+  @if $extension == '.svg'{
+    background-image: url($background-image-path + $image + $extension);
+    background-image: url($background-image-path + $image + $extension), none;
+  } @else {
+    background-image: url($background-image-path + $image + $extension);
+  }
+
+  @if $cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  } @else{
+    background-repeat: repeat;
+  }
+
+}

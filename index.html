@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Home • MFTA</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <!-- NYC Theme CSS -->
+    <link rel="stylesheet" href="./css/theme.css">
+    
+</head>
+
+<body>
+
+    <a class="sr-only sr-only-focusable tab-skipper" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
+
+    <div id="nyc-top-header">
+
+        <div class="container-fluid wide">
+
+            <div class="row no-gutters align-items-center py-3">
+
+                <div class="col">
+                    <p class="d-none d-md-flex">Name of Office</p>
+                </div><!-- .col -->
+
+                <div class="col-auto">
+
+                    <ul class="link-list horizontal">
+                        <li>
+                            <a href="http://www1.nyc.gov/home/search/index.page" title="Search all NYC.gov websites"
+                                target="_blank">Search all NYC.gov websites</a>
+                        </li>
+                        <li>
+                            <a href="http://www1.nyc.gov/" title="311" target="_blank">311</a>
+                        </li>
+                        <li>
+                            <a href="/tear-sheet/accessibility/" title="NYG.gov">
+                                <img src="./images/nyc-white-15.svg" alt="NYC Logo" class="d-block">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!-- .col -->
+
+            </div><!-- .row -->
+
+        </div><!-- .container-fluid -->
+
+    </div><!-- #nyc-top-header -->
+
+    <header id="global-header" role="banner">
+
+        <div class="wrap-header">
+
+            <div class="container-fluid wide">
+
+                <!-- row 01 -->
+                <div class="row align-items-center">
+                    <div id="wrap-logo" class="col-lg py-3">
+                        <a class="d-inline-block" href="index.html" title="Home">
+                            <img src="./images/nyc-logo-generic.svg" alt="NYC Generic Logo">
+                        </a>
+                    </div>
+                    <!-- .col -->
+
+                    <!-- separator -->
+                    <div class="col-12 border-top d-lg-none"></div>
+
+                    <div class="col-lg-auto">
+
+                        <!-- row 02 -->
+                        <div class="row no-gutters justify-content-between py-3">
+
+                            <!-- Menu Toggle -->
+                            <div class="col-auto d-flex d-lg-none">
+
+                                <button class="btn no-btn-style" type="button" data-toggle="collapse" data-target="#device-menu"
+                                    aria-controls="device-menu" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="d-flex align-items-center">
+                                        <span class="fas fa-bars fa-fw fs-lg"></span>
+                                        <span class="px-2 fs-rg">Menu</span>
+                                    </span>
+                                    <span class="sr-only">Main Navigation</span>
+                                </button>
+
+                            </div>
+                            <!-- .col -->
+
+                            <div class="col-auto">
+
+                                <ul class="link-list horizontal">
+                                    <li>
+                                        <!-- Member Login -->
+                                        <a class="btn btn-secondary text-primary" href="member-portal-dashboard.html" title="Log In">Log In</a>
+                                    </li>
+                                    <li>
+                                        <!-- Language -->
+                                        <button class="btn no-btn-style" type="button" data-toggle="collapse"
+                                            data-target="#global-language" aria-controls="global-language"
+                                            aria-expanded="false" aria-label="Toggle Language">
+                                            <span class="fas fa-language fa-fw fs-lg"></span>
+                                            <span class="sr-only">Language</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <!-- Search -->
+                                        <button class="btn no-btn-style" type="button" data-toggle="collapse"
+                                            data-target="#global-search" aria-controls="global-search" aria-expanded="false"
+                                            aria-label="Toggle Search">
+                                            <span class="fas fa-search fa-fw fs-lg"></span>
+                                            <span class="sr-only">Global Search</span>
+                                        </button>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- .col -->
+
+                        </div>
+                        <!-- .row -->
+
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
+
+            </div>
+            <!-- .container-fluid -->
+
+        </div>
+        <!-- .wrap-header -->
+
+        <div class="collapse bg-light" id="global-language">
+            <div class="narrow px-3 py-4" aria-label="Language">
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+
+        <div class="collapse bg-light" id="global-search">
+            <form class="narrow px-3 py-4" aria-label="Search" role="search">
+                <div class="input-group">
+                    <label class="sr-only" for="global-search-bar">Search MFTA</label>
+                    <input class="form-control form-control-lg border-0" id="global-search-bar" placeholder="Search MFTA">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-primary btn-lg border-0">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <hr class="d-none d-lg-block">
+
+        <div class="container-fluid wide d-none d-lg-block px-0">
+
+            <nav class="nav nav-pills" id="nav-primary" role="navigation">
+
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle" 
+                        id="nav-item-01" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true"
+                        aria-expanded="false" title="Nav Item">
+                            Nav Item
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="nav-item-01">
+
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+
+                    </div>
+
+                </div>
+                <!-- .nav-item -->
+
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle" 
+                        id="nav-item-02" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true"
+                        aria-expanded="false" title="Nav Item">
+                            Nav Item
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="nav-item-02">
+
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+
+                    </div>
+
+                </div>
+                <!-- .nav-item -->
+
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle" 
+                        id="nav-item-02" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true"
+                        aria-expanded="false" title="Nav Item">
+                            Nav Item
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="nav-item-02">
+
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+                        <a class="dropdown-item" href="#" title="Link">Link</a>
+
+                    </div>
+
+                </div>
+                <!-- .nav-item -->
+
+            </nav>
+
+        </div>
+
+        <div id="device-menu" class="primary-navigation-device collapse d-lg-none">
+
+            <hr>
+            
+            <nav class="nav d-flex flex-column py-3" role="navigation">
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle" id="Give-2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" title="Donate Materials">
+                        Give
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="Give-2">
+
+                        <a class="dropdown-item" href="give-donating-materials.html" title="Donating Materials">Donatingn Materials</a>
+                        <a class="dropdown-item" href="give-volunteer.html" title="Volunteer">Volunteer</a>
+                        <a class="dropdown-item" href="give-financial-contributions.html" title="Financial Contributions">Financial Contributions</a>
+
+                    </div>
+
+                </div>
+
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle " id="receive-2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" title="Receive">
+                        Receive
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="receive-2">
+                        <a class="dropdown-item" href="receive-receiving-materials.html" title="Receiving Materials">Receive Materials</a>
+                        <a class="dropdown-item" href="#" title="Warehouse Shopping">Warehouse Shopping</a>
+                        <a class="dropdown-item" href="#" title="Direct Donations">Direct Donations</a>
+                    </div>
+
+                </div>
+
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle" id="education-2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" title="Education">
+                        Education
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="education-2">
+
+                        <a href="#" class="dropdown-item" title="Education Center">Education Center</a>
+                        <a href="#" class="dropdown-item" title="Workshops &amp; Programs">Workshops &amp; Programs</a>
+
+                    </div>
+
+                </div>
+
+                <div class="nav-item dropdown">
+
+                    <a href="#" class="nav-link dropdown-toggle" id="about-2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" title="About Materials for the Arts">
+                        About
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="about-2">
+                        
+                        <a class="dropdown-item" href="#" title="Hours">Hours and Directions</a>
+                        <a class="dropdown-item" href="#" title="Contact Us">Contact Us</a>
+                        <a class="dropdown-item" href="#" title="Our Mission">Our Mission</a>
+                        <a class="dropdown-item" href="#" title="MFTA History">MFTA History</a>
+                        <a class="dropdown-item" href="#" title="Letter from the Commissioner">Letter from the Commissioner</a>
+                        <a class="dropdown-item" href="#" title="Staff and Board">Staff and Board</a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <!-- #global-header -->
+
+    <main id="content" role="main">
+
+        <section class="featured-panel responsive-sm">
+
+            <div class="card bg-primary">
+                <img class="card-img opacity-40 show-on-mobile" src="https://placeholder.com/1500x500" alt="Card image">
+                <div class="card-img-overlay d-flex">
+                    <div class="container align-self-center w-100">
+                        <div class="narrow text-white text-center">
+                            <h1 class="card-title display-4 font-weight-bold mb-3">NYC's Largest Creative Reuse Center</h1>
+                            <a href="#" class="btn btn-lg btn-secondary text-primary">Our Mission</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- .featured-panel -->
+
+        <section class="py-6">
+
+            <div class="container">
+
+                <div class="row matrix-gutter">
+
+                    <div class="col-md d-md-flex">
+                        <div class="card align-self-stretch w-100 bg-secondary">
+                            <div class="card-body text-primary">
+                                <h2 class="card-title h2">Donate for a cause</h2>
+                                <p class="card-text">Support local arts across New York City. Whether you're a business
+                                    or an individual,
+                                    donating materials is easy.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-lg btn-white text-crimson">Become a donor</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md d-md-flex">
+                        <div class="card align-self-stretch bg-secondary">
+                            <div class="card-body text-primary">
+                                <h2 class="card-title h2">Receive from MFTA</h2>
+                                <p class="card-text">Each year, MFTA provides millions of dollars of supplies and
+                                    inspiration to New York
+                                    City's artistic and educational
+                                    communities.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-lg btn-white text-crimson">Become a receipient</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .row -->
+
+            </div>
+            <!-- .container -->
+
+        </section>
+
+        <section class="bg-light py-6">
+
+            <div class="container text-primary">
+
+                <div class="row mb-5">
+
+                    <div class="col-md-6 order-md-last mb-5 mb-md-0">
+                        <div class="hard-shadow">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tiJVtdUzzmw"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .col -->
+                      
+                    <div class="col-md-6 d-flex align-items-center">
+                        <h2 class="h1 mb-0">Sustaining the arts and the environment</h2>
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
+
+                <div class="row mb-5">
+                    <div class="col-md mb-5 mb-md-0">
+                        <p><strong>Materials for the Arts</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eaque dolor tempora non repudiandae ex qui, at incidunt reprehenderit itaque quae adipisci.</p>
+                    </div>
+                    <div class="col-md">
+                        <p><strong>Friends of Materials for the Arts</strong> Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Fugiat eaque
+                            dolor tempora non repudiandae ex qui.</p>
+                    </div>
+                </div>
+                <!-- .row -->
+
+                <a href="#" class="btn btn-secondary text-primary btn-lg">Friends of MFTA website</a>
+
+            </div>
+            <!-- .container -->
+
+        </section>
+
+
+        <section class="container-fluid bg-accent px-0">
+
+            <h2 class="sr-only">Screen Reader Only Header</h2>
+
+            <div class="row matrix-border">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="bg-info">
+                        <img src="./images/feature/volunteer.jpg" alt="Placeholder">
+                        <div class="px-4 py-5">
+                            <h3 class="h4">
+                                <a href="#" class="text-accent">Volunteer</a>
+                            </h3>
+                            <p class="text-accent">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
+                                penatibus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="bg-info">
+                        <img src="./images/feature/workshops.jpg" alt="Placeholder">
+                        <div class="px-4 py-5">
+                            <h3 class="h4">
+                                <a href="#" class="text-accent">Workshops</a>
+                            </h3>
+                            <p class="text-accent">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
+                                penatibus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="bg-info">
+                        <img src="./images/feature/mfta-artists.jpg" alt="Placeholder">
+                        <div class="px-4 py-5">
+                            <h3 class="h4">
+                                <a href="#" class="text-accent">MFTA Artists</a>
+                            </h3>
+                            <p class="text-accent">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
+                                penatibus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="bg-info">
+                        <img src="./images/feature/blog.jpg" alt="Placeholder">
+                        <div class="px-4 py-5">
+                            <h3 class="h4">
+                                <a href="#" class="text-accent">Blog</a>
+                            </h3>
+                            <p class="text-accent">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
+                                penatibus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .row -->
+
+        </section>
+
+        <section class="bg-accent text-info py-6">
+
+            <div class="container">
+
+                <h4 class="h1 mb-5">Upcoming Events</h4>
+
+                <div class="row mb-5">
+                    <div class="col-lg-4 fs-md">
+                        <p class="mb-0">
+                            <strong>09/30/17 – 11/04/17</strong>
+                        </p>
+                        <p>
+                            <em>Workshop</em>
+                        </p>
+                    </div>
+                    <div class="col-lg-8 fs-md">
+                        <h3>
+                            <a href="#" class="text-info">Paper: From Pulp to Fiction</a>
+                        </h3>
+                        <p>Saturdays 9:30am – 5:00pm</p>
+                    </div>
+                </div>
+                <!-- .row -->
+
+                <hr>
+
+                <div class="row py-4">
+                    <div class="col-lg-4 fs-md">
+                        <p class="mb-0">
+                            <strong>01/18/19</strong>
+                        </p>
+                        <p>
+                            <em>Artist Reception</em>
+                        </p>
+                    </div>
+                    <div class="col-lg-8 fs-md">
+                        <h3>
+                            <a href="#" class="text-info">Opening Reception For Sol’sain’t Many Kin: All Sol’skin Is A
+                                Free Kin</a>
+                        </h3>
+                        <p>Thursday 6:30pm - 9:00pm</p>
+                    </div>
+                </div>
+                <!-- .row -->
+
+                <hr>
+
+                <div class="row py-4">
+                    <div class="col-lg-4 fs-md">
+                        <p class="mb-0">
+                            <strong>02/05/18</strong>
+                        </p>
+                        <p>
+                            <em>Orientation</em>
+                        </p>
+                    </div>
+                    <div class="col-lg-8 fs-md">
+                        <h3>
+                            <a href="#" class="text-info">Welcome Orientation</a>
+                        </h3>
+                        <p>Monday 2:00pm – 3:00pm</p>
+                    </div>
+                </div>
+                <!-- .row -->
+
+                <a href="#" class="btn btn-info text-accent btn-lg">Events Calendar</a>
+
+            </div>
+            <!-- .container -->
+
+        </section>
+
+        <section class="row no-gutters align-items-center bg-primary">
+            <div class="col-md">
+              <img src="./images/feature/tom-finkelpearl.jpg" alt="Placeholder">
+            </div>
+            <div class="col-md">
+              <div class="p-4 p-md-5">
+                <div class="narrow text-white">
+                  <h4 class="h2 font-weight-bold text-secondary">Letter from the commissioner</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quasi facere labore rerum aliquid
+                    architecto harum vero suscipit tenetur error deleniti, quo quas eius.</p>
+                  <a href="#" class="btn btn-lg btn-secondary text-primary" title="Read More">Read More</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+    </main>
+    <!-- #content -->
+
+    <footer>
+
+        <!-- Optional sub-footer goes here -->
+        
+        <section id="business-footer">
+
+            <div id="follow" class="container-fluid text-primary text-center bg-secondary py-5">
+
+                <div class="narrow">
+
+                    <h2 class="h1 text-center">Join our mailing list</h2>
+                    <p>Stay informed about workshops, exhibitions, and more.</p>
+
+                    <form class="mb-4">
+                        <div class="input-group">
+                            <label class="sr-only" for="your-email-address">Search MFTA</label>
+                            <input class="form-control form-control-lg" id="your-email-address" type="email"
+                                placeholder="Enter your email">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary btn-lg"><span class="notranslate">Sign Up</span></button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p>
+                        <strong>Follow Us</strong>
+                    </p>
+
+                    <ul class="link-list horizontal justify-content-center">
+                        <li>
+                            <a class="text-primary" href="#" title="Facebook">
+                                <span class="fab fa-facebook-f fa-2x fa-fw"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-primary" href="#" title="Twitter">
+                                <span class="fab fa-twitter fa-2x fa-fw"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-primary" href="#" title="Instagram">
+                                <span class="fab fa-instagram fa-2x fa-fw"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="py-5">
+
+                <nav id="global-links" class="container-fluid wide" role="navigation">
+
+                    <nav class="row fs-md" role="navigation">
+
+                        <div class="col-md-6 col-lg mb-4 mb-0-lg">
+
+                            <ul class="link-list">
+                                <li class="mb-2"><strong>Give</strong></li>
+                                <li><a href="give-donating-materials.html" title="Donating Materials">Donating Materials</a></li>
+                                <li><a href="give-volunteer.html" title="Volunteer">Volunteer</a></li>
+                                <li><a href="give-financial-contributions.html" title="Financial Contributions">Financial Contributions</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-6 col-lg mb-4 mb-0-lg">
+
+                            <ul class="link-list">
+                                <li class="mb-2"><strong>Receive</strong></li>
+                                <li><a href="#" title="Receiving Materials">Receive Materials</a></li>
+                                <li><a href="#" title="Warehouse Shopping">Warehouse Shopping</a></li>
+                                <li><a href="#" title="Direct Donations">Direct Donations</a></li>
+                            </ul>
+
+                        </div>
+                        
+                        <div class="col-md-6 col-lg mb-4 mb-0-lg">
+
+                            <ul class="link-list">
+                                <li class="mb-2"><strong>Education</strong></li>
+                                <li><a href="#" title="Education Center">Education Center</a></li>
+                                <li><a href="#" title="Workshops &amp; Programs">Workshops &amp; Programs</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-6 col-lg mb-4 mb-0-lg">
+                            <ul class="link-list">
+                                <li class="mb-2"><strong>About</strong></li>
+                                <li><a href="#" title="Hours">Hours and Directions</a></li>
+                                <li><a href="#" title="Contact Us">Contact Us</a></li>
+                                <li><a href="#" title="Our Mission">Our Mission</a></li>
+                                <li><a href="#" title="MFTA History">MFTA History</a></li>
+                                <li><a href="#" title="Letter from the Commissioner">Letter from the Commissioner</a></li>
+                                <li><a href="#" title="Staff and Board">Staff and Board</a></li>
+                            </ul>
+                        </div>
+
+                    </nav><!-- .row -->
+
+                </nav>
+
+            </div>
+
+        </section>
+        <!-- #business-footer -->
+
+        <div id="nyc-bottom-footer">
+
+            <div class="container-fluid wide py-5" id="languages">
+
+                <div class="row">
+
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="link-list">
+                            <li><a href="#googtrans(ar)" class="lang-select" data-lang="ar" title="عربى">عربى</a></li>
+                            <li><a href="#googtrans(bn)" class="lang-select" data-lang="bn" title="বাঙালি">বাঙালি</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="link-list">
+                            <li><a href="#googtrans(zh-CN)" class="lang-select" data-lang="zh-CN" title="中文">中文</a></li>
+                            <li><a href="#googtrans(fr)" class="lang-select" data-lang="fr" title="français">français</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="link-list">
+                            <li><a href="#googtrans(ht)" class="lang-select" data-lang="ht" title="Kreyòl Ayisyen">Kreyòl
+                                    Ayisyen</a></li>
+                            <li><a href="#googtrans(ko)" class="lang-select" data-lang="ko" title="한국어">한국어</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
+                        <ul class="link-list">
+                            <li><a href="#googtrans(pl)" class="lang-select" data-lang="pl" title="Polskie">Polskie</a></li>
+                            <li><a href="#googtrans(ru)" class="lang-select" data-lang="ru" title="русский">русский</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg">
+                        <ul class="link-list">
+                            <li><a href="#googtrans(es)" class="lang-select" data-lang="es" title="Español">Español</a></li>
+                            <li><a href="#googtrans(ur)" class="lang-select" data-lang="ur" title="اردو">اردو</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- .container-fluid -->
+
+            <hr>
+
+            <div class="container-fluid wide py-5">
+
+                <div class="row mb-4 mb-lg-0">
+
+                    <div class="col-md-6 col-lg-8 mb-4 mb-lg-0">
+
+                        <nav class="row" role="navigation">
+
+                            <div class="col-lg mb-4">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="http://www1.nyc.gov/nyc-resources/agencies.page" title="Directory of City Agencies"
+                                            target="_blank">
+                                            <strong>Directory of City Agencies</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://a858-nycnotify.nyc.gov/notifynyc/" target="_blank">
+                                            <strong>Notify NYC</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www1.nyc.gov/connect/mobile-applications.page" title="NYC Mobile Apps"
+                                            target="_blank">
+                                            <strong>NYC Mobile Apps</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg mb-4">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="http://www1.nyc.gov/home/contact-us.page" title="Contact NYC Government"
+                                            target="_blank">
+                                            <strong>Contact NYC Government</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://a856-citystore.nyc.gov/" title="CityStore" target="_blank">
+                                            <strong>CityStore</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://maps.nyc.gov/doitt/nycitymap/" title="Maps" target="_blank">
+                                            <strong>Maps</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg mb-4">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&" title="City Employees"
+                                            target="_blank">
+                                            <strong>City Employees</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www1.nyc.gov/connect/social-media.page" title="Stay Connected"
+                                            target="_blank">
+                                            <strong>Stay Connected</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page" title="Resident Toolkit"
+                                            target="_blank">
+                                            <strong>Resident Toolkit</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+
+                        <a href="#">
+                            <img src="./images/nyc-white-90x30.svg" alt="NYC Logo" class="mb-2">
+                        </a>
+                        <p class="fs-sm">City of New York - 2018 All Rights Reserved. NYC is a trademark and service
+                            mark of the City of New York.</p>
+
+                        <ul class="link-list horizontal fs-sm py-0">
+                            <li>
+                                <a href="http://www1.nyc.gov/home/privacy-policy.page" title="Privacy Policy" target="_blank">Privacy
+                                    Policy</a>
+                            </li>
+                            <li>
+                                <a href="http://www1.nyc.gov/home/terms-of-use.page" title="Terms of Use" target="_blank">Terms
+                                    of Use</a>
+                            </li>
+                            <li>
+                                <a href="http://www1.nyc.gov/site/mopd/index.page" title="Mayor's Office for People with Disabilities"
+                                    target="_blank">
+                                    <span class="fab fa-lg fa-accessible-icon"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- #nyc-bottom-footer -->
+    </footer>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <script src="./js/main.js"></script>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>
