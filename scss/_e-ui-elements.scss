@@ -397,7 +397,7 @@ $matrix-gutter-padding: ($grid-gutter-width / 2);
 }
 
 .matrix-gutter{
-  margin-top: -($matrix-gutter-padding);
+  margin-top: -($matrix-gutter-padding *2);
   margin-right: -($matrix-gutter-padding);
   margin-bottom: -($matrix-gutter-padding);
   margin-left: -($matrix-gutter-padding);

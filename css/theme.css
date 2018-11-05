@@ -3348,7 +3348,7 @@ input[type="button"].btn-block {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 18px; }
+  padding: 1.5rem; }
 
 .card-title {
   margin-bottom: 1rem; }
@@ -3364,10 +3364,10 @@ input[type="button"].btn-block {
   text-decoration: none; }
 
 .card-link + .card-link {
-  margin-left: 18px; }
+  margin-left: 1.5rem; }
 
 .card-header {
-  padding: 1rem 18px;
+  padding: 1rem 1.5rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
@@ -3375,19 +3375,19 @@ input[type="button"].btn-block {
     border-top: 0; }
 
 .card-footer {
-  padding: 1rem 18px;
+  padding: 1rem 1.5rem;
   background-color: rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
 .card-header-tabs {
-  margin-right: -9px;
+  margin-right: -0.75rem;
   margin-bottom: -1rem;
-  margin-left: -9px;
+  margin-left: -0.75rem;
   border-bottom: 0; }
 
 .card-header-pills {
-  margin-right: -9px;
-  margin-left: -9px; }
+  margin-right: -0.75rem;
+  margin-left: -0.75rem; }
 
 .card-img-overlay {
   position: absolute;
@@ -8142,7 +8142,7 @@ section p > a:focus {
     padding: 0.5px; }
 
 .matrix-gutter {
-  margin-top: -18px;
+  margin-top: -36px;
   margin-right: -18px;
   margin-bottom: -18px;
   margin-left: -18px; }

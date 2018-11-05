@@ -1095,16 +1095,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/css/theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/theme-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,

@@ -324,6 +324,14 @@ $btn-font-weight: $font-weight-bold;
 // Bootstrap Components
 ////////////////////////////////////////
 
+// Cards
+
+$card-spacer-y:                     $spacer-3;
+$card-spacer-x:                     $spacer-4; 
+
+$card-cap-bg: rgba($black, .05);
+$card-border-color: rgba($black, .2);
+
 // Global Components
 
 $component-active-color: $white;
@@ -361,13 +369,6 @@ $custom-control-gutter: ($custom-control-indicator-size * 1.5);
 $modal-backdrop-bg: $white;
 $modal-backdrop-opacity: 0.95;
 $modal-content-border-color: rgba($black, .2);
-
-// Cards
-
-$card-spacer-y: $spacer-3;
-$card-spacer-x: $grid-gutter-width / 2;
-$card-cap-bg: rgba($black, .05);
-$card-border-color: rgba($black, .2);
 
 ////////////////////////////////////////
 // Carousel
