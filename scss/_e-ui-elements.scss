@@ -385,7 +385,7 @@ $featured-panel: true;
 // with equal spacing on all sides, not just the gutters 
 
 $matrix-border-padding: ($border-width / 2);
-$matrix-gutter-padding: ($grid-gutter-width / 4);
+$matrix-gutter-padding: ($grid-gutter-width / 2);
 
 .matrix-border{
   margin-top: -($matrix-border-padding);

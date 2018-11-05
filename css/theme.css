@@ -4235,7 +4235,7 @@ button.bg-success:hover,
 button.bg-success:focus {
   background-color: #175f2c !important; }
 
-.bg-info, html, legend,
+.bg-info, legend,
 .legend, .hard-shadow::before {
   background-color: #3f3099 !important; }
 
@@ -4278,7 +4278,7 @@ button.tab-skipper:focus,
 button.nav-pills:focus[role="tablist"] {
   background-color: #cad4ed !important; }
 
-.bg-dark {
+.bg-dark, html {
   background-color: #212529 !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -8142,12 +8142,12 @@ section p > a:focus {
     padding: 0.5px; }
 
 .matrix-gutter {
-  margin-top: -9px;
-  margin-right: -9px;
-  margin-bottom: -9px;
-  margin-left: -9px; }
+  margin-top: -18px;
+  margin-right: -18px;
+  margin-bottom: -18px;
+  margin-left: -18px; }
   .matrix-gutter > [class^="col-"] {
-    padding: 9px; }
+    padding: 18px; }
 
 a.btn[data-toggle="collapse"], .wrap-file-input .file-input-label a.file-choose[data-toggle="collapse"],
 .wrap-file-input .file-input-label a.file-name[data-toggle="collapse"] {
