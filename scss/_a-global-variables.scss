@@ -213,28 +213,21 @@ $accessible-colors: true;
 
 // Note: Every color added to the theme-color map adds 2-3k to the theme.css file size
 
-$mfta-deep-green: #004235;
-$mfta-green: #34d278;
-$mfta-purple: #3f3099;
-$mfta-light-blue: #F0F3FA;
-$mfta-pale-pink: #FBEFF3;
+$deep-blue: #1A237E;
+$park-green: #75BD1D;
+$crimson: #D6003D;
 
-$primary: $mfta-deep-green;
-$secondary: $mfta-green;
-$accent: $mfta-pale-pink;
-
-$info: $mfta-purple;
-$light: $mfta-light-blue;
+$primary: $deep-blue;
+$secondary: $park-green;
+$tertiary: $crimson;
 
 $theme-colors: (
-
   "white": $white,
   "black": $black,
-  "transparent": $transparent,
 
   "primary": $primary, 
-  "secondary": $secondary,
-  "accent": $accent
+  "secondary": $secondary, 
+  "tertiary": $tertiary, 
 );
 
 ////////////////////////////////////////
@@ -269,7 +262,7 @@ $modal-header-border-color: $border-color;
 
 // Table accent color
 
-$table-accent-bg: $light;
+// $table-accent-bg: $light;
 
 ////////////////////////////////////////////////////////////////////////////////
 //
