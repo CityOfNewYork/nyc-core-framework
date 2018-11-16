@@ -22,14 +22,13 @@
 </head>
 
 <body>
-
     <a class="sr-only sr-only-focusable tab-skipper" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
 
     <div id="nyc-top-header">
 
         <div class="container-fluid wide">
 
-            <div class="row no-gutters align-items-center py-3">
+            <div class="row no-gutters align-items-center py-2">
 
                 <div class="col">
                     <p class="d-none d-md-flex">Name of Office</p>
@@ -58,7 +57,8 @@
 
         </div><!-- .container-fluid -->
 
-    </div><!-- #nyc-top-header -->
+    </div>
+    <!-- #nyc-top-header -->
 
     <header id="global-header" role="banner">
 
@@ -68,7 +68,7 @@
 
                 <!-- row 01 -->
                 <div class="row align-items-center">
-                    <div id="wrap-logo" class="col-lg py-3">
+                    <div id="wrap-logo" class="col-lg py-2">
                         <a class="d-inline-block" href="index.html" title="Home">
                             <img src="./images/nyc-logo-generic.svg" alt="NYC Generic Logo">
                         </a>
@@ -81,15 +81,15 @@
                     <div class="col-lg-auto">
 
                         <!-- row 02 -->
-                        <div class="row no-gutters justify-content-between py-3 bg-warning">
+                        <div class="row no-gutters justify-content-between py-2 bg-warning">
 
                             <!-- Menu Toggle -->
                             <div class="col-auto d-flex d-lg-none">
 
                                 <button class="btn no-btn-style" type="button" data-toggle="collapse" data-target="#device-menu"
                                     aria-controls="device-menu" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="d-flex align-items-center">
-                                        <span class="fas fa-bars fa-fw fs-lg"></span>
+                                    <span class="d-flex align-items-center bg-danger">
+                                        <span class="fas fa-bars fs-lg"></span>
                                         <span class="px-2 fs-rg">Menu</span>
                                     </span>
                                     <span class="sr-only">Main Navigation</span>
@@ -106,7 +106,7 @@
                                         <button class="btn no-btn-style" type="button" data-toggle="collapse"
                                             data-target="#global-language" aria-controls="global-language"
                                             aria-expanded="false" aria-label="Toggle Language">
-                                            <span class="fas fa-language fa-fw fs-lg"></span>
+                                            <span class="fas fa-language fs-lg"></span>
                                             <span class="sr-only">Language</span>
                                         </button>
                                     </li>
@@ -115,7 +115,7 @@
                                         <button class="btn no-btn-style" type="button" data-toggle="collapse"
                                             data-target="#global-search" aria-controls="global-search" aria-expanded="false"
                                             aria-label="Toggle Search">
-                                            <span class="fas fa-search fa-fw fs-lg"></span>
+                                            <span class="fas fa-search fs-lg"></span>
                                             <span class="sr-only">Global Search</span>
                                         </button>
                                     </li>
@@ -139,19 +139,19 @@
         </div>
         <!-- .wrap-header -->
 
-        <div class="collapse bg-light" id="global-language">
-            <div class="narrow px-3 py-4" aria-label="Language">
+        <div class="container-fluid bg-light collapse" id="global-language">
+            <div class="narrow py-3" aria-label="Language">
                 <div id="google_translate_element"></div>
             </div>
         </div>
 
-        <div class="collapse bg-light" id="global-search">
-            <form class="narrow px-3 py-4" aria-label="Search" role="search">
+        <div class="container-fluid bg-light collapse" id="global-search">
+            <form class="narrow py-3" aria-label="Search" role="search">
                 <div class="input-group">
                     <label class="sr-only" for="global-search-bar">Search MFTA</label>
-                    <input class="form-control form-control-lg border-0" id="global-search-bar" placeholder="Search MFTA">
+                    <input class="form-control form-control-lg border-right-0" id="global-search-bar" placeholder="Search MFTA">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-lg border-0">Search</button>
+                        <button type="button" class="btn btn-primary btn-lg">Search</button>
                     </div>
                 </div>
             </form>
@@ -407,8 +407,8 @@
                 <div class="card-img-overlay d-flex">
                     <div class="container align-self-center w-100">
                         <div class="narrow text-white text-center">
-                            <h1 class="card-title display-4 font-weight-bold mb-3">NYC's Largest Creative Reuse Center</h1>
-                            <a href="#" class="btn btn-lg btn-secondary text-primary">Our Mission</a>
+                            <h1 class="card-title display-4 font-weight-bold mb-3">Lorem ipsum dolor sit amet consectetur elit.</h1>
+                            <a href="#" class="btn btn-lg btn-secondary">Link</a>
                         </div>
                     </div>
                 </div>
@@ -417,16 +417,49 @@
         </section>
         <!-- .featured-panel -->
 
-        <section class="py-6">
+        <section>
+            <div class="row matrix-border">
+                <div class="col-md">
+                    <div class="card h-100 bg-secondary">
+                        <div class="card-body text-primary">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit rerum assumenda cupiditate ea doloremque nemo unde atque</p>
+                            <a class="blended-link" href="#" title="Link">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card h-100 bg-secondary">
+                        <div class="card-body text-primary">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit rerum assumenda cupiditate ea doloremque nemo unde atque</p>
+                            <a class="blended-link" href="#" title="Link">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card h-100 bg-secondary">
+                        <div class="card-body text-primary">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit rerum assumenda cupiditate ea doloremque nemo unde atque</p>
+                            <a class="blended-link" href="#" title="Link">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-7">
 
             <div class="container">
 
                 <div class="row matrix-gutter">
 
-                    <div class="col-md d-md-flex">
-                        <div class="card align-self-stretch bg-secondary">
+                    <div class="col-md">
+                        <div class="card h-100 bg-secondary">
+                            <img class="card-img-top" src="http://via.placeholder.com/800x400/333333/000000.jpg" alt="Card image cap">
                             <div class="card-body text-primary">
-                                <h2 class="card-title h2">Donate for a cause</h2>
+                                <h2 class="card-title">Donate for a cause</h2>
                                 <p class="card-text">Support local arts across New York City. Whether you're a business
                                     or an individual,
                                     donating materials is easy.</p>
@@ -437,10 +470,11 @@
                         </div>
                     </div>
 
-                    <div class="col-md d-md-flex">
-                        <div class="card align-self-stretch bg-secondary">
-                            <div class="card-body text-primary">
-                                <h2 class="card-title h2">Receive from MFTA</h2>
+                    <div class="col-md">
+                            <div class="card h-100 bg-secondary">
+                                    <img class="card-img-top" src="http://via.placeholder.com/800x400/333333/000000.jpg" alt="Card image cap">
+                                    <div class="card-body text-primary">
+                                        <h2 class="card-title">Card Title</h2>
                                 <p class="card-text">Each year, MFTA provides millions of dollars of supplies and
                                     inspiration to New York
                                     City's artistic and educational
@@ -461,57 +495,16 @@
 
         </section>
 
-        <section class="bg-light py-6">
-
-            <div class="container text-primary">
-
-                <div class="row mb-5">
-
-                    <div class="col-md-6 order-md-last mb-5 mb-md-0">
-                        <div class="hard-shadow">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tiJVtdUzzmw"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- .col -->
-
-                    <div class="col-md-6 d-flex align-items-center">
-                        <h2 class="h1 mb-0">Sustaining the arts and the environment</h2>
-                    </div>
-                    <!-- .col -->
-
-                </div>
-                <!-- .row -->
-
-                <div class="row mb-5">
-                    <div class="col-md mb-5 mb-md-0">
-                        <p><strong>Materials for the Arts</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Fugiat eaque dolor tempora non repudiandae ex qui, at incidunt reprehenderit itaque quae adipisci.</p>
-                    </div>
-                    <div class="col-md">
-                        <p><strong>Friends of Materials for the Arts</strong> Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Fugiat eaque
-                            dolor tempora non repudiandae ex qui.</p>
-                    </div>
-                </div>
-                <!-- .row -->
-
-                <a href="#" class="btn btn-secondary text-primary btn-lg">Friends of MFTA website</a>
-
-            </div>
-            <!-- .container -->
-
-        </section>
-
-        <section class="container-fluid bg-accent px-0">
+        <section class="container ">
 
             <div class="row matrix-border">
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-md-4">
                     <div class="card bg-info h-100">
-                        <img class="card-img-top" src="http://via.placeholder.com/600x400/333333/000000.jpg" alt="Placeholder">
                         <div class="card-body text-white">
-                            <h2 class="card-title">Headline</h2>
+                            <h2 class="card-title h5 d-flex align-items-center">
+                                <span class="fas fa-lg fa-parking"></span>
+                                <span class="mx-2">Alternate Side Parking</span>
+                            </h2>
                             <p class="card-text">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
                                 penatibus.</p>
                             <a class="card-link blended-link fs-md" href="#">Link</a>
@@ -519,11 +512,13 @@
                     </div>
                 </div>
                 <!-- .col -->
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-md-4">
                     <div class="card bg-info h-100">
-                        <img class="card-img-top" src="http://via.placeholder.com/600x400/333333/000000.jpg" alt="Placeholder">
                         <div class="card-body text-white">
-                            <h2 class="card-title">Headline</h2>
+                                <h2 class="card-title h5 d-flex align-items-center">
+                                    <span class="fas fa-lg fa-school"></span>
+                                    <span class="mx-2">Schools</span>
+                                </h2>
                             <p class="card-text">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
                                 penatibus.</p>
                             <a class="card-link blended-link fs-md" href="#">Link</a>
@@ -531,11 +526,13 @@
                     </div>
                 </div>
                 <!-- .col -->
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-md-4">
                     <div class="card bg-info h-100">
-                        <img class="card-img-top" src="http://via.placeholder.com/600x400/333333/000000.jpg" alt="Placeholder">
                         <div class="card-body text-white">
-                            <h2 class="card-title">Headline</h2>
+                            <h2 class="card-title h5 d-flex align-items-center">
+                                <span class="fas fa-lg fa-trash-alt"></span>
+                                <span class="mx-2">Garbage</span>
+                            </h2>
                             <p class="card-text">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
                                 penatibus.</p>
                             <a class="card-link blended-link fs-md" href="#">Link</a>
@@ -543,91 +540,8 @@
                     </div>
                 </div>
                 <!-- .col -->
-                <div class="col-sm-6 col-lg-3">
-                    <div class="card bg-info h-100">
-                        <img class="card-img-top" src="http://via.placeholder.com/600x400/333333/000000.jpg" alt="Placeholder">
-                        <div class="card-body text-white">
-                            <h2 class="card-title">Headline</h2>
-                            <p class="card-text">Mus malesuada dapibus ac condimentum habitasse a praesent commodo
-                                penatibus.</p>
-                            <a class="card-link blended-link fs-md" href="#">Link</a>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- .row -->
-
-        </section>
-
-        <section class="bg-accent text-info py-6">
-
-            <div class="container">
-
-                <h4 class="h1 mb-5">Upcoming Events</h4>
-
-                <div class="row mb-5">
-                    <div class="col-lg-4 fs-md">
-                        <p class="mb-0">
-                            <strong>09/30/17 – 11/04/17</strong>
-                        </p>
-                        <p>
-                            <em>Workshop</em>
-                        </p>
-                    </div>
-                    <div class="col-lg-8 fs-md">
-                        <h3>
-                            <a href="#" class="text-info">Paper: From Pulp to Fiction</a>
-                        </h3>
-                        <p>Saturdays 9:30am – 5:00pm</p>
-                    </div>
-                </div>
-                <!-- .row -->
-
-                <hr>
-
-                <div class="row py-4">
-                    <div class="col-lg-4 fs-md">
-                        <p class="mb-0">
-                            <strong>01/18/19</strong>
-                        </p>
-                        <p>
-                            <em>Artist Reception</em>
-                        </p>
-                    </div>
-                    <div class="col-lg-8 fs-md">
-                        <h3>
-                            <a href="#" class="text-info">Opening Reception For Sol’sain’t Many Kin: All Sol’skin Is A
-                                Free Kin</a>
-                        </h3>
-                        <p>Thursday 6:30pm - 9:00pm</p>
-                    </div>
-                </div>
-                <!-- .row -->
-
-                <hr>
-
-                <div class="row py-4">
-                    <div class="col-lg-4 fs-md">
-                        <p class="mb-0">
-                            <strong>02/05/18</strong>
-                        </p>
-                        <p>
-                            <em>Orientation</em>
-                        </p>
-                    </div>
-                    <div class="col-lg-8 fs-md">
-                        <h3>
-                            <a href="#" class="text-info">Welcome Orientation</a>
-                        </h3>
-                        <p>Monday 2:00pm – 3:00pm</p>
-                    </div>
-                </div>
-                <!-- .row -->
-
-                <a href="#" class="btn btn-info text-accent btn-lg">Events Calendar</a>
-
-            </div>
-            <!-- .container -->
 
         </section>
 

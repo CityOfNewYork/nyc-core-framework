@@ -376,7 +376,6 @@ $featured-panel: true;
   }
 
 } // end iff
-
 ////////////////////////////////////////
 // Matrix
 ////////////////////////////////////////
@@ -385,24 +384,24 @@ $featured-panel: true;
 // with equal spacing on all sides, not just the gutters 
 
 $matrix-border-padding: ($border-width / 2);
-$matrix-gutter-padding: ($grid-gutter-width / 2);
+$matrix-gutter-padding: ($grid-gutter-width / 4);
 
 .matrix-border{
   margin-top: -($matrix-border-padding);
-  margin-left: -($matrix-border-padding);
   margin-right: -($matrix-border-padding);
   margin-bottom: -($matrix-border-padding);
+  margin-left: -($matrix-border-padding);
 
-  > [class^="col-"]{ padding: $matrix-border-padding; }
+  > [class^="col"]{ padding: $matrix-border-padding; }
 }
 
 .matrix-gutter{
-  margin-top: -($matrix-gutter-padding *2);
+  margin-top: -($matrix-gutter-padding);
   margin-right: -($matrix-gutter-padding);
   margin-bottom: -($matrix-gutter-padding);
   margin-left: -($matrix-gutter-padding);
 
-  > [class^="col-"]{ padding: $matrix-gutter-padding; }
+  > [class^="col"]{ padding: $matrix-gutter-padding; }
 }
 
 ////////////////////////////////////////

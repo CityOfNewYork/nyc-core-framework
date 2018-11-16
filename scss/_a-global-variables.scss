@@ -31,13 +31,43 @@ $grid-breakpoints: (
 );
 
 ////////////////////////////////////////
+// Spacing Utilities
+////////////////////////////////////////
+
+// Note: Bootstrap defines margins `.m-*` and padding `.p-*` classes
+// Reference: https://getbootstrap.com/docs/4.1/utilities/spacing/
+
+$spacer: 1rem; // 16px
+
+$spacer-1: ($spacer * .5);  // 8px
+$spacer-2: ($spacer);       // 16px
+$spacer-3: ($spacer * 1.5); // 24px
+$spacer-4: ($spacer * 2);   // 32px
+$spacer-5: ($spacer * 3);   // 48px
+$spacer-6: ($spacer * 4);   // 64px
+$spacer-7: ($spacer * 5);   // 80px
+$spacer-8: ($spacer * 6);   // 96px
+
+$spacers: (
+  0: 0,
+  1: $spacer-1,
+  2: $spacer-2,
+  3: $spacer-3,
+  4: $spacer-4,
+  5: $spacer-5,
+  6: $spacer-6,
+  7: $spacer-7,
+  8: $spacer-8
+);
+
+////////////////////////////////////////
 // Grid and Container
 ////////////////////////////////////////
 
 // Grid Gutter Width
 // Note: Default is 30px
 
-$grid-gutter-width: 36px; // Half is equal to $spacer-4 (24px) 
+$grid-gutter-width: 32px;
 
 // Max container width
 
@@ -58,32 +88,6 @@ $site-width: 2400px;
 $wide-width: $grid-bp-xxxl;     // 1600px
 $narrow-width: 65ch;            // 65 characters
 $narrow-width-ie: $grid-bp-md;  // 65 characters
-
-////////////////////////////////////////
-// Spacing Utilities
-////////////////////////////////////////
-
-// Note: Bootstrap defines margins `.m-*` and padding `.p-*` classes
-// Reference: https://getbootstrap.com/docs/4.1/utilities/spacing/
-
-$spacer: 1rem; // 16px
-
-$spacer-1: ($spacer * .5);    // 8px
-$spacer-2: ($spacer * .75);   // 12px
-$spacer-3: $spacer;           // 16px
-$spacer-4: ($spacer * 1.5);   // 24px
-$spacer-5: ($spacer * 3);     // 48px
-$spacer-6: ($spacer * 5);     // 80px
-
-$spacers: (
-  0: 0,
-  1: $spacer-1,
-  2: $spacer-2,
-  3: $spacer-3,
-  4: $spacer-4,
-  5: $spacer-5,
-  6: $spacer-6
-);
 
 ////////////////////////////////////////
 // Sizing Utilities
@@ -319,8 +323,10 @@ $btn-font-weight: $font-weight-bold;
 
 // Cards
 
-$card-spacer-y:                     $spacer-3;
-$card-spacer-x:                     $spacer-4; 
+$card-spacer-y:                     $spacer-2;
+$card-spacer-x:                     $spacer-2; 
+$card-spacer-x:                     $grid-gutter-width/2; 
+$card-spacer-y:                     $grid-gutter-width/2; 
 
 $card-cap-bg: rgba($black, .05);
 $card-border-color: rgba($black, .2);
