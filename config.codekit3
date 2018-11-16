@@ -1135,6 +1135,39 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/images/feature/01.jpg": {
+		"ft": 16384,
+		"iS": 247989,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/feature/02.jpg": {
+		"ft": 16384,
+		"iS": 210553,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/02.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/feature/03.jpg": {
+		"ft": 16384,
+		"iS": 83673,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/03.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1164,6 +1197,50 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/images/programs-and-initiatives/01.jpg": {
+		"ft": 16384,
+		"iS": 46223,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/programs-and-initiatives/01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/programs-and-initiatives/02.jpg": {
+		"ft": 16384,
+		"iS": 49168,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/programs-and-initiatives/02.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/programs-and-initiatives/03.jpg": {
+		"ft": 16384,
+		"iS": 63412,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/programs-and-initiatives/03.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/programs-and-initiatives/04.jpg": {
+		"ft": 16384,
+		"iS": 57966,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/programs-and-initiatives/04.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/index.html": {
 		"cB": 0,

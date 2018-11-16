@@ -79,8 +79,8 @@ $primary-nav-link-color: $body-color;
 $primary-nav-link-active-color: $primary;
 $primary-nav-pills-link-active-color: theme-color('secondary');
 $primary-nav-pills-link-active-bg: theme-color('primary');
-$primary-nav-dropdown-active-bg: theme-color('primary');
-$primary-nav-dropdown-item-color: $white;
+$primary-nav-dropdown-active-bg: $white;
+$primary-nav-dropdown-item-color:  theme-color('primary');
 
 #global-header{
 
