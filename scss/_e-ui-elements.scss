@@ -227,7 +227,7 @@ $primary-nav-dropdown-item-color:  theme-color('primary');
 
 // Note: Gradients call a custom mixin in '_c-custom-mixins.scss'
 
-$gradients: false;
+$gradients: true;
 
 @if($gradients){
 
@@ -256,19 +256,7 @@ $gradients: false;
       $first-color: white,
       $second-color: white,
       $first-color-opacity: 0,
-      $second-color-opacity: 0.9,
-      $first-color-position: 0,
-      $second-color-position: 100%
-    );
-  }
-
-  .overlay-gradient-x-black::before{
-    @include linear-gradient(
-      $direction: to right,
-      $first-color: $black,
-      $second-color: $black,
-      $first-color-opacity: 0.95,
-      $second-color-opacity: 0,
+      $second-color-opacity: 0.75,
       $first-color-position: 0,
       $second-color-position: 100%
     );
@@ -295,7 +283,7 @@ $gradients: false;
 ////////////////////////////////////////
 
 @mixin featured-panel-responsive-settings(){
-  [class*="overlay-gradient-"]::before{ display: none; }
+  [class*="overlay-gradient"]::before{ display: none; }
   .card-img-overlay{ position: relative; }
   .text-shadow{ text-shadow: none; }
   [class*="border"]{ border: none !important; }

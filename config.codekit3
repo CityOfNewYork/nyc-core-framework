@@ -1168,6 +1168,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/feature/brooklyn-heights-walk.jpg": {
+		"ft": 16384,
+		"iS": 648013,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/brooklyn-heights-walk.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1237,6 +1248,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/programs-and-initiatives/04.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/programs-and-initiatives/brooklyn-heights-walk.jpg": {
+		"ft": 16384,
+		"iS": 313196,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/programs-and-initiatives/brooklyn-heights-walk.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
