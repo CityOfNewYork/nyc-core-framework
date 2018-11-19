@@ -1286,6 +1286,13 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/index-02.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/index-02.html",
+		"oF": 0
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,

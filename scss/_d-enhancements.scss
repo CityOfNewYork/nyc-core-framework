@@ -20,7 +20,7 @@ html{
 
     // Flip Select tag background from left to right
     
-    select:not(.notranslate){
+    select:not(.notranslate):not(.goog-te-combo){
       background-position-x: 0.75rem !important;
       padding: 0.375rem 0.75rem 0.375rem 1.75rem;
     }
