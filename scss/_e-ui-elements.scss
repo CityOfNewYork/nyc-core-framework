@@ -93,12 +93,13 @@ $primary-nav-dropdown-item-color:  theme-color('primary');
   .form-control
   { @extend .rounded-0; }
 
-  .nav-link{ 
+  .nav-link{
 
     font-weight: $primary-nav-font-weight;
     color: $primary-nav-link-color;
 
     &.active { color: $primary-nav-link-active-color; }
+
   }
   
   // Primary Nav Below
@@ -162,22 +163,16 @@ $primary-nav-dropdown-item-color:  theme-color('primary');
       &:hover
       { text-decoration: none; }
 
-      &.dropdown-toggle{
-
-        &::after {
-          content: "\f0d7";
-          @extend %fa-icon;
-          @extend .mx-1;
+      @if $enable-caret {
+        &.dropdown-toggle{
+        
+          &[aria-expanded="true"]::after {
+            @include caret-up;
+          }
+  
         }
+      } // end if
     
-        &[aria-expanded="true"]::after {
-          content: "\f0d8";
-        }
-    
-        &[aria-expanded="false"]::after {
-          content: "\f0d7";
-        }
-      }
     }
 
     .dropdown-menu.show{
@@ -363,7 +358,8 @@ $featured-panel: true;
 
   }
 
-} // end iff
+} // end if
+
 ////////////////////////////////////////
 // Matrix
 ////////////////////////////////////////
