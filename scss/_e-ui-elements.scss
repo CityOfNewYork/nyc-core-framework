@@ -398,10 +398,11 @@ $toggles-and-accordions: true;
 
   // Accordion Preferences
 
-  $accordion-title-color: $info;
-  $accordion-title-bg: theme-color("light");
   $accordion-button-border: false;
   $accordion-button-shadow: false;
+
+  $accordion-title-color: theme-color("primary");
+  $accordion-bg: theme-color("light");
 
   .btn-toggle a,
   .accordion-group a
@@ -438,14 +439,16 @@ $toggles-and-accordions: true;
     
   .accordion-group{
 
-    .card, 
-    .card-header
-    { 
-      @extend .border-0; 
-      @extend .rounded-0;
-    }
+    // .card, 
+    // .card-header
+    // { 
+    //   @extend .border-0; 
+    //   @extend .rounded-0;
+    // }
 
-    .card-header{ background-color: $accordion-title-bg; }
+    .acc-button, 
+    .acc-panel
+    { background-color: $accordion-bg;}
     
     a[data-toggle="collapse"]{
       
