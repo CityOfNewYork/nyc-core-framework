@@ -16,6 +16,13 @@
 		"oAP": "/.gitattributes",
 		"oF": 0
 		},
+	"/article-centered.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/article-centered.html",
+		"oF": 0
+		},
 	"/bootstrap.4.1.3/scss/_alert.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1174,6 +1181,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/brooklyn-heights-walk.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/feature/nyc-skyline-at-night.jpg": {
+		"ft": 16384,
+		"iS": 194909,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/nyc-skyline-at-night.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 1,
