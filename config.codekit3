@@ -1179,6 +1179,28 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/images/feature/times-square-umbrella.jpg": {
+		"ft": 16384,
+		"iS": 307119,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/times-square-umbrella.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/feature/whitehall-terminal.jpg": {
+		"ft": 16384,
+		"iS": 408841,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/whitehall-terminal.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,
