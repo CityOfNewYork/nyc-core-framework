@@ -290,7 +290,7 @@ $border-width: 1px;
 
 // Enable Rounded
 
-$enable-rounded: false;
+$enable-rounded: true;
 
 // Enable Caret
 
@@ -298,9 +298,9 @@ $enable-caret: true;
 
 // Border Radius
 
-$border-radius-sm: 0.125rem;
-$border-radius: .25rem;
-$border-radius-lg: .75rem;
+$border-radius-sm: 0.25rem;
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
 $border-radius-xl: 2rem;
 
 // Set varying border radius values to a single border radius

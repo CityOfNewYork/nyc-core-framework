@@ -439,25 +439,31 @@ $toggles-and-accordions: true;
     
   .accordion-group{
 
-    // .card, 
-    // .card-header
-    // { 
-    //   @extend .border-0; 
-    //   @extend .rounded-0;
-    // }
+    .card, 
+    .card-header
+    { 
+      @extend .border-0; 
+      // @extend .rounded-0;
+    }
 
-    .acc-button, 
-    .acc-panel
-    { background-color: $accordion-bg;}
-    
-    a[data-toggle="collapse"]{
+
+    .card { background-color: $accordion-bg; }
+    .card { background-color: $accordion-bg; }
+
+    .card {
       
+
       @if $enable-rounded {
         @extend .rounded;
       } @else{
         @extend .rounded-0;
       }
+      overflow: hidden;
 
+    }
+    
+    a[data-toggle="collapse"]{
+      
       @if $accordion-button-border { @extend .border; }
       @if $accordion-button-shadow { @extend .shadow-sm; }
 
@@ -470,8 +476,6 @@ $toggles-and-accordions: true;
       }
 
       &[aria-expanded="true"]{
-
-        background-color: $transparent;
         
         @if $accordion-button-shadow {
           @extend .shadow;
