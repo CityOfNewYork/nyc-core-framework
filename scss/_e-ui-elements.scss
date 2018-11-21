@@ -297,7 +297,7 @@ $featured-panel: true;
   
   .featured-panel{
 
-    .card, 
+    > .card, 
     .card-img{
       @extend .border-0;
       @extend .rounded-0;
