@@ -35,37 +35,6 @@
     }
 }
 
-#tear-sheet-top-nav{
-    a{
-        @extend .text-secondary;
-        &.active{
-            @extend .text-white;
-        }
-    }
-}
-
-#global-links{
-    .link-list{
-        a{
-            @extend .text-body;
-            &.active{
-                @extend .text-primary;
-                @extend .font-weight-bold;
-            }
-        }
-    }
-}
-
-////////////////////////////////////////
-// Tables
-////////////////////////////////////////
-
-// table{ min-width: 600px; }
-
-th, td{ @extend .fs-md; }
-
-th, td{ white-space: nowrap; }
-
 ////////////////////////////////////////
 // Forms
 ////////////////////////////////////////
@@ -125,4 +94,9 @@ ul.checkbox-radio-list{
 // Remove Bootstrap's default modal-footer flex property
 
 .modal-footer{ @extend .d-block; }
+
+.a-faded-background{
+
+    
+}
   
