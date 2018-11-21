@@ -84,3 +84,11 @@ ul.checkbox-radio-list{
         @extend .mb-3; 
     }
 }
+
+
+
+.figure{
+    &.bounds{
+        border:12px solid red;
+    }
+}
