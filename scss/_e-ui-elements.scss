@@ -292,7 +292,7 @@ $featured-panel: true;
 
   // Fixed height parameters
   
-  $bg-fixed-image-opacity: 0.3;
+  $bg-fixed-image-opacity: 0.2;
   $bg-fixed-height: 300px;
   
   .featured-panel{
@@ -318,14 +318,17 @@ $featured-panel: true;
       }
     }
 
-    &.bg-fixed{
+    &.bg-cover{
 
       @extend .position-relative;
+      @extend .d-flex;
+
       height: $bg-fixed-height;
 
       > div{
         @extend .position-relative;
         @extend .z-index-100;
+        @extend .align-self-center;
       }
 
       &::before{
@@ -346,12 +349,8 @@ $featured-panel: true;
 
       &.bridge{
         &::before{
-          @include apply-background-image($image: '01');
+          @include apply-background-image($image: 'bridge-lights');
         }
-      }
-
-      @include media-breakpoint-down(md) {
-        height: $bg-fixed-height * .75;
       }
 
     }

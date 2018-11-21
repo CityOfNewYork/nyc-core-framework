@@ -84,19 +84,3 @@ ul.checkbox-radio-list{
         @extend .mb-3; 
     }
 }
-  
-
-.modal-content{
-    @extend .border-0;
-    @extend .shadow-lg; 
-}
-
-// Remove Bootstrap's default modal-footer flex property
-
-.modal-footer{ @extend .d-block; }
-
-.a-faded-background{
-
-    
-}
-  

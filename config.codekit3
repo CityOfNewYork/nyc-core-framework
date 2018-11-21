@@ -1175,6 +1175,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/feature/bridge-lights.jpg": {
+		"ft": 16384,
+		"iS": 109996,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/bridge-lights.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/images/feature/brooklyn-heights-walk.jpg": {
 		"ft": 16384,
 		"iS": 648013,
