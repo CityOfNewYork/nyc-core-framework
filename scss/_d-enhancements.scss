@@ -375,6 +375,8 @@ section > ul{
 
 .bg-opacity-black-10{ @include background-opacity(black, 0.1); }
 .bg-opacity-black-20{ @include background-opacity(black, 0.2); }
+.bg-opacity-black-30{ @include background-opacity(black, 0.3); }
+.bg-opacity-black-70{ @include background-opacity(black, 0.7); }
 .bg-opacity-black-80{ @include background-opacity(black, 0.8); }
 .bg-opacity-black-90{ @include background-opacity(black, 0.9); }
 
