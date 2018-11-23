@@ -336,7 +336,7 @@ $card-border-color: rgba($black, .2);
 // Global Components
 
 $component-active-color: $white;
-$component-active-bg: $primary;
+$component-active-bg: $secondary;
 
 // Navs (.nav) and Input padding
 
@@ -346,10 +346,10 @@ $nav-link-padding-y: .75rem;
 
 // Nav tabs
 
-$nav-tabs-link-hover-border-color: $transparent;
-$nav-tabs-link-active-bg: $white;
-$nav-tabs-link-active-color: $component-active-bg;
-$nav-tabs-link-active-border-color: $border-color $border-color $nav-tabs-link-active-bg;
+// $nav-tabs-link-hover-border-color: $transparent;
+// $nav-tabs-link-active-bg: $white;
+// $nav-tabs-link-active-color: red;
+// $nav-tabs-link-active-border-color: $border-color $border-color $nav-tabs-link-active-bg;
 
 // Box shadows 
 

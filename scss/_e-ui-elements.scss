@@ -492,6 +492,7 @@ $toggles-and-accordions: true;
 ////////////////////////////////////////
 
 @mixin responsive-nav-pills-and-tabs-settings(){
+  
   border-color: $transparent;
 
   .nav-link.active{ border-bottom-color: $border-color; }
