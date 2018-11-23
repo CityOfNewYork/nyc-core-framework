@@ -210,12 +210,6 @@ $primary-nav-dropdown-item-color: theme-color('primary');
 
 } /* #global-header */ 
 
-@include media-breakpoint-down(md){
-  #wrap-logo{
-    text-align: center;
-  }
-}
-
 ////////////////////////////////////////
 // Gradient Classes
 ////////////////////////////////////////
