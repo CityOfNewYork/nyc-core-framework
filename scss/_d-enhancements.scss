@@ -86,7 +86,7 @@ body{
   overflow-x: hidden;
 
   // Set min and max width of body
-	min-width: 375px;
+	min-width: 350px;
   max-width: $site-width;
   
   // Set body font-size to accessible size
@@ -455,6 +455,22 @@ section > ul{
   color: currentColor;
   text-decoration: underline;
 }
+
+
+.embed-responsive-1by2 {
+-webkit-overflow-scrolling: touch;
+overflow-y: scroll;
+  &::before {
+    padding-top: percentage(2 / 1);
+  }
+}
+
+
+.embed-responsive-item {
+}
+
+
+
 
 ////////////////////////////////////////
 // IE 10 and 11 Fixes 
