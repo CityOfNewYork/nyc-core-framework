@@ -23,6 +23,13 @@
 		"oAP": "/article-centered.html",
 		"oF": 0
 		},
+	"/article-sidebar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/article-sidebar.html",
+		"oF": 0
+		},
 	"/bootstrap.4.1.3/scss/_alert.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1187,6 +1194,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/images/feature/04.jpg": {
+		"ft": 16384,
+		"iS": 92605,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/feature/04.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/bridge-lights.jpg": {

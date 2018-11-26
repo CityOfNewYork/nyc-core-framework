@@ -25,10 +25,10 @@
 #aside-nav{
     .link-list{
         a{
-            @extend .text-muted;
+            @extend .text-primary;
             
             &.active{
-                @extend .text-info;
+                @extend .text-body;
                 @extend .font-weight-bold;
             }
         }
