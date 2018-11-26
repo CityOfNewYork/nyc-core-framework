@@ -1132,6 +1132,30 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/css/theme.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/theme-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/homepage-01.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/homepage-01.html",
+		"oF": 0
+		},
+	"/homepage-02.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/homepage-02.html",
+		"oF": 0
+		},
 	"/images/feature/01.jpg": {
 		"ft": 16384,
 		"iS": 247989,
@@ -1316,20 +1340,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/index-01.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/index-01.html",
-		"oF": 0
-		},
-	"/index-02.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/index-02.html",
-		"oF": 0
-		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1457,7 +1467,7 @@
 "projectAttributes": {
 	"creationDate": 562879945.62698805,
 	"displayValue": "nyc-core-framework",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "/project-icon.png",
 	"iconImageWasSetByUser": 0
 	},
