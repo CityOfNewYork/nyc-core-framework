@@ -40,12 +40,13 @@
 ////////////////////////////////////////
 
 .mobile-margin-offset-x{
+            border:12px solid red !important;
         
     @include media-breakpoint-down('xs') {
 
         fieldset,
         .fieldset, 
-        .card
+        .card, 
         {
             margin-left: -(($grid-gutter-width/2) + $border-width);
             margin-right: -(($grid-gutter-width/2) + $border-width);
