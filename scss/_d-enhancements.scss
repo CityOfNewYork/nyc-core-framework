@@ -458,7 +458,6 @@ section > ul{
 
 .embed-responsive-1by2 {
   -webkit-overflow-scrolling: touch;
-  // overflow-y: scroll;
   
   &::before {
     padding-top: percentage(2 / 1);
