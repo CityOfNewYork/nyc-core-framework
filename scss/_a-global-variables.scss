@@ -218,18 +218,17 @@ $accessible-colors: true;
 // Note: Every color added to the theme-color map adds 2-3k to the theme.css file size
 
 $deep-blue: #1A237E;
-$park-green: #75BD1D;
 $azure-sky: #3177C8;
-$crimson: #F7554C;
+$park-green: #75BD1D;
 
 $primary: $deep-blue;
 $secondary: $azure-sky;
 $tertiary: $park-green;
-$tertiary: $crimson;
 
 $light: #e6ecf7;
 
 $theme-colors: (
+  
   "white": $white,
   "black": $black,
 
