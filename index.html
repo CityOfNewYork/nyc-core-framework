@@ -205,21 +205,22 @@
 
     <script>
 
-            function resizeIframe(iframe) {
-                var my_height = iframe.contents().find('body').height();
-                console.log( my_height );
-                iframe.height( my_height );
-            };
+        function resizeIframe(iframe) {
+            var my_height = iframe.contents().find('body').height();
+            console.log( my_height );
+            iframe.height( my_height );
+        };
 
-            $('#tab-01 iframe').one('load', function() {
-                resizeIframe($(this));
-            });
+        $('#tab-01 iframe').one('load', function() {
+            resizeIframe($(this));
+        });
 
-            $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
-                var id = $(this).attr('href');
-                var iframe = $(id + ' iframe');
-                resizeIframe(iframe);
-            });
+        $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+            var id = $(this).attr('href');
+            var iframe = $(id + ' iframe');
+            resizeIframe(iframe);
+        });
+        
     </script>
 
 </body>
