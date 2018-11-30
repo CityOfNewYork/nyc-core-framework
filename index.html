@@ -24,8 +24,8 @@
         iframe {
             border: none;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+
+            /* height: 100%; */
         }
 
     </style>
@@ -102,7 +102,6 @@
                             </div>
                             <!-- .bg-opacity-black-10 -->
 
-                            
                             <iframe class="shadow-lg" src="homepage-01.html"></iframe>
                             
                         </div>
@@ -155,9 +154,7 @@
                             </div>
                             <!-- .bg-opacity-black-10 -->
 
-                            <div class="embed-responsive embed-responsive-1by2 shadow-lg">
-                                <iframe class="embed-responsive-item" src="article-centered.html"></iframe>
-                            </div>
+                            <iframe class="shadow-lg" src="article-centered.html"></iframe>
 
                         </div>
 
@@ -183,9 +180,7 @@
                             </div>
                             <!-- .bg-opacity-black-10 -->
 
-                            <div class="embed-responsive embed-responsive-1by2 shadow-lg">
-                                <iframe class="embed-responsive-item" src="article-sidebar.html"></iframe>
-                            </div>
+                            <iframe class="shadow-lg" src="article-sidebar.html"></iframe>
 
                         </div>
 
@@ -217,10 +212,12 @@
                 console.log( my_height );
                 iframe.height( my_height );
             };
+
             $('iframe').on('load', function() {
                 resizeIframe($(this));
             });
-            $('nav[role="tablist"]>a').on('shown.bs.tab', function (e) {
+
+            $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
                 var id = $(this).attr('href');
                 var iframe = $(id + ' iframe');
                 resizeIframe(iframe);
