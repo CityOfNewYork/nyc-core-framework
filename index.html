@@ -24,8 +24,6 @@
         iframe {
             border: none;
             width: 100%;
-
-            /* height: 100%; */
         }
 
     </style>
@@ -206,14 +204,14 @@
         crossorigin="anonymous"></script>
 
     <script>
-        
+
             function resizeIframe(iframe) {
                 var my_height = iframe.contents().find('body').height();
                 console.log( my_height );
                 iframe.height( my_height );
             };
 
-            $('iframe').on('load', function() {
+            $('#tab-01 iframe').one('load', function() {
                 resizeIframe($(this));
             });
 
