@@ -40,7 +40,7 @@
 ////////////////////////////////////////
 
 .mobile-margin-offset-x{
-            border:12px solid red !important;
+    border:12px solid red !important;
         
     @include media-breakpoint-down('xs') {
 
