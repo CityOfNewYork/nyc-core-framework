@@ -249,6 +249,18 @@
 
                     <h1 class="mb-4">Lorem ipsum dolor sit amet</h1>
 
+
+                    <div class="alert alert-danger my-5 d-none" role="alert">
+                        <p class="alert-heading">
+                            <span class="fas fa-times-circle"></span>
+                            <span class="mx-1">Your application was not sent</span>
+                        </p>
+                        <p>To continue with your application, correct then following errors and resubmit the form.</p>
+                    </div>
+
+                    <p class="text-right text-danger fs-md" aria-hidden="true">* Required</p>
+
+
                     <form class="needs-validation mobile-margin-offset-x" novalidate>
 
                         <fieldset>
@@ -502,7 +514,7 @@
 
                         </fieldset>
 
-                        <button class="btn btn-lg btn-block btn-secondary text-primary my-5" type="submit">Submit Application</button>
+                        <button class="btn btn-lg btn-block btn-tertiary my-5" type="submit">Submit Application</button>
 
                     </form>
 
@@ -715,9 +727,9 @@
 
                                 $('.alert').removeClass('d-none');
 
-                                $('html, body').animate({
-                                    scrollTop: $("#page-start").offset().top
-                                }, 600);
+                                // $('html, body').animate({
+                                //     scrollTop: $("#content").offset().top
+                                // }, 600);
 
                             }
 

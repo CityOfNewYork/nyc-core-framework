@@ -176,6 +176,27 @@ label{ @extend .fs-md; }
   }
 }
 
+.alert-heading{
+  @extend .font-weight-bold;
+}
+
+.form-group{
+
+  .invalid-feedback{ 
+      margin-bottom: 0.5rem;
+      @extend .d-none;
+
+      .invalid-description{
+        @extend .font-weight-bold;
+        @extend .mx-1;
+      }
+  }
+
+  &.is-invalid{
+    .invalid-feedback{ @extend .d-block; }
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Margin bottom 

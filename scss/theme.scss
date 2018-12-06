@@ -40,8 +40,7 @@
 ////////////////////////////////////////
 
 .mobile-margin-offset-x{
-    border:12px solid red !important;
-        
+    
     @include media-breakpoint-down('xs') {
 
         fieldset,
@@ -65,10 +64,10 @@ fieldset,
 legend, 
 .legend
 {
-    @extend .bg-info;
+    @extend .bg-primary;
     @extend .text-white;
     @extend .px-4;
-    @extend .py-3;
+    @extend .py-2;
     @extend .fs-md;
     @extend .font-weight-normal;
     @extend .mb-0;
