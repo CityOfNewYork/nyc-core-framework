@@ -611,10 +611,6 @@ $link-list-margin: 0.5em;
       margin-right: -($link-list-margin);
 
       li{
-        @extend .text-center;
-        @extend .d-flex;
-        @extend .align-items-center;
-        
         margin-bottom: 0;
         margin-left: $link-list-margin;
         margin-right: $link-list-margin;
