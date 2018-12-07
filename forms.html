@@ -252,14 +252,14 @@
                     <div class="alert alert-danger my-4 d-none" id="form-errors" role="alert">
                         <p class="alert-heading">
                             <span class="fas fa-times-circle"></span>
-                            <span class="mx-1">Your application was not sent</span>
+                            <span class="mx-1">This form contains errors</span>
                         </p>
                         <p class="alert-text">
-                            To continue with your application, correct then following errors and resubmit the form.
+                            Correct the following errors and resubmit the form below.
                         </p>
                     </div>
 
-                    <p class="text-right text-danger fs-md" aria-hidden="true">* Required</p>
+                    <p class="text-right text-danger fs-md" aria-hidden="true">* Required fields</p>
 
                     <form class="mobile-margin-offset-x needs-validation" novalidate>
 
@@ -306,27 +306,20 @@
                                         <span class="invalid-description">Error message description</span>
                                         <span class="invalid-instruction">How to fix instructions</span>
                                     </p>
-
                                     <select class="form-control form-control-lg" id="borough" required>
                                         <option value="">Select One...</option>
-                                        <option value="AR">Bronx</option>
-                                        <option value="AZ">Brooklyn</option>
-                                        <option value="AK">Manhattan</option>
-                                        <option value="AK">Staten Island</option>
-                                        <option value="CA">Queens</option>
+                                        <option value="Bronx">Bronx</option>
+                                        <option value="Brooklyn">Brooklyn</option>
+                                        <option value="Manhattan">Manhattan</option>
+                                        <option value="Staten Island">Staten Island</option>
+                                        <option value="Queens">Queens</option>
                                     </select>
                                 </div>
                                 <!-- .form-group -->
 
                                 <div class="form-group">
-                                    <label for="Email">Email Address</label>
-                                    <input type="email" class="form-control form-control-lg" id="Email" value="john@nyctheatre.org" readonly>
-                                </div>
-                                <!-- .form-group -->
-
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control form-control-lg" id="message" rows="6"></textarea>
                                     <small class="text-muted">Help text for above field</small>
                                 </div>
                                 <!-- .form-group -->
@@ -336,7 +329,7 @@
 
                         </fieldset>
 
-                        <button class="btn btn-lg btn-block btn-tertiary my-5" type="submit">Submit Application</button>
+                        <button class="btn btn-lg btn-block btn-tertiary my-5" type="submit">Send</button>
 
                     </form>
 
@@ -550,7 +543,7 @@
                                 $('.alert').removeClass('d-none');
 
                                 $('html, body').animate({
-                                    scrollTop: $("#form-errors").offset().top
+                                    scrollTop: $("#form-errors").offset().top - 16
                                 },{
                                     duration: 600,
                                     complete: function() {
