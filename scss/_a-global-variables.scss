@@ -364,6 +364,9 @@ $form-group-margin-bottom: $spacer-4;
 $custom-control-indicator-size: 1.25rem;
 $custom-control-gutter: ($custom-control-indicator-size * 1.5);
 
+$input-btn-focus-width: .15rem;
+$input-btn-focus-color: $input-border-color;
+
 //Alerts
 
 $alert-padding-y: ($grid-gutter-width/2);
@@ -392,5 +395,3 @@ $carousel-caption-width: 100%;
 ////////////////////////////////////////
 
 $figure-caption-font-size: $fs-md;
-
-$input-btn-focus-color: $input-border-color;

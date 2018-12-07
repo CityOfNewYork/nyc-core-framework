@@ -596,7 +596,16 @@
                 }, false);
             })();
 
+            $('.form-control').blur(function() {
+
+                if(!$(this).is(":invalid")) {
+                    $(this).closest( '.form-group' ).removeClass( 'is-invalid' );
+                }
+
+            });
+
         });
+
     </script>
 
     <script>
