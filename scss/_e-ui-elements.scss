@@ -435,26 +435,25 @@ $toggles-and-accordions: true;
     .card, 
     .card-header
     { 
-      @extend .border-0; 
-      // @extend .rounded-0;
-    }
-
-
-    .card { background-color: $accordion-bg; }
-    .card { background-color: $accordion-bg; }
-
-    .card {
+      @extend .border-0;
       
-
       @if $enable-rounded {
         @extend .rounded;
       } @else{
         @extend .rounded-0;
       }
-      overflow: hidden;
-
     }
-    
+
+    .card { background-color: $accordion-bg; }
+
+    .card-header{
+      &:focus,
+      &.focus {
+        outline: 0;
+        box-shadow: $btn-focus-box-shadow;
+      }
+    }
+
     a[data-toggle="collapse"]{
       
       @if $accordion-button-border { @extend .border; }
