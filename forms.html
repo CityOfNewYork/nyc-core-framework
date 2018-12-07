@@ -241,7 +241,7 @@
         </div>
         <!-- .featured-panel -->
 
-        <article class="py-8" id="page-start">
+        <article class="py-8">
 
             <div class="container">
 
@@ -249,7 +249,7 @@
 
                     <h1 class="mb-4">Lorem ipsum dolor sit amet</h1>
 
-                    <div class="alert alert-danger my-4 d-none" role="alert">
+                    <div class="alert alert-danger my-4 d-none" id="form-errors" role="alert">
                         <p class="alert-heading">
                             <span class="fas fa-times-circle"></span>
                             <span class="mx-1">Your application was not sent</span>
@@ -271,7 +271,7 @@
 
                                 <div class="form-group">
                                     <label for="label-01">Label
-                                        <span class="sr-only d-none">is required</span>
+                                        <span class="sr-only">is required</span>
                                         <span class="fs-md text-danger" aria-hidden="true">*</span>
                                     </label>
                                     <p class="invalid-feedback" aria-hidden="true">
@@ -285,7 +285,7 @@
 
                                 <div class="form-group">
                                     <label for="label-02">Label
-                                        <span class="sr-only d-none">is required</span>
+                                        <span class="sr-only">is required</span>
                                         <span class="fs-md text-danger" aria-hidden="true">*</span>
                                     </label>
                                     <p class="invalid-feedback" aria-hidden="true">
@@ -550,7 +550,7 @@
                                 $('.alert').removeClass('d-none');
 
                                 $('html, body').animate({
-                                    scrollTop: $("#content").offset().top
+                                    scrollTop: $("#form-errors").offset().top
                                 }, 600);
 
                             }
