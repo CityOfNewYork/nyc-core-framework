@@ -130,8 +130,8 @@ legend,
 }
 
 fieldset{
-  @extend .mb-5;
   @extend .border;
+  @extend .mb-5;
   @extend .clearfix;
 }
 
@@ -188,6 +188,21 @@ label{ @extend .fs-md; }
 
 // Alerts
 
+
+
+.alert{
+
+  &.alert-danger{
+
+    &:focus{
+      outline: 0;
+      box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
+    }
+  }
+
+}
+
+
 .alert-heading{ 
   @extend .font-weight-bold; 
   @extend .mb-1;
@@ -212,15 +227,14 @@ label{ @extend .fs-md; }
   &.is-invalid{
 
     label{ @extend .text-danger; }
+
     .invalid-feedback{ @extend .d-block; }
 
     .form-control:invalid{
       &:focus{
         box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
       }
-
     }
-    
   }
 }
 
@@ -329,21 +343,6 @@ $accessible-hover-focus: true;
 section > ul{
   li{ @extend .mb-2; }
 }
-
-// Forms
-
-// .form-group{
-  
-//   &.custom-invalid{
-//     input{ 
-//       @extend .border-danger;
-//       &:focus{
-//         box-shadow : 0 0 12px purple;
-//       }
-//     }
-//   }
-  
-// }
 
 // Allow .btn selectors to wrap
 

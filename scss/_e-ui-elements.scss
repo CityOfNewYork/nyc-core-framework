@@ -606,6 +606,7 @@ $link-list-margin: 0.5em;
 
     &.horizontal{
       @extend .d-flex;
+      @extend .align-items-center;
       @extend .flex-row;
       margin-left: -($link-list-margin);
       margin-right: -($link-list-margin);
