@@ -551,8 +551,12 @@
 
                                 $('html, body').animate({
                                     scrollTop: $("#form-errors").offset().top
-                                }, 600);
-
+                                },{
+                                    duration: 600,
+                                    complete: function() {
+                                        $("#form-errors").focus();
+                                    }
+                                });
                             }
 
                             form.classList.add('was-validated');
