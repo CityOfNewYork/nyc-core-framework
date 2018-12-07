@@ -254,7 +254,7 @@
 
                     <div class="alert alert-danger my-4 d-none" id="form-errors" role="alert">
                         <p class="alert-heading">
-                            <span class="fas fa-times-circle"></span>
+                            <span class="fas fa-exclamation-triangle"></span>
                             <span class="mx-1">This form contains errors</span>
                         </p>
                         <p class="alert-text">
@@ -343,7 +343,18 @@
                                     expedita perspiciatis qui quaerat accusamus.
                                 </p>
 
-                                <div class="form-group">
+                                <div class="form-group" aria-labelledby="fake-legend" role="group">
+
+                                    <h5 id="fake-legend">
+                                        Your favorite color
+                                    </h5>
+
+                                    <p class="invalid-feedback" style="display: block !important">
+                                        <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                        <span class="invalid-description">Error message description</span>
+                                        <span class="invalid-instruction">How to fix instructions</span>
+                                    </p>
+        
                                     <ul class="link-list horizontal">
                                         <li>
                                             <div class="custom-control custom-radio">
@@ -359,6 +370,7 @@
                                             </div>
                                         </li>
                                     </ul>
+
                                 </div>
                                 <!-- .form-group -->
 
@@ -585,7 +597,8 @@
                                 },{
                                     duration: 600,
                                     complete: function() {
-                                        $("#form-errors").attr("width","500");
+                                        $("#form-errors").attr("tabindex","0");
+                                        $("#form-errors").focus();
                                     }
                                 });
                             }
