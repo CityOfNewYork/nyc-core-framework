@@ -38,17 +38,6 @@ html{
         @extend .justify-content-start;
       }
     }
-    
-    .accordion-group,  
-    .btn-toggle
-    { 
-      a[data-toggle="collapse"]{
-        &::after {
-          @extend .ml-0;
-          @extend .mr-auto;
-        }
-      }
-    }
 
     // Note: Remove Google's added padding and margin for rtl translation
 
@@ -58,6 +47,12 @@ html{
     { -webkit-padding-start: 0 !important;  }
 
     dd { -webkit-margin-start: 0 !important; }
+
+    // Note: Remove Google's added line-height on font selectors inside of buttons
+    
+    .btn{
+      > font{ line-height: 0; }
+    }
 
     // Mobile Menu Float
 
