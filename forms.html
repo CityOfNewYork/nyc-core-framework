@@ -241,7 +241,7 @@
         </div>
         <!-- .featured-panel -->
 
-        <article class="py-8">
+        <article class="py-8" id="page-start">
 
             <div class="container">
 
@@ -249,41 +249,57 @@
 
                     <h1 class="mb-4">Lorem ipsum dolor sit amet</h1>
 
-
-                    <div class="alert alert-danger my-5 d-none" role="alert">
+                    <div class="alert alert-danger my-4 d-none" role="alert">
                         <p class="alert-heading">
                             <span class="fas fa-times-circle"></span>
                             <span class="mx-1">Your application was not sent</span>
                         </p>
-                        <p>To continue with your application, correct then following errors and resubmit the form.</p>
+                        <p class="alert-text">
+                            To continue with your application, correct then following errors and resubmit the form.
+                        </p>
                     </div>
 
                     <p class="text-right text-danger fs-md" aria-hidden="true">* Required</p>
 
 
-                    <form class="needs-validation mobile-margin-offset-x" novalidate>
+                    <form class="mobile-margin-offset-x needs-validation" novalidate>
 
                         <fieldset>
 
-                            <legend>Company Information</legend>
+                            <legend>Legend Title</legend>
 
-                            <div class="p-4">
+                            <div class="p-2">
 
                                 <div class="form-group">
-                                    <label for="companyName">Company Name
+                                    <label for="label-01">Label
                                         <span class="sr-only d-none">is required</span>
                                         <span class="fs-md text-danger" aria-hidden="true">*</span>
                                     </label>
-                                    <p class="invalid-feedback" id="companyName-invalid" aria-hidden="true">
+                                    <p class="invalid-feedback" aria-hidden="true">
                                         <span class="fas fa-exclamation-triangle"></span>
                                         <span class="invalid-description">Error message description</span>
                                         <span class="invalid-instruction">How to fix instructions</span>
                                     </p>
-                                    <input type="text" class="form-control form-control-lg" id="companyName" required>
+                                    <input type="text" class="form-control form-control-lg" id="label-01" required>
                                 </div>
+                                <!-- .form-group -->
 
                                 <div class="form-group">
-                                    <label for="companyType">Company Type
+                                    <label for="label-02">Label
+                                        <span class="sr-only d-none">is required</span>
+                                        <span class="fs-md text-danger" aria-hidden="true">*</span>
+                                    </label>
+                                    <p class="invalid-feedback" aria-hidden="true">
+                                        <span class="fas fa-exclamation-triangle"></span>
+                                        <span class="invalid-description">Error message description</span>
+                                        <span class="invalid-instruction">How to fix instructions</span>
+                                    </p>
+                                    <input type="text" class="form-control form-control-lg" id="label-02" required>
+                                </div>
+                                <!-- .form-group -->
+
+                                <div class="form-group">
+                                    <label for="borough">Borough
                                         <span class="fs-md text-danger" aria-hidden="true">*</span>
                                     </label>
                                     <p class="invalid-feedback">
@@ -291,226 +307,33 @@
                                         <span class="invalid-description">Error message description</span>
                                         <span class="invalid-instruction">How to fix instructions</span>
                                     </p>
-                                    <select class="form-control form-control-lg" id="companyType" required>
-                                        <option value="">Select...</option>
-                                        <option value="Government">Government</option>
-                                        <option value="Nonprofit">Nonprofit</option>
-                                        <option value="Business">Business</option>
+
+                                    <select class="form-control form-control-lg" id="borough" required>
+                                        <option value="">Select One...</option>
+                                        <option value="AR">Bronx</option>
+                                        <option value="AZ">Brooklyn</option>
+                                        <option value="AK">Manhattan</option>
+                                        <option value="AK">Staten Island</option>
+                                        <option value="CA">Queens</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="taxID">Tax ID (if applicable)</label>
-                                    <input type="text" class="form-control form-control-lg" id="taxID">
-                                </div>
-                                <!-- .col -->
-
-                                <div class="form-group">
-                                    <label for="streetAddress">Street Address
-                                        <span class="fs-md text-danger" aria-hidden="true">*</span>
-                                    </label>
-                                    <p class="invalid-feedback">
-                                        <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                        <span class="invalid-description">Error message description</span>
-                                        <span class="invalid-instruction">How to fix instructions</span>
-                                    </p>
-                                    <input type="text" class="form-control form-control-lg" id="streetAddress" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="city">
-                                        City
-                                        <span class="fs-md text-danger" aria-hidden="true">*</span>
-                                    </label>
-                                    <p class="invalid-feedback">
-                                        <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                        <span class="invalid-description">Error message description</span>
-                                        <span class="invalid-instruction">How to fix instructions</span>
-                                    </p>
-                                    <input type="text" class="form-control form-control-lg" id="city" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="state">State
-                                        <span class="fs-md text-danger" aria-hidden="true">*</span>
-                                    </label>
-                                    <p class="invalid-feedback">
-                                        <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                        <span class="invalid-description">Error message description</span>
-                                        <span class="invalid-instruction">How to fix instructions</span>
-                                    </p>
-                                    <select class="form-control form-control-lg" id="state" required>
-                                        <option value="">Select...</option>
-                                        <option value="AK">Alaska</option>
-                                        <option value="AZ">Arizona</option>
-                                        <option value="AR">Arkansas</option>
-                                        <option value="CA">California</option>
-                                        <option value="CO">Colorado</option>
-                                        <option value="CT">Connecticut</option>
-                                        <option value="DE">Delaware</option>
-                                        <option value="DC">District Of Columbia</option>
-                                        <option value="FL">Florida</option>
-                                        <option value="GA">Georgia</option>
-                                        <option value="HI">Hawaii</option>
-                                        <option value="ID">Idaho</option>
-                                        <option value="IL">Illinois</option>
-                                        <option value="IN">Indiana</option>
-                                        <option value="IA">Iowa</option>
-                                        <option value="KS">Kansas</option>
-                                        <option value="KY">Kentucky</option>
-                                        <option value="LA">Louisiana</option>
-                                        <option value="ME">Maine</option>
-                                        <option value="MD">Maryland</option>
-                                        <option value="MA">Massachusetts</option>
-                                        <option value="MI">Michigan</option>
-                                        <option value="MN">Minnesota</option>
-                                        <option value="MS">Mississippi</option>
-                                        <option value="MO">Missouri</option>
-                                        <option value="MT">Montana</option>
-                                        <option value="NE">Nebraska</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="NH">New Hampshire</option>
-                                        <option value="NJ">New Jersey</option>
-                                        <option value="NM">New Mexico</option>
-                                        <option value="NY">New York</option>
-                                        <option value="NC">North Carolina</option>
-                                        <option value="ND">North Dakota</option>
-                                        <option value="OH">Ohio</option>
-                                        <option value="OK">Oklahoma</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="PA">Pennsylvania</option>
-                                        <option value="RI">Rhode Island</option>
-                                        <option value="SC">South Carolina</option>
-                                        <option value="SD">South Dakota</option>
-                                        <option value="TN">Tennessee</option>
-                                        <option value="TX">Texas</option>
-                                        <option value="UT">Utah</option>
-                                        <option value="VT">Vermont</option>
-                                        <option value="VA">Virginia</option>
-                                        <option value="WA">Washington</option>
-                                        <option value="WV">West Virginia</option>
-                                        <option value="WI">Wisconsin</option>
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="postal-code">
-                                        Postal Code
-                                        <span class="fs-md text-danger" aria-hidden="true">*</span>
-                                    </label>
-                                    <p class="invalid-feedback">
-                                        <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                        <span class="invalid-description">Error message description</span>
-                                        <span class="invalid-instruction">How to fix instructions</span>
-                                    </p>
-                                    <input type="text" class="form-control form-control-lg" id="postal-code" required>
-                                </div>
-
-                            </div>
-                            <!-- .container -->
-
-                        </fieldset>
-
-                        <fieldset>
-
-                            <legend>Personal Information</legend>
-
-                            <div class="p-4">
-
-                                <div class="form-group">
-                                    <label for="salutation">Salutation</label>
-                                    <select class="form-control form-control-lg" id="salutation">
-                                        <option value="">Select...</option>
-                                        <option value="">Dr.</option>
-                                        <option value="">M.</option>
-                                        <option value="">Miss.</option>
-                                        <option value="">Mr.</option>
-                                        <option value="">Mrs.</option>
-                                        <option value="">Ms.</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="firstName">First Name
-                                        <span class="fs-md text-danger" aria-hidden="true">*</span>
-                                    </label>
-                                    <p class="invalid-feedback">
-                                        <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                        <span class="invalid-description">Error message description</span>
-                                        <span class="invalid-instruction">How to fix instructions</span>
-                                    </p>
-                                    <input type="text" class="form-control form-control-lg" id="firstName" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="lastName">Last Name
-                                        <span class="fs-md text-danger" aria-hidden="true">*</span>
-                                    </label>
-                                    <p class="invalid-feedback">
-                                        <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                        <span class="invalid-description">Error message description</span>
-                                        <span class="invalid-instruction">How to fix instructions</span>
-                                    </p>
-                                    <input type="text" class="form-control form-control-lg" id="lastName" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="jobPosition">Job or Postion</label>
-                                    <input type="text" class="form-control form-control-lg" id="jobPosition">
-                                </div>
+                                <!-- .form-group -->
 
                                 <div class="form-group">
                                     <label for="Email">Email Address</label>
-                                    <input type="email" class="form-control form-control-lg" id="Email" value="john@nyctheatre.org"
-                                        readonly>
+                                    <input type="email" class="form-control form-control-lg" id="Email" value="john@nyctheatre.org" readonly>
                                 </div>
-
-                            </div>
-                            <!-- .container -->
-
-                        </fieldset>
-
-                        <fieldset>
-
-                            <legend>Thank You Letters</legend>
-
-                            <div class="p-4">
-
-                                <p class="fs-md">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit perferendis omnis a atque maiores
-                                    expedita perspiciatis qui quaerat accusamus.
-                                </p>
+                                <!-- .form-group -->
 
                                 <div class="form-group">
-
-                                    <ul class="checkbox-radio-list">
-                                        <li>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="thank-you-email" name="donor-preferences"
-                                                    checked>
-                                                <label class="custom-control-label" for="thank-you-email">I want to receive thank you
-                                                    letters by email</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="thank-you-letters" name="donor-preferences">
-                                                <label class="custom-control-label" for="thank-you-letters">I want to opt-out of thank you
-                                                    letters</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="donate-anonymously" name="donor-preferences">
-                                                <label class="custom-control-label" for="donate-anonymously">I want to donate anonymously</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <small class="text-muted">Help text for above field</small>
                                 </div>
-
+                                <!-- .form-group -->
+                                
                             </div>
-                            <!-- .p-4 -->
+                            <!-- .container -->
 
                         </fieldset>
 
@@ -727,9 +550,9 @@
 
                                 $('.alert').removeClass('d-none');
 
-                                // $('html, body').animate({
-                                //     scrollTop: $("#content").offset().top
-                                // }, 600);
+                                $('html, body').animate({
+                                    scrollTop: $("#content").offset().top
+                                }, 600);
 
                             }
 

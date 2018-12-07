@@ -67,7 +67,7 @@ $spacers: (
 // Grid Gutter Width
 // Note: Default is 30px
 
-$grid-gutter-width: 32px;
+$grid-gutter-width: 2rem;
 
 // Max container width
 
@@ -285,7 +285,7 @@ $modal-header-border-color: $border-color;
 
 // Border width
 
-$border-width: 1px;
+$border-width: 0.0625rem; // equal to 1px 
 
 // Enable Rounded
 
@@ -326,8 +326,8 @@ $btn-font-weight: $font-weight-bold;
 
 // Cards
 
-$card-spacer-x:                     $grid-gutter-width/2; 
-$card-spacer-y:                     $grid-gutter-width/2; 
+$card-spacer-x: ($grid-gutter-width/2); 
+$card-spacer-y: ($grid-gutter-width/2); 
 
 $card-cap-bg: rgba($black, .05);
 $card-border-color: rgba($black, .2);
@@ -339,7 +339,7 @@ $component-active-bg: $secondary;
 
 // Navs (.nav) and Input padding
 
-$input-btn-padding-x: ($grid-gutter-width / 2);
+$input-btn-padding-x: ($grid-gutter-width/2);
 $nav-link-padding-x: $input-btn-padding-x;
 $nav-link-padding-y: .75rem;
 
@@ -364,15 +364,18 @@ $form-group-margin-bottom: $spacer-4;
 $custom-control-indicator-size: 1.5rem;
 $custom-control-gutter: ($custom-control-indicator-size * 1.5);
 
+//Alerts
+
+$alert-padding-y: ($grid-gutter-width/2);
+$alert-padding-x: ($grid-gutter-width/2);
+
 // Modals 
 
 $modal-backdrop-bg: $white;
 $modal-backdrop-opacity: 0.95;
 $modal-content-border-color: rgba($black, .2);
 
-////////////////////////////////////////
 // Carousel
-////////////////////////////////////////
  
 $carousel-control-color: $white !default;
 $carousel-control-opacity: .75;

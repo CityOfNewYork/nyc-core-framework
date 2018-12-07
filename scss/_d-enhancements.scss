@@ -120,7 +120,7 @@ img{ @extend .img-fluid; }
 // Forms
 ////////////////////////////////////////
 
-// Note: Remove unusual negative margin on default 'Legend' selectors
+// Note: Remove default negative margin on 'Legend' selectors
 
 legend, 
 .legend{
@@ -132,6 +132,21 @@ legend,
   line-height: 1.5;
   
   + * { clear: both; }
+}
+
+fieldset{
+  @extend .mb-5;
+  @extend .border;
+  @extend .clearfix;
+}
+
+legend{
+  @extend .fs-md;
+  @extend .bg-primary;
+  @extend .text-white;
+  @extend .p-2;
+  @extend .font-weight-normal;
+  @extend .mb-0;
 }
 
 // Note: Add 'custom-select' class to all select boxes
@@ -176,8 +191,15 @@ label{ @extend .fs-md; }
   }
 }
 
-.alert-heading{
-  @extend .font-weight-bold;
+// Alerts
+
+.alert-heading{ 
+  @extend .font-weight-bold; 
+  @extend .mb-1;
+}
+
+.alert-text{ 
+  @extend .fs-md; 
 }
 
 .form-group{
@@ -194,6 +216,19 @@ label{ @extend .fs-md; }
 
   &.is-invalid{
     .invalid-feedback{ @extend .d-block; }
+  }
+}
+
+// Note: Make fieldsets go edge-to-edge on devices 
+
+.mobile-margin-offset-x{
+    
+  @include media-breakpoint-down('xs') {
+
+      fieldset{
+          margin-left: -(($grid-gutter-width/2) + $border-width);
+          margin-right: -(($grid-gutter-width/2) + $border-width);
+      }
   }
 }
 
