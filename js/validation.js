@@ -22,12 +22,12 @@ $(document).ready(function () {
                         $('.alert').removeClass('d-none');
 
                         $('html, body').animate({
-                            scrollTop: $("#form-errors").offset().top - 16
+                            scrollTop: $(".alert").offset().top - 16
                         }, {
                             duration: 600,
                             complete: function () {
-                                $("#form-errors").attr("tabindex", "0");
-                                $("#form-errors").focus();
+                                $(".alert").attr("tabindex", "0");
+                                $(".alert").focus();
                             }
                         });
                     }
