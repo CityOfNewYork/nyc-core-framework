@@ -1360,6 +1360,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/validation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/validation-min.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 0
+		},
 	"/project-icon.png": {
 		"ft": 32768,
 		"iS": 1035,

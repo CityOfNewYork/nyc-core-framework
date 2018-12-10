@@ -547,66 +547,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-    <!-- Optional JavaScript -->
+    <!-- NYC Custom JavaScript (required) -->
     <script src="./js/main.js"></script>
 
-
-    <script>
-
-        $(document).ready(function () {
-
-            // Example starter JavaScript for disabling form submissions if there are invalid fields
-            (function () {
-                'use strict';
-                window.addEventListener('load', function () {
-
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.getElementsByClassName('needs-validation');
-
-                    // Loop over them and prevent submission
-                    var validation = Array.prototype.filter.call(forms, function (form) {
-                        form.addEventListener('submit', function (event) {
-
-                            if (form.checkValidity() === false) {
-
-                                event.preventDefault();
-                                event.stopPropagation();
-
-                                var invalid_target = $('.form-control:invalid');
-
-                                invalid_target.closest( '.form-group' ).addClass( 'is-invalid' );
-
-                                $('.alert').removeClass('d-none');
-
-                                $('html, body').animate({
-                                    scrollTop: $("#form-errors").offset().top - 16
-                                },{
-                                    duration: 600,
-                                    complete: function() {
-                                        $("#form-errors").attr("tabindex","0");
-                                        $("#form-errors").focus();
-                                    }
-                                });
-                            }
-
-                            form.classList.add('was-validated');
-                            
-                        }, false);
-                    });
-                }, false);
-            })();
-
-            $('.form-control').blur(function() {
-
-                if(!$(this).is(":invalid")) {
-                    $(this).closest( '.form-group' ).removeClass( 'is-invalid' );
-                }
-
-            });
-
-        });
-
-    </script>
+    <!-- NYC Form Validation (only needed on form pages) -->
+    <script src="./js/validation.js"></script>
 
     <script>
         function googleTranslateElementInit() {

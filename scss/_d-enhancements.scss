@@ -115,7 +115,7 @@ img{ @extend .img-fluid; }
 // Forms
 ////////////////////////////////////////
 
-// Note: Remove default negative margin on 'Legend' selectors
+// Note: Remove default styles on 'legend' selectors
 
 legend, 
 .legend{
@@ -163,7 +163,6 @@ label{ @extend .fs-md; }
 }
 
 .custom-control-label{
-
   &::before{ 
     box-shadow: $accessible-box-shadow;
   }
@@ -188,8 +187,6 @@ label{ @extend .fs-md; }
 
 // Alerts
 
-
-
 .alert{
 
   &.alert-danger{
@@ -202,21 +199,21 @@ label{ @extend .fs-md; }
 
 }
 
-
 .alert-heading{ 
   @extend .font-weight-bold; 
   @extend .mb-1;
 }
 
-.alert-text{ 
-  @extend .fs-md; 
-}
+.alert-text{ @extend .fs-md; }
+
+// Custom Valdation for accessibility
+// Note: the following only works when custom validation.js is present in the footer of the form's page
 
 .form-group{
 
-  .invalid-feedback{ 
+  .invalid-feedback{
+      @extend .d-none; 
       margin-bottom: 0.5rem;
-      @extend .d-none;
 
       .invalid-description{
         @extend .font-weight-bold;
@@ -237,6 +234,10 @@ label{ @extend .fs-md; }
     }
   }
 }
+
+////////////////////////////////////////
+// Mobile Margin Offset
+////////////////////////////////////////
 
 // Note: Make fieldsets go edge-to-edge on devices 
 
