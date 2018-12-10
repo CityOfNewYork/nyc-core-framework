@@ -31,10 +31,11 @@
 
 #nyc-top-header{
 	p,
-  a
+  a,
+  li
   {
 		@extend .font-weight-bold;
-		line-height: 1;
+		line-height: inherit;
 	}
 }
 
@@ -602,12 +603,11 @@ $link-list-margin: 0.5em;
 
     li{ @include link-list-stack; }
 
-    a{ @extend .d-inline-block; }
-
     &.horizontal{
       @extend .d-flex;
       @extend .align-items-center;
       @extend .flex-row;
+
       margin-left: -($link-list-margin);
       margin-right: -($link-list-margin);
 
