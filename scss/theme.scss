@@ -34,3 +34,23 @@
         }
     }
 }
+
+
+.nav.nav-pills[role="tablist"]{
+
+    .nav-link:not(.active){ @extend .text-muted; }
+
+    .nav-link.active{ @extend .shadow-sm; }
+}
+
+.nav.nav-tabs[role="tablist"]{
+
+    .nav-link:not(.active){ @extend .text-muted; }
+
+    .nav-link.active{ 
+        @extend .text-primary;
+        @extend .text-tertiary;
+        @extend .font-weight-bold; 
+        border-top-color: theme-color("tertiary");
+    }
+}
