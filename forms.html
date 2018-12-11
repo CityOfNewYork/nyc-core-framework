@@ -269,10 +269,9 @@
 
                         <div class="form-group">
                             <label for="label-01">Label
-                                <span class="sr-only">is required</span>
                                 <span class="fs-md text-danger" aria-hidden="true">*</span>
                             </label>
-                            <p class="invalid-feedback" aria-hidden="true">
+                            <p class="invalid-feedback">
                                 <span class="fas fa-exclamation-triangle"></span>
                                 <span class="invalid-description">Error message description</span>
                                 <span class="invalid-instruction">How to fix instructions</span>
@@ -283,7 +282,7 @@
 
                         <div class="form-group">
                             <label for="label-02">Label
-                                <span class="sr-only">is required</span>
+                                
                                 <span class="fs-md text-danger" aria-hidden="true">*</span>
                             </label>
                             <p class="invalid-feedback" aria-hidden="true">
@@ -297,7 +296,7 @@
 
                         <div class="form-group">
                             <label for="borough">Borough
-                                <span class="fs-md text-danger" aria-hidden="true">*</span>
+                                <span class="fs-md text-danger">*</span>
                             </label>
                             <p class="invalid-feedback">
                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
@@ -341,17 +340,16 @@
                                         <span class="invalid-instruction">How to fix instructions</span>
                                     </p>
         
-                                    <ul class="link-list horizontal">
+                                    <ul class="link-list ">
                                         <li>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-01" name="custom-radio-example"
-                                                    checked="">
+                                                <input type="radio" class="custom-control-input" id="custom-radio-01" name="custom-radio-example" required>
                                                 <label class="custom-control-label" for="custom-radio-01">Label</label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="custom-radio-02" name="custom-radio-example">
+                                                <input type="radio" class="custom-control-input" id="custom-radio-02" name="custom-radio-example" required>
                                                 <label class="custom-control-label" for="custom-radio-02">Label</label>
                                             </div>
                                         </li>
@@ -364,6 +362,8 @@
                             <!-- .p-4 -->
 
                         </fieldset>
+
+                        <input type="date">
 
                         <button class="btn btn-lg btn-block btn-tertiary my-5" type="submit">Send</button>
 

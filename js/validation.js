@@ -15,7 +15,7 @@ $(document).ready(function () {
                         event.preventDefault();
                         event.stopPropagation();
 
-                        var invalid_target = $('.form-control:invalid');
+                        var invalid_target = $(':invalid');
 
                         invalid_target.closest('.form-group').addClass('is-invalid');
 
@@ -38,8 +38,13 @@ $(document).ready(function () {
             });
         }, false);
     })();
-
+    
     $('.form-control').blur(function () {
+        if (!$(this).is(":invalid")) {
+            $(this).closest('.form-group').removeClass('is-invalid');
+        }
+    });
+    $('custom-control-input').change(function () {
         if (!$(this).is(":invalid")) {
             $(this).closest('.form-group').removeClass('is-invalid');
         }
