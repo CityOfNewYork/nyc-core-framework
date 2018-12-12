@@ -257,8 +257,8 @@ $gradients: true;
   .bg-gradient-x-theme{
     @include linear-gradient(
       $direction: to right,
-      $first-color: theme-color("secondary"),
-      $second-color: theme-color("tertiary"),
+      $first-color: red,
+      $second-color: green,
       $first-color-opacity: 1,
       $second-color-opacity: 1,
       $first-color-position: 0%,

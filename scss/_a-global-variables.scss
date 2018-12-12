@@ -217,23 +217,19 @@ $accessible-colors: true;
 
 // Note: Every color added to the theme-color map adds 2-3k to the theme.css file size
 
-$deep-blue: #1A237E;
-$azure-sky: #3177C8;
-$park-green: #75BD1D;
-
-$primary: $deep-blue;
-$secondary: $azure-sky;
-$tertiary: $park-green;
+$primary: #1A237E;
+$secondary: #3177C8;
+$tertiary: #75BD1D;
 
 $light: #e6ecf7;
+$dark: #e6ecf7;
+
+
+// Adding to the map
 
 $theme-colors: (
-
   "white": $white,
   "black": $black,
-
-  "primary": $primary, 
-  "secondary": $secondary, 
   "tertiary": $tertiary, 
 );
 
@@ -246,7 +242,6 @@ $theme-colors: (
 
 // Familiar Defaults
 
-$body-bg: $white;
 $body-color: $gray-900;
 $border-color: $gray-300;
 $dark: $gray-900;
