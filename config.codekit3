@@ -1149,6 +1149,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/featured-panels.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/featured-panels.html",
+		"oF": 0
+		},
 	"/flex.html": {
 		"cB": 0,
 		"ft": 8192,
