@@ -254,12 +254,12 @@ $gradients: true;
 
   // Gradient Backgrounds
 
-  .bg-gradient-x-black{
+  .bg-gradient-x-theme{
     @include linear-gradient(
       $direction: to right,
-      $first-color: black,
-      $second-color: black,
-      $first-color-opacity: 0,
+      $first-color: theme-color("secondary"),
+      $second-color: theme-color("tertiary"),
+      $first-color-opacity: 1,
       $second-color-opacity: 1,
       $first-color-position: 0%,
       $second-color-position: 100%
