@@ -254,14 +254,14 @@ $gradients: true;
 
   // Gradient Backgrounds
 
-  .bg-gradient-y-white{
+  .bg-gradient-x-black{
     @include linear-gradient(
-      $direction: to bottom,
-      $first-color: white,
-      $second-color: white,
-      $first-color-opacity: 0.5,
+      $direction: to right,
+      $first-color: black,
+      $second-color: black,
+      $first-color-opacity: 0,
       $second-color-opacity: 1,
-      $first-color-position: 50%,
+      $first-color-position: 0%,
       $second-color-position: 100%
     );
   }
