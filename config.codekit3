@@ -1395,37 +1395,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/scss/_a-global-variables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/scss/_a-global-variables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/scss/_b-bootstrap-imports.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1448,19 +1417,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/scss/_c-custom-mixins.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/scss/_d-enhancements.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/scss/_d-enhancements.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1489,19 +1445,6 @@
 		"oAP": "/scss/_f-dev-tools.css",
 		"oF": 0,
 		"oS": 0,
-		"uL": 1
-		},
-	"/scss/theme.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/theme.css",
-		"oF": 2,
-		"oS": 3,
 		"uL": 1
 		},
 	"/tearsheet.html": {
