@@ -182,7 +182,7 @@
 
   &:focus {
     border-color: $custom-select-focus-border-color;
-    outline: 0;
+    // outline: 0;
     @if $enable-shadows {
       box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
     } @else {

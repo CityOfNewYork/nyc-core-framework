@@ -30,6 +30,57 @@
 		"oAP": "/article-sidebar.html",
 		"oF": 0
 		},
+	"/bootstrap.4.1.3/css/bootstrap-grid.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/css/bootstrap-grid.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/bootstrap.4.1.3/css/bootstrap-grid.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/css/bootstrap-grid.min.css.map",
+		"oF": 0
+		},
+	"/bootstrap.4.1.3/css/bootstrap-reboot.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/css/bootstrap-reboot.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/bootstrap.4.1.3/css/bootstrap-reboot.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/css/bootstrap-reboot.min.css.map",
+		"oF": 0
+		},
+	"/bootstrap.4.1.3/css/bootstrap.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/css/bootstrap.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/bootstrap.4.1.3/css/bootstrap.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/css/bootstrap.min.css.map",
+		"oF": 0
+		},
 	"/bootstrap.4.1.3/scss/_alert.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -495,6 +546,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/bootstrap.4.1.3/scss/bootstrap-grid.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/scss/bootstrap-grid.css.map",
+		"oF": 0
+		},
 	"/bootstrap.4.1.3/scss/bootstrap-grid.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -518,6 +576,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/bootstrap.4.1.3/scss/bootstrap-reboot.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/scss/bootstrap-reboot.css.map",
+		"oF": 0
+		},
 	"/bootstrap.4.1.3/scss/bootstrap-reboot.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -540,6 +605,13 @@
 		"oAP": "/bootstrap.4.1.3/scss/bootstrap-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/bootstrap.4.1.3/scss/bootstrap.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/bootstrap.4.1.3/scss/bootstrap.css.map",
+		"oF": 0
 		},
 	"/bootstrap.4.1.3/scss/bootstrap.scss": {
 		"aP": 0,
@@ -1149,18 +1221,86 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/css/theme.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/css/theme.css.map",
+		"oF": 0
+		},
+	"/dist/css/bootstrap-grid.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dist/css/bootstrap-grid.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dist/css/bootstrap-grid.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/dist/css/bootstrap-grid.min.css.map",
+		"oF": 0
+		},
+	"/dist/css/bootstrap-reboot.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dist/css/bootstrap-reboot.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dist/css/bootstrap-reboot.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/dist/css/bootstrap-reboot.min.css.map",
+		"oF": 0
+		},
+	"/dist/css/bootstrap.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dist/css/bootstrap.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dist/css/bootstrap.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/dist/css/bootstrap.min.css.map",
+		"oF": 0
+		},
+	"/dist/css/theme.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dist/css/theme.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dist/css/theme.min.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/dist/css/theme.min.css.map",
+		"oF": 0
+		},
 	"/featured-panels.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/featured-panels.html",
-		"oF": 0
-		},
-	"/flex.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/flex.html",
 		"oF": 0
 		},
 	"/forms.html": {
@@ -1498,6 +1638,13 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/scss/theme.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/scss/theme.css.map",
+		"oF": 0
+		},
 	"/scss/theme.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1516,13 +1663,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/tearsheet.html",
-		"oF": 0
-		},
-	"/test.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/test.html",
 		"oF": 0
 		}
 	},

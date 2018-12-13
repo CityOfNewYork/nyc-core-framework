@@ -508,13 +508,6 @@ section > ul{
   background-color: transparent;
   line-height: 100%;
   @extend .p-0;
-
-  @include hover-focus {
-    color: currentColor;
-    border-color: transparent;
-    background-color: transparent;
-    text-decoration: none;
-  }
 }
 
 ////////////////////////////////////////
