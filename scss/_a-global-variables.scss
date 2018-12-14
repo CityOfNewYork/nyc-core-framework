@@ -224,8 +224,6 @@ $tertiary: #75BD1D;
 $light: #e6ecf7;
 $dark: #212529;
 
-
-
 // Adding to the map
 
 $theme-colors: (
@@ -316,6 +314,10 @@ $link-hover-decoration: none;
 
 $btn-font-weight: $font-weight-bold;
 
+// Restore Browser Focus
+
+$restore_browser_focus: true;
+
 ////////////////////////////////////////
 // Bootstrap Components
 ////////////////////////////////////////
@@ -386,3 +388,5 @@ $carousel-caption-width: 100%;
 ////////////////////////////////////////
 
 $figure-caption-font-size: $fs-md;
+
+

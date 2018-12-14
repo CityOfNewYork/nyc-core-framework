@@ -22,8 +22,10 @@
 
   &:focus,
   &.focus {
-    // outline: 0;
-    // box-shadow: $btn-focus-box-shadow;
+    @if $restore_browser_focus != true {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
   }
 
   // Disabled comes first so active can properly restyle
@@ -43,7 +45,9 @@
     @include box-shadow($btn-active-box-shadow);
 
     &:focus {
-      // @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      @if $restore_browser_focus != true {
+        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      }
     }
   }
 }
