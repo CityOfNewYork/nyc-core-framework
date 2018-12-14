@@ -8060,19 +8060,16 @@ a.btn[data-toggle="collapse"]::after, .accordion-group a[data-toggle="collapse"]
     color: #1A237E; }
 
 #global-header .nav-pills .nav-link.active {
-  color: #3177C8;
+  color: #1A237E;
   background-color: #fff; }
 
 #global-header .nav-pills .nav-link[aria-expanded="true"] {
-  color: #3177C8;
+  color: #1A237E;
   background-color: #fff; }
 
 #global-header .dropdown-menu {
   background-color: #fff;
   border: none; }
-  #global-header .dropdown-menu a.dropdown-item {
-    color: #1A237E;
-    background: none; }
 
 #global-header #nav-primary.nav-pills .dropdown-menu {
   left: 0;

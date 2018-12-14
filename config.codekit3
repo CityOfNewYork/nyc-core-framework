@@ -1170,13 +1170,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/css/theme.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/css/theme.css.map",
-		"oF": 0
-		},
 	"/dist/css/bootstrap-grid.min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1597,13 +1590,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/scss/theme.css.map": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/scss/theme.css.map",
-		"oF": 0
-		},
 	"/scss/theme.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1612,8 +1598,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/scss/theme.css",
-		"oF": 0,
+		"oAP": "/css/theme.css",
+		"oF": 2,
 		"oS": 0,
 		"uL": 1
 		},
