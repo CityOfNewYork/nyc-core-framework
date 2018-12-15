@@ -8018,7 +8018,8 @@ section p > a:focus {
   font-weight: inherit;
   border-color: transparent;
   background-color: transparent;
-  line-height: 100%; }
+  line-height: 100%;
+  cursor: pointer; }
 
 .blended-link,
 .blended-link:hover {
