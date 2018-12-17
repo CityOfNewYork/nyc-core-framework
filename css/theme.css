@@ -7742,16 +7742,6 @@ select {
 .custom-control-label::before {
   box-shadow: 0 0 0 0.0625rem #777677; }
 
-.alert.alert-danger:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.15rem #ea172b; }
-
-.form-group .invalid-feedback {
-  margin-bottom: 0.5rem; }
-
-.form-group.is-invalid .form-control:invalid:focus, .form-group.is-invalid #google_translate_element select:invalid:focus, #google_translate_element .form-group.is-invalid select:invalid:focus {
-  box-shadow: 0 0 0 0.15rem #ea172b; }
-
 @media (max-width: 599.98px) {
   .mobile-margin-offset-x fieldset {
     margin-left: -1.0625rem;
@@ -8041,6 +8031,16 @@ a.btn[data-toggle="collapse"]::after, .accordion-group a[data-toggle="collapse"]
   font-variant: normal;
   text-rendering: auto;
   color: currentColor; }
+
+.alert.alert-danger:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem #ea172b; }
+
+.form-group .invalid-feedback {
+  margin-bottom: 0.5rem; }
+
+.form-group.is-invalid .form-control:invalid:focus, .form-group.is-invalid #google_translate_element select:invalid:focus, #google_translate_element .form-group.is-invalid select:invalid:focus {
+  box-shadow: 0 0 0 0.15rem #ea172b; }
 
 #nyc-top-header p,
 #nyc-top-header a,

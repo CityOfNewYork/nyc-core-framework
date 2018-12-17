@@ -10,6 +10,62 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+// Form Valdation and Alerts 
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Alerts
+
+.alert{
+
+  &.alert-danger{
+
+    &:focus{
+      outline: 0;
+      box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
+    }
+  }
+
+}
+
+.alert-heading{ 
+  @extend .font-weight-bold; 
+  @extend .mb-1;
+}
+
+.alert-text{ @extend .fs-md; }
+
+// Custom Valdation for accessibility
+// Note: the following only works when custom validation.js is present in the footer of the form's page
+
+.form-group{
+
+  .invalid-feedback{
+      @extend .d-none; 
+      margin-bottom: 0.5rem;
+
+      .invalid-description{
+        @extend .font-weight-bold;
+        @extend .mx-1;
+      }
+  }
+
+  &.is-invalid{
+
+    label{ @extend .text-danger; }
+
+    .invalid-feedback{ @extend .d-block; }
+
+    .form-control:invalid{
+      &:focus{
+        box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
 // Citywide Global Header and Footer 
 //
 ////////////////////////////////////////////////////////////////////////////////
