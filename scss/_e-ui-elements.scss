@@ -193,6 +193,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     a.dropdown-item{
       color: $primary-nav-dropdown-item-color;
       background: none;
+      white-space: normal;
     }
   }
 

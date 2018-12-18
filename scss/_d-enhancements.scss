@@ -201,12 +201,9 @@ label{ @extend .fs-md; }
 
 .mobile-margin-offset-x{
     
-  @include media-breakpoint-down('xs') {
-
-      fieldset{
-          margin-left: -(($grid-gutter-width/2) + $border-width);
-          margin-right: -(($grid-gutter-width/2) + $border-width);
-      }
+  @include media-breakpoint-down('sm') {
+    margin-left: -(($grid-gutter-width/2) + $border-width);
+    margin-right: -(($grid-gutter-width/2) + $border-width);
   }
 }
 
@@ -412,11 +409,15 @@ section > ul{
 
 .narrow,
 .wide,
-.narrow
+.narrow, 
+.medium
 { @extend .mx-auto; }
 
 .narrow{ max-width: $narrow-width; }
 .wide{ max-width: $wide-width; }
+
+.medium{ max-width: $medium-width; }
+
 
 ////////////////////////////////////////
 // Text Shadow
