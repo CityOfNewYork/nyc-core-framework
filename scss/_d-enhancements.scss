@@ -479,11 +479,14 @@ section > ul{
 // IE 10 and 11 Fixes 
 ////////////////////////////////////////
 
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+
   // Fixes display flex bug 
   .card,
   .figure{ display: block !important; }
 
   // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
   .narrow{ max-width: $narrow-width-ie; }
+  .medium{ max-width: $medium-width-ie; }
+
 }
