@@ -217,9 +217,12 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     border: none;
 
     a.dropdown-item{
-      color: $primary-nav-dropdown-item-color;
+      color: $primary-nav-dropdown-item-color;      
       background: none; // Remove Bootstrap Default background color
       white-space: normal; // Fix Bootstrap Default white-space 'no-wrap'
+      &.active{
+        text-decoration: underline;
+      }
     }
   }
 
@@ -243,9 +246,6 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     .nav-link{
       @extend .py-1;
 
-      &:focus, 
-      &:hover
-      { text-decoration: none; }
 
       &.active { 
         color: $primary-nav-mobile-link-active-color;
