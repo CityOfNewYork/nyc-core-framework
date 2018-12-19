@@ -101,7 +101,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Local Header and primary navigation 
+// Local Header and Primary Navigation 
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -129,14 +129,30 @@
 ////////////////////////////////////////
 
 // Primary Navigation
-// Note: Primary Navigation preferences override default components
+// Note: Primary Navigation variable set here override  Bootstrap default components
 
+// Primary nav font weight
 $primary-nav-font-weight: $font-weight-bold;
+
+// Primary nav link color
 $primary-nav-link-color: $body-color;
-$primary-nav-link-active-color: $primary;
-$primary-nav-pills-link-active-color: theme-color('primary');
-$primary-nav-pills-link-active-bg: $white;
-$primary-nav-dropdown-active-bg: $white;
+
+// Primary nav-right link active (current page) color
+$primary-nav-right-link-active-color: theme-color('secondary');
+
+// Primary nav (mobile-only) link active (current page) color
+$primary-nav-mobile-link-active-color: theme-color('secondary');
+
+// Primary nav-pills link active (current page) color
+$primary-nav-pills-link-active-color: white;
+
+// Primary nav-pills link active (current page) background color
+$primary-nav-pills-link-active-bg-color: theme-color('primary');
+
+// Primary nav dropdown background color
+$primary-nav-dropdown-bg-color: white;
+
+// Primary nav dropdown items color
 $primary-nav-dropdown-item-color: theme-color('body-color');
 
 #global-header{
@@ -150,16 +166,22 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   .form-control
   { @extend .rounded-0; }
 
-  .nav-link{
+  // Primary Nav (both .nav-pills and .nav-right)
 
+  .nav-link{
     font-weight: $primary-nav-font-weight;
     color: $primary-nav-link-color;
-
-    &.active { color: $primary-nav-link-active-color; }
-
   }
   
-  // Primary Nav Below
+  // Primary Nav (.nav-right only)
+
+  .nav-right{
+    .nav-link{
+      &.active { color: $primary-nav-right-link-active-color; }
+    }
+  }
+
+  // Primary Nav (.nav-pills)
 
   .nav-pills{
     @extend .border-left;
@@ -167,51 +189,49 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     @extend .nav-fill;
 
     .nav-link{
-      
-      @extend .rounded-0;
       @extend .border-right;
 
       &.active { 
         color: $primary-nav-pills-link-active-color;
-        background-color: $primary-nav-pills-link-active-bg;
+        background-color: $primary-nav-pills-link-active-bg-color;
       }
 
       &[aria-expanded="true"]{
-        color: $primary-nav-pills-link-active-color;
-        background-color: $primary-nav-dropdown-active-bg;
+        color: currentColor;
+        background-color: $primary-nav-dropdown-bg-color;
       }
     }
 
   } // .nav-pills
 
-  // Set colors of .dropdown-menus
+  // Set .dropdown-menu styles
 
   .dropdown-menu{
-    background-color: $primary-nav-dropdown-active-bg;
+    background-color: $primary-nav-dropdown-bg-color;
     border: none;
 
     a.dropdown-item{
       color: $primary-nav-dropdown-item-color;
-      background: none;
-      white-space: normal;
+      background: none; // Remove Bootstrap Default background color
+      white-space: normal; // Fix Bootstrap Default white-space 'no-wrap'
     }
   }
 
-  // Improves .dropdown-menu when present within .nav-pills
+  // Improve .dropdown-menu when present within .nav-pills
 
   #nav-primary.nav-pills .dropdown-menu{
+    @extend .w-100; 
     left: 0;
     right: 0;
     margin: 0;
-    @extend .w-100; 
     
     // When dropdowns are flush left or right, remove Bootrap transform and reposition y axis
     transform: none !important;
     top: 100% !important;
   }
 
-  // Resets dropdown functionality on mobile navigation
-  
+  // Resets dropdown functionality on mobile
+
   #device-menu{
 
     .nav-link{
@@ -221,13 +241,15 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
       &:hover
       { text-decoration: none; }
 
+      &.active { 
+        color: $primary-nav-mobile-link-active-color;
+      }
+
       @if $enable-caret {
         &.dropdown-toggle{
-        
           &[aria-expanded="true"]::after {
             @include caret-up;
           }
-  
         }
       } // end if
     
@@ -236,7 +258,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     .dropdown-menu.show{
 
       position: static !important;
-      background: transparent;
+      background: $transparent;
 
       -webkit-transform: none !important; /* Safari and Chrome */
          -moz-transform: none !important; /* Firefox */
