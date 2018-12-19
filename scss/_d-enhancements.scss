@@ -96,11 +96,9 @@ img{ @extend .img-fluid; }
 
 // This is incomplete - ignore for now
 
-// $no-class: ':not([class])';
-
-// article a#{$no-class}{
-//   text-decoration: underline;
-// }
+#primary-content{
+  a#{$no-class} { text-decoration: underline; }
+} 
 
 ////////////////////////////////////////
 // Sticky Top
