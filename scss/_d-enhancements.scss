@@ -94,13 +94,13 @@ body{
 // Make all images responsive by default
 img{ @extend .img-fluid; }
 
-$no-class: ':not([class])';
+// This is incomplete - ignore for now
 
-article a#{$no-class}{
+// $no-class: ':not([class])';
 
-  text-decoration: underline;
-
-}
+// article a#{$no-class}{
+//   text-decoration: underline;
+// }
 
 ////////////////////////////////////////
 // Sticky Top
@@ -418,7 +418,6 @@ section > ul{
 
 .medium{ max-width: $medium-width; }
 
-
 ////////////////////////////////////////
 // Text Shadow
 ////////////////////////////////////////
@@ -488,5 +487,4 @@ section > ul{
   // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
   .narrow{ max-width: $narrow-width-ie; }
   .medium{ max-width: $medium-width-ie; }
-
 }
