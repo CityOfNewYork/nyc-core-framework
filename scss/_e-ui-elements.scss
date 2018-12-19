@@ -137,11 +137,14 @@ $primary-nav-font-weight: $font-weight-bold;
 // Primary nav link color
 $primary-nav-link-color: $body-color;
 
+
 // Primary nav-right link active (current page) color
 $primary-nav-right-link-active-color: theme-color('secondary');
 
+
 // Primary nav (mobile-only) link active (current page) color
 $primary-nav-mobile-link-active-color: theme-color('secondary');
+
 
 // Primary nav-pills link active (current page) color
 $primary-nav-pills-link-active-color: white;
@@ -171,6 +174,9 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   .nav-link{
     font-weight: $primary-nav-font-weight;
     color: $primary-nav-link-color;
+    &.active{
+      text-decoration:underline;
+    }
   }
   
   // Primary Nav (.nav-right only)
