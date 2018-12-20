@@ -264,9 +264,15 @@ $list-group-border-color: $border-color;
 $nav-tabs-border-color: $border-color;
 $modal-header-border-color: $border-color;
 
-// Table accent color
+////////////////////////////////////////////////////////////////////////////////
+//
+// Variable Selectors
+//
+////////////////////////////////////////////////////////////////////////////////
 
-// $table-accent-bg: $light;
+// Note: Target selectors without a class
+
+$no-class: ':not([class])';
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -275,8 +281,6 @@ $modal-header-border-color: $border-color;
 ////////////////////////////////////////////////////////////////////////////////
 
 // Note: Here is where we customize the content and components of our theme
-
-$no-class: ':not([class])';
 
 ////////////////////////////////////////
 // Borders and Border Radius
@@ -320,6 +324,7 @@ $link-hover-decoration: none;
 $btn-font-weight: $font-weight-bold;
 
 // Restore Browser Focus
+// Note: Disable Bootstrap Default :focus styles 
 
 $restore_browser_focus: true;
 
@@ -340,7 +345,7 @@ $card-border-color: rgba($black, .2);
 $component-active-color: $white;
 $component-active-bg: $secondary;
 
-// Navs (.nav) and Input padding
+// Navs (.nav) and input padding
 
 $input-btn-padding-x: ($grid-gutter-width/2);
 $nav-link-padding-x: $input-btn-padding-x;
@@ -363,9 +368,7 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 $form-group-margin-bottom: $spacer-4;
 $custom-control-indicator-size: 1.25rem;
 $custom-control-gutter: ($custom-control-indicator-size * 1.5);
-
 $input-btn-focus-width: .15rem;
-// $input-btn-focus-color: $input-border-color;
 
 //Alerts
 
