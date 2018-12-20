@@ -278,7 +278,8 @@ $accessible-hover-focus: true;
   .btn-toggle a,
   .accordion-group a,
   .btn.d-flex.align-items-center
-  a.card
+  a.card, 
+  #back-to-top a
   {
     &:focus,
     &:hover

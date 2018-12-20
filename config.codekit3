@@ -23,13 +23,6 @@
 		"oAP": "/article-centered.html",
 		"oF": 0
 		},
-	"/article-example.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/article-example.html",
-		"oF": 0
-		},
 	"/article-sidebar.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1176,6 +1169,13 @@
 		"oAP": "/css/theme-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/css/theme.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/css/theme.css.map",
+		"oF": 0
 		},
 	"/dist/css/bootstrap-grid.min.css": {
 		"aP": 1,

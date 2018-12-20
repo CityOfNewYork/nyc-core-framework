@@ -480,6 +480,8 @@
 
     <footer>
 
+
+
         <!-- Optional sub-footer goes here -->
 
         <div id="nyc-bottom-footer">
@@ -633,6 +635,15 @@
 
             </div>
 
+            <div id="back-to-top">
+
+                <a class="shadow-sm" href="#primary-content">
+                    <span class="fas fa-arrow-up"></span>
+                    <span class="mx-1">back to top</span>
+                </a>
+
+            </div>
+    
         </div>
         <!-- #nyc-bottom-footer -->
 
@@ -647,6 +658,24 @@
 
     <!-- Optional JavaScript -->
     <script src="./js/main.js"></script>
+
+    <script>
+    $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+})
+
+    </script>
 
     <script>
         function googleTranslateElementInit() {

@@ -99,6 +99,18 @@
   hr{ border-top-color: $dark; }
 }
 
+#back-to-top{
+  @extend .container-fluid;
+  @extend .fixed-bottom;
+  @extend .text-right;
+
+  a{
+    @extend .rounded-top;
+    @extend .btn-sm;
+    @extend .btn-primary;
+  }
+}
+ 
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Local Header and Primary Navigation 
@@ -478,7 +490,7 @@ $toggles-and-accordions: true;
   $accordion-button-shadow: false;
 
   $accordion-title-color: theme-color("primary");
-  $accordion-bg: theme-color("light");
+  $accordion-bg-color: theme-color("light");
 
   .btn-toggle a,
   .accordion-group a
@@ -527,7 +539,7 @@ $toggles-and-accordions: true;
       }
     }
 
-    .card { background-color: $accordion-bg; }
+    .card { background-color: $accordion-bg-color; }
 
     .card-header{
       &:focus,
