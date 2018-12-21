@@ -229,9 +229,8 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
       color: $primary-nav-dropdown-item-color;      
       background: none; // Remove Bootstrap Default background color
       white-space: normal; // Fix Bootstrap Default white-space 'no-wrap'
-      &.active{
-        text-decoration: underline;
-      }
+
+      &.active{ text-decoration: underline; }
     }
   }
 
