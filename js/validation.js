@@ -16,18 +16,20 @@ $(document).ready(function () {
                         event.stopPropagation();
 
                         var invalid_target = $(':invalid');
+                        var alert_target = $('#form-error-message');
 
                         invalid_target.closest('.form-group').addClass('is-invalid');
 
-                        $('.alert').removeClass('d-none');
+
+                        alert_target.removeClass('d-none');
 
                         $('html, body').animate({
-                            scrollTop: $(".alert").offset().top - 16
+                            scrollTop: alert_target.offset().top - 16
                         }, {
                             duration: 600,
                             complete: function () {
-                                $(".alert").attr("tabindex", "0");
-                                $(".alert").focus();
+                                alert_target.attr("tabindex", "-1");
+                                alert_target.focus();
                             }
                         });
                     }
