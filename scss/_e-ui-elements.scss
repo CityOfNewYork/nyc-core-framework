@@ -19,7 +19,7 @@
 .alert{
   outline: 0;
 
-  &.focusable{
+  &[tabindex="-1"]{
     &:focus{
       box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
     }
