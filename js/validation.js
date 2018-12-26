@@ -20,18 +20,9 @@ $(document).ready(function () {
 
                         invalid_target.closest('.form-group').addClass('is-invalid');
 
-
                         alert_target.removeClass('d-none');
-
-                        $('html, body').animate({
-                            scrollTop: alert_target.offset().top - 16
-                        }, {
-                            duration: 600,
-                            complete: function () {
-                                alert_target.attr("tabindex", "-1");
-                                alert_target.focus();
-                            }
-                        });
+                        alert_target.attr("tabindex", "-1");
+                        alert_target.focus();
                     }
 
                     form.classList.add('was-validated');

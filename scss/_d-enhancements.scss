@@ -8,7 +8,10 @@
 // Generic Tags
 ////////////////////////////////////////
 
-html{ @extend .bg-dark; }
+html{ 
+  @extend .bg-dark;
+  scroll-behavior: smooth;
+}
 
 body{
   @extend .position-relative;
