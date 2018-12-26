@@ -15,14 +15,15 @@ $(document).ready(function () {
                         event.preventDefault();
                         event.stopPropagation();
 
-                        var invalid_target = $(':invalid');
                         var alert_target = $('#form-error-message');
-
-                        invalid_target.closest('.form-group').addClass('is-invalid');
+                        var invalid_target = $(':invalid');
 
                         alert_target.removeClass('d-none');
                         alert_target.attr("tabindex", "-1");
                         alert_target.focus();
+                        
+                        invalid_target.closest('.form-group').addClass('is-invalid');
+
                     }
 
                     form.classList.add('was-validated');
