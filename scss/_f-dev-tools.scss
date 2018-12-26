@@ -49,6 +49,6 @@ $highlight-containers: false;
     .narrow{ background: fade-out(orange, 0.25) !important; }
     .wide{ background: fade-out(green, 0.25) !important; }
     .matrix{ background: fade-out(blue, 0.25) !important; }
-    .link-list{ background: fade-out(purple, 0.25) !important; }
-    .link-list li{ background: fade-out(pink, 0.25) !important; }
+    .extensible-list{ background: fade-out(purple, 0.25) !important; }
+    .extensible-list li{ background: fade-out(pink, 0.25) !important; }
 } // end if

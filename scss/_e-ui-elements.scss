@@ -643,21 +643,21 @@ $responsive-nav-pills-and-tabs: true;
 } // end if
 
 ////////////////////////////////////////
-// Link Lists
+// Extensible Lists
 ////////////////////////////////////////
 
 // Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
 // Link lists are ideal for horizontal navs when supporting 'rtl' 
 
-$link-lists: true;
-$link-list-margin: 0.5em;
+$extensible-list: true;
+$extensible-list-margin: 0.5em;
 
-@mixin link-list-stack {
-  margin-bottom: $link-list-margin;
+@mixin extensible-list-stack {
+  margin-bottom: $extensible-list-margin;
   &:last-child{ margin-bottom: 0; }
 }
 
-@mixin responsive-link-list-settings(){ 
+@mixin responsive-extensible-list-settings(){ 
   
   // Remove flex properties
   display: block !important;
@@ -669,16 +669,16 @@ $link-list-margin: 0.5em;
   padding-left:  0;
 
   li{ 
-    @include link-list-stack;
+    @include extensible-list-stack;
     display: block !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
    }
 }
 
-@if($link-lists){
+@if($extensible-list){
 
-  .link-list{
+  .extensible-list{
     @include list-unstyled();
     
     // fixed padding added by user agent stylesheet after translation
@@ -686,7 +686,7 @@ $link-list-margin: 0.5em;
 
     li > ul{ 
 
-      margin-top: $link-list-margin;
+      margin-top: $extensible-list-margin;
 
       // Nested lists indent by default
       padding-left: $nav-link-padding-x;
@@ -694,20 +694,20 @@ $link-list-margin: 0.5em;
 
     }
 
-    li{ @include link-list-stack; }
+    li{ @include extensible-list-stack; }
 
     &.horizontal{
       @extend .d-flex;
       @extend .align-items-center;
       @extend .flex-row;
 
-      margin-left: -($link-list-margin);
-      margin-right: -($link-list-margin);
+      margin-left: -($extensible-list-margin);
+      margin-right: -($extensible-list-margin);
 
       li{
         margin-bottom: 0;
-        margin-left: $link-list-margin;
-        margin-right: $link-list-margin;
+        margin-left: $extensible-list-margin;
+        margin-right: $extensible-list-margin;
       }
 
       @each $breakpoint in map-keys($grid-breakpoints) {
@@ -717,7 +717,7 @@ $link-list-margin: 0.5em;
         @if $next {
           &.responsive-#{$next}{
             @include media-breakpoint-down($breakpoint) {
-              @include responsive-link-list-settings();
+              @include responsive-extensible-list-settings();
             }
           }
         }

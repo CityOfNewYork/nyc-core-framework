@@ -4196,7 +4196,7 @@ button.bg-tertiary:focus {
   display: table-cell !important; }
 
 .d-flex, .featured-panel.bg-cover, .btn-toggle a[data-toggle="collapse"],
-.accordion-group a[data-toggle="collapse"], .link-list.horizontal, .side-by-side {
+.accordion-group a[data-toggle="collapse"], .extensible-list.horizontal, .side-by-side {
   display: flex !important; }
 
 .d-inline-flex {
@@ -4397,7 +4397,7 @@ button.bg-tertiary:focus {
   padding-top: 100%; }
 
 .flex-row, .nav-pills.responsive,
-.nav-tabs.responsive, .link-list.horizontal, .side-by-side {
+.nav-tabs.responsive, .extensible-list.horizontal, .side-by-side {
   flex-direction: row !important; }
 
 .flex-column, .nav-pills[class*="responsive-"],
@@ -4434,7 +4434,7 @@ button.bg-tertiary:focus {
 .flex-shrink-1 {
   flex-shrink: 1 !important; }
 
-.justify-content-start, html[dir="rtl"] .link-list:not(.justify-content-center) .horizontal {
+.justify-content-start, html[dir="rtl"] .extensible-list:not(.justify-content-center) .horizontal {
   justify-content: flex-start !important; }
 
 .justify-content-end {
@@ -4457,7 +4457,7 @@ button.bg-tertiary:focus {
   align-items: flex-end !important; }
 
 .align-items-center, .btn-toggle a[data-toggle="collapse"],
-.accordion-group a[data-toggle="collapse"], .link-list.horizontal {
+.accordion-group a[data-toggle="collapse"], .extensible-list.horizontal {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -7579,7 +7579,7 @@ html[dir="rtl"] .dropdown-item {
 
 .font-weight-bold, .alert-heading, .form-group .invalid-feedback .invalid-description, #nyc-top-header p,
 #nyc-top-header a,
-#nyc-top-header li, #aside-nav .link-list a.active, .nav.nav-tabs[role="tablist"] .nav-link.active {
+#nyc-top-header li, #aside-nav .extensible-list a.active, .nav.nav-tabs[role="tablist"] .nav-link.active {
   font-weight: 700 !important; }
 
 .font-italic {
@@ -7591,10 +7591,10 @@ html[dir="rtl"] .dropdown-item {
 #nyc-bottom-footer {
   color: #fff !important; }
 
-.text-primary, #aside-nav .link-list a, .nav.nav-tabs[role="tablist"] .nav-link.active {
+.text-primary, #aside-nav .extensible-list a, .nav.nav-tabs[role="tablist"] .nav-link.active {
   color: #1A237E !important; }
 
-a.text-primary:hover, #aside-nav .link-list a:hover, .nav.nav-tabs[role="tablist"] a.nav-link.active:hover, a.text-primary:focus, #aside-nav .link-list a:focus, .nav.nav-tabs[role="tablist"] a.nav-link.active:focus {
+a.text-primary:hover, #aside-nav .extensible-list a:hover, .nav.nav-tabs[role="tablist"] a.nav-link.active:hover, a.text-primary:focus, #aside-nav .extensible-list a:focus, .nav.nav-tabs[role="tablist"] a.nav-link.active:focus {
   color: #111754 !important; }
 
 .text-secondary {
@@ -7664,7 +7664,7 @@ a.text-black:hover, a.text-black:focus {
 a.text-tertiary:hover, a.text-tertiary:focus {
   color: #5a9116 !important; }
 
-.text-body, .tab-skipper, #global-header #device-menu .dropdown-menu.show a.dropdown-item, #aside-nav .link-list a.active {
+.text-body, .tab-skipper, #global-header #device-menu .dropdown-menu.show a.dropdown-item, #aside-nav .extensible-list a.active {
   color: #212529 !important; }
 
 .text-muted, .nav.nav-pills[role="tablist"] .nav-link:not(.active), .nav.nav-tabs[role="tablist"] .nav-link:not(.active) {
@@ -7795,13 +7795,13 @@ a:focus, a:hover,
 .btn.align-items-center.featured-panel.bg-cover a.card:focus,
 .btn-toggle a.btn[data-toggle="collapse"] a.card:focus,
 .accordion-group a.btn[data-toggle="collapse"] a.card:focus,
-.btn.link-list.horizontal a.card:focus,
+.btn.extensible-list.horizontal a.card:focus,
 .btn.align-items-center.side-by-side a.card:focus,
 .btn.d-flex.align-items-center a.card:hover,
 .btn.align-items-center.featured-panel.bg-cover a.card:hover,
 .btn-toggle a.btn[data-toggle="collapse"] a.card:hover,
 .accordion-group a.btn[data-toggle="collapse"] a.card:hover,
-.btn.link-list.horizontal a.card:hover,
+.btn.extensible-list.horizontal a.card:hover,
 .btn.align-items-center.side-by-side a.card:hover {
   text-decoration: none; }
   .btn-toggle a:focus > span.title, .btn-toggle a:hover > span.title,
@@ -7811,13 +7811,13 @@ a:focus, a:hover,
   .btn.align-items-center.featured-panel.bg-cover a.card:focus > span.title,
   .btn-toggle a.btn[data-toggle="collapse"] a.card:focus > span.title,
   .accordion-group a.btn[data-toggle="collapse"] a.card:focus > span.title,
-  .btn.link-list.horizontal a.card:focus > span.title,
+  .btn.extensible-list.horizontal a.card:focus > span.title,
   .btn.align-items-center.side-by-side a.card:focus > span.title,
   .btn.d-flex.align-items-center a.card:hover > span.title,
   .btn.align-items-center.featured-panel.bg-cover a.card:hover > span.title,
   .btn-toggle a.btn[data-toggle="collapse"] a.card:hover > span.title,
   .accordion-group a.btn[data-toggle="collapse"] a.card:hover > span.title,
-  .btn.link-list.horizontal a.card:hover > span.title,
+  .btn.extensible-list.horizontal a.card:hover > span.title,
   .btn.align-items-center.side-by-side a.card:hover > span.title {
     text-decoration: underline; }
 
@@ -8339,122 +8339,122 @@ a.btn[data-toggle="collapse"] {
     .nav-tabs.responsive-xxxl .nav-link.active {
       border-bottom-color: #dee2e6; } }
 
-.link-list {
+.extensible-list {
   padding-left: 0;
   list-style: none;
   -webkit-padding-start: 0; }
-  .link-list li > ul {
+  .extensible-list li > ul {
     margin-top: 0.5em;
     padding-left: 1rem;
     padding-right: 1rem; }
-  .link-list li {
+  .extensible-list li {
     margin-bottom: 0.5em; }
-    .link-list li:last-child {
+    .extensible-list li:last-child {
       margin-bottom: 0; }
-  .link-list.horizontal {
+  .extensible-list.horizontal {
     margin-left: -0.5em;
     margin-right: -0.5em; }
-    .link-list.horizontal li {
+    .extensible-list.horizontal li {
       margin-bottom: 0;
       margin-left: 0.5em;
       margin-right: 0.5em; }
     @media (max-width: 399.98px) {
-      .link-list.horizontal.responsive-xs {
+      .extensible-list.horizontal.responsive-xs {
         display: block !important;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0; }
-        .link-list.horizontal.responsive-xs li {
+        .extensible-list.horizontal.responsive-xs li {
           margin-bottom: 0.5em;
           display: block !important;
           margin-left: 0 !important;
           margin-right: 0 !important; }
-          .link-list.horizontal.responsive-xs li:last-child {
+          .extensible-list.horizontal.responsive-xs li:last-child {
             margin-bottom: 0; } }
     @media (max-width: 599.98px) {
-      .link-list.horizontal.responsive-sm {
+      .extensible-list.horizontal.responsive-sm {
         display: block !important;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0; }
-        .link-list.horizontal.responsive-sm li {
+        .extensible-list.horizontal.responsive-sm li {
           margin-bottom: 0.5em;
           display: block !important;
           margin-left: 0 !important;
           margin-right: 0 !important; }
-          .link-list.horizontal.responsive-sm li:last-child {
+          .extensible-list.horizontal.responsive-sm li:last-child {
             margin-bottom: 0; } }
     @media (max-width: 799.98px) {
-      .link-list.horizontal.responsive-md {
+      .extensible-list.horizontal.responsive-md {
         display: block !important;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0; }
-        .link-list.horizontal.responsive-md li {
+        .extensible-list.horizontal.responsive-md li {
           margin-bottom: 0.5em;
           display: block !important;
           margin-left: 0 !important;
           margin-right: 0 !important; }
-          .link-list.horizontal.responsive-md li:last-child {
+          .extensible-list.horizontal.responsive-md li:last-child {
             margin-bottom: 0; } }
     @media (max-width: 999.98px) {
-      .link-list.horizontal.responsive-lg {
+      .extensible-list.horizontal.responsive-lg {
         display: block !important;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0; }
-        .link-list.horizontal.responsive-lg li {
+        .extensible-list.horizontal.responsive-lg li {
           margin-bottom: 0.5em;
           display: block !important;
           margin-left: 0 !important;
           margin-right: 0 !important; }
-          .link-list.horizontal.responsive-lg li:last-child {
+          .extensible-list.horizontal.responsive-lg li:last-child {
             margin-bottom: 0; } }
     @media (max-width: 1199.98px) {
-      .link-list.horizontal.responsive-xl {
+      .extensible-list.horizontal.responsive-xl {
         display: block !important;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0; }
-        .link-list.horizontal.responsive-xl li {
+        .extensible-list.horizontal.responsive-xl li {
           margin-bottom: 0.5em;
           display: block !important;
           margin-left: 0 !important;
           margin-right: 0 !important; }
-          .link-list.horizontal.responsive-xl li:last-child {
+          .extensible-list.horizontal.responsive-xl li:last-child {
             margin-bottom: 0; } }
     @media (max-width: 1399.98px) {
-      .link-list.horizontal.responsive-xxl {
+      .extensible-list.horizontal.responsive-xxl {
         display: block !important;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0; }
-        .link-list.horizontal.responsive-xxl li {
+        .extensible-list.horizontal.responsive-xxl li {
           margin-bottom: 0.5em;
           display: block !important;
           margin-left: 0 !important;
           margin-right: 0 !important; }
-          .link-list.horizontal.responsive-xxl li:last-child {
+          .extensible-list.horizontal.responsive-xxl li:last-child {
             margin-bottom: 0; } }
     @media (max-width: 1599.98px) {
-      .link-list.horizontal.responsive-xxxl {
+      .extensible-list.horizontal.responsive-xxxl {
         display: block !important;
         margin-right: 0;
         margin-left: 0;
         padding-right: 0;
         padding-left: 0; }
-        .link-list.horizontal.responsive-xxxl li {
+        .extensible-list.horizontal.responsive-xxxl li {
           margin-bottom: 0.5em;
           display: block !important;
           margin-left: 0 !important;
           margin-right: 0 !important; }
-          .link-list.horizontal.responsive-xxxl li:last-child {
+          .extensible-list.horizontal.responsive-xxxl li:last-child {
             margin-bottom: 0; } }
 
 .side-by-side {

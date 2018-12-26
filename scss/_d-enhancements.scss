@@ -65,9 +65,9 @@ html[dir="rtl"]{
   .dropdown-item
   { @extend .text-right; }
 
-  // Apply left justification to all link-list selectors excluding those that are centered 
+  // Apply left justification to all extensible-list selectors excluding those that are centered 
 
-  .link-list:not(.justify-content-center){
+  .extensible-list:not(.justify-content-center){
     .horizontal{
       @extend .justify-content-start;
     }
