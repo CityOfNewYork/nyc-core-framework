@@ -17,25 +17,26 @@
 // Alerts
 
 .alert{
+  outline: 0;
 
-  &.alert-danger{
-
+  &.focusable{
     &:focus{
-      outline: 0;
       box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
     }
   }
-
 }
 
-.alert-heading{ 
+.alert-heading{
   @extend .font-weight-bold; 
   @extend .mb-1;
 }
 
-.alert-text{ @extend .fs-md; }
+.alert-text{
+  @extend .fs-md; 
+  a{ @extend .blended-link; }
+}
 
-// Custom Valdation for accessibility
+// Custom valdation for accessibility
 // Note: the following only works when custom validation.js is present in the footer of the form's page
 
 .form-group{
