@@ -17,13 +17,20 @@ $(document).ready(function () {
 
                         var alert_target = $('#form-error-message');
                         var invalid_target = $(':invalid');
-
-                        alert_target.removeClass('d-none');
-                        alert_target.attr("tabindex", "-1");
-                        alert_target.focus();
                         
+                        alert_target.removeClass('d-none');
                         invalid_target.closest('.form-group').addClass('is-invalid');
-
+                                
+                            console.log(alert_target);
+                        $('html, body').animate({
+                            scrollTop: alert_target.offset().top - 16
+                        }, {
+                            duration: 600,
+                            complete: function () {
+                                alert_target.attr("tabindex", "-1");
+                                alert_target.focus();
+                            }
+                        });
                     }
 
                     form.classList.add('was-validated');

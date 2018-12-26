@@ -8,10 +8,7 @@
 // Generic Tags
 ////////////////////////////////////////
 
-html{ 
-  @extend .bg-dark;
-  scroll-behavior: smooth;
-}
+html{ @extend .bg-dark; }
 
 body{
   @extend .position-relative;
@@ -246,12 +243,6 @@ address
 // Remove Bootstrap default to <hr> tags 
 
 hr{ margin: 0; }
-
-.list-group-flush .list-group-item{
-  @extend .px-0;
-
-  &:first-child{ border-top: none; }
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 //
