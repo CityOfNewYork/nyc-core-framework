@@ -7,7 +7,7 @@ $(document).ready(function () {
     var target = document.querySelector('html');
 
     var observer = new MutationObserver( function(mutations) {
-        mutations.forEach( function(mutation) {
+        mutations.forEach( function() {
             var classes = target.getAttribute('class');
             var single_class = 'translated-rtl';
             if (classes.includes(single_class)) {
@@ -63,5 +63,33 @@ $(document).ready(function () {
         window.location = $(this).attr('href');
         location.reload();
     });
+
+    ////////////////////////////////////////
+    // Back to top
+    ////////////////////////////////////////
+
+    var scroll_speed = 800;
+
+    if( $('#back-to-top').length ){
+
+        $('#back-to-top').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, scroll_speed );
+        });
+
+        $(window).scroll(function() {
+
+            var window_scroll = $(document).scrollTop();
+            var primary_content = $('#primary-content').offset().top;
+
+            if ( window_scroll > primary_content ) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+
+        }).scroll();
+    }
 
 });

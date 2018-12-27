@@ -102,8 +102,18 @@
 
 #back-to-top{
   @extend .container-fluid;
-  @extend .fixed-bottom;
   @extend .text-right;
+  @extend .fixed-bottom;
+  @include opacity(0);
+
+  transition: opacity .1s linear 0s;
+
+  &.show{
+
+    
+  @include opacity(1);
+
+  }
 
   a{
     @extend .rounded-top;
