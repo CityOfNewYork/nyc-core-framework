@@ -21,7 +21,6 @@ $(document).ready(function () {
                         alert_target.removeClass('d-none');
                         invalid_target.closest('.form-group').addClass('is-invalid');
                                 
-                            console.log(alert_target);
                         $('html, body').animate({
                             scrollTop: alert_target.offset().top - 16
                         }, {
