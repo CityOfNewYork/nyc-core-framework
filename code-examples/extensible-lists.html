@@ -91,9 +91,23 @@
 
 <p>Extensible lists can be nested. By default, the child lists will automatically indent for readability.</p>
 
+<ul class="extensible-list">
+    <li><a href="#1" title="Link"><strong>Link</strong></a></li>
+    <li><a href="#1" title="Link"><strong>Link</strong></a></li>
+    <li><a href="#1" title="Link"><strong>Link</strong></a></li>
+    <li>
+        <strong>Title</strong>
+        <ul class="extensible-list">
+            <li><a href="#1" title="Nested Link">Nested Link</a></li>
+            <li><a href="#1" title="Nested Link">Nested Link</a></li>
+            <li><a href="#1" title="Nested Link">Nested Link</a></li>
+        </ul>
+    </li>
+</ul>
+
 <!-- Code -->
 <pre class="prettyprint" class="language-html" data-lang="html">
-&lt;ul class="extensible-list fs-md"&gt;
+&lt;ul class="extensible-list"&gt;
     &lt;li&gt;&lt;a href="#1" title="Link"&gt;&lt;strong&gt;Link&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#1" title="Link"&gt;&lt;strong&gt;Link&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#1" title="Link"&gt;&lt;strong&gt;Link&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
@@ -108,9 +122,4 @@
 &lt;/ul&gt;
 </pre>
 
-<p>The SASS for extensible lists can be found in <code>scss/_e-ui-elements.scss</code></p>
-
-<a class="no-link-style text-secondary" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-ui-elements.scss" target="_blank" title="View SASS on Github">
-    <span class="fab fa-github"></span>
-    <span class="mx-1">View SASS on Github</span>
-</a>
+<p>The SASS for extensible lists can be found in <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-ui-elements.scss" target="_blank" title="View SASS on Github">scss/_e-ui-elements.scss</a></p>
