@@ -256,10 +256,10 @@ $accessible-hover-focus: true;
 
 @if($accessible-hover-focus){
 
-  a, 
+  a,
   .btn, 
   .nav-link,
-  .na-item, 
+  .nav-item, 
   .dropdown-item
   {
     &:focus,
@@ -455,6 +455,24 @@ $accessible-hover-focus: true;
   line-height: 100%;
   cursor:  pointer;
   @extend .p-0;
+}
+
+////////////////////////////////////////
+// No Link Style
+////////////////////////////////////////
+
+// Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
+
+.no-link-style{
+  color: currentColor;
+  font-weight: inherit;
+  
+  &:focus,
+  &:hover
+  { 
+    color: currentColor;
+    text-decoration: none; 
+  }
 }
 
 ////////////////////////////////////////
