@@ -1160,6 +1160,13 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/code-examples/buttons.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/code-examples/buttons.html",
+		"oF": 0
+		},
 	"/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1596,26 +1603,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"/scss/theme-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/scss/theme-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/scss/theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/scss/theme-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/scss/theme.scss": {
 		"aP": 0,

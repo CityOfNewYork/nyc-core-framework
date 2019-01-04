@@ -51,3 +51,27 @@
         @extend .font-weight-bold;
     }
 }
+
+pre.prettyprint {
+    @extend .w-100;
+    @extend .bg-dark;
+    @extend .my-3;
+    @extend .mx-0;
+    @extend .p-2;
+    @extend .fs-sm;
+
+    
+    white-space: pre !important;
+}
+
+.notes{
+    // @extend .bg-light;
+    @extend .text-muted;
+    @extend .p-2;
+    @extend .my-4;
+
+    background: $gray-100;
+
+    h3{ @extend .h5; }
+    p{ @extend .fs-md; }
+}

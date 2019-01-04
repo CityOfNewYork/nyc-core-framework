@@ -412,26 +412,38 @@
                     <ul class="extensible-list horizontal fs-lg">
 
                         <li>
-                            <button class="no-btn-style text-primary" type="button">
-                                <span class="fas fa-search"></span>
+                            <button class="no-btn-style" type="button">
+                                <span class="fas fa-search" title="Search" role="img"></span>
                             </button>
                         </li>
                         <li>
-                            <button class="no-btn-style text-secondary" type="button">
-                                <span class="fas fa-language"></span>
+                            <button class="no-btn-style" type="button">
+                                <span class="fas fa-language" title="Language" role="img"></span>
                             </button>
                         <li>
-                            <button class="no-btn-style text-tertiary" type="button">
-                                <span class="fab fa-facebook-f"></span>
+                            <button class="no-btn-style" type="button">
+                                <span class="fab fa-facebook-f" title="Facebook" role="img"></span>
                             </button>
                         </li>
                         <li>
-                            <button class="no-btn-style text-dark" type="button">
-                                <span class="fab fa-twitter"></span>
+                            <button class="no-btn-style" type="button">
+                                <span class="fab fa-twitter" title="Twitter" role="img"></span>
                             </button>
                         </li>
 
                     </ul>
+
+                    <div class="notes">
+                        <h3>Notes and Code Examples</h3>
+                        <p>
+                        To create an icon button, add a 'no-btn-style' class to <code>&lt;button&gt;</code> or 
+                        <code>&lt;a&gt;</code> tag. When using icons without concurrent text, add a <code>title</code> attribute to describe the icon.</p>
+                        <p>Instances of Font Awesome icons should include a <code>role="img"</code> attribute.</p>
+                        
+                        <!-- Include -->
+                        <div w3-include-html="./code-examples/buttons.html"></div>
+
+                    </div>
 
                 </div>
                 <!-- . my-5 -->
@@ -1182,8 +1194,45 @@
     <!-- NYC Custom JavaScript (required) -->
     <script src="./js/main.js"></script>
 
-    <!-- NYC Form Validation (only needed on form pages) -->
-    <script src="./js/validation.js"></script>
+    <!-- Google Code Pretty -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
+
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              } 
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+
+        includeHTML();
+
+        </script>
+
+
+
+
 
     <script>
         function googleTranslateElementInit() {
