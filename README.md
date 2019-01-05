@@ -1,6 +1,6 @@
 # NYC Core Framework
 
-The NYC Core Framework brings extra features to Bootstrap 4.1.3, for rapid prototyping, design, and front-end website development. 
+The NYC Core Framework brings extra features to Bootstrap (version 4.1.3), for rapid prototyping, design, and accessible front-end website development. 
 
 ## Getting Started
 

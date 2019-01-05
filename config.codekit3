@@ -1160,20 +1160,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/code-examples/buttons.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/code-examples/buttons.html",
-		"oF": 0
-		},
-	"/code-examples/extensible-lists.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/code-examples/extensible-lists.html",
-		"oF": 0
-		},
 	"/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1267,6 +1253,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/dist/css/theme.min.css.map",
+		"oF": 0
+		},
+	"/documentation/buttons.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/buttons.html",
+		"oF": 0
+		},
+	"/documentation/extensible-lists.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/extensible-lists.html",
 		"oF": 0
 		},
 	"/featured-panels.html": {
