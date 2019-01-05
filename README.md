@@ -1,6 +1,6 @@
 # NYC Core Framework
 
-The NYC Core Framework brings extra features to Bootstrap (version 4.1.3), for rapid prototyping, design, and accessible front-end website development. 
+The NYC Core Framework is an open-source HTML5, SCSS, and Javascript library which adds additional functionality and accessibility features to <a href="#1">Bootstrap (version 4.1.3)</a>. Traditional Bootstrap classes and hooks can be used in the NYC Core Framework. The NYC Core Framework aims to help developers meet WCAG 2.0 accessibility standards, and provides support for right-to-left language translation via Google Translate.  
 
 ## Getting Started
 
