@@ -10,9 +10,8 @@
 
 // Note: Convert artbitrary default breakpoints to meaningful variables
 
-$grid-bp-xxs:   0;
-$grid-bp-xs:    400px;
-$grid-bp-sm:    600px;
+$grid-bp-xs:    0;
+$grid-bp-sm:    400px;
 $grid-bp-md:    800px;
 $grid-bp-lg:    1000px;
 $grid-bp-xl:    1200px;
@@ -20,7 +19,6 @@ $grid-bp-xxl:   1400px;
 $grid-bp-xxxl:  1600px;
 
 $grid-breakpoints: (
-  xxs:  $grid-bp-xxs,
   xs:   $grid-bp-xs,
   sm:   $grid-bp-sm,
   md:   $grid-bp-md,
@@ -69,13 +67,16 @@ $spacers: (
 
 $grid-gutter-width: 2rem;
 
-// Max container width
+$container-max-width-sm: 600px;
+$container-max-width-md: 800px;
+$container-max-width-lg: 1000px;
+$container-max-width-xl: 1200px;
 
 $container-max-widths: (
-  sm: ($grid-bp-sm),
-  md: ($grid-bp-md),
-  lg: ($grid-bp-lg),
-  xl: ($grid-bp-xl)
+  sm: ($container-max-width-sm),
+  md: ($container-max-width-md),
+  lg: ($container-max-width-lg),
+  xl: ($container-max-width-xl)
 );
 
 ////////////////////////////////////////
@@ -327,6 +328,7 @@ $btn-font-weight: $font-weight-bold;
 // Note: Disable Bootstrap Default :focus styles 
 
 $restore_browser_focus: true;
+$remove_success_validation: true;
 
 ////////////////////////////////////////
 // Bootstrap Components
@@ -369,6 +371,10 @@ $form-group-margin-bottom: $spacer-4;
 $custom-control-indicator-size: 1.25rem;
 $custom-control-gutter: ($custom-control-indicator-size * 1.5);
 $input-btn-focus-width: .15rem;
+
+$custom-control-gutter: 1rem;
+
+$enable-validation-icons: false;
 
 //Alerts
 

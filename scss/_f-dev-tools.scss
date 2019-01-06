@@ -8,7 +8,7 @@
 // Breakpoints Bar
 ////////////////////////////////////////
 
-$breakpoints-bar: false;
+$breakpoints-bar: true;
 $breakpoints-bar-bg: fade-out(purple, 0.1);
 
 @if $breakpoints-bar{

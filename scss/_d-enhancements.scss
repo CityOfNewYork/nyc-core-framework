@@ -105,7 +105,7 @@ html[dir="rtl"]{
     &::before, 
     &::after
     {
-      right: -$custom-control-gutter;
+      right: -($custom-control-gutter + $custom-control-indicator-size);
     }
   }
 
@@ -175,8 +175,7 @@ label{ @extend .fs-md; }
 // to ensure spacing during rtl translation  
 
 .custom-control {
-  padding-left: $custom-control-gutter;
-  padding-right: $custom-control-gutter;
+  padding-right: ($custom-control-gutter + $custom-control-indicator-size);
 }
 
 .custom-control-label{
@@ -210,7 +209,7 @@ label{ @extend .fs-md; }
 
 .mobile-margin-offset-x{
     
-  @include media-breakpoint-down('sm') {
+  @include media-breakpoint-down('md') {
     margin-left: -(($grid-gutter-width/2) + $border-width);
     margin-right: -(($grid-gutter-width/2) + $border-width);
   }
