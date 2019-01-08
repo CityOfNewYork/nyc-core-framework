@@ -243,6 +243,18 @@ address
 
 hr{ margin: 0; }
 
+ul,
+ol
+ {
+    &.space-li {
+        li {
+            margin-top: $paragraph-margin-bottom;
+            margin-bottom: $paragraph-margin-bottom;
+ 
+        }
+    }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Accessibility (Tabbing and Visual Cues) TEST

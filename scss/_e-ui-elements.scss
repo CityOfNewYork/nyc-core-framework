@@ -551,14 +551,6 @@ $toggles-and-accordions: true;
 
     .card { background-color: $accordion-bg-color; }
 
-    .card-header{
-      &:focus,
-      &.focus {
-        outline: 0;
-        box-shadow: $btn-focus-box-shadow;
-      }
-    }
-
     a[data-toggle="collapse"]{
       
       @if $accordion-button-border { @extend .border; }
