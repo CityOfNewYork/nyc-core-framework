@@ -1,3 +1,15 @@
+
+
+<p>
+    Accordions are modeled after <a href="https://getbootstrap.com/docs/4.2/components/collapse/#accordion-example" target="_blank"> Bootstrap accordions</a>, with  modifications for accessibility (larger hit-state, open/closed icons, and right-to-left support). 
+</p>
+<p>
+    For screan readers, <code>role="heading"</code> and <code>aria-level="X"</code> attributes are present on the span tag with <code>class="title"</code>. In this way, we can avoid nesting headers within links (which can have a negative impact on accessibility).
+</p>
+<p>
+    In the code example below, Bootstrap's header class <code>h4</code> is applied to the link tag, while the span with <code>class="title"</code> has <code>role="heading"</code> and <code>aria-level="3"</code> attributes (for screen readers).  
+</p>
+
 <div class="accordion-group my-6" role="tablist" id="accordion-01">
 
     <div class="card mb-1">
@@ -72,7 +84,6 @@
 </div>
 <!-- .accordion-group -->
 
-
 <!-- Code -->
 <pre class="prettyprint" class="language-html" data-lang="html">
 &lt;div class="accordion-group my-6" role="tablist" id="accordion-01"&gt;
@@ -101,4 +112,3 @@
 
 &lt;/div&gt;
 </pre>
-    
