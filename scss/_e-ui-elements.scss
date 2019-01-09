@@ -265,7 +265,6 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     .nav-link{
       @extend .py-1;
 
-
       &.active { 
         color: $primary-nav-mobile-link-active-color;
       }
