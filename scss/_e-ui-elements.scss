@@ -416,46 +416,61 @@ $featured-panel: true;
         }
       }
     }
+  }
 
-    &.bg-cover{
+} // end if
 
-      @extend .position-relative;
+////////////////////////////////////////
+// Background Cover Opacity
+////////////////////////////////////////
+
+$bg-cover: true;
+
+@if($bg-cover){
+
+  $bg-fixed-image-opacity: 0.4;
+  $bg-fixed-height: auto !default;
+
+  $bg-fixed-height: 350px;
+
+  .bg-cover{
+    @extend .position-relative;
+
+    &.fixed-height{
       @extend .d-flex;
+      @extend .align-items-center;
+      min-height: $bg-fixed-height;
+    }
 
-      height: $bg-fixed-height;
+    > div{
+      @extend .position-relative;
+      @extend .z-index-100;
+      @extend .align-self-center;
+    }
 
-      > div{
-        @extend .position-relative;
-        @extend .z-index-100;
-        @extend .align-self-center;
-      }
+    &::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left:0;
+      right: 0;
+      z-index: auto;
 
-      &::before{
-        content: "\00a0";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left:0;
-        right: 0;
-        z-index: auto;
-
-        @include opacity($bg-fixed-image-opacity);
-        @include apply-background-image;
-
-      }
-
-      // Add your own backround classes and append them to '.bg-fixed'
-
-      &.bridge{
-        &::before{
-          @include apply-background-image($image: 'bridge-lights');
-        }
-      }
+      @include opacity( $bg-fixed-image-opacity );
+      @include apply-background-image;
 
     }
 
-  }
+    // Add your own backround classes and append them to the '.bg-cover' selector
 
+    &.bridge{
+      &::before{
+        @include apply-background-image($image: 'bridge-lights');
+      }
+    }
+  }
+  
 } // end if
 
 ////////////////////////////////////////
