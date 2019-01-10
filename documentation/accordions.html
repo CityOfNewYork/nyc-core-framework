@@ -1,13 +1,13 @@
 
 
 <p>
-    Accordions are modeled after <a href="https://getbootstrap.com/docs/4.2/components/collapse/#accordion-example" target="_blank"> Bootstrap accordions</a>, with  modifications for accessibility (larger hit-state, open/closed icons, and right-to-left support). 
+    Accordions are modeled after <a href="https://getbootstrap.com/docs/4.2/components/collapse/#accordion-example" target="_blank"> Bootstrap accordions</a>, with modifications for accessibility (including a larger hit-state, open/close icons, and right-to-left support). 
 </p>
 <p>
-    For screan readers, <code>role="heading"</code> and <code>aria-level="X"</code> attributes are present on the span tag with <code>class="title"</code>. In this way, we can avoid nesting headers within links (which can have a negative impact on accessibility).
+    For screan readers, <code>role="heading"</code> and <code>aria-level="x"</code> attributes are present on the span tag with <code>class="title"</code>. In this way, we avoid nesting headers within links, which can confuse screan readers.
 </p>
 <p>
-    In the code example below, Bootstrap's header class <code>h4</code> is applied to the link tag, while the span with <code>class="title"</code> has <code>role="heading"</code> and <code>aria-level="3"</code> attributes (for screen readers).  
+    In the example below, Bootstrap's header class <code>h4</code> is applied to the <code>&lt;a&gt;</code> tag, while <code>&lt;span class="title"&gt;</code> has <code>role="heading"</code> and <code>aria-level="3"</code> attributes for screen readers.  
 </p>
 
 <div class="accordion-group my-6" role="tablist" id="accordion-01">
