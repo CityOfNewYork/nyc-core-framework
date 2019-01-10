@@ -538,6 +538,9 @@ $toggles-and-accordions: true;
       // @extend .ml-auto;
     }
 
+    // Change the right icon here. Go to https://fontawesome.com/icons
+    // Find your icons and paste the unicode below
+
     &[aria-expanded="true"]::after {
       content: "\f068";
     }
