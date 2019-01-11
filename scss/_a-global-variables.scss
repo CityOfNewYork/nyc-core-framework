@@ -373,15 +373,16 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 // Forms
 
 $form-group-margin-bottom: $spacer-4;
-$custom-control-indicator-size: 1.25rem;
-$custom-control-gutter: ($custom-control-indicator-size * 1.5);
 $input-btn-focus-width: .15rem;
-
+$custom-control-indicator-size: 1.25rem;
 $custom-control-gutter: 1rem;
+
+// Note: Since version 4.2.1, bootstrap added icons to validate
+// We use more descriptive Font Awesome icons, so we simply turn Bootstrap's off
 
 $enable-validation-icons: false;
 
-//Alerts
+// Alerts
 
 $alert-padding-y: ($grid-gutter-width/2);
 $alert-padding-x: ($grid-gutter-width/2);
