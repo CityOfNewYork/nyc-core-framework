@@ -1270,6 +1270,13 @@
 		"oAP": "/documentation/accordions.html",
 		"oF": 0
 		},
+	"/documentation/button-toggle.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/button-toggle.html",
+		"oF": 0
+		},
 	"/documentation/buttons.html": {
 		"cB": 0,
 		"ft": 8192,
