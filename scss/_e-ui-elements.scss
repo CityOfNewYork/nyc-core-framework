@@ -27,13 +27,13 @@
 }
 
 .alert-heading{
-  @extend .font-weight-bold; 
-  @extend .mb-1;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacer-1;
 }
 
 .alert-text{
-  @extend .fs-md; 
-  a{ @extend .blended-link; }
+  font-size: $fs-md; 
+  a{ @extend %blended-link-styles; }
 }
 
 // Custom valdation for accessibility
@@ -42,20 +42,21 @@
 .form-group{
 
   .invalid-feedback{
-      @extend .d-none; 
+      display: none; 
       margin-bottom: 0.5rem;
+  }
 
-      .invalid-description{
-        @extend .font-weight-bold;
-        @extend .mx-1;
-      }
+  .invalid-description{
+    font-weight: $font-weight-bold;
+    margin-left: $spacer-1;
+    margin-right: $spacer-1;
   }
 
   &.is-invalid{
 
-    label{ @extend .text-danger; }
+    label{ color: theme-color("danger"); }
 
-    .invalid-feedback{ @extend .d-block; }
+    .invalid-feedback{ display: block; }
 
     .form-control:invalid{
       &:focus{
@@ -74,7 +75,9 @@
 #nyc-top-header,
 #nyc-bottom-footer
 { 
-  a{ @extend .text-white; }
+  & a, 
+    p
+    { color: $white; }
 }
 
 #nyc-top-header{ @extend .fs-sm; }
@@ -83,7 +86,7 @@
 #nyc-top-header,
 #nyc-bottom-footer{
 	@extend .bg-black;
-	@extend .text-white;
+	// @extend .text-white;
 }
 
 #nyc-top-header{
@@ -195,7 +198,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     font-weight: $primary-nav-font-weight;
     color: $primary-nav-link-color;
     &.active{
-      text-decoration:underline;
+      text-decoration: underline;
     }
   }
   
@@ -301,7 +304,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
         @extend .text-body;
         @extend .p-0;
         @extend .mb-1;
-        @extend .float-left;
+        float: left;
 
         &:hover,
         &:active,
