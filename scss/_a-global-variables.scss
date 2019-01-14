@@ -160,8 +160,8 @@ $lead-font-weight: $font-weight-light;
 
 // Add black, white, and tranparent colors as variables 
 
-$white:     #fff;
-$black:     #000;
+$white: #fff;
+$black: #000;
 $transparent: transparent;
 
 // Bootstrap Grayscale
@@ -220,10 +220,9 @@ $info: #C61A50;
 $light: #e6ecf7;
 $dark: #212529;
 
-// Add black and white to the color map
+// Add white to the color map
 
 $theme-colors: (
-  "black": $black,
   "white": $white 
 );
 
