@@ -307,8 +307,8 @@ $link-hover-decoration: none;
 $card-spacer-x: ( $grid-gutter-width / 2 ); 
 $card-spacer-y: ( $grid-gutter-width / 2 ); 
 
-$card-cap-bg: rgba($black, .05);
-$card-border-color: rgba($black, .2);
+$card-cap-bg: rgba( $black, .05 );
+$card-border-color: rgba( $black, .2 );
 
 ////////////////////////////////////////
 // L. Components, navs, and dropdowns
@@ -333,9 +333,9 @@ $dropdown-link-active-color: $body-color;
 
 $box-shadow-opacity: 0.3;
 
-$box-shadow-sm: 0 0 .5rem rgba($black, $box-shadow-opacity) !default;
-$box-shadow:    0 0 1rem rgba($black, $box-shadow-opacity) !default;
-$box-shadow-lg: 0 0 3rem rgba($black, $box-shadow-opacity) !default;
+$box-shadow-sm: 0 0 .5rem rgba( $black, $box-shadow-opacity );
+$box-shadow:    0 0 1rem rgba( $black, $box-shadow-opacity );
+$box-shadow-lg: 0 0 3rem rgba( $black, $box-shadow-opacity );
 
 $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 
@@ -355,8 +355,8 @@ $enable-validation-icons: false;
 
 // Alerts
 
-$alert-padding-y: ($grid-gutter-width/2);
-$alert-padding-x: ($grid-gutter-width/2);
+$alert-padding-y: ( $grid-gutter-width / 2 );
+$alert-padding-x: ( $grid-gutter-width / 2 );
 
 ////////////////////////////////////////
 // O. Modals
@@ -364,7 +364,7 @@ $alert-padding-x: ($grid-gutter-width/2);
 
 $modal-backdrop-bg: $white;
 $modal-backdrop-opacity: 0.95;
-$modal-content-border-color: rgba($black, .2);
+$modal-content-border-color: rgba( $black, 0.2 );
 
 ////////////////////////////////////////
 // P. Carousel
