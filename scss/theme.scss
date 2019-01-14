@@ -5,12 +5,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // Global Variables
+
 @import "a-global-variables.scss";
 @import "b-bootstrap-imports.scss";
 @import "c-custom-mixins.scss";
 @import "d-enhancements.scss";
-@import "e-ui-elements.scss";
-@import "f-dev-tools.scss";
+@import "e-supplementary-classes.scss";
+@import "f-ui-elements.scss";
+@import "g-dev-tools.scss";
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -54,8 +56,8 @@
 
 pre.prettyprint {
     width: 100%;
-    background: theme-color("dark");
-    margin: 0 $spacer-4;
+    background: $dark !important;
+    margin: $spacer-4 0  !important;
     padding: $spacer-2;
     font-size: $fs-sm;
     white-space: pre !important;

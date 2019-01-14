@@ -8,7 +8,7 @@
 // Generic Tags
 ////////////////////////////////////////
 
-html{ background: theme-color("dark"); }
+html{ background: $dark; }
 
 body{
   position: relative;
@@ -35,15 +35,39 @@ body{
 
 img{ @extend .img-fluid; }
 
-// Add visible underline to links within the #primary-content area
+////////////////////////////////////////////////////////////////////////////////
+//
+// Margin bottom 
+//
+////////////////////////////////////////////////////////////////////////////////
 
-#primary-content{
-  p > a#{$no-class} { text-decoration: underline; }
-} 
+// Note: Remove Bootstrap default bottom margins to 'last-child' selectors 
+
+h1, 
+h2, 
+h3,
+h4,
+h5,
+p,
+a, 
+ul, 
+li, 
+dl, 
+dd, 
+address
+{ 
+	&:last-child{ margin-bottom: 0; }
+}
+
+// Remove Bootstrap default to <hr> tags 
+
+hr{ margin: 0; }
 
 ////////////////////////////////////////
+// Accessibility
+////////////////////////////////////////
+
 // RTL Language Translation
-////////////////////////////////////////
 
 html[dir="rtl"]{ 
 
@@ -111,22 +135,59 @@ html[dir="rtl"]{
 
 } // RTL Language Translations
 
-////////////////////////////////////////
-// Sticky Top
-////////////////////////////////////////
+// Note: We add 'text-decoration: underline' on particular :focus selectors
 
-// Use .stick-top with caution as it's not compatible with Google translate
+$accessible-hover-focus: true;
 
-// Note: Fixes Bootstraps 'sticky-top' class in Safari
+@if($accessible-hover-focus){
 
-@supports (position: -webkit-sticky) or (position: sticky) {
-  .sticky-top {
-    position: sticky;
-    position:-webkit-sticky;
-    top: 0;
-    z-index: 1020; 
+  a,
+  .btn, 
+  .nav-link,
+  .nav-item, 
+  .dropdown-item
+  {
+    &:hover,
+    &:focus
+    { 
+      text-decoration: underline; 
+    }
   }
-}
+
+  .btn-toggle a,
+  .accordion-group a,
+  .btn.d-flex.align-items-center
+  a.card,
+  #back-to-top a
+  {
+    &:hover,
+    &:focus
+    { 
+      text-decoration: none;
+      > span.title{ text-decoration: underline; }
+    }
+  }
+
+  .disabled{
+    &:hover,
+    &:focus
+    { box-shadow: none;
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+} // end if
+
+// Override Bootstrap default whitespace on buttons
+
+.btn{ white-space: normal !important; }
+
+// Add visible underline to links within the #primary-content area
+
+#primary-content{
+  p > a#{$no-class} { text-decoration: underline; }
+} 
 
 ////////////////////////////////////////
 // Forms
@@ -197,134 +258,8 @@ label{ font-size: $fs-md; }
     margin-left: auto;
     margin-right: auto;
   }
+
 }
-
-////////////////////////////////////////
-// Mobile Margin Offset
-////////////////////////////////////////
-
-// Note: Make fieldsets go edge-to-edge on devices 
-
-.mobile-margin-offset-x{
-  @include media-breakpoint-down('md') {
-    margin-left: -(($grid-gutter-width/2) + $border-width);
-    margin-right: -(($grid-gutter-width/2) + $border-width);
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-//
-// Margin bottom 
-//
-////////////////////////////////////////////////////////////////////////////////
-
-// Note: Remove Bootstrap default bottom margins to 'last-child' selectors 
-
-h1, 
-h2, 
-h3,
-h4,
-h5,
-p,
-a, 
-ul, 
-li, 
-dl, 
-dd, 
-address
-{ 
-	&:last-child{ margin-bottom: 0; }
-}
-
-// Remove Bootstrap default to <hr> tags 
-
-hr{ margin: 0; }
-
-ul,
-ol
- {
-    &.space-li {
-        li {
-            margin-top: $paragraph-margin-bottom;
-            margin-bottom: $paragraph-margin-bottom;
- 
-        }
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-//
-// Accessibility (Tabbing and Visual Cues)
-//
-////////////////////////////////////////////////////////////////////////////////
-
-// Note: We add 'text-decoration: underline' on particular :focus selectors
-
-$accessible-hover-focus: true;
-
-@if($accessible-hover-focus){
-
-  a,
-  .btn, 
-  .nav-link,
-  .nav-item, 
-  .dropdown-item
-  {
-    &:focus,
-    &:hover
-    { 
-      text-decoration: underline; 
-    }
-  }
-
-  .btn-toggle a,
-  .accordion-group a,
-  .btn.d-flex.align-items-center
-  a.card,
-  #back-to-top a
-  {
-    &:focus,
-    &:hover
-    { 
-      text-decoration: none;
-      > span.title{ text-decoration: underline; }
-    }
-  }
-
-  .disabled{
-    &:focus,
-    &:hover
-    { box-shadow: none;
-      outline: none;
-      text-decoration: none;
-    }
-
-  }
-
-} // end if
-
-// Override Bootstrap default whitespace on buttons
-
-.btn{ white-space: normal !important; }
-
-////////////////////////////////////////////////////////////////////////////////
-//
-// Supplementary classes 
-//
-////////////////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////
-// Fonts and Sizes
-////////////////////////////////////////
-
-// Font-size classes
-// Note: Define Font Awesome for use in psuedo classes
-
-.fs-sm{ font-size: $fs-sm; }
-.fs-md{ font-size: $fs-md; }
-.fs-rg{ font-size: $fs-rg; }
-.fs-lg{ font-size: $fs-lg; }
-.fs-xl{ font-size: $fs-xl; }
 
 ////////////////////////////////////////
 // Font Size Media Queries
@@ -345,150 +280,19 @@ $accessible-hover-focus: true;
 }
 
 ////////////////////////////////////////
-// Opacity
+// Sticky Top
 ////////////////////////////////////////
 
-.opacity-10{ @include opacity(0.10); }
-.opacity-20{ @include opacity(0.20); }
-.opacity-30{ @include opacity(0.30); }
-.opacity-40{ @include opacity(0.40); }
-.opacity-50{ @include opacity(0.50); }
-.opacity-60{ @include opacity(0.60); }
-.opacity-70{ @include opacity(0.70); }
-.opacity-80{ @include opacity(0.80); }
-.opacity-90{ @include opacity(0.90); }
+// Use .stick-top with caution as it's not compatible with Google translate
+// Note: Fixes Bootstraps 'sticky-top' class in Safari
 
-////////////////////////////////////////
-// Z-index
-////////////////////////////////////////
-
-.z-index-100,
-.z-index-200,
-.z-index-300,
-.z-index-400,
-.z-index-500,
-.z-index-600,
-.z-index-700,
-.z-index-800,
-.z-index-900
-
-{ position: relative; }
-
-.z-index-100{ z-index: 100; }
-.z-index-200{ z-index: 200; }
-.z-index-300{ z-index: 300; }
-.z-index-400{ z-index: 400; }
-.z-index-500{ z-index: 500; }
-.z-index-600{ z-index: 600; }
-.z-index-700{ z-index: 700; }
-.z-index-800{ z-index: 800; }
-.z-index-900{ z-index: 900; }
-
-////////////////////////////////////////
-// Background Opacity Classes
-////////////////////////////////////////
-
-.bg-opacity-black-10{ @include background-opacity(black, 0.1); }
-.bg-opacity-black-20{ @include background-opacity(black, 0.2); }
-.bg-opacity-black-30{ @include background-opacity(black, 0.3); }
-.bg-opacity-black-70{ @include background-opacity(black, 0.7); }
-.bg-opacity-black-80{ @include background-opacity(black, 0.8); }
-.bg-opacity-black-90{ @include background-opacity(black, 0.9); }
-
-.bg-opacity-white-80{ @include background-opacity(white, 0.8); }
-
-////////////////////////////////////////
-// Narrow, Meduim, and Wide Classes
-////////////////////////////////////////
-
-.narrow,
-.wide,
-.narrow, 
-.medium
-{ @extend .mx-auto; }
-
-.narrow{ max-width: $narrow-width; }
-.wide{ max-width: $wide-width; }
-
-.medium{ max-width: $medium-width; }
-
-////////////////////////////////////////
-// Text Shadow
-////////////////////////////////////////
-
-.text-shadow{ @include text-shadow; }
-
-.text-shadow-border{ @include text-shadow( 0, 0, $border-width, black ); }
-
-////////////////////////////////////////
-// Offset X Axis (Left and Right)
-////////////////////////////////////////
-
-// Note: Apply left and right negative margin to parent selector
-// when child selectors have border applied 
-
-.offset-border-x{
-  margin-left: -$border-width;
-  margin-right: -$border-width;
-}
-
-// Note: Apply left and right negative margin to selector
-// for edge to edge look witout using 'no-gutters' on '.row' 
-
-.offset-gutter-x{
-  margin-left: -$grid-gutter-width/2;
-  margin-right: -$grid-gutter-width/2;
-}
-
-////////////////////////////////////////
-// No Button Style
-////////////////////////////////////////
-
-// Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
-
-.no-btn-style{
-  color: currentColor;
-  font-weight: inherit;
-  border-color: transparent;
-  background-color: transparent;
-  line-height: 100%;
-  padding: 0;
-  cursor: pointer;
-}
-
-////////////////////////////////////////
-// No Link Style
-////////////////////////////////////////
-
-// Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
-
-.no-link-style{
-  color: currentColor;
-  font-weight: inherit;
-  
-  &:hover,
-  &:focus
-  { 
-    color: currentColor;
-    text-decoration: none; 
+@supports (position: -webkit-sticky) or (position: sticky) {
+  .sticky-top {
+    position: sticky;
+    position:-webkit-sticky;
+    top: 0;
+    z-index: 1020; 
   }
-}
-
-////////////////////////////////////////
-// Buttons, links, and lists
-////////////////////////////////////////
-
-// Blended Link
-// Note: Apply to <a> to inherit color from parent and add text decoration 
-
-%blended-link{
-  color: currentColor;
-  text-decoration: underline;
-}
-
-.blended-link,
-.blended-link:hover{
-  @extend %blended-link;
 }
 
 ////////////////////////////////////////

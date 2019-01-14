@@ -1,0 +1,172 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Supplementary classes 
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// Fonts and Sizes
+////////////////////////////////////////
+
+// Font-size classes
+// Note: Define Font Awesome for use in psuedo classes
+
+.fs-sm{ font-size: $fs-sm; }
+.fs-md{ font-size: $fs-md; }
+.fs-rg{ font-size: $fs-rg; }
+.fs-lg{ font-size: $fs-lg; }
+.fs-xl{ font-size: $fs-xl; }
+
+////////////////////////////////////////
+// Opacity
+////////////////////////////////////////
+
+.opacity-10{ @include opacity(0.10); }
+.opacity-20{ @include opacity(0.20); }
+.opacity-30{ @include opacity(0.30); }
+.opacity-40{ @include opacity(0.40); }
+.opacity-50{ @include opacity(0.50); }
+.opacity-60{ @include opacity(0.60); }
+.opacity-70{ @include opacity(0.70); }
+.opacity-80{ @include opacity(0.80); }
+.opacity-90{ @include opacity(0.90); }
+
+////////////////////////////////////////
+// Z-index
+////////////////////////////////////////
+
+.z-index-100,
+.z-index-200,
+.z-index-300,
+.z-index-400,
+.z-index-500,
+.z-index-600,
+.z-index-700,
+.z-index-800,
+.z-index-900
+
+{ position: relative; }
+
+.z-index-100{ z-index: 100; }
+.z-index-200{ z-index: 200; }
+.z-index-300{ z-index: 300; }
+.z-index-400{ z-index: 400; }
+.z-index-500{ z-index: 500; }
+.z-index-600{ z-index: 600; }
+.z-index-700{ z-index: 700; }
+.z-index-800{ z-index: 800; }
+.z-index-900{ z-index: 900; }
+
+////////////////////////////////////////
+// Background Opacity Classes
+////////////////////////////////////////
+
+.bg-opacity-black-10{ @include background-opacity(black, 0.1); }
+.bg-opacity-black-20{ @include background-opacity(black, 0.2); }
+
+// ... Add as needed
+
+.bg-opacity-white-80{ @include background-opacity(black, 0.8); }
+.bg-opacity-black-90{ @include background-opacity(black, 0.9); }
+
+////////////////////////////////////////
+// Narrow, Meduim, and Wide Classes
+////////////////////////////////////////
+
+.narrow,
+.wide,
+.narrow, 
+.medium
+{ @extend .mx-auto; }
+
+.narrow{ max-width: $narrow-width; }
+.wide{ max-width: $wide-width; }
+
+.medium{ max-width: $medium-width; }
+
+////////////////////////////////////////
+// Text Shadows
+////////////////////////////////////////
+
+.text-shadow{ @include text-shadow; }
+
+.text-shadow-border{ @include text-shadow( 0, 0, $border-width, black ); }
+
+////////////////////////////////////////
+// Offsets for X axis
+////////////////////////////////////////
+
+// Note: Apply negative left and right margin to selector
+
+// Offset border
+
+.offset-border-x{
+  margin-left: -$border-width;
+  margin-right: -$border-width;
+}
+
+// Offset gutter
+
+.offset-gutter-x{
+  margin-left: -$grid-gutter-width/2;
+  margin-right: -$grid-gutter-width/2;
+}
+
+////////////////////////////////////////
+// Buttons and links
+////////////////////////////////////////
+
+// Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
+
+.no-btn-style{
+  color: currentColor;
+  font-weight: inherit;
+  border-color: transparent;
+  background-color: transparent;
+  line-height: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+
+// Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
+
+.no-link-style{
+  color: currentColor;
+  font-weight: inherit;
+  
+  &:hover,
+  &:focus
+  { 
+    color: currentColor;
+    text-decoration: none; 
+  }
+}
+
+// Blended Link
+// Note: Apply to <a> to inherit color from parent and add text decoration 
+
+%blended-link{
+  color: currentColor;
+  text-decoration: underline;
+}
+
+.blended-link,
+.blended-link:hover{
+  @extend %blended-link;
+}
+
+////////////////////////////////////////
+// Lists
+////////////////////////////////////////
+
+ul,
+ol
+ {
+    &.space-li {
+        li {
+            margin-top: $paragraph-margin-bottom;
+            margin-bottom: $paragraph-margin-bottom;
+ 
+        }
+    }
+}
