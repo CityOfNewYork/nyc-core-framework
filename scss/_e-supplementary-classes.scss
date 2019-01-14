@@ -77,18 +77,16 @@ In this file:
 ////////////////////////////////////////
 
 .narrow,
-.wide,
-.narrow, 
-.medium
+.medium,
+.wide, 
 { 
   margin-left: auto;
   margin-right: auto
 }
 
 .narrow{ max-width: $narrow-width; }
-.wide{ max-width: $wide-width; }
-
 .medium{ max-width: $medium-width; }
+.wide{ max-width: $wide-width; }
 
 ////////////////////////////////////////
 // F. Text shadows
