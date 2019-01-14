@@ -33,7 +33,7 @@
 
 .alert-text{
   font-size: $fs-md; 
-  a{ @extend %blended-link-styles; }
+  a{ @extend %blended-link; }
 }
 
 // Custom valdation for accessibility
@@ -80,21 +80,19 @@
     { color: $white; }
 }
 
-#nyc-top-header{ @extend .fs-sm; }
-#nyc-bottom-footer{ @extend .fs-md; }
+#nyc-top-header{ font-size: $fs-sm; }
+#nyc-bottom-footer{ font-size: $fs-md; }
 
 #nyc-top-header,
-#nyc-bottom-footer{
-	@extend .bg-black;
-	// @extend .text-white;
-}
+#nyc-bottom-footer
+{ background: $black; }
 
 #nyc-top-header{
 	p,
   a,
   li
   {
-		@extend .font-weight-bold;
+    font-weight: $font-weight-bold;
 		line-height: inherit;
 	}
 }
@@ -105,24 +103,14 @@
 
 #back-to-top{
   @extend .container-fluid;
-  @extend .text-right;
   @extend .fixed-bottom;
   @include opacity(0);
 
+  text-align: right;
   transition: opacity .1s linear 0s;
 
-  &.show{
+  &.show{ @include opacity(1); }
 
-    
-  @include opacity(1);
-
-  }
-
-  a{
-    @extend .rounded-top;
-    @extend .btn-sm;
-    @extend .btn-primary;
-  }
 }
  
 ////////////////////////////////////////////////////////////////////////////////
@@ -138,16 +126,18 @@
 // Note : Skip to Content is visible on keyboard tabs
 
 .tab-skipper{
+  @extend .position-absolute;
+  @extend .shadow;
+
   top: $spacer;
   left: $spacer;
+  z-index: 900;
+  padding: $spacer-2;
+  font-size: $fs-md;
+  background: theme-color("light");
+  color: $body-color;
 
-  @extend .position-absolute;
-  @extend .z-index-900;
-  @extend .p-2; 
-  @extend .fs-md; 
-  @extend .bg-light;
-  @extend .text-body; 
-  @extend .shadow;
+  &:hover{ color: currentColor; }
 }
 
 ////////////////////////////////////////

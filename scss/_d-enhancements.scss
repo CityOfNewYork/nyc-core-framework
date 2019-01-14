@@ -280,7 +280,7 @@ $accessible-hover-focus: true;
   .btn-toggle a,
   .accordion-group a,
   .btn.d-flex.align-items-center
-  a.card, 
+  a.card,
   #back-to-top a
   {
     &:focus,
@@ -446,15 +446,17 @@ $accessible-hover-focus: true;
 
 // Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
 
-.no-btn-style{
+%no-btn-style{
   color: currentColor;
   font-weight: inherit;
   border-color: transparent;
   background-color: transparent;
   line-height: 100%;
-  cursor:  pointer;
+  cursor: pointer;
   padding: 0;
 }
+
+.no-btn-style{ @extend %no-btn-style; }
 
 ////////////////////////////////////////
 // No Link Style
@@ -462,17 +464,19 @@ $accessible-hover-focus: true;
 
 // Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
 
-.no-link-style{
+%no-link-style{
   color: currentColor;
   font-weight: inherit;
   
-  &:focus,
-  &:hover
+  &:hover,
+  &:focus
   { 
     color: currentColor;
     text-decoration: none; 
   }
 }
+
+.no-link-style{ @extend %no-link-style; }
 
 ////////////////////////////////////////
 // Buttons, links, and lists
@@ -481,14 +485,14 @@ $accessible-hover-focus: true;
 // Blended Link
 // Note: Apply to <a> to inherit color from parent and add text decoration 
 
-%blended-link-styles{
+%blended-link{
   color: currentColor;
   text-decoration: underline;
 }
 
 .blended-link,
 .blended-link:hover{
-  @extend %blended-link-styles;
+  @extend %blended-link;
 }
 
 ////////////////////////////////////////
