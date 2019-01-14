@@ -797,33 +797,32 @@ $carousel: false;
     { color: $carousel-control-color; }
  
     .carousel-indicators{
-      @extend .position-static;
-      @extend .m-0;
-      @extend .p-0;
- 
+      position: static;
+      margin: 0;
+      padding: 0;
+      
       > li{
         cursor: pointer;
-        @extend .rounded-circle;
+        border-radius: 50%;
  
         &::before,
         &::after
-        { @extend .d-none; }
+        { display: none; }
       }
     }
 
     .carousel-caption{
-      @extend .p-0;
+      padding: 0;
       bottom: 0.75rem;
 
       > p{ 
-        @extend .d-inline-block;
         @extend .shadow-sm;
-        @extend .rounded;
-        @extend .py-2;
-        @extend .px-3;
-        @extend .fs-md;
-        @extend .text-black;
-        @include background-opacity($light, .9);
+        display: inline-block;
+        border-radius: $border-radius;
+        padding: $spacer-2;
+        font-size: $fs-md;
+        color: $body-color;
+        @include background-opacity($light, 0.9);
       }
     }
  
