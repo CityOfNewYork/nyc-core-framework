@@ -25,11 +25,11 @@
 #aside-nav{
     .extensible-list{
         a{
-            @extend .text-primary;
+            color: theme-color("primary");
             
             &.active{
-                @extend .text-body;
-                @extend .font-weight-bold;
+                color: $body-color;
+                font-weight: $font-weight-bold;
             }
         }
     }
@@ -37,41 +37,26 @@
 
 .nav.nav-pills[role="tablist"]{
 
-    .nav-link:not(.active){ @extend .text-muted; }
+    .nav-link:not(.active){ color: $text-muted; }
 
     .nav-link.active{ @extend .shadow-sm; }
 }
 
 .nav.nav-tabs[role="tablist"]{
 
-    .nav-link:not(.active){ @extend .text-muted; }
+    .nav-link:not(.active){ color: $text-muted; }
 
     .nav-link.active{ 
-        @extend .text-primary;
-        @extend .font-weight-bold;
+        color: theme-color("primary");
+        font-weight: $font-weight-bold;
     }
 }
 
 pre.prettyprint {
-    @extend .w-100;
-    @extend .bg-dark;
-    @extend .my-4;
-    @extend .mx-0;
-    @extend .p-2;
-    @extend .fs-sm;
-
-    
+    width: 100%;
+    background: theme-color("dark");
+    margin: 0 $spacer-4;
+    padding: $spacer-2;
+    font-size: $fs-sm;
     white-space: pre !important;
-}
-
-.notes{
-    // @extend .bg-light;
-    @extend .text-muted;
-    @extend .p-2;
-    @extend .my-4;
-
-    background: $gray-100;
-
-    h3{ @extend .h5; }
-    p{ @extend .fs-md; }
 }

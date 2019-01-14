@@ -33,7 +33,7 @@
 
 .alert-text{
   font-size: $fs-md; 
-  a{ @extend %blended-link; }
+  a{ @extend .blended-link; }
 }
 
 // Custom valdation for accessibility
@@ -180,7 +180,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   .nav-link, 
   .dropdown-menu, 
   .form-control
-  { @extend .rounded-0; }
+  { border-radius: 0; }
 
   // Primary Nav (both .nav-pills and .nav-right)
 
@@ -203,12 +203,12 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   // Primary Nav (.nav-pills)
 
   .nav-pills{
-    @extend .border-left;
+    border-left: $border-width solid $border-color;
     @extend .offset-border-x;
     @extend .nav-fill;
 
     .nav-link{
-      @extend .border-right;
+      border-right: $border-width solid $border-color;
 
       &.active { 
         color: $primary-nav-pills-link-active-color;
@@ -241,7 +241,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   // Improve .dropdown-menu when present within .nav-pills
 
   #nav-primary.nav-pills .dropdown-menu{
-    @extend .w-100; 
+    width: 100%;
     left: 0;
     right: 0;
     margin: 0;
@@ -251,61 +251,56 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     top: 100% !important;
   }
 
-  // Resets dropdown functionality on mobile
-
-  #device-menu{
-
-    .nav-link{
-      @extend .py-1;
-
-      &.active { 
-        color: $primary-nav-mobile-link-active-color;
-      }
-
-      @if $enable-caret {
-        &.dropdown-toggle{
-          &[aria-expanded="true"]::after {
-            @include caret-up;
-          }
-        }
-      } // end if
-    
-    }
-
-    .dropdown-menu.show{
-
-      position: static !important;
-      background: $transparent;
-
-      -webkit-transform: none !important; /* Safari and Chrome */
-         -moz-transform: none !important; /* Firefox */
-          -ms-transform: none !important; /* IE 9 */
-           -o-transform: none !important; /* Opera */
-              transform: none !important;
-
-      @extend .w-100;
-      @extend .border-0;
-      @extend .px-3;
-      @extend .py-0;
-      @extend .m-0;
-
-      a.dropdown-item{
-        width: auto !important;
-        @extend .text-body;
-        @extend .p-0;
-        @extend .mb-1;
-        float: left;
-
-        &:hover,
-        &:active,
-        &:visited
-        { background: none; }
-      }
-
-    }
-  }
 
 } /* #global-header */ 
+
+// Resets dropdown functionality on mobile
+
+#device-menu{
+
+  .nav-link{
+    padding-top: $spacer-1;
+    padding-bottom: $spacer-1;
+
+    &.active { color: $primary-nav-mobile-link-active-color; }
+
+    @if $enable-caret {
+      &.dropdown-toggle{
+        &[aria-expanded="true"]::after {
+          @include caret-up;
+        }
+      }
+    } // end if
+  }
+
+  .dropdown-menu.show{
+    position: static !important;
+    background: $transparent;
+
+    -webkit-transform: none !important; /* Safari and Chrome */
+       -moz-transform: none !important; /* Firefox */
+        -ms-transform: none !important; /* IE 9 */
+         -o-transform: none !important; /* Opera */
+            transform: none !important;
+
+    width: 100%;
+    padding: 0 $spacer-4;
+    margin: 0;
+
+    a.dropdown-item{
+      width: auto !important;
+      color: currentColor;
+      padding: 0;
+      margin-bottom: $spacer-1;
+      float: left;
+
+      &:hover,
+      &:active,
+      &:visited
+      { background: none; }
+    }
+  }
+}
 
 ////////////////////////////////////////
 // Gradient Classes
@@ -321,10 +316,10 @@ $gradients: true;
     position: relative; 
   
     &::before {
-      content: "\00a0";
-      @extend .position-absolute;
-      @extend .h-100;
-      @extend .w-100;
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
       left:0;
       right: 0;
     }
@@ -390,11 +385,14 @@ $featured-panel: true;
 
     > .card, 
     .card-img{
-      @extend .border-0;
-      @extend .rounded-0;
+      border: none;
+      border-radius: 0;
     }
     
-    .card-img-overlay{ @extend .px-0; }
+    .card-img-overlay{ 
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     @each $breakpoint in map-keys($grid-breakpoints) {
       $next: breakpoint-next($breakpoint, $grid-breakpoints);
@@ -426,18 +424,18 @@ $bg-cover: true;
   $bg-fixed-height: 350px;
 
   .bg-cover{
-    @extend .position-relative;
+    position: relative;
 
     &.fixed-height{
-      @extend .d-flex;
-      @extend .align-items-center;
+      display: flex;
+      align-items: center;
       min-height: $bg-fixed-height;
     }
 
     > div{
-      @extend .position-relative;
-      @extend .z-index-100;
-      @extend .align-self-center;
+      position: relative;
+      z-index: 100;
+      align-self: center;
     }
 
     &::before{
@@ -710,9 +708,9 @@ $extensible-list-margin: 0.5em;
     li{ @include extensible-list-stack; }
 
     &.horizontal{
-      @extend .d-flex;
-      @extend .align-items-center;
-      @extend .flex-row;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
       margin-left: -($extensible-list-margin);
       margin-right: -($extensible-list-margin);
@@ -748,9 +746,8 @@ $side-by-side: true;
 $side-by-side-margin: 0.25em;
 
 .side-by-side{
-
-  @extend .d-flex;
-  @extend .flex-row;
+  display: flex;
+  flex-direction: row;
 
   margin-left: -($side-by-side-margin);
   margin-right: -($side-by-side-margin);
@@ -775,7 +772,7 @@ $default-card-backgrounds: false;
   { border: none; }
 } // end if
 
-@if ($default-card-backgrounds == false) {
+@if ( $default-card-backgrounds == false ) {
   .card, 
   .card-header,
   .card-footer
@@ -786,7 +783,7 @@ $default-card-backgrounds: false;
 // Carousel
 ////////////////////////////////////////
  
-$carousel: true;
+$carousel: false;
  
 @if($carousel){
  
@@ -854,7 +851,7 @@ $carousel: true;
     display: block;
 
     &:focus{
-      > span{ @extend .bg-primary;}
+      > span{ background: theme-color("primary"); }
     }
 
     > span{ 
@@ -863,21 +860,23 @@ $carousel: true;
       right: 0;
 
       color: white;
-      @extend .p-2;
-      @extend .m-2;
-      @extend .rounded;
+      padding-left: $spacer-2;
+      padding-right: $spacer-2;
+      margin-left: $spacer-2;
+      margin-right: $spacer-2;
+      border-radius: $border-radius;
     }
   }
 }
 
-$gallery: true;
+$gallery: false;
 
 @if($gallery){
 
   .gallery{
     a, 
     img
-    { @extend .m-0; }
+    { margin:0; }
   }
 
   .gallery, 

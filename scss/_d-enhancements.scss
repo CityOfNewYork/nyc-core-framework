@@ -446,17 +446,15 @@ $accessible-hover-focus: true;
 
 // Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
 
-%no-btn-style{
+.no-btn-style{
   color: currentColor;
   font-weight: inherit;
   border-color: transparent;
   background-color: transparent;
   line-height: 100%;
-  cursor: pointer;
   padding: 0;
+  cursor: pointer;
 }
-
-.no-btn-style{ @extend %no-btn-style; }
 
 ////////////////////////////////////////
 // No Link Style
@@ -464,7 +462,7 @@ $accessible-hover-focus: true;
 
 // Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
 
-%no-link-style{
+.no-link-style{
   color: currentColor;
   font-weight: inherit;
   
@@ -475,8 +473,6 @@ $accessible-hover-focus: true;
     text-decoration: none; 
   }
 }
-
-.no-link-style{ @extend %no-link-style; }
 
 ////////////////////////////////////////
 // Buttons, links, and lists
