@@ -1,11 +1,19 @@
-////////////////////////////////////////////////////////////////////////////////
-//
-// General HTML Tags
-//
-////////////////////////////////////////////////////////////////////////////////
+/*
+
+In this file:
+
+// A. Generic tags
+// B. Margins
+// C. Accessibility
+// D. Forms
+// E. Font size media queries
+// F. Sticky top
+// G. Internet Explorer
+
+*/
 
 ////////////////////////////////////////
-// Generic Tags
+// A. Generic Tags
 ////////////////////////////////////////
 
 html{ background: $dark; }
@@ -14,34 +22,37 @@ body{
   position: relative;
 
   // Font smoothing
+
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
   // Set Overflow (optional) 
+  
   overflow-x: hidden;
 
   // Set min and max width of body
+
 	min-width: 350px;
   max-width: $site-width;
   
   // Set body font-size to accessible size
+  
   font-size: $fs-rg;
 
   // Center body
-	@extend .mx-auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Make all images responsive by default
 
 img{ @extend .img-fluid; }
 
-////////////////////////////////////////////////////////////////////////////////
-//
-// Margin bottom 
-//
-////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////
+// B. Margins
+////////////////////////////////////////
 
-// Note: Remove Bootstrap default bottom margins to 'last-child' selectors 
+// Remove bottom margins on ':last-child' selectors 
 
 h1, 
 h2, 
@@ -59,15 +70,15 @@ address
 	&:last-child{ margin-bottom: 0; }
 }
 
-// Remove Bootstrap default to <hr> tags 
+// Remove Bootstrap's default margin on <hr> tags 
 
 hr{ margin: 0; }
 
 ////////////////////////////////////////
-// Accessibility
+// C. Accessibility
 ////////////////////////////////////////
 
-// RTL Language Translation
+// Right-to-left language translation
 
 html[dir="rtl"]{ 
 
@@ -83,7 +94,7 @@ html[dir="rtl"]{
 
   select.notranslate{ text-align: left !important; }
 
-  // Right justify all text
+  // Apply right justification all text
 
   body,
   .dropdown-item
@@ -110,7 +121,7 @@ html[dir="rtl"]{
     }
   }
 
-  // Note: Remove Google's added padding and margin for rtl translation
+  // Remove Google's added padding and margin for rtl translation
 
   ul, 
   ol, 
@@ -123,7 +134,7 @@ html[dir="rtl"]{
 
   #device-menu a.dropdown-item{ float: right !important; }
 
-  // Note: Flip Custom Control Background from left to right
+  // Flip Custom Control Background from left to right
 
   .custom-control-label{
     &::before, 
@@ -133,9 +144,15 @@ html[dir="rtl"]{
     }
   }
 
-} // RTL Language Translations
+  // Add padding to custom checkboxes and radios '.custom-control selector' to ensure spacing during rtl translation  
 
-// Note: We add 'text-decoration: underline' on particular :focus selectors
+  .custom-control {
+    padding-right: ($custom-control-gutter + $custom-control-indicator-size);
+  }
+
+} // end RTL
+
+// Add 'text-decoration: underline' on particular ':focus' selectors
 
 $accessible-hover-focus: true;
 
@@ -179,24 +196,24 @@ $accessible-hover-focus: true;
 
 } // end if
 
-// Override Bootstrap default whitespace on buttons
+// Override Bootstrap's default whitespace on '.btn' selectors
 
 .btn{ white-space: normal !important; }
 
 // Add visible underline to links within the #primary-content area
 
 #primary-content{
-  p > a#{$no-class} { text-decoration: underline; }
+  p > a:not([class]){ text-decoration: underline; }
 } 
 
 ////////////////////////////////////////
-// Forms
+// D. Forms
 ////////////////////////////////////////
 
 legend, 
 .legend{
 
-  // Note: Remove default styles on 'legend' selectors
+  // Remove default styles on 'legend' selectors
   
   display: table;
   float: left;
@@ -207,7 +224,8 @@ legend,
   color: white;
   + * { clear: both; }
   
-  // Note: Custom styles
+  // Add custom styles
+
   font-size: $fs-md;
   font-weight: $font-weight-normal;
   background: theme-color("primary");
@@ -221,7 +239,7 @@ fieldset{
   @extend .clearfix;
 }
 
-// Note: Add 'custom-select' class to all select boxes
+// Add 'custom-select' class to all <select> tags
 
 select {
   -webkit-appearance: none;
@@ -230,13 +248,6 @@ select {
 }
 
 label{ font-size: $fs-md; }
-
-// Note: Add padding to custom checkboxes and radios '.custom-control selector'
-// to ensure spacing during rtl translation  
-
-.custom-control {
-  padding-right: ($custom-control-gutter + $custom-control-indicator-size);
-}
 
 .custom-control-label{
   &::before{ 
@@ -262,7 +273,7 @@ label{ font-size: $fs-md; }
 }
 
 ////////////////////////////////////////
-// Font Size Media Queries
+// E. Font size media queries
 ////////////////////////////////////////
 
 @include media-breakpoint-down(md){
@@ -280,11 +291,11 @@ label{ font-size: $fs-md; }
 }
 
 ////////////////////////////////////////
-// Sticky Top
+// F. Sticky top
 ////////////////////////////////////////
 
-// Use .stick-top with caution as it's not compatible with Google translate
-// Note: Fixes Bootstraps 'sticky-top' class in Safari
+// Fix Bootstrap's 'sticky-top' class in Safari
+// Use '.stick-top' with caution as it's not compatible with Google translate
 
 @supports (position: -webkit-sticky) or (position: sticky) {
   .sticky-top {
@@ -296,7 +307,7 @@ label{ font-size: $fs-md; }
 }
 
 ////////////////////////////////////////
-// IE 10 and 11 Fixes 
+// G. Internet Explorer 
 ////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {

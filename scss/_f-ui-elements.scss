@@ -1,76 +1,27 @@
-%fa-icon{
-  font-family: $font-awesome;
-  font-weight: 900;
-  font-size: inherit;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  color: currentColor;
-}
+/*
 
-////////////////////////////////////////////////////////////////////////////////
-//
-// Form Valdation and Alerts 
-//
-////////////////////////////////////////////////////////////////////////////////
+In this file:
 
-// Alerts
+// A. Citywide header and footer
+// B. Local header and primary nav
+// C. Tab skipper
+// D. Form validation
+// E. Gradients
+// F. Featured panels
+// G. Background image cover
+// H. Extensible lists
+// I. Matrix rows
+// J. Accordion and button toggle
+// K. Nav tabs and pills
+// L. Side by side
+// M. Card
+// N. Carousel
 
-.alert{
-  outline: 0;
+*/
 
-  &[tabindex="-1"]{
-    &:focus{
-      box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
-    }
-  }
-}
-
-.alert-heading{
-  font-weight: $font-weight-bold;
-  margin-bottom: $spacer-1;
-}
-
-.alert-text{
-  font-size: $fs-md; 
-  a{ @extend .blended-link; }
-}
-
-// Custom valdation for accessibility
-// Note: the following only works when custom validation.js is present in the footer of the form's page
-
-.form-group{
-
-  .invalid-feedback{
-      display: none; 
-      margin-bottom: 0.5rem;
-  }
-
-  .invalid-description{
-    font-weight: $font-weight-bold;
-    margin-left: $spacer-1;
-    margin-right: $spacer-1;
-  }
-
-  &.is-invalid{
-
-    label{ color: theme-color("danger"); }
-
-    .invalid-feedback{ display: block; }
-
-    .form-control:invalid{
-      &:focus{
-        box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
-      }
-    }
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-//
-// Citywide Global Header and Footer 
-//
-////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////
+// A. Citywide header and footer
+////////////////////////////////////////
 
 #nyc-top-header,
 #nyc-bottom-footer
@@ -113,39 +64,11 @@
 
 }
  
-////////////////////////////////////////////////////////////////////////////////
-//
-// Local Header and Primary Navigation 
-//
-////////////////////////////////////////////////////////////////////////////////
-
 ////////////////////////////////////////
-// Skip to Content
+// B. Local header and primary nav
 ////////////////////////////////////////
 
-// Note : Skip to Content is visible on keyboard tabs
-
-.tab-skipper{
-  @extend .position-absolute;
-  @extend .shadow;
-
-  top: $spacer;
-  left: $spacer;
-  z-index: 900;
-  padding: $spacer-2;
-  font-size: $fs-md;
-  background: theme-color("light");
-  color: $body-color;
-
-  &:hover{ color: currentColor; }
-}
-
-////////////////////////////////////////
-// Header and Primary Navigation
-////////////////////////////////////////
-
-// Primary Navigation
-// Note: Primary Navigation variable set here override  Bootstrap default components
+// Primary Navigation variables set here override Bootstrap default component settings
 
 // Primary nav font weight
 $primary-nav-font-weight: $font-weight-bold;
@@ -173,7 +96,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
 
 #global-header{
 
-  // Note: Remove rounded when global '$enable-rounded' is set to true 
+  // Remove border radius when global '$enable-rounded' is set to true 
 
   .btn,
   .input,
@@ -182,7 +105,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   .form-control
   { border-radius: 0; }
 
-  // Primary Nav (both .nav-pills and .nav-right)
+  // Set primary nav color and active states (both '.nav-pills' and '.nav-right')
 
   .nav-link{
     font-weight: $primary-nav-font-weight;
@@ -192,7 +115,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     }
   }
   
-  // Primary Nav (.nav-right only)
+  // Set primary nav color and active states (.nav-right only)
 
   .nav-right{
     .nav-link{
@@ -303,7 +226,84 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
 }
 
 ////////////////////////////////////////
-// Gradient Classes
+// C. Tab skipper
+////////////////////////////////////////
+
+// Visible only on keyboard tabbing
+
+.tab-skipper{
+  @extend .position-absolute;
+  @extend .shadow;
+
+  top: $spacer;
+  left: $spacer;
+  z-index: 900;
+  padding: $spacer-2;
+  font-size: $fs-md;
+  background: theme-color("light");
+  color: $body-color;
+
+  &:hover{ color: currentColor; }
+}
+
+////////////////////////////////////////
+// D. Form validation
+////////////////////////////////////////
+
+// Make alerts focusable for accessibility
+ 
+.alert{
+  outline: 0;
+
+  &[tabindex="-1"]{
+    &:focus{
+      box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
+    }
+  }
+}
+
+.alert-heading{
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacer-1;
+}
+
+.alert-text{
+  font-size: $fs-md; 
+  a{ @extend .blended-link; }
+}
+
+// Apply custom valdation for accessibility
+// The following works only when custom './js/validation.js' is present in the footer of the form's page
+
+.form-group{
+
+  .invalid-feedback{
+      display: none; 
+      margin-bottom: 0.5rem;
+  }
+
+  .invalid-description{
+    font-weight: $font-weight-bold;
+    margin-left: $spacer-1;
+    margin-right: $spacer-1;
+  }
+
+  &.is-invalid{
+
+    label{ color: theme-color("danger"); }
+
+    .invalid-feedback{ display: block; }
+
+    .form-control:invalid{
+      &:focus{
+        box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
+      }
+    }
+  }
+}
+
+////////////////////////////////////////
+// E. Gradients
 ////////////////////////////////////////
 
 // Note: Gradients call a custom mixin in '_c-custom-mixins.scss'
@@ -345,22 +345,22 @@ $gradients: true;
 
   // Gradient Backgrounds
 
-  .bg-gradient-x-theme{
-    @include linear-gradient(
-      $direction: to right,
-      $first-color: red,
-      $second-color: green,
-      $first-color-opacity: 1,
-      $second-color-opacity: 1,
-      $first-color-position: 0%,
-      $second-color-position: 100%
-    );
-  }
+  // .bg-gradient-x-theme{
+  //   @include linear-gradient(
+  //     $direction: to right,
+  //     $first-color: red,
+  //     $second-color: green,
+  //     $first-color-opacity: 1,
+  //     $second-color-opacity: 1,
+  //     $first-color-position: 0%,
+  //     $second-color-position: 100%
+  //   );
+  // }
 
 } // end if
 
 ////////////////////////////////////////
-// Featured Panel
+// F. Featured panels
 ////////////////////////////////////////
 
 @mixin featured-panel-responsive-settings(){
@@ -375,11 +375,6 @@ $gradients: true;
 $featured-panel: true;
 
 @if($featured-panel){
-
-  // Fixed height parameters
-  
-  $bg-fixed-image-opacity: 0.2;
-  $bg-fixed-height: 300px;
   
   .featured-panel{
 
@@ -411,7 +406,7 @@ $featured-panel: true;
 } // end if
 
 ////////////////////////////////////////
-// Background Cover Opacity
+// G. Background image cover
 ////////////////////////////////////////
 
 $bg-cover: true;
@@ -419,8 +414,6 @@ $bg-cover: true;
 @if($bg-cover){
 
   $bg-fixed-image-opacity: 0.4;
-  $bg-fixed-height: auto !default;
-
   $bg-fixed-height: 350px;
 
   .bg-cover{
@@ -464,7 +457,92 @@ $bg-cover: true;
 } // end if
 
 ////////////////////////////////////////
-// Matrix
+// H. Extensible lists
+////////////////////////////////////////
+
+// Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
+// Link lists are ideal for horizontal navs when supporting 'rtl' 
+
+$extensible-list: true;
+$extensible-list-margin: 0.5em;
+
+@mixin extensible-list-stack {
+  margin-bottom: $extensible-list-margin;
+  &:last-child{ margin-bottom: 0; }
+}
+
+@mixin responsive-extensible-list-settings(){ 
+  
+  // Remove flex properties
+  display: block !important;
+
+  // Remove side margin and padding 
+  margin-right:  0;
+  margin-left:  0;
+  padding-right:  0;
+  padding-left:  0;
+
+  li{ 
+    @include extensible-list-stack;
+    display: block !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+   }
+}
+
+@if($extensible-list){
+
+  .extensible-list{
+    @include list-unstyled();
+    
+    // fixed padding added by user agent stylesheet after translation
+    -webkit-padding-start: 0;
+
+    li > ul{ 
+
+      margin-top: $extensible-list-margin;
+
+      // Nested lists indent by default
+      padding-left: $nav-link-padding-x;
+      padding-right: $nav-link-padding-x; 
+
+    }
+
+    li{ @include extensible-list-stack; }
+
+    &.horizontal{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      margin-left: -($extensible-list-margin);
+      margin-right: -($extensible-list-margin);
+
+      li{
+        margin-bottom: 0;
+        margin-left: $extensible-list-margin;
+        margin-right: $extensible-list-margin;
+      }
+
+      @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @if $next {
+          &.responsive-#{$next}{
+            @include media-breakpoint-down($breakpoint) {
+              @include responsive-extensible-list-settings();
+            }
+          }
+        }
+      }
+    }
+  }
+  
+} // end if
+
+////////////////////////////////////////
+// I. Matrix rows
 ////////////////////////////////////////
 
 // Note: Add to '.row' class to create a grid of colums
@@ -492,8 +570,18 @@ $matrix-gutter-padding: ($grid-gutter-width / 4);
 }
 
 ////////////////////////////////////////
-// Accordions and Toggle Buttons 
+// J. Accordion and button toggle 
 ////////////////////////////////////////
+
+%fa-icon{
+  font-family: $font-awesome;
+  font-weight: 900;
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  color: currentColor;
+}
 
 $toggles-and-accordions: true;
 
@@ -592,7 +680,7 @@ $toggles-and-accordions: true;
 } // end if
 
 ////////////////////////////////////////
-// Responsive Nav Tabs and Pills
+// K. Responsive nav tabs and pills
 ////////////////////////////////////////
 
 @mixin responsive-nav-pills-and-tabs-settings(){
@@ -654,92 +742,7 @@ $responsive-nav-pills-and-tabs: true;
 } // end if
 
 ////////////////////////////////////////
-// Extensible Lists
-////////////////////////////////////////
-
-// Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
-// Link lists are ideal for horizontal navs when supporting 'rtl' 
-
-$extensible-list: true;
-$extensible-list-margin: 0.5em;
-
-@mixin extensible-list-stack {
-  margin-bottom: $extensible-list-margin;
-  &:last-child{ margin-bottom: 0; }
-}
-
-@mixin responsive-extensible-list-settings(){ 
-  
-  // Remove flex properties
-  display: block !important;
-
-  // Remove side margin and padding 
-  margin-right:  0;
-  margin-left:  0;
-  padding-right:  0;
-  padding-left:  0;
-
-  li{ 
-    @include extensible-list-stack;
-    display: block !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-   }
-}
-
-@if($extensible-list){
-
-  .extensible-list{
-    @include list-unstyled();
-    
-    // fixed padding added by user agent stylesheet after translation
-    -webkit-padding-start: 0;
-
-    li > ul{ 
-
-      margin-top: $extensible-list-margin;
-
-      // Nested lists indent by default
-      padding-left: $nav-link-padding-x;
-      padding-right: $nav-link-padding-x; 
-
-    }
-
-    li{ @include extensible-list-stack; }
-
-    &.horizontal{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      margin-left: -($extensible-list-margin);
-      margin-right: -($extensible-list-margin);
-
-      li{
-        margin-bottom: 0;
-        margin-left: $extensible-list-margin;
-        margin-right: $extensible-list-margin;
-      }
-
-      @each $breakpoint in map-keys($grid-breakpoints) {
-        $next: breakpoint-next($breakpoint, $grid-breakpoints);
-        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-        @if $next {
-          &.responsive-#{$next}{
-            @include media-breakpoint-down($breakpoint) {
-              @include responsive-extensible-list-settings();
-            }
-          }
-        }
-      }
-    }
-  }
-  
-} // end if
-
-////////////////////////////////////////
-// Side by Side
+// L. Side by side
 ////////////////////////////////////////
 
 $side-by-side: true;
@@ -759,7 +762,7 @@ $side-by-side-margin: 0.25em;
 } 
 
 ////////////////////////////////////////
-// Cards
+// M. Card
 ////////////////////////////////////////
 
 $default-card-borders: false;
@@ -780,7 +783,7 @@ $default-card-backgrounds: false;
 } // end if
 
 ////////////////////////////////////////
-// Carousel
+// N. Carousel
 ////////////////////////////////////////
  
 $carousel: false;
@@ -839,50 +842,3 @@ $carousel: false;
   }
  
 } // end if
-
-////////////////////////////////////////
-// Gallery
-////////////////////////////////////////
-
-%enlarge{
-
-  a{
-    position: relative;
-    display: block;
-
-    &:focus{
-      > span{ background: theme-color("primary"); }
-    }
-
-    > span{ 
-      position: absolute;
-      bottom: 0;
-      right: 0;
-
-      color: white;
-      padding-left: $spacer-2;
-      padding-right: $spacer-2;
-      margin-left: $spacer-2;
-      margin-right: $spacer-2;
-      border-radius: $border-radius;
-    }
-  }
-}
-
-$gallery: false;
-
-@if($gallery){
-
-  .gallery{
-    a, 
-    img
-    { margin:0; }
-  }
-
-  .gallery, 
-  figure
-  { @extend %enlarge; }
-
-} @else {
-  figure{ @extend %enlarge; }
-} // end if else

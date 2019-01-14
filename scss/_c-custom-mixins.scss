@@ -1,15 +1,19 @@
-////////////////////////////////////////////////////////////////////////////////
-//
-// Custom Mixins
-//
-////////////////////////////////////////////////////////////////////////////////
+/*
+
+In this file:
+
+// A. Opacity
+// B. Text shadow
+// C. Linear gradient
+// D. Background image
+
+*/
 
 ////////////////////////////////////////
-// Opacity
+// A. Opacity
 ////////////////////////////////////////
 
-// Note: The opacity mixins can be called anytime, 
-// however there are preset opacity classes available from (see 'd-enhancements.scss')
+// The opacity mixins can be called anytime, however there are preset opacity classes available in '_e-supplementary-classes.scss'
 
 @mixin opacity($value){
   $IEValue: $value*100;
@@ -24,7 +28,7 @@
 }
 
 ////////////////////////////////////////
-// Text shadow
+// B. Text shadow
 ////////////////////////////////////////
 
 @mixin text-shadow($x: 0, $y: 0, $blur: 6px, $color: rgb(0, 0, 0)) {
@@ -32,7 +36,7 @@
 }
 
 ////////////////////////////////////////
-// Linear Gradient
+// C. Linear gradient
 ////////////////////////////////////////
 
 @mixin linear-gradient(
@@ -56,7 +60,7 @@
 }
 
 ////////////////////////////////////////
-// Background image
+// D. Background image
 ////////////////////////////////////////
 
 $background-image-path: '../images/feature/';

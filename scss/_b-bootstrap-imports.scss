@@ -1,11 +1,14 @@
-////////////////////////////////////////////////////////////////////////////////
-//
-// Import Bootstrap Dependencies
-//
-////////////////////////////////////////////////////////////////////////////////
+/*
+
+In this file:
+
+// A. Required Bootstrap imports
+// B. Optional Bootstrap imports
+
+*/
 
 ////////////////////////////////////////
-// Required
+// A. Required Bootstrap imports
 ////////////////////////////////////////
 
 @import "../bootstrap.4.2.1/scss/functions";
@@ -13,10 +16,10 @@
 @import "../bootstrap.4.2.1/scss/mixins";
 
 ////////////////////////////////////////
-// Optional
+// B. Optional Bootstrap imports
 ////////////////////////////////////////
 
-// Note: Simply comment out unneeded dependencies
+// Note: Comment out unneeded dependencies
 
 @import "../bootstrap.4.2.1/scss/root";
 @import "../bootstrap.4.2.1/scss/reboot";
