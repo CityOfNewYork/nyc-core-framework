@@ -193,8 +193,21 @@ $accessible-hover-focus: true;
       text-decoration: none;
     }
   }
+  
+  .has-icon{
+
+    &:hover{
+        text-decoration: none;
+        span.title{ text-decoration: underline; }
+    }
+    
+    &.active{
+        span.title{ text-decoration: underline; }
+    }
+  }
 
 } // end if
+
 
 // Override Bootstrap's default whitespace on '.btn' selectors
 
