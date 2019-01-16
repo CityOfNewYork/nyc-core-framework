@@ -314,14 +314,15 @@ $gradients: true;
 
   [class*="overlay-gradient-"]{
     position: relative; 
-  
+    overflow: hidden;
+
     &::before {
       content: "";
       position: absolute;
-      height: 100%;
-      width: 100%;
-      left:0;
-      right: 0;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
     }
   }
 
@@ -331,31 +332,19 @@ $gradients: true;
     @include linear-gradient();
   }
 
-  .overlay-gradient-x-white::before{
-    @include linear-gradient(
-      $direction: to left,
-      $first-color: white,
-      $second-color: white,
-      $first-color-opacity: 0,
-      $second-color-opacity: 0.75,
-      $first-color-position: 0,
-      $second-color-position: 100%
-    );
+  .overlay-gradient-x-info{
+    &::before{
+      @include linear-gradient(
+        $direction: to right,
+        $first-color: theme-color("info"),
+        $second-color: theme-color("info"),
+        $first-color-opacity: 0,
+        $second-color-opacity: .8,
+        $first-color-position: 0,
+        $second-color-position: 100%
+      );
+    }
   }
-
-  // Gradient Backgrounds
-
-  // .bg-gradient-x-theme{
-  //   @include linear-gradient(
-  //     $direction: to right,
-  //     $first-color: red,
-  //     $second-color: green,
-  //     $first-color-opacity: 1,
-  //     $second-color-opacity: 1,
-  //     $first-color-position: 0%,
-  //     $second-color-position: 100%
-  //   );
-  // }
 
 } // end if
 

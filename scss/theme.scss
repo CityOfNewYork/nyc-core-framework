@@ -60,9 +60,9 @@ In this file:
 }
 
 pre.prettyprint {
-    width: 100%;
+    width: 100% !important;
     background: $dark !important;
-    margin: $spacer-4 0  !important;
+    margin: $spacer-4 0 !important;
     padding: $spacer-2;
     font-size: $fs-sm;
     white-space: pre !important;

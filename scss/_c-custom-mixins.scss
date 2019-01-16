@@ -41,13 +41,13 @@ In this file:
 
 @mixin linear-gradient(
   
-  $direction: to right,
+  $direction: to bottom,
 
-  $first-color: theme-color("dark"),
-  $second-color: theme-color("dark"),
+  $first-color: black,
+  $second-color: black,
 
   $first-color-opacity: 0,
-  $second-color-opacity: 1,
+  $second-color-opacity: 0.9,
 
   $first-color-position: 0%,
   $second-color-position: 100%
