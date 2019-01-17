@@ -46,6 +46,7 @@ $(document).ready(function () {
             $(this).closest('.form-group').addClass('is-invalid');
         }
     });
+    
     $('.custom-control-input').change(function () {
         if (!$(this).is(":invalid")) {
             $(this).closest('.form-group').removeClass('is-invalid');
