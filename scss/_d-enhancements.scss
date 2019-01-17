@@ -260,7 +260,12 @@ select {
   @extend .custom-select;
 }
 
-label{ font-size: $fs-md; }
+label, 
+.label
+{ 
+  font-size: $fs-md;
+  margin-bottom: $label-margin-bottom;
+}
 
 .custom-control-label{
   &::before{ 

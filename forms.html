@@ -345,13 +345,16 @@
 
                         <div class="form-group" role="group" aria-labelledby="id-name">
 
-                            <p id="id-name"><strong>What is your favorite type of pet?</strong></p>
-                            
+                            <p class="label" id="id-name">
+                                What is your favorite type of pet?
+                                <span class="fs-md text-danger" aria-hidden="true">*</span>
+                            </p>
+
                             <p class="invalid-feedback">
-                                    <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                    <span class="invalid-description">Error message description</span>
-                                    <span class="invalid-instruction">How to fix instructions</span>
-                                </p>
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <span class="invalid-description">Error message description</span>
+                                <span class="invalid-instruction">How to fix instructions</span>
+                            </p>
     
                             <ul class="extensible-list">
                                 <li>
@@ -373,7 +376,6 @@
                                     </div>
                                 </li>
                             </ul>
-
 
                         </div>
                         <!-- .form-group -->
