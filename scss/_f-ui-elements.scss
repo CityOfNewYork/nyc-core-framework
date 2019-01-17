@@ -290,7 +290,7 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
 
   &.is-invalid{
 
-    label, { color: theme-color("danger"); }
+    label, .label{ color: theme-color("danger"); }
 
     .invalid-feedback{ display: block; }
 
