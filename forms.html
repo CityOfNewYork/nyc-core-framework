@@ -343,6 +343,40 @@
                         </div>
                         <!-- .form-group -->
 
+                        <div class="form-group" role="group" aria-labelledby="id-name">
+
+                            <p><strong>What is your favorite type of pet?</strong></p>
+                            <p class="invalid-feedback">
+                                    <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                    <span class="invalid-description">Error message description</span>
+                                    <span class="invalid-instruction">How to fix instructions</span>
+                                </p>
+    
+                            <ul class="extensible-list horizontal">
+                                <li>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="dog" name="favorite-pet" required>
+                                        <label class="custom-control-label" for="dog">Dog</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="cat" name="favorite-pet" required>
+                                        <label class="custom-control-label" for="cat">Cat</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="goldfish" name="favorite-pet" required>
+                                        <label class="custom-control-label" for="goldfish">Goldfish</label>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <!-- .form-group -->
+
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea class="form-control form-control-lg" id="message" rows="6"></textarea>
