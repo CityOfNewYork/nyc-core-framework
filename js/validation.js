@@ -40,18 +40,13 @@ $(document).ready(function () {
     })();
     
     $('.form-control').blur(function () {
-        if ( !$(this).is(":invalid") ) {
-            $(this).closest('.form-group').removeClass('is-invalid');
-        } else if ( $(this).closest('form').hasClass('was-validated') && $(this).is(":invalid") ){
-            $(this).closest('.form-group').addClass('is-invalid');
-        }
-    });
-    
-    $('.custom-control-input').change(function () {
         if (!$(this).is(":invalid")) {
             $(this).closest('.form-group').removeClass('is-invalid');
-        } else if ( $(this).closest('form').hasClass('was-validated') && $(this).is(":invalid") ){
-            $(this).closest('.form-group').addClass('is-invalid');
+        }
+    });
+    $('custom-control-input').change(function () {
+        if (!$(this).is(":invalid")) {
+            $(this).closest('.form-group').removeClass('is-invalid');
         }
     });
 
