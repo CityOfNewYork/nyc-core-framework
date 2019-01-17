@@ -226,7 +226,8 @@ $accessible-hover-focus: true;
 legend, 
 .legend{
 
-  // Remove default styles on 'legend' selectors
+  // Remove strange default styles on 'legend' selectors
+  // Styles for fieldset and legend are found in _f-ui-elements.scss
   
   display: block;
   float: left;
@@ -236,14 +237,6 @@ legend,
   line-height: 1.5;
   + * { clear: both; }
   
-  // Add custom styles
-
-  font-size: $fs-md;
-  font-weight: $font-weight-normal;
-  background: theme-color("primary");
-  color: white;
-  padding: $spacer-2;
-  margin-bottom: 0;
 }
 
 fieldset{

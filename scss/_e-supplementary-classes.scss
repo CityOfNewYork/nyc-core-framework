@@ -132,20 +132,6 @@ In this file:
   cursor: pointer;
 }
 
-// Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
-
-.no-link-style{
-  color: currentColor;
-  font-weight: inherit;
-  
-  &:hover,
-  &:focus
-  { 
-    color: currentColor;
-    text-decoration: none; 
-  }
-}
-
 // Blended Link
 // Note: Apply to <a> to inherit color from parent and add text decoration 
 
@@ -158,6 +144,22 @@ In this file:
 .blended-link:hover{
   @extend %blended-link;
 }
+
+// Blended Link
+// Apply to <a> to inherit color from parent and add text decoration 
+
+.has-icon{
+
+  &:hover{
+      text-decoration: none;
+      span.title{ text-decoration: underline; }
+  }
+  
+  &.active{
+      span.title{ text-decoration: underline; }
+  }
+}
+
 
 ////////////////////////////////////////
 // I. Lists
