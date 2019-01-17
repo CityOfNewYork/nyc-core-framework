@@ -228,13 +228,12 @@ legend,
 
   // Remove default styles on 'legend' selectors
   
-  display: table;
+  display: block;
   float: left;
   margin: 0;
   padding: 0;
   width: 100%;
   line-height: 1.5;
-  color: white;
   + * { clear: both; }
   
   // Add custom styles
@@ -242,6 +241,7 @@ legend,
   font-size: $fs-md;
   font-weight: $font-weight-normal;
   background: theme-color("primary");
+  color: white;
   padding: $spacer-2;
   margin-bottom: 0;
 }

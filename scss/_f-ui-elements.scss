@@ -247,8 +247,24 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
 }
 
 ////////////////////////////////////////
-// D. Form validation
+// D. Forms
 ////////////////////////////////////////
+
+legend, 
+.legend{
+
+  // Remove strange default styles on 'legend' selectors
+  // Styles for fieldset and legend are found in _f-ui-elements.scss
+
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 1.5;
+  + * { clear: both; }
+  
+}
 
 // Make alerts focusable for accessibility
  
@@ -290,7 +306,9 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
 
   &.is-invalid{
 
-    label, .label{ color: theme-color("danger"); }
+    label, 
+    .label
+    { color: theme-color("danger"); }
 
     .invalid-feedback{ display: block; }
 
@@ -301,6 +319,30 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
     }
   }
 }
+
+$fieldset-and-legend: true;
+
+@if($fieldset-and-legend){
+
+  fieldset{
+    border: $border-width solid $border-color;
+    margin-bottom: $spacer-5;
+  }
+
+  legend, 
+  .legend{
+    // Add custom styles
+
+    font-size: $fs-md;
+    font-weight: $font-weight-normal;
+    background: theme-color("primary");
+    color: white;
+    padding: $spacer-2;
+    margin-bottom: 0;
+
+  }
+
+} // end if
 
 ////////////////////////////////////////
 // E. Gradients
