@@ -152,62 +152,49 @@ html[dir="rtl"]{
 
 } // end RTL
 
-// Add 'text-decoration: underline' on particular ':focus' selectors
+// Add 'text-decoration: underline' on particular ':hover' and ':focus' selectors
 
-$accessible-hover-focus: true;
 
-@if($accessible-hover-focus){
-
-  a,
-  .btn, 
-  .nav-link,
-  .nav-item, 
-  .dropdown-item
-  {
-    &:hover,
-    &:focus
-    { 
-      text-decoration: underline; 
-    }
+a,
+.btn, 
+.nav-link,
+.nav-item, 
+.dropdown-item
+{
+  @include hover-focus{
+    text-decoration: underline; 
   }
+}
 
-  .btn-toggle a,
-  .accordion-group a,
-  .btn.d-flex.align-items-center
-  a.card,
-  #back-to-top a
-  {
-    &:hover,
-    &:focus
-    { 
+.btn-toggle a,
+.accordion-group a,
+.btn.d-flex.align-items-center
+a.card,
+#back-to-top a
+{
+  @include hover-focus{
+    text-decoration: none;
+    > span.title{ text-decoration: underline; }
+  }
+}
+
+.disabled{
+  @include hover-focus{
+    box-shadow: none;
+    text-decoration: strikethrough;
+    cursor: not-allowed; 
+  }
+}
+
+.has-icon{
+  &:hover{
       text-decoration: none;
-      > span.title{ text-decoration: underline; }
-    }
+      span.title{ text-decoration: underline; }
   }
-
-  .disabled{
-    &:hover,
-    &:focus
-    { box-shadow: none;
-      outline: none;
-      text-decoration: none;
-    }
+  &.active{
+      span.title{ text-decoration: underline; }
   }
-  
-  .has-icon{
-
-    &:hover{
-        text-decoration: none;
-        span.title{ text-decoration: underline; }
-    }
-    
-    &.active{
-        span.title{ text-decoration: underline; }
-    }
-  }
-
-} // end if
-
+}
 
 // Override Bootstrap's default whitespace on '.btn' selectors
 
