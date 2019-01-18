@@ -1343,13 +1343,13 @@
 		},
 	"/images/feature/city-hall-flags.jpg": {
 		"ft": 16384,
-		"iS": 143567,
+		"iS": 142677,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/city-hall-flags.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/images/feature/crosswalk-umbrella.jpg": {
@@ -1475,13 +1475,13 @@
 		},
 	"/images/feature/walk-in-the-park.jpg": {
 		"ft": 16384,
-		"iS": 142620,
+		"iS": 145061,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/walk-in-the-park.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"/images/feature/whitehall-terminal.jpg": {
@@ -2293,7 +2293,7 @@
 		"oAP": "/css/theme.css",
 		"oF": 2,
 		"oS": 3,
-		"uL": 1
+		"uL": 0
 		},
 	"/tearsheet.html": {
 		"cB": 0,

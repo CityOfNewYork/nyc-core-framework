@@ -5,7 +5,7 @@ In this file:
 // A. Citywide header and footer
 // B. Local header and primary nav
 // C. Tab skipper
-// D. Form validation
+// D. Forms
 // E. Gradients
 // F. Featured panels
 // G. Background image cover
@@ -250,22 +250,6 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
 // D. Forms
 ////////////////////////////////////////
 
-legend, 
-.legend{
-
-  // Remove strange default styles on 'legend' selectors
-  // Styles for fieldset and legend are found in _f-ui-elements.scss
-
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  line-height: 1.5;
-  + * { clear: both; }
-  
-}
-
 // Make alerts focusable for accessibility
  
 .alert{
@@ -306,9 +290,7 @@ legend,
 
   &.is-invalid{
 
-    label, 
-    .label
-    { color: theme-color("danger"); }
+    label{ color: theme-color("danger"); }
 
     .invalid-feedback{ display: block; }
 
@@ -320,7 +302,7 @@ legend,
   }
 }
 
-$fieldset-and-legend: false;
+$fieldset-and-legend: true;
 
 @if($fieldset-and-legend){
 
@@ -331,8 +313,6 @@ $fieldset-and-legend: false;
 
   legend, 
   .legend{
-    // Add custom styles
-
     font-size: $fs-md;
     font-weight: $font-weight-normal;
     background: theme-color("primary");
@@ -348,7 +328,7 @@ $fieldset-and-legend: false;
 // E. Gradients
 ////////////////////////////////////////
 
-// Note: Gradients call a custom mixin in '_c-custom-mixins.scss'
+// Gradients call a custom mixin in '_c-custom-mixins.scss'
 
 $gradients: true;
 
@@ -356,15 +336,14 @@ $gradients: true;
 
   [class*="overlay-gradient-"]{
     position: relative; 
-    overflow: hidden;
-
+  
     &::before {
       content: "";
       position: absolute;
-      top: -1px;
-      right: -1px;
-      bottom: -1px;
-      left: -1px;
+      height: 100%;
+      width: 100%;
+      left:0;
+      right: 0;
     }
   }
 
@@ -374,19 +353,31 @@ $gradients: true;
     @include linear-gradient();
   }
 
-  .overlay-gradient-x-info{
-    &::before{
-      @include linear-gradient(
-        $direction: to right,
-        $first-color: theme-color("info"),
-        $second-color: theme-color("info"),
-        $first-color-opacity: 0,
-        $second-color-opacity: .8,
-        $first-color-position: 0,
-        $second-color-position: 100%
-      );
-    }
+  .overlay-gradient-x-white::before{
+    @include linear-gradient(
+      $direction: to left,
+      $first-color: white,
+      $second-color: white,
+      $first-color-opacity: 0,
+      $second-color-opacity: 0.75,
+      $first-color-position: 0,
+      $second-color-position: 100%
+    );
   }
+
+  // Gradient Backgrounds
+
+  // .bg-gradient-x-theme{
+  //   @include linear-gradient(
+  //     $direction: to right,
+  //     $first-color: red,
+  //     $second-color: green,
+  //     $first-color-opacity: 1,
+  //     $second-color-opacity: 1,
+  //     $first-color-position: 0%,
+  //     $second-color-position: 100%
+  //   );
+  // }
 
 } // end if
 
