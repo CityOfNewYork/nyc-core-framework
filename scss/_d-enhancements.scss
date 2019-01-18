@@ -180,8 +180,8 @@ a.card,
 
 .disabled{
   @include hover-focus{
+    text-decoration: none;
     box-shadow: none;
-    text-decoration: strikethrough;
     cursor: not-allowed; 
   }
 }
