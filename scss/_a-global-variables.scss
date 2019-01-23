@@ -89,16 +89,29 @@ $spacers: (
 // $grid-bp-xxl:   1420px;
 // $grid-bp-xxxl:  1660px;
 
-// Set grid gutter width
+// Set grid gutter width (must be set in REM)
 
 $grid-gutter-width: 2rem; // (32px)
 
 // Set container max-width media queries
 
-$container-max-width-sm: ($grid-bp-sm - 40px);
-$container-max-width-md: ($grid-bp-md - 40px);
-$container-max-width-lg: ($grid-bp-lg - 40px);
-$container-max-width-xl: ($grid-bp-xl - 40px);
+// Convert Grid $grid-gutter-width from REM to PX
+
+@function parseInt($n) { 
+  @return $n / ($n * 0 + 1);
+}
+
+@function rem-to-px($size) {
+	$value: parseInt($size) * 16px; // 16px is the base size specified
+	@return round($value);
+}
+
+$container-gutter: rem-to-px($grid-gutter-width);
+ 
+$container-max-width-sm: ($grid-bp-sm - $container-gutter);
+$container-max-width-md: ($grid-bp-md - $container-gutter);
+$container-max-width-lg: ($grid-bp-lg - $container-gutter);
+$container-max-width-xl: ($grid-bp-xl - $container-gutter);
 
 $container-max-widths: (
   sm: ($container-max-width-sm),
@@ -266,7 +279,7 @@ $modal-header-border-color: $border-color;
 
 // Border width
 
-$border-width: 0.0625rem; // equal to 1px 
+$border-width: 1px; // equal to 1px 
 
 // Enable Rounded
 
@@ -353,8 +366,8 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 
 $form-group-margin-bottom: $spacer-5;
 $input-btn-focus-width: .15rem;
-$custom-control-indicator-size: 1.25rem;
-$custom-control-gutter: 1rem;
+// $custom-control-indicator-size: 1.25rem;
+// $custom-control-gutter: 1rem;
 
 // Note: Since version 4.2.1, bootstrap added icons to validate
 // We use more descriptive Font Awesome icons, so we simply turn Bootstrap's off
