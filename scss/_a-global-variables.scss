@@ -30,12 +30,12 @@ In this file:
 // Convert artbitrary breakpoints (i.e. 576px) to meaningful ones
 
 $grid-bp-xs:    0;
-$grid-bp-sm:    400px;
-$grid-bp-md:    800px;
-$grid-bp-lg:    1000px;
+$grid-bp-sm:    480px;
+$grid-bp-md:    720px;
+$grid-bp-lg:    960px;
 $grid-bp-xl:    1200px;
-$grid-bp-xxl:   1400px;
-$grid-bp-xxxl:  1600px;
+$grid-bp-xxl:   1420px;
+$grid-bp-xxxl:  1660px;
 
 $grid-breakpoints: (
   xs:   $grid-bp-xs,
@@ -81,16 +81,24 @@ $spacers: (
 // C. Grid gutter and container widths
 ////////////////////////////////////////
 
+// $grid-bp-xs:    0;
+// $grid-bp-sm:    480px;
+// $grid-bp-md:    720px;
+// $grid-bp-lg:    960px;
+// $grid-bp-xl:    1200px;
+// $grid-bp-xxl:   1420px;
+// $grid-bp-xxxl:  1660px;
+
 // Set grid gutter width
 
 $grid-gutter-width: 2rem; // (32px)
 
 // Set container max-width media queries
 
-$container-max-width-sm: 600px;
-$container-max-width-md: 800px;
-$container-max-width-lg: 1000px;
-$container-max-width-xl: 1200px;
+$container-max-width-sm: ($grid-bp-sm - 40px);
+$container-max-width-md: ($grid-bp-md - 40px);
+$container-max-width-lg: ($grid-bp-lg - 40px);
+$container-max-width-xl: ($grid-bp-xl - 40px);
 
 $container-max-widths: (
   sm: ($container-max-width-sm),

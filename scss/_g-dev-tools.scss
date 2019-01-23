@@ -11,7 +11,8 @@ In this file:
 // A. Breakpoints floating bar
 ////////////////////////////////////////
 
-$breakpoints-bar: false;
+$breakpoints-bar: true;
+
 $breakpoints-bar-bg: fade-out( purple, 0.1 );
 
 @if $breakpoints-bar{
@@ -23,12 +24,12 @@ $breakpoints-bar-bg: fade-out( purple, 0.1 );
         height: auto !important;
         
         &::before{
-            @extend .d-block;
-            @extend .text-white;
-            @extend .text-center;
-            @extend .p-3;
             @extend .sticky-top;
             @extend .shadow-sm;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: $spacer-3;
             z-index: 5000;
             background: $breakpoints-bar-bg;
         }
@@ -53,10 +54,10 @@ $highlight-containers: false;
 @if $highlight-containers{
 
     .container{ background: fade-out(red, 0.25) !important; }
-    .narrow{ background: fade-out(orange, 0.25) !important; }
-    .wide{ background: fade-out(green, 0.25) !important; }
-    .matrix{ background: fade-out(blue, 0.25) !important; }
-    .extensible-list{ background: fade-out(purple, 0.25) !important; }
-    .extensible-list li{ background: fade-out(pink, 0.25) !important; }
+    // .narrow{ background: fade-out(orange, 0.25) !important; }
+    // .wide{ background: fade-out(green, 0.25) !important; }
+    // .matrix{ background: fade-out(blue, 0.25) !important; }
+    // .extensible-list{ background: fade-out(purple, 0.25) !important; }
+    // .extensible-list li{ background: fade-out(pink, 0.25) !important; }
 
 } // end if
