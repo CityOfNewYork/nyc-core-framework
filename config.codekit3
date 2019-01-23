@@ -1291,13 +1291,6 @@
 		"oAP": "/documentation/extensible-lists.html",
 		"oF": 0
 		},
-	"/documentation/using-icons.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/using-icons.html",
-		"oF": 0
-		},
 	"/featured-panels.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1350,13 +1343,13 @@
 		},
 	"/images/feature/city-hall-flags.jpg": {
 		"ft": 16384,
-		"iS": 142677,
+		"iS": 143567,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/city-hall-flags.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/crosswalk-umbrella.jpg": {
@@ -1482,13 +1475,13 @@
 		},
 	"/images/feature/walk-in-the-park.jpg": {
 		"ft": 16384,
-		"iS": 145061,
+		"iS": 142620,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/walk-in-the-park.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/whitehall-terminal.jpg": {
@@ -2300,7 +2293,7 @@
 		"oAP": "/css/theme.css",
 		"oF": 2,
 		"oS": 3,
-		"uL": 0
+		"uL": 1
 		},
 	"/tearsheet.html": {
 		"cB": 0,
