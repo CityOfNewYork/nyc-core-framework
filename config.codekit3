@@ -1571,6 +1571,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/responsive-table.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/responsive-table-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/validation.js": {
 		"ft": 64,
 		"ma": 0,
@@ -4149,7 +4159,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"syntaxCheckerStyle": 3,
 		"transpilerStyle": 0
 		},

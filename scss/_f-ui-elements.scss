@@ -864,91 +864,66 @@ $carousel: false;
 } // end if
 
 ////////////////////////////////////////
-// N. Carousel
+// O. Tables
 ////////////////////////////////////////
 
-table.table.table-accessible-responsive {
-  thead td:empty {
-    border: none;
-  }
+$table-header-color: $info;
+$mobile-header-width: 35%;
 
-  table {
-    border: none;
-  }
+$table-font-size: $fs-md;
 
-  @media(max-width:#{$grid-bp-md}) {
-    thead {
-      @include sr-only;
+table{
+
+  font-size: $table-font-size;
+
+  th{ color: $table-header-color; }
+
+  &.lois-help-us-name-this {
+
+    thead td:empty{ border: none; }
+    
+    @include media-breakpoint-up(lg) {
+      .psuedo-cell{ display: none; }
     }
+    
+    @include media-breakpoint-down(md) {
 
-    tbody tr {
-      display: flex;
-      flex-flow: row wrap;
+      thead { @include sr-only }
 
-      +tr {
-        margin-top: $spacer-5;
-        margin-bottom: $spacer-5;
-      }
-    }
+      tbody tr {
+        display: flex;
+        flex-flow: row wrap;
+        border-top: $border-width solid $table-header-color;
 
-    td {
-      display: flex;
-      align-items: center;
-      word-break: break-all;
-      hyphens: auto;
-
-      &[aria-hidden="true"] {
-        flex-basis: 50%;
-      }
-
-      &:not([aria-hidden="true"]) {
-        flex-basis: 50%;
-      }
-
-      &:nth-of-type(2),
-      &:first-of-type {
-        border-width: 0px 0px 0px 0px;
-      }
-    }
-
-    th {
-      flex-basis: 100%;
-      border-bottom: 1px solid $border-color;
-      border-width: 0 0 1px 0;
-      font-size: 1.25em;
-    }
-
-    &.table-bordered {
-      border: none;
-
-      tr {
-        border: 1px solid $border-color;
-        border-top: none;
+        + tr {
+          margin-top: $spacer-4;
+        }
       }
 
       td {
-        border-width: 1px 0 0 1px;
+        display: flex;
+        align-items: center;
+        word-break: break-all;
+        hyphens: auto;
 
-        &[aria-hidden="true"] {
-          border-left: none;
-        }
+        &[aria-hidden="true"] { flex-basis: $mobile-header-width; }
+
+        &:not([aria-hidden="true"]) { flex-basis: 100% - $mobile-header-width; }
+
+        &:nth-of-type(2),
+        &:first-of-type 
+        { border: none; }
       }
 
       th {
-        border-top: 1px solid $border-color;
-        border-width: 1px 0 0 0;
+        flex-basis: 100%;
+        border-bottom: $border-width solid $border-color;
+        border-width: 0 0 $border-width 0;
+        font-size: 1.25em;
       }
+
     }
 
-    &.table-striped {
-      tr {
-        background: transparent;
-
-        >*:not(th):nth-of-type(4n+1),
-        *:not(th):nth-of-type(4n+2) {
-          background: $table-accent-bg !important;
-        }
-      }
-    }
   }
+
 }

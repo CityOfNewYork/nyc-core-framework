@@ -1,6 +1,6 @@
 $(document).ready(function () {
     headers = [];    
-    $('table.table-accessible-responsive').each(function (i) {
+    $('table.lois-help-us-name-this').each(function (i) {
         headers[i] = [];        
         currentslot = 0; 
         $(this).find('thead tr').each(function (k) {
@@ -41,7 +41,7 @@ $(document).ready(function () {
             var empty = headers[i][k];
             if ((k==0 && empty=="") || (k==0 && empty == "<br>")){
             } else {            
-            $(this).before($("<td>").html(headers[i][k]).addClass("d-md-none").attr("aria-hidden","true").css({"color":tdtextcolor,"background-color":tdbgcolor,"font-weight":tdfontweight}));              
+            $(this).before($("<td>").html(headers[i][k]).addClass("psuedo-cell").attr("aria-hidden","true").css({"color":tdtextcolor,"background-color":tdbgcolor,"font-weight":tdfontweight}));              
             }
         });            
     });    
@@ -49,7 +49,7 @@ $(document).ready(function () {
     //// add roles so when display: properties change for mobile screen readers still see the table as table
     // if no caption, whatever element the table is labelledy by should have #responsiveTable-label-(n)
     
-    $('table.table-accessible-responsive').each(function (i) {
+    $('table.table-responsive').each(function (i) {
         $(this).attr("aria-labelledby", "responsiveTable-" + i);
         $(this).find("caption").attr("id", "responsiveTable-label-" + i);
         $(this).find("td").attr("role", "gridcell");

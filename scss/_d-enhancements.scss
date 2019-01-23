@@ -275,9 +275,9 @@ label,
 // F. Tables
 ////////////////////////////////////////
 
-thead th {
-  border-bottom: none;
-}
+// Remove Bootstrap's Default doouble bottom border on <th> 
+
+thead th { @extend .border-bottom-0; }
 
 ////////////////////////////////////////
 // F. Font size media queries
