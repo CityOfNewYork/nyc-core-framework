@@ -67,3 +67,33 @@ pre.prettyprint {
     font-size: $fs-sm;
     white-space: pre !important;
 }
+
+$button-size: 3rem;
+$button-bg-color: theme-color('info');
+
+ul.zoom-and-location{
+
+    @include list-unstyled();
+
+    li{  margin-bottom: 0.25rem; }
+
+    button{
+        @extend .no-btn-style;
+        @extend .rounded-circle;
+        color: white;
+        background: rgba($button-bg-color, .8);
+        height: $button-size;
+        width: $button-size;
+        display: flex;
+        align-items: center;
+
+        span[role="img"]{
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        @include hover-focus{
+            background-color: $button-bg-color;
+        }
+    }
+}

@@ -276,63 +276,172 @@
         
         <article class="py-8" id="primary-content">
 
-            <div class="container-fluid bg-warning">
+                <section class="container py-5">
+                    <h2>Map Example</h2>
+                    <div id="map-search"></div>
+                    <div id="map"></div>
+                </section>
 
-                    <div class="my-5">
+                <section class="container py-5">
+                    <h2>Map Buttons</h2>
+
+                <div class="zoom">
+                    <button class="btn-z-in btn-sq rad-all" data-zoom-incr="1" title="Zoom in">
+                        <!-- <span class="screen-reader-only">Zoom in</span> -->
+                        <span class="fas fa-plus" title="Zoom in" role="img"></span>
+                    </button>
+                    <button class="btn-z-out btn-sq rad-all" data-zoom-incr="-1" title="Zoom out">
+                        <!-- <span class="screen-reader-only">Zoom out</span> -->
+                        <span class="fas fa-minus" title="Zoom out" role="img"></span>
+                    </button>
+                </div>
+                <!-- .zoom -->
+
+                <div class="geoloc">
+                    <button class="btn-geo btn-sq rad-all" title="Current location">
+                        <!-- <span class="screen-reader-only">Current location</span> -->
+                        <span class="fas fa-location-arrow" title="Zoom out" role="img"></span>
+                    </button>
+                </div>
+                <!-- .geoloc -->
+
+                <ul class="extensible-list my-5">
+
+                    <li>
+                        <button class="btn-z-in btn-sq rad-all btn btn-lg btn-dark" data-zoom-incr="1" title="Zoom in">
+                            <!-- <span class="screen-reader-only">Zoom in</span> -->
+                            <span class="fas fa-plus" title="Zoom in" role="img"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn-z-out btn-sq rad-all btn btn-lg btn-dark" data-zoom-incr="-1" title="Zoom out">
+                            <!-- <span class="screen-reader-only">Zoom out</span> -->
+                            <span class="fas fa-minus" title="Zoom out" role="img"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn-geo btn-sq rad-all btn btn-lg btn-dark" title="Current location">
+                            <!-- <span class="screen-reader-only">Current location</span> -->
+                            <span class="fas fa-location-arrow" title="Zoom out" role="img"></span>
+                        </button>
+                    </li>
+                </ul>
+
+                <ul class="zoom-and-location my-5">
+
+                        <li>
+                            <button class="btn-z-in btn-sq rad-all" data-zoom-incr="1" title="Zoom in">
+                                <!-- <span class="screen-reader-only">Zoom in</span> -->
+                                <span class="fas fa-plus" title="Zoom in" role="img"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn-z-out btn-sq rad-all" data-zoom-incr="-1" title="Zoom out">
+                                <!-- <span class="screen-reader-only">Zoom out</span> -->
+                                <span class="fas fa-minus" title="Zoom out" role="img"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn-geo btn-sq rad-all" title="Current location">
+                                <!-- <span class="screen-reader-only">Current location</span> -->
+                                <span class="fas fa-location-arrow" title="Zoom out" role="img"></span>
+                            </button>
+                        </li>
+                    </ul>
+
+
+                </section>
+
+
+
+            <section class="d-none">
+
+            <div class="container-fluid">
+
+                <div class="row no-gutters">
+
+                    <div class="col d-none d-lg-flex bg-warning">
+                        <div class="embed-responsive embed-responsive-1by1">
+                            <iframe class="embed-responsive-item" src="https://maps.nyc.gov/nyc-lib/v1.2.16/examples/ol/basemap.html"></iframe>
+                        </div>
+
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col bg-danger">
+
+                        <div class="map-tabs w-100">
 
                             <div class="nav nav-pills bg-light" role="tablist">
-    
-                                <a class="nav-item nav-link flex-sm-fill text-sm-center active" id="tab-btn-01-a" href="#tab-01-a" data-toggle="pill"
-                                    aria-controls="tab-01-a" aria-selected="true" role="tab">
-                                    Tab One
+
+                                <a class="nav-item nav-link flex-fill text-center active d-lg-none" id="tab-btn-01-a" href="#tab-01-a"
+                                    data-toggle="pill" aria-controls="tab-01-a" aria-selected="true" role="tab">
+                                    Map
                                 </a>
-    
-                                <a class="nav-item nav-link flex-sm-fill text-sm-center" id="tab-btn-01-b" href="#tab-01-b" data-toggle="pill"
+
+                                <a class="nav-item nav-link flex-fill text-center" id="tab-btn-01-b" href="#tab-01-b" data-toggle="pill"
                                     aria-controls="tab-01-b" aria-selected="false" role="tab">
                                     Tab Two
                                 </a>
-    
-                                <a class="nav-item nav-link flex-sm-fill text-sm-center bg-warning" id="tab-btn-01-c" href="#tab-01-c" data-toggle="pill"
+
+                                <a class="nav-item nav-link flex-fill text-center" id="tab-btn-01-c" href="#tab-01-c" data-toggle="pill"
                                     aria-controls="tab-01-c" aria-selected="false" role="tab">
                                     Tab Three
                                 </a>
-    
+
                             </div>
-    
-                            <div class="tab-content bg-secondary text-white p-3" id="tabs-01-content">
-    
-                                <div class="tab-pane fade show active" id="tab-01-a" aria-labelledby="tab-btn-01-a" role="tabpanel">
-                                    <h3>Tab One Content</h3>
-                                    <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
-                                        non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
-                                        porttitor est volutpat parturient scelerisque.</p>
+
+                            <div class="tab-content" id="tabs-01-content">
+
+                                <div class="tab-pane fade show active d-lg-none" id="tab-01-a" aria-labelledby="tab-btn-01-a" role="tabpanel">
+
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://maps.nyc.gov/nyc-lib/v1.2.16/examples/ol/basemap.html"></iframe>
+                                    </div>
+
                                 </div>
-    
+
                                 <div class="tab-pane fade" id="tab-01-b" aria-labelledby="tab-btn-01-b" role="tabpanel">
                                     <h3>Tab Two Content</h3>
-                                    <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
-                                        non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
+                                    <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                                        pretium et
+                                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                                        sapien potenti
+                                        non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                                        dictumst
                                         porttitor est volutpat parturient scelerisque.</p>
                                 </div>
-    
+
                                 <div class="tab-pane fade" id="tab-01-c" aria-labelledby="tab-btn-01-c" role="tabpanel">
                                     <h3>Tab Three Content</h3>
-                                    <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
-                                        non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
+                                    <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                                        pretium et
+                                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                                        sapien potenti
+                                        non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                                        dictumst
                                         porttitor est volutpat parturient scelerisque.</p>
                                 </div>
                             </div>
-    
+
                         </div>
                         <!-- #tabs 01 -->
-    
+
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
 
             </div>
             <!-- .container -->
+
+
+            </section>
             
+
+
+
         </article>
         <!-- #primary-content -->
 
@@ -601,6 +710,27 @@
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="./js/main.js"></script>
 
+    <!-- <link href="https://maps.nyc.gov/nyc-lib/v1.2.17/css/nyc-ol-lib.css" rel="stylesheet"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.17/js/babel-polyfill.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.17/js/nyc-ol-lib.js"></script>
+
+    <script>
+
+        var map = new nyc.ol.Basemap({
+                target: 'map',
+                interactions: ol.interaction.defaults({ mouseWheelZoom: false })
+        });
+        
+        var locationMgr = new nyc.ol.LocationMgr({
+            map: map,
+            searchTarget: '#map-search',
+            url: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+        });
+
+    </script>
+    
 </body>
 
 </html>
