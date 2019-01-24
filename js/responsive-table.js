@@ -32,7 +32,9 @@ $(document).ready(function () {
                 });
             }
         });
+
         //get styles and add header information back in
+        
         $(this).find("tbody tr").each(function(){
             $(this).find("> *").each(function(k){                    
             var tdtextcolor = $(this).closest("table").find("th").css("color");
@@ -46,6 +48,7 @@ $(document).ready(function () {
         });            
     });    
     });
+
     //// add roles so when display: properties change for mobile screen readers still see the table as table
     // if no caption, whatever element the table is labelledy by should have #responsiveTable-label-(n)
     

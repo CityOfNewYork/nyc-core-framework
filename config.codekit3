@@ -1298,13 +1298,6 @@
 		"oAP": "/documentation/using-icons.html",
 		"oF": 0
 		},
-	"/featured-panels.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/featured-panels.html",
-		"oF": 0
-		},
 	"/forms.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1567,15 +1560,15 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "/js/main-min.js",
-		"oF": 1,
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
 	"/js/responsive-table.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
-		"oA": 0,
+		"mi": 0,
+		"oA": 1,
 		"oAP": "/js/responsive-table-min.js",
 		"oF": 0,
 		"sC": 3,
@@ -1587,15 +1580,15 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/js/validation-min.js",
-		"oF": 1,
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/maps.html": {
+	"/map.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/maps.html",
+		"oAP": "/map.html",
 		"oF": 0
 		},
 	"/project-icon.png": {
@@ -4152,7 +4145,7 @@
 		"quality": 100
 		},
 	"languageDefaultsJS": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*-min.js",
 		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
@@ -4160,7 +4153,7 @@
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 0,
-		"syntaxCheckerStyle": 3,
+		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
