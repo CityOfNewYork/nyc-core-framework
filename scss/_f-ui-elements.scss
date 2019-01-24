@@ -706,12 +706,14 @@ $toggles-and-accordions: true;
 
 @mixin responsive-nav-pills-and-tabs-settings(){
   
+  flex-direction: column;
+
   border-color: $transparent;
 
-  .nav-link.active{ border-bottom-color: $border-color; }
+  .nav-link{ border-color: $border-color; }
 
   @if $enable-rounded {
-    .nav-link.active{ 
+    .nav-link{ 
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
@@ -725,18 +727,24 @@ $responsive-nav-pills-and-tabs: true;
   .nav-pills,
   .nav-tabs
   {
+
     &[class*="responsive-"]{
-      .nav-link{ @extend .text-center; }
-      @extend .flex-column;
+      .nav-link{ text-align: center; }
     } 
 
     @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      @if $breakpoint != '0'{
-        &.responsive#{$infix}{ @extend .flex#{$infix}-row; }
+      @if $next {
+        &.responsive-#{$next}{
+          @include media-breakpoint-down($breakpoint) {
+            @include responsive-nav-pills-and-tabs-settings();
+          }
+        }
       }
     }
+
   }
   
   .nav-tabs{
@@ -868,6 +876,7 @@ $carousel: false;
 ////////////////////////////////////////
 
 $table-header-color: $info;
+
 $mobile-header-width: 35%;
 
 $table-font-size: $fs-md;
@@ -878,7 +887,7 @@ table{
 
   th{ color: $table-header-color; }
 
-  &.lois-help-us-name-this {
+  &.table-row-mobile-stack {
 
     thead td:empty{ border: none; }
     

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     headers = [];    
-    $('table.lois-help-us-name-this').each(function (i) {
+    $('table.table-row-mobile-stack').each(function (i) {
         headers[i] = [];        
         currentslot = 0; 
         $(this).find('thead tr').each(function (k) {
