@@ -615,11 +615,11 @@ $toggles-and-accordions: true;
 
   $accordion-title-color: theme-color("primary");
   $accordion-bg-color: theme-color("light");
-
-  .btn-toggle a,
-  .accordion-group a
+.seans-nav,
+  .btn-toggle,
+  .accordion-group
   {
-    &[data-toggle="collapse"]{
+    [data-toggle="collapse"]{
       @extend .d-flex;
       @extend .align-items-center;
       @extend .justify-content-between;

@@ -1591,6 +1591,13 @@
 		"oAP": "/map.html",
 		"oF": 0
 		},
+	"/primary-navigation-sidebar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/primary-navigation-sidebar.html",
+		"oF": 0
+		},
 	"/project-icon.png": {
 		"ft": 32768,
 		"iS": 1035,
