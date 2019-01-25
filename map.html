@@ -731,6 +731,24 @@
             url: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
         });
 
+        var source = new ol.source.Vector({
+            features: [
+                new ol.Feature({
+                    geometry: new ol.geom.Point([-8235252, 4969073]),
+                    name: 'The geographic center of NYC'
+                })
+            ]
+        });
+        
+        var layer = new ol.layer.Vector({source: source});
+        
+        map.addLayer(layer);
+        
+        new nyc.ol.MultiFeaturePopup({
+            map: map,
+            layers: [layer]
+        });
+        
     </script>
     
 </body>
