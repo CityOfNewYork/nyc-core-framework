@@ -615,38 +615,40 @@ $toggles-and-accordions: true;
 
   $accordion-title-color: theme-color("primary");
   $accordion-bg-color: theme-color("light");
-.seans-nav,
+
   .btn-toggle,
   .accordion-group
   {
     [data-toggle="collapse"]{
-      @extend .d-flex;
-      @extend .align-items-center;
-      @extend .justify-content-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
     }
   }
 
   // Generic toggle button
 
-  a.btn[data-toggle="collapse"] {
-    overflow: hidden;
+  .btn-toggle {
 
-    &::after {
-      content: "\f067";
-      @extend %fa-icon;
+    [data-toggle="collapse"] {
+      overflow: hidden;
 
-      // @extend .ml-auto;
-    }
+      &::after {
+        content: "\f067";
+        @extend %fa-icon;
+      }
 
-    // Change the right icon here. Go to https://fontawesome.com/icons
-    // Find your icons and paste the unicode below
+      // Change the right icon here. Go to https://fontawesome.com/icons
+      // Find your icons and paste the unicode below
 
-    &[aria-expanded="true"]::after {
-      content: "\f068";
-    }
+      &[aria-expanded="true"]::after {
+        content: "\f068";
+      }
 
-    &[aria-expanded="false"]::after {
-      content: "\f067";
+      &[aria-expanded="false"]::after {
+        content: "\f067";
+      }
     }
   }
 
@@ -657,12 +659,12 @@ $toggles-and-accordions: true;
     .card, 
     .card-header
     { 
-      @extend .border-0;
+      border: 0;
       
       @if $enable-rounded {
-        @extend .rounded;
+        border-radius: $border-radius;
       } @else{
-        @extend .rounded-0;
+        border-radius: 0;
       }
     }
 
@@ -670,7 +672,7 @@ $toggles-and-accordions: true;
 
     a[data-toggle="collapse"]{
       
-      @if $accordion-button-border { @extend .border; }
+      @if $accordion-button-border { border: $border-width solid $border-color; }
       @if $accordion-button-shadow { @extend .shadow-sm; }
 
       color: $accordion-title-color;
@@ -678,7 +680,6 @@ $toggles-and-accordions: true;
       &:after{ 
         content: "\f067";
         @extend %fa-icon;
-        // @extend .ml-auto;
       }
 
       &[aria-expanded="true"]{
