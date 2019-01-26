@@ -151,6 +151,11 @@ html[dir="rtl"]{
     padding-right: ($custom-control-gutter + $custom-control-indicator-size);
   }
 
+  button > font{
+    display: inline;
+    line-height: 0;
+  }
+
 } // end RTL
 
 // Add 'text-decoration: underline' on particular ':hover' and ':focus' selectors

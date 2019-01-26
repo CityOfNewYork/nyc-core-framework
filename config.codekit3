@@ -16,6 +16,13 @@
 		"oAP": "/.gitattributes",
 		"oF": 0
 		},
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/article-centered.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1183,6 +1190,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/css/theme.css.map",
+		"oF": 0
+		},
+	"/data.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/data.csv",
 		"oF": 0
 		},
 	"/dist/css/bootstrap-grid.min.css": {
