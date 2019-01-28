@@ -11,7 +11,7 @@ In this file:
 // A. Breakpoints floating bar
 ////////////////////////////////////////
 
-$breakpoints-bar: true;
+$breakpoints-bar: false;
 
 $breakpoints-bar-bg: fade-out( purple, 0.1 );
 
@@ -49,7 +49,7 @@ $breakpoints-bar-bg: fade-out( purple, 0.1 );
 // B. Container highlighter
 ////////////////////////////////////////
 
-$highlight-containers: true;
+$highlight-containers: false;
 
 @if $highlight-containers{
 
