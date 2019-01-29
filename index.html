@@ -20,76 +20,336 @@
     <link rel="stylesheet" href="./css/theme.css">
 
     <style>
-    
+
+        html, 
+        body,
+        #cool
+        { 
+            /* height:100%; */
+            min-height: 100vh;
+        }
+
         iframe {
             border: none;
             width: 100%;
+            margin: 0;
         }
 
-        #nav-tabs a.nav-item{
+        #nav-tabs a.nav-item, 
+        .list-group-item{
             color: white !important;
+        }
+
+        .list-group-item{
+            border: none !important;
+            margin-bottom: 0 !important;
+        }
+
+        .list-group-item,
+        .list-group-item:not(.active):hover{
+            background: none;
+        }
+
+        .list-group-item.active{
+            background-color: rgba(49,119,200,0.5);
+        }
+        .list-group-item:not(.active):hover{
+            background-color: rgba(0,0,0,0.1);
         }
 
     </style>
 
 </head>
 
-<body class="bg-primary text-white">
+<body class="bg-primary">
 
-    <div class="container-fluid px-0">
+    <div class="row no-gutters bg-opacity-black-10">
 
-        <div class="row no-gutters py-4">
+        <div class="col-lg-2 text-white">
 
-            <div class="col-12 mb-4">
+            <div class="sticky-top">
 
-                <div class="px-2 px-md-4 text-center">
-                    <div class="narrow">
-                        <h1>NYC Core Framework</h1>
+                <div class="row no-gutters align-items-center">
+
+                    <div class="col p-2">
+                        <h1 class="h4">NYC Core<br>Framework</h1>
+                        <p class="fs-md opacity-50">Beta</p>
                     </div>
-                    <!-- .narrow -->
+
+                    <div class="col-auto d-lg-none p-2">
+                        <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#sidebar-menu" aria-controls="sidebar-menu"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="d-flex align-items-center">
+                                <span class="fas fa-bars fs-lg" role="img"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <!-- .col -->
+                    
                 </div>
+                <!-- .row -->
+
+                <div id="sidebar-menu" class="collapse d-lg-block">
+
+                        <div class="py-2">
+
+                    <nav class="list-group list-group-flush fs-md" id="list-tab" role="tablist">
+
+                        <a class="list-group-item list-group-item-action active" id="tab-01-tab" data-toggle="list" href="#tab-01" role="tab"
+                            aria-controls="tab-01">Global Nav Across</a>
+
+                        <a class="list-group-item list-group-item-action" id="tab-02-tab" data-toggle="list" href="#tab-02" role="tab"
+                            aria-controls="tab-02">Global Nav Right</a>
+
+                        <a class="list-group-item list-group-item-action" id="tab-03-tab" data-toggle="list" href="#tab-03" role="tab"
+                            aria-controls="tab-03">Article Centered</a>
+
+                        <a class="list-group-item list-group-item-action" id="tab-04-tab" data-toggle="list" href="#tab-04" role="tab"
+                            aria-controls="tab-04">Article Sidebar</a>
+
+                        <a class="list-group-item list-group-item-action" id="tab-05-tab" data-toggle="list" href="#tab-05" role="tab"
+                            aria-controls="tab-05">Form</a>
+
+                        <a class="list-group-item list-group-item-action" id="tab-06-tab" data-toggle="list" href="#tab-06" role="tab"
+                            aria-controls="tab-06">Map</a>
+
+                        <a class="list-group-item list-group-item-action" id="tab-07-tab" data-toggle="list" href="#tab-07" role="tab"
+                            aria-controls="tab-06">Tearsheet</a>
+
+                    </nav>
+                        </div>
+
+
+                </div>
+                <!-- #sidebar-menu -->
 
             </div>
-            <!-- .col -->
+            <!-- .sticky-top -->
+
+        </div>
+        <!-- .col -->
+
+        <div class="col-lg-10 shadow-lg bg-white z-index-900" id="cool">
+
+            <div class="tab-content">
+
+                <div class="tab-pane fade show active" id="tab-01" role="tabpanel" aria-labelledby="tab-01-tab">
+
+                    <div class="p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center">
+                            <li>
+                                <a class="no-btn-style" href="homepage-01.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/homepage-01.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .p-2 -->
+
+                    <iframe src="homepage-01.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+                <div class="tab-pane fade" id="tab-02" role="tabpanel" aria-labelledby="tab-02-tab">
+
+                    <div class="p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center">
+                            <li>
+                                <a class="no-btn-style" href="homepage-02.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/homepage-02.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .bg-opacity-black-10 -->
+
+                    <iframe src="homepage-02.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+                <div class="tab-pane fade" id="tab-03" role="tabpanel" aria-labelledby="tab-03-tab">
+
+                    <div class="p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center">
+                            <li>
+                                <a class="no-btn-style" href="article-centered.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/article-centered.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .bg-opacity-black-10 -->
+
+                    <iframe src="article-centered.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+                <div class="tab-pane fade" id="tab-04" role="tabpanel" aria-labelledby="tab-04-tab">
+
+                    <div class="p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center opacity-50">
+                            <li>
+                                <a class="no-btn-style text-white" href="article-sidebar.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style text-white" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/article-sidebar.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .bg-opacity-black-10 -->
+
+                    <iframe class="shadow-lg" src="article-sidebar.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+                <div class="tab-pane fade" id="tab-05" role="tabpanel" aria-labelledby="tab-05-tab">
+
+                    <div class="p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center">
+                            <li>
+                                <a class="no-btn-style" href="form.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/form.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .bg-opacity-black-10 -->
+
+                    <iframe src="form.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+                <div class="tab-pane fade" id="tab-06" role="tabpanel" aria-labelledby="tab-06-tab">
+
+                    <div class="p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center">
+                            <li>
+                                <a class="no-btn-style" href="map.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/map.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .bg-opacity-black-10 -->
+
+                    <iframe src="map.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+                <div class="tab-pane fade" id="tab-07" role="tabpanel" aria-labelledby="tab-07-tab">
+
+                    <div class="p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center">
+                            <li>
+                                <a class="no-btn-style" href="tearsheet.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/tearsheet.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- .bg-opacity-black-10 -->
+
+                    <iframe src="tearsheet.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+            </div>
+            <!-- #tab-content -->
+
+            <div class="p-2 mb-1 text-center back-to-top">
+                <a class="text-body" href="#" id="top">back to top</a>
+            </div>
+            <!-- .p2 -->
+                
+        </div>
+        <!-- .col -->
+
+    </div>
+    <!-- .row -->
+
+    <div class="container-fluid px-0 py-5 d-none">
+
+        <div class="row no-gutters">
 
             <div class="col-12">
                     
                 <div class="px-md-2 px-xxl-4">
-
-                    <div class="nav nav-pills bg-opacity-black-20 fs-md" id="nav-tabs" role="tablist">
-
-                        <a class="nav-item nav-link flex-fill text-center text-white active" id="tab-btn-01" href="#tab-01" data-toggle="pill"
-                            aria-controls="tab-01" aria-selected="true" role="tab">
-                            1
-                        </a>
-
-                        <a class="nav-item nav-link flex-fill text-center text-white" id="tab-btn-02" href="#tab-02" data-toggle="pill"
-                            aria-controls="tab-02" aria-selected="false" role="tab">
-                            2
-                        </a>
-
-                        <a class="nav-item nav-link flex-fill text-center text-white" id="tab-btn-03" href="#tab-03" data-toggle="pill"
-                            aria-controls="tab-03" aria-selected="false" role="tab">
-                            3
-                        </a>
-
-                        <a class="nav-item nav-link flex-fill text-center text-white" id="tab-btn-04" href="#tab-04" data-toggle="pill"
-                            aria-controls="tab-04" aria-selected="false" role="tab">
-                            4
-                        </a>
-                        <a class="nav-item nav-link flex-fill text-center text-white" id="tab-btn-05" href="#tab-05" data-toggle="pill"
-                            aria-controls="tab-05" aria-selected="false" role="tab">
-                            5
-                        </a>
-                        <a class="nav-item nav-link flex-fill text-center text-white" id="tab-btn-06" href="#tab-06" data-toggle="pill"
-                            aria-controls="tab-06" aria-selected="false" role="tab">
-                            6
-                        </a>
-                        <a class="nav-item nav-link flex-fill text-center text-white" id="tab-btn-07" href="#tab-07" data-toggle="pill"
-                            aria-controls="tab-07" aria-selected="false" role="tab">
-                            7
-                        </a>
-                    </div>
 
                     <div class="tab-content" id="tabs-01-content">
 
@@ -113,7 +373,7 @@
                                 </ul>
 
                             </div>
-                            <!-- .bg-opacity-black-10 -->
+                            <!-- .p-2 -->
 
                             <iframe class="shadow-lg" src="homepage-01.html"></iframe>
                             
@@ -140,7 +400,7 @@
                                 </ul>
 
                             </div>
-                            <!-- .bg-opacity-black-10 -->
+                            <!-- .p-2 -->
 
                             <iframe class="shadow-lg" src="homepage-02.html"></iframe>
 
@@ -317,11 +577,17 @@
                 resizeIframe($(this));
             });
 
-            $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+            $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
                 var id = $(this).attr('href');
                 var iframe = $(id + ' iframe');
                 resizeIframe(iframe);
             });
+
+        $('#top').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 800 );
+        });
 
     </script>
 
