@@ -286,7 +286,14 @@
                     <div id="pod-list" style="margin-top:20px;height:600px;"></div>
                 </section>
 
-
+                <section class="container py-5">
+                    <h2>Pre-K Map</h2>
+                    <input id="prek-map-search" placeholder="Enter sumphin..." class="this that other">
+                    <div id="prek-map"></div>
+                    <div id="prek-list" style="margin-top:20px;height:600px;"></div>
+                </section>
+        
+            
             
 
             <section class="d-none">
@@ -657,9 +664,18 @@
         var podMap = new nyc.ol.FrameworkMap({
             mapTarget: '#pod-map',
             searchTarget: '#pod-map-search',
-            listTarget: '#location-list',
+            listTarget: '#pod-list',
             facilityType: 'Points of Distribution',
             facilityUrl: 'map-data/pod.csv',
+            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+        });
+        
+        var prekMap = new nyc.ol.FrameworkMap({
+            mapTarget: '#prek-map',
+            searchTarget: '#prek-map-search',
+            listTarget: '#prek-list',
+            facilityType: 'Schools',
+            facilityUrl: 'map-data/prek.csv',
             geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
         });
         
