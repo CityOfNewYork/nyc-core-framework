@@ -14,7 +14,7 @@
     <title>Home • NYC Templates</title>
 
     <!-- MAPS -->
-    <link href="https://maps.nyc.gov/nyc-lib/v1.2.25/css/nyc-basic-lib.css" rel="stylesheet">
+    <link href="https://maps.nyc.gov/nyc-lib/v1.2.26/css/nyc-basic-lib.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -280,10 +280,10 @@
         <article class="py-8" id="primary-content">
 
                 <section class="container py-5">
-                    <h2>Map Example</h2>
-                    <input id="map-search" placeholder="Enter sumphin..." class="this that other">
-                    <div id="map"></div>
-                    <div id="location-list" style="margin-top:20px;height:600px;"></div>
+                    <h2>Points of Distribution Map</h2>
+                    <input id="pod-map-search" placeholder="Enter sumphin..." class="this that other">
+                    <div id="pod-map"></div>
+                    <div id="pod-list" style="margin-top:20px;height:600px;"></div>
                 </section>
 
 
@@ -654,11 +654,12 @@
 
     <script>
 
-        var map = new nyc.ol.FrameworkMap({
-            mapTarget: '#map',
-            searchTarget: '#map-search',
+        var podMap = new nyc.ol.FrameworkMap({
+            mapTarget: '#pod-map',
+            searchTarget: '#pod-map-search',
             listTarget: '#location-list',
-            csvUrl: 'data.csv',
+            facilityType: 'Points of Distribution',
+            facilityUrl: 'data/pod.csv',
             geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
         });
         
