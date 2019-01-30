@@ -441,7 +441,7 @@ $bg-fixed-height: 350px;
   &.fixed-height{
     display: flex;
     align-items: center;
-    height: $bg-fixed-height;
+    min-height: $bg-fixed-height;
   }
 
   > div{
