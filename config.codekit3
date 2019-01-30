@@ -1612,13 +1612,6 @@
 		"oAP": "/map-data/prek.csv",
 		"oF": 0
 		},
-	"/map.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/map.html",
-		"oF": 0
-		},
 	"/primary-navigation-sidebar.html": {
 		"cB": 0,
 		"ft": 8192,
