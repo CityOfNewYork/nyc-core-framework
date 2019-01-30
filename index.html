@@ -306,7 +306,12 @@
                     </div>
                     <!-- .bg-opacity-black-10 -->
 
-                    <iframe src="map.html"></iframe>
+                    <iframe id="map-iframe"></iframe>
+                    <script>
+                        $('#tab-06-tab').click(function() {
+                            $('#map-iframe').attr('src', 'map.html');
+                        });
+                    </script>
 
                 </div>
                 <!-- .tab-pane -->
