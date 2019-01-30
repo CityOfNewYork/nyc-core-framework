@@ -16,6 +16,13 @@
 		"oAP": "/.gitattributes",
 		"oF": 0
 		},
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/article-centered.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1168,6 +1175,13 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/containers.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/containers.html",
+		"oF": 0
+		},
 	"/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1583,6 +1597,27 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/map-data/pod.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/map-data/pod.csv",
+		"oF": 0
+		},
+	"/map-data/prek.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/map-data/prek.csv",
+		"oF": 0
+		},
+	"/map.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/map.html",
+		"oF": 0
 		},
 	"/primary-navigation-sidebar.html": {
 		"cB": 0,
@@ -2311,6 +2346,13 @@
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
+		},
+	"/tearsheet.1.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/tearsheet.1.html",
+		"oF": 0
 		},
 	"/tearsheet.html": {
 		"cB": 0,

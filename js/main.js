@@ -72,7 +72,7 @@ $(document).ready(function () {
 
     if( $('#back-to-top').length ){
 
-        $('#back-to-top').click(function() {
+        $('#back-to-top > a').click(function() {
             $('body, html').animate({
                 scrollTop: 0
             }, scroll_speed );
