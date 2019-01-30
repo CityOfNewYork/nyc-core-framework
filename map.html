@@ -14,7 +14,7 @@
     <title>Home • NYC Templates</title>
 
     <!-- MAPS -->
-    <link href="https://maps.nyc.gov/nyc-lib/v1.2.28/css/nyc-basic-lib.css" rel="stylesheet">
+    <link href="https://maps.nyc.gov/nyc-lib/v1.2.31/css/nyc-basic-lib.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -281,16 +281,13 @@
 
                 <section class="container py-5">
                     <h2>Points of Distribution Map</h2>
-                    <input id="pod-map-search" placeholder="Enter sumphin..." class="this that other">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <div id="pod-map" class="embed-responsive-item"></div>
-                    </div>
+                    <input id="pod-map-search" placeholder="Enter sumphin..." class="form-control form-control-lg">
+                    <div id="pod-map"></div>
                     <div id="pod-list" style="margin-top:20px;height:600px;"></div>
                 </section>
 
                 <section class="container py-5">
                     <h2>Pre-K Map</h2>
-                    <input id="prek-map-search" placeholder="Enter sumphin..." class="this that other">
                     <div id="prek-map"></div>
                     <div id="prek-list" style="margin-top:20px;height:600px;"></div>
                 </section>
@@ -658,8 +655,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.4.0/papaparse.min.js"></script>
-    <script src="https://maps.nyc.gov/nyc-lib/v1.2.28/js/babel-polyfill.js"></script>
-    <script src="https://maps.nyc.gov/nyc-lib/v1.2.28/js/nyc-ol-lib.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.31/js/babel-polyfill.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.31/js/nyc-ol-lib.js"></script>
 
     <script>
 
@@ -674,7 +671,6 @@
 
         var prekMap = new nyc.ol.FrameworkMap({
             mapTarget: '#prek-map',
-            searchTarget: '#prek-map-search',
             listTarget: '#prek-list',
             facilityType: 'Schools',
             facilityUrl: 'map-data/prek.csv',
