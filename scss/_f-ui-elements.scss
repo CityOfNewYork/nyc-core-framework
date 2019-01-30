@@ -440,13 +440,13 @@ $bg-fixed-height: 350px;
 
   &.fixed-height{
     display: flex;
-    align-items: center;
     min-height: $bg-fixed-height;
   }
 
   > div{
     position: relative;
     z-index: 100;
+    align-self: center;
   }
 
   &::before{
