@@ -16,6 +16,13 @@
 		"oAP": "/.gitattributes",
 		"oF": 0
 		},
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/article-centered.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1168,6 +1175,13 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/containers.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/containers.html",
+		"oF": 0
+		},
 	"/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1343,7 +1357,7 @@
 		},
 	"/images/feature/city-hall-flags.jpg": {
 		"ft": 16384,
-		"iS": 143567,
+		"iS": 142677,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/city-hall-flags.jpg",
@@ -1475,7 +1489,7 @@
 		},
 	"/images/feature/walk-in-the-park.jpg": {
 		"ft": 16384,
-		"iS": 142620,
+		"iS": 145061,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/walk-in-the-park.jpg",
@@ -1583,6 +1597,27 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/map-data/pod.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/map-data/pod.csv",
+		"oF": 0
+		},
+	"/map-data/prek.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/map-data/prek.csv",
+		"oF": 0
+		},
+	"/map.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/map.html",
+		"oF": 0
 		},
 	"/primary-navigation-sidebar.html": {
 		"cB": 0,
