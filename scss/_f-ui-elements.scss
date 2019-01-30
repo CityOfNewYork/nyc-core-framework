@@ -432,54 +432,48 @@ $featured-panel: true;
 // G. Background image cover
 ////////////////////////////////////////
 
-$bg-cover: true;
+$bg-fixed-image-opacity: 0.4;
+$bg-fixed-height: 350px;
 
-@if($bg-cover){
+.bg-cover{
+  position: relative;
 
-  $bg-fixed-image-opacity: 0.4;
-  $bg-fixed-height: 350px;
+  &.fixed-height{
+    display: flex;
+    align-items: center;
+    height: $bg-fixed-height;
+  }
 
-  .bg-cover{
+  > div{
     position: relative;
+    z-index: 100;
+    align-self: center;
+  }
 
-    &.fixed-height{
-      display: flex;
-      align-items: center;
-      height: $bg-fixed-height;
-    }
+  &::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: auto;
 
-    > div{
-      position: relative;
-      z-index: 100;
-      align-self: center;
-    }
+    @include opacity( $bg-fixed-image-opacity );
+    @include apply-background-image;
 
+  }
+
+  // Add your own backround classes and append them to the '.bg-cover' selector
+
+  &.bridge{
     &::before{
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top:0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: auto;
-
-      @include opacity( $bg-fixed-image-opacity );
-      @include apply-background-image;
-
-    }
-
-    // Add your own backround classes and append them to the '.bg-cover' selector
-
-    &.bridge{
-      &::before{
-        @include apply-background-image($image: 'bridge-lights');
-      }
+      @include apply-background-image($image: 'bridge-lights');
     }
   }
-  
-} // end if
+}
 
 ////////////////////////////////////////
 // H. Extensible lists
