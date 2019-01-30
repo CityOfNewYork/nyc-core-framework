@@ -331,4 +331,5 @@ thead th { @extend .border-bottom-0; }
   // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
   .narrow{ max-width: $narrow-width-ie; }
   .medium{ max-width: $medium-width-ie; }
+  // .fixed-height{ height: $bg-fixed-height; }
 }
