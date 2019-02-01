@@ -287,9 +287,9 @@
                 </section>
 
                 <section class="container py-5">
-                    <h2>Pre-K Map</h2>
-                    <div id="prek-map"></div>
-                    <div id="prek-list" style="margin-top:20px;height:600px;"></div>
+                    <h2>Link NYC Map</h2>
+                    <div id="link-map"></div>
+                    <div id="link-list" style="margin-top:20px;height:600px;"></div>
                 </section>
         
             
@@ -670,11 +670,14 @@
             geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
         });
 
-        var prekMap = new nyc.ol.FrameworkMap({
-            mapTarget: '#prek-map',
-            listTarget: '#prek-list',
-            facilityType: 'Schools',
-            facilityUrl: 'map-data/prek.csv',
+        var openDataSQL = 'longitude as LNG, latitude as LAT, cb_link_id as NAME, street_address as ADDR1, boro as BORO, postcode as ZIP'
+        var openDataEndPoint = 'https://data.cityofnewyork.us/resource/3ktt-gd74.csv'
+        var csvUrl = openDataEndPoint + '?select$=' + encodeURIComponent(openDataSQL)
+        var linkMap = new nyc.ol.FrameworkMap({
+            mapTarget: '#link-map',
+            listTarget: '#link-list',
+            facilityType: 'Link NYC Kiosks',
+            facilityUrl: csvUrl,
             geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
         });
         
