@@ -672,7 +672,7 @@
 
         var openDataSQL = 'longitude as LNG, latitude as LAT, cb_link_id as NAME, street_address as ADDR1, boro as BORO, postcode as ZIP'
         var openDataEndPoint = 'https://data.cityofnewyork.us/resource/3ktt-gd74.csv'
-        var csvUrl = openDataEndPoint + '?select$=' + encodeURIComponent(openDataSQL)
+        var csvUrl = openDataEndPoint + '?$select=' + encodeURIComponent(openDataSQL)
         var linkMap = new nyc.ol.FrameworkMap({
             mapTarget: '#link-map',
             listTarget: '#link-list',
