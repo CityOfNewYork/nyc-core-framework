@@ -1319,6 +1319,13 @@
 		"oAP": "/form.html",
 		"oF": 0
 		},
+	"/global-nav-sidebar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/global-nav-sidebar.html",
+		"oF": 0
+		},
 	"/homepage-01.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1531,6 +1538,17 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/images/map-marker.png": {
+		"ft": 32768,
+		"iS": 4686,
+		"oA": 0,
+		"oAP": "/images/map-marker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1603,13 +1621,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/map-data/pod.csv",
-		"oF": 0
-		},
-	"/map-data/prek.csv": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/map-data/prek.csv",
 		"oF": 0
 		},
 	"/map.html": {
