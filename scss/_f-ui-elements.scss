@@ -516,14 +516,14 @@ $extensible-list-margin: 0.5em;
     // fixed padding added by user agent stylesheet after translation
     -webkit-padding-start: 0;
 
-    li > ul{ 
+    li ul{
 
       margin-top: $extensible-list-margin;
 
-      // Nested lists indent by default
-      padding-left: $nav-link-padding-x;
-      padding-right: $nav-link-padding-x; 
+      // Indent nested lists by default
 
+      padding-left: $nav-link-padding-x !important;
+      padding-right: $nav-link-padding-x !important; 
     }
 
     li{ @include extensible-list-stack; }
