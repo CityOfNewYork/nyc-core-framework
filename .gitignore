@@ -82,3 +82,4 @@ typings/
 .vscode/
 
 replace-hosts.sh
+config.codekit3
