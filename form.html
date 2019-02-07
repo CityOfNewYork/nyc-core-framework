@@ -274,7 +274,7 @@
 
         <article class="py-7">
 
-            <div class="container" id="primary-content">
+                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>            <div class="container" id="primary-content">
 
                 <div class="narrow">
 
@@ -621,6 +621,7 @@
 
     </footer>
     
+    
     <!-- jQuery (full, compressed version) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -643,6 +644,10 @@
 
     <!-- NYC Form Validation (only needed on form pages) -->
     <script src="./js/validation.js"></script>
+
+    <script>
+        $("[data-toggle=popover]").popover();
+    </script>
     
 </body>
 
