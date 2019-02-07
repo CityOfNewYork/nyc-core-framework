@@ -274,7 +274,7 @@
 
         <article class="py-7">
 
-                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>            <div class="container" id="primary-content">
+                <div class="container" id="primary-content">
 
                 <div class="narrow">
 
@@ -299,6 +299,8 @@
                     <form class="needs-validation" novalidate>
 
                         <div class="form-group">
+                                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>            
+                                <p class="js-share-cf-popover">COOOL!!</p>
                             <label for="label-01">Label
                                 <span class="fs-md text-danger" aria-hidden="true">*</span>
                             </label>
@@ -645,8 +647,51 @@
     <!-- NYC Form Validation (only needed on form pages) -->
     <script src="./js/validation.js"></script>
 
-    <script>
-        $("[data-toggle=popover]").popover();
+    <script>  
+    
+    // $('[data-toggle="popover"]').click( function(e){
+    //     e.stopPropagation();
+
+    //     var thisthing = $(this).closest('.form-group');
+
+    //     $(this).popover({
+
+    //         container: thisthing
+
+    //     });
+
+    // });
+
+    $(function() {
+
+    var reference = $('[data-toggle="popover"]');
+    var popover = $('.js-share-cf-popover');
+
+    popover.hide();
+
+    $(document).on('click touchend', function(e) {
+        var target = $(e.target);
+        // ne need to reshow and recreate poper when click over popup so return;
+        if(target.is(popover)) return;
+        if (target.is(reference)) {
+        e.preventDefault();
+
+        popover.show();
+
+        var popper = new Popper(target, popover, {
+            placement: 'top',
+        });
+
+        } else {
+            popover.hide();
+        }
+    });
+
+});
+
+
+
+
     </script>
     
 </body>
