@@ -193,10 +193,13 @@ a.card,
 }
 
 .has-icon{
-  &:hover{
-      text-decoration: none;
+  &:hover, 
+  &:focus
+  {
+      text-decoration: none !important;
       span.title{ text-decoration: underline; }
   }
+  
   &.active{
       span.title{ text-decoration: underline; }
   }
