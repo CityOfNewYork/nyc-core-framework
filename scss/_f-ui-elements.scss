@@ -601,102 +601,96 @@ $matrix-gutter-padding: ($grid-gutter-width / 4);
   color: currentColor;
 }
 
-$toggles-and-accordions: true;
+// Accordion Preferences
 
-@if($toggles-and-accordions){
+$accordion-button-border: false;
+$accordion-button-shadow: false;
 
-  // Accordion Preferences
+$accordion-title-color: theme-color("primary");
+$accordion-bg-color: theme-color("light");
 
-  $accordion-button-border: false;
-  $accordion-button-shadow: false;
+.btn-toggle,
+.accordion-group
+{
+  [data-toggle="collapse"]{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  $accordion-title-color: theme-color("primary");
-  $accordion-bg-color: theme-color("light");
+  }
+}
 
-  .btn-toggle,
-  .accordion-group
-  {
-    [data-toggle="collapse"]{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+// Button toggle
 
+.btn-toggle {
+
+  [data-toggle="collapse"] {
+    overflow: hidden;
+
+    &::after {
+      content: "\f067";
+      @extend %fa-icon;
+    }
+
+    // Change the right icon here. Go to https://fontawesome.com/icons
+    // Find your icons and paste the unicode below
+
+    &[aria-expanded="true"]::after {
+      content: "\f068";
+    }
+
+    &[aria-expanded="false"]::after {
+      content: "\f067";
+    }
+  }
+}
+
+// Accordions
+  
+.accordion-group{
+
+  .card, 
+  .card-header
+  { 
+    border: 0;
+    
+    @if $enable-rounded {
+      border-radius: $border-radius;
+    } @else{
+      border-radius: 0;
     }
   }
 
-  // Button toggle
+  .card { background-color: $accordion-bg-color; }
 
-  .btn-toggle {
+  a[data-toggle="collapse"]{
+    
+    @if $accordion-button-border { border: $border-width solid $border-color; }
+    @if $accordion-button-shadow { @extend .shadow-sm; }
 
-    [data-toggle="collapse"] {
-      overflow: hidden;
-
-      &::after {
-        content: "\f067";
-        @extend %fa-icon;
-      }
-
-      // Change the right icon here. Go to https://fontawesome.com/icons
-      // Find your icons and paste the unicode below
-
-      &[aria-expanded="true"]::after {
-        content: "\f068";
-      }
-
-      &[aria-expanded="false"]::after {
-        content: "\f067";
-      }
+    color: $accordion-title-color;
+  
+    &:after{ 
+      content: "\f067";
+      @extend %fa-icon;
     }
+
+    &[aria-expanded="true"]{
+      
+      @if $accordion-button-shadow {
+        @extend .shadow;
+      }
+
+    }
+
+    // Change the right icon here. Go to https://fontawesome.com/icons
+    // Find your icons and paste the unicode below
+    
+    &[aria-expanded="true"]:after{ content: "\f106"; }
+    &[aria-expanded="false"]:after{ content: "\f107"; }
   }
-
-  // Accordions
-    
-  .accordion-group{
-
-    .card, 
-    .card-header
-    { 
-      border: 0;
-      
-      @if $enable-rounded {
-        border-radius: $border-radius;
-      } @else{
-        border-radius: 0;
-      }
-    }
-
-    .card { background-color: $accordion-bg-color; }
-
-    a[data-toggle="collapse"]{
-      
-      @if $accordion-button-border { border: $border-width solid $border-color; }
-      @if $accordion-button-shadow { @extend .shadow-sm; }
-
-      color: $accordion-title-color;
-    
-      &:after{ 
-        content: "\f067";
-        @extend %fa-icon;
-      }
-
-      &[aria-expanded="true"]{
-        
-        @if $accordion-button-shadow {
-          @extend .shadow;
-        }
-
-      }
-
-      // Change the right icon here. Go to https://fontawesome.com/icons
-      // Find your icons and paste the unicode below
-      
-      &[aria-expanded="true"]:after{ content: "\f106"; }
-      &[aria-expanded="false"]:after{ content: "\f107"; }
-    }
-    
-  }
-
-} // end if
+  
+}
 
 ////////////////////////////////////////
 // K. Responsive nav tabs and pills
