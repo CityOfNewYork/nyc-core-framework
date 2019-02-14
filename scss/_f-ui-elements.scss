@@ -17,6 +17,7 @@ In this file:
 // M. Card
 // N. Carousel
 // O. Tables
+// P. Fixed width sidebar
 
 */
 
@@ -929,4 +930,17 @@ table{
 
   }
 
+}
+
+////////////////////////////////////////
+// O. Fixed width sidebar
+////////////////////////////////////////
+
+$sidebar-fixed-width-max-width: 300px;
+
+.sidebar-fixed-width{
+  @include media-breakpoint-up(xl) {
+      max-width: $sidebar-fixed-width-max-width; 
+      border-left: $border-width solid $border-color;
+  }
 }

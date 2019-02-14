@@ -277,18 +277,20 @@
 
             <div class="row">
 
-                <div class="col-xl order-xl-last sidebar-secondary">
+                <div class="col-xl order-xl-last sidebar-fixed-width">
 
                     <div class="narrow sticky-top py-3">
 
                         <p class="fs-md text-muted"><em>Jump to:</em></p>
 
-                        <div class=" list-group-flush offset-gutter-x fs-md toc">
+                        <div class=" list-group-flush offset-gutter-x fs-md table-of-contents">
 
-                            <a href="#section-one" class="list-group-item list-group-item-action active" title="Link">Validation</a>
-                            <a href="#section-two" class="list-group-item list-group-item-action" title="Link">Alerts</a>
+                            <a class="list-group-item list-group-item-action active" href="#section-one" title="Validation">Validation</a>
+                            <a class="list-group-item list-group-item-action" href="#section-two" title="Alerts">Alerts</a>
 
                         </div>
+
+
 
                     </div>
                     <!-- .narrow -->
@@ -299,7 +301,7 @@
 
                 <div class="col-xl order-xl-first">
 
-                    <section class="toc-section py-7" id="section-one">
+                    <section class="table-of-contents-item py-7" id="section-one">
 
                         <div class="narrow">
 
@@ -343,6 +345,8 @@
                                     <input type="text" class="form-control form-control-lg" id="label-01" required>
                                 </div>
                                 <!-- .form-group -->
+
+                                <hr>
 
                                 <div class="form-group">
                                     <label for="label-02">Label
@@ -577,7 +581,7 @@
 
                     <hr class="offset-gutter-x opacity-50">
 
-                    <section class="toc-section py-7" id="section-two">
+                    <section class="table-of-contents-item py-7" id="section-two">
 
                         <div class="narrow">
 
@@ -829,34 +833,8 @@
     <!-- NYC Form Validation (only needed on form pages) -->
     <script src="./js/validation.js"></script>
 
-
-    <script>
-
-        var sections = $('section.toc-section'),
-            nav = $('.toc'),
-            offset = 2;
-        
-        $(window).on('scroll', function () {
-
-            var cur_pos = $(this).scrollTop();
-        
-              sections.each(function () {
-                var top = $(this).offset().top - offset,
-                bottom = top + $(this).outerHeight();
-        
-                if (cur_pos >= top && cur_pos <= bottom) {
-                  nav.find('a').removeClass('active');
-                  sections.removeClass('active');
-        
-                  $(this).addClass('active');
-                  nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
-                }
-              });
-
-            });
-
-          </script>
-        
+    <!-- NYC Form Validation (only needed on form pages) -->
+    <script src="./js/table-of-contents.js"></script>
 
 </body>
 

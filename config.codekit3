@@ -2358,6 +2358,16 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/table-of-contents.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/table-of-contents-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"/tearsheet.html": {
 		"cB": 0,
 		"ft": 8192,

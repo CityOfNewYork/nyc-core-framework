@@ -97,11 +97,3 @@ ul.zoom-and-location{
         }
     }
 }
-
-
-.sidebar-secondary{
-    @include media-breakpoint-up(xl) {
-        max-width: 300px; 
-        border-left: $border-width solid $border-color;
-    }
-}
