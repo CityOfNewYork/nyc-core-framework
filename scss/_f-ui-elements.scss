@@ -51,10 +51,11 @@ In this file:
 }
 
 #nyc-bottom-footer{
-  hr{ border-top-color: $dark; }
+  hr{ @extend .opacity-20; }
 }
 
 #back-to-top{
+
   @extend .container-fluid;
   @extend .fixed-bottom;
   @include opacity(0);
