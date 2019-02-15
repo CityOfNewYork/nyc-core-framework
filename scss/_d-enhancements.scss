@@ -263,9 +263,19 @@ label,
   margin-bottom: $label-margin-bottom;
 }
 
+// Add accessible box-shadow to 'custom-control-label'
+
 .custom-control-label{
   &::before{ 
     box-shadow: $accessible-box-shadow;
+  }
+}
+
+// Remove border-radius on 'custom-checkbox' when global $border-radius is set to true
+
+.custom-checkbox .custom-control-label{
+  &::before{ 
+    border-radius: 0;
   }
 }
 

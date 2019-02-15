@@ -314,6 +314,12 @@ $fieldset-and-legend: true;
   fieldset{
     border: $border-width solid $border-color;
     margin-bottom: $spacer-5;
+
+    @if $enable-rounded {
+      overflow: hidden;
+        border-radius: $border-radius;
+    }
+
   }
 
   legend, 
@@ -436,7 +442,7 @@ $featured-panel: true;
 // G. Background image cover
 ////////////////////////////////////////
 
-$bg-fixed-image-opacity: 0.4;
+$bg-fixed-image-opacity: 0.2;
 $bg-fixed-height: 350px;
 
 .bg-cover{
@@ -572,6 +578,8 @@ $extensible-list-margin: 0.5em;
 
 $matrix-border-padding: ($border-width / 2);
 $matrix-gutter-padding: ($grid-gutter-width / 4);
+
+$matrix-tiger-padding: 3%;
 
 .matrix-border{
   margin-top: -($matrix-border-padding);
@@ -709,7 +717,7 @@ $accordion-bg-color: theme-color("light");
   .nav-link{ border-color: $border-color; }
 
   @if $enable-rounded {
-    .nav-link{ 
+    .nav-link:not(:last-child){ 
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }

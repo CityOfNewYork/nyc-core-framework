@@ -1312,6 +1312,13 @@
 		"oAP": "/documentation/using-icons.html",
 		"oF": 0
 		},
+	"/form-old.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/form-old.html",
+		"oF": 0
+		},
 	"/form.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -2367,13 +2374,6 @@
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
-		},
-	"/tearsheet-old.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/tearsheet-old.html",
-		"oF": 0
 		},
 	"/tearsheet.html": {
 		"cB": 0,
