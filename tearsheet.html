@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    
+
     <a class="sr-only sr-only-focusable tab-skipper" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
 
     <div id="nyc-top-header">
@@ -39,8 +39,7 @@
 
                     <ul class="extensible-list horizontal">
                         <li>
-                            <a href="#" title="My account"
-                                target="_blank">My Account</a>
+                            <a href="#" title="My account" target="_blank">My Account</a>
                         </li>
                         <li>
                             <a class="btn btn-info text-white rounded-0" href="#" title="Login" target="_blank">Login</a>
@@ -106,8 +105,7 @@
 
                             <div class="nav-item dropdown">
 
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-item-02" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false" title="Nav Item">
+                                <a class="nav-link dropdown-toggle" href="#" id="nav-item-02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Nav Item">
                                     Nav Item
                                 </a>
 
@@ -206,7 +204,7 @@
 
         <div class="primary-navigation-device collapse d-lg-none" id="device-menu">
 
-            <hr>
+            <hr class="offset-gutter-x opacity-50">
 
             <nav class="nav d-flex flex-column py-3" role="navigation">
 
@@ -260,568 +258,649 @@
 
         <div class="bg-secondary py-6">
 
-            <div class="container-fluid align-self-center">
+            <div class="container align-self-center">
 
-                <div class="narrow text-white">
-                    <p class="card-title display-4 font-weight-bold">Tearsheet</p>
+                <div class="text-center text-white">
+                    <h1 class="card-title display-4 font-weight-bold">
+                        Tearsheet
+                    </h1>
                 </div>
 
             </div>
             <!-- .container-fluid -->
 
         </div>
-        <!-- .featured-panel -->
+        <!-- .bg-secondary -->
 
-        <article id="primary-content">
+        <div class="container-fluid" id="primary-content">
 
-            <section class="container-fluid">
+            <div class="row">
 
-                <div class="narrow my-7">
+                <div class="col-xl order-xl-last sidebar-fixed-width">
 
-                    <h2>Buttons</h2>
+                    <div class="narrow sticky-top py-3">
 
-                    <!-- Include -->
-                    <div w3-include-html="./documentation/buttons.html"></div>
+                        <p class="fs-md text-muted"><em>Jump to:</em></p>
 
-                    <h3>Icons with buttons and links</h3>
+                        <div class="table-of-contents list-group-flush offset-gutter-x fs-md">
 
-                    <!-- Include -->
-                    <div w3-include-html="./documentation/using-icons.html"></div>
-                </div>
-                <!-- .narrow -->
+                            <a class="list-group-item list-group-item-action active" href="#buttons" title="Buttons">Buttons</a>
+                            <a class="list-group-item list-group-item-action" href="#extensible-lists" title="Extensible Lists">Extensible Lists</a>
+                            <a class="list-group-item list-group-item-action" href="#alerts" title="Extensible Lists">Alerts</a>
+                            <a class="list-group-item list-group-item-action" href="#accordions" title="Accordions">Accordions</a>
+                            <a class="list-group-item list-group-item-action" href="#button-toggle" title="Button Toggle">Button Toggle</a>
+                            <a class="list-group-item list-group-item-action" href="#tabs" title="Tabs">Tabs</a>
+                            <a class="list-group-item list-group-item-action" href="#tables" title="Tables">Tables</a>
+                            <a class="list-group-item list-group-item-action" href="#matrix" title="Matrix">Matrix</a>
+                            <a class="list-group-item list-group-item-action" href="#box-shadows" title="Box Shadows">Box Shadows</a>
+                            <a class="list-group-item list-group-item-action" href="#gradients" title="Gradients">Gradients</a>
 
-            </section>
-
-            <hr>
-
-            <section class="container-fluid">
-
-                <div class="narrow my-7">
-
-                    <h2>Extensible Lists</h2>
-
-                    <!-- Include -->
-                    <div w3-include-html="./documentation/extensible-lists.html"></div>
-
-                </div>
-                <!-- .narrow -->
-
-            </section>
-
-            <hr>
-
-            <section class="container-fluid">
-
-                <div class="narrow my-7">
-
-                    <h2>Accordions</h2>
-
-                    <!-- Include -->
-                    <div w3-include-html="./documentation/accordions.html"></div>
-
-                </div>
-                <!-- .narrow -->
-
-            </section>
-
-            <hr>
-
-            <section class="container-fluid">
-
-                <div class="narrow my-7">
-
-                    <h2>Button Toggle</h2>
-
-                    <!-- Include -->
-                    <div w3-include-html="./documentation/button-toggle.html"></div>
-
-                </div>
-                <!-- .narrow -->
-
-            </section>
-
-            <hr>
-
-            <section class="container-fluid">
-
-                <div class="narrow my-7">
-
-                    <h2>Tabs</h2>
-
-                    <div class="my-5">
-
-                        <div class="nav nav-pills bg-light responsive-md" role="tablist">
-
-                            <a class="nav-item nav-link flex-fill active" id="tab-btn-01-a" href="#tab-01-a" data-toggle="pill"
-                                aria-controls="tab-01-a" aria-selected="true" role="tab">
-                                Tab One
-                            </a>
-
-                            <a class="nav-item nav-link flex-fill" id="tab-btn-01-b" href="#tab-01-b" data-toggle="pill"
-                                aria-controls="tab-01-b" aria-selected="false" role="tab">
-                                Tab Two
-                            </a>
-
-                            <a class="nav-item nav-link flex-fill" id="tab-btn-01-c" href="#tab-01-c" data-toggle="pill"
-                                aria-controls="tab-01-c" aria-selected="false" role="tab">
-                                Tab Three
-                            </a>
-
-                        </div>
-
-                        <div class="tab-content bg-info text-white p-3" id="tabs-01-content">
-
-                            <div class="tab-pane fade show active" id="tab-01-a" aria-labelledby="tab-btn-01-a" role="tabpanel">
-                                <h3>Tab One Content</h3>
-                                <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
-                                    non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
-                                    porttitor est volutpat parturient scelerisque.</p>
-                            </div>
-
-                            <div class="tab-pane fade" id="tab-01-b" aria-labelledby="tab-btn-01-b" role="tabpanel">
-                                <h3>Tab Two Content</h3>
-                                <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
-                                    non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
-                                    porttitor est volutpat parturient scelerisque.</p>
-                            </div>
-
-                            <div class="tab-pane fade" id="tab-01-c" aria-labelledby="tab-btn-01-c" role="tabpanel">
-                                <h3>Tab Three Content</h3>
-                                <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
-                                    non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
-                                    porttitor est volutpat parturient scelerisque.</p>
-                            </div>
                         </div>
 
                     </div>
-                    <!-- #tabs 01 -->
-            
-                    <div class="my-5">
-
-                        <div class="nav nav-tabs responsive-md mb-4" role="tablist">
-
-                            <a class="nav-item nav-link active" 
-                            id="tab-btn-02-a"
-                            href="#tab-02-a"
-                            data-toggle="tab"
-                            aria-controls="tab-02-a"
-                            aria-selected="true"
-                            role="tab">
-                            Tab One
-                            </a>
-
-                            <a class="nav-item nav-link" 
-                            id="tab-btn-02-b"
-                            href="#tab-02-b"
-                            data-toggle="tab"
-                            aria-controls="tab-02-b"
-                            aria-selected="false"
-                            role="tab">
-                            Tab Two
-                            </a>
-
-                            <a class="nav-item nav-link" 
-                            id="tab-btn-02-c"
-                            href="#tab-02-c"
-                            data-toggle="tab"
-                            aria-controls="tab-02-c"
-                            aria-selected="false"
-                            role="tab">
-                            Tab Three
-                            </a>
-
-                        </div>
-            
-                        <div class="tab-content" id="tabs-02-content">
-
-                            <div class="tab-pane fade show active" id="tab-02-a" aria-labelledby="tab-btn-02-a" role="tabpanel">
-                                <h3>Tab One Content</h3>
-                                <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor
-                                    parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non
-                                    vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est
-                                    volutpat parturient scelerisque.</p>
-                            </div>
-
-                            <div class="tab-pane fade" id="tab-02-b" aria-labelledby="tab-btn-02-b" role="tabpanel">
-                                <h3>Tab Two Content</h3>
-                                <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor
-                                    parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non
-                                    vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est
-                                    volutpat parturient scelerisque.</p>
-                            </div>
-
-                            <div class="tab-pane fade" id="tab-02-c" aria-labelledby="tab-btn-02-c" role="tabpanel">
-                                <h3>Tab Three Content</h3>
-                                <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor
-                                    parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non
-                                    vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est
-                                    volutpat parturient scelerisque.</p>
-                            </div>
-                        </div>
-            
-                    </div><!-- #tabs 02 -->
+                    <!-- .narrow -->
 
                 </div>
-                <!-- .narrow -->
+                <!-- .col -->
 
-            </section>
+                <div class="col-xl order-xl-first">
 
-            <hr>
+                    <section class="table-of-contents-item py-7" id="buttons">
 
-            <section class="container-fluid">
+                        <div class="narrow">
 
-                <div class="narrow my-7">
+                            <h2>Buttons</h2>
 
-                    <h2>Tables</h2>
+                            <!-- Include -->
+                            <div w3-include-html="./documentation/buttons.html"></div>
 
-                    <div class="table-responsive my-5">
+                            <h3>Icons with buttons and links</h3>
 
-                        <table class="table">
-
-                            <thead>
-                                <tr class="text-info">
-                                    <th class="col-a">Title</th>
-                                    <th class="col-b">Title</th>
-                                    <th class="col-c">Title</th>
-                                    <th class="col-d">Title</th>
-                                    <th class="col-e">Title</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                                <tr>
-                                    <td class="col-a">Mus malesuada dapibus</td>
-                                    <td class="col-b">Adipiscing ut blandit</td>
-                                    <td class="col-c">99</td>
-                                    <td class="col-d">99</td>
-                                    <td class="col-e">99</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div><!-- .table-responsive -->
-
-                    <table class="table table-row-mobile-stack">
-
-                        <thead>
-                            <tr class="">
-                                <th class="col-a">Title</th>
-                                <th class="col-b">Title</th>
-                                <th class="col-c">Title</th>
-                                <th class="col-d">Title</th>
-                                <th class="col-e">Title</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                            <tr>
-                                <td class="col-a">Mus malesuada dapibus</td>
-                                <td class="col-b">Adipiscing ut blandit</td>
-                                <td class="col-c">99</td>
-                                <td class="col-d">99</td>
-                                <td class="col-e">99</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                </div>
-                <!-- .narrow -->
-
-            </section>
-
-            <hr>
-
-            <section class="container-fluid">
-
-                <div class="narrow my-7">
-
-                    <h2>Matrix (add to .row)</h2>
-
-                    <div class="my-5">
-
-                        <p>Matrix Border (.matrix-border)</p>
-
-                        <div class="row matrix-border text-white text-center">
-
-                            <div class="col-md-4">
-                                <div class="bg-dark px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-4">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-4">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-6">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-6">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
+                            <!-- Include -->
+                            <div w3-include-html="./documentation/using-icons.html"></div>
 
                         </div>
-                        <!-- .row -->
+                        <!-- .narrow -->
 
-                    </div>
-                    <!-- .my-5 -->
+                    </section>
+    
+                    <hr class="offset-gutter-x opacity-50">
 
-                    <div class="my-5">
-
-                        <p>Matrix Gutter (.matrix-gutter)</p>
-
-                        <div class="row matrix-gutter text-white text-center">
-
-                            <div class="col-md-4">
-                                <div class="bg-dark px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-4">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-4">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-6">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-md-6">
-                                <div class="bg-dark text-white px-2 py-5">
-                                    <p>Column</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                        </div>
-                        <!-- .row -->
-
-                    </div>
-                    <!-- .my-5 -->
-
-                </div>
-                <!-- .narrow -->
-
-            </section>
-
-            <hr>
-
-            <section class="container-fluid">
-
-                <div class="narrow my-7">
-
-                    <h2>Box Shadow</h2>
-
-                    <div class="my-5">
-
-                        <div class="row">
-
-                            <div class="col-12 mb-4">
-                                <div class="bg-white px-2 py-5 shadow-sm">
-                                    <p>Small (.shadow-sm)</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-12 mb-4">
-                                <div class="bg-white px-2 py-5 shadow">
-                                    <p>Normal (.shadow)</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-12 mb-4">
-                                <div class="bg-white px-2 py-5 shadow-lg">
-                                    <p>Large (.shadow-lg)</p>
-                                </div>
-                            </div>
-                            <!-- .col -->
-
-                        </div>
-                        <!-- .row -->
-
-                    </div>
-                    <!-- .my-5 -->
-
-                </div>
-                <!-- .narrow -->
-
-            </section>
-            
-            <hr>
-
-            <section class="container-fluid">
-
-                <div class="narrow my-7">
-
-                    <h2>Gradients</h2>
-
-                    <p>Overlay Gradient — add class <code>overlay-gradient-{direction}-{colors}</code>:</p>
-
-                    <div class="card bg-dark text-white my-3">
-                        <div class="overlay-gradient-y-black">
-                            <img src="./images/feature/nypd-snow.jpg" alt="Placeholder">
-                        </div>
-                        <div class="card-img-overlay d-flex">
-                            <div class="align-self-end text-center w-100">
-                                <p>Top to bottom gradient</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p>Overlay Gradient — add class <code>overlay-gradient-{direction}-{colors}</code>:</p>
-
-                    <div class="card bg-dark text-white my-3">
-                        <div class="overlay-gradient-x-info">
-                            <img src="./images/feature/walk-in-the-park.jpg" alt="Placeholder">
-                        </div>
-                        <div class="card-img-overlay d-flex">
-                            <div class="align-self-center text-right w-100">
-                                <p>Left to  right gradient</p>
-                            </div>
-                        </div>
-                    </div>
-                                                                                          
-                </div>
-                <!-- .narrow -->
-
-            </section>
-
-        </article>
+                    <section class="table-of-contents-item py-7" id="extensible-lists">
         
+                        <div class="narrow">
+        
+                            <h2>Extensible Lists</h2>
+        
+                            <!-- Include -->
+                            <div w3-include-html="./documentation/extensible-lists.html"></div>
+        
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+        
+                    <hr class="offset-gutter-x opacity-50">
+
+                    <section class="table-of-contents-item py-7" id="alerts">
+
+                        <div class="narrow">
+
+                            <h2>Alerts</h2>
+
+                            <div class="alert alert-danger my-4" id="form-error-message" role="alert">
+                                <p class="alert-heading">
+                                    <span class="fas fa-exclamation-triangle" role="img"></span>
+                                    <span class="mx-1">Lorem ipsum dolor</span>
+                                </p>
+                                <p class="alert-text">
+                                    Aperiam tempore ut necessitatibus <a class="alert-link" href="#1">totam accusamus</a> magni reiciendis.
+                                </p>
+                            </div>
+                            <!-- .end .alert -->
+
+                            <div class="alert alert-success my-4" id="form-error-message" role="alert">
+                                <p class="alert-heading">
+                                    <span class="fas fa-check-circle" role="img"></span>
+                                    <span class="mx-1">Lorem ipsum dolor</span>
+                                </p>
+                                <p class="alert-text">
+                                    Aperiam tempore ut necessitatibus <a class="alert-link" href="#1">totam accusamus</a> magni reiciendis.
+                                </p>
+                            </div>
+                            <!-- .end .alert -->
+
+                            <div class="alert alert-warning my-4" role="alert">
+                                <p class="alert-text">
+                                    <span class="fas fa-exclamation-triangle" role="img"></span>
+                                    <span class="mx-1"> A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</span></p>
+                            </div>
+                                  
+                        </div>
+
+                    </section>
+
+                    <hr class="offset-gutter-x opacity-50">
+        
+                    <section class="table-of-contents-item py-7" id="accordions">
+        
+                        <div class="narrow">
+        
+                            <h2>Accordions</h2>
+        
+                            <!-- Include -->
+                            <div w3-include-html="./documentation/accordions.html"></div>
+        
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+        
+                    <hr class="offset-gutter-x opacity-50">
+        
+                    <section class="table-of-contents-item py-7" id="button-toggle">
+        
+                        <div class="narrow">
+        
+                            <h2>Button Toggle</h2>
+        
+                            <!-- Include -->
+                            <div w3-include-html="./documentation/button-toggle.html"></div>
+        
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+        
+                    <hr class="offset-gutter-x opacity-50">
+        
+                    <section class="table-of-contents-item py-7" id="tabs">
+        
+                        <div class="narrow">
+        
+                            <h2>Tabs</h2>
+        
+                            <div class="my-5">
+        
+                                <div class="nav nav-pills bg-light responsive-md" role="tablist">
+        
+                                    <a class="nav-item nav-link flex-fill active" id="tab-btn-01-a" href="#tab-01-a" data-toggle="pill"
+                                        aria-controls="tab-01-a" aria-selected="true" role="tab">
+                                        Tab One
+                                    </a>
+        
+                                    <a class="nav-item nav-link flex-fill" id="tab-btn-01-b" href="#tab-01-b" data-toggle="pill"
+                                        aria-controls="tab-01-b" aria-selected="false" role="tab">
+                                        Tab Two
+                                    </a>
+        
+                                    <a class="nav-item nav-link flex-fill" id="tab-btn-01-c" href="#tab-01-c" data-toggle="pill"
+                                        aria-controls="tab-01-c" aria-selected="false" role="tab">
+                                        Tab Three
+                                    </a>
+        
+                                </div>
+        
+                                <div class="tab-content bg-info text-white p-3" id="tabs-01-content">
+        
+                                    <div class="tab-pane fade show active" id="tab-01-a" aria-labelledby="tab-btn-01-a" role="tabpanel">
+                                        <h3>Tab One Content</h3>
+                                        <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
+                                            non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
+                                            porttitor est volutpat parturient scelerisque.</p>
+                                    </div>
+        
+                                    <div class="tab-pane fade" id="tab-01-b" aria-labelledby="tab-btn-01-b" role="tabpanel">
+                                        <h3>Tab Two Content</h3>
+                                        <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
+                                            non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
+                                            porttitor est volutpat parturient scelerisque.</p>
+                                    </div>
+        
+                                    <div class="tab-pane fade" id="tab-01-c" aria-labelledby="tab-btn-01-c" role="tabpanel">
+                                        <h3>Tab Three Content</h3>
+                                        <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti
+                                            non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst
+                                            porttitor est volutpat parturient scelerisque.</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+                            <!-- #tabs 01 -->
+                    
+                            <div class="my-5">
+        
+                                <div class="nav nav-tabs responsive-md mb-4" role="tablist">
+        
+                                    <a class="nav-item nav-link active" 
+                                    id="tab-btn-02-a"
+                                    href="#tab-02-a"
+                                    data-toggle="tab"
+                                    aria-controls="tab-02-a"
+                                    aria-selected="true"
+                                    role="tab">
+                                    Tab One
+                                    </a>
+        
+                                    <a class="nav-item nav-link" 
+                                    id="tab-btn-02-b"
+                                    href="#tab-02-b"
+                                    data-toggle="tab"
+                                    aria-controls="tab-02-b"
+                                    aria-selected="false"
+                                    role="tab">
+                                    Tab Two
+                                    </a>
+        
+                                    <a class="nav-item nav-link" 
+                                    id="tab-btn-02-c"
+                                    href="#tab-02-c"
+                                    data-toggle="tab"
+                                    aria-controls="tab-02-c"
+                                    aria-selected="false"
+                                    role="tab">
+                                    Tab Three
+                                    </a>
+        
+                                </div>
+                    
+                                <div class="tab-content" id="tabs-02-content">
+        
+                                    <div class="tab-pane fade show active" id="tab-02-a" aria-labelledby="tab-btn-02-a" role="tabpanel">
+                                        <h3>Tab One Content</h3>
+                                        <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor
+                                            parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non
+                                            vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est
+                                            volutpat parturient scelerisque.</p>
+                                    </div>
+        
+                                    <div class="tab-pane fade" id="tab-02-b" aria-labelledby="tab-btn-02-b" role="tabpanel">
+                                        <h3>Tab Two Content</h3>
+                                        <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor
+                                            parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non
+                                            vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est
+                                            volutpat parturient scelerisque.</p>
+                                    </div>
+        
+                                    <div class="tab-pane fade" id="tab-02-c" aria-labelledby="tab-btn-02-c" role="tabpanel">
+                                        <h3>Tab Three Content</h3>
+                                        <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor
+                                            parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non
+                                            vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est
+                                            volutpat parturient scelerisque.</p>
+                                    </div>
+                                </div>
+                    
+                            </div><!-- #tabs 02 -->
+        
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+        
+                    <hr class="offset-gutter-x opacity-50">
+        
+                    <section class="table-of-contents-item py-7" id="tables">
+        
+                        <div class="narrow">
+        
+                            <h2>Tables</h2>
+        
+                            <div class="table-responsive my-5">
+        
+                                <table class="table">
+        
+                                    <thead>
+                                        <tr class="text-info">
+                                            <th class="col-a">Title</th>
+                                            <th class="col-b">Title</th>
+                                            <th class="col-c">Title</th>
+                                            <th class="col-d">Title</th>
+                                            <th class="col-e">Title</th>
+                                        </tr>
+                                    </thead>
+        
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-a">Mus malesuada dapibus</td>
+                                            <td class="col-b">Adipiscing ut blandit</td>
+                                            <td class="col-c">99</td>
+                                            <td class="col-d">99</td>
+                                            <td class="col-e">99</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+        
+                            </div><!-- .table-responsive -->
+        
+                            <table class="table table-row-mobile-stack">
+        
+                                <thead>
+                                    <tr class="">
+                                        <th class="col-a">Title</th>
+                                        <th class="col-b">Title</th>
+                                        <th class="col-c">Title</th>
+                                        <th class="col-d">Title</th>
+                                        <th class="col-e">Title</th>
+                                    </tr>
+                                </thead>
+        
+                                <tbody>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-a">Mus malesuada dapibus</td>
+                                        <td class="col-b">Adipiscing ut blandit</td>
+                                        <td class="col-c">99</td>
+                                        <td class="col-d">99</td>
+                                        <td class="col-e">99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+        
+                    <hr class="offset-gutter-x opacity-50">
+        
+                    <section class="table-of-contents-item py-7" id="matrix">
+        
+                        <div class="narrow">
+        
+                            <h2>Matrix (add to .row)</h2>
+        
+                            <div class="my-5">
+        
+                                <p>Matrix Border (.matrix-border)</p>
+        
+                                <div class="row matrix-border text-white text-center">
+        
+                                    <div class="col-md-4">
+                                        <div class="bg-dark px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-4">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-4">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-6">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-6">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                </div>
+                                <!-- .row -->
+        
+                            </div>
+                            <!-- .my-5 -->
+        
+                            <div class="my-5">
+        
+                                <p>Matrix Gutter (.matrix-gutter)</p>
+        
+                                <div class="row matrix-gutter text-white text-center">
+        
+                                    <div class="col-md-4">
+                                        <div class="bg-dark px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-4">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-4">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-6">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-md-6">
+                                        <div class="bg-dark text-white px-2 py-5">
+                                            <p>Column</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                </div>
+                                <!-- .row -->
+        
+                            </div>
+                            <!-- .my-5 -->
+        
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+        
+                    <hr class="offset-gutter-x opacity-50">
+        
+                    <section class="table-of-contents-item py-7" id="box-shadows">
+        
+                        <div class="narrow">
+        
+                            <h2>Box Shadow</h2>
+        
+                            <div class="my-5">
+        
+                                <div class="row">
+        
+                                    <div class="col-12 mb-4">
+                                        <div class="bg-white px-2 py-5 shadow-sm">
+                                            <p>Small (.shadow-sm)</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-12 mb-4">
+                                        <div class="bg-white px-2 py-5 shadow">
+                                            <p>Normal (.shadow)</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                    <div class="col-12 mb-4">
+                                        <div class="bg-white px-2 py-5 shadow-lg">
+                                            <p>Large (.shadow-lg)</p>
+                                        </div>
+                                    </div>
+                                    <!-- .col -->
+        
+                                </div>
+                                <!-- .row -->
+        
+                            </div>
+                            <!-- .my-5 -->
+        
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+                    
+                    <hr class="offset-gutter-x opacity-50">
+        
+                    <section class="table-of-contents-item py-7" id="gradients">
+        
+                        <div class="narrow">
+        
+                            <h2>Gradients</h2>
+        
+                            <p>Overlay Gradient — add class <code>overlay-gradient-{direction}-{colors}</code>:</p>
+        
+                            <div class="card bg-dark text-white my-3">
+                                <div class="overlay-gradient-y-black">
+                                    <img src="./images/feature/nypd-snow.jpg" alt="Placeholder">
+                                </div>
+                                <div class="card-img-overlay d-flex">
+                                    <div class="align-self-end text-center w-100">
+                                        <p>Top to bottom gradient</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <p>Overlay Gradient — add class <code>overlay-gradient-{direction}-{colors}</code>:</p>
+        
+                            <div class="card bg-dark text-white my-3">
+                                <div class="overlay-gradient-x-info">
+                                    <img src="./images/feature/walk-in-the-park.jpg" alt="Placeholder">
+                                </div>
+                                <div class="card-img-overlay d-flex">
+                                    <div class="align-self-center text-right w-100">
+                                        <p>Left to  right gradient</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                                                                  
+                        </div>
+                        <!-- .narrow -->
+        
+                    </section>
+
+                </div>
+                <!-- .col -->
+
+            </div>
+            <!-- .row -->
+
+        </div>
+        <!-- #primary-content -->
+
     </main>
     <!-- #content -->
 
@@ -871,7 +950,7 @@
             </div>
             <!-- .container-fluid -->
 
-            <hr>
+            <hr class="offset-gutter-x opacity-50">
 
             <div class="container-fluid wide py-5">
 
@@ -980,18 +1059,18 @@
 
             </div>
 
-            <div id="back-to-top">
-                <a class="btn btn-sm btn-primary rounded-top shadow-sm" href="#nyc-top-header">
-                    <span class="fas fa-arrow-up"></span>
-                    <span class="mx-1">back to top</span>
-                </a>
-            </div>
-        
         </div>
         <!-- #nyc-bottom-footer -->
 
-    </footer>
+        <div id="back-to-top">
+            <a class="btn btn-sm btn-primary rounded-top shadow-sm" href="#nyc-top-header">
+                <span class="fas fa-arrow-up"></span>
+                <span class="mx-1">back to top</span>
+            </a>
+        </div>
 
+    </footer>
+    
     <!-- jQuery (full, compressed version) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -999,7 +1078,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-    <!-- Google Translate -->
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -1010,49 +1088,55 @@
 
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
+    <!-- NYC Custom JavaScript (required) -->
     <script src="./js/main.js"></script>
 
+    <!-- NYC Form Validation (only needed on form pages) -->
+    <script src="./js/validation.js"></script>
+
      <!-- Responsive table JS -->
-    <script src="./js/responsive-table.js"></script>
+     <script src="./js/responsive-table.js"></script>
 
-    <!-- Google Code Pretty -->
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
+     <!-- Google Code Pretty -->
+     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
 
-    <!-- HTML includes -->
-    <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /* Loop through a collection of all HTML elements: */
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /* Make an HTTP request using the attribute value as the file name: */
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
-                }
-              } 
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /* Exit the function: */
-              return;
-            }
-          }
-        }
-
-        includeHTML();
-
-    </script>
-    
+     <!-- NYC Form Validation (only needed on form pages) -->
+     <script src="./js/table-of-contents.js"></script>
+ 
+     <!-- HTML includes -->
+     <script>
+         function includeHTML() {
+           var z, i, elmnt, file, xhttp;
+           /* Loop through a collection of all HTML elements: */
+           z = document.getElementsByTagName("*");
+           for (i = 0; i < z.length; i++) {
+             elmnt = z[i];
+             /*search for elements with a certain atrribute:*/
+             file = elmnt.getAttribute("w3-include-html");
+             if (file) {
+               /* Make an HTTP request using the attribute value as the file name: */
+               xhttp = new XMLHttpRequest();
+               xhttp.onreadystatechange = function() {
+                 if (this.readyState == 4) {
+                   if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                   if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                   /* Remove the attribute, and call this function once more: */
+                   elmnt.removeAttribute("w3-include-html");
+                   includeHTML();
+                 }
+               } 
+               xhttp.open("GET", file, true);
+               xhttp.send();
+               /* Exit the function: */
+               return;
+             }
+           }
+         }
+ 
+         includeHTML();
+ 
+     </script>
+ 
 </body>
 
 </html>

@@ -158,6 +158,13 @@ html[dir="rtl"]{
     padding-right: ($custom-control-gutter + $custom-control-indicator-size);
   }
 
+  .sidebar-fixed-width{
+    @include media-breakpoint-up(xl) {
+        border-left: none;
+        border-right: $border-width solid $border-color;
+    }
+  }
+
 } // end RTL
 
 // Add 'text-decoration: underline' on particular ':hover' and ':focus' selectors
