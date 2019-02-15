@@ -761,7 +761,18 @@ $responsive-nav-pills-and-tabs: true;
   } // end each
 
   @if $enable-rounded {
-    .nav-pills{ @extend .rounded; }
+
+    .nav-pills, 
+    .nav-pills .nav-link{ 
+        border-top-left-radius: $border-radius; 
+        border-top-right-radius: $border-radius; 
+    }
+
+    .nav-pills .nav-link{
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0; 
+    }
+
   }
 
 } // end if
@@ -934,7 +945,7 @@ table{
 }
 
 ////////////////////////////////////////
-// O. Fixed width sidebar
+// P. Fixed width sidebar
 ////////////////////////////////////////
 
 $sidebar-fixed-width-max-width: 300px;
