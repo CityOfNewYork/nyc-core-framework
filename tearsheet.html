@@ -278,24 +278,42 @@
 
                 <div class="col-xl order-xl-last sidebar-fixed-width">
 
-                    <div class="narrow sticky-top py-3">
+                    <div class="narrow sticky-top">
 
-                        <p class="fs-md text-muted"><em>Jump to:</em></p>
+                        <div class="offset-gutter-x mt-5 mt-xl-0">
 
-                        <div class="table-of-contents list-group-flush offset-gutter-x fs-md">
+                            <div class="btn-toggle d-xl-none">
+                                <a class="btn btn-block btn-lg btn-dark text-white rounded-0" data-toggle="collapse" href="#aside-nav" aria-expanded="false"
+                                    aria-controls="aside-nav">
+                                    <span class="title">Jump to:</span>
+                                </a>
+                            </div>
 
-                            <a class="list-group-item list-group-item-action active" href="#buttons" title="Buttons">Buttons</a>
-                            <a class="list-group-item list-group-item-action" href="#extensible-lists" title="Extensible Lists">Extensible Lists</a>
-                            <a class="list-group-item list-group-item-action" href="#alerts" title="Extensible Lists">Alerts</a>
-                            <a class="list-group-item list-group-item-action" href="#accordions" title="Accordions">Accordions</a>
-                            <a class="list-group-item list-group-item-action" href="#button-toggle" title="Button Toggle">Button Toggle</a>
-                            <a class="list-group-item list-group-item-action" href="#tabs" title="Tabs">Tabs</a>
-                            <a class="list-group-item list-group-item-action" href="#tables" title="Tables">Tables</a>
-                            <a class="list-group-item list-group-item-action" href="#matrix" title="Matrix">Matrix</a>
-                            <a class="list-group-item list-group-item-action" href="#box-shadows" title="Box Shadows">Box Shadows</a>
-                            <a class="list-group-item list-group-item-action" href="#gradients" title="Gradients">Gradients</a>
+                            <nav class="collapse d-xl-block" id="aside-nav" role="navigation">
+
+                                <div class="table-of-contents list-group-flush fs-md py-3">
+
+                                    <p class="list-group-item text-muted d-none d-xl-block">
+                                        <em>Jump to:</em>
+                                    </p>
+
+                                    <a class="list-group-item list-group-item-action active" href="#buttons" title="Buttons and Links">Buttons and Links</a>
+                                    <a class="list-group-item list-group-item-action" href="#extensible-lists" title="Extensible Lists">Extensible Lists</a>
+                                    <a class="list-group-item list-group-item-action" href="#alerts" title="Extensible Lists">Alerts</a>
+                                    <a class="list-group-item list-group-item-action" href="#accordions" title="Accordions">Accordions</a>
+                                    <a class="list-group-item list-group-item-action" href="#button-toggle" title="Button Toggle">Button Toggle</a>
+                                    <a class="list-group-item list-group-item-action" href="#tabs" title="Tabs">Tabs</a>
+                                    <a class="list-group-item list-group-item-action" href="#tables" title="Tables">Tables</a>
+                                    <a class="list-group-item list-group-item-action" href="#matrix" title="Matrix">Matrix</a>
+                                    <a class="list-group-item list-group-item-action" href="#box-shadows" title="Box Shadows">Box Shadows</a>
+                                    <a class="list-group-item list-group-item-action" href="#gradients" title="Gradients">Gradients</a>
+
+                                </div>
+
+                            </nav>
 
                         </div>
+                        <!-- .offset-gutter-x -->
 
                     </div>
                     <!-- .narrow -->
@@ -309,15 +327,10 @@
 
                         <div class="narrow">
 
-                            <h2>Buttons</h2>
+                            <h2>Buttons and Links</h2>
 
                             <!-- Include -->
-                            <div w3-include-html="./documentation/buttons.html"></div>
-
-                            <h3>Icons with buttons and links</h3>
-
-                            <!-- Include -->
-                            <div w3-include-html="./documentation/using-icons.html"></div>
+                            <div w3-include-html="./documentation/buttons-and-links.html"></div>
 
                         </div>
                         <!-- .narrow -->

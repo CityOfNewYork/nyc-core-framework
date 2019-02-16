@@ -6,10 +6,21 @@
     The <code>title</code> class ensures only the text will be underlined on hover and focus, while the <code>mx-1</code> class provides even spacing around the text when a right-to-left language is being used.</p>
 </p>
 
-<button class="btn btn-lg btn-primary has-icon my-2" type="button">
-    <span class="fab fa-accessible-icon font-weight-normal"role="img"></span>
-    <span class="title mx-1" role="img">Accessible</span>
-</button>
+
+<ul class="extensible-list horizontal my-2">
+    <li>
+        <button class="btn btn-lg btn-primary has-icon" type="button">
+            <span class="fab fa-accessible-icon font-weight-normal" role="img"></span>
+            <span class="title mx-1" role="img">Accessible</span>
+        </button>
+    </li>
+    <li>
+        <a class="has-icon" href="#1" class="text-primary" title="Link">
+            <span class="fab fa-accessible-icon font-weight-normal" role="img"></span>
+            <span class="title mx-1" role="img">Accessible</span>
+        </a>
+    </li>
+</ul>
 
 <!-- Buttons -->
 <pre class="prettyprint" class="language-html" data-lang="html">
@@ -17,4 +28,10 @@
     &lt;span class="fab fa-accessible-icon"role="img"&gt;&lt;/span&gt;
     &lt;span class="title mx-1" role="img"&gt;Accessible&lt;/span&gt;
 &lt;/button&gt;
+
+&lt;a class="has-icon" href="#1" class="text-primary" title="Link"&gt;
+    &lt;span class="fab fa-accessible-icon font-weight-normal" role="img"&gt;&lt;/span&gt;
+    &lt;span class="title mx-1" role="img"&gt;Accessible&lt;/span&gt;
+&lt;/a&gt;
+
 </pre>

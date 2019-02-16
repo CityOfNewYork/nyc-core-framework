@@ -199,6 +199,8 @@ a.card,
   }
 }
 
+a:not(.btn).disabled{ opacity: 0.5; }
+
 .has-icon{
   &:hover, 
   &:focus
