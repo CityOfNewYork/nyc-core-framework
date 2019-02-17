@@ -138,11 +138,16 @@ In this file:
 %blended-link{
   color: currentColor;
   text-decoration: underline;
+  font-weight: bold;
+  // filter: invert(1);
 }
 
 .blended-link,
 .blended-link:hover{
   @extend %blended-link;
+}
+.blended-link:hover{
+  filter: brightness(85%);
 }
 
 // Blended Link

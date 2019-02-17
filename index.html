@@ -23,7 +23,8 @@
 
         html, 
         body,
-        iframe
+        iframe,
+        #introduction
         { min-height: 100vh; }
 
         iframe {
@@ -97,10 +98,14 @@
 
                         <div class="list-group list-group-flush fs-md" id="list-tab" role="tablist">
 
+                            <!-- <a class="list-group-item list-group-item-action active" id="introduction-tab" data-toggle="list" href="#introduction" role="tab" aria-controls="introduction">
+                                Introduction
+                            </a> -->
+
                             <a class="list-group-item list-group-item-action active" id="global-nav-across-tab" data-toggle="list" href="#global-nav-across" role="tab" aria-controls="global-nav-across">
                                 Global Nav Across
                             </a>
-
+                    
                             <a class="list-group-item list-group-item-action" id="global-nav-right-tab" data-toggle="list" href="#global-nav-right" role="tab" aria-controls="global-nav-right">
                                 Global Nav Right
                             </a>
@@ -143,33 +148,50 @@
 
             <div class="tab-content">
 
-                <div class="tab-pane fade show active" id="global-nav-across" role="tabpanel" aria-labelledby="global-nav-across-tab">
+                <!-- <div class="tab-pane fade show active" id="introduction" role="tabpanel" aria-labelledby="global-nav-across-tab">
 
-                    <div class="bg-white shadow-sm sticky-top p-2">
+                    <div class="h-100">
 
-                        <ul class="extensible-list horizontal justify-content-center">
-                            <li>
-                                <a class="no-btn-style text-secondary" href="homepage-01.html" target="_blank" title="View in Browser">
-                                    <span class="fas fa-eye"></span>
-                                    <span class="sr-only">View in Browser</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="no-btn-style text-secondary" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/homepage-01.html"
-                                    target="_blank" title="View on GitHub">
-                                    <span class="fab fa-github"></span>
-                                    <span class="sr-only">View on GitHub</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="container my-7">
+
+                            <h1 class="display-1 text-primary">
+                                New York City's first accessible, open-source front end framework.
+                            </h1>
+
+                        </div>
 
                     </div>
-                    <!-- .p-2 -->
 
-                    <iframe src="homepage-01.html"></iframe>
-
-                </div>
+                </div> -->
                 <!-- .tab-pane -->
+
+                <div class="tab-pane fade show active" id="global-nav-across" role="tabpanel" aria-labelledby="global-nav-across-tab">
+
+                        <div class="bg-white shadow-sm sticky-top p-2">
+    
+                            <ul class="extensible-list horizontal justify-content-center">
+                                <li>
+                                    <a class="no-btn-style text-secondary" href="homepage-01.html" target="_blank" title="View in Browser">
+                                        <span class="fas fa-eye"></span>
+                                        <span class="sr-only">View in Browser</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="no-btn-style text-secondary" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/homepage-01.html"
+                                        target="_blank" title="View on GitHub">
+                                        <span class="fab fa-github"></span>
+                                        <span class="sr-only">View on GitHub</span>
+                                    </a>
+                                </li>
+                            </ul>
+    
+                        </div>
+                        <!-- .p-2 -->
+    
+                        <iframe src="homepage-01.html"></iframe>
+    
+                    </div>
+                    <!-- .tab-pane -->
 
                 <div class="tab-pane fade" id="global-nav-right" role="tabpanel" aria-labelledby="global-nav-right-tab">
 
