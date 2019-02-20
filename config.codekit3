@@ -1291,11 +1291,11 @@
 		"oAP": "/documentation/button-toggle.html",
 		"oF": 0
 		},
-	"/documentation/buttons-and-links.html": {
+	"/documentation/buttons.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/documentation/buttons-and-links.html",
+		"oAP": "/documentation/buttons.html",
 		"oF": 0
 		},
 	"/documentation/extensible-lists.html": {
@@ -1312,18 +1312,18 @@
 		"oAP": "/documentation/using-icons.html",
 		"oF": 0
 		},
-	"/form-old.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/form-old.html",
-		"oF": 0
-		},
 	"/form.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/form.html",
+		"oF": 0
+		},
+	"/global-nav-sidebar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/global-nav-sidebar.html",
 		"oF": 0
 		},
 	"/homepage-01.html": {
@@ -1364,7 +1364,7 @@
 		},
 	"/images/feature/city-hall-flags.jpg": {
 		"ft": 16384,
-		"iS": 142677,
+		"iS": 143567,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/city-hall-flags.jpg",
@@ -1496,7 +1496,7 @@
 		},
 	"/images/feature/walk-in-the-park.jpg": {
 		"ft": 16384,
-		"iS": 145061,
+		"iS": 142620,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/walk-in-the-park.jpg",
@@ -1549,16 +1549,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/images/new-york-cityscape.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/images/new-york-cityscape.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1588,13 +1578,6 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
-		},
-	"/index-introduction.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/index-introduction.html",
-		"oF": 0
 		},
 	"/index.html": {
 		"cB": 0,
