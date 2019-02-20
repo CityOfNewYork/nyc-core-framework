@@ -329,6 +329,82 @@ legend,
 
 }
 
+// File upload
+
+// Simulate broswer focus on 'file-input-label'
+
+.pseudo-browser-focus {
+  outline-width: 5px;
+  outline-style: solid;
+  outline-color: highlight;
+
+  // WebKit gets its native focus styles.
+  @media (-webkit-min-device-pixel-ratio: 0) {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+  }
+}
+
+.wrap-file-input{
+
+  position: relative;
+
+  input[type="file"]{
+      
+      &:focus + label{
+          @extend .pseudo-browser-focus;
+      }
+
+  }
+
+  .file-input-label{
+
+    @if $enable-rounded {
+      border-radius: $border-radius;
+    }
+
+    border: $border-width solid $border-color;
+    display: block;
+
+      &:hover{
+          .file-choose,
+          .file-name
+          { text-decoration: none; }
+      }
+
+      .file-choose,
+      .file-name{
+          @extend .btn;
+          width: 100%;
+          text-align: center;
+      }
+
+      .file-choose{ 
+        @extend .btn-secondary;
+        @extend .text-white;
+
+        @if $enable-rounded {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      .file-name{ 
+          @extend .font-weight-normal;
+          display: inline-block;
+          white-space: normal;
+      }
+
+  }
+
+  @include media-breakpoint-down(md) {
+      .file-choose,
+      .file-name
+      { display: block !important; }
+  }
+
+}
+
 ////////////////////////////////////////
 // E. Gradients
 ////////////////////////////////////////
