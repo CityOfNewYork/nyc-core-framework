@@ -301,7 +301,7 @@ $btn-border-radius-lg: $border-radius;
 
 // Restore browser focus by disabling Bootstrap's default ':focus' styles 
 
-$restore_browser_focus: true;
+$restore_browser_focus: false;
 $remove_success_validation: true;
 
 // Buttons 
@@ -310,7 +310,7 @@ $btn-font-weight: $font-weight-bold;
 
 // Links
 
-$link-color: $blue;
+$link-color: green;
 $link-hover-decoration: none;
 
 ////////////////////////////////////////
@@ -342,10 +342,10 @@ $nav-link-padding-y: .75rem;
 
 $dropdown-link-active-color: $body-color;
 
-$list-group-hover-bg:               $transparent;
+$list-group-hover-bg: $transparent;
 $list-group-action-active-bg: $transparent;
-$list-group-item-padding-y:         .5rem !default;
-$list-group-item-padding-x:         $input-btn-padding-x;
+$list-group-item-padding-y: .5rem !default;
+$list-group-item-padding-x: $input-btn-padding-x;
 
 ////////////////////////////////////////
 // M. Box shadows
