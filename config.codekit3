@@ -1291,11 +1291,11 @@
 		"oAP": "/documentation/button-toggle.html",
 		"oF": 0
 		},
-	"/documentation/buttons.html": {
+	"/documentation/buttons-and-links.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/documentation/buttons.html",
+		"oAP": "/documentation/buttons-and-links.html",
 		"oF": 0
 		},
 	"/documentation/extensible-lists.html": {
@@ -1312,18 +1312,18 @@
 		"oAP": "/documentation/using-icons.html",
 		"oF": 0
 		},
+	"/form-old.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/form-old.html",
+		"oF": 0
+		},
 	"/form.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/form.html",
-		"oF": 0
-		},
-	"/global-nav-sidebar.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/global-nav-sidebar.html",
 		"oF": 0
 		},
 	"/homepage-01.html": {
@@ -1579,6 +1579,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/images/new-york-cityscape.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/new-york-cityscape.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1608,6 +1618,13 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/index-introduction.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/index-introduction.html",
+		"oF": 0
 		},
 	"/index.html": {
 		"cB": 0,
