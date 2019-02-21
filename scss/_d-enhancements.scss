@@ -202,15 +202,13 @@ a.card,
 a:not(.btn).disabled{ opacity: 0.5; }
 
 .has-icon{
-  &:hover, 
-  &:focus
-  {
-      text-decoration: none !important;
-      span.title{ text-decoration: underline; }
+  @include hover-focus{
+    text-decoration: none !important;
+    span.title{ text-decoration: underline; }
   }
   
   &.active{
-      span.title{ text-decoration: underline; }
+    span.title{ text-decoration: underline; }
   }
 }
 

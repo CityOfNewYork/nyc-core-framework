@@ -229,18 +229,19 @@
   appearance: none;
 
   &:focus {
-    border-color: $custom-select-focus-border-color;
 
     @if $restore_browser_focus != true {
       outline: 0;
+      border-color: $custom-select-focus-border-color;
+
+      @if $enable-shadows {
+        box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
+      } @else {
+        box-shadow: $custom-select-focus-box-shadow;
+      }
+
     }
     
-    @if $enable-shadows {
-      box-shadow: $custom-select-box-shadow, $custom-select-focus-box-shadow;
-    } @else {
-      box-shadow: $custom-select-focus-box-shadow;
-    }
-
     &::-ms-value {
       // For visual consistency with other platforms/browsers,
       // suppress the default white text on blue background highlight given to
