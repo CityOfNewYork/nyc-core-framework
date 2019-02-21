@@ -307,7 +307,10 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   }
 }
 
-fieldset{
+// Fieldset and Legend
+
+fieldset, 
+.fieldset{
   border: $border-width solid $border-color;
   margin-bottom: $spacer-5;
 
