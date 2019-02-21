@@ -47,6 +47,10 @@ $grid-breakpoints: (
   xxxl: $grid-bp-xxxl
 );
 
+
+
+
+
 ////////////////////////////////////////
 // B. Spacing utilities
 ////////////////////////////////////////
@@ -413,3 +417,18 @@ $figure-caption-font-size: $fs-md;
 
 $code-font-size: 87.5%;
 $code-color: $cyan;
+
+$cool-icon: 'Sean';
+
+
+$form-validation-states: (
+  (
+    "validcgv": (
+      "color": $input-border-color
+    ),
+    // "invalid": (
+    //   "color": $form-feedback-invalid-color,
+    //   "icon": $form-feedback-icon-invalid
+    // ),
+  )
+);
