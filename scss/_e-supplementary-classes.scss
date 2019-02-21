@@ -146,6 +146,7 @@ In this file:
 .blended-link:hover{
   @extend %blended-link;
 }
+
 .blended-link:hover{
   filter: brightness(85%);
 }

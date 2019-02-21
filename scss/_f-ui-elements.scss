@@ -307,7 +307,10 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
   }
 }
 
-fieldset{
+// Fieldset and Legend
+
+fieldset, 
+.fieldset{
   border: $border-width solid $border-color;
   margin-bottom: $spacer-5;
 
@@ -326,6 +329,77 @@ legend,
   color: white;
   padding: $spacer-2;
   margin-bottom: 0;
+
+}
+
+// File upload
+
+// Simulate broswer focus on 'file-input-label'
+
+.pseudo-browser-focus {
+  outline-width: 5px;
+  outline-style: solid;
+  outline-offset: -($border-width * 2);
+
+  // WebKit gets its native focus styles.
+  @media (-webkit-min-device-pixel-ratio: 0) {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+  }
+}
+
+.wrap-file-input{
+
+  position: relative;
+
+  input[type="file"]{
+      &:focus + label{ @extend .pseudo-browser-focus; }
+  }
+
+  .file-input-label{
+    border: $border-width solid $border-color;
+    display: block;
+
+    @if $enable-rounded {
+      border-radius: $border-radius;
+    }
+
+    &:hover{
+      .file-choose,
+      .file-name
+      { text-decoration: none; }
+    }
+
+    .file-choose,
+    .file-name{
+      width: 100%;
+      text-align: center;
+    }
+
+    .file-choose{ 
+      @extend .has-icon;
+
+      @if $enable-rounded {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .file-name{ 
+      @extend .font-weight-normal;
+      @extend .text-truncate;
+      padding: $spacer-1;
+      display: block;
+      white-space: normal;
+    }
+
+  }
+
+  @include media-breakpoint-down(md) {
+      .file-choose,
+      .file-name
+      { display: block !important; }
+  }
 
 }
 
