@@ -353,7 +353,7 @@ legend,
   position: relative;
 
   input[type="file"]{
-      &:focus + label{ @extend .pseudo-browser-focus; }
+      // &:focus + label{ @extend .pseudo-browser-focus; }
   }
 
   .file-input-label{

@@ -302,6 +302,7 @@ $btn-border-radius-lg: $border-radius;
 // Restore browser focus by disabling Bootstrap's default ':focus' styles 
 
 $restore_browser_focus: false;
+
 $remove_success_validation: true;
 
 // Buttons 
@@ -310,7 +311,7 @@ $btn-font-weight: $font-weight-bold;
 
 // Links
 
-$link-color: green;
+$link-color: $blue;
 $link-hover-decoration: none;
 
 ////////////////////////////////////////
@@ -365,6 +366,8 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 
 $form-group-margin-bottom: $spacer-5;
 $input-btn-focus-width: .15rem;
+
+$input-btn-focus-box-shadow: 0 0 0 20px red; 
 
 // Note: Since version 4.2.1, bootstrap added icons to validate
 // We use more descriptive Font Awesome icons, so we simply turn Bootstrap's validation icons off
