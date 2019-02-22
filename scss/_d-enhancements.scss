@@ -183,11 +183,20 @@ a,
 .btn-toggle [data-toggle="collapse"],
 .accordion-group [data-toggle="collapse"],
 a.card,
-#back-to-top a
+#back-to-top a, 
+.btn.file-choose
 {
   @include hover-focus{
     text-decoration: none;
     > span.title{ text-decoration: underline; }
+  }
+}
+
+input[type="file"]{
+  &:focus + label{ 
+    .title{
+      text-decoration: underline;
+    }
   }
 }
 
@@ -354,19 +363,4 @@ thead th { @extend .border-bottom-0; }
   
   // IE min-width fix
   .fixed-height{  height: 1em; }
-}
-
-////////////////////////////////////////
-// H. Internet Explorer 
-////////////////////////////////////////
-
-@-moz-document url-prefix() {
-
-  textarea
-  {
-      &:focus {
-          box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-          border: 1px solid rgba(81, 203, 238, 1);
-      }
-  }
 }

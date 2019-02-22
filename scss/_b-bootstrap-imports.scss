@@ -20,7 +20,7 @@ In this file:
 // B. Required Bootstrap imports
 ////////////////////////////////////////
 
-$form-validation-states: map-remove($form-validation-states, "valid");
+$form-validation-states: map-remove( $form-validation-states, "valid" );
 
 ////////////////////////////////////////
 // C. Remove unneeded sass map values

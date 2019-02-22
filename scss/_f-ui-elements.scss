@@ -334,30 +334,20 @@ legend,
 
 // File upload
 
-// Simulate broswer focus on 'file-input-label'
-
-.pseudo-browser-focus {
-  outline-width: 5px;
-  outline-style: solid;
-  outline-offset: -($border-width * 2);
-
-  // WebKit gets its native focus styles.
-  @media (-webkit-min-device-pixel-ratio: 0) {
-      outline-color: -webkit-focus-ring-color;
-      outline-style: auto;
-  }
-}
-
 .wrap-file-input{
 
   position: relative;
 
   input[type="file"]{
-      // &:focus + label{ @extend .pseudo-browser-focus; }
+    &:focus + label{ 
+      @include transition;
+      border-color: $input-focus-border-color;
+      box-shadow: $input-btn-focus-box-shadow;
+    }
   }
 
   .file-input-label{
-    border: $border-width solid $border-color;
+    border: $border-width solid $input-border-color;
     display: block;
 
     @if $enable-rounded {

@@ -83,7 +83,7 @@ $spacers: (
 
 // Set grid gutter width (must be set in REM)
 
-$grid-gutter-width: 2rem; // (32px)`
+$grid-gutter-width: 2rem; // (32px)
 
 // Set container max-width media queries
 
@@ -110,8 +110,7 @@ $container-max-widths: (
   sm: ($container-max-width-sm),
   md: ($container-max-width-md),
   lg: ($container-max-width-lg),
-  xl: ($container-max-width-xl),
-  // xxl: ($container-max-width-xxl)
+  xl: ($container-max-width-xl)
 );
 
 ////////////////////////////////////////
@@ -365,12 +364,21 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 $form-group-margin-bottom: $spacer-5;
 $input-btn-focus-width: .15rem;
 $input-focus-border-color: $blue;
-$input-btn-focus-box-shadow: 0 0 0 2px $blue; 
+$input-btn-focus-box-shadow: 0 0 0 2px rgba( $blue, 0.75); 
 
 // Note: Since version 4.2.1, bootstrap added icons to validate
 // We use more descriptive Font Awesome icons, so we simply turn Bootstrap's validation icons off
 
 $enable-validation-icons: false;
+
+// Custom checkbox and radio
+
+$custom-control-indicator-checked-color: white;
+$custom-control-indicator-checked-bg: lighten($blue, 5%);
+$custom-control-indicator-active-bg: lighten($blue, 35%);
+
+$custom-control-indicator-active-box-shadow:   0 0 1rem rgba( $blue, $box-shadow-opacity );
+
 
 // Alerts
 
