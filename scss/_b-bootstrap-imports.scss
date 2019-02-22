@@ -3,7 +3,8 @@
 In this file:
 
 // A. Required Bootstrap imports
-// B. Optional Bootstrap imports
+// B. Remove unneeded sass map values
+// c. Optional Bootstrap imports
 
 */
 
@@ -16,7 +17,13 @@ In this file:
 @import "../bootstrap/scss/mixins";
 
 ////////////////////////////////////////
-// B. Optional Bootstrap imports
+// B. Required Bootstrap imports
+////////////////////////////////////////
+
+$form-validation-states: map-remove($form-validation-states, "valid");
+
+////////////////////////////////////////
+// C. Remove unneeded sass map values
 ////////////////////////////////////////
 
 // Note: Comment out unneeded dependencies
@@ -40,16 +47,18 @@ In this file:
 @import "../bootstrap/scss/card";
 // @import "../bootstrap/scss/breadcrumb";
 // @import "../bootstrap/scss/pagination";
-@import "../bootstrap/scss/badge";
+// @import "../bootstrap/scss/badge";
 // @import "../bootstrap/scss/jumbotron";
 @import "../bootstrap/scss/alert";
 // @import "../bootstrap/scss/progress";
 @import "../bootstrap/scss/media";
 @import "../bootstrap/scss/list-group";
 // @import "../bootstrap/scss/close";
+// @import "../bootstrap/scss/toasts";
 @import "../bootstrap/scss/modal";
 // @import "../bootstrap/scss/tooltip";
 // @import "../bootstrap/scss/popover";
 // @import "../bootstrap/scss/carousel";
+// @import "../bootstrap/scss/spinners";
 @import "../bootstrap/scss/utilities";
 // @import "../bootstrap/scss/print";

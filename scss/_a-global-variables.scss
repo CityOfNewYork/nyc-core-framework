@@ -47,10 +47,6 @@ $grid-breakpoints: (
   xxxl: $grid-bp-xxxl
 );
 
-
-
-
-
 ////////////////////////////////////////
 // B. Spacing utilities
 ////////////////////////////////////////
@@ -172,6 +168,10 @@ $display4-weight: $font-weight-bold;
 
 $lead-font-size: $fs-lg;
 $lead-font-weight: $font-weight-light;
+
+// Responsive font sizes
+
+$enable-responsive-font-sizes: true;
 
 ////////////////////////////////////////
 // F. Bootstrap colors
@@ -303,12 +303,6 @@ $btn-border-radius-lg: $border-radius;
 // J. Buttons and links
 ////////////////////////////////////////
 
-// Restore browser focus by disabling Bootstrap's default ':focus' styles 
-
-$restore_browser_focus: false;
-
-$remove_success_validation: true;
-
 // Buttons 
 
 $btn-font-weight: $font-weight-bold;
@@ -370,8 +364,8 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 
 $form-group-margin-bottom: $spacer-5;
 $input-btn-focus-width: .15rem;
-
-$input-btn-focus-box-shadow: 0 0 0 20px red; 
+$input-focus-border-color: $blue;
+$input-btn-focus-box-shadow: 0 0 0 2px $blue; 
 
 // Note: Since version 4.2.1, bootstrap added icons to validate
 // We use more descriptive Font Awesome icons, so we simply turn Bootstrap's validation icons off
@@ -417,18 +411,3 @@ $figure-caption-font-size: $fs-md;
 
 $code-font-size: 87.5%;
 $code-color: $cyan;
-
-$cool-icon: 'Sean';
-
-
-$form-validation-states: (
-  (
-    "validcgv": (
-      "color": $input-border-color
-    ),
-    // "invalid": (
-    //   "color": $form-feedback-invalid-color,
-    //   "icon": $form-feedback-icon-invalid
-    // ),
-  )
-);
