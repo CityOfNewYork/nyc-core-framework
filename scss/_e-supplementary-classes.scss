@@ -139,33 +139,29 @@ In this file:
   color: currentColor;
   text-decoration: underline;
   font-weight: bold;
-  // filter: invert(1);
 }
 
 .blended-link,
-.blended-link:hover{
+.blended-link:hover
+{
   @extend %blended-link;
 }
 
-.blended-link:hover{
-  filter: brightness(85%);
-}
-
-// Blended Link
-// Apply to <a> to inherit color from parent and add text decoration 
+// Has Icon
+// Apply to <btn> or <a> with a Font Awesome icon <span> to ensure icon doesn't inherit 
+// text decoration underline on hover
 
 .has-icon{
 
   &:hover{
-      text-decoration: none;
-      span.title{ text-decoration: underline; }
+    text-decoration: none;
+    span.title{ text-decoration: underline; }
   }
   
   &.active{
-      span.title{ text-decoration: underline; }
+    span.title{ text-decoration: underline; }
   }
 }
-
 
 ////////////////////////////////////////
 // I. Lists
