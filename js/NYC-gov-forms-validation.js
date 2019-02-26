@@ -27,7 +27,7 @@ function initListener(){
 			var fileName = '';
 			fileName = e.target.value.split('\\').pop();
 			if(fileName){
-				$label.find('span').html(fileName);
+				$label.find('.file-name').html(fileName);
 			}else{
 				$label.html(labelVal);
 			}
