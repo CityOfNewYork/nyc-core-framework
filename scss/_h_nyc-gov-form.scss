@@ -14,14 +14,18 @@ form.nycgov-form{
         &.validationError, 
         .validationError
         {
-            color: $danger;
-    
+            ~ label.fileInput-label2{
+                border: $border-width solid $danger!important;
+            }
+
+            color: $danger;         
             input:not([type="radio"]):not([type="checkbox"]),
             select,
             textarea 
             { border-color: $danger; }
     
-            .validationMessage{
+            .validationMessage, 
+            ~ .validationMessage{
             color: $danger;
             font-weight: $font-weight-bold;
             position: relative;
@@ -41,6 +45,7 @@ form.nycgov-form{
                 }
             }
             }
+           
       }
     }
     
@@ -95,14 +100,22 @@ form.nycgov-form{
     }
 
     label.fileInput-label1{        
-        
+        margin-bottom:0;
         ~ input[type="file"]{
             @extend .sr-only;
+            
+            &:focus ~ label {
+                @if $enable-shadows {
+                    box-shadow: $input-box-shadow, $input-focus-box-shadow;
+                    } @else {
+                    box-shadow: $custom-control-indicator-focus-box-shadow;
+                    }
+            }
         }
         
         ~ label.fileInput-label2{
             border: $border-width solid $input-border-color;
-
+            margin-top:$spacer-1;
             > span{
                 display:block;
                 text-align:center;
