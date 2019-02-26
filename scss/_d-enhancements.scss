@@ -221,10 +221,6 @@ a:not(.btn).disabled{ opacity: 0.5; }
   }
 }
 
-// Override Bootstrap's default whitespace on '.btn' selectors
-
-.btn{ white-space: normal !important; }
-
 // Add visible underline to links within the #primary-content area
 
 #primary-content{
