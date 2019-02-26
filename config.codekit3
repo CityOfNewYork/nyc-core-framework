@@ -1345,6 +1345,13 @@
 		"oAP": "/form.html",
 		"oF": 0
 		},
+	"/form_new.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/form_new.html",
+		"oF": 0
+		},
 	"/homepage-01.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1660,6 +1667,26 @@
 		"oAP": "/js/main-min.js",
 		"oF": 0,
 		"sC": 3,
+		"tS": 0
+		},
+	"/js/NYC-gov-forms-validation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/js/NYC-gov-forms-validation-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/js/NYC-gov-forms-validation_bkup.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/js/NYC-gov-forms-validation_bkup-min.js",
+		"oF": 0,
+		"sC": 0,
 		"tS": 0
 		},
 	"/js/responsive-table.js": {
