@@ -299,12 +299,16 @@
                     <p class="text-right text-danger fs-md" aria-hidden="true">* Required fields</p>
 
                     <form name="Sample-form-validate" method="post" id="sample-form-validate" class="needs-validation nycgov-form" novalidate="">
-                            <input value="custom-cal-01,file-upload-01,labelVS,borough,checkboxes1,fieldset1,checkboxes2,radios1,radios2" name="required" id="required" type="hidden">
+                        
+                        <input value="custom-cal-01,file-upload-01,labelVS,borough,checkboxes1,fieldset1,checkboxes2,radios1,radios2" name="required" id="required" type="hidden">
+                        
                         <div class="form-group">
-                            <label for="label-01">Label VS<span class="fs-md text-danger" aria-hidden="true">*</span>                             
-                            <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
-                            <input type="text" class="form-control form-control-lg" name="labelVS" id="label-01" required="">
-                        </label>
+
+                            <label for="label-01">Label VS<span class="fs-md text-danger" aria-hidden="true">*</span>
+                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <input type="text" class="form-control form-control-lg" name="labelVS" id="label-01" required="">
+                            </label>
+                        
                         </div>
                          <!-- .form-group -->                  
 
@@ -314,6 +318,7 @@
                                 <input type="text" name="custom-cal-01" class="custom-cal-input form-control form-control-lg">
                             </label>
                         </div>
+                        <!-- .form-group -->  
 
                         <div class="form-group">
                             <label for="borough">Borough<span class="fs-md text-danger" aria-hidden="true">*</span>                          
@@ -336,78 +341,155 @@
                                 <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
                                 <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
                                 <ul class="extensible-list">
-                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="label-text">Label 1</span></label></li>
-                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="label-text">Label 2</span></label></li>
-                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="label-text">Label 3</span></label></li>
-                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="label-text">Label 4</span></label></li>
-                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="label-text">Label 5</span></label></li>
+                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="custom-control-label">Label 1</span></label></li>
+                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="custom-control-label">Label 2</span></label></li>
+                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="custom-control-label">Label 3</span></label></li>
+                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="custom-control-label">Label 4</span></label></li>
+                                    <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="custom-control-label">Label 5</span></label></li>
                                 </ul>
                             </fieldset>
 
                         </div>
+                        <!-- .form-group -->
 
                         <div class="form-group">
 
-                                <fieldset>
-                                    <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
-                                    <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
-                                    <ul class="extensible-list horizontal">
-                                        <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes2"><span class="label-text">Label 1</span></label></li>
-                                        <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes2"><span class="label-text">Label 2</span></label></li>
-                                        <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes2"><span class="label-text">Label 3</span></label></li>
-                                        <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes2"><span class="label-text">Label 4</span></label></li>
-                                        <li><label class="custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes2"><span class="label-text">Label 5</span></label></li>
-                                    </ul>
-                                </fieldset>    
-    
-                            </div>
+                            <fieldset>
+                                <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
+                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <ul class="extensible-list horizontal">
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="checkbox" class="custom-control-input" name="checkboxes2">
+                                            <span class="custom-control-label">Label 1</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="checkbox" class="custom-control-input" name="checkboxes2">
+                                            <span class="custom-control-label">Label 2</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="checkbox" class="custom-control-input" name="checkboxes2">
+                                            <span class="custom-control-label">Label 3</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="checkbox" class="custom-control-input" name="checkboxes2">
+                                            <span class="custom-control-label">Label 4</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="checkbox" class="custom-control-input" name="checkboxes2">
+                                            <span class="custom-control-label">Label 5</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
 
-                            <div class="form-group">
+                        </div>
+                        <!-- .form-group -->
 
-                                    <fieldset>
-                                        <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
-                                        <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
-                                        <ul class="extensible-list">
-                                            <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios1"><span class="label-text">Label 1</span></label></li>
-                                            <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios1"><span class="label-text">Label 2</span></label></li>
-                                            <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios1"><span class="label-text">Label 3</span></label></li>
-                                            <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios1"><span class="label-text">Label 4</span></label></li>
-                                            <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios1"><span class="label-text">Label 5</span></label></li>
-                                        </ul>
-                                    </fieldset>        
+                        <div class="form-group">
+
+                            <fieldset>
+                                <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
+                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <ul class="extensible-list">
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios1"><span class="custom-control-label">Label 1</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios1">
+                                            <span class="custom-control-label">Label 2</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios1">
+                                            <span class="custom-control-label">Label 3</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios1">
+                                            <span class="custom-control-label">Label 4</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios1">
+                                            <span class="custom-control-label">Label 5</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+
+                        </div>
+                        <!-- .form-group -->
         
-                                </div>        
-        
-                                <div class="form-group">
-        
-                                        <fieldset>
-                                            <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
-                                            <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
-                                            <ul class="extensible-list horizontal">
-                                                <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios2"><span class="label-text">Label 1</span></label></li>
-                                                <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios2"><span class="label-text">Label 2</span></label></li>
-                                                <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios2"><span class="label-text">Label 3</span></label></li>
-                                                <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios2"><span class="label-text">Label 4</span></label></li>
-                                                <li><label class="custom-control-label"><input type="radio" class="custom-control-input" name="radios2"><span class="label-text">Label 5</span></label></li>
-                                            </ul>
-                                        </fieldset>        
-            
-                                    </div>                    
+                        <div class="form-group">
+
+                            <fieldset>
+                                <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
+                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <ul class="extensible-list horizontal">
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios2">
+                                            <span class="custom-control-label">Label 1</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios2">
+                                            <span class="custom-control-label">Label 2</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios2">
+                                            <span class="custom-control-label">Label 3</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios2">
+                                            <span class="custom-control-label">Label 4</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-control-label">
+                                            <input type="radio" class="custom-control-input" name="radios2">
+                                            <span class="custom-control-label">Label 5</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+
+                        </div>
+                        <!-- .form-group -->
 
                         <div class="form-group">
                             <label for="message">Message<span class="fs-md text-danger" aria-hidden="true">*</span>
-                            <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>                            
-                            <textarea class="form-control form-control-lg" name="fieldset1" id="message" rows="6"></textarea>
-                            <small class="text-muted">Help text for above field</small>
-                        </label>
+                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>                            
+                                <textarea class="form-control form-control-lg" name="fieldset1" id="message" rows="6"></textarea>
+                                <small class="text-muted">Help text for above field</small>
+                            </label>
                         </div>
                         <!-- .form-group -->
-                        
                         
                         <div class="form-group">
                                
                             <label class="file-upload" for="file-upload-01">
-                                <div class="file-input-label-text">
+                                <div class="file-input-custom-control-label">
                                     Upload a file<span class="fs-md text-danger" aria-hidden="true">*</span>
                                 </div>
                                 <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>                            
