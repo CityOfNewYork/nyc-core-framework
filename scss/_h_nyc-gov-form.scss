@@ -93,4 +93,21 @@ form.nycgov-form{
             border-radius: 100%;
         }
     }
+
+    label.fileInput-label1{        
+        
+        ~ input[type="file"]{
+            @extend .sr-only;
+        }
+        
+        ~ label.fileInput-label2{
+            border: $border-width solid $input-border-color;
+
+            > span{
+                display:block;
+                text-align:center;
+                padding:.375rem $spacer-1;
+            }
+        }
+    }
 }
