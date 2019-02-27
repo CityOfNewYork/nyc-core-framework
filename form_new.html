@@ -300,29 +300,29 @@
 
                     <form name="Sample-form-validate" method="post" id="sample-form-validate" class="needs-validation nycgov-form" novalidate="">
                         
-                        <input value="custom-cal-01,file,labelVS,borough,checkboxes1,fieldset1,checkboxes2,radios1,radios2" name="required" id="required" type="hidden">
+                        <input value="custom-cal-01,file,Name,borough,checkboxes1,fieldset1,checkboxes2,radios1,radios2" name="required" id="required" type="hidden">
                         
                         <div class="form-group">
 
-                            <label for="label-01">Label VS<span class="fs-md text-danger" aria-hidden="true">*</span>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
-                                <input type="text" class="form-control form-control-lg" name="labelVS" id="label-01" required="">
+                            <label>Name<span class="fs-md text-danger" aria-hidden="true">*</span>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
+                                <input type="text" class="form-control form-control-lg" name="Name" id="label-01" required="">
                             </label>
                         
                         </div>
                          <!-- .form-group -->                  
 
                         <div class="form-group">
-                            <label for="custom-cal-01">Please enter a date<span class="text-danger fs-md" aria-hidden="true">*</span>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                            <label>Please enter a date<span class="text-danger fs-md" aria-hidden="true">*</span>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
                                 <input type="text" name="custom-cal-01" class="custom-cal-input form-control form-control-lg">
                             </label>
                         </div>
                         <!-- .form-group -->  
 
                         <div class="form-group">
-                            <label for="borough">Borough<span class="fs-md text-danger" aria-hidden="true">*</span>                          
-                            <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                            <label>Borough<span class="fs-md text-danger" aria-hidden="true">*</span>                          
+                            <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
                             <select class="form-control form-control-lg" name="borough" id="borough" required>
                                 <option value="">Select One...</option>
                                 <option value="Bronx">Bronx</option>
@@ -339,7 +339,7 @@
 
                             <fieldset>
                                 <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
                                 <ul class="extensible-list">
                                     <li><label class="custom-checkbox custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="custom-control-label">Label 1</span></label></li>
                                     <li><label class="custom-checkbox custom-control-label"><input type="checkbox" class="custom-control-input" name="checkboxes1"><span class="custom-control-label">Label 2</span></label></li>
@@ -356,7 +356,7 @@
 
                             <fieldset>
                                 <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
                                 <ul class="extensible-list horizontal">
                                     <li>
                                         <label class="custom-checkbox custom-control-label">
@@ -398,7 +398,7 @@
 
                             <fieldset>
                                 <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
                                 <ul class="extensible-list">
                                     <li>
                                         <label class="custom-radio custom-control-label">
@@ -439,7 +439,7 @@
 
                             <fieldset>
                                 <legend>Select a borough<span class="fs-md text-danger" aria-hidden="true">*</span></legend>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
                                 <ul class="extensible-list horizontal">
                                     <li>
                                         <label class="custom-radio custom-control-label">
@@ -478,8 +478,8 @@
                         <!-- .form-group -->
 
                         <div class="form-group">
-                            <label for="message">Message<span class="fs-md text-danger" aria-hidden="true">*</span>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>                            
+                            <label>Message<span class="fs-md text-danger" aria-hidden="true">*</span>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>                            
                                 <textarea class="form-control form-control-lg" name="fieldset1" id="message" rows="6"></textarea>
                                 <small class="text-muted">Help text for above field</small>
                             </label>
@@ -488,11 +488,11 @@
                         
                         <div class="form-group">
                                                            
-                                <label for="file-input" class="control-label fileInput-label1">File Input<span class="fs-md text-danger" aria-hidden="true">*</span>
+                                <label class="control-label fileInput-label1">File Input<span class="fs-md text-danger" aria-hidden="true">*</span>
                                     <!--<b>PHP Form doesn't support file inputs yet, use the cgi form</b></i>--> </label>
-                                <div class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></div>
+                                <span class="validationMessage fs-md" aria-live="polite" style="display: none" aria-hidden="true"></span>
                                 <input type="file" name="file" id="file" aria-describedby="fileHelp" class="inputfile"> 
-                                        <label class="fileInput-label2" for="file">
+                                        <label class="fileInput-label2">
                                             <span class="file-choose btn btn-light text-primary">
                                                 <span class="fas fa-file-upload fa-lg" role="img"></span>
                                                 <span class="title mx-1">Upload File</span>
