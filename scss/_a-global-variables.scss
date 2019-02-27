@@ -269,6 +269,7 @@ $hr-border-color: $border-color;
 $list-group-border-color: $border-color;
 $nav-tabs-border-color: $border-color;
 $modal-header-border-color: $border-color;
+$pagination-border-color: $border-color;
 
 ////////////////////////////////////////
 // I. Border and Border radius
@@ -344,6 +345,11 @@ $list-group-hover-bg: $transparent;
 $list-group-action-active-bg: $transparent;
 $list-group-item-padding-y: .5rem !default;
 $list-group-item-padding-x: $input-btn-padding-x;
+
+$pagination-color: $secondary;
+$pagination-active-color: $white;
+$pagination-active-bg: $secondary;
+
 
 ////////////////////////////////////////
 // M. Box shadows

@@ -98,3 +98,56 @@ ul.zoom-and-location{
         }
     }
 }
+
+// Map stuff
+
+$map-action-list-margin: 0.125rem;
+
+
+div.list{
+    .lst-it{
+        background: none;
+        @extend .px-0;
+        @extend .py-2;
+    }
+}
+
+.addr{
+    @extend .my-1;
+}
+
+ul.map-action-buttons {
+
+    @include list-unstyled();
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: -($map-action-list-margin);
+    margin-right: -($map-action-list-margin);
+    
+    li {
+        margin-bottom: 0;
+        margin-left: $map-action-list-margin;
+        margin-right: $map-action-list-margin;
+
+        button {
+            @extend .btn-secondary;
+            @extend .btn-sm;
+        }
+    }
+}
+
+.cool-box{
+    overflow: hidden;
+    height: 0;
+    padding-top: 900px  / 1600px * 100%;
+}
+
+.of{
+position: absolute;
+left: 0;
+top: 0;
+  object-fit: cover;
+}
