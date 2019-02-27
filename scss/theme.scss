@@ -142,12 +142,23 @@ ul.map-action-buttons {
 .cool-box{
     overflow: hidden;
     height: 0;
-    padding-top: 900px  / 1600px * 100%;
+    padding-top: 400px  / 400px * 100%;
 }
 
-.of{
-// position: absolute;
-// left: 0;
-// top: 0;
-  object-fit: cover;
+
+
+.object-fit-parent{
+    position: relative;
+    height: 100%;
+
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
 }
+
