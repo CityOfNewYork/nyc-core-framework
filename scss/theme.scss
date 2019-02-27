@@ -138,3 +138,16 @@ ul.map-action-buttons {
         }
     }
 }
+
+.cool-box{
+    overflow: hidden;
+    height: 0;
+    padding-top: 900px  / 1600px * 100%;
+}
+
+.of{
+position: absolute;
+left: 0;
+top: 0;
+  object-fit: cover;
+}
