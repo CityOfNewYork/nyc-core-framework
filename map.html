@@ -280,109 +280,168 @@
         
         <article class="py-8" id="primary-content">
 
-                <section class="container py-5">
+                <section class="container my-6">
                     <h2>Points of Distribution Map</h2>
-                    <input id="pod-map-search" placeholder="Enter sumphin..." class="form-control form-control-lg">
-                    <div id="pod-map"></div>
-                    <div id="pod-list" style="margin-top:20px;height:600px;"></div>
+                    
+                    <div class="my-2">
+                        <input class="form-control form-control-lg" id="pod-map-search" placeholder="Search Address">
+                    </div>
+                    <!-- .my-2 -->
+
+                    <div id="pod-map" class="my-2"></div>
+
+                    <!-- <div id="pod-list" style="height:600px;"></div> -->
+
+                    <div class="btn-toggle">
+                        <a class="btn btn-block btn-lg btn-primary text-white" data-toggle="collapse" href="#pod-list-static"
+                            aria-expanded="false" aria-controls="pod-list-static">
+                            <span class="title">Results list view</span>
+                        </a>
+                    </div>
+
+                    <div class="collapse p-2" id="pod-list-static">
+
+                        <h2 class="info">Showing 10 of 165 Points of Distribution</h2>
+
+                        <div class="list" role="list">
+
+                            <div class="lst-it" role="listitem">
+                                <div class="facility">
+                                    <h3 class="name notranslate">K001 - P.S. 1 Bergen</h3>
+                                    <div class="addr notranslate">
+                                        <div class="ln1">309 47th Street</div>
+                                        <div class="ln3">Brooklyn, NY 11220</div>
+                                    </div>
+                                    <ul class="map-action-buttons">
+                                        <li>
+                                          <button class="btn rad-all map">
+                                              <span class="screen-reader-only">Locate this facility on the </span>Map</button>  
+                                        </li>
+                                        <li>
+                                            <button class="btn rad-all dir">Directions</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .lst-it -->
+
+                            <div class="lst-it" role="listitem">
+                                <div class="facility">
+                                    <h3 class="name notranslate">K016 - P.S. 16 Leonard Dunkly</h3>
+                                    <div class="addr notranslate">
+                                        <div class="ln1">157 Wilson Street</div>
+                                        <div class="ln3">Brooklyn, NY 11211</div>
+                                    </div>
+                                    <ul class="map-action-buttons">
+                                        <li>
+                                            <button class="btn rad-all map">
+                                                <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn rad-all dir">Directions</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .lst-it -->
+
+                            <div class="lst-it" role="listitem">
+                                <div class="facility">
+                                    <h3 class="name notranslate">K043 - I.S. 98 Bay Academy</h3>
+                                    <div class="addr notranslate">
+                                        <div class="ln1">1401 Emmons Avenue</div>
+                                        <div class="ln3">Brooklyn, NY 11235</div>
+                                    </div>
+                                    <ul class="map-action-buttons">
+                                        <li>
+                                            <button class="btn rad-all map">
+                                                <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn rad-all dir">Directions</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .lst-it -->
+
+                            <div class="lst-it" role="listitem">
+                                <div class="facility">
+                                    <h3 class="name notranslate">K055 - I.S. 55</h3>
+                                    <div class="addr notranslate">
+                                        <div class="ln1">2021 Bergen Street</div>
+                                        <div class="ln3">Brooklyn, NY 11233</div>
+                                    </div>
+                                    <ul class="map-action-buttons">
+                                        <li>
+                                            <button class="btn rad-all map">
+                                                <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn rad-all dir">Directions</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .lst-it -->
+
+                            <div class="lst-it" role="listitem">
+                                <div class="facility">
+                                    <h3 class="name notranslate">K071 - I.S. 71 Juan Morel Campos</h3>
+                                    <div class="addr notranslate">
+                                        <div class="ln1">215 Heyward Street</div>
+                                        <div class="ln3">Brooklyn, NY 11206</div>
+                                    </div>
+                                    <ul class="map-action-buttons">
+                                        <li>
+                                            <button class="btn rad-all map">
+                                                <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn rad-all dir">Directions</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .lst-it -->
+
+                        </div>
+                        <!-- .list -->
+
+                        <nav class="mt-2" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span class="fas fa-angle-double-left fa-xs" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span class="fas fa-angle-double-right fa-xs" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                              
+                    </div>
+                    <!-- .collapse -->
+
                 </section>
 
                 <section class="container py-5">
                     <h2>Link NYC Map</h2>
-                    <div id="link-map"></div>
-                    <div id="link-list" style="margin-top:20px;height:600px;"></div>
+                    <div id="link-map" class="my-2"></div>
+                    <div id="link-list" style="height:600px;"></div>
                 </section>
-        
-            
-            
-
-            <section class="d-none">
-
-            <div class="container-fluid">
-
-                <div class="row no-gutters">
-
-                    <div class="col d-none d-lg-flex bg-warning">
-                        <div class="embed-responsive embed-responsive-1by1">
-
-                        </div>
-
-                    </div>
-                    <!-- .col -->
-
-                    <div class="col bg-danger">
-
-                        <div class="map-tabs w-100">
-
-                            <div class="nav nav-pills bg-light" role="tablist">
-
-                                <a class="nav-item nav-link flex-fill text-center active d-lg-none" id="tab-btn-01-a" href="#tab-01-a"
-                                    data-toggle="pill" aria-controls="tab-01-a" aria-selected="true" role="tab">
-                                    Map
-                                </a>
-
-                                <a class="nav-item nav-link flex-fill text-center" id="tab-btn-01-b" href="#tab-01-b" data-toggle="pill"
-                                    aria-controls="tab-01-b" aria-selected="false" role="tab">
-                                    Tab Two
-                                </a>
-
-                                <a class="nav-item nav-link flex-fill text-center" id="tab-btn-01-c" href="#tab-01-c" data-toggle="pill"
-                                    aria-controls="tab-01-c" aria-selected="false" role="tab">
-                                    Tab Three
-                                </a>
-
-                            </div>
-
-                            <div class="tab-content" id="tabs-01-content">
-
-                                <div class="tab-pane fade show active d-lg-none" id="tab-01-a" aria-labelledby="tab-btn-01-a" role="tabpanel">
-
-                                    <div class="embed-responsive embed-responsive-16by9">
-
-                                    </div>
-
-                                </div>
-
-                                <div class="tab-pane fade" id="tab-01-b" aria-labelledby="tab-btn-01-b" role="tabpanel">
-                                    <h3>Tab Two Content</h3>
-                                    <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
-                                        pretium et
-                                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
-                                        sapien potenti
-                                        non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                                        dictumst
-                                        porttitor est volutpat parturient scelerisque.</p>
-                                </div>
-
-                                <div class="tab-pane fade" id="tab-01-c" aria-labelledby="tab-btn-01-c" role="tabpanel">
-                                    <h3>Tab Three Content</h3>
-                                    <p>Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
-                                        pretium et
-                                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
-                                        sapien potenti
-                                        non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                                        dictumst
-                                        porttitor est volutpat parturient scelerisque.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- #tabs 01 -->
-
-                    </div>
-                    <!-- .col -->
-
-                </div>
-                <!-- .row -->
-
-            </div>
-            <!-- .container -->
-
-
-            </section>
-            
-
-
 
         </article>
         <!-- #primary-content -->
@@ -652,7 +711,7 @@
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="./js/main.js"></script>
 
-    <!-- MAPS -->
+    <!-- NYC maps -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
     <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.4.0/papaparse.min.js"></script>
