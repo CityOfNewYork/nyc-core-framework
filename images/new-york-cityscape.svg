@@ -1,5 +1,6 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1170" height="320.75" viewBox="0 0 1170 320.75">
   <title>new-york-cityscape</title>
+  <polyline points="595 290 595 195 625 195 625 290" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <polyline points="490 320 490 305 565 305 565 320" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <polyline points="515 130 515 110 540 110 540 130" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <polyline points="510 275 510 130 520 130 520 275" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
@@ -309,12 +310,11 @@
   <line x1="520" y1="129.99989" x2="520" y2="109.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <line x1="535" y1="129.99989" x2="535" y2="109.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <path d="M610,169.99989a5,5,0,0,0-5,5v15h10v-15A5,5,0,0,0,610,169.99989Z" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  <path d="M610,164.99989a10,10,0,0,0-10,10v20h20v-20A10,10,0,0,0,610,164.99989Z" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path d="M620,194.99989v-20a10,10,0,0,0-20,0v20" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <line x1="610" y1="149.99989" x2="610" y2="134.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <path d="M615,161.91036v-1.91047a5,5,0,0,0-10,0v1.91042" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <path d="M617.5,168.3858v-.88591a7.5,7.5,0,0,0-15,0v.88591" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <path d="M612.5,155.66983v-3.16994a2.5,2.5,0,0,0-5,0v3.16994" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  <polyline points="595 290 595 195 625 195 625 290" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <polyline points="590 320 590 255 595 255" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <polyline points="625 255 630 255 630 320" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <line x1="595" y1="199.99989" x2="625" y2="199.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
