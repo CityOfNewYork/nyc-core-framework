@@ -422,7 +422,6 @@
   <g>
     <line x1="112.5" y1="309.99989" x2="112.5" y2="319.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     <line x1="142.5" y1="309.99989" x2="142.5" y2="319.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-    <circle cx="127.5" cy="287.49989" r="7.5" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     <line x1="127.5" y1="294.99989" x2="127.5" y2="319.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     <g>
       <circle cx="112.5" cy="302.49989" r="7.5" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
@@ -430,9 +429,9 @@
       <line x1="105.4269" y1="304.99989" x2="119.57308" y2="304.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
     <g>
-      <circle cx="127.5" cy="287.49989" r="7.5" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-      <line x1="120.42692" y1="284.99989" x2="134.57308" y2="284.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-      <line x1="120.4269" y1="289.99989" x2="134.57308" y2="289.99989" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <circle cx="127.5" cy="287.5" r="7.5" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line x1="120.42692" y1="285" x2="134.57308" y2="285" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line x1="120.4269" y1="290" x2="134.57308" y2="290" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
     <g>
       <circle cx="142.5" cy="302.49989" r="7.5" fill="none" stroke="#3b6cf6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
