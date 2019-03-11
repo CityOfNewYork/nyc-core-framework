@@ -95,7 +95,7 @@ $primary-nav-pills-link-active-bg-color: theme-color('primary');
 $primary-nav-dropdown-bg-color: white;
 
 // Primary nav dropdown items color
-$primary-nav-dropdown-item-color: theme-color('body-color');
+$primary-nav-dropdown-item-color: $body-color;
 
 #global-header{
 
@@ -151,82 +151,60 @@ $primary-nav-dropdown-item-color: theme-color('body-color');
 
   // Set .dropdown-menu styles
 
+  #nav-primary {
+  
   .dropdown-menu{
     background-color: $primary-nav-dropdown-bg-color;
     border: none;
+    padding: $nav-link-padding-y $nav-link-padding-x;
 
-    a.dropdown-item{
-      color: $primary-nav-dropdown-item-color;      
-      background: none; // Remove Bootstrap Default background color
-      white-space: normal; // Fix Bootstrap Default white-space 'no-wrap'
-
+    a{
+      color: $primary-nav-dropdown-item-color;
       &.active{ text-decoration: underline; }
     }
   }
 
   // Improve .dropdown-menu when present within .nav-pills
 
-  #nav-primary.nav-pills .dropdown-menu{
-    width: 100%;
-    left: 0;
-    right: 0;
-    margin: 0;
-    
-    // When dropdowns are flush left or right, remove Bootrap transform and reposition y axis
-    transform: none !important;
-    top: 100% !important;
-  }
+    .nav-pills .dropdown-menu{
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0;
+      
+      // When dropdowns are flush left or right, remove Bootrap transform and reposition y axis
+      transform: none !important;
+      top: 100% !important;
+    }
 
+    @include media-breakpoint-down(md) {
 
-} /* #global-header */ 
-
-// Resets dropdown functionality on mobile
-
-#device-menu{
-
-  .nav-link{
-    padding-top: $spacer-1;
-    padding-bottom: $spacer-1;
-
-    &.active { color: $primary-nav-mobile-link-active-color; }
-
-    @if $enable-caret {
-      &.dropdown-toggle{
-        &[aria-expanded="true"]::after {
-          @include caret-up;
-        }
+      .nav-item {
+        border-top: 1px solid $border-color;
+        width: 100%;
       }
-    } // end if
-  }
 
-  .dropdown-menu.show{
-    position: static !important;
-    background: $transparent;
-
-    -webkit-transform: none !important; /* Safari and Chrome */
-       -moz-transform: none !important; /* Firefox */
-        -ms-transform: none !important; /* IE 9 */
-         -o-transform: none !important; /* Opera */
-            transform: none !important;
-
-    width: 100%;
-    padding: 0 $spacer-4;
-    margin: 0;
-
-    a.dropdown-item{
-      width: auto !important;
-      color: currentColor;
-      padding: 0;
-      margin-bottom: $spacer-1;
-      float: left;
-
-      &:hover,
-      &:active,
-      &:visited
+      .nav-item,
+      .dropdown-menu
       { background: none; }
+
+      .dropdown-menu { position: static !important; }
+
+      .dropdown-toggle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @if $enable-caret {
+          &[aria-expanded="true"]::after {
+            @include caret-up;
+          }
+        } // end if
+      }
     }
   }
-}
+
+} /* #global-header */ 
 
 ////////////////////////////////////////
 // C. Tab skipper
