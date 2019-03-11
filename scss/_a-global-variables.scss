@@ -333,6 +333,13 @@ $card-border-color: rgba( $black, .2 );
 $component-active-color: $white;
 $component-active-bg: $info;
 
+// Navbar settings
+
+$navbar-padding-x: $card-spacer-x;
+$navbar-padding-y: 0;
+
+$navbar-brand-padding-y: $card-spacer-y;
+
 // Navs (.nav) and input padding
 
 $input-btn-padding-x: ( $grid-gutter-width / 2 );

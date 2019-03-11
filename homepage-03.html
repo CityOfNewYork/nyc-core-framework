@@ -63,114 +63,66 @@
 
     <header id="global-header" role="banner">
 
-        <div class="wrap-header">
+        <div class="wrap-header wide">
 
-            <div class="container-fluid wide">
+            <nav class="navbar navbar-expand-lg navbar-light bg-warning">
 
-                <!-- row 01 -->
-                <div class="row align-items-center bg-danger">
-                    
-                    <div class="col-lg py-2">
-                        <div class="d-flex justify-content-center justify-content-lg-start align-items-center">
-                            <a href="#" title="Home">
-                                <img src="./images/nyc-logo-generic.svg" alt="NYC Generic Logo">
-                            </a>
-                        </div>
-                    </div>
-                    <!-- .col -->
-    
-                    <!-- separator -->
-                    <div class="col-12 border-top d-lg-none"></div>
-
-                    <div class="col-lg-auto">
-
-                        <!-- row 02 -->
-                        <div class="row no-gutters justify-content-between py-2">
-
-                            <!-- Menu Toggle -->
-                            <div class="col-auto d-flex d-lg-none bg-danger">
-
-                                <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
-                                    aria-controls="#nav-primary" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="d-flex align-items-center">
-                                        <span class="fas fa-bars fs-lg" role="img"></span>
-                                        <span class="px-2 fs-rg">Menu</span>
-                                    </span>
-                                </button>
-
-                            </div>
-                            <!-- .col -->            
-
-                            <div class="col-auto bg-warning">
-
-                                <ul class="extensible-list horizontal fs-lg">
-                                    <!-- Languages -->
-                                    <li>
-                                        <button class="no-btn-style" type="button" data-toggle="collapse"
-                                            data-target="#global-language" aria-controls="global-language"
-                                            aria-expanded="false">
-                                            <span class="fas fa-language" title="Languages" role="img"></span>
-                                        </button>
-                                    </li>
-                                    <!-- Search -->
-                                    <li>
-                                        <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
-                                            aria-expanded="false">
-                                            <span class="fas fa-search" title="Search" role="img"></span>
-                                        </button>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- .col -->
-
-                        </div>
-                        <!-- .row -->
-
-                    </div>
-                    <!-- .col -->
-
+                <div class="wrap-navbar-brand">
+                    <a class="navbar-brand" href="#" title="">
+                        <img src="./images/nyc-logo-generic.svg" alt="NYC Generic Logo">
+                    </a>
                 </div>
-                <!-- .row -->
 
-            </div>
-            <!-- .container-fluid -->
+                <ul class="extensible-list horizontal order-lg-last fs-lg my-2">
+                    <li>
+                        <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="d-flex align-items-center">
+                                <span class="fas fa-bars fs-lg" role="img"></span>
+                            </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="no-btn-style" type="button" data-toggle="collapse"
+                            data-target="#global-language" aria-controls="global-language"
+                            aria-expanded="false">
+                            <span class="fas fa-language" title="Languages" role="img"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
+                            aria-expanded="false">
+                            <span class="fas fa-search" title="Search" role="img"></span>
+                        </button>
+                    </li>
+                </ul>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" title="Link">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+
                 </div>
-              </nav>
+
+            </nav>
 
         </div>
         <!-- .wrap-header -->
