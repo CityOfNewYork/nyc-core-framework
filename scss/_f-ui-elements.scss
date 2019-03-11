@@ -207,39 +207,43 @@ $primary-nav-dropdown-item-color: $body-color;
 
   // Navbar
 
-.navbar-brand{ margin-right: 0; }
-
 .navbar{
 
+  .navbar-brand{ margin-right: 0; }
 
-
-
-// @extend .mx-n2;
-
-// .wrap-navbar-brand{
-
-// @extend .w-100;
-// @extend .bg-danger;
-// @extend .text-center;
-// @extend .border-bottom;
-
-// }
-
-
-
-  .extensible-list{
-    margin-bottom: 0;
+  .navbar-toggler{
+      &.no-btn-style{
+      padding: 0;
+      border: none;
+      font-size: unset;
+      border-radius: 0;
+      color: inherit;
+    }
   }
-}
 
-.navbar-toggler {
-    &.no-btn-style{
-    padding: 0;
-    border: none;
-    font-size: unset;
-    border-radius: 0;
-    color: inherit;
+  .extensible-list{ margin-bottom: 0; }
+
+  @include media-breakpoint-down(xs) {
+    
+    padding-left: 0;
+    padding-right: 0;
+
+    .wrap-navbar-brand,
+    .extensible-list
+    { width: 100%; }
+
+    .wrap-navbar-brand{
+      text-align: center;
+      border-bottom: $border-width solid $border-color;
+    }
+
+    .extensible-list{
+      justify-content: space-around;
+      margin: $spacer-1 0;
+    }
+
   }
+
 }
 
 

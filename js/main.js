@@ -47,10 +47,17 @@ $(document).ready(function () {
 
     $('#global-search').on('show.bs.collapse', function () {
         $('#global-language').collapse('hide');
+        $('#nav-primary').collapse('hide');
     });
 
     $('#global-language').on('show.bs.collapse', function () {
         $('#global-search').collapse('hide');
+        $('#nav-primary').collapse('hide');
+    });
+
+    $('#nav-primary').on('show.bs.collapse', function () {
+        $('#global-search').collapse('hide');
+        $('#global-language').collapse('hide');
     });
 
     ////////////////////////////////////////
