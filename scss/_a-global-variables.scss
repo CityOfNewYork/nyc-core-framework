@@ -333,23 +333,11 @@ $card-border-color: rgba( $black, .2 );
 $component-active-color: $white;
 $component-active-bg: $info;
 
-
-$navbar-brand-padding-y: $card-spacer-y;
-
 // Navs (.nav) and input padding
 
 $input-btn-padding-x: ( $grid-gutter-width / 2 );
 $nav-link-padding-x: $input-btn-padding-x;
 $nav-link-padding-y: .75rem;
-
-// Navbar settings
-
-$navbar-nav-link-padding-x: $nav-link-padding-x;
-$navbar-padding-x: 0;
-$navbar-padding-y: 0;
-
-
-
 
 $dropdown-link-active-color: $body-color;
 
