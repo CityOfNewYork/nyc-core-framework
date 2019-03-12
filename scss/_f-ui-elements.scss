@@ -74,22 +74,16 @@ In this file:
 // Primary Navigation variables set here override Bootstrap default component settings
 
 // Primary nav font weight
-$primary-nav-font-weight: $font-weight-bold;
+$primary-nav-link-font-weight: $font-weight-bold;
 
 // Primary nav link color
 $primary-nav-link-color: $body-color;
 
-// Primary nav-right link active (current page) color
-$primary-nav-right-link-active-color: theme-color('secondary');
-
-// Primary nav (mobile-only) link active (current page) color
-$primary-nav-mobile-link-active-color: theme-color('secondary');
-
-// Primary nav-pills link active (current page) color
-$primary-nav-pills-link-active-color: white;
+// Primary nav link active (current page) color
+$primary-nav-link-active-color: $secondary;
 
 // Primary nav-pills link active (current page) background color
-$primary-nav-pills-link-active-bg-color: theme-color('primary');
+$primary-nav-pills-link-active-bg-color: $primary;
 
 // Primary nav dropdown background color
 $primary-nav-dropdown-bg-color: white;
@@ -111,9 +105,10 @@ $primary-nav-dropdown-item-color: $body-color;
   // Set primary nav color and active states (both '.nav-pills' and '.nav-right')
 
   .nav-link{
-    font-weight: $primary-nav-font-weight;
+    font-weight: $primary-nav-link-font-weight;
     color: $primary-nav-link-color;
     &.active{
+      color: $primary-nav-link-active-color;
       text-decoration: underline;
     }
   }
@@ -129,7 +124,6 @@ $primary-nav-dropdown-item-color: $body-color;
       border-right: $border-width solid $border-color;
 
       &.active { 
-        color: $primary-nav-pills-link-active-color;
         background-color: $primary-nav-pills-link-active-bg-color;
       }
 
@@ -143,7 +137,7 @@ $primary-nav-dropdown-item-color: $body-color;
 
   // Set .dropdown-menu styles
 
-  #nav-primary {
+  #nav-primary{
   
   .dropdown-menu{
     background-color: $primary-nav-dropdown-bg-color;
@@ -160,9 +154,8 @@ $primary-nav-dropdown-item-color: $body-color;
   // Improve .dropdown-menu when present within .nav-pills
 
     .nav-pills .dropdown-menu{
-      width: 100%;
+      width: calc( 100% - #{$border-width});
       left: 0;
-      right: 0;
       margin: 0;
       
       // When dropdowns are flush left or right, remove Bootrap transform and reposition y axis
