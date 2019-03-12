@@ -118,14 +118,6 @@ $primary-nav-dropdown-item-color: $body-color;
     }
   }
   
-  // Set primary nav color and active states (.nav-right only)
-
-  .nav-right{
-    .nav-link{
-      &.active { color: $primary-nav-right-link-active-color; }
-    }
-  }
-
   // Primary Nav (.nav-pills)
 
   .nav-pills{
@@ -159,6 +151,7 @@ $primary-nav-dropdown-item-color: $body-color;
     padding: $nav-link-padding-y $nav-link-padding-x;
 
     a{
+      display: block;
       color: $primary-nav-dropdown-item-color;
       &.active{ text-decoration: underline; }
     }
@@ -188,9 +181,16 @@ $primary-nav-dropdown-item-color: $body-color;
       .dropdown-menu
       { background: none; }
 
-      .dropdown-menu { position: static !important; }
+      .dropdown-menu {
+        
+      position: static !important;
+      width: 100%;
 
-      .dropdown-toggle{
+      -webkit-transform: none !important;
+      transform: none !important;
+      }
+
+      .dropdown-toggle{ 
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -203,68 +203,6 @@ $primary-nav-dropdown-item-color: $body-color;
       }
     }
   }
-
-
-  // Navbar
-
-.navbar{
-
-  .navbar-brand{ margin-right: 0; }
-
-  .navbar-toggler{
-      &.no-btn-style{
-      padding: 0;
-      border: none;
-      font-size: unset;
-      border-radius: 0;
-      color: inherit;
-    }
-  }
-
-  .extensible-list{ margin-bottom: 0; }
-
-  @include media-breakpoint-down(xs) {
-    
-    padding-left: 0;
-    padding-right: 0;
-
-    .wrap-navbar-brand,
-    .extensible-list
-    { width: 100%; }
-
-    .wrap-navbar-brand{
-      text-align: center;
-      border-bottom: $border-width solid $border-color;
-    }
-
-    .extensible-list{
-      justify-content: space-around;
-      margin: $spacer-1 0;
-    }
-
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 } /* #global-header */ 
 
