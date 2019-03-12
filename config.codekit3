@@ -7,12 +7,11 @@
 		"uuidString": "81F5D1CB-0E8E-438C-9E46-A47D1C7FE4B0"
 		}
 	],
-"creatorBuild": "29156",
+"creatorBuild": "28905",
 "files": {
 	"/.gitattributes": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/.gitattributes",
 		"oF": 0
@@ -20,7 +19,6 @@
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/.gitignore",
 		"oF": 0
@@ -28,7 +26,6 @@
 	"/article-centered.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/article-centered.html",
 		"oF": 0
@@ -36,7 +33,6 @@
 	"/article-sidebar.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/article-sidebar.html",
 		"oF": 0
@@ -1201,7 +1197,6 @@
 	"/containers.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/containers.html",
 		"oF": 0
@@ -1219,7 +1214,6 @@
 	"/css/theme.css.map": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/css/theme.css.map",
 		"oF": 0
@@ -1237,7 +1231,6 @@
 	"/dist/css/bootstrap-grid.min.css.map": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/dist/css/bootstrap-grid.min.css.map",
 		"oF": 0
@@ -1255,7 +1248,6 @@
 	"/dist/css/bootstrap-reboot.min.css.map": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/dist/css/bootstrap-reboot.min.css.map",
 		"oF": 0
@@ -1273,7 +1265,6 @@
 	"/dist/css/bootstrap.min.css.map": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/dist/css/bootstrap.min.css.map",
 		"oF": 0
@@ -1301,7 +1292,6 @@
 	"/dist/css/theme.min.css.map": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/dist/css/theme.min.css.map",
 		"oF": 0
@@ -1309,7 +1299,6 @@
 	"/documentation/accordions.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/accordions.html",
 		"oF": 0
@@ -1317,7 +1306,6 @@
 	"/documentation/button-toggle.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/button-toggle.html",
 		"oF": 0
@@ -1325,7 +1313,6 @@
 	"/documentation/buttons-and-links.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/buttons-and-links.html",
 		"oF": 0
@@ -1333,7 +1320,6 @@
 	"/documentation/extensible-lists.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/extensible-lists.html",
 		"oF": 0
@@ -1341,7 +1327,6 @@
 	"/documentation/using-icons.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/using-icons.html",
 		"oF": 0
@@ -1349,7 +1334,6 @@
 	"/fonts.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/fonts.html",
 		"oF": 0
@@ -1357,7 +1341,6 @@
 	"/form.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/form.html",
 		"oF": 0
@@ -1365,7 +1348,6 @@
 	"/form_new.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/form_new.html",
 		"oF": 0
@@ -1373,7 +1355,6 @@
 	"/homepage-01.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/homepage-01.html",
 		"oF": 0
@@ -1381,25 +1362,8 @@
 	"/homepage-02.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/homepage-02.html",
-		"oF": 0
-		},
-	"/homepage-03.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/homepage-03.html",
-		"oF": 0
-		},
-	"/homepage-04.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/homepage-04.html",
 		"oF": 0
 		},
 	"/images/feature/bridge-lights.jpg": {
@@ -1426,7 +1390,7 @@
 		},
 	"/images/feature/city-hall-flags.jpg": {
 		"ft": 16384,
-		"iS": 142677,
+		"iS": 143567,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/city-hall-flags.jpg",
@@ -1558,7 +1522,7 @@
 		},
 	"/images/feature/walk-in-the-park.jpg": {
 		"ft": 16384,
-		"iS": 145061,
+		"iS": 142620,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/walk-in-the-park.jpg",
@@ -1694,13 +1658,11 @@
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.html",
 		"oF": 0
 		},
 	"/js/main.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -1711,7 +1673,6 @@
 		"tS": 0
 		},
 	"/js/NYC-gov-forms-validation.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -1722,7 +1683,6 @@
 		"tS": 0
 		},
 	"/js/NYC-gov-forms-validation_bkup.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -1733,7 +1693,6 @@
 		"tS": 0
 		},
 	"/js/responsive-table.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -1744,7 +1703,6 @@
 		"tS": 0
 		},
 	"/js/table-of-contents.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -1755,7 +1713,6 @@
 		"tS": 0
 		},
 	"/js/validation.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1768,7 +1725,6 @@
 	"/map-data/pod.csv": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/map-data/pod.csv",
 		"oF": 0
@@ -1776,7 +1732,6 @@
 	"/map.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/map.html",
 		"oF": 0
@@ -1784,7 +1739,6 @@
 	"/primary-navigation-sidebar.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/primary-navigation-sidebar.html",
 		"oF": 0
@@ -1803,7 +1757,6 @@
 	"/README.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/README.html",
 		"oF": 0
@@ -1816,7 +1769,6 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/README.html",
 		"oF": 0,
@@ -1830,7 +1782,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc",
 		"oF": 0
@@ -1838,7 +1789,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc",
 		"oF": 0
@@ -1846,7 +1796,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc",
 		"oF": 0
@@ -1854,7 +1803,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc",
 		"oF": 0
@@ -1862,7 +1810,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc",
 		"oF": 0
@@ -1870,7 +1817,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc",
 		"oF": 0
@@ -1878,7 +1824,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc",
 		"oF": 0
@@ -1886,7 +1831,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc",
 		"oF": 0
@@ -1894,7 +1838,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc",
 		"oF": 0
@@ -1902,7 +1845,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc",
 		"oF": 0
@@ -1910,7 +1852,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc",
 		"oF": 0
@@ -1918,7 +1859,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc",
 		"oF": 0
@@ -1926,7 +1866,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc",
 		"oF": 0
@@ -1934,7 +1873,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc",
 		"oF": 0
@@ -1942,7 +1880,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc",
 		"oF": 0
@@ -1950,7 +1887,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc",
 		"oF": 0
@@ -1958,7 +1894,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc",
 		"oF": 0
@@ -1966,7 +1901,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc",
 		"oF": 0
@@ -1974,7 +1908,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc",
 		"oF": 0
@@ -1982,7 +1915,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc",
 		"oF": 0
@@ -1990,7 +1922,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc",
 		"oF": 0
@@ -1998,7 +1929,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc",
 		"oF": 0
@@ -2006,7 +1936,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc",
 		"oF": 0
@@ -2014,7 +1943,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc",
 		"oF": 0
@@ -2022,7 +1950,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc",
 		"oF": 0
@@ -2030,7 +1957,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc",
 		"oF": 0
@@ -2038,7 +1964,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc",
 		"oF": 0
@@ -2046,7 +1971,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc",
 		"oF": 0
@@ -2054,7 +1978,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc",
 		"oF": 0
@@ -2062,7 +1985,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc",
 		"oF": 0
@@ -2070,7 +1992,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc",
 		"oF": 0
@@ -2078,7 +1999,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc",
 		"oF": 0
@@ -2086,7 +2006,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc",
 		"oF": 0
@@ -2094,7 +2013,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc",
 		"oF": 0
@@ -2102,7 +2020,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc",
 		"oF": 0
@@ -2110,7 +2027,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc",
 		"oF": 0
@@ -2118,7 +2034,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc",
 		"oF": 0
@@ -2126,7 +2041,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc",
 		"oF": 0
@@ -2134,7 +2048,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc",
 		"oF": 0
@@ -2142,7 +2055,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc",
 		"oF": 0
@@ -2150,7 +2062,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc",
 		"oF": 0
@@ -2158,7 +2069,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc",
 		"oF": 0
@@ -2166,7 +2076,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc",
 		"oF": 0
@@ -2174,7 +2083,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc",
 		"oF": 0
@@ -2182,7 +2090,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc",
 		"oF": 0
@@ -2190,7 +2097,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc",
 		"oF": 0
@@ -2198,7 +2104,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc",
 		"oF": 0
@@ -2206,7 +2111,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc",
 		"oF": 0
@@ -2214,7 +2118,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc",
 		"oF": 0
@@ -2222,7 +2125,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc",
 		"oF": 0
@@ -2230,7 +2132,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc",
 		"oF": 0
@@ -2238,7 +2139,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc",
 		"oF": 0
@@ -2246,7 +2146,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc",
 		"oF": 0
@@ -2254,7 +2153,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc",
 		"oF": 0
@@ -2262,7 +2160,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc",
 		"oF": 0
@@ -2270,7 +2167,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc",
 		"oF": 0
@@ -2278,7 +2174,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc",
 		"oF": 0
@@ -2286,7 +2181,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc",
 		"oF": 0
@@ -2294,7 +2188,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc",
 		"oF": 0
@@ -2302,7 +2195,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc",
 		"oF": 0
@@ -2310,7 +2202,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc",
 		"oF": 0
@@ -2318,7 +2209,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc",
 		"oF": 0
@@ -2326,7 +2216,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc",
 		"oF": 0
@@ -2334,7 +2223,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc",
 		"oF": 0
@@ -2342,7 +2230,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc",
 		"oF": 0
@@ -2350,7 +2237,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc",
 		"oF": 0
@@ -2358,7 +2244,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc",
 		"oF": 0
@@ -2366,7 +2251,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc",
 		"oF": 0
@@ -2374,7 +2258,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc",
 		"oF": 0
@@ -2382,7 +2265,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc",
 		"oF": 0
@@ -2390,7 +2272,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc",
 		"oF": 0
@@ -2398,7 +2279,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc",
 		"oF": 0
@@ -2406,7 +2286,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc",
 		"oF": 0
@@ -2414,7 +2293,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc",
 		"oF": 0
@@ -2422,7 +2300,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc",
 		"oF": 0
@@ -2430,7 +2307,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc",
 		"oF": 0
@@ -2438,7 +2314,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc",
 		"oF": 0
@@ -2446,7 +2321,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc",
 		"oF": 0
@@ -2454,7 +2328,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc",
 		"oF": 0
@@ -2462,7 +2335,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc",
 		"oF": 0
@@ -2470,7 +2342,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc",
 		"oF": 0
@@ -2478,7 +2349,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc",
 		"oF": 0
@@ -2486,7 +2356,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc",
 		"oF": 0
@@ -2595,19 +2464,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_header.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/scss/_header.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/scss/theme.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -2624,7 +2480,6 @@
 	"/tearsheet.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/tearsheet.html",
 		"oF": 0
@@ -2724,12 +2579,6 @@
 		"function-sent": {
 			"active": 0
 			},
-		"inline-consecutive-adds": {
-			"active": 0
-			},
-		"inline-environment-variables": {
-			"active": 0
-			},
 		"instanceof": {
 			"active": 0
 			},
@@ -2749,36 +2598,6 @@
 			"active": 0
 			},
 		"minify-booleans": {
-			"active": 0
-			},
-		"minify-builtins": {
-			"active": 0
-			},
-		"minify-constant-folding": {
-			"active": 0
-			},
-		"minify-dead-code-elimination": {
-			"active": 0
-			},
-		"minify-flip-comparisons": {
-			"active": 0
-			},
-		"minify-guarded-expressions": {
-			"active": 0
-			},
-		"minify-infinity": {
-			"active": 0
-			},
-		"minify-mangle-names": {
-			"active": 0
-			},
-		"minify-numeric-literals": {
-			"active": 0
-			},
-		"minify-simplify": {
-			"active": 0
-			},
-		"minify-type-constructors": {
 			"active": 0
 			},
 		"modules-amd": {
@@ -2829,9 +2648,6 @@
 		"pipeline-operator": {
 			"active": 0
 			},
-		"private-methods": {
-			"active": 0
-			},
 		"property-literals": {
 			"active": 0
 			},
@@ -2865,16 +2681,10 @@
 		"regenerator": {
 			"active": 0
 			},
-		"regexp-constructors": {
-			"active": 0
-			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
-			"active": 0
-			},
-		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -3823,10 +3633,6 @@
 			"active": 0,
 			"optionString": ""
 			},
-		"no-useless-catch": {
-			"active": 0,
-			"optionString": ""
-			},
 		"no-useless-computed-key": {
 			"active": 0,
 			"optionString": ""
@@ -4489,7 +4295,6 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -4511,7 +4316,6 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 0,
 		"syntaxCheckerStyle": 0,
@@ -4534,8 +4338,7 @@
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -4574,7 +4377,6 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -4584,8 +4386,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -4606,8 +4407,7 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -4636,8 +4436,7 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -4725,20 +4524,16 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"arrows": {
-			"active": 1,
+		"ascii_only": {
+			"active": 0,
 			"flagValue": -1
 			},
-		"ascii_only": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"booleans_as_integers": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -4757,7 +4552,7 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"computed_props": {
+		"compress": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -4780,10 +4575,6 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
-			},
-		"ecma": {
-			"active": 1,
-			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -4809,6 +4600,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"html5_comments": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -4817,13 +4612,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"indent-start": {
+			"active": 0,
+			"flagValue": 0
+			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
-			},
-		"indent_start": {
-			"active": 0,
-			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -4835,10 +4630,6 @@
 			},
 		"join_vars": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"keep_classnames": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -4861,13 +4652,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"mangle": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
-			},
-		"module": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -4876,6 +4667,10 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -4899,10 +4694,6 @@
 			},
 		"reduce_vars": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"safari10": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -4937,10 +4728,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"unsafe_arrows": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -4950,10 +4737,6 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -4981,12 +4764,15 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"width": {
+			"active": 1,
+			"flagValue": 80
+			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
-	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$,exports,require",
 	"websiteRelativeRoot": ""
 	},
