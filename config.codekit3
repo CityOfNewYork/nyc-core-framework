@@ -1366,6 +1366,13 @@
 		"oAP": "/homepage-02.html",
 		"oF": 0
 		},
+	"/homepage-03.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/homepage-03.html",
+		"oF": 0
+		},
 	"/images/feature/bridge-lights.jpg": {
 		"ft": 16384,
 		"iS": 109996,
