@@ -1331,13 +1331,6 @@
 		"oAP": "/documentation/using-icons.html",
 		"oF": 0
 		},
-	"/experimental-description-list.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/experimental-description-list.html",
-		"oF": 0
-		},
 	"/fonts.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1662,6 +1655,20 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/in-the-works-description-list.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/in-the-works-description-list.html",
+		"oF": 0
+		},
+	"/in-the-works-maps.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/in-the-works-maps.html",
+		"oF": 0
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1734,13 +1741,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/map-data/pod.csv",
-		"oF": 0
-		},
-	"/map.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/map.html",
 		"oF": 0
 		},
 	"/primary-navigation-sidebar.html": {
