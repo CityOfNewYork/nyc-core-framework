@@ -13,6 +13,9 @@
 
     <title>Tearsheet • NYC Templates</title>
 
+    <!-- MAPS -->
+    <link href="https://maps.nyc.gov/nyc-lib/v1.2.37/css/nyc-basic-lib.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
@@ -269,7 +272,7 @@
                                 </a>
                             </div>
 
-                            <nav class="collapse d-xl-block" id="aside-nav" role="navigation">
+                            <nav class="collapse d-xl-block mx-xl-n2" id="aside-nav" role="navigation">
 
                                 <div class="table-of-contents list-group-flush fs-md py-3">
 
@@ -886,6 +889,153 @@
         
                     </section>
 
+                    <hr class="opacity-50 mb-n2">
+        
+                    <section class="table-of-contents-item py-7" id="maps">
+        
+                        <div class="narrow">
+        
+                            <h2>Map</h2>
+        
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim mollitia odit.</p>
+                
+                            <div class="my-4">
+
+                                <div class="my-2">
+                                    <input class="form-control form-control-lg" id="pod-map-search" placeholder="Search Address">
+                                </div>
+                                <!-- .my-2 -->
+
+                                <div id="pod-map" class="my-2"></div>
+
+                                <!-- <div id="pod-list" style="height:600px;"></div> -->
+
+                                <div class="btn-toggle">
+                                    <a class="btn btn-block btn-lg btn-primary text-white" data-toggle="collapse" href="#pod-list-static"
+                                        aria-expanded="false" aria-controls="pod-list-static">
+                                        <span class="title">Results list view</span>
+                                    </a>
+                                </div>
+
+                                <div class="collapse p-2" id="pod-list-static">
+
+                                    <h2 class="info">Showing 10 of 165 Points of Distribution</h2>
+
+                                    <div class="list" role="list">
+
+                                        <div class="lst-it" role="listitem">
+                                            <div class="facility">
+                                                <h3 class="name notranslate">K001 - P.S. 1 Bergen</h3>
+                                                <div class="addr notranslate">
+                                                    <div class="ln1">309 47th Street</div>
+                                                    <div class="ln3">Brooklyn, NY 11220</div>
+                                                </div>
+                                                <ul class="map-action-buttons">
+                                                    <li>
+                                                        <button class="btn rad-all map">
+                                                            <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn rad-all dir">Directions</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- .lst-it -->
+
+                                        <div class="lst-it" role="listitem">
+                                            <div class="facility">
+                                                <h3 class="name notranslate">K016 - P.S. 16 Leonard Dunkly</h3>
+                                                <div class="addr notranslate">
+                                                    <div class="ln1">157 Wilson Street</div>
+                                                    <div class="ln3">Brooklyn, NY 11211</div>
+                                                </div>
+                                                <ul class="map-action-buttons">
+                                                    <li>
+                                                        <button class="btn rad-all map">
+                                                            <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn rad-all dir">Directions</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- .lst-it -->
+
+                                        <div class="lst-it" role="listitem">
+                                            <div class="facility">
+                                                <h3 class="name notranslate">K043 - I.S. 98 Bay Academy</h3>
+                                                <div class="addr notranslate">
+                                                    <div class="ln1">1401 Emmons Avenue</div>
+                                                    <div class="ln3">Brooklyn, NY 11235</div>
+                                                </div>
+                                                <ul class="map-action-buttons">
+                                                    <li>
+                                                        <button class="btn rad-all map">
+                                                            <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn rad-all dir">Directions</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- .lst-it -->
+
+                                        <div class="lst-it" role="listitem">
+                                            <div class="facility">
+                                                <h3 class="name notranslate">K055 - I.S. 55</h3>
+                                                <div class="addr notranslate">
+                                                    <div class="ln1">2021 Bergen Street</div>
+                                                    <div class="ln3">Brooklyn, NY 11233</div>
+                                                </div>
+                                                <ul class="map-action-buttons">
+                                                    <li>
+                                                        <button class="btn rad-all map">
+                                                            <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn rad-all dir">Directions</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- .lst-it -->
+
+                                        <div class="lst-it" role="listitem">
+                                            <div class="facility">
+                                                <h3 class="name notranslate">K071 - I.S. 71 Juan Morel Campos</h3>
+                                                <div class="addr notranslate">
+                                                    <div class="ln1">215 Heyward Street</div>
+                                                    <div class="ln3">Brooklyn, NY 11206</div>
+                                                </div>
+                                                <ul class="map-action-buttons">
+                                                    <li>
+                                                        <button class="btn rad-all map">
+                                                            <span class="screen-reader-only">Locate this facility on the </span>Map</button>
+                                                    </li>
+                                                    <li>
+                                                        <button class="btn rad-all dir">Directions</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- .lst-it -->
+
+                                    </div>
+                                    <!-- .list -->
+
+                                </div>
+                                <!-- .collapse -->
+
+                            </div>
+                            <!-- .narrow -->
+                            
+                            
+        
+                    </section>
+
                 </div>
                 <!-- .col -->
 
@@ -1130,6 +1280,41 @@
          includeHTML();
  
      </script>
+
+
+    <!-- NYC maps -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.4.0/papaparse.min.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.37/js/babel-polyfill.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.37/js/nyc-ol-lib.js"></script>
+
+    <script>
+
+        var podMap = new nyc.ol.FrameworkMap({
+            mapTarget: '#pod-map',
+            searchTarget: '#pod-map-search',
+            listTarget: '#pod-list',
+            facilityType: 'Points of Distribution',
+            facilityUrl: 'map-data/pod.csv',
+            mapMarkerUrl: 'images/map-marker.png',
+            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+        });
+
+        var openDataSQL = 'longitude as LNG, latitude as LAT, cb_link_id as NAME, street_address as ADDR1, boro as BORO, postcode as ZIP'
+        var openDataEndPoint = 'https://data.cityofnewyork.us/resource/3ktt-gd74.csv'
+        var csvUrl = openDataEndPoint + '?$select=' + encodeURIComponent(openDataSQL)
+        var linkMap = new nyc.ol.FrameworkMap({
+            mapTarget: '#link-map',
+            listTarget: '#link-list',
+            facilityType: 'Link NYC Kiosks',
+            facilityUrl: csvUrl,
+            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+        });
+        
+    </script>
+
+
  
 </body>
 
