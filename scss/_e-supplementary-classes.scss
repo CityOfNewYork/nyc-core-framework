@@ -66,10 +66,9 @@ In this file:
 
 // Background color opacity
 
-.bg-opacity-black-10{ @include background-opacity(black, 0.1); }
-.bg-opacity-black-20{ @include background-opacity(black, 0.2); }
-.bg-opacity-white-80{ @include background-opacity(black, 0.8); }
-.bg-opacity-black-90{ @include background-opacity(black, 0.9); }
+.bg-opacity-black-25{ @include background-opacity(black, 0.25); }
+.bg-opacity-black-50{ @include background-opacity(black, 0.5); }
+.bg-opacity-white-75{ @include background-opacity(black, 0.75); }
 
 ////////////////////////////////////////
 // E. Supplementary widths
