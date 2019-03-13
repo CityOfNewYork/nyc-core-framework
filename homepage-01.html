@@ -90,12 +90,9 @@
                             <!-- Menu Toggle -->
                             <div class="col-auto d-flex d-lg-none">
 
-                                <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
+                                <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
                                     aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="d-flex align-items-center">
-                                        <span class="fas fa-bars fs-lg" role="img"></span>
-                                        <span class="px-2 fs-rg">Menu</span>
-                                    </span>
+                                    <span class="fas fa-bars fa-lg" role="img"></span>
                                 </button>
 
                             </div>
@@ -103,20 +100,18 @@
 
                             <div class="col-auto">
 
-                                <ul class="extensible-list horizontal fs-lg">
-                                    <!-- Languages -->
+                                <ul class="extensible-list horizontal">
                                     <li>
                                         <button class="no-btn-style" type="button" data-toggle="collapse"
                                             data-target="#global-language" aria-controls="global-language"
                                             aria-expanded="false">
-                                            <span class="fas fa-language" title="Languages" role="img"></span>
+                                            <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
                                         </button>
                                     </li>
-                                    <!-- Search -->
                                     <li>
                                         <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
                                             aria-expanded="false">
-                                            <span class="fas fa-search" title="Search" role="img"></span>
+                                            <span class="fas fa-search fa-lg" title="Search" role="img"></span>
                                         </button>
                                     </li>
                                 </ul>
@@ -151,7 +146,9 @@
                     <label class="sr-only" for="global-search-bar">Search</label>
                     <input class="form-control form-control-lg" id="global-search-bar" placeholder="Search">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-lg">Search</button>
+                        <button type="button" class="btn btn-primary btn-lg">
+                            <span class="fas fa-arrow-right" title="Search" role="img"></span>
+                        </button>
                     </div>
                 </div>
             </form>

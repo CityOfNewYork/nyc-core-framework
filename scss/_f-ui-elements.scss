@@ -55,7 +55,6 @@ In this file:
 }
 
 #back-to-top{
-
   @extend .container-fluid;
   @extend .fixed-bottom;
   @include opacity(0);
@@ -108,8 +107,8 @@ $primary-nav-dropdown-item-color: $body-color;
     font-weight: $primary-nav-link-font-weight;
     color: $primary-nav-link-color;
     &.active{
-      color: $primary-nav-link-active-color;
       text-decoration: underline;
+      color: $primary-nav-link-active-color;
     }
   }
   
@@ -147,7 +146,6 @@ $primary-nav-dropdown-item-color: $body-color;
     a{
       display: block;
       color: $primary-nav-dropdown-item-color;
-      &.active{ text-decoration: underline; }
     }
   }
 
@@ -537,6 +535,7 @@ $extensible-list-margin: 0.5em;
 .extensible-list{
 
   @include list-unstyled();
+  margin-bottom: 0;
   
   // fixed padding added by user agent stylesheet after translation
   -webkit-padding-start: 0;

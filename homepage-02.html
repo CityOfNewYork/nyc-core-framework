@@ -85,27 +85,27 @@
 
                         <div class="d-lg-flex align-items-center">
 
-                            <ul class="extensible-list horizontal justify-content-between order-lg-last fs-lg mb-0 my-1">
-                                <li class="d-lg-none">
+                            <!-- Mobile Toggle Buttons -->
+
+                            <ul class="extensible-list horizontal justify-content-between my-2 d-lg-none">
+                                <li>
                                     <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
                                         aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="d-flex align-items-center">
-                                            <span class="fas fa-bars fs-lg" role="img"></span>
-                                        </span>
+                                        <span class="fas fa-bars fa-lg" role="img"></span>
                                     </button>
                                 </li>
 
                                 <li>
                                     <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
                                         aria-expanded="false">
-                                        <span class="fas fa-language" title="Languages" role="img"></span>
+                                        <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
                                     </button>
                                 </li>
                                 
                                 <li>
                                     <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
                                         aria-expanded="false">
-                                        <span class="fas fa-search" title="Search" role="img"></span>
+                                        <span class="fas fa-search fa-lg" title="Search" role="img"></span>
                                     </button>
                                 </li>
                             </ul>
@@ -121,7 +121,7 @@
                                             Nav Item
                                         </a>
 
-                                        <div class="dropdown-menu border" aria-labelledby="nav-item-01">
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-01">
 
                                             <ul class="extensible-list">
                                                 <li><a href="#" title="Link">Link</a></li>
@@ -141,7 +141,7 @@
                                             Nav Item
                                         </a>
 
-                                        <div class="dropdown-menu border" aria-labelledby="nav-item-02">
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-02">
 
                                             <ul class="extensible-list">
                                                 <li><a href="#" title="Link">Link</a></li>
@@ -161,7 +161,7 @@
                                             Nav Item
                                         </a>
 
-                                        <div class="dropdown-menu border" aria-labelledby="nav-item-03">
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-03">
 
                                             <ul class="extensible-list">
                                                 <li><a href="#" title="Link">Link</a></li>
@@ -177,6 +177,24 @@
                                 </nav>
                                                 
                             </div>
+
+                            <!-- Desktop Toggle Buttons -->
+
+                            <ul class="extensible-list horizontal d-none d-lg-flex">
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
+                                        aria-expanded="false">
+                                        <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
+                                    </button>
+                                </li>
+                                
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
+                                        aria-expanded="false">
+                                        <span class="fas fa-search fa-lg" title="Search" role="img"></span>
+                                    </button>
+                                </li>
+                            </ul>
 
                         </div>
                         <!-- .d-flex -->
@@ -205,7 +223,9 @@
                     <label class="sr-only" for="global-search-bar">Search</label>
                     <input class="form-control form-control-lg" id="global-search-bar" placeholder="Search">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-lg">Search</button>
+                        <button type="button" class="btn btn-primary btn-lg">
+                            <span class="fas fa-arrow-right" title="Search" role="img"></span>
+                        </button>
                     </div>
                 </div>
             </form>
