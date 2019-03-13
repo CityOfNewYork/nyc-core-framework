@@ -116,7 +116,10 @@ $primary-nav-dropdown-item-color: $body-color;
 
   .nav-pills{
     border-left: $border-width solid $border-color;
-    @extend .offset-border-x;
+
+    margin-left: -$border-width;
+    margin-right: -$border-width;
+    
     @extend .nav-fill;
 
     .nav-link{

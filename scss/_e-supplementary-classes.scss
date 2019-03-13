@@ -7,9 +7,8 @@ In this file:
 // C. Opacities
 // E. Supplementary widths
 // F. Text shadows
-// G. Offset x axis
-// H. Buttons and links
-// I. Lists
+// G. Buttons and links
+// H. Lists
 
 */
 
@@ -97,27 +96,7 @@ In this file:
 .text-shadow-border{ @include text-shadow( 0, 0, $border-width, black ); }
 
 ////////////////////////////////////////
-// G. Offset x axis
-////////////////////////////////////////
-
-// Note: Apply negative left and right margin to selector
-
-// Offset border
-
-.offset-border-x{
-  margin-left: -$border-width;
-  margin-right: -$border-width;
-}
-
-// Offset gutter
-
-.mb-n2{
-  margin-left: -$grid-gutter-width/2;
-  margin-right: -$grid-gutter-width/2;
-}
-
-////////////////////////////////////////
-// H. Buttons and links
+// G. Buttons and links
 ////////////////////////////////////////
 
 // Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
@@ -164,7 +143,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// I. Lists
+// H. Lists
 ////////////////////////////////////////
 
 // Add paragraph-style spacing to generic lists
