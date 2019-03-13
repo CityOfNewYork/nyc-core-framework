@@ -67,12 +67,11 @@
 
             <div class="container-fluid wide">
 
-                <!-- row 01 -->
                 <div class="row align-items-center">
 
                     <div class="col-lg py-2">
-                        <div class="d-flex justify-content-center justify-content-lg-start align-items-center">
-                            <a href="#" title="Home">
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <a class="align-self-center" href="#" title="Home">
                                 <img src="./images/nyc-logo-generic.svg" alt="NYC Generic Logo">
                             </a>
                         </div>
@@ -82,98 +81,124 @@
                     <!-- separator -->
                     <div class="col-12 border-top d-lg-none"></div>
 
-                    <div class="col-auto d-none d-lg-block">
-
-                        <nav class="nav nav-right" id="nav-primary" role="navigation">
-
-                            <div class="nav-item dropdown">
-
-                                <a class="nav-link active dropdown-toggle" href="#" id="nav-item-01" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false" title="Nav Item">
-                                    Nav Item
-                                </a>
-
-                                <div class="dropdown-menu shadow" aria-labelledby="nav-item-01">
-
-                                    <a class="dropdown-item" href="#" title="Link">Link</a>
-                                    <a class="dropdown-item" href="#" title="Link">Link</a>
-                                    <a class="dropdown-item" href="#" title="Link">Link</a>
-
-                                </div>
-
-                            </div>
-                            <!-- .nav-item -->
-
-                            <div class="nav-item dropdown">
-
-                                <a class="nav-link dropdown-toggle" href="#" id="nav-item-02" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false" title="Nav Item">
-                                    Nav Item
-                                </a>
-
-                                <div class="dropdown-menu shadow" aria-labelledby="nav-item-02">
-
-                                    <a class="dropdown-item" href="#" title="Link">Link</a>
-                                    <a class="dropdown-item" href="#" title="Link">Link</a>
-                                    <a class="dropdown-item" href="#" title="Link">Link</a>
-
-                                </div>
-
-                            </div>
-                            <!-- .nav-item -->
-
-                            <a class="nav-item nav-link" href="#" title="Nav Item">Nav Item</a>
-
-                        </nav>
-                        <!-- #nav-primary -->
-
-                    </div>
-                    <!-- .col -->
-
                     <div class="col-lg-auto">
 
-                        <!-- row 02 -->
-                        <div class="row no-gutters justify-content-between py-2">
+                        <div class="d-lg-flex align-items-center">
 
-                            <!-- Menu Toggle -->
-                            <div class="col-auto d-flex d-lg-none">
+                            <!-- Mobile Toggle Buttons -->
 
-                                <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#device-menu"
-                                    aria-controls="device-menu" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="d-flex align-items-center">
-                                        <span class="fas fa-bars fs-lg" role="img"></span>
-                                        <span class="px-2 fs-rg">Menu</span>
-                                    </span>
-                                </button>
+                            <ul class="extensible-list horizontal justify-content-between my-2 d-lg-none">
+                                <li>
+                                    <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
+                                        aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="fas fa-bars fa-lg" role="img"></span>
+                                    </button>
+                                </li>
 
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
+                                        aria-expanded="false">
+                                        <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
+                                    </button>
+                                </li>
+                                
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
+                                        aria-expanded="false">
+                                        <span class="fas fa-search fa-lg" title="Search" role="img"></span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="collapse d-lg-block mx-n2 mx-lg-2" id="nav-primary">
+
+                                <nav class="nav" role="navigation">
+
+                                    <div class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-01" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" title="Nav Item">
+                                            Nav Item
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-01">
+
+                                            <ul class="extensible-list">
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- .nav-item -->
+
+                                    <div class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-02" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" title="Nav Item">
+                                            Nav Item
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-02">
+
+                                            <ul class="extensible-list">
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- .nav-item -->
+
+                                    <div class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-03" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" title="Nav Item">
+                                            Nav Item
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-03">
+
+                                            <ul class="extensible-list">
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- .nav-item -->
+
+                                </nav>
+                                                
                             </div>
-                            <!-- .col -->
 
-                            <div class="col-auto">
+                            <!-- Desktop Toggle Buttons -->
 
-                                <ul class="extensible-list horizontal fs-lg">
-                                    <!-- Languages -->
-                                    <li>
-                                        <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language"
-                                            aria-controls="global-language" aria-expanded="false">
-                                            <span class="fas fa-language" title="Languages" role="img"></span>
-                                        </button>
-                                    </li>
-                                    <!-- Search -->
-                                    <li>
-                                        <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search"
-                                            aria-controls="global-search" aria-expanded="false">
-                                            <span class="fas fa-search" title="Search" role="img"></span>
-                                        </button>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- .col -->
+                            <ul class="extensible-list horizontal d-none d-lg-flex">
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
+                                        aria-expanded="false">
+                                        <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
+                                    </button>
+                                </li>
+                                
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
+                                        aria-expanded="false">
+                                        <span class="fas fa-search fa-lg" title="Search" role="img"></span>
+                                    </button>
+                                </li>
+                            </ul>
 
                         </div>
-                        <!-- .row -->
-
+                        <!-- .d-flex -->
+                        
                     </div>
                     <!-- .col -->
 
@@ -186,72 +211,25 @@
         </div>
         <!-- .wrap-header -->
 
-        <div class="container-fluid bg-light collapse" id="global-language">
+        <div class="container-fluid border-top collapse" id="global-language">
             <div class="narrow py-3" aria-label="Language">
                 <div id="google_translate_element"></div>
             </div>
         </div>
 
-        <div class="container-fluid bg-light collapse" id="global-search">
+        <div class="container-fluid border-top collapse" id="global-search">
             <form class="narrow py-3" aria-label="Search" role="search">
                 <div class="input-group">
                     <label class="sr-only" for="global-search-bar">Search</label>
                     <input class="form-control form-control-lg" id="global-search-bar" placeholder="Search">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-lg">Search</button>
+                        <button type="button" class="btn btn-primary btn-lg">
+                            <span class="fas fa-arrow-right" title="Search" role="img"></span>
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
-
-        <div class="primary-navigation-device collapse d-lg-none" id="device-menu">
-
-            <hr>
-
-            <nav class="nav d-flex flex-column py-3" role="navigation">
-
-                <div class="nav-item dropdown">
-
-                    <a class="nav-link active dropdown-toggle" href="#" id="nav-item-01-b" data-toggle="dropdown"
-                        aria-expanded="false" title="Nav Item">
-                        Nav Item
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="nav-item-01-b">
-
-                        <a class="dropdown-item" href="#" title="Link">Link</a>
-                        <a class="dropdown-item" href="#" title="Link">Link</a>
-                        <a class="dropdown-item" href="#" title="Link">Link</a>
-
-                    </div>
-
-                </div>
-
-                <div class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle" href="#" id="nav-item-02-b" data-toggle="dropdown" aria-expanded="false"
-                        title="Nav Item">
-                        Nav Item
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="nav-item-02-b">
-
-                        <a class="dropdown-item" href="#" title="Link">Link</a>
-                        <a class="dropdown-item" href="#" title="Link">Link</a>
-                        <a class="dropdown-item" href="#" title="Link">Link</a>
-
-                    </div>
-
-                </div>
-
-                <a class="nav-item nav-link" href="#" title="Nav Item">Nav Item</a>
-
-                <a class="nav-item nav-link" href="#" title="Nav Item">Nav Item</a>
-
-            </nav>
-
-        </div>
-        <!-- #device-menu -->
 
     </header>
     <!-- #global-header -->
