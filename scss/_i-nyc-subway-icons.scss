@@ -1,0 +1,77 @@
+$mta-red: #df0000; 
+$mta-green: #008700;
+$mta-blue: #0a5786;
+$mta-orange: #de3700;
+$mta-purple: #5a045a;
+$mta-green-2: #4f8403;
+$mta-yellow: #FCCC0A;
+$mta-gray: #666;
+$mta-brown: #573208;
+
+$subways: (
+   mta-red: $mta-red,
+   mta-green: $mta-green,
+   mta-blue: $mta-blue,
+   mta-orange: $mta-orange,
+   mta-purple: $mta-purple,
+   mta-green-2: $mta-green-2,
+   mta-yellow: $mta-yellow,
+   mta-gray: $mta-gray,
+   mta-brown: $mta-brown
+);
+
+.subway-icon {    
+    display:inline-flex;        
+    align-items:center;
+    justify-content:center;
+    font-size:.875em;    
+    line-height: 1em;    
+    height: 1em;
+    width: 1em;
+    border-radius: 100%;
+    text-align: center;
+    font-weight:700;
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;    
+    margin-left:.25em;
+    margin-right:.25em;
+    color:#000;
+    background:#ccc;    
+    box-shadow:0 0 0 .25em #ccc;
+}
+
+@each $value1, $value2 in $subways {
+    .#{$value1}{
+        background-color: $value2;
+        box-shadow: 0 0 0 .25em $value2; 
+        @if $value2 == $mta-yellow {
+            color:#000;
+        } @else {
+            color: #fff;
+        }        
+    }
+}
+
+.express {
+    box-shadow: none;
+    background:transparent;
+    position: relative;
+    transform: translateZ(0);
+    color:#fff;
+    margin-left:.5em;
+    margin-right:.5em;
+
+    &::before{
+        content:"";
+        width:1em;
+        height:1em;
+        background:$mta-purple;
+        position: absolute; 
+        z-index:-1;
+        transform-origin: center center;
+        left: 0;
+        top: 0;
+        transform: rotate(45deg);       
+        box-shadow:0 0 0 .2em $mta-purple;
+    }
+}

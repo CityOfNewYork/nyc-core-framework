@@ -13,6 +13,7 @@ In this file:
 
 // Import custom SCSS
 
+@import "_header.scss";
 @import "a-global-variables.scss";
 @import "b-bootstrap-imports.scss";
 @import "c-custom-mixins.scss";
@@ -21,6 +22,7 @@ In this file:
 @import "f-ui-elements.scss";
 @import "g-dev-tools.scss";
 @import "h_nyc-gov-form.scss";
+@import "i-nyc-subway-icons.scss";
 
 ////////////////////////////////////////
 // B. Theme styles
@@ -164,3 +166,4 @@ ul.map-action-buttons {
         object-fit: cover;
     }
 }
+

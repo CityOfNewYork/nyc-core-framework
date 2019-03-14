@@ -2472,6 +2472,19 @@
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc",
 		"oF": 0
 		},
+	"/scss/__header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/__header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/_a-global-variables.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -2576,7 +2589,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_header.scss": {
+	"/scss/_i-nyc-subway-icons.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2584,7 +2597,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_header.css",
+		"oAP": "/scss/_i-nyc-subway-icons.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
