@@ -25,11 +25,11 @@ $subways: (
     align-items:center;
     justify-content:center;
     font-size:.875em;    
-    line-height:1em;    
-    height:1em;
-    width:1em;
-    border-radius:100%;
-    text-align:center;
+    line-height: 1em;    
+    height: 1em;
+    width: 1em;
+    border-radius: 100%;
+    text-align: center;
     font-weight:700;
     text-transform: uppercase;
     font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;    
@@ -41,7 +41,7 @@ $subways: (
 }
 
 @each $value1, $value2 in $subways {
-    .subway-#{$value1}{
+    .#{$value1}{
         background-color: $value2;
         box-shadow: 0 0 0 .25em $value2; 
         @if $value2 == $mta-yellow {
@@ -52,11 +52,15 @@ $subways: (
     }
 }
 
-.subway-express {
-    box-shadow:none;
+.express {
+    box-shadow: none;
     background:transparent;
     position: relative;
+    transform: translateZ(0);
     color:#fff;
+    margin-left:.5em;
+    margin-right:.5em;
+
     &::before{
         content:"";
         width:1em;
@@ -65,9 +69,9 @@ $subways: (
         position: absolute; 
         z-index:-1;
         transform-origin: center center;
-        left:-.0625em;
-        top:-.0625em;
+        left: 0;
+        top: 0;
         transform: rotate(45deg);       
-        box-shadow:0 0 0 .125em $mta-purple;
+        box-shadow:0 0 0 .2em $mta-purple;
     }
 }
