@@ -164,3 +164,161 @@ ul.map-action-buttons {
         object-fit: cover;
     }
 }
+
+
+
+$mta-yellow: #FCCC0A;
+$mta-orange: #de3700;
+$mta-blue: #0a5796;
+
+span.subway-icon {
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100%;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    font-size: 0.875em;
+    color: black;
+    background: $gray-300;
+    box-shadow: 0 0 0 .25em $gray-300;
+    // vertical-align: middle;
+    
+    &.mta-yellow{
+        background: $mta-yellow;
+        box-shadow: 0 0 0 .25em $mta-yellow;
+    }
+
+    &.mta-orange{
+        color: white;
+        background: $mta-orange;
+        box-shadow: 0 0 0 .25em $mta-orange;
+    }
+
+    &.mta-blue{
+        color: white;
+        background: $mta-blue;
+        box-shadow: 0 0 0 .25em $mta-blue;
+    }
+
+  }
+
+//   span.subway-icon{
+//     width:1em;
+//     height:1em;
+//     border-radius: 1em;
+//     background:#ccc;
+//     display:inline-block;
+//     line-height:1;
+//     text-align:center;
+//     font-size:.875em;
+//     font-weight:400;
+//     box-shadow:0 0 0 1px #ccc;
+//     margin-left:.25rem;
+//     margin-right:.25rem;
+//     vertical-align: baseline;
+// }
+// span.subway-icon-express{
+//     background:transparent!important;
+//     box-shadow:none!important;
+//     position:relative;
+// }
+// span.subway-icon-express::before{
+//     content:"";
+//     width:1em;
+//     height:1em;
+//     background:#ccc;
+//     position: absolute;
+//     left:0;
+//     top:0;
+//     /* box-shadow:0 0 0 1px #ccc; */
+//     z-index: -1;
+//     transform-origin: center center;
+//     transform: rotate(45deg);
+// }
+// span.subway-icon-1,
+// span.subway-icon-2,
+// span.subway-icon-3,
+// span.subway-icon-red {
+//     background:#df0000;
+//     box-shadow:0 0 0 2px #df0000;
+//     color:#fff;
+// }
+// span.subway-icon-4,
+// span.subway-icon-5,
+// span.subway-icon-6,
+// span.subway-icon-green1 {
+//     background:#008700;
+//     box-shadow:0 0 0 2px #008700;
+//     color:#fff;
+// }
+// span.subway-icon-4.subway-icon-express::before{
+//     background:#008700;
+//     box-shadow:0 0 0 1px #008700;
+// }
+// span.subway-icon-a,
+// span.subway-icon-c,
+// span.subway-icon-e,
+// span.subway-icon-blue {
+//     background:#0a5796;
+//     box-shadow:0 0 0 2px #0a5796;
+//     color:#fff;
+// }
+// span.subway-icon-b,
+// span.subway-icon-d,
+// span.subway-icon-f,
+// span.subway-icon-m,
+// span.subway-icon-orange {
+//     background:#de3700;
+//     box-shadow:0 0 0 2px #de3700;
+//     color:#fff;
+// }
+// span.subway-icon-7,
+// span.subway-icon-purple {
+//     background:#5a045a;
+//     box-shadow:0 0 0 2px #5a045a;
+//     color:#fff;
+// }
+// span.subway-icon-7.subway-icon-express::before {
+//     background:#5a045a;
+//     box-shadow:0 0 0 1px #5a045a;
+// }
+// span.subway-icon-7.subway-icon-express{
+//     text-indent:1px;
+// }
+// span.subway-icon-g,
+// span.subway-icon-green2 {
+//     background:#4f8403;
+//     box-shadow:0 0 0 2px #4f8403;
+//     color:#fff;
+//     text-indent:-1px;
+// }
+// span.subway-icon-j,
+// span.subway-icon-z,
+// span.subway-icon-brown {
+//     background:#573208;
+//     box-shadow:0 0 0 2px #573208;
+//     color:#fff;
+// }
+// span.subway-icon-l,
+// span.subway-icon-s,
+// span.subway-icon-grey {
+//     background:#666;
+//     box-shadow:0 0 0 2px #666;
+//     color:#fff;
+// }
+// span.subway-icon-n,
+// span.subway-icon-r,
+// span.subway-icon-q, 
+// span.subway-icon-w,
+// span.subway-icon-yellow {
+//     background:#FCCC0A;
+//     box-shadow: 0 0 0 2px #FCCC0A;
+//     color:#000;
+//     font-weight:500;
+// } 
