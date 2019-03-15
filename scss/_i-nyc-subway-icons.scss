@@ -21,20 +21,20 @@ $subways: (
 );
 
 .subway-icon {    
-    display:inline-flex;        
-    align-items:center;
-    justify-content:center;
-    font-size:.875em;    
-    line-height: 1em;    
+    display: inline-flex;        
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875em;
     height: 1em;
-    width: 1em;
+    width: 1em; 
+    line-height: 1em;   
     border-radius: 100%;
     text-align: center;
     font-weight:700;
     text-transform: uppercase;
-    font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;    
-    margin-left:.25em;
-    margin-right:.25em;
+    // font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;    
+    margin-left: 0.25em;
+    margin-right: 0.25em;
     color:#000;
     background:#ccc;    
     box-shadow:0 0 0 .25em #ccc;
@@ -53,25 +53,25 @@ $subways: (
 }
 
 .express {
-    box-shadow: none;
-    background:transparent;
     position: relative;
+    box-shadow: none;
+    background: transparent;
     transform: translateZ(0);
-    color:#fff;
-    margin-left:.5em;
-    margin-right:.5em;
+    color: #fff;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 
     &::before{
         content:"";
-        width:1em;
-        height:1em;
-        background:$mta-purple;
+        width: 1em;
+        height: 1em;
+        background: $mta-purple;
         position: absolute; 
         z-index:-1;
         transform-origin: center center;
         left: 0;
         top: 0;
         transform: rotate(45deg);       
-        box-shadow:0 0 0 .2em $mta-purple;
+        box-shadow: 0 0 0 .2em $mta-purple;
     }
 }
