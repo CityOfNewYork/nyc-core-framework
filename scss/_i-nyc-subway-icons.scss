@@ -1,3 +1,4 @@
+
 $mta-red: #df0000; 
 $mta-green: #008700;
 $mta-blue: #0a5786;
@@ -20,58 +21,60 @@ $subways: (
    mta-brown: $mta-brown
 );
 
-.subway-icon {    
-    display: inline-flex;        
-    align-items: center;
-    justify-content: center;
-    font-size: 0.875em;
+$icon-padding: 0.4em;
+
+[class*="subway-icon"]{
+    position: relative;
+    font-size: .75em;
+    z-index: 5;
     height: 1em;
     width: 1em; 
-    line-height: 1em;   
-    border-radius: 100%;
+    line-height: 1em;
+    margin-left: $icon-padding/2 ;
+    margin-right: $icon-padding/2 ;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
     text-align: center;
-    font-weight:700;
+    font-weight: bold;
     text-transform: uppercase;
-    // font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;    
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-    color:#000;
-    background:#ccc;    
-    box-shadow:0 0 0 .25em #ccc;
+    color: #000;
+
+    &::before{
+        content:"";
+        position: absolute; 
+        z-index:-1;
+        width: calc(100% + #{$icon-padding});
+        height: calc(100% + #{$icon-padding});
+        left: -($icon-padding / 2);
+        top: -($icon-padding / 2);
+        border-radius: 50%;
+        background-color: red;
+    }
+
+    &.express{
+        margin-left: $icon-padding/1.5;
+        margin-right: $icon-padding/1.5;
+        &::before{
+        transform: rotate(45deg);  
+        border-radius: 0;
+        width: calc(100% + #{$icon-padding / 4});
+        height: calc(100% + #{$icon-padding / 4});
+        left: -($icon-padding / 8);
+        top: -($icon-padding / 8);
+        }
+    }
 }
 
 @each $value1, $value2 in $subways {
     .#{$value1}{
-        background-color: $value2;
-        box-shadow: 0 0 0 .25em $value2; 
+        &::before{
+            background-color: $value2;
+        }
         @if $value2 == $mta-yellow {
             color:#000;
         } @else {
             color: #fff;
         }        
-    }
-}
-
-.express {
-    position: relative;
-    box-shadow: none;
-    background: transparent;
-    transform: translateZ(0);
-    color: #fff;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-
-    &::before{
-        content:"";
-        width: 1em;
-        height: 1em;
-        background: $mta-purple;
-        position: absolute; 
-        z-index:-1;
-        transform-origin: center center;
-        left: 0;
-        top: 0;
-        transform: rotate(45deg);       
-        box-shadow: 0 0 0 .2em $mta-purple;
     }
 }
