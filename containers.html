@@ -11,7 +11,7 @@
     <!-- Corrects IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Home • Website Name</title>
+    <title>Containers • NYC Core Framework</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -23,37 +23,168 @@
 
 <body>
     
-    <header id="global-header" role="banner">
+    <header role="banner">
 
-        <div class="container-fluid border-top collapse" id="global-search">
-            <form class="narrow py-3" aria-label="Search" role="search">
-                <div class="input-group">
-                    <label class="sr-only" for="global-search-bar">Search</label>
-                    <input class="form-control form-control-lg" id="global-search-bar" placeholder="Search">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary btn-lg">
-                            <span class="fas fa-arrow-right" title="Search" role="img"></span>
-                        </button>
-                    </div>
-                </div>
-            </form>
+        <div class="container-fluid bg-secondary py-6">
+
+            <div class="narrow text-white text-center">
+                <h1 class="card-title display-4 font-weight-bold">
+                    Containers
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias qui incidunt numquam adipisci reiciendis dolore
+                    necessitatibus.
+                </p>
+            </div>
+
         </div>
 
     </header>
-    <!-- #global-header -->
     
     <main id="content" role="main">
 
-        <div class="container-fluid bg-secondary py-8">
+        <section class="container-fluid py-4">
 
-                <div class="narrow text-white text-center">
-                    <p class="card-title display-4 font-weight-bold">
-                        Containers
-                    </p>
-                </div>
+            <div class="narrow my-6">
+
+                <h2>Narrow, Medium, and Wide</h2>
+
+                <p>
+                    Designed for use alongside Boostrap's native containers, rows, and columns, <code>.narrow</code>, <code>.medium</code>,
+                    and <code>.wide</code> classes can be used in a number of ways for enhanced control of your content.
+                </p>
 
             </div>
+            <!-- .narrow -->
 
+            <div class="narrow text-primary border border-primary p-2 my-3">
+                <p>Narrow</p>
+            </div>
+
+            <div class="medium text-primary border border-primary p-2 my-3">
+                <p>Medium</p>
+            </div>
+
+            <div class="wide text-primary border border-primary p-2 my-3">
+                <p>Wide</p>
+            </div>
+
+            <div class="narrow my-6">
+
+                <h3>Narrow</h3>
+
+                <p>
+                    Narrow uses a CSS character width unit (ch) of 55, ideal for maximum readability. For best results, place
+                    <code>.narrow</code>
+                    on block-level elements, like divs and sections — not directly to text elements like headers and paragraph
+                    tags. In this way, narrow's width is calculated from our base font-size.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+            <div class="narrow my-6">
+
+                <h3>Medium</h3>
+
+                <p>
+                    Medium's width is a multiple (x 1.25) of narrow's width. Use <code>.medium</code> for figures or any
+                    content
+                    you wish to appear slightly wider than narrow.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+
+            <div class="narrow my-6">
+
+                <h3>Wide</h3>
+
+                <p>
+                    Wide can be used on <code>.container-fluid</code> or any element Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+        </section>
+
+        <hr>
+
+        <section class="container-fluid py-4">
+
+            <div class="narrow my-6">
+
+                <h2>Common UX Patters</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor accusamus sint esse quaerat illo cum culpa quibusdam facere explicabo optio.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+            <div class="container-fluid text-primary border border-primary p-2 my-3">
+                <div class="row">
+                    <div class="col">
+<p>col</p>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="medium text-primary border border-primary p-2 my-3">
+                <p>Medium</p>
+            </div>
+
+            <div class="wide text-primary border border-primary p-2 my-3">
+                <p>Wide</p>
+            </div>
+
+            <div class="narrow my-6">
+
+                <h3>Narrow</h3>
+
+                <p>
+                    Narrow uses a CSS character width unit (ch) of 55, ideal for maximum readability. For best results, place
+                    <code>.narrow</code>
+                    on block-level elements, like divs and sections — not directly to text elements like headers and paragraph
+                    tags. In this way, narrow's width is calculated from our base font-size.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+            <div class="narrow my-6">
+
+                <h3>Medium</h3>
+
+                <p>
+                    Medium's width is a multiple (x 1.25) of narrow's width. Use <code>.medium</code> for figures or any
+                    content
+                    you wish to appear slightly wider than narrow.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+
+            <div class="narrow my-6">
+
+                <h3>Wide</h3>
+
+                <p>
+                    Wide can be used on <code>.container-fluid</code> or any element Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+        </section>
         </div>
         <!-- .container-fluid -->
 
