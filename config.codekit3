@@ -7,12 +7,11 @@
 		"uuidString": "81F5D1CB-0E8E-438C-9E46-A47D1C7FE4B0"
 		}
 	],
-"creatorBuild": "29156",
+"creatorBuild": "28905",
 "files": {
 	"/.gitattributes": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/.gitattributes",
 		"oF": 0
@@ -20,20 +19,18 @@
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies.zip": {
+	"/_nyc-core-framework-starter-files.zip": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies.zip",
+		"oAP": "/_nyc-core-framework-starter-files.zip",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_alert.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_alert.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -41,12 +38,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_alert.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_alert.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_badge.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_badge.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -54,12 +51,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_badge.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_badge.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_breadcrumb.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_breadcrumb.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -67,12 +64,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_breadcrumb.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_breadcrumb.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_button-group.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_button-group.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -80,12 +77,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_button-group.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_button-group.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_buttons.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_buttons.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -93,12 +90,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_buttons.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_buttons.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_card.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_card.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -106,12 +103,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_card.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_card.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_carousel.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_carousel.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -119,12 +116,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_carousel.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_carousel.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_close.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_close.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -132,12 +129,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_close.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_close.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_code.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_code.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -145,12 +142,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_code.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_code.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_custom-forms.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_custom-forms.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -158,12 +155,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_custom-forms.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_custom-forms.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_dropdown.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_dropdown.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -171,12 +168,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_dropdown.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_dropdown.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_forms.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_forms.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -184,12 +181,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_forms.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_forms.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_functions.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_functions.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -197,12 +194,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_functions.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_functions.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_grid.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_grid.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -210,12 +207,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_grid.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_grid.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_images.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_images.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -223,12 +220,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_images.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_images.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_input-group.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_input-group.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -236,12 +233,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_input-group.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_input-group.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_jumbotron.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_jumbotron.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -249,12 +246,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_jumbotron.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_jumbotron.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_list-group.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_list-group.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -262,12 +259,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_list-group.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_list-group.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_media.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_media.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -275,12 +272,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_media.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_media.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_mixins.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_mixins.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -288,12 +285,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_mixins.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_mixins.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_modal.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_modal.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -301,12 +298,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_modal.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_modal.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_nav.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_nav.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -314,12 +311,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_nav.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_nav.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_navbar.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_navbar.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -327,12 +324,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_navbar.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_navbar.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_pagination.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_pagination.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -340,12 +337,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_pagination.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_pagination.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_popover.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_popover.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -353,12 +350,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_popover.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_popover.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_print.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_print.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -366,12 +363,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_print.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_print.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_progress.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_progress.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -379,12 +376,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_progress.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_progress.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_reboot.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_reboot.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -392,12 +389,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_reboot.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_reboot.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_root.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_root.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -405,12 +402,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_root.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_root.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_spinners.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_spinners.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -418,12 +415,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_spinners.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_spinners.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_tables.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_tables.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -431,12 +428,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_tables.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_tables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_toasts.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_toasts.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -444,12 +441,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_toasts.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_toasts.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_tooltip.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_tooltip.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -457,12 +454,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_tooltip.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_tooltip.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_transitions.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_transitions.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -470,12 +467,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_transitions.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_transitions.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_type.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_type.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -483,12 +480,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_type.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_type.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_utilities.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_utilities.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -496,12 +493,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_utilities.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_utilities.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/_variables.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/_variables.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -509,25 +506,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/_variables.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/bootstrap-grid.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/bootstrap-grid.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/bootstrap-reboot.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/bootstrap-grid.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -535,12 +519,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/bootstrap-reboot.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/bootstrap-grid.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/bootstrap.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/bootstrap-reboot.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -548,12 +532,25 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/bootstrap.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/bootstrap-reboot.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_alert.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/bootstrap.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/bootstrap.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_alert.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -561,12 +558,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_alert.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_alert.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_background-variant.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_background-variant.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -574,12 +571,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_background-variant.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_background-variant.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_badge.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_badge.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -587,12 +584,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_badge.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_badge.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_border-radius.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_border-radius.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -600,12 +597,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_border-radius.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_border-radius.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_box-shadow.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_box-shadow.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -613,12 +610,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_box-shadow.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_box-shadow.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_breakpoints.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_breakpoints.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -626,12 +623,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_breakpoints.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_breakpoints.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_buttons.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_buttons.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -639,12 +636,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_buttons.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_buttons.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_caret.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_caret.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -652,12 +649,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_caret.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_caret.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_clearfix.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_clearfix.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -665,12 +662,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_clearfix.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_clearfix.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_deprecate.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_deprecate.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -678,12 +675,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_deprecate.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_deprecate.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_float.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_float.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -691,12 +688,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_float.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_float.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_forms.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_forms.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -704,12 +701,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_forms.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_forms.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_gradients.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_gradients.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -717,12 +714,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_gradients.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_gradients.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_grid-framework.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_grid-framework.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -730,12 +727,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_grid-framework.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_grid-framework.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_grid.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_grid.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -743,12 +740,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_grid.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_grid.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_hover.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_hover.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -756,12 +753,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_hover.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_hover.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_image.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_image.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -769,12 +766,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_image.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_image.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_list-group.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_list-group.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -782,12 +779,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_list-group.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_list-group.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_lists.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_lists.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -795,12 +792,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_lists.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_lists.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_nav-divider.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_nav-divider.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -808,12 +805,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_nav-divider.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_nav-divider.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_pagination.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_pagination.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -821,12 +818,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_pagination.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_pagination.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_reset-text.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_reset-text.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -834,12 +831,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_reset-text.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_reset-text.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_resize.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_resize.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -847,12 +844,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_resize.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_resize.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_screen-reader.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_screen-reader.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -860,12 +857,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_screen-reader.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_screen-reader.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_size.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_size.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -873,12 +870,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_size.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_size.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_table-row.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_table-row.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -886,12 +883,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_table-row.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_table-row.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_text-emphasis.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_text-emphasis.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -899,12 +896,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_text-emphasis.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_text-emphasis.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_text-hide.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_text-hide.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -912,12 +909,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_text-hide.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_text-hide.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_text-truncate.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_text-truncate.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -925,12 +922,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_text-truncate.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_text-truncate.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_transition.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_transition.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -938,12 +935,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_transition.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_transition.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_visibility.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_visibility.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -951,12 +948,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/mixins/_visibility.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/mixins/_visibility.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_align.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_align.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -964,12 +961,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_align.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_align.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_background.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_background.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -977,12 +974,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_background.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_background.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_borders.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_borders.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -990,12 +987,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_borders.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_borders.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_clearfix.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_clearfix.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1003,12 +1000,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_clearfix.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_clearfix.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_display.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_display.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1016,12 +1013,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_display.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_display.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_embed.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_embed.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1029,12 +1026,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_embed.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_embed.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_flex.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_flex.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1042,12 +1039,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_flex.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_flex.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_float.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_float.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1055,12 +1052,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_float.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_float.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_overflow.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_overflow.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1068,12 +1065,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_overflow.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_overflow.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_position.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_position.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1081,12 +1078,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_position.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_position.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_screenreaders.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_screenreaders.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1094,12 +1091,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_screenreaders.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_screenreaders.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_shadows.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_shadows.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1107,12 +1104,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_shadows.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_shadows.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_sizing.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_sizing.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1120,12 +1117,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_sizing.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_sizing.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_spacing.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_spacing.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1133,12 +1130,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_spacing.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_spacing.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_stretched-link.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_stretched-link.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1146,12 +1143,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_stretched-link.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_stretched-link.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_text.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_text.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1159,12 +1156,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_text.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_text.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_visibility.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_visibility.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1172,12 +1169,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/utilities/_visibility.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/utilities/_visibility.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/bootstrap/scss/vendor/_rfs.scss": {
+	"/_nyc-core-framework-starter-files/bootstrap/scss/vendor/_rfs.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1185,765 +1182,677 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/bootstrap/scss/vendor/_rfs.css",
+		"oAP": "/_nyc-core-framework-starter-files/bootstrap/scss/vendor/_rfs.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/css/theme.css": {
+	"/_nyc-core-framework-starter-files/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/css/theme-min.css",
+		"oAP": "/_nyc-core-framework-starter-files/css/theme-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/_nyc-core-framework-dependencies/hompepage-nav-across.html": {
+	"/_nyc-core-framework-starter-files/hompepage-nav-across.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/hompepage-nav-across.html",
+		"oAP": "/_nyc-core-framework-starter-files/hompepage-nav-across.html",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/hompepage-nav-right.html": {
+	"/_nyc-core-framework-starter-files/hompepage-nav-right.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/hompepage-nav-right.html",
+		"oAP": "/_nyc-core-framework-starter-files/hompepage-nav-right.html",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/images/nyc-logo-generic.svg": {
+	"/_nyc-core-framework-starter-files/images/nyc-logo-generic.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/_nyc-core-framework-dependencies/images/nyc-logo-generic.svg",
+		"oAP": "/_nyc-core-framework-starter-files/images/nyc-logo-generic.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/_nyc-core-framework-dependencies/images/nyc-white-15.svg": {
+	"/_nyc-core-framework-starter-files/images/nyc-white-15.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/_nyc-core-framework-dependencies/images/nyc-white-15.svg",
+		"oAP": "/_nyc-core-framework-starter-files/images/nyc-white-15.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/_nyc-core-framework-dependencies/images/nyc-white-90x30.svg": {
+	"/_nyc-core-framework-starter-files/images/nyc-white-90x30.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/_nyc-core-framework-dependencies/images/nyc-white-90x30.svg",
+		"oAP": "/_nyc-core-framework-starter-files/images/nyc-white-90x30.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/_nyc-core-framework-dependencies/js/main.js": {
-		"bF": 0,
+	"/_nyc-core-framework-starter-files/js/main.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/js/main-min.js",
+		"oAP": "/_nyc-core-framework-starter-files/js/main-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/_nyc-core-framework-dependencies/js/responsive-table.js": {
-		"bF": 0,
+	"/_nyc-core-framework-starter-files/js/responsive-table.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/js/responsive-table-min.js",
+		"oAP": "/_nyc-core-framework-starter-files/js/responsive-table-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/_nyc-core-framework-dependencies/js/validation.js": {
-		"bF": 0,
+	"/_nyc-core-framework-starter-files/js/validation.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/js/validation-min.js",
+		"oAP": "/_nyc-core-framework-starter-files/js/validation-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc": {
+	"/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc",
+		"oAP": "/_nyc-core-framework-starter-files/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc",
 		"oF": 0
 		},
-	"/_nyc-core-framework-dependencies/scss/__header.scss": {
+	"/_nyc-core-framework-starter-files/scss/__header.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1951,12 +1860,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/__header.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/__header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_a-global-variables.scss": {
+	"/_nyc-core-framework-starter-files/scss/_a-global-variables.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1964,12 +1873,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_a-global-variables.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_a-global-variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_b-bootstrap-imports.scss": {
+	"/_nyc-core-framework-starter-files/scss/_b-bootstrap-imports.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1977,12 +1886,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_b-bootstrap-imports.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_b-bootstrap-imports.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_c-custom-mixins.scss": {
+	"/_nyc-core-framework-starter-files/scss/_c-custom-mixins.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -1990,12 +1899,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_c-custom-mixins.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_c-custom-mixins.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_d-enhancements.scss": {
+	"/_nyc-core-framework-starter-files/scss/_d-enhancements.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2003,12 +1912,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_d-enhancements.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_d-enhancements.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_e-supplementary-classes.scss": {
+	"/_nyc-core-framework-starter-files/scss/_e-supplementary-classes.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2016,12 +1925,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_e-supplementary-classes.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_e-supplementary-classes.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_f-ui-elements.scss": {
+	"/_nyc-core-framework-starter-files/scss/_f-ui-elements.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2029,12 +1938,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_f-ui-elements.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_f-ui-elements.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_g-dev-tools.scss": {
+	"/_nyc-core-framework-starter-files/scss/_g-dev-tools.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2042,12 +1951,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_g-dev-tools.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_g-dev-tools.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_h_nyc-gov-form.scss": {
+	"/_nyc-core-framework-starter-files/scss/_h_nyc-gov-form.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2055,12 +1964,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_h_nyc-gov-form.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_h_nyc-gov-form.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/_i-nyc-subway-icons.scss": {
+	"/_nyc-core-framework-starter-files/scss/_i-nyc-subway-icons.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2068,12 +1977,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies/scss/_i-nyc-subway-icons.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_i-nyc-subway-icons.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-dependencies/scss/theme.scss": {
+	"/_nyc-core-framework-starter-files/scss/theme.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2081,7 +1990,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-dependencies/scss/theme.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/theme.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -2089,7 +1998,6 @@
 	"/article-centered.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/article-centered.html",
 		"oF": 0
@@ -2097,7 +2005,6 @@
 	"/article-sidebar.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/article-sidebar.html",
 		"oF": 0
@@ -3262,7 +3169,6 @@
 	"/containers.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/containers.html",
 		"oF": 0
@@ -3280,7 +3186,6 @@
 	"/css/theme.css.map": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/css/theme.css.map",
 		"oF": 0
@@ -3288,7 +3193,6 @@
 	"/documentation/accordions.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/accordions.html",
 		"oF": 0
@@ -3296,7 +3200,6 @@
 	"/documentation/button-toggle.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/button-toggle.html",
 		"oF": 0
@@ -3304,7 +3207,6 @@
 	"/documentation/buttons-and-links.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/buttons-and-links.html",
 		"oF": 0
@@ -3312,7 +3214,6 @@
 	"/documentation/extensible-lists.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/extensible-lists.html",
 		"oF": 0
@@ -3320,7 +3221,6 @@
 	"/documentation/nyc-global-header.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/nyc-global-header.html",
 		"oF": 0
@@ -3328,7 +3228,6 @@
 	"/documentation/using-icons.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation/using-icons.html",
 		"oF": 0
@@ -3336,7 +3235,6 @@
 	"/experimental.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/experimental.html",
 		"oF": 0
@@ -3344,7 +3242,6 @@
 	"/fonts.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/fonts.html",
 		"oF": 0
@@ -3352,7 +3249,6 @@
 	"/form.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/form.html",
 		"oF": 0
@@ -3360,7 +3256,6 @@
 	"/form_new.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/form_new.html",
 		"oF": 0
@@ -3368,7 +3263,6 @@
 	"/homepage-01.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/homepage-01.html",
 		"oF": 0
@@ -3376,7 +3270,6 @@
 	"/homepage-02.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/homepage-02.html",
 		"oF": 0
@@ -3405,7 +3298,7 @@
 		},
 	"/images/feature/city-hall-flags.jpg": {
 		"ft": 16384,
-		"iS": 142677,
+		"iS": 143567,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/city-hall-flags.jpg",
@@ -3537,7 +3430,7 @@
 		},
 	"/images/feature/walk-in-the-park.jpg": {
 		"ft": 16384,
-		"iS": 145061,
+		"iS": 142620,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/walk-in-the-park.jpg",
@@ -3673,7 +3566,6 @@
 	"/in-the-works-description-list.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/in-the-works-description-list.html",
 		"oF": 0
@@ -3681,7 +3573,6 @@
 	"/in-the-works-maps.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/in-the-works-maps.html",
 		"oF": 0
@@ -3689,13 +3580,11 @@
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.html",
 		"oF": 0
 		},
 	"/js/main.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -3706,7 +3595,6 @@
 		"tS": 0
 		},
 	"/js/NYC-gov-forms-validation.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -3717,7 +3605,6 @@
 		"tS": 0
 		},
 	"/js/responsive-table.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -3728,7 +3615,6 @@
 		"tS": 0
 		},
 	"/js/table-of-contents.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
@@ -3739,7 +3625,6 @@
 		"tS": 0
 		},
 	"/js/validation.js": {
-		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -3752,7 +3637,6 @@
 	"/map-data/pod.csv": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/map-data/pod.csv",
 		"oF": 0
@@ -3760,7 +3644,6 @@
 	"/primary-navigation-sidebar.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/primary-navigation-sidebar.html",
 		"oF": 0
@@ -3779,7 +3662,6 @@
 	"/README.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/README.html",
 		"oF": 0
@@ -3792,7 +3674,6 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/README.html",
 		"oF": 0,
@@ -3806,7 +3687,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_alert.scssc",
 		"oF": 0
@@ -3814,7 +3694,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_badge.scssc",
 		"oF": 0
@@ -3822,7 +3701,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_button-group.scssc",
 		"oF": 0
@@ -3830,7 +3708,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_buttons.scssc",
 		"oF": 0
@@ -3838,7 +3715,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_card.scssc",
 		"oF": 0
@@ -3846,7 +3722,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_carousel.scssc",
 		"oF": 0
@@ -3854,7 +3729,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_code.scssc",
 		"oF": 0
@@ -3862,7 +3736,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_custom-forms.scssc",
 		"oF": 0
@@ -3870,7 +3743,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_dropdown.scssc",
 		"oF": 0
@@ -3878,7 +3750,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_forms.scssc",
 		"oF": 0
@@ -3886,7 +3757,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_functions.scssc",
 		"oF": 0
@@ -3894,7 +3764,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_grid.scssc",
 		"oF": 0
@@ -3902,7 +3771,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_images.scssc",
 		"oF": 0
@@ -3910,7 +3778,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_input-group.scssc",
 		"oF": 0
@@ -3918,7 +3785,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_list-group.scssc",
 		"oF": 0
@@ -3926,7 +3792,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_media.scssc",
 		"oF": 0
@@ -3934,7 +3799,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_mixins.scssc",
 		"oF": 0
@@ -3942,7 +3806,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_modal.scssc",
 		"oF": 0
@@ -3950,7 +3813,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_nav.scssc",
 		"oF": 0
@@ -3958,7 +3820,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_reboot.scssc",
 		"oF": 0
@@ -3966,7 +3827,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_root.scssc",
 		"oF": 0
@@ -3974,7 +3834,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_tables.scssc",
 		"oF": 0
@@ -3982,7 +3841,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_transitions.scssc",
 		"oF": 0
@@ -3990,7 +3848,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_type.scssc",
 		"oF": 0
@@ -3998,7 +3855,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_utilities.scssc",
 		"oF": 0
@@ -4006,7 +3862,6 @@
 	"/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/3606cf3141d7af8680bcc4742f138b66a65c9d1a/_variables.scssc",
 		"oF": 0
@@ -4014,7 +3869,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_alert.scssc",
 		"oF": 0
@@ -4022,7 +3876,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_background-variant.scssc",
 		"oF": 0
@@ -4030,7 +3883,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_badge.scssc",
 		"oF": 0
@@ -4038,7 +3890,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_border-radius.scssc",
 		"oF": 0
@@ -4046,7 +3897,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_box-shadow.scssc",
 		"oF": 0
@@ -4054,7 +3904,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_breakpoints.scssc",
 		"oF": 0
@@ -4062,7 +3911,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_buttons.scssc",
 		"oF": 0
@@ -4070,7 +3918,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_caret.scssc",
 		"oF": 0
@@ -4078,7 +3925,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_clearfix.scssc",
 		"oF": 0
@@ -4086,7 +3932,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_float.scssc",
 		"oF": 0
@@ -4094,7 +3939,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_forms.scssc",
 		"oF": 0
@@ -4102,7 +3946,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_gradients.scssc",
 		"oF": 0
@@ -4110,7 +3953,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid-framework.scssc",
 		"oF": 0
@@ -4118,7 +3960,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_grid.scssc",
 		"oF": 0
@@ -4126,7 +3967,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_hover.scssc",
 		"oF": 0
@@ -4134,7 +3974,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_image.scssc",
 		"oF": 0
@@ -4142,7 +3981,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_list-group.scssc",
 		"oF": 0
@@ -4150,7 +3988,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_lists.scssc",
 		"oF": 0
@@ -4158,7 +3995,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_nav-divider.scssc",
 		"oF": 0
@@ -4166,7 +4002,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_pagination.scssc",
 		"oF": 0
@@ -4174,7 +4009,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_reset-text.scssc",
 		"oF": 0
@@ -4182,7 +4016,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_resize.scssc",
 		"oF": 0
@@ -4190,7 +4023,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_screen-reader.scssc",
 		"oF": 0
@@ -4198,7 +4030,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_size.scssc",
 		"oF": 0
@@ -4206,7 +4037,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_table-row.scssc",
 		"oF": 0
@@ -4214,7 +4044,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-emphasis.scssc",
 		"oF": 0
@@ -4222,7 +4051,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-hide.scssc",
 		"oF": 0
@@ -4230,7 +4058,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_text-truncate.scssc",
 		"oF": 0
@@ -4238,7 +4065,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_transition.scssc",
 		"oF": 0
@@ -4246,7 +4072,6 @@
 	"/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/9f037053b9816bd183641c171233df7432fdb4ae/_visibility.scssc",
 		"oF": 0
@@ -4254,7 +4079,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_a-global-variables.scssc",
 		"oF": 0
@@ -4262,7 +4086,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_b-bootstrap-imports.scssc",
 		"oF": 0
@@ -4270,7 +4093,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_c-custom-mixins.scssc",
 		"oF": 0
@@ -4278,7 +4100,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_d-enhancements.scssc",
 		"oF": 0
@@ -4286,7 +4107,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplementary-classes.scssc",
 		"oF": 0
@@ -4294,7 +4114,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-supplimentary-classes.scssc",
 		"oF": 0
@@ -4302,7 +4121,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_e-ui-elements.scssc",
 		"oF": 0
@@ -4310,7 +4128,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-dev-tools.scssc",
 		"oF": 0
@@ -4318,7 +4135,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_f-ui-elements.scssc",
 		"oF": 0
@@ -4326,7 +4142,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/_g-dev-tools.scssc",
 		"oF": 0
@@ -4334,7 +4149,6 @@
 	"/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/scss/.sass-cache/a6f9e12f9044589cd1a29070641a9ab19c0a85b7/theme.scssc",
 		"oF": 0
@@ -4342,7 +4156,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_align.scssc",
 		"oF": 0
@@ -4350,7 +4163,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_background.scssc",
 		"oF": 0
@@ -4358,7 +4170,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_borders.scssc",
 		"oF": 0
@@ -4366,7 +4177,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_clearfix.scssc",
 		"oF": 0
@@ -4374,7 +4184,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_display.scssc",
 		"oF": 0
@@ -4382,7 +4191,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_embed.scssc",
 		"oF": 0
@@ -4390,7 +4198,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_flex.scssc",
 		"oF": 0
@@ -4398,7 +4205,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_float.scssc",
 		"oF": 0
@@ -4406,7 +4212,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_overflow.scssc",
 		"oF": 0
@@ -4414,7 +4219,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_position.scssc",
 		"oF": 0
@@ -4422,7 +4226,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_screenreaders.scssc",
 		"oF": 0
@@ -4430,7 +4233,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_shadows.scssc",
 		"oF": 0
@@ -4438,7 +4240,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_sizing.scssc",
 		"oF": 0
@@ -4446,7 +4247,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_spacing.scssc",
 		"oF": 0
@@ -4454,7 +4254,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_text.scssc",
 		"oF": 0
@@ -4462,7 +4261,6 @@
 	"/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 1,
 		"oAP": "/scss/.sass-cache/c25c6bfb18a38f4e7128e8d63702e6d0f3074663/_visibility.scssc",
 		"oF": 0
@@ -4613,7 +4411,6 @@
 	"/tearsheet.html": {
 		"cB": 0,
 		"ft": 8192,
-		"hM": 0,
 		"oA": 0,
 		"oAP": "/tearsheet.html",
 		"oF": 0
@@ -4713,12 +4510,6 @@
 		"function-sent": {
 			"active": 0
 			},
-		"inline-consecutive-adds": {
-			"active": 0
-			},
-		"inline-environment-variables": {
-			"active": 0
-			},
 		"instanceof": {
 			"active": 0
 			},
@@ -4738,36 +4529,6 @@
 			"active": 0
 			},
 		"minify-booleans": {
-			"active": 0
-			},
-		"minify-builtins": {
-			"active": 0
-			},
-		"minify-constant-folding": {
-			"active": 0
-			},
-		"minify-dead-code-elimination": {
-			"active": 0
-			},
-		"minify-flip-comparisons": {
-			"active": 0
-			},
-		"minify-guarded-expressions": {
-			"active": 0
-			},
-		"minify-infinity": {
-			"active": 0
-			},
-		"minify-mangle-names": {
-			"active": 0
-			},
-		"minify-numeric-literals": {
-			"active": 0
-			},
-		"minify-simplify": {
-			"active": 0
-			},
-		"minify-type-constructors": {
 			"active": 0
 			},
 		"modules-amd": {
@@ -4818,9 +4579,6 @@
 		"pipeline-operator": {
 			"active": 0
 			},
-		"private-methods": {
-			"active": 0
-			},
 		"property-literals": {
 			"active": 0
 			},
@@ -4854,16 +4612,10 @@
 		"regenerator": {
 			"active": 0
 			},
-		"regexp-constructors": {
-			"active": 0
-			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
-			"active": 0
-			},
-		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -5812,10 +5564,6 @@
 			"active": 0,
 			"optionString": ""
 			},
-		"no-useless-catch": {
-			"active": 0,
-			"optionString": ""
-			},
 		"no-useless-computed-key": {
 			"active": 0,
 			"optionString": ""
@@ -6478,7 +6226,6 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -6500,7 +6247,6 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 0,
 		"syntaxCheckerStyle": 0,
@@ -6523,8 +6269,7 @@
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -6563,7 +6308,6 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -6573,8 +6317,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -6595,8 +6338,7 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -6625,8 +6367,7 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0,
-		"shouldRunHTMLMinifier": 0
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -6714,20 +6455,16 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"arrows": {
-			"active": 1,
+		"ascii_only": {
+			"active": 0,
 			"flagValue": -1
 			},
-		"ascii_only": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"booleans_as_integers": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -6746,7 +6483,7 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"computed_props": {
+		"compress": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -6769,10 +6506,6 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
-			},
-		"ecma": {
-			"active": 1,
-			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -6798,6 +6531,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"html5_comments": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -6806,13 +6543,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"indent-start": {
+			"active": 0,
+			"flagValue": 0
+			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
-			},
-		"indent_start": {
-			"active": 0,
-			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -6824,10 +6561,6 @@
 			},
 		"join_vars": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"keep_classnames": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -6850,13 +6583,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"mangle": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
-			},
-		"module": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -6865,6 +6598,10 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -6888,10 +6625,6 @@
 			},
 		"reduce_vars": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"safari10": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -6926,10 +6659,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"unsafe_arrows": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -6939,10 +6668,6 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6970,12 +6695,15 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"width": {
+			"active": 1,
+			"flagValue": 80
+			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
-	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$,exports,require",
 	"websiteRelativeRoot": ""
 	},
