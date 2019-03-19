@@ -388,7 +388,7 @@
                         </div>
                         <!-- .bg-opacity-black-10 -->
 
-                        <iframe src="tearsheet.html"></iframe>
+                        <!-- <iframe src="tearsheet.html"></iframe> -->
 
                     </div>
                     <!-- .tab-pane -->
@@ -442,7 +442,7 @@
                                     </div>
                                     <!-- .bg-opacity-black-10 -->
             
-                                    <iframe src="containers.html"></iframe>
+                                    <iframe src="containers.html" id="myFrame"></iframe>
                     
                             </div>
                             <!-- .tab-pane -->
@@ -469,24 +469,32 @@
      <!-- Google Code Pretty -->
      <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
 
+
+
     <script>
 
-    $('#introduction').show();
+        $(document).ready(function () {
 
-    $(function(){
+            $(this).find('iframe').each( function(){
+            
+            $('#introduction').show();
+            
+            sidebar = $('#sidebar');
 
-        sidebar = $('#sidebar');
+            sidebar.find('a').click(function(e){
 
-        sidebar.find('a').click(function(){
+            e.preventDefault();
 
-            $('.panel').hide();
-            sidebar.find('a').removeClass('active');
+                $('.panel').hide();
+                    
+                    sidebar.find('a').removeClass('active');
 
-              $(this).addClass('active');
-              current = $($(this).attr('href'));
-              current.fadeIn();
+                    $(this).addClass('active');
+                    current = $($(this).attr('href'));
+                    current.fadeIn();
+                    current.scrollTop();
+            });
         });
-    });
 
     </script>
 

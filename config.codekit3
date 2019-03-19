@@ -4657,11 +4657,11 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"/tearsheet-old.html": {
+	"/tearsheet.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/tearsheet-old.html",
+		"oAP": "/tearsheet.html",
 		"oF": 0
 		}
 	},
