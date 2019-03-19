@@ -32,7 +32,7 @@
             border: none;
             width: 100%;
         }
-        .carl-panel{
+        .panel{
             display: none;
         }
 
@@ -168,7 +168,7 @@
 
                 <div class="my-content">
 
-                    <div class="carl-panel" id="introduction">
+                    <div class="panel" id="introduction">
 
                         <div class="h-100">
 
@@ -225,7 +225,7 @@
                     </div>
                     <!-- .tab-pane -->
 
-                    <div class="carl-panel" id="home-nav-across">
+                    <div class="panel" id="home-nav-across">
 
                         <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -253,7 +253,7 @@
                     </div>
                     <!-- .tab-pane -->
 
-                    <div class="carl-panel" id="home-nav-right">
+                    <div class="panel" id="home-nav-right">
 
                         <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -281,7 +281,7 @@
                     </div>
                     <!-- .tab-pane -->
 
-                    <div class="carl-panel" id="article-centered">
+                    <div class="panel" id="article-centered">
 
                         <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -309,7 +309,7 @@
                     </div>
                     <!-- .tab-pane -->
 
-                    <div class="carl-panel" id="article-sidebar">
+                    <div class="panel" id="article-sidebar">
 
                         <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -337,7 +337,7 @@
                     </div>
                     <!-- .tab-pane -->
 
-                    <div class="carl-panel" id="form-with-validation">
+                    <div class="panel" id="form-with-validation">
 
                         <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -365,7 +365,7 @@
                     </div>
                     <!-- .tab-pane -->
 
-                    <div class="carl-panel" id="tearsheet">
+                    <div class="panel" id="tearsheet">
 
                         <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -393,60 +393,64 @@
                     </div>
                     <!-- .tab-pane -->
 
-                    <div class="carl-panel" id="getting-started">
+                    <div class="panel" id="getting-started">
 
                         <div class="container">
 
-                                <div class="narrow my-6">
-                                    
-                                    <p class="display-4">Getting Started</p>
-                                    <p>
-                                        The NYC Core framework requires modern Bootstrap (4.x) for styling, Font Awesome for icons, and custom CSS (SASS) and Javascript for accessibility. Google Translate is included for language translation, and right-to-left languages are supported out-of-the-box. 
-                                    </p>
-                                    <p>All of these dependencies are included in the starter files below.</p>
+                            <div class="narrow my-6">
 
-                                    <a class="btn btn-lg btn-info rounded-pill my-3 has-icon" href="./_nyc-core-framework-dependencies.zip">
-                                        <span class="fas fa-file-archive"></span>
-                                        <span class="title mx-1">Download Starter Files</span> 
-                                    </a>
-                                </div>
+                                <p class="display-4">Getting Started</p>
+                                <p>
+                                    The NYC Core framework requires modern Bootstrap (4.x) for styling, Font Awesome for icons, and custom
+                                    CSS (SASS) and Javascript for accessibility. Google Translate is included for language translation, and
+                                    right-to-left languages are supported out-of-the-box.
+                                </p>
+                                <p>All of these dependencies are included in the starter files below.</p>
 
-                                <div class="narrow my-6 d-none">
-                                    <p class="h2">The Files</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sapiente totam eaque doloremque autem error architecto, accusantium ratione repellat tempore obcaecati sint ipsam sed doloribus repellendus esse, sit vel adipisci.</p>
+                                <a class="btn btn-lg btn-info rounded-pill my-3 has-icon" href="./_nyc-core-framework-dependencies.zip">
+                                    <span class="fas fa-file-archive"></span>
+                                    <span class="title mx-1">Download Starter Files</span>
+                                </a>
+                            </div>
 
-                                    <ul class="extensible-list ">
-                                        <li class="mb-0">
-                                            <i class="fas fa-folder-open"></i>
-                                            Bootstrap
-                                            <ul class="extensible-list">
-                                                    <li class="mb-0">
-                                            <i class="fas fa-folder"></i>
+                            <div class="narrow my-6 d-none">
+                                <p class="h2">The Files</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sapiente totam eaque doloremque autem
+                                    error architecto, accusantium ratione repellat tempore obcaecati sint ipsam sed doloribus repellendus
+                                    esse, sit vel adipisci.</p>
 
-                                            scss
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    </div>
+                                <ul class="extensible-list ">
+                                    <li class="mb-0">
+                                        <i class="fas fa-folder-open"></i>
+                                        Bootstrap
+                                        <ul class="extensible-list">
+                                            <li class="mb-0">
+                                                <i class="fas fa-folder"></i>
+
+                                                scss
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <div class="wide my-5">
-                
+
 
                             </div>
                             <!-- .wide -->
 
-                                    
+
 
 
 
                         </div>
                         <!-- .container-fluid -->
 
-                        
-                        
-                        </div>
-                        <!-- .tab-pane -->
+
+
+                    </div>
+                    <!-- .tab-pane -->
 
                 </div>
                 <!-- #tab-content -->
@@ -480,7 +484,7 @@
 
         sidebar.find('a').click(function(){
 
-            $('.carl-panel').hide();
+            $('.panel').hide();
             sidebar.find('a').removeClass('active');
 
               $(this).addClass('active');
