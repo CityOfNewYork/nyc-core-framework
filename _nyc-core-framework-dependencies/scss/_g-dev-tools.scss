@@ -1,0 +1,63 @@
+/*
+
+In this file:
+
+// A. Breakpoints floating bar
+// B. Container highlighter
+
+*/
+
+////////////////////////////////////////
+// A. Breakpoints floating bar
+////////////////////////////////////////
+
+$breakpoints-bar: false;
+
+$breakpoints-bar-bg: fade-out( purple, 0.1 );
+
+@if $breakpoints-bar{
+
+    html{
+
+        // Remove height added by Google Translate
+
+        height: auto !important;
+        
+        &::before{
+            @extend .sticky-top;
+            @extend .shadow-sm;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: $spacer-3;
+            z-index: 5000;
+            background: $breakpoints-bar-bg;
+        }
+
+        @each $breakpoint in map-keys($grid-breakpoints) {
+            &::before{
+                @include media-breakpoint-up($breakpoint) {
+                    content: 'breakpoint: ' + $breakpoint;
+                }
+            } 
+        }
+    }
+
+} // end if
+
+////////////////////////////////////////
+// B. Container highlighter
+////////////////////////////////////////
+
+$highlight-containers: false;
+
+@if $highlight-containers{
+
+    .container{ background: fade-out(red, 0.25) !important; }
+    .narrow{ background: fade-out(orange, 0.25) !important; }
+    .wide{ background: fade-out(green, 0.25) !important; }
+    // .matrix{ background: fade-out(blue, 0.25) !important; }
+    // .extensible-list{ background: fade-out(purple, 0.25) !important; }
+    // .extensible-list li{ background: fade-out(pink, 0.25) !important; }
+
+} // end if

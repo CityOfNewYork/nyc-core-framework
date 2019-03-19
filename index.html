@@ -24,7 +24,8 @@
         html, 
         body,
         iframe,
-        #introduction
+        #introduction,
+        #test
         { min-height: 100vh; }
 
         iframe {
@@ -32,30 +33,20 @@
             border: none;
             width: 100%;
         }
-
-        .list-group-item,
-        .list-group-item.active
-        {
-            border: none;
-            margin-bottom: 0;
-            color: white !important;
+        .carl-panel{
+            display: none;
         }
 
-        .list-group-item,
-        .list-group-item:not(.active):hover,
-        .list-group-item:not(.active):focus{
-            background: none;
+        #menu a{
+            color: white;
         }
 
-        .list-group-item.active{
-            background-color: rgba(49,119,200,0.5);
+        #menu a.active{
+            opacity: 0.5;
+            text-decoration: underline;
         }
 
-        .list-group-item:not(.active):hover,
-        .list-group-item:not(.active):focus
-        {
-            background-color: rgba(0,0,0,0.1);
-        }
+        hr.dark{ border-top: 1px solid rgba(0, 0, 0, 0.25); }
 
     </style>
 
@@ -63,24 +54,24 @@
 
 <body class="bg-primary">
 
-    <div class="row no-gutters bg-opacity-black-10">
+    <div class="row no-gutters bg-opacity-black-10" id="test">
 
         <div class="col-lg-2">
 
-            <div class="sticky-top">
+            <div class="sticky-top" id="sidebar">
 
                 <div class="row no-gutters align-items-center">
 
                     <div class="col p-2">
-                        <a class="text-white d-inline-block" href="index.html" title="NYC Core Framework Home">
-                            <h1 class="h4">NYC Core<br>Framework</h1>
+                        <a class="text-white d-inline-block" href="#introduction" title="NYC Core Framework introduction">
+                            <p class="h4">NYC Core<br>Framework</p>
                         </a>
                         <p class="text-white fs-md opacity-50 my-1">Beta</p>
                     </div>
 
                     <div class="col-auto d-lg-none p-2">
 
-                        <button class="no-btn-style text-white" type="button" data-toggle="collapse" data-target="#sidebar-menu" aria-controls="sidebar-menu"
+                        <button class="no-btn-style text-white" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu"
                             aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="fas fa-bars fs-lg" role="img">
                             </span>
@@ -92,51 +83,85 @@
                 </div>
                 <!-- .row -->
 
-                <div id="sidebar-menu" class="collapse d-lg-block">
+                <div id="menu" class="collapse d-lg-block fs-md">
 
-                    <div class="py-2carl">
+                <div class="my-2">
 
-                        <div class="list-group list-group-flush fs-md" id="list-tab" role="tablist">
+                    <hr class="dark">
 
-                            <a class="list-group-item list-group-item-action active" id="introduction-tab" data-toggle="list" href="#introduction" role="tab" aria-controls="introduction">
-                                    <i class="fas fa-home"></i>
-                            </a>
-
-                            <a class="list-group-item list-group-item-action" id="global-nav-across-tab" data-toggle="list" href="#global-nav-across" role="tab" aria-controls="global-nav-across">
-                                Global Nav Across
-                            </a>
-                    
-                            <a class="list-group-item list-group-item-action" id="global-nav-right-tab" data-toggle="list" href="#global-nav-right" role="tab" aria-controls="global-nav-right">
-                                Global Nav Right
-                            </a>
-
-                            <a class="list-group-item list-group-item-action" id="article-centered-tab" data-toggle="list" href="#article-centered" role="tab" aria-controls="article-centered">
-                                Article Centered
-                            </a>
-
-                            <a class="list-group-item list-group-item-action" id="article-sidebar-tab" data-toggle="list" href="#article-sidebar" role="tab" aria-controls="article-sidebar">
-                                Article Sidebar
-                            </a>
-
-                            <a class="list-group-item list-group-item-action" id="form-tab" data-toggle="list" href="#form" role="tab" aria-controls="form">
-                                Form
-                            </a>
-
-                            <a class="list-group-item list-group-item-action" id="map-tab" data-toggle="list" href="#map" role="tab" aria-controls="map">
-                                Map
-                            </a>
-
-                            <a class="list-group-item list-group-item-action" id="tearsheet-tab" data-toggle="list" href="#tearsheet" role="tab" aria-controls="map">
-                                Tearsheet
-                            </a>
-
-                        </div>
-
-                    </div>
-                    <!-- .py-2 -->
+                    <ul class="extensible-list text-white p-2">
+                        <li>
+                            <strong class="opacity-50">Examples</strong>
+                        </li>
+                        <li>
+                            <a href="#home-nav-across" title="Home Nav Across">Home Nav Across</a>
+                        </li>
+                        <li>
+                            <a href="#home-nav-right" title="Home Nav Right">Home Nav Right</a>
+                        </li>
+                        <li>
+                            <a href="#article-centered" title="Article Centered">Article Centered</a>
+                        </li>
+                        <li>
+                            <a href="#article-sidebar" title="Article Sidebar Nav">Article Sidebar Nav</a>
+                        </li>
+                        <li>
+                            <a href="#form-with-validation" title="Form">Form with Validation</a>
+                        </li>
+                    </ul>
 
                 </div>
-                <!-- #sidebar-menu -->
+
+                <div class="my-2">
+
+                        <hr class="dark">
+    
+                        <ul class="extensible-list text-white fs-md p-2">
+                            <li>
+                                <strong class="opacity-50">Documentation</strong>
+                            </li>
+                            <li>
+                                <a href="#getting-started" title="Getting Started">Getting Started</a>
+                            </li>
+                            <li>
+                                <a href="#dependencies" title="Global Headers">Global Headers</a>
+                            </li>
+                            <li>
+                                <a href="#dependencies" title="Global Headers">Global Footer</a>
+                            </li>
+                            <li>
+                                <a href="#1" title="Content Containers">Content Containers</a>
+                            </li>
+                            <li>
+                                <a href="#1" title="Featured Panels">Featured Panels</a>
+                            </li>
+                            <li>
+                                <a href="#tearsheet" title="Tearsheet">Tearsheet</a>
+                            </li>
+                        </ul>
+    
+                    </div>
+
+                    <div class="my-2">
+    
+                        <hr class="dark">
+    
+                        <ul class="extensible-list text-white fs-md p-2">
+                            <li>
+                                <strong class=" opacity-50">In The Works</strong>
+                            </li>
+                            <li>
+                                <a href="#1" title="Maps">Maps</a>
+                            </li>
+                            <li>
+                                <a href="#1" title="Subway Icons">Subway Icons</a>
+                            </li>
+                        </ul>
+    
+                    </div>
+
+                </div>
+                <!-- #menu -->
 
             </div>
             <!-- .sticky-top -->
@@ -144,11 +169,11 @@
         </div>
         <!-- .col -->
 
-        <div class="col-lg-10 shadow-lg bg-white z-index-900" id="primary-content">
+        <div class="col-lg-10 bg-white" id="primary-content">
 
-            <div class="tab-content">
+            <div class="my-content">
 
-                <div class="tab-pane fade show active" id="introduction" role="tabpanel" aria-labelledby="global-nav-across-tab">
+                <div class="carl-panel" id="introduction">
 
                     <div class="h-100">
 
@@ -205,35 +230,35 @@
                 </div>
                 <!-- .tab-pane -->
 
-                <div class="tab-pane fade" id="global-nav-across" role="tabpanel" aria-labelledby="global-nav-across-tab">
+                <div class="carl-panel" id="home-nav-across">
 
-                        <div class="bg-white shadow-sm sticky-top p-2">
-    
-                            <ul class="extensible-list horizontal justify-content-center">
-                                <li>
-                                    <a class="no-btn-style text-secondary" href="homepage-01.html" target="_blank" title="View in Browser">
-                                        <span class="fas fa-eye"></span>
-                                        <span class="sr-only">View in Browser</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="no-btn-style text-secondary" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/homepage-01.html"
-                                        target="_blank" title="View on GitHub">
-                                        <span class="fab fa-github"></span>
-                                        <span class="sr-only">View on GitHub</span>
-                                    </a>
-                                </li>
-                            </ul>
-    
-                        </div>
-                        <!-- .p-2 -->
-    
-                        <iframe src="homepage-01.html"></iframe>
-    
+                    <div class="bg-white shadow-sm sticky-top p-2">
+
+                        <ul class="extensible-list horizontal justify-content-center">
+                            <li>
+                                <a class="no-btn-style text-secondary" href="homepage-01.html" target="_blank" title="View in Browser">
+                                    <span class="fas fa-eye"></span>
+                                    <span class="sr-only">View in Browser</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="no-btn-style text-secondary" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/homepage-01.html"
+                                    target="_blank" title="View on GitHub">
+                                    <span class="fab fa-github"></span>
+                                    <span class="sr-only">View on GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+
                     </div>
-                    <!-- .tab-pane -->
+                    <!-- .p-2 -->
 
-                <div class="tab-pane fade" id="global-nav-right" role="tabpanel" aria-labelledby="global-nav-right-tab">
+                    <iframe src="homepage-01.html"></iframe>
+
+                </div>
+                <!-- .tab-pane -->
+
+                <div class="carl-panel" id="home-nav-right">
 
                     <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -261,7 +286,7 @@
                 </div>
                 <!-- .tab-pane -->
 
-                <div class="tab-pane fade" id="article-centered" role="tabpanel" aria-labelledby="article-centered-tab">
+                <div class="carl-panel" id="article-centered">
 
                     <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -289,7 +314,7 @@
                 </div>
                 <!-- .tab-pane -->
 
-                <div class="tab-pane fade" id="article-sidebar" role="tabpanel" aria-labelledby="article-sidebar-tab">
+                <div class="carl-panel" id="article-sidebar">
 
                     <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -317,7 +342,7 @@
                 </div>
                 <!-- .tab-pane -->
 
-                <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
+                <div class="carl-panel" id="form-with-validation">
 
                     <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -345,7 +370,7 @@
                 </div>
                 <!-- .tab-pane -->
 
-                <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+                <div class="carl-panel" id="map">
 
                     <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -373,7 +398,7 @@
                 </div>
                 <!-- .tab-pane -->
 
-                <div class="tab-pane fade" id="tearsheet" role="tabpanel" aria-labelledby="tearsheet-tab">
+                <div class="carl-panel" id="tearsheet">
 
                     <div class="bg-white shadow-sm sticky-top p-2">
 
@@ -401,6 +426,44 @@
                 </div>
                 <!-- .tab-pane -->
 
+                <div class="carl-panel" id="getting-started">
+
+                    
+                    <div class="container">
+
+                            <div class="narrow my-6">
+                                <p class="display-4">Getting Started</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sapiente totam eaque doloremque autem error architecto, accusantium ratione repellat tempore obcaecati sint ipsam sed doloribus repellendus esse, sit vel adipisci.</p>
+    
+                                <a class="btn btn-lg btn-primary rounded-pill my-3 has-icon" href="./_nyc-core-framework-dependencies.zip">
+                                    <span class="fas fa-file-archive"></span>
+                                    <span class="title mx-1">Download Starter Files</span> 
+                                </a>
+                            </div>
+
+                            <div class="narrow my-6">
+                                <p class="h2">Based on Bootstrap</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sapiente totam eaque doloremque autem error architecto, accusantium ratione repellat tempore obcaecati sint ipsam sed doloribus repellendus esse, sit vel adipisci.</p>
+                                </div>
+
+                        <div class="wide my-5">
+            
+
+                        </div>
+                        <!-- .wide -->
+
+                                
+
+
+
+                    </div>
+                    <!-- .container-fluid -->
+
+                    
+                    
+                    </div>
+                    <!-- .tab-pane -->
+
             </div>
             <!-- #tab-content -->
                 
@@ -417,10 +480,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+     <!-- Google Code Pretty -->
+     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
+
     <script>
-        $('#map-tab').click(function() {
-            $('#map-iframe').attr('src', 'map.html');
+
+    $('#introduction').show();
+
+    $(function(){
+
+        sidebar = $('#sidebar');
+
+        sidebar.find('a').click(function(){
+
+            $('.carl-panel').hide();
+            sidebar.find('a').removeClass('active');
+
+              $(this).addClass('active');
+              current = $($(this).attr('href'));
+              current.fadeIn();
+
+              current.scrollTop();
         });
+    });
+
     </script>
 
 </body>

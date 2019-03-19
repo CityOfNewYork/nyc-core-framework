@@ -1,0 +1,126 @@
+form.nycgov-form{
+  
+    label, 
+    fieldset
+    {
+        display:block;
+        
+        input:not([type="radio"]):not([type="checkbox"]),
+        select,
+        textarea,
+        .extensible-list
+        { margin-top: $spacer-1; }
+
+        &.validationError, 
+        .validationError
+        {
+            ~ label.fileInput-label2{
+                border: $border-width solid $danger!important;
+            }
+
+            color: $danger;         
+            input:not([type="radio"]):not([type="checkbox"]),
+            select,
+            textarea 
+            { border-color: $danger; }
+    
+            .validationMessage, 
+            ~ .validationMessage{
+            color: $danger;
+            font-weight: $font-weight-bold;
+            position: relative;
+    
+            span{ font-weight: $font-weight-normal; }
+    
+            &::before {
+                content: "\f071";
+                font-family: $font-awesome;
+                font-weight: $font-weight-bold;
+                display: inline-block;
+                margin-right: $spacer-1;
+
+                [dir="rtl"] & {
+                    margin-right: 0;
+                    margin-left: $spacer-1;
+                }
+            }
+            }
+           
+      }
+    }
+    
+    fieldset {
+        display: block;
+        border: none;
+        margin: 0;
+  
+        legend {
+            background: unset;
+            color: unset;
+            padding: 0;
+            margin: 0;
+            float: none;
+            max-width: 100%;
+            width: 100%;
+        }
+  
+        label.custom-control-label {
+            position: relative;
+            padding-left: 1.5rem;
+            
+            &::before,
+            &::after
+            { display: none; }
+        }
+  
+        input[type="checkbox"],input[type="radio"] {
+            &.custom-control-input{
+            @extend .sr-only;  
+            position: absolute;
+            
+            ~ .custom-control-label{
+                display: block;
+                position: relative;        
+            }        
+    
+            &:focus ~ .custom-control-label::before {
+                @if $enable-shadows {
+                box-shadow: $input-box-shadow, $input-focus-box-shadow;
+                } @else {
+                box-shadow: $custom-control-indicator-focus-box-shadow;
+                }
+            }
+            }
+            
+        }
+
+        input[type="radio"].custom-control-input ~ .custom-control-label::before{
+            border-radius: 100%;
+        }
+    }
+
+    label.fileInput-label1{        
+        margin-bottom:0;
+        ~ input[type="file"]{
+            @extend .sr-only;
+            
+            &:focus ~ label {
+                @if $enable-shadows {
+                    box-shadow: $input-box-shadow, $input-focus-box-shadow;
+                    } @else {
+                    box-shadow: $custom-control-indicator-focus-box-shadow;
+                    }
+            }
+        }
+        
+        ~ label.fileInput-label2{
+            border: $border-width solid $input-border-color;
+            margin-top:$spacer-1;
+            > span{
+                display:block;
+                text-align:center;
+                padding:.375rem $spacer-1;
+            }
+        }
+    }
+}
