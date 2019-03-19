@@ -3547,11 +3547,11 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/images/nyc-logo-generic.svg": {
+	"/images/nyc-logo-placeholder.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/images/nyc-logo-generic.svg",
+		"oAP": "/images/nyc-logo-placeholder.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -4408,11 +4408,11 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/tearsheet.html": {
+	"/tearsheet-old.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/tearsheet.html",
+		"oAP": "/tearsheet-old.html",
 		"oF": 0
 		}
 	},
