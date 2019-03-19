@@ -23,6 +23,20 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/_archive/in-the-works-description-list.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_archive/in-the-works-description-list.html",
+		"oF": 0
+		},
+	"/_archive/in-the-works-maps.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_archive/in-the-works-maps.html",
+		"oF": 0
+		},
 	"/_nyc-core-framework-starter-files.zip": {
 		"cB": 0,
 		"ft": 8192,
@@ -3562,20 +3576,6 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
-		},
-	"/in-the-works-description-list.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/in-the-works-description-list.html",
-		"oF": 0
-		},
-	"/in-the-works-maps.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/in-the-works-maps.html",
-		"oF": 0
 		},
 	"/index.html": {
 		"cB": 0,
