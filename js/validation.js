@@ -15,11 +15,13 @@ $(document).ready(function () {
                         event.preventDefault();
                         event.stopPropagation();
 
-                        var alert_target = $('.is-invalid');
-                        var invalid_target = $(':invalid');
                         
-                        alert_target.removeClass('d-none');
+                        var invalid_target = $(':invalid');
                         invalid_target.closest('.form-group').addClass('is-invalid');
+                        
+                        // var alert_target = $('#form-error-message');
+                        var alert_target = $('.is-invalid');
+                        alert_target.removeClass('d-none');
                                 
                         $('html, body').animate({
                             scrollTop: alert_target.offset().top - 16
