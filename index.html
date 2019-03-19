@@ -64,7 +64,7 @@
                     <div class="row no-gutters align-items-center">
 
                         <div class="col p-2">
-                            <a class="text-white d-inline-block" href="#introduction" title="NYC Core Framework introduction">
+                            <a class="text-white d-inline-block" href="#introduction" aria-selected="true" title="NYC Core Framework introduction">
                                 <p class="h4">NYC Core<br>Framework</p>
                             </a>
                             <p class="text-white fs-md opacity-50 my-1">Beta</p>
@@ -95,19 +95,19 @@
                                     <strong class="opacity-50">Examples</strong>
                                 </li>
                                 <li>
-                                    <a href="#home-nav-across" title="Home Nav Across">Home Nav Across</a>
+                                    <a href="#home-nav-across" aria-selected="false" title="Home Nav Across">Home Nav Across</a>
                                 </li>
                                 <li>
-                                    <a href="#home-nav-right" title="Home Nav Right">Home Nav Right</a>
+                                    <a href="#home-nav-right" aria-selected="false" title="Home Nav Right">Home Nav Right</a>
                                 </li>
                                 <li>
-                                    <a href="#article-centered" title="Article Centered">Article Centered</a>
+                                    <a href="#article-centered" aria-selected="false" title="Article Centered">Article Centered</a>
                                 </li>
                                 <li>
-                                    <a href="#article-sidebar" title="Article Sidebar Nav">Article Sidebar Nav</a>
+                                    <a href="#article-sidebar" aria-selected="false" title="Article Sidebar Nav">Article Sidebar Nav</a>
                                 </li>
                                 <li>
-                                    <a href="#form-with-validation" title="Form">Form with Validation</a>
+                                    <a href="#form-with-validation" aria-selected="false" title="Form">Form with Validation</a>
                                 </li>
                             </ul>
 
@@ -122,16 +122,16 @@
                                     <strong class="opacity-50">Documentation</strong>
                                 </li>
                                 <li>
-                                    <a href="#getting-started" title="Getting Started">Getting Started</a>
+                                    <a href="#getting-started" aria-selected="false" title="Getting Started">Getting Started</a>
                                 </li>
                                 <li>
-                                    <a href="#containers" title="Containers">Containers</a>
+                                    <a href="#containers" aria-selected="false" title="Containers">Containers</a>
                                 </li>
                                 <li class="d-none">
-                                    <a href="#1" title="Featured Panels">Featured Panels</a>
+                                    <a href="#1" aria-selected="false" title="Featured Panels">Featured Panels</a>
                                 </li>
                                 <li>
-                                    <a href="#tearsheet" title="Tearsheet">Tearsheet</a>
+                                    <a href="#tearsheet" aria-selected="false" title="Tearsheet">Tearsheet</a>
                                 </li>
                             </ul>
             
@@ -395,29 +395,29 @@
 
                     <div class="panel" id="getting-started">
 
-                            <div class="container">
-    
-                                <div class="narrow my-6">
-    
-                                    <p class="display-4">Getting Started</p>
-                                    <p>
-                                        The NYC Core framework requires modern Bootstrap (4.x) for styling, Font Awesome for icons, and custom
-                                        CSS (SASS) and Javascript for accessibility. Google Translate is included for language translation, and
-                                        right-to-left languages are supported out-of-the-box.
-                                    </p>
-                                    <p>All of these dependencies are included in the starter files below.</p>
-    
-                                    <a class="btn btn-lg btn-info rounded-pill my-3 has-icon" href="./_nyc-core-framework-starter-files.zip">
-                                        <span class="fas fa-file-archive"></span>
-                                        <span class="title mx-1">Download Starter Files</span>
-                                    </a>
-                                </div>
-    
+                        <div class="container">
+
+                            <div class="narrow my-6">
+
+                                <p class="display-4">Getting Started</p>
+                                <p>
+                                    The NYC Core framework requires modern Bootstrap (4.x) for styling, Font Awesome for icons, and custom
+                                    CSS (SASS) and Javascript for accessibility. Google Translate is included for language translation, and
+                                    right-to-left languages are supported out-of-the-box.
+                                </p>
+                                <p>All of these dependencies are included in the starter files below.</p>
+
+                                <a class="btn btn-lg btn-info rounded-pill my-3 has-icon" href="./_nyc-core-framework-starter-files.zip">
+                                    <span class="fas fa-file-archive"></span>
+                                    <span class="title mx-1">Download Starter Files</span>
+                                </a>
                             </div>
-                            <!-- .container-fluid -->
 
                         </div>
-                        <!-- .tab-pane -->
+                        <!-- .container-fluid -->
+
+                    </div>
+                    <!-- .tab-pane -->
 
                         <div class="panel" id="containers">
 
@@ -447,6 +447,35 @@
                             </div>
                             <!-- .tab-pane -->
             
+
+                        <div class="panel" id="tearsheet">
+
+                            <div class="bg-white shadow-sm sticky-top p-2">
+    
+                                <ul class="extensible-list horizontal justify-content-center">
+                                    <li>
+                                        <a class="no-btn-style text-secondary" href="tearsheet.html" target="_blank" title="View in Browser">
+                                            <span class="fas fa-eye"></span>
+                                            <span class="sr-only">View in Browser</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="no-btn-style text-secondary" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/tearsheet.html"
+                                            target="_blank" title="View on GitHub">
+                                            <span class="fab fa-github"></span>
+                                            <span class="sr-only">View on GitHub</span>
+                                        </a>
+                                    </li>
+                                </ul>
+    
+                            </div>
+                            <!-- .bg-opacity-black-10 -->
+
+
+
+
+
+                </div>
                 </div>
                 <!-- #tab-content -->
                     
@@ -484,8 +513,11 @@
                 $('.panel').hide();
                     
                     sidebar.find('a').removeClass('active');
+                    sidebar.find('a').attr('aria-selected', 'false');
 
                     $(this).addClass('active');
+
+                    $(this).attr('aria-selected', $(this).attr('aria-selected')==='true'?'false':'true' );
                     current = $($(this).attr('href'));
                     current.fadeIn();
                     current.scrollTop();
