@@ -15,7 +15,7 @@ $(document).ready(function () {
                         event.preventDefault();
                         event.stopPropagation();
 
-                        var alert_target = $('#form-error-message');
+                        var alert_target = $('.is-invalid');
                         var invalid_target = $(':invalid');
                         
                         alert_target.removeClass('d-none');
