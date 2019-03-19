@@ -1201,16 +1201,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-starter-files/css/theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_nyc-core-framework-starter-files/css/theme-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/_nyc-core-framework-starter-files/hompepage-nav-across.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -4664,7 +4654,7 @@
 		"oA": 0,
 		"oAP": "/css/theme.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 3,
 		"uL": 1
 		},
 	"/tearsheet-old.html": {
