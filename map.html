@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Corrects IE Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Map • NYC Core Framework</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- NYC Theme CSS -->
+    <link rel="stylesheet" href="./css/theme.css">
+
+</head>
+
+<body>
+
+    <header role="banner">
+
+        <div class="container-fluid bg-secondary py-6">
+
+            <div class="narrow text-white text-center">
+                <h1 class="card-title display-4 font-weight-bold">
+                    Map
+                </h1>
+            </div>
+
+        </div>
+
+    </header>
+    
+    <main id="content" role="main">
+
+        <section class="container-fluid py-4">
+
+                <div class="narrow my-6">
+
+                    <h2>Map</h2>
+                    <div w3-include-html="./documentation/map.html"></div>
+
+                    <div class="my-2">
+                        <input class="form-control form-control-lg" id="pod-map-search" placeholder="Search Address">
+                    </div>
+                    <div id="map" class="my-2"></div>
+                    <div id="pod-list" style="height:500px" class="my-2"></div>
+
+                </div>
+                <!-- .narrow -->
+
+            <div class="narrow my-6">
+
+                <h2>Points of Dispensing Map</h2>
+
+                <p>
+                    Designed for use alongside Boostrap's native containers, rows, and columns, <code>.narrow</code>, <code>.medium</code>,
+                    and <code>.wide</code> classes can be used in a number of ways for enhanced control of your content.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+            <div class="narrow my-6">
+
+                <h3>Medium</h3>
+
+                <p>
+                    Medium's width is a multiple (x 1.25) of narrow's width. Use <code>.medium</code> for figures or any
+                    content
+                    you wish to appear slightly wider than narrow.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+
+            <div class="narrow my-6">
+
+                <h3>Wide</h3>
+
+                <p>
+                    Wide can be used on <code>.container-fluid</code> or any element Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+        </section>
+
+        <hr>
+
+        <section class="container-fluid py-4">
+
+            <div class="narrow my-6">
+
+                <h2>Matrix Stuff</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor accusamus sint esse quaerat illo cum culpa quibusdam facere explicabo optio.
+                </p>
+
+            </div>
+            <!-- .narrow -->
+
+        </section>
+
+    </main>
+    <!-- #content -->
+
+    <footer role="contentinfo">
+
+        <div class="container fs-md bg-black">
+
+        </div>
+
+
+    </footer>
+
+    <!-- jQuery (full, compressed version) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Popper.js and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Google Translate -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
+    <script src="./js/main.js"></script>
+
+    <!-- HTML includes -->     
+    <script src="./js/html-includes.js"></script>
+
+    <link href="https://maps.nyc.gov/nyc-lib/v1.2.37/css/nyc-basic-lib.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.4.0/papaparse.min.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.37/js/babel-polyfill.js"></script>
+    <script src="https://maps.nyc.gov/nyc-lib/v1.2.37/js/nyc-ol-lib.js"></script>
+
+    <script>
+        var podMap = new nyc.ol.FrameworkMap({
+            mapTarget: '#map', 
+            searchTarget: '#pod-map-search',
+            listTarget: '#list',
+            facilityType: 'Points of Distribution',
+            facilityUrl: 'data.csv',
+            mapMarkerUrl: 'map-marker.png',
+            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=#&app_id=#'
+        });
+    </script>
+    
+</body>
+
+</html>

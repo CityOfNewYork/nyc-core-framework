@@ -3497,6 +3497,13 @@
 		"oAP": "/documentation/extensible-lists.html",
 		"oF": 0
 		},
+	"/documentation/map.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/map.html",
+		"oF": 0
+		},
 	"/documentation/nyc-global-header.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3842,6 +3849,16 @@
 		"oAP": "/index.html",
 		"oF": 0
 		},
+	"/js/html-includes.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/js/html-includes-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"/js/main.js": {
 		"ft": 64,
 		"ma": 0,
@@ -3887,6 +3904,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/map-data/pod.csv",
+		"oF": 0
+		},
+	"/map.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/map.html",
 		"oF": 0
 		},
 	"/primary-navigation-sidebar.html": {
