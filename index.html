@@ -419,33 +419,35 @@
                     </div>
                     <!-- .tab-pane -->
 
-                        <div class="panel" id="containers">
+                    <div class="panel" id="containers">
 
-                                <div class="bg-white shadow-sm sticky-top p-2">
+                        <div class="bg-white shadow-sm sticky-top p-2">
 
-                                        <ul class="extensible-list horizontal justify-content-center">
-                                            <li>
-                                                <a class="no-btn-style text-secondary" href="containers.html" target="_blank" title="View in Browser">
-                                                    <span class="fas fa-eye"></span>
-                                                    <span class="sr-only">View in Browser</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="no-btn-style text-secondary" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/containers.html"
-                                                    target="_blank" title="View on GitHub">
-                                                    <span class="fab fa-github"></span>
-                                                    <span class="sr-only">View on GitHub</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-            
-                                    </div>
-                                    <!-- .bg-opacity-black-10 -->
-            
-                                    <iframe src="containers.html" id="myFrame"></iframe>
-                    
-                            </div>
-                            <!-- .tab-pane -->
+                            <ul class="extensible-list horizontal justify-content-center">
+                                <li>
+                                    <a class="no-btn-style text-secondary" href="containers.html" target="_blank"
+                                        title="View in Browser">
+                                        <span class="fas fa-eye"></span>
+                                        <span class="sr-only">View in Browser</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="no-btn-style text-secondary"
+                                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/containers.html"
+                                        target="_blank" title="View on GitHub">
+                                        <span class="fab fa-github"></span>
+                                        <span class="sr-only">View on GitHub</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- .bg-opacity-black-10 -->
+
+                        <iframe src="containers.html" id="myFrame"></iframe>
+
+                    </div>
+                    <!-- .tab-pane -->
             
 
                         <div class="panel" id="tearsheet">
@@ -476,6 +478,7 @@
 
 
                 </div>
+
                 </div>
                 <!-- #tab-content -->
                     
@@ -502,7 +505,6 @@
 
         $(document).ready(function () {
 
-            
             $('#introduction').show();
             
             sidebar = $('#sidebar');
@@ -523,7 +525,18 @@
                     current.fadeIn();
                     current.scrollTop();
             });
-        });
+
+            var iframes = document.getElementsByTagName('iframe');
+                        for (var i = 0; i < iframes.length; i++) {
+                            var f  = iframes[i];
+                            f.addEventListener('load', function() {
+                                var hdrs = f.contentDocument.getElementsByClassName('test'); 
+                                for (var j = 0; j < hdrs.length; j++) {
+                                    hdrs[j].style.display = 'none';
+                                }
+                            });
+                        }
+                    });
 
     </script>
 
