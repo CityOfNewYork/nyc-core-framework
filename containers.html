@@ -66,7 +66,7 @@
 
         <section class="container-fluid">
 
-            <div class="narrow my-6">
+            <div class="narrow my-5">
 
                 <h2>Narrow, Medium, and Wide</h2>
 
@@ -90,7 +90,7 @@
                 <p>Wide</p>
             </div>
 
-            <div class="narrow my-6">
+            <div class="narrow my-5">
 
                 <h3>Narrow</h3>
 
@@ -104,7 +104,7 @@
             </div>
             <!-- .narrow -->
 
-            <div class="narrow my-6">
+            <div class="narrow my-5">
 
                 <h3>Medium</h3>
 
@@ -116,8 +116,7 @@
             </div>
             <!-- .narrow -->
 
-
-            <div class="narrow my-6">
+            <div class="narrow my-5">
 
                 <h3>Wide</h3>
 
@@ -138,14 +137,130 @@
 
         <hr>
 
-        <section class="container-fluid py-4">
+        <section class="container-fluid">
 
-            <div class="narrow my-6">
+            <div class="narrow my-5">
 
-                <h2>Matrix Border and matrix gutter</h2>
+                <h2>Matrix Rows</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor accusamus sint esse quaerat illo cum culpa quibusdam facere explicabo optio.
+                    Extend Bootstrap rows with <code>.matrix-border</code> and <code>.matrix-gutter</code> classes. These classes provide consistent spacing around all sides of a row's columns, regardless of the column's individual width. 
+                    
+                <p>
+                    These matrix classes allow to quickly create dynamic grids. Further, won't need to set the top or bottom margins when columns are stacked (on mobile view, for example).
+                </p>
+
+
+            </div>
+            <!-- .narrow -->
+
+            <div class="medium my-5">
+
+                <p><code>.matrix-gutter</code> uses your theme's <code>$border-width</code> value:</p>
+
+                <div class="row matrix-border text-white text-center">
+
+                    <div class="col-md-4">
+                        <div class="bg-dark px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-4">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-4">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-6">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-6">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
+
+            </div>
+            <!-- .medium -->
+
+            <div class="medium my-5">
+
+                <p><code>.matrix-gutter</code> uses your theme's <code>$grid-gutter-width</code> value.</p>
+
+                <div class="row matrix-gutter text-white text-center">
+
+                    <div class="col-md-4">
+                        <div class="bg-dark px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-4">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-4">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-4">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-4">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md-4">
+                        <div class="bg-dark text-white px-2 py-5">
+                            <p>Column</p>
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
+
+            </div>
+            <!-- .medium -->
+
+            <div class="narrow my-5">
+
+                <p>
+                    Matrix border and gutter classes are declared in <a class="text-nowrap"
+                    href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_f-ui-elements.scss"
+                    target="_blank" title="scss/_f-ui-elements.scss">scss/_f-ui-elements.scss</a> under <em>I. Matrix rows</em>.  
                 </p>
 
             </div>

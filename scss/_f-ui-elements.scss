@@ -25,7 +25,7 @@ In this file:
 // A. Citywide header and footer
 ////////////////////////////////////////
 
-$nyc-header-text-color: $white;
+$nyc-header-footer-text-color: $white;
 $nyc-header-footer-bg-color: $black;
 
 #nyc-top-header,
@@ -33,7 +33,7 @@ $nyc-header-footer-bg-color: $black;
 { 
   & a, 
     p
-    { color: $nyc-header-text-color; }
+    { color: $nyc-header-footer-text-color; }
 }
 
 #nyc-top-header{ font-size: $fs-sm; }
