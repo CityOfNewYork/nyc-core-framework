@@ -43,15 +43,7 @@ $nyc-header-footer-bg-color: $black;
 #nyc-bottom-footer
 { background: $nyc-header-footer-bg-color; }
 
-#nyc-top-header{
-	p,
-  a,
-  li
-  {
-    font-weight: $font-weight-bold;
-		line-height: inherit;
-	}
-}
+#nyc-top-header{ font-weight: $font-weight-bold; }
 
 #nyc-bottom-footer{
   hr{ @extend .opacity-20; }
