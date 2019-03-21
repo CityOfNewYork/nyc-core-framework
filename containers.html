@@ -258,6 +258,10 @@
             <div class="narrow my-5">
 
                 <p>
+                    Because the spacing for matrix rows is created with padding on the columns (and negative margin on the row), columns require a block-level child element (like a div). 
+                </p>
+
+                <p>
                     Matrix border and gutter classes are declared in <a class="text-nowrap"
                     href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_f-ui-elements.scss"
                     target="_blank" title="scss/_f-ui-elements.scss">scss/_f-ui-elements.scss</a> under <em>I. Matrix rows</em>.  
@@ -265,6 +269,9 @@
 
             </div>
             <!-- .narrow -->
+
+            <!-- Include -->
+            <div w3-include-html="./documentation/matrix.html"></div>
 
         </section>
 
@@ -299,6 +306,43 @@
 
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="./js/main.js"></script>
+
+    <!-- Google Code Pretty -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
+
+     <!-- HTML includes -->
+     <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              } 
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+
+        includeHTML();
+
+    </script>
 
 </body>
 

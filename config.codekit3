@@ -3504,6 +3504,13 @@
 		"oAP": "/documentation/map.html",
 		"oF": 0
 		},
+	"/documentation/matrix.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/matrix.html",
+		"oF": 0
+		},
 	"/documentation/nyc-global-header.html": {
 		"cB": 0,
 		"ft": 8192,
