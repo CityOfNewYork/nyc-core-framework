@@ -25,12 +25,15 @@ In this file:
 // A. Citywide header and footer
 ////////////////////////////////////////
 
+$nyc-header-text-color: $white;
+$nyc-header-footer-bg-color: $black;
+
 #nyc-top-header,
 #nyc-bottom-footer
 { 
   & a, 
     p
-    { color: $white; }
+    { color: $nyc-header-text-color; }
 }
 
 #nyc-top-header{ font-size: $fs-sm; }
@@ -38,7 +41,7 @@ In this file:
 
 #nyc-top-header,
 #nyc-bottom-footer
-{ background: $black; }
+{ background: $nyc-header-footer-bg-color; }
 
 #nyc-top-header{
 	p,
