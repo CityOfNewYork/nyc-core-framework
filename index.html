@@ -515,29 +515,22 @@
 
                 $('.panel').hide();
                     
-                    sidebar.find('a').removeClass('active');
-                    sidebar.find('a').attr('aria-selected', 'false');
+                sidebar.find('a').removeClass('active');
+                sidebar.find('a').attr('aria-selected', 'false');
 
-                    $(this).addClass('active');
+                $(this).addClass('active');
 
-                    $(this).attr('aria-selected', $(this).attr('aria-selected')==='true'?'false':'true' );
-                    current = $($(this).attr('href'));
-                    current.fadeIn();
-                    current.scrollTop();
+                $(this).attr('aria-selected', $(this).attr('aria-selected')==='true'?'false':'true' );
+                current = $($(this).attr('href'));
+                current.fadeIn();
+                current.scrollTop();
             });
 
-            var iframes = document.getElementsByTagName('iframe');
-                
-            for (var i = 0; i < iframes.length; i++) {
-                
-                var frame  = iframes[i];
-                frame.addEventListener('load', function() {
-                    var hdrs = frame.contentDocument.getElementsByClassName('documentation-header'); 
-                    for (var j = 0; j < hdrs.length; j++) {
-                        hdrs[j].style.display = 'none';
-                    }
-                });
-            }
+            $('iframe').on('load', function() {
+                console.log('iframe is completely loaded');
+                $('iframe').contents().find('.documentation-header').hide();
+            })
+            
         });
 
     </script>
