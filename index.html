@@ -527,16 +527,18 @@
             });
 
             var iframes = document.getElementsByTagName('iframe');
-                        for (var i = 0; i < iframes.length; i++) {
-                            var f  = iframes[i];
-                            f.addEventListener('load', function() {
-                                var hdrs = f.contentDocument.getElementsByClassName('test'); 
-                                for (var j = 0; j < hdrs.length; j++) {
-                                    hdrs[j].style.display = 'none';
-                                }
-                            });
-                        }
-                    });
+                
+            for (var i = 0; i < iframes.length; i++) {
+                
+                var frame  = iframes[i];
+                frame.addEventListener('load', function() {
+                    var hdrs = frame.contentDocument.getElementsByClassName('documentation-header'); 
+                    for (var j = 0; j < hdrs.length; j++) {
+                        hdrs[j].style.display = 'none';
+                    }
+                });
+            }
+        });
 
     </script>
 
