@@ -95,10 +95,10 @@
                 <h3>Narrow</h3>
 
                 <p>
-                    Narrow uses a CSS character width unit (ch) of 55, ideal for maximum readability. For best results, place
-                    <code>.narrow</code>
-                    on block-level elements, like divs and sections — not directly to text elements like headers and paragraph
-                    tags. In this way, narrow's width is calculated from our base font-size.
+                    Narrow uses a CSS character width unit (ch) of 55, ideal for maximum readability of paragraph text.
+                    Place <code>.narrow</code> on block-level elements, like divs and sections — not directly to text elements
+                    like headers and paragraph tags. This ensures narrow's width remains consistent, calculating it's
+                    width from a single, base font-size.
                 </p>
 
             </div>
@@ -109,7 +109,7 @@
                 <h3>Medium</h3>
 
                 <p>
-                    Medium's width is a multiple (x 1.25) of narrow's width. Use <code>.medium</code> for figures or any
+                    Medium's width is a multiple (1.25x) of narrow's width. Use <code>.medium</code> for figures or any
                     content you wish to appear slightly wider than narrow.
                 </p>
 
@@ -125,9 +125,9 @@
                 </p>
 
                 <p>
-                    Variables for narrow, medium, and wide are found in <a class="text-nowrap"
+                    Variables for narrow, medium, and wide are set in <a class="text-nowrap"
                         href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_a-global-variables.scss"
-                        target="_blank" title="scss/_a-global-variables.scss">scss/_a-global-variables.scss</a> under <em>D. Supplementary widths</em>, while these classes are found in <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-supplementary-classes.scss" target="_blank" title="scss/_e-supplementary-classes.scss">scss/_e-supplementary-classes.scss</a> under <em>E. Supplementary widths</em>.  
+                        target="_blank" title="scss/_a-global-variables.scss">scss/_a-global-variables.scss</a> under <em>D. Supplementary widths</em>, while their classes are declared in <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-supplementary-classes.scss" target="_blank" title="scss/_e-supplementary-classes.scss">scss/_e-supplementary-classes.scss</a> under <em>E. Supplementary widths</em>.  
                 </p>
             
             </div>
@@ -147,9 +147,8 @@
                     Extend Bootstrap rows with <code>.matrix-border</code> and <code>.matrix-gutter</code> classes. These classes provide consistent spacing around all sides of a row's columns, regardless of the column's individual width. 
                     
                 <p>
-                    These matrix classes allow to quickly create dynamic grids. Further, won't need to set the top or bottom margins when columns are stacked (on mobile view, for example).
+                    These classes allow to quickly create dynamic, responsive grids. Further, you won't need to set the top or bottom margins when columns are stacked (on mobile view, for example).
                 </p>
-
 
             </div>
             <!-- .narrow -->
@@ -341,6 +340,39 @@
         }
 
         includeHTML();
+
+    </script>
+
+    <script src="./js/clipboard.min.js"></script>
+
+    <script>
+
+        var tooltip_target = $('[data-element^="data-clipboard-"]');
+
+        tooltip_target.tooltip({
+            trigger: 'click',
+            placement: 'top'
+        });
+
+        function setTooltip(btn, message) {
+            btn.tooltip('hide')
+            .attr('data-original-title', message)
+            .tooltip('show');
+        }
+
+        function hideTooltip(btn) {
+            setTimeout(function() {
+                btn.tooltip('hide');
+            }, 1000);
+        }
+
+        var clipboard = new ClipboardJS('.copy-to-clipboard');
+
+        clipboard.on('success', function (e) {
+            var btn = $(e.trigger);
+            setTooltip(btn, 'Copied!');
+            hideTooltip(btn);
+        });
 
     </script>
 
