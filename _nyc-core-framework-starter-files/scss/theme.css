@@ -7841,7 +7841,7 @@ In this file:
 
 #nyc-top-header,
 #nyc-bottom-footer {
-  background: #000; }
+  background: red; }
 
 #nyc-top-header {
   font-weight: 700; }
