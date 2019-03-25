@@ -21,8 +21,7 @@ In this file:
 @import "e-supplementary-classes.scss";
 @import "f-ui-elements.scss";
 @import "g-dev-tools.scss";
-@import "h_nyc-gov-form.scss";
-@import "i-nyc-subway-icons.scss";
+@import "h-nyc-subway-icons.scss";
 
 ////////////////////////////////////////
 // B. Theme styles
@@ -66,10 +65,31 @@ pre.prettyprint {
     width: 100% !important;
     background: $dark !important;
     margin: $spacer-4 0 !important;
-    padding: $spacer-2;
+    padding: $spacer-4 $spacer-2 !important;
     font-size: $fs-sm;
     white-space: pre !important;
+
+    ::-moz-selection { background: rgba( $info, .5); }
+    ::selection { background: rgba( $info, .5); }
+
 }
+
+.code-group{
+    position: relative;
+
+    > button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: ($spacer-1/2) $spacer-1;
+
+        @include hover-focus{
+            @include opacity(1);
+            @include opacity(.75);
+        }
+    }
+}
+
 
 $button-size: 3rem;
 $button-bg-color: theme-color('info');
@@ -114,9 +134,7 @@ div.list{
     }
 }
 
-.addr{
-    @extend .my-1;
-}
+.addr{ @extend .my-1; }
 
 ul.map-action-buttons {
 
@@ -166,9 +184,3 @@ ul.map-action-buttons {
         object-fit: cover;
     }
 }
-
-hr.dark{
-    // height: $border-width * 2;
-    border-top:$border-width solid rgba( black, 0.25);
-}
-

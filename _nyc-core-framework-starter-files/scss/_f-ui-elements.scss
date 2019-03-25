@@ -25,12 +25,15 @@ In this file:
 // A. Citywide header and footer
 ////////////////////////////////////////
 
+$nyc-header-footer-text-color: $white;
+$nyc-header-footer-bg-color: $black;
+
 #nyc-top-header,
 #nyc-bottom-footer
 { 
   & a, 
     p
-    { color: $white; }
+    { color: $nyc-header-footer-text-color; }
 }
 
 #nyc-top-header{ font-size: $fs-sm; }
@@ -38,17 +41,9 @@ In this file:
 
 #nyc-top-header,
 #nyc-bottom-footer
-{ background: $black; }
+{ background: $nyc-header-footer-bg-color; }
 
-#nyc-top-header{
-	p,
-  a,
-  li
-  {
-    font-weight: $font-weight-bold;
-		line-height: inherit;
-	}
-}
+#nyc-top-header{ font-weight: $font-weight-bold; }
 
 #nyc-bottom-footer{
   hr{ @extend .opacity-20; }
@@ -420,12 +415,12 @@ legend,
 ////////////////////////////////////////
 
 @mixin featured-panel-responsive-settings(){
-  [class*="overlay-gradient"]::before{ display: none; }
   .card-img-overlay{ position: relative; }
+  img.show-on-mobile{ @include opacity(1); }
+  [class*="overlay-gradient"]::before{ display: none; }
   .text-shadow{ text-shadow: none; }
   [class*="border"]{ border: none !important; }
   [class*="shadow"]{ box-shadow: none !important; }
-  img.show-on-mobile{ @include opacity(1); }
 }
 
 .featured-panel{

@@ -415,12 +415,12 @@ legend,
 ////////////////////////////////////////
 
 @mixin featured-panel-responsive-settings(){
-  [class*="overlay-gradient"]::before{ display: none; }
   .card-img-overlay{ position: relative; }
+  img.show-on-mobile{ @include opacity(1); }
+  [class*="overlay-gradient"]::before{ display: none; }
   .text-shadow{ text-shadow: none; }
   [class*="border"]{ border: none !important; }
   [class*="shadow"]{ box-shadow: none !important; }
-  img.show-on-mobile{ @include opacity(1); }
 }
 
 .featured-panel{

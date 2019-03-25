@@ -5,7 +5,7 @@ In this file:
 // A. Breakpoints
 // B. Spacing utilities
 // C. Grid gutter and container widths
-// D. Supplemental widths
+// D. Supplementary widths
 // E. Fonts
 // F. Bootstrap colors
 // G. Theme colors
@@ -61,9 +61,7 @@ $spacer-2: ($spacer);       // 16px
 $spacer-3: ($spacer * 1.5); // 24px
 $spacer-4: ($spacer * 2);   // 32px
 $spacer-5: ($spacer * 3);   // 48px
-$spacer-6: ($spacer * 4);   // 64px
-$spacer-7: ($spacer * 5);   // 80px
-$spacer-8: ($spacer * 6);   // 96px
+$spacer-6: ($spacer * 5);   // 80px
 
 $spacers: (
   0: 0,
@@ -72,9 +70,7 @@ $spacers: (
   3: $spacer-3,
   4: $spacer-4,
   5: $spacer-5,
-  6: $spacer-6,
-  7: $spacer-7,
-  8: $spacer-8
+  6: $spacer-6
 );
 
 ////////////////////////////////////////
@@ -114,7 +110,7 @@ $container-max-widths: (
 );
 
 ////////////////////////////////////////
-// D. Supplemental widths
+// D. Supplementary widths
 ////////////////////////////////////////
 
 // Set website width as well as '.narrow', '.medium', and '.wide' 
@@ -236,13 +232,13 @@ $secondary: #3B6CF6;
 $info: #A513B6;
 
 $light: #e6ecf7;
-$dark: #0A183B;
-$dark: purple;
+$dark: #0A1438;
 
 // Add white to the color map
 
 $theme-colors: (
-  "white": $white
+  "white": $white,
+  "black": $black,
 );
 
 ////////////////////////////////////////

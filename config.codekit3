@@ -57,12 +57,12 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"/_nyc-core-framework-dependencies.zip": {
+	"/_nyc-core-framework-starter-files.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-dependencies.zip",
+		"oAP": "/_nyc-core-framework-starter-files.zip",
 		"oF": 0
 		},
 	"/_nyc-core-framework-starter-files/bootstrap/scss/_alert.scss": {
@@ -1222,6 +1222,24 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/_nyc-core-framework-starter-files/css/theme.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_nyc-core-framework-starter-files/css/theme-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/_nyc-core-framework-starter-files/css/theme.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/_nyc-core-framework-starter-files/css/theme.css.map",
+		"oF": 0
+		},
 	"/_nyc-core-framework-starter-files/hompepage-nav-across.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1527,6 +1545,28 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/_nyc-core-framework-starter-files/js/clipboard.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/_nyc-core-framework-starter-files/js/clipboard.min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/_nyc-core-framework-starter-files/js/html-includes.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/_nyc-core-framework-starter-files/js/html-includes-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"/_nyc-core-framework-starter-files/js/main.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1545,6 +1585,17 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "/_nyc-core-framework-starter-files/js/responsive-table-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/_nyc-core-framework-starter-files/js/table-of-contents.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/_nyc-core-framework-starter-files/js/table-of-contents-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -2328,7 +2379,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-starter-files/scss/_h_nyc-gov-form.scss": {
+	"/_nyc-core-framework-starter-files/scss/_h-nyc-subway-icons.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2336,23 +2387,20 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_nyc-core-framework-starter-files/scss/_h_nyc-gov-form.css",
+		"oAP": "/_nyc-core-framework-starter-files/scss/_h-nyc-subway-icons.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-starter-files/scss/_i-nyc-subway-icons.scss": {
-		"aP": 0,
+	"/_nyc-core-framework-starter-files/scss/theme.css": {
+		"aP": 1,
 		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
+		"ft": 16,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "/_nyc-core-framework-starter-files/scss/_i-nyc-subway-icons.css",
+		"oA": 0,
+		"oAP": "/_nyc-core-framework-starter-files/scss/theme-min.css",
 		"oF": 0,
-		"oS": 0,
-		"uL": 1
+		"oS": 3
 		},
 	"/_nyc-core-framework-starter-files/scss/theme.scss": {
 		"aP": 0,
@@ -3598,6 +3646,14 @@
 		"oAP": "/documentation/extensible-lists.html",
 		"oF": 0
 		},
+	"/documentation/featured-panels-responsive-image-overlays.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/documentation/featured-panels-responsive-image-overlays.html",
+		"oF": 0
+		},
 	"/documentation/map.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3636,6 +3692,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/experimental.html",
+		"oF": 0
+		},
+	"/featured-panels.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/featured-panels.html",
 		"oF": 0
 		},
 	"/fonts.html": {
