@@ -392,7 +392,19 @@ legend,
     $first-color: white,
     $second-color: white,
     $first-color-opacity: 0,
-    $second-color-opacity: 0.75,
+    $second-color-opacity: 1,
+    $first-color-position: 0%,
+    $second-color-position: 100%
+  );
+}
+
+.overlay-gradient-x-primary::before{
+  @include linear-gradient(
+    $direction: to left,
+    $first-color: $primary,
+    $second-color: $primary,
+    $first-color-opacity: 0,
+    $second-color-opacity: .8,
     $first-color-position: 0,
     $second-color-position: 100%
   );
