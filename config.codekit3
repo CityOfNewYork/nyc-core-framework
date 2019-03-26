@@ -3576,13 +3576,6 @@
 		"oAP": "/documentation/accordions-01.html",
 		"oF": 0
 		},
-	"/documentation/button-toggle.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/button-toggle.html",
-		"oF": 0
-		},
 	"/documentation/button-toggles-01.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3611,11 +3604,46 @@
 		"oAP": "/documentation/buttons-and-links-03.html",
 		"oF": 0
 		},
-	"/documentation/buttons-and-links.html": {
+	"/documentation/extensible-lists-01.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/documentation/buttons-and-links.html",
+		"oAP": "/documentation/extensible-lists-01.html",
+		"oF": 0
+		},
+	"/documentation/extensible-lists-02.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/extensible-lists-02.html",
+		"oF": 0
+		},
+	"/documentation/extensible-lists-03.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/extensible-lists-03.html",
+		"oF": 0
+		},
+	"/documentation/extensible-lists-04.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/extensible-lists-04.html",
+		"oF": 0
+		},
+	"/documentation/extensible-lists-05.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/extensible-lists-05.html",
+		"oF": 0
+		},
+	"/documentation/extensible-lists-06.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/documentation/extensible-lists-06.html",
 		"oF": 0
 		},
 	"/documentation/extensible-lists.html": {
