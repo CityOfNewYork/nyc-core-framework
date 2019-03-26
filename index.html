@@ -21,17 +21,22 @@
 
     <style>
 
-        html, 
-        body,
-        iframe,
-        #wrap-content
-        { min-height: 100vh; }
+        @media only screen and (min-width: 960px) {
+            html, 
+            body,
+            iframe,
+            #wrap-content
+            { 
+                min-height: 100vh;
+            }
+        } 
 
         iframe {
             display: block;
             border: none;
             width: 100%;
         }
+
         .panel{
             display: none;
         }
@@ -41,17 +46,18 @@
         }
 
         #menu a.active{
-            color: #3A6CF6;
+            /* color: yellow; */
+            font-style: italic;
             text-decoration: underline;
         }
 
-        hr.dark{ border-top: 1px solid rgba(0, 0, 0, 0.5); }
+        hr.dark{ border-top: 1px solid rgba(0, 0, 0, 0.25); }
 
     </style>
 
 </head>
 
-<body class="bg-dark">
+<body class="bg-primary">
 
     <main id="content" role="main">
 
