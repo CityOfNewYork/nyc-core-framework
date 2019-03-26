@@ -3489,6 +3489,132 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/clipboard-code-examples/accordions-01.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/accordions-01.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/button-toggles-01.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/button-toggles-01.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/buttons-and-links-01.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/buttons-and-links-01.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/buttons-and-links-02.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/buttons-and-links-02.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/buttons-and-links-03.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/buttons-and-links-03.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/extensible-lists-01.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/extensible-lists-01.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/extensible-lists-02.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/extensible-lists-02.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/extensible-lists-03.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/extensible-lists-03.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/extensible-lists-04.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/extensible-lists-04.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/extensible-lists-05.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/extensible-lists-05.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/extensible-lists-06.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/extensible-lists-06.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/featured-panels-gradient-overlays.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/featured-panels-gradient-overlays.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/featured-panels-responsive-image-overlays.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/featured-panels-responsive-image-overlays.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/gradient-overlays.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/gradient-overlays.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/map.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/map.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/matrix.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/matrix.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/nyc-global-header.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/nyc-global-header.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/using-icons.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/using-icons.html",
+		"oF": 0
+		},
 	"/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -3567,139 +3693,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/documentation-tabs.html",
-		"oF": 0
-		},
-	"/documentation/accordions-01.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/accordions-01.html",
-		"oF": 0
-		},
-	"/documentation/button-toggles-01.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/button-toggles-01.html",
-		"oF": 0
-		},
-	"/documentation/buttons-and-links-01.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/buttons-and-links-01.html",
-		"oF": 0
-		},
-	"/documentation/buttons-and-links-02.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/buttons-and-links-02.html",
-		"oF": 0
-		},
-	"/documentation/buttons-and-links-03.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/buttons-and-links-03.html",
-		"oF": 0
-		},
-	"/documentation/extensible-lists-01.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/extensible-lists-01.html",
-		"oF": 0
-		},
-	"/documentation/extensible-lists-02.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/extensible-lists-02.html",
-		"oF": 0
-		},
-	"/documentation/extensible-lists-03.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/extensible-lists-03.html",
-		"oF": 0
-		},
-	"/documentation/extensible-lists-04.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/extensible-lists-04.html",
-		"oF": 0
-		},
-	"/documentation/extensible-lists-05.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/extensible-lists-05.html",
-		"oF": 0
-		},
-	"/documentation/extensible-lists-06.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/extensible-lists-06.html",
-		"oF": 0
-		},
-	"/documentation/extensible-lists.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/extensible-lists.html",
-		"oF": 0
-		},
-	"/documentation/featured-panels-gradient-overlays.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/featured-panels-gradient-overlays.html",
-		"oF": 0
-		},
-	"/documentation/featured-panels-responsive-image-overlays.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/featured-panels-responsive-image-overlays.html",
-		"oF": 0
-		},
-	"/documentation/gradient-overlays.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/gradient-overlays.html",
-		"oF": 0
-		},
-	"/documentation/map.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/map.html",
-		"oF": 0
-		},
-	"/documentation/matrix.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/matrix.html",
-		"oF": 0
-		},
-	"/documentation/nyc-global-header.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/nyc-global-header.html",
-		"oF": 0
-		},
-	"/documentation/using-icons.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/documentation/using-icons.html",
 		"oF": 0
 		},
 	"/experimental.html": {
