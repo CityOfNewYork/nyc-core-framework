@@ -26,13 +26,13 @@ In this file:
 ////////////////////////////////////////
 
 $nyc-header-footer-text-color: $white;
-$nyc-header-footer-bg-color: red;
+$nyc-header-footer-bg-color: $black;
 
 #nyc-top-header,
 #nyc-bottom-footer
 { 
-  & a, 
-    p
+  & p,
+    a 
     { color: $nyc-header-footer-text-color; }
 }
 
@@ -386,18 +386,6 @@ legend,
   @include linear-gradient();
 }
 
-.overlay-gradient-x-primary::before{
-  @include linear-gradient(
-    $direction: to left,
-    $first-color: $primary,
-    $second-color: $primary,
-    $first-color-opacity: 0,
-    $second-color-opacity: 1,
-    $first-color-position: 0,
-    $second-color-position: 100%
-  );
-}
-
 .overlay-gradient-x-white::before{
   @include linear-gradient(
     $direction: to left,
@@ -405,6 +393,18 @@ legend,
     $second-color: white,
     $first-color-opacity: 0,
     $second-color-opacity: 1,
+    $first-color-position: 0%,
+    $second-color-position: 100%
+  );
+}
+
+.overlay-gradient-x-primary::before{
+  @include linear-gradient(
+    $direction: to left,
+    $first-color: $primary,
+    $second-color: $primary,
+    $first-color-opacity: 0,
+    $second-color-opacity: .8,
     $first-color-position: 0,
     $second-color-position: 100%
   );
@@ -641,6 +641,7 @@ $accordion-button-shadow: false;
 
 $accordion-title-color: $primary;
 $accordion-bg-color: $light;
+$accordion-margin-y: $spacer-1;
 
 .btn-toggle,
 .accordion-group
@@ -694,7 +695,11 @@ $accordion-bg-color: $light;
     }
   }
 
-  .card { background-color: $accordion-bg-color; }
+  .card { 
+    background-color: $accordion-bg-color;
+    margin-bottom: $accordion-margin-y;
+    &:last-child{ margin-bottom: 0; }
+  }
 
   a[data-toggle="collapse"]{
     
