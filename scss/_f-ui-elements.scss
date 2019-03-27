@@ -31,8 +31,8 @@ $nyc-header-footer-bg-color: $black;
 #nyc-top-header,
 #nyc-bottom-footer
 { 
-  & a, 
-    p
+  & p,
+    a 
     { color: $nyc-header-footer-text-color; }
 }
 
