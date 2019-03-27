@@ -25,6 +25,54 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/__archive/experimental.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__archive/experimental.html",
+		"oF": 0
+		},
+	"/__archive/featured-panels.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__archive/featured-panels.html",
+		"oF": 0
+		},
+	"/__archive/fonts.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__archive/fonts.html",
+		"oF": 0
+		},
+	"/__archive/map.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__archive/map.html",
+		"oF": 0
+		},
+	"/__archive/primary-navigation-sidebar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__archive/primary-navigation-sidebar.html",
+		"oF": 0
+		},
+	"/__archive/tearsheet.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__archive/tearsheet.html",
+		"oF": 0
+		},
 	"/_for_devs/_h_nyc-gov-form.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -3748,14 +3796,6 @@
 		"oAP": "/clipboard-code-examples/using-icons.html",
 		"oF": 0
 		},
-	"/containers.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/containers.html",
-		"oF": 0
-		},
 	"/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -3846,30 +3886,6 @@
 		"oAP": "/documentation-tabs.html",
 		"oF": 0
 		},
-	"/experimental.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/experimental.html",
-		"oF": 0
-		},
-	"/featured-panels.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/featured-panels.html",
-		"oF": 0
-		},
-	"/fonts.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/fonts.html",
-		"oF": 0
-		},
 	"/form.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3878,20 +3894,20 @@
 		"oAP": "/form.html",
 		"oF": 0
 		},
-	"/homepage-01.html": {
+	"/home-nav-across.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/homepage-01.html",
+		"oAP": "/home-nav-across.html",
 		"oF": 0
 		},
-	"/homepage-02.html": {
+	"/home-nav-right.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/homepage-02.html",
+		"oAP": "/home-nav-right.html",
 		"oF": 0
 		},
 	"/images/feature/bridge-lights.jpg": {
@@ -4265,22 +4281,6 @@
 		"oAP": "/map-data/pod.csv",
 		"oF": 0
 		},
-	"/map.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/map.html",
-		"oF": 0
-		},
-	"/primary-navigation-sidebar.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/primary-navigation-sidebar.html",
-		"oF": 0
-		},
 	"/project-icon.png": {
 		"ft": 32768,
 		"iS": 1035,
@@ -4291,14 +4291,6 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
-		},
-	"/README.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/README.html",
-		"oF": 0
 		},
 	"/README.md": {
 		"cB": 0,
@@ -5112,14 +5104,6 @@
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
-		},
-	"/tearsheet.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/tearsheet.html",
-		"oF": 0
 		}
 	},
 "hooks": [
