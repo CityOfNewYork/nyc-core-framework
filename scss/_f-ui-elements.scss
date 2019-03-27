@@ -641,6 +641,7 @@ $accordion-button-shadow: false;
 
 $accordion-title-color: $primary;
 $accordion-bg-color: $light;
+$accordion-margin-y: $spacer-1;
 
 .btn-toggle,
 .accordion-group
@@ -694,7 +695,11 @@ $accordion-bg-color: $light;
     }
   }
 
-  .card { background-color: $accordion-bg-color; }
+  .card { 
+    background-color: $accordion-bg-color;
+    margin-bottom: $accordion-margin-y;
+    &:last-child{ margin-bottom: 0; }
+  }
 
   a[data-toggle="collapse"]{
     

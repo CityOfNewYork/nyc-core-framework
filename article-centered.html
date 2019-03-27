@@ -22,40 +22,44 @@
 </head>
 
 <body>
+
     <a class="sr-only sr-only-focusable tab-skipper" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
 
     <div id="nyc-top-header">
 
         <div class="container-fluid wide">
 
-            <div class="row no-gutters align-items-center py-1">
+            <div class="row align-items-center py-2">
 
                 <div class="col">
                     <p class="d-none d-md-flex">Name of Office</p>
-                </div><!-- .col -->
+                </div>
+                <!-- .col -->
 
                 <div class="col-auto">
 
                     <ul class="extensible-list horizontal">
                         <li>
-                            <a href="#" title="My account"
-                                target="_blank">My Account</a>
+                            <a href="http://www1.nyc.gov/home/search/index.page" title="Search all NYC.gov websites" target="_blank">Search all NYC.gov websites</a>
                         </li>
                         <li>
-                            <a class="btn btn-info text-white rounded-0" href="#" title="Login" target="_blank">Login</a>
+                            <a href="http://www1.nyc.gov/" title="311" target="_blank">311</a>
                         </li>
                         <li>
                             <a href="https://www1.nyc.gov/" title="NYG.gov" target="_blank">
-                                <img src="./images/nyc-logo-header.svg" alt="NYC Logo" class="d-block">
+                                <img class="d-block" src="./images/nyc-logo-header.svg" alt="NYC Logo">
                             </a>
                         </li>
                     </ul>
 
-                </div><!-- .col -->
+                </div>
+                <!-- .col -->
 
-            </div><!-- .row -->
+            </div>
+            <!-- .row -->
 
-        </div><!-- .container-fluid -->
+        </div>
+        <!-- .container-fluid -->
 
     </div>
     <!-- #nyc-top-header -->
@@ -233,7 +237,7 @@
     </header>
     <!-- #global-header -->
         
-    <main id="content" role="main">
+    <main class="overflow-auto" id="content" role="main">
 
         <section class="bg-cover fixed-height bridge bg-primary">
 
@@ -247,155 +251,176 @@
         </section>
         <!-- .bg-cover -->
 
-        <article class="py-6" id="primary-content">
+        <article class="container-fluid my-6 bg-warning" id="primary-content">
 
-            <div class="container">
+            
+            <div class="narrow my-5 bg-danger">
 
-                <div class="narrow">
+                <h2>Lorem ipsum dolor sit amet</h2>
 
-                    <h1 class="mb-4">Lorem ipsum dolor sit amet</h1>
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
+                    potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                    dictumst porttitor est volutpat.
+                </p>
+    
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
+                    potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                    dictumst porttitor est volutpat.
+                </p>
 
-                    <p>
-                        <a href="#">Malesuada dapibus</a> ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
+                    potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                    dictumst porttitor est volutpat.
+                </p>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                <div class="accordion-group my-4" role="tablist" id="accordion-01">
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                    <div class="card">
 
-                    <div class="accordion-group my-6" role="tablist" id="accordion-01">
+                        <a class="card-header h4 collapse collapsed" id="acc-button-01" data-toggle="collapse"
+                            href="#panel-acc-button-01" role="tab" aria-expanded="false"
+                            aria-controls="panel-acc-button-01">
+                            <span class="title" role="heading" aria-level="2">Accordion Title</span>
+                        </a>
 
-                        <div class="card mb-1">
+                        <div class="collapse" id="panel-acc-button-01" role="tabpanel" aria-labelledby="acc-button-01"
+                            data-parent="#accordion-01">
 
-                            <a class="card-header h4 collapse collapsed" id="acc-button-01" data-toggle="collapse" href="#panel-acc-button-01"  role="tab"
-                                aria-expanded="false" aria-controls="panel-acc-button-01">
-                                <span class="title" role="heading" aria-level="2">Accordion Title</span>
-                            </a>
-
-                            <div class="collapse" id="panel-acc-button-01" role="tabpanel" aria-labelledby="acc-button-01" data-parent="#accordion-01">
-
-                                <div class="card-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident natus, unde fugit
-                                        voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium ipsam neque
-                                        consequatur voluptates.
-                                    </p>
-                                </div>
-
+                            <div class="card-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident
+                                    natus, unde fugit
+                                    voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium
+                                    ipsam neque
+                                    consequatur voluptates.
+                                </p>
                             </div>
-                            <!-- .collapse -->
 
                         </div>
-                        <!-- .card -->
-
-                        <div class="card mb-1">
-
-                            <a class="card-header h4 collapse collapsed" id="acc-button-02" data-toggle="collapse" href="#panel-acc-button-02"
-                                role="tab" aria-expanded="false" aria-controls="panel-acc-button-02">
-                                <span class="title" role="heading" aria-level="2">Accordion Title</span>
-                            </a>
-
-                            <div class="collapse" id="panel-acc-button-02" role="tabpanel" aria-labelledby="acc-button-02" data-parent="#accordion-01">
-
-                                <div class="card-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident natus, unde fugit
-                                        voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium ipsam neque
-                                        consequatur voluptates.
-                                    </p>
-                                </div>
-
-                            </div>
-                            <!-- .collapse -->
-
-                        </div>
-                        <!-- .card -->
-
-                        <div class="card mb-1">
-
-                            <a class="card-header h4 collapse collapsed" id="acc-button-03" data-toggle="collapse" href="#panel-acc-button-03"
-                                role="tab" aria-expanded="false" aria-controls="panel-acc-button-03">
-                                <span class="title" role="heading" aria-level="2">Accordion Title</span>
-                            </a>
-
-                            <div class="collapse" id="panel-acc-button-03" role="tabpanel" aria-labelledby="acc-button-03" data-parent="#accordion-01">
-
-                                <div class="card-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident natus, unde fugit
-                                        voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium ipsam neque
-                                        consequatur voluptates.
-                                    </p>
-                                </div>
-
-                            </div>
-                            <!-- .collapse -->
-
-                        </div>
-                        <!-- .card -->
+                        <!-- .collapse -->
 
                     </div>
-                    <!-- .accordion-group -->
+                    <!-- .card -->
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                    <div class="card">
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                        <a class="card-header h4 collapse collapsed" id="acc-button-02" data-toggle="collapse"
+                            href="#panel-acc-button-02" role="tab" aria-expanded="false"
+                            aria-controls="panel-acc-button-02">
+                            <span class="title" role="heading" aria-level="2">Accordion Title</span>
+                        </a>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                        <div class="collapse" id="panel-acc-button-02" role="tabpanel" aria-labelledby="acc-button-02"
+                            data-parent="#accordion-01">
+
+                            <div class="card-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident
+                                    natus, unde fugit
+                                    voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium
+                                    ipsam neque
+                                    consequatur voluptates.
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- .collapse -->
+
+                    </div>
+                    <!-- .card -->
+
+                    <div class="card">
+
+                        <a class="card-header h4 collapse collapsed" id="acc-button-03" data-toggle="collapse"
+                            href="#panel-acc-button-03" role="tab" aria-expanded="false"
+                            aria-controls="panel-acc-button-03">
+                            <span class="title" role="heading" aria-level="2">Accordion Title</span>
+                        </a>
+
+                        <div class="collapse" id="panel-acc-button-03" role="tabpanel" aria-labelledby="acc-button-03"
+                            data-parent="#accordion-01">
+
+                            <div class="card-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident
+                                    natus, unde fugit
+                                    voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium
+                                    ipsam neque
+                                    consequatur voluptates.
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- .collapse -->
+
+                    </div>
+                    <!-- .card -->
 
                 </div>
-                <!-- .narrow -->
+                <!-- .accordion-group -->
+
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
+                    potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                    dictumst porttitor est volutpat.
+                </p>
+
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
+                    potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                    dictumst porttitor est volutpat.
+                </p>
+
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
+                    dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
+                    potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
+                    dictumst porttitor est volutpat.
+                </p>
 
             </div>
-            <!-- .container -->
+            <!-- .narrow -->
 
-            <div class="container my-6">
+            <div class="medium my-5 bg-danger">
 
                 <figure class="figure">
-                    <img class="figure-image" src="./images/figures/bikers.jpg" alt="Placeholder">
+                    <img class="figure-img opacity-60" src="./images/figures/bikers.jpg" alt="Placeholder">
                     <figcaption class="figure-caption">A caption for the above image.</figcaption>
                 </figure>
 
             </div>
             <!-- .container -->
 
-            <div class="container">
+            <div class="narrow my-5 bg-danger">
 
-                <div class="narrow">
+                <h2>Excepteur sint occaecat</h2>
 
-                    <h2>Excepteur sint occaecat</h2>
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
+                </p>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
+                </p>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
+                <p>
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
+                </p>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi dictumst porttitor est volutpat.
-                    </p>
-    
-                </div>
-                <!-- .narrow -->
-            
             </div>
-            <!-- .container -->
+            <!-- .narrow -->
             
-            <footer class="container mt-5" id="article-footer">
+            <footer class="narrow my-5 bg-danger" id="article-footer">
 
-                <div class="narrow border-top py-3">
+                <div class="border-top py-3">
                 
                     <p class="fs-md">Share this page</p>
 
@@ -424,6 +449,7 @@
             </footer>
             <!-- #article-footer -->
 
+
         </article>
         <!-- #primary-content -->
 
@@ -432,9 +458,7 @@
 
     <footer>
 
-        <!-- Optional local footer -->
-
-        <div class="py-6" id="global-links">
+        <div class="py-4 border-top" id="global-links">
 
             <nav class="container" role="navigation">
 

@@ -58,10 +58,10 @@ $spacer: 1rem; // 16px
 
 $spacer-1: ($spacer * .5);  // 8px
 $spacer-2: ($spacer);       // 16px
-$spacer-3: ($spacer * 1.5); // 24px
-$spacer-4: ($spacer * 2);   // 32px
-$spacer-5: ($spacer * 3);   // 48px
-$spacer-6: ($spacer * 5);   // 80px
+$spacer-3: ($spacer * 2);   // 32px
+$spacer-4: ($spacer * 3);   // 48px
+$spacer-5: ($spacer * 4);   // 64px
+$spacer-6: ($spacer * 6);   // 96px
 
 $spacers: (
   0: 0,

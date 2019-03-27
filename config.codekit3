@@ -4281,6 +4281,14 @@
 		"oAP": "/map-data/pod.csv",
 		"oF": 0
 		},
+	"/margin-collapse.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/margin-collapse.html",
+		"oF": 0
+		},
 	"/project-icon.png": {
 		"ft": 32768,
 		"iS": 1035,
