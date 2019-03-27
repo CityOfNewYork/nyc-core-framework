@@ -3330,11 +3330,18 @@
 		"oAP": "/clipboard-code-examples/featured-panels-responsive-image-overlays.html",
 		"oF": 0
 		},
-	"/clipboard-code-examples/gradient-overlays.html": {
+	"/clipboard-code-examples/gradient-overlays-01.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/clipboard-code-examples/gradient-overlays.html",
+		"oAP": "/clipboard-code-examples/gradient-overlays-01.html",
+		"oF": 0
+		},
+	"/clipboard-code-examples/gradient-overlays-02.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/clipboard-code-examples/gradient-overlays-02.html",
 		"oF": 0
 		},
 	"/clipboard-code-examples/map.html": {
@@ -3792,6 +3799,16 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "/js/html-includes-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"/js/lang-scss.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "/js/lang-scss-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0

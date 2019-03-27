@@ -67,28 +67,10 @@
         <div class="container-fluid my-6">
 
             <div class="narrow my-5">
-
-                <h2>The Gradient Mixin</h2>
-                
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi sit perspiciatis sapiente!
-                    Incidunt, libero. Accusamus, eum temporibus odit praesentium nemo numquam eos sequi.
+                    Gradient overlay classes allow you to easily add translucent gradients over the top of images. Because they are made using psuedo elements, gradient overlay layer can be  hidden or shown at specific breakpoints. See Gradient Overlays with <a href="#">Featured Panels</a>.
                 </p>
-
             </div>
-            <!-- .narrow -->
-
-            <div class="narrow my-5">
-                
-                <h2>Gradient Classes</h2>
-                
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi sit perspiciatis sapiente!
-                    Incidunt, libero. Accusamus, eum temporibus odit praesentium nemo numquam eos sequi.
-                </p>
-
-            </div>
-            <!-- .narrow -->
 
             <div class="medium my-4">
 
@@ -127,15 +109,32 @@
             <!-- .medium -->
 
             <div class="narrow my-5">
+
+                <h2>Make Your Own Gradients</h2>
+
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi sit perspiciatis sapiente!
-                    Incidunt, libero. Accusamus, eum temporibus odit praesentium nemo numquam eos sequi.
+                    Want to make your own gradients? Head over to <a href="#">scss/_f-ui-elements.scss</a> and scroll to <em>E. Gradients</em>. Here you will find a few examples that you can modify—or copy and paste one of them to make your own. 
+                </p>
+
+                <p>
+                    The class that you create here will be used in your html. Name it whatever you want, of course. For the sake of argument, try <code>.gradient-overlay-{direction}-{color}</code> where <em>direction</em> is <em>x</em> or <em>y</em>, and color is <em>black</em>, <em>white</em>, <em>dark</em>, <em>light</em>, or <em>sunset</em>. 
+                </p>
+
+            </div>
+            <!-- .narrow -->
+                    
+            <div class="narrow my-5">
+                <p>
+                    Gradient Overlays call a mixin from <a href="#">scss/_c-custom-mixins.scss</a> under <em>C. Linear gradient</em>. These mixins were created in the spirit of simplicity. Feel free to modify them, or replace them to your liking. 
                 </p>
             </div>
             <!-- .narrow -->
+
+            <div class="narrow my-5">
+                <div w3-include-html="./clipboard-code-examples/gradient-overlays-02.html"></div>
+            </div>
+            <!-- .narrow -->
                 
-            <!-- Include -->
-            <div w3-include-html="./clipboard-code-examples/gradient-overlays.html"></div>
 
         </div>
         <!-- .container-fluid -->
@@ -174,6 +173,7 @@
 
     <!-- Google Code Pretty -->
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
+    <script src="./js/lang-scss.js" defer></script>
 
      <!-- HTML includes -->
      <script>

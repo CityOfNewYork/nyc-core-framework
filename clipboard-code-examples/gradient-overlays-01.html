@@ -1,0 +1,36 @@
+<div class="narrow my-5">
+
+<div class="code-group">
+
+<ul class="bar">
+    <li>
+        <strong>SCSS</strong>
+    </li>
+    <li>
+        <button class="no-btn-style copy-to-clipboard fa-lg" data-clipboard-target="#code-gradient-overlay"
+            type="button">
+            <span class="fas fa-clipboard" role="img"></span>
+        </button>
+    </li>
+</ul>
+<!-- .bar -->
+
+<pre class="prettyprint lang-scss" data-lang="scss" id="code-gradient-overlay">
+.overlay-gradient-x-info::before{
+    @include linear-gradient(
+        $direction: to right,
+        $first-color: theme-color("info"),
+        $second-color: theme-color("info"),
+        $first-color-opacity: 0,
+        $second-color-opacity: 0.75,
+        $first-color-position: 0,
+        $second-color-position: 100%
+    );
+}
+</pre>
+
+</div>
+<!-- .code-group -->
+
+</div>
+<!-- .narrow -->
