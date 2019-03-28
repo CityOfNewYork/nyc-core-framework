@@ -128,14 +128,21 @@
                     </li>
                 </ul>
 
+                <div class="my-3">
+                    <pre data-src="./clipboard-code-examples/buttons-and-links-01.html"><code class="language-html"></code></pre>
+                </div>
+
+                <div class="my-3">
+                    <pre data-src="./clipboard-code-examples/buttons-and-links-02.html"><code class="language-html"></code></pre>
+                </div>
+
+                <div class="my-3">
+                    <pre data-src="./clipboard-code-examples/buttons-and-links-03.html"><code class="language-html"></code></pre>
+                </div>
+
             </div>
             <!-- .narrow -->
-
-            <div class="narrow my-3">
-                <div w3-include-html="./clipboard-code-examples/buttons-and-links-01.html"></div>
-            </div>
-            <!-- .narrow -->
-
+    
             <div class="narrow my-5">
 
                 <h2>Icons Buttons</h2>
@@ -172,15 +179,14 @@
 
                 <p>Instances of Font Awesome icons should include a <code>role="img"</code> attribute.
 
+                <div class="narrow my-3">
+                    <pre data-src="./clipboard-code-examples/buttons-and-links-03.html"><code class="language-html"></code></pre>
+                </div>
+
             </div>
             <!-- .narrow -->
-
-            <div class="narrow my-3">
-                <div w3-include-html="./clipboard-code-examples/buttons-and-links-02.html"></div>
-            </div>
-            <!-- .narrow -->
-
-            <div class="narrow my-3">
+    
+            <div class="narrow my-5">
 
                 <h2>Icons inside buttons and links</h2>
 
@@ -213,11 +219,14 @@
                     class provides even spacing around the text when a right-to-left language is being used.</p>
                 </p>
 
-            </div>
-            <!-- .narrow -->
+                <div class="narrow my-3">
+                    <pre data-src="./clipboard-code-examples/buttons-and-links-04.html"><code class="language-html"></code></pre>
+                </div>
 
-            <div class="narrow my-3">
-                <div w3-include-html="./clipboard-code-examples/buttons-and-links-03.html"></div>
+                <div class="narrow my-3">
+                    <pre data-src="./clipboard-code-examples/buttons-and-links-05.html"><code class="language-html"></code></pre>
+                </div>
+            
             </div>
             <!-- .narrow -->
 
@@ -274,38 +283,8 @@
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
 
      <!-- HTML includes -->
-     <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /* Loop through a collection of all HTML elements: */
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /* Make an HTTP request using the attribute value as the file name: */
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
-                }
-              } 
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /* Exit the function: */
-              return;
-            }
-          }
-        }
-
-        includeHTML();
-
-    </script>
+     <!-- Prism.js -->
+    <script src="./js/prism.js" defer></script>
 
     <script src="./js/clipboard.min.js"></script>
 

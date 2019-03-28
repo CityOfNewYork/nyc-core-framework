@@ -129,8 +129,9 @@
             </div>
             <!-- .narrow -->
 
-            <!-- Include -->
-            <div w3-include-html="./clipboard-code-examples/featured-panels-responsive-image-overlays.html"></div>
+            <div class="narrow my-5">
+                <pre data-src="./clipboard-code-examples/featured-panels-01.html"><code class="language-html"></code></pre>
+            </div>
 
         </section>
 
@@ -217,8 +218,9 @@
                 </div>
                 <!-- .narrow -->
     
-                <!-- Include -->
-                <div w3-include-html="./clipboard-code-examples/featured-panels-gradient-overlays.html"></div>
+                <div class="narrow my-5">
+                    <pre data-src="./clipboard-code-examples/featured-panels-02.html"><code class="language-html"></code></pre>
+                </div>
     
             </section>
     
@@ -258,38 +260,8 @@
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
 
      <!-- HTML includes -->
-     <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /* Loop through a collection of all HTML elements: */
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /* Make an HTTP request using the attribute value as the file name: */
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
-                }
-              } 
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /* Exit the function: */
-              return;
-            }
-          }
-        }
-
-        includeHTML();
-
-    </script>
+     <!-- Prism.js -->
+    <script src="./js/prism.js" defer></script>
 
     <script src="./js/clipboard.min.js"></script>
 

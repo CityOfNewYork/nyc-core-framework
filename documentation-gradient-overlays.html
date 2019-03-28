@@ -120,21 +120,25 @@
                     The class that you create here will be used in your html. Name it whatever you want, of course. For the sake of argument, try <code>.gradient-overlay-{direction}-{color}</code> where <em>direction</em> is <em>x</em> or <em>y</em>, and color is <em>black</em>, <em>white</em>, <em>dark</em>, <em>light</em>, or <em>sunset</em>. 
                 </p>
 
+    
             </div>
             <!-- .narrow -->
                     
             <div class="narrow my-5">
+                <pre data-src="./clipboard-code-examples/gradient-overlays-01.scss"><code class="language-html"></code></pre>
+            </div>
+
+            <div class="narrow my-5">
                 <p>
                     Gradient Overlays call a mixin from <a href="#">scss/_c-custom-mixins.scss</a> under <em>C. Linear gradient</em>. These mixins were created in the spirit of simplicity. Feel free to modify them, or replace them to your liking. 
                 </p>
-            </div>
-            <!-- .narrow -->
 
-            <div class="narrow my-5">
-                <div w3-include-html="./clipboard-code-examples/gradient-overlays-02.html"></div>
+                <div class="my-3">
+                    <pre data-src="./clipboard-code-examples/gradient-overlays-02.html"><code class="language-html"></code></pre>
+                </div>
+
             </div>
             <!-- .narrow -->
-                
 
         </div>
         <!-- .container-fluid -->
@@ -176,38 +180,8 @@
     <script src="./js/lang-scss.js" defer></script>
 
      <!-- HTML includes -->
-     <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /* Loop through a collection of all HTML elements: */
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /* Make an HTTP request using the attribute value as the file name: */
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
-                }
-              } 
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /* Exit the function: */
-              return;
-            }
-          }
-        }
-
-        includeHTML();
-
-    </script>
+     <!-- Prism.js -->
+    <script src="./js/prism.js" defer></script>
 
     <script src="./js/clipboard.min.js"></script>
 
