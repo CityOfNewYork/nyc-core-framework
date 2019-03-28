@@ -56,6 +56,7 @@
                 <h1 class="display-4">
                     Tables
                 </h1>
+                
             </div>
 
         </div>
@@ -68,7 +69,25 @@
 
             <div class="narrow my-5">
         
-                <table class="table table-row-mobile-stack">
+                <h2>Responsive Collapsing Table</h2>
+
+                <p>
+                    Designed using Bootstrap's base <code>.table</code> styling, the addition of <code>.table-row-mobile-stack</code> allows for cells to stack on mobile devices,
+                    allowing them to be more easily consumed on smaller screens.
+                </p>
+
+                <p>
+                    This presentation is not always appropriate, and Bootstraps scrolling <code>.table-responsive</code> can be used in situations where maintaining the tables'
+                    horizontal formatting is preferable.
+
+                <p>
+                    The stacking is made possible by including <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/js/responsive-table.js">responsive-table.js</a>
+                    after <a href="#1">main.js</a> near the closing <code>&lt;/body&gt;</code> tag. This script manipulates the table so that it stacks and retains the ability to be read
+                    by screen readers and other assistive software as a traditional html table.
+                </p>
+            
+
+                <table class="table table-row-mobile-stack my-6">
 
                     <thead>
                         <tr class="">

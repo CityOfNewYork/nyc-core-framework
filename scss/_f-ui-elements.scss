@@ -910,8 +910,6 @@ $carousel: false;
 
 $table-header-color: $info;
 
-$mobile-header-width: 35%;
-
 $table-font-size: $fs-md;
 
 table{
@@ -938,7 +936,7 @@ table{
         border-top: $border-width solid $table-header-color;
 
         + tr {
-          margin-top: $spacer-4;
+          margin-top: $spacer-3;
         }
       }
 
@@ -948,9 +946,13 @@ table{
         word-break: break-all;
         hyphens: auto;
 
-        &[aria-hidden="true"] { flex-basis: $mobile-header-width; }
+        &[aria-hidden="true"] { flex-basis: 100%; }
 
-        &:not([aria-hidden="true"]) { flex-basis: 100% - $mobile-header-width; }
+        &:not([aria-hidden="true"]) { 
+          flex-basis: 100%;
+          padding-top: 0;
+          border-top: none;
+          }
 
         &:nth-of-type(2),
         &:first-of-type 
