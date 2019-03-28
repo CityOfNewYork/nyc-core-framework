@@ -15,7 +15,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    
     <!-- NYC Theme CSS -->
     <link rel="stylesheet" href="./css/theme.css">
 
@@ -104,9 +104,7 @@
 
             <div class="narrow my-5">
 
-                <!-- Include -->
-                <div w3-include-html="./clipboard-code-examples/button-toggles-01.html"></div>
-
+                    <pre data-src="./clipboard-code-examples/button-toggles-test.html"><code class="language-html"></code></pre>
             </div>
             <!-- .narrow -->
 
@@ -151,75 +149,8 @@
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="./js/main.js"></script>
 
-    <!-- Google Code Pretty -->
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
-
-     <!-- HTML includes -->
-     <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /* Loop through a collection of all HTML elements: */
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /* Make an HTTP request using the attribute value as the file name: */
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
-                }
-              } 
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /* Exit the function: */
-              return;
-            }
-          }
-        }
-
-        includeHTML();
-
-    </script>
-
-    <script src="./js/clipboard.min.js"></script>
-
-    <script>
-
-        var tooltip_target = $('[data-element^="data-clipboard-"]');
-
-        tooltip_target.tooltip({
-            trigger: 'click',
-            placement: 'top'
-        });
-
-        function setTooltip(btn, message) {
-            btn.tooltip('hide')
-            .attr('data-original-title', message)
-            .tooltip('show');
-        }
-
-        function hideTooltip(btn) {
-            setTimeout(function() {
-                btn.tooltip('hide');
-            }, 1000);
-        }
-
-        var clipboard = new ClipboardJS('.copy-to-clipboard');
-
-        clipboard.on('success', function (e) {
-            var btn = $(e.trigger);
-            setTooltip(btn, 'Copied!');
-            hideTooltip(btn);
-        });
-
-    </script>
+    <!-- Prism -->
+    <script src="./js/prism.js" defer></script>
 
 </body>
 

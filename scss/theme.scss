@@ -22,6 +22,7 @@ In this file:
 @import "f-ui-elements.scss";
 @import "g-dev-tools.scss";
 @import "h-nyc-subway-icons.scss";
+@import "i_prism-theme.scss";
 
 ////////////////////////////////////////
 // B. Theme styles
@@ -29,18 +30,18 @@ In this file:
 
 // Put anything you want here
 
-pre.prettyprint {
-    width: 100% !important;
-    background: $dark !important;
-    margin: $spacer-3 0 !important;
-    padding: $spacer-3 $spacer-2 !important;
-    font-size: $fs-sm;
-    white-space: pre !important;
+// pre.prettyprint {
+//     width: 100% !important;
+//     background: $dark !important;
+//     margin: $spacer-3 0 !important;
+//     padding: $spacer-3 $spacer-2 !important;
+//     white-space: pre !important;
 
-    ::-moz-selection { background: rgba( $info, .5); }
-    ::selection { background: rgba( $info, .5); }
+//     font-size: $fs-sm;
+//     ::-moz-selection { background: rgba( $info, .5); }
+//     ::selection { background: rgba( $info, .5); }
 
-}
+// }
 
 .code-group{
     position: relative;
