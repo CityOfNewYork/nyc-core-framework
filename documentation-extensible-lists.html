@@ -87,7 +87,7 @@
                 </ul>
 
                 <div class="narrow my-3">
-                    <pre data-src="./clipboard-code-examples/extensible-lists-01.html"><code class="language-html"></code></pre>
+                    <pre data-src="./code-examples/extensible-lists-01.html"><code class="language-html"></code></pre>
                 </div>
 
             </div>
@@ -107,7 +107,7 @@
                 </ul>
 
                 <div class="narrow my-3">
-                    <pre data-src="./clipboard-code-examples/extensible-lists-02.html"><code class="language-html"></code></pre>
+                    <pre data-src="./code-examples/extensible-lists-02.html"><code class="language-html"></code></pre>
                 </div>
 
             </div>
@@ -136,11 +136,11 @@
             <!-- .narrow -->
 
             <div class="narrow my-3">
-                <pre data-src="./clipboard-code-examples/extensible-lists-03.html"><code class="language-html"></code></pre>
+                <pre data-src="./code-examples/extensible-lists-03.html"><code class="language-html"></code></pre>
             </div>
     
             <div class="narrow my-3">
-                <pre data-src="./clipboard-code-examples/extensible-lists-04.html"><code class="language-html"></code></pre>
+                <pre data-src="./code-examples/extensible-lists-04.html"><code class="language-html"></code></pre>
             </div>
 
             <div class="narrow my-5">
@@ -155,7 +155,7 @@
                 </ul>
 
                 <div class="my-3">
-                    <pre data-src="./clipboard-code-examples/extensible-lists-05.html"><code class="language-html"></code></pre>
+                    <pre data-src="./code-examples/extensible-lists-05.html"><code class="language-html"></code></pre>
                 </div>
             </div>
             <!-- .narrow -->
@@ -180,7 +180,7 @@
                 </ul>
 
                 <div class="my-3">
-                    <pre data-src="./clipboard-code-examples/extensible-lists-06.html"><code class="language-html"></code></pre>
+                    <pre data-src="./code-examples/extensible-lists-06.html"><code class="language-html"></code></pre>
                 </div>
 
             </div>
@@ -237,38 +237,9 @@
      <!-- Prism.js -->
     <script src="./js/prism.js" defer></script>
 
-    <script src="./js/clipboard.min.js"></script>
+    
 
-    <script>
-
-        var tooltip_target = $('[data-element^="data-clipboard-"]');
-
-        tooltip_target.tooltip({
-            trigger: 'click',
-            placement: 'top'
-        });
-
-        function setTooltip(btn, message) {
-            btn.tooltip('hide')
-            .attr('data-original-title', message)
-            .tooltip('show');
-        }
-
-        function hideTooltip(btn) {
-            setTimeout(function() {
-                btn.tooltip('hide');
-            }, 1000);
-        }
-
-        var clipboard = new ClipboardJS('.copy-to-clipboard');
-
-        clipboard.on('success', function (e) {
-            var btn = $(e.trigger);
-            setTooltip(btn, 'Copied!');
-            hideTooltip(btn);
-        });
-
-    </script>
+    
 
 </body>
 
