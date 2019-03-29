@@ -30,31 +30,3 @@ In this file:
 
 // Put anything you want here
 
-// pre.prettyprint {
-//     width: 100% !important;
-//     background: $dark !important;
-//     margin: $spacer-3 0 !important;
-//     padding: $spacer-3 $spacer-2 !important;
-//     white-space: pre !important;
-
-//     font-size: $fs-sm;
-//     ::-moz-selection { background: rgba( $info, .5); }
-//     ::selection { background: rgba( $info, .5); }
-
-// }
-
-.code-group{
-    position: relative;
-
-    > button{
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: ($spacer-1/2) $spacer-1;
-
-        @include hover-focus{
-            @include opacity(1);
-            @include opacity(.75);
-        }
-    }
-}

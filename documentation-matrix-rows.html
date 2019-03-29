@@ -11,7 +11,7 @@
     <!-- Corrects IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Containers • NYC Core Framework</title>
+    <title>Matrix Rows • NYC Core Framework</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -54,7 +54,7 @@
 
             <div class="narrow text-white">
                 <h1 class="display-4">
-                    Containers
+                    Matrix Rows
                 </h1>
             </div>
 
@@ -62,134 +62,64 @@
         
     </header>
     
-    <main class="overflow-auto bg-warning" id="content" role="main">
-
-        <div class="container-fluid my-6 bg-danger">
-
-            <div class="narrow my-5 bg-info">
-
-                <h2>Narrow, Medium, and Wide</h2>
-
-                <p>
-                    Designed for use alongside Boostrap's native containers, rows, and columns, <code>.narrow</code>, <code>.medium</code>,
-                    and <code>.wide</code> classes can be used in a number of ways for enhanced control of your content.
-                </p>
-
-            </div>
-            <!-- .narrow -->
-
-            <div class="narrow text-primary border border-primary p-2 my-3 bg-info">
-                <p>Narrow</p>
-            </div>
-
-            <div class="medium text-primary border border-primary p-2 my-3 bg-info">
-                <p>Medium</p>
-            </div>
-
-            <div class="wide text-primary border border-primary p-2 my-3 bg-info">
-                <p>Wide</p>
-            </div>
-
-            <div class="narrow my-5 bg-info">
-
-                <h3>Narrow</h3>
-
-                <p>
-                    Narrow uses a CSS character width unit (ch) of 55, ideal for maximum readability of paragraph text.
-                    Place <code>.narrow</code> on block-level elements, like divs and sections — not directly to text elements
-                    like headers and paragraph tags. This ensures narrow's width remains consistent, because it's
-                    width is calculated from a single, base font-size (16px).
-                </p>
-
-            </div>
-            <!-- .narrow -->
-
-            <div class="narrow my-5">
-
-                <h3>Medium</h3>
-
-                <p>
-                    Medium's width is a multiple (1.25x) of narrow's width. Use <code>.medium</code> for figures or any
-                    content you wish to appear slightly wider than narrow.
-                </p>
-
-            </div>
-            <!-- .narrow -->
-
-            <div class="narrow my-5">
-
-                <h3>Wide</h3>
-
-                <p>
-                    Wide can be used on <code>.container-fluid</code> or any element where you wish to constrain the width. Wide's with is set to 2400px.
-                </p>
-
-                <p>
-                    Variables for narrow, medium, and wide are set in <a class="text-nowrap"
-                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_a-global-variables.scss"
-                        target="_blank" title="scss/_a-global-variables.scss">scss/_a-global-variables.scss</a> under <em>D. Supplementary widths</em>, while their classes are declared in <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-supplementary-classes.scss" target="_blank" title="scss/_e-supplementary-classes.scss">scss/_e-supplementary-classes.scss</a> under <em>E. Supplementary widths</em>.  
-                </p>
-            
-            </div>
-            <!-- .narrow -->
-
-        </div>
-        <!-- .container-fluid -->
-
-        <hr>
+    <main class="overflow-auto" id="content" role="main">
 
         <div class="container-fluid my-6">
 
             <div class="narrow my-5">
 
-                <h2>Matrix Rows</h2>
+                <p>
+                    Effortlessly create dynamic, responsive grids with our <code>.matrix-border</code> and
+                    <code>.matrix-gutter</code> classes. Add these classes to a <a
+                        href="https://getbootstrap.com/docs/4.3/layout/grid/" target="_blank" title="Bootstrap
+                        row">Bootstrap row</a>
+                    for consistent spacing around all sides of a row's columns, regardless of the
+                    column's individual width.
+                </p>
 
                 <p>
-                    Extend Bootstrap rows with <code>.matrix-border</code> and <code>.matrix-gutter</code> classes. These classes provide consistent spacing around all sides of a row's columns, regardless of the column's individual width. 
-                    
-                <p>
-                    These classes allow to quickly create dynamic, responsive grids. Further, you won't need to set the top or bottom margins when columns are stacked (on mobile view, for example).
+                    Bonus—you won't need to set the top or bottom margins when columns are stacked (on small viewports).
                 </p>
 
             </div>
             <!-- .narrow -->
 
-            <div class="narrow my-5">
+            <div class="medium my-5">
 
-                <p><code>.matrix-gutter</code> uses your theme's <code>$border-width</code> value:</p>
+                <p><code>.matrix-border</code> uses your theme's <code>$border-width</code> value:</p>
 
                 <div class="row matrix-border text-white text-center">
 
                     <div class="col-md-4">
-                        <div class="bg-dark px-2 py-5">
+                        <div class="bg-primary px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
                     <div class="col-md-4">
-                        <div class="bg-dark text-white px-2 py-5">
+                        <div class="bg-primary text-white px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
                     <div class="col-md-4">
-                        <div class="bg-dark text-white px-2 py-5">
+                        <div class="bg-primary text-white px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
                     <div class="col-md-6">
-                        <div class="bg-dark text-white px-2 py-5">
+                        <div class="bg-primary text-white px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
                     <div class="col-md-6">
-                        <div class="bg-dark text-white px-2 py-5">
+                        <div class="bg-primary text-white px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
@@ -214,42 +144,14 @@
                         &lt;!-- .col --&gt;
                     
                         &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
+                            &lt;div class="bg-dark px-2 py-5"&gt;
                                 &lt;p&gt;Column&lt;/p&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;!-- .col --&gt;
                     
                         &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
+                            &lt;div class="bg-dark px-2 py-5"&gt;
                                 &lt;p&gt;Column&lt;/p&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
@@ -262,49 +164,42 @@
             </div>
             <!-- .narrow -->
 
-            <div class="narrow my-5">
+            <div class="medium my-5">
 
                 <p><code>.matrix-gutter</code> uses your theme's <code>$grid-gutter-width</code> value.</p>
 
                 <div class="row matrix-gutter text-white text-center">
 
                     <div class="col-md-4">
-                        <div class="bg-dark px-2 py-5">
+                        <div class="bg-primary px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
                     <div class="col-md-4">
-                        <div class="bg-dark text-white px-2 py-5">
+                        <div class="bg-primary px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
                     <div class="col-md-4">
-                        <div class="bg-dark text-white px-2 py-5">
+                        <div class="bg-primary px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
-                    <div class="col-md-4">
-                        <div class="bg-dark text-white px-2 py-5">
+                    <div class="col-md-6">
+                        <div class="bg-primary px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
                     <!-- .col -->
 
-                    <div class="col-md-4">
-                        <div class="bg-dark text-white px-2 py-5">
-                            <p>Column</p>
-                        </div>
-                    </div>
-                    <!-- .col -->
-
-                    <div class="col-md-4">
-                        <div class="bg-dark text-white px-2 py-5">
+                    <div class="col-md-6">
+                        <div class="bg-primary px-2 py-5">
                             <p>Column</p>
                         </div>
                     </div>
@@ -315,7 +210,7 @@
 
             </div>
             <!-- .medium -->
-            
+
             <div class="narrow my-5">
                 <pre>
                     <code class="language-html">
@@ -341,52 +236,26 @@
                             &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
-                        &lt;div class="col-md-4"&gt;
-                            &lt;div class="bg-dark text-white px-2 py-5"&gt;
-                                &lt;p&gt;Column&lt;/p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- .col --&gt;
-                    
+                                        
                     &lt;/div&gt;
                     &lt;!-- .row --&gt;
                     </code>
                 </pre>
             </div>
             <!-- .narrow -->
-    
+
             <div class="narrow my-5">
 
                 <p>
-                    Because the spacing for matrix rows is created with padding on the columns (and negative margin on the row), columns require a block-level child element (like a div). 
+                    Because the spacing for matrix rows is created with padding on the columns (and negative margins
+                    on the row), columns require a block-level child element, like a <code>&lt;div&gt;</code>.
                 </p>
 
                 <p>
                     Matrix border and gutter classes are declared in <a class="text-nowrap"
-                    href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_f-ui-elements.scss"
-                    target="_blank" title="scss/_f-ui-elements.scss">scss/_f-ui-elements.scss</a> under <em>I. Matrix rows</em>.  
+                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_f-ui-elements.scss"
+                        target="_blank" title="scss/_f-ui-elements.scss">scss/_f-ui-elements.scss</a> under <em>I.
+                        Matrix rows</em>.
                 </p>
 
             </div>
@@ -394,7 +263,7 @@
 
         </div>
         <!-- .container-fluid -->
-
+        
     </main>
     <!-- #content -->
 
