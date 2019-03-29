@@ -109,21 +109,6 @@ In this file:
   cursor: pointer;
 }
 
-// Blended Link
-// Note: Apply to <a> to inherit color from parent and add text decoration 
-
-%blended-link{
-  color: currentColor;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-.blended-link,
-.blended-link:hover
-{
-  @extend %blended-link;
-}
-
 // Has Icon
 // Apply to <btn> or <a> with a Font Awesome icon <span> to ensure icon doesn't inherit 
 // text decoration underline on hover
@@ -149,7 +134,7 @@ In this file:
 ul,
 ol
  {
-    &.space-li {
+    &.paragraph-li {
         li {
             margin-top: $paragraph-margin-bottom;
             margin-bottom: $paragraph-margin-bottom;

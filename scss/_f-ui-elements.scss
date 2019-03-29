@@ -239,7 +239,7 @@ $primary-nav-dropdown-item-color: $body-color;
 
 .alert-text{
   font-size: $fs-md; 
-  a{ @extend .blended-link; }
+  a{ @extend .text-reset; }
 }
 
 // Apply custom valdation for accessibility
