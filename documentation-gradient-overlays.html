@@ -68,7 +68,7 @@
 
             <div class="narrow my-5">
                 <p>
-                    Gradient overlay classes allow you to easily add translucent gradients over the top of images. Because they are made using psuedo elements, gradient overlay layer can be  hidden or shown at specific breakpoints. See Gradient Overlays with <a href="#">Featured Panels</a>.
+                    Gradient overlay classes allow you to add translucent gradients over the top of images. Because they are made using psuedo elements, gradient overlays can be targeted to be hidden or shown at specific breakpoints, ideal for use with our Featured Panels.
                 </p>
             </div>
 
@@ -94,7 +94,7 @@
 
                 <p>Example of <code>.overlay-gradient-x-info</code> class:</p>
 
-                <div class="card bg-dark text-white my-3">
+                <div class="card bg-dark text-white">
                     <div class="overlay-gradient-x-info">
                         <img src="./images/feature/walk-in-the-park.jpg" alt="Placeholder">
                     </div>
@@ -108,34 +108,64 @@
             </div>
             <!-- .medium -->
 
+
+            <div class="narrow my-5">
+                <pre>
+                    <code class="language-html">
+                        &lt;div class="overlay-gradient-y-black"&gt;
+                            &lt;img class="w-100" src="https://via.placeholder.com/1200x600" alt="Placeholder"&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+
             <div class="narrow my-5">
 
                 <h2>Make Your Own Gradients</h2>
 
                 <p>
-                    Want to make your own gradients? Head over to <a href="#">scss/_f-ui-elements.scss</a> and scroll to <em>E. Gradients</em>. Here you will find a few examples that you can modify—or copy and paste one of them to make your own. 
+                    To add your own gradients classes to your theme, head over to <a
+                        href="#">scss/_f-ui-elements.scss</a> and scroll to <em>E. Gradients</em>. Here you will find a
+                    few examples that you can modify, or you can make your own.
                 </p>
 
                 <p>
-                    The class that you create here will be used in your html. Name it whatever you want, of course. For the sake of argument, try <code>.gradient-overlay-{direction}-{color}</code> where <em>direction</em> is <em>x</em> or <em>y</em>, and color is <em>black</em>, <em>white</em>, <em>dark</em>, <em>light</em>, or <em>sunset</em>. 
+                    The class that you create here will be used in your html. Name it whatever you want, of course. For
+                    the sake of example, try <code>.gradient-overlay-{direction}-{color}</code> where
+                    <em>direction</em> is <em>x</em> or <em>y</em>, and color is <em>black</em>, <em>white</em>,
+                    <em>dark</em>, <em>light</em>, or <em>sunset</em>.
                 </p>
 
-    
+                <div class="narrow my-3">
+                    <pre>
+                        <code class="language-sass">
+                            .overlay-gradient-x-sunset::before{
+                                @include linear-gradient(
+                                    $direction: to right,
+                                    $first-color: orange,
+                                    $second-color: purple,
+                                    $first-color-opacity: 0.25,
+                                    $second-color-opacity: 0.75,
+                                    $first-color-position: 0,
+                                    $second-color-position: 100%
+                                );
+                            }
+                        </code>
+                    </pre>
+                </div>
+
             </div>
             <!-- .narrow -->
                     
             <div class="narrow my-5">
-                <pre data-src="./code-examples/gradient-overlays-01.scss"><code class="language-html"></code></pre>
-            </div>
 
-            <div class="narrow my-5">
+                <h2>The Gradient Overlay Mixin</h2>
+                
                 <p>
-                    Gradient Overlays call a mixin from <a href="#">scss/_c-custom-mixins.scss</a> under <em>C. Linear gradient</em>. These mixins were created in the spirit of simplicity. Feel free to modify them, or replace them to your liking. 
+                    Gradient Overlays call a mixin from <a href="#">scss/_c-custom-mixins.scss</a> under <em>C. Linear
+                        gradient</em>. These mixins were created in the spirit of simplicity. Feel free to modify them
+                        to your liking, or replace them altogether.
                 </p>
-
-                <div class="my-3">
-                    <pre data-src="./code-examples/gradient-overlays-02.html"><code class="language-html"></code></pre>
-                </div>
 
             </div>
             <!-- .narrow -->
@@ -175,18 +205,9 @@
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="./js/main.js"></script>
 
-    <!-- Google Code Pretty -->
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
-    <script src="./js/lang-scss.js" defer></script>
-
-     <!-- HTML includes -->
      <!-- Prism.js -->
-    <script src="./js/prism.js" defer></script>
-
-    
-
-    
-
+    <script src="./js/prism.js" defer></script>    
+   
 </body>
 
 </html>
