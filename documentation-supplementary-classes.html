@@ -11,7 +11,7 @@
     <!-- Corrects IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Containers • NYC Core Framework</title>
+    <title>Supplementary Classes • NYC Core Framework</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -54,7 +54,7 @@
 
             <div class="narrow text-white">
                 <h1 class="display-4">
-                    Supplementary widths
+                    Supplementary Classes
                 </h1>
             </div>
 
@@ -63,12 +63,129 @@
     </header>
     
     <main class="overflow-auto" id="content" role="main">
+ 
+        <div class="container-fluid my-6">
+
+            <div class="narrow my-5">
+
+                <h2>Font Sizes</h2>
+
+                <p>
+                    Instead of modifying Bootstraps base font size variables, we created uncomplicated font-size classes that
+                    you can use.
+
+                </p>
+                    Add classes <code>.fs-sm</code>, <code>.fs-md</code>, <code>.fs-rg</code>,
+                    <code>.fs-lg</code>, <code>.fs-xl</code> to any element to change their font size.
+                </p>
+
+                <div class="my-3 text-primary d-none">
+
+                    <p class="fs-sm">Font size small - 0.875rem (14px)</p>
+                    <p class="fs-md">Font size medium - 1rem (16px)</p>
+                    <p class="fs-rg">Font size regular - 1.167rem (18.672px, base font size)</p>
+                    <p class="fs-lg">Font size large - 1.5rem (20px)</p>
+                    <p class="fs-xl">Font size extra large - 1.75rem (28px)</p>
+
+                </div>
+
+                <ul class="my-3 list-unstyled text-primary">
+
+                    <li class="fs-sm py-1">
+                        <span class="row no-gutters align-items-center">
+                            <span class="col-6">
+                                Small (.fs-sm)
+                            </span>
+                            <span class="col-3">
+                                0.875rem
+                            </span>
+                            <span class="col-3">
+                                14px
+                            </span>
+                        </span>
+                    </li>
+
+                    <li class="fs-md py-1">
+                        <span class="row no-gutters align-items-center">
+                            <span class="col-6">
+                                Medium (.fs-md)
+                            </span>
+                            <span class="col-3">
+                                1rem
+                            </span>
+                            <span class="col-3">
+                                16px
+                            </span>
+                        </span>
+                    </li>
+
+                    <li class="fs-rg py-1">
+                        <span class="row no-gutters align-items-center">
+                            <span class="col-6">
+                                Regular (.fs-rg)
+                            </span>
+                            <span class="col-3">
+                                1.167rem
+                            </span>
+                            <span class="col-3">
+                                18.672px
+                            </span>
+                        </span>
+                    </li>
+
+                    <li class="fs-lg py-1">
+                        <span class="row no-gutters align-items-center">
+                            <span class="col-6">
+                                Large (.fs-lg)
+                            </span>
+                            <span class="col-3">
+                                1.5rem
+                            </span>
+                            <span class="col-3">
+                                20px
+                            </span>
+                        </span>
+                    </li>
+
+                    <li class="fs-xl py-1">
+                        <span class="row no-gutters align-items-center">
+                            <span class="col-6">
+                                Extra Large (.fs-xl)
+                            </span>
+                            <span class="col-3">
+                                1.75rem
+                            </span>
+                            <span class="col-3">
+                                28px
+                            </span>
+                        </span>
+                    </li>
+
+                </ul>
+
+                <p>You can customize these classes by adjusting their values in <a
+                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_a-global-variables.scss"
+                        target="_blank">scss/_a-global-variables.scss</a> under <em>E. Fonts</em>.
+                </p>
+
+
+                <!-- .my-5 -->
+
+            </div>
+            <!-- .narrow -->
+
+
+
+        </div>
+        <!-- .container-fluid -->
+
+        <hr>
 
         <div class="container-fluid my-6">
 
             <div class="narrow my-5">
 
-                <h2>Narrow, Medium, and Wide</h2>
+                <h2>Widths</h2>
 
                 <p>
                     Designed for use alongside Boostrap's native containers, rows, and columns, <code>.narrow</code>, <code>.medium</code>,
@@ -121,21 +238,13 @@
                 <h3>Wide</h3>
 
                 <p>
-                    Wide can be used on <code>.container-fluid</code> or any element where you wish to constrain the width. Wide's with is set to 2400px.
-                </p>
-
-                <p>
-                    Variables for narrow, medium, and wide can be customized in <a class="text-nowrap"
-                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_a-global-variables.scss"
-                        target="_blank" title="scss/_a-global-variables.scss">scss/_a-global-variables.scss</a> under <em>D. Supplementary widths</em>, while their classes are declared in <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-supplementary-classes.scss" target="_blank" title="scss/_e-supplementary-classes.scss">scss/_e-supplementary-classes.scss</a> under <em>E. Supplementary widths</em>.  
+                    Wide can be used on <code>.container-fluid</code> or any element (larger than container) where you wish to constrain the max width. Wide's with is set to 2400px.
                 </p>
             
             </div>
             <!-- .narrow -->
 
             <div class="narrow my-5">
-
-                <h3>Customization</h3>
 
                 <p>
                     Variables for narrow, medium, and wide can be customized in <a class="text-nowrap"
