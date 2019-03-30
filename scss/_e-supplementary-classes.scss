@@ -5,10 +5,10 @@ In this file:
 // A. Font sizes
 // B. Widths
 // C. Opacities
-// E. Widths
-// F. Text shadows
-// G. Buttons and links
-// H. Lists
+// D. Z index
+// E. Text shadows
+// F. Buttons and links
+// G. Lists
 
 */
 
@@ -65,10 +65,10 @@ In this file:
 
 .bg-opacity-black-25{ @include background-opacity(black, 0.25); }
 .bg-opacity-black-50{ @include background-opacity(black, 0.5); }
-.bg-opacity-white-75{ @include background-opacity(black, 0.75); }
+.bg-opacity-black-75{ @include background-opacity(black, 0.75); }
 
 ////////////////////////////////////////
-// B. Z index
+// D. Z index
 ////////////////////////////////////////
 
 .z-index-100,
@@ -94,7 +94,7 @@ In this file:
 .z-index-900{ z-index: 900; }
 
 ////////////////////////////////////////
-// F. Text shadows
+// E. Text shadows
 ////////////////////////////////////////
 
 .text-shadow{ @include text-shadow; }
@@ -102,7 +102,7 @@ In this file:
 .text-shadow-border{ @include text-shadow( 0, 0, $border-width, black ); }
 
 ////////////////////////////////////////
-// G. Buttons and links
+// F. Buttons and links
 ////////////////////////////////////////
 
 // Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
@@ -133,7 +133,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// H. Lists
+// G. Lists
 ////////////////////////////////////////
 
 // Add paragraph-style spacing to generic lists
