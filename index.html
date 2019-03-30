@@ -393,13 +393,13 @@
 
                             <h2 class="display-4">Getting Started</h2>
 
-                            <p>
+                            <p class="lead">
                                 The NYC Core framework requires modern Bootstrap (4.x) for styling, Font Awesome for icons, and custom
-                                CSS (SASS) and Javascript for accessibility. Google Translate is included for language translation, and
-                                right-to-left languages are supported out-of-the-box.
+                                CSS (SASS) and Javascript for accessibility. 
                             </p>
 
-                            <p>
+                            <p>Google Translate is included for language translation, and
+                                right-to-left languages are supported out-of-the-box.
                                 All of these dependencies are included in the starter files below.
                             </p>
 
@@ -413,7 +413,7 @@
 
                         <div class="narrow my-5">
 
-                            <h2>About the Starter Files</h2>
+                            <h2>Starter Files at a Glance</h2>
 
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis tempore sint ex cum,
@@ -464,7 +464,8 @@
                                             <span class="title mx-1">
                                                 <strong>main.js</strong>
                                                 <em class="text-muted d-block">
-                                                    Your theme's main js file.
+                                                    Your theme's main js file. Required for right-to-left language
+                                                    translation and link translation in the global footer.
                                                 </em>
                                             </span>
                                         </li>
@@ -481,7 +482,7 @@
                                             <span class="title mx-1">
                                                 <strong>__header.scss</strong>
                                                 <em class="text-muted d-block">
-                                                    Add legal information to theme.css
+                                                    Adds legal information to theme.css and must be included for redistribution.
                                                 </em>
                                             </span>
                                         </li>
@@ -490,7 +491,7 @@
                                             <span class="title mx-1">
                                                 <strong>_a-global-variables.scss</strong>
                                                 <em class="text-muted d-block">
-                                                    Customized global variables (required before Bootstrap imports).
+                                                    Your theme's global variables (required before Bootstrap imports).
                                                 </em>
                                             </span>
                                         </li>
@@ -499,7 +500,7 @@
                                             <span class="title mx-1">
                                                 <strong>_b-bootstrap-imports.scss</strong>
                                                 <em class="text-muted d-block">
-                                                   Import Bootstrap (only what we need).
+                                                   Imports Bootstrap partials (only what we need).
                                                 </em>
                                             </span>
                                         </li>
@@ -508,7 +509,7 @@
                                             <span class="title mx-1">
                                                 <strong>_c-custom-mixins.scss</strong>
                                                 <em class="text-muted d-block">
-                                                    A handful of simple mixins not created by Bootstrap.
+                                                    A handful of SASS mixins not provided by Bootstrap.
                                                 </em>
                                             </span>
                                         </li>
@@ -517,7 +518,7 @@
                                             <span class="title mx-1">
                                                 <strong>_d-enhancements.scss</strong>
                                                 <em class="text-muted d-block">
-                                                    Accessibility enhancements, margin resets, cross-browser bug fixes.
+                                                    Accessibility enhancements, margin resets, cross-browser bug fixes, and more.
                                                 </em>
                                             </span>
                                         </li>
@@ -535,8 +536,7 @@
                                             <span class="title mx-1">
                                                 <strong>_f-ui-elements.scss</strong>
                                                 <em class="text-muted d-block">
-                                                    Custom User Interface elements that are not priovided by, or extend
-                                                    the Bootstrap component library.
+                                                    Custom user-interface elements either not provided by Bootstrap or extend Bootstrap's component library.
                                                 </em>
                                             </span>
                                         </li>
@@ -545,8 +545,7 @@
                                             <span class="title mx-1">
                                                <strong>_g-dev-tools.scss</strong> 
                                                 <em class="text-muted d-block">
-                                                    Custom User Interface elements that are not priovided by, or extend
-                                                    the Bootstrap component library.
+                                                    A few nice-to-haves for developers.
                                                 </em>
                                             </span>
                                         </li>
@@ -564,7 +563,7 @@
                                             <span class="title mx-1">
                                                 <strong>theme.scss</strong>
                                                 <em class="text-muted d-block">
-                                                    Import SASS dependencies. This is where you can add your own styles.
+                                                    Imports all SASS dependencies. The best place to add your own styles.
                                                 </em>
                                             </span>
                                         </li>
@@ -574,7 +573,7 @@
                                     <span class="far fa-file fa-fw"></span>
                                     <span class="title mx-1">
                                         <strong>home-nav-across.html</strong>
-                                        <em class="fs-sm text-muted d-block">
+                                        <em class="text-muted d-block">
                                             NYC Header and Footer with main navigation across (includes all dependencies).
                                         </em>
                                     </span>
@@ -583,11 +582,46 @@
                                     <span class="far fa-file fa-fw"></span>
                                     <span class="title mx-1">
                                         <strong>home-nav-right.html</strong>
-                                        <em class="fs-sm text-muted d-block">
+                                        <em class="text-muted d-block">
                                             NYC Header and Footer with main navigation right (includes all
                                             dependencies).
                                         </em>
                                     </span>
+                                </li>
+                                <li>
+                                    <span class="far fa-folder-open fa-fw"></span>
+                                    <span class="title mx-1">
+                                        images
+                                    </span>
+                                    <ul class="extensible-list">
+                                        <li class="px-2 side-by-side">
+                                            <span class="far fa-image fa-fw"></span>
+                                            <span class="title">
+                                                <strong>nyc-logo-footer.svg</strong>
+                                                <em class="text-muted d-block">
+                                                    Official NYC Logo for global footer.
+                                                </em>
+                                            </span>
+                                        </li>
+                                        <li class="px-2 side-by-side">
+                                            <span class="far fa-image fa-fw"></span>
+                                            <span class="title">
+                                                <strong>nyc-logo-footer.svg</strong>
+                                                <em class="text-muted d-block">
+                                                    Official NYC Logo for global header (top-right).
+                                                </em>
+                                            </span>
+                                        </li>
+                                        <li class="px-2 side-by-side">
+                                            <span class="far fa-image fa-fw"></span>
+                                            <span class="title">
+                                                <strong>nyc-logo-placeholder.svg</strong>
+                                                <em class="text-muted d-block">
+                                                    Website logo placeholder.
+                                                </em>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
 
