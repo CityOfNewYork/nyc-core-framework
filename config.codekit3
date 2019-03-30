@@ -2141,14 +2141,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/article-centered.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/article-centered.html",
-		"oF": 0
-		},
 	"/article-sidebar.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3314,14 +3306,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/copy-paste.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/copy-paste.html",
-		"oF": 0
-		},
 	"/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -3418,6 +3402,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/documentation-tabs.html",
+		"oF": 0
+		},
+	"/example-article-centered.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/example-article-centered.html",
 		"oF": 0
 		},
 	"/example-home-nav-across.html": {
