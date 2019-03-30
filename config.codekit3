@@ -1272,12 +1272,12 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/_nyc-core-framework-starter-files/home-nav-across.html": {
+	"/_nyc-core-framework-starter-files/global-nav-across.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/_nyc-core-framework-starter-files/home-nav-across.html",
+		"oAP": "/_nyc-core-framework-starter-files/global-nav-across.html",
 		"oF": 0
 		},
 	"/_nyc-core-framework-starter-files/home-nav-right.html": {
@@ -1318,28 +1318,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/_nyc-core-framework-starter-files/js/clipboard.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/_nyc-core-framework-starter-files/js/clipboard.min-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/_nyc-core-framework-starter-files/js/html-includes.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/_nyc-core-framework-starter-files/js/html-includes-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
 	"/_nyc-core-framework-starter-files/js/main.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1347,39 +1325,6 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "/_nyc-core-framework-starter-files/js/main-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/_nyc-core-framework-starter-files/js/responsive-table.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/_nyc-core-framework-starter-files/js/responsive-table-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/_nyc-core-framework-starter-files/js/table-of-contents.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/_nyc-core-framework-starter-files/js/table-of-contents-min.js",
-		"oF": 0,
-		"sC": 0,
-		"tS": 0
-		},
-	"/_nyc-core-framework-starter-files/js/validation.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 1,
-		"oAP": "/_nyc-core-framework-starter-files/js/validation-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0

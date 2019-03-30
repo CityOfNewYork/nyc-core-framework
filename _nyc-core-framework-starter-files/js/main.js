@@ -61,17 +61,6 @@ $(document).ready(function () {
     });
 
     ////////////////////////////////////////
-    // Google Translate Links
-    ////////////////////////////////////////
-
-    $('.lang-select').click(function () {
-        var theLang = jQuery(this).attr('data-lang');
-        $('.goog-te-combo').val(theLang);
-        window.location = $(this).attr('href');
-        location.reload();
-    });
-
-    ////////////////////////////////////////
     // Back to top
     ////////////////////////////////////////
 
@@ -100,3 +89,32 @@ $(document).ready(function () {
     }
 
 });
+
+////////////////////////////////////////
+// Google Translate Links
+////////////////////////////////////////
+
+$('.lang-select').click(function (e) {
+    e.preventDefault();
+    var lang = $(this).attr('data-lang')
+    setLanguage(lang);
+});
+
+function setLanguage(theLang) {
+    var theSelect = $('.goog-te-combo');
+    var db = theSelect.get(0);
+    theSelect.val(theLang);
+    fireEvent(db, 'change');
+}
+
+function fireEvent(element, event) {
+    if (document.createEventObject) {
+        var evt = document.createEventObject();
+        return element.fireEvent('on' + event, evt)
+    } else {
+        var evt = document.createEvent("HTMLEvents");
+        // event type, bubbling, cancelable
+        evt.initEvent(event, false, true); 
+        return !element.dispatchEvent(evt);
+    }
+}
