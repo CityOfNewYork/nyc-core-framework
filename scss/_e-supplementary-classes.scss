@@ -16,11 +16,25 @@ In this file:
 // A. Font sizes
 ////////////////////////////////////////
 
-.fs-sm{ font-size: $fs-sm; }
-.fs-md{ font-size: $fs-md; }
-.fs-rg{ font-size: $fs-rg; }
-.fs-lg{ font-size: $fs-lg; }
-.fs-xl{ font-size: $fs-xl; }
+.fs-sm {
+  font-size: $fs-sm;
+}
+
+.fs-md {
+  font-size: $fs-md;
+}
+
+.fs-rg {
+  font-size: $fs-rg;
+}
+
+.fs-lg {
+  font-size: $fs-lg;
+}
+
+.fs-xl {
+  font-size: $fs-xl;
+}
 
 ////////////////////////////////////////
 // B. Widths
@@ -51,21 +65,55 @@ In this file:
 
 // Object opacity
 
-.opacity-10{ @include opacity(0.10); }
-.opacity-20{ @include opacity(0.20); }
-.opacity-30{ @include opacity(0.30); }
-.opacity-40{ @include opacity(0.40); }
-.opacity-50{ @include opacity(0.50); }
-.opacity-60{ @include opacity(0.60); }
-.opacity-70{ @include opacity(0.70); }
-.opacity-80{ @include opacity(0.80); }
-.opacity-90{ @include opacity(0.90); }
+.opacity-10 {
+  @include opacity(0.10);
+}
+
+.opacity-20 {
+  @include opacity(0.20);
+}
+
+.opacity-30 {
+  @include opacity(0.30);
+}
+
+.opacity-40 {
+  @include opacity(0.40);
+}
+
+.opacity-50 {
+  @include opacity(0.50);
+}
+
+.opacity-60 {
+  @include opacity(0.60);
+}
+
+.opacity-70 {
+  @include opacity(0.70);
+}
+
+.opacity-80 {
+  @include opacity(0.80);
+}
+
+.opacity-90 {
+  @include opacity(0.90);
+}
 
 // Background color opacity
 
-.bg-opacity-black-25{ @include background-opacity(black, 0.25); }
-.bg-opacity-black-50{ @include background-opacity(black, 0.5); }
-.bg-opacity-black-75{ @include background-opacity(black, 0.75); }
+.bg-opacity-black-25 {
+  @include background-opacity(black, 0.25);
+}
+
+.bg-opacity-black-50 {
+  @include background-opacity(black, 0.5);
+}
+
+.bg-opacity-black-75 {
+  @include background-opacity(black, 0.75);
+}
 
 ////////////////////////////////////////
 // D. Z index
@@ -79,27 +127,57 @@ In this file:
 .z-index-600,
 .z-index-700,
 .z-index-800,
-.z-index-900
+.z-index-900 {
+  position: relative;
+}
 
-{ position: relative; }
+.z-index-100 {
+  z-index: 100;
+}
 
-.z-index-100{ z-index: 100; }
-.z-index-200{ z-index: 200; }
-.z-index-300{ z-index: 300; }
-.z-index-400{ z-index: 400; }
-.z-index-500{ z-index: 500; }
-.z-index-600{ z-index: 600; }
-.z-index-700{ z-index: 700; }
-.z-index-800{ z-index: 800; }
-.z-index-900{ z-index: 900; }
+.z-index-200 {
+  z-index: 200;
+}
+
+.z-index-300 {
+  z-index: 300;
+}
+
+.z-index-400 {
+  z-index: 400;
+}
+
+.z-index-500 {
+  z-index: 500;
+}
+
+.z-index-600 {
+  z-index: 600;
+}
+
+.z-index-700 {
+  z-index: 700;
+}
+
+.z-index-800 {
+  z-index: 800;
+}
+
+.z-index-900 {
+  z-index: 900;
+}
 
 ////////////////////////////////////////
 // E. Text shadows
 ////////////////////////////////////////
 
-.text-shadow{ @include text-shadow; }
+.text-shadow {
+  @include text-shadow;
+}
 
-.text-shadow-border{ @include text-shadow( 0, 0, $border-width, black ); }
+.text-shadow-border {
+  @include text-shadow(0, 0, $border-width, black);
+}
 
 ////////////////////////////////////////
 // F. Buttons and links
@@ -107,7 +185,7 @@ In this file:
 
 // Note: Remove Bootstrap default padding, color, hover, and focus states to '.btn' class
 
-.no-btn-style{
+.no-btn-style {
   color: currentColor;
   font-weight: inherit;
   border-color: transparent;
@@ -120,15 +198,20 @@ In this file:
 // Apply to <btn> or <a> with a Font Awesome icon <span> to ensure icon doesn't inherit 
 // text decoration underline on hover
 
-.has-icon{
+.has-icon {
 
-  &:hover{
+  &:hover {
     text-decoration: none;
-    span.title{ text-decoration: underline; }
+
+    span.title {
+      text-decoration: underline;
+    }
   }
-  
-  &.active{
-    span.title{ text-decoration: underline; }
+
+  &.active {
+    span.title {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -139,13 +222,12 @@ In this file:
 // Add paragraph-style spacing to generic lists
 
 ul,
-ol
- {
-    &.paragraph-li {
-        li {
-            margin-top: $paragraph-margin-bottom;
-            margin-bottom: $paragraph-margin-bottom;
- 
-        }
+ol {
+  &.paragraph-li {
+    li {
+      margin-top: $paragraph-margin-bottom;
+      margin-bottom: $paragraph-margin-bottom;
+
     }
+  }
 }

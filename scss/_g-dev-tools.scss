@@ -13,17 +13,17 @@ In this file:
 
 $breakpoints-bar: false;
 
-$breakpoints-bar-bg: fade-out( purple, 0.1 );
+$breakpoints-bar-bg: fade-out(purple, 0.1);
 
-@if $breakpoints-bar{
+@if $breakpoints-bar {
 
-    html{
+    html {
 
         // Remove height added by Google Translate
 
         height: auto !important;
-        
-        &::before{
+
+        &::before {
             @extend .sticky-top;
             @extend .shadow-sm;
             display: block;
@@ -35,15 +35,17 @@ $breakpoints-bar-bg: fade-out( purple, 0.1 );
         }
 
         @each $breakpoint in map-keys($grid-breakpoints) {
-            &::before{
+            &::before {
                 @include media-breakpoint-up($breakpoint) {
-                    content: 'breakpoint: ' + $breakpoint;
+                    content: 'breakpoint: '+ $breakpoint;
                 }
-            } 
+            }
         }
     }
 
-} // end if
+}
+
+// end if
 
 ////////////////////////////////////////
 // B. Container highlighter
@@ -51,13 +53,24 @@ $breakpoints-bar-bg: fade-out( purple, 0.1 );
 
 $highlight-containers: false;
 
-@if $highlight-containers{
+@if $highlight-containers {
 
-    .container{ background: fade-out(red, 0.25) !important; }
-    .narrow{ background: fade-out(orange, 0.25) !important; }
-    .wide{ background: fade-out(green, 0.25) !important; }
+    .container {
+        background: fade-out(red, 0.25) !important;
+    }
+
+    .narrow {
+        background: fade-out(orange, 0.25) !important;
+    }
+
+    .wide {
+        background: fade-out(green, 0.25) !important;
+    }
+
     // .matrix{ background: fade-out(blue, 0.25) !important; }
     // .extensible-list{ background: fade-out(purple, 0.25) !important; }
     // .extensible-list li{ background: fade-out(pink, 0.25) !important; }
 
-} // end if
+}
+
+// end if

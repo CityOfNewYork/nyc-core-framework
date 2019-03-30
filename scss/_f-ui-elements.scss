@@ -482,7 +482,7 @@ legend,
 
 .featured-panel {
 
-  > .card,
+  >.card,
   .card-img {
     border: none;
     border-radius: 0;
@@ -522,7 +522,7 @@ $bg-fixed-height: 350px;
     min-height: $bg-fixed-height;
   }
 
-  > div {
+  >div {
     position: relative;
     z-index: 100;
     align-self: center;
@@ -658,7 +658,7 @@ $matrix-tiger-padding: 3%;
   margin-bottom: -($matrix-border-padding);
   margin-left: -($matrix-border-padding);
 
-  > [class^="col"] {
+  >[class^="col"] {
     padding: $matrix-border-padding;
   }
 }
@@ -669,7 +669,7 @@ $matrix-tiger-padding: 3%;
   margin-bottom: -($matrix-gutter-padding);
   margin-left: -($matrix-gutter-padding);
 
-  > [class^="col"] {
+  >[class^="col"] {
     padding: $matrix-gutter-padding;
   }
 }
@@ -885,6 +885,7 @@ $side-by-side-margin: 0.25em;
 .side-by-side {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
 
   margin-left: -($side-by-side-margin);
   margin-right: -($side-by-side-margin);
@@ -892,6 +893,7 @@ $side-by-side-margin: 0.25em;
   > span {
     margin-left: $side-by-side-margin;
     margin-right: $side-by-side-margin;
+    // line-height: normal;
   }
 }
 
@@ -944,7 +946,7 @@ $carousel: false;
       margin: 0;
       padding: 0;
 
-      > li {
+      >li {
         cursor: pointer;
         border-radius: 50%;
 
@@ -959,7 +961,7 @@ $carousel: false;
       padding: 0;
       bottom: 0.75rem;
 
-      > p {
+      >p {
         @extend .shadow-sm;
         display: inline-block;
         border-radius: $border-radius;
@@ -976,7 +978,7 @@ $carousel: false;
         position: static;
         background: $light;
 
-        > p {
+        >p {
           @include border-radius(0);
           box-shadow: none !important;
         }
