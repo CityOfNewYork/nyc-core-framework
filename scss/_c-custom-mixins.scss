@@ -15,7 +15,7 @@ In this file:
 
 // The opacity mixins can be called anytime, however there are preset opacity classes available in '_e-supplementary-classes.scss'
 
-@mixin opacity($value){
+@mixin opacity($value) {
   $IEValue: $value*100;
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
@@ -23,7 +23,8 @@ In this file:
 }
 
 @mixin background-opacity($color, $opacity: 0.5) {
-  background-color: $color; /* The Fallback */
+  background-color: $color;
+  /* The Fallback */
   background-color: rgba($color, $opacity);
 }
 
@@ -40,7 +41,6 @@ In this file:
 ////////////////////////////////////////
 
 @mixin linear-gradient(
-  
   $direction: to bottom,
 
   $first-color: black,
@@ -52,11 +52,12 @@ In this file:
   $first-color-position: 0%,
   $second-color-position: 100%
 
-){
-  background-image: linear-gradient(
-    $direction,
-    rgba( $first-color, $first-color-opacity ) $first-color-position, 
-    rgba( $second-color, $second-color-opacity ) $second-color-position );
+  ) {
+    background-image: linear-gradient(
+      $direction,
+      rgba($first-color, $first-color-opacity) $first-color-position,
+      rgba($second-color, $second-color-opacity) $second-color-position
+    );
 }
 
 ////////////////////////////////////////
@@ -66,23 +67,27 @@ In this file:
 $background-image-path: '../images/feature/';
 
 @mixin apply-background-image(
-    $image: '01', 
-    $extension: '.jpg',
-    $cover: true
-  ){
-  
-  @if $extension == '.svg'{
+  $image: '01',
+  $extension: '.jpg',
+  $cover: true
+  ) {
+
+  @if $extension=='.svg' {
     background-image: url($background-image-path + $image + $extension);
     background-image: url($background-image-path + $image + $extension), none;
-  } @else {
+  }
+
+  @else {
     background-image: url($background-image-path + $image + $extension);
   }
 
-  @if $cover{
+  @if $cover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-  } @else{
+  }
+
+  @else {
     background-repeat: repeat;
   }
 
