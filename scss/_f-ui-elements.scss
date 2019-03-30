@@ -154,12 +154,11 @@ $primary-nav-dropdown-item-color: $body-color;
   #nav-primary {
 
     .dropdown-menu {
-      background-color: $primary-nav-dropdown-bg-color;
       border: none;
       padding: $nav-link-padding-y $nav-link-padding-x;
+      background-color: $primary-nav-dropdown-bg-color;
 
       a {
-        display: block;
         color: $primary-nav-dropdown-item-color;
       }
     }
