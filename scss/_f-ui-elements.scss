@@ -147,8 +147,6 @@ $primary-nav-dropdown-item-color: $body-color;
 
   }
 
-  // .nav-pills
-
   // Set .dropdown-menu styles
 
   #nav-primary {
@@ -160,6 +158,14 @@ $primary-nav-dropdown-item-color: $body-color;
 
       a {
         color: $primary-nav-dropdown-item-color;
+      }
+    }
+
+    // Remove unneeded margin from .dropdown-menu within nav
+
+    .nav:not(.nav-pills) {
+      .dropdown-menu {
+        margin: 0;
       }
     }
 
@@ -206,8 +212,6 @@ $primary-nav-dropdown-item-color: $body-color;
             @include caret-up;
           }
         }
-
-        // end if
       }
     }
   }

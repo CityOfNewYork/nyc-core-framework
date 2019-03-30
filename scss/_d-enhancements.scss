@@ -127,6 +127,15 @@ html[dir="rtl"] {
     text-align: right;
   }
 
+  // Change position of .dropdown-menu within nav
+
+  #nav-primary .nav:not(.nav-pills) {
+    .dropdown-menu {
+      right: 0;
+      left: unset;
+    }
+  }
+
   // Apply left justification to all extensible-list selectors excluding those that are centered 
 
   .extensible-list:not(.justify-content-center) {
