@@ -69,7 +69,7 @@
             <div class="narrow my-5">
 
                 <p>
-                    Accordions are modeled after <a href="https://getbootstrap.com/docs/4.2/components/collapse/#accordion-example" target="_blank">
+                    Our accordions are modeled after <a href="https://getbootstrap.com/docs/4.2/components/collapse/#accordion-example" target="_blank">
                     Bootstrap accordions</a>, with modifications for accessibility (including a larger hit-state,
                     open/close icons, and right-to-left support).
                 </p>
@@ -174,12 +174,45 @@
             <!-- .narrow -->
 
             <div class="narrow my-5">
-                <pre data-src="./code-examples/accordions-01.html"><code class="language-html"></code></pre>
+                <pre>
+                    <code class="language-html">
+                        &lt;div class="accordion-group my-6" role="tablist" id="accordion-01"&gt;
+
+                            &lt;div class="card mb-1"&gt;
+
+                                &lt;a class="card-header h4 collapse collapsed" id="acc-button-01" data-toggle="collapse" href="#panel-acc-button-01"  role="tab" aria-expanded="false" aria-controls="panel-acc-button-01"&gt;
+                                    &lt;span class="title" role="heading" aria-level="3"&gt;Accordion Title&lt;/span&gt;
+                                &lt;/a&gt;
+
+                                &lt;div class="collapse" id="panel-acc-button-01" role="tabpanel" aria-labelledby="acc-button-01" data-parent="#accordion-01"&gt;
+
+                                    &lt;div class="card-body"&gt;
+                                        &lt;p&gt;
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident natus, unde fugit
+                                            voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium ipsam neque
+                                            consequatur voluptates.
+                                        &lt;/p&gt;
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+                                &lt;!-- .collapse --&gt;
+
+                            &lt;/div&gt;
+                            &lt;!-- .card (end of first accordion, repeat as needed) --&gt;
+
+                        &lt;/div&gt;
+                    </code>
+                </pre>
             </div>
             <!-- .narrow -->
     
             <div class="narrow my-5">
-                <p>The SASS for Button Toggle can be found in <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-ui-elements.scss" target="_blank" title="View SASS on Github">scss/_e-ui-elements.scss</a></p>
+                <p>
+                    The accordions look and feel can be customized in <a
+                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-ui-elements.scss"
+                        target="_blank" title="View SASS on Github">scss/_e-ui-elements.scss</a> under <em>J. Accordion
+                            and button toggle</em>.
+                </p>
             </div>
             <!-- .narrow -->
 
@@ -218,16 +251,8 @@
     <!-- NYC template JS (RTL, search and language toggle, back to top)  -->
     <script src="./js/main.js"></script>
 
-    <!-- Google Code Pretty -->
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer></script>
-
-     <!-- HTML includes -->
      <!-- Prism.js -->
     <script src="./js/prism.js" defer></script>
-
-    
-
-    
 
 </body>
 
