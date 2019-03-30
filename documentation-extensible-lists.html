@@ -68,17 +68,15 @@
 
             <div class="narrow my-5">
 
-                <h2>Right to Left Friendly</h2>
-
                 <p>
                     Not native to Bootstrap 4, extensible lists play a key role in right to left (RTL) language support,
                     due to
                     their ability to sit flush within their parent, regardless of their own justification (left,
-                    center,right) and
+                    center, right) and
                     website language direction (left to right, right to left).
                 </p>
 
-                <p>Add class <code>extensible-list</code> to a <code>ul</code> tag:</p>
+                <p>Add class <code>.extensible-list</code> to a <code>&lt;ul&gt;</code>:</p>
 
                 <ul class="extensible-list">
                     <li><a href="#" title="Link">Link</a></li>
@@ -86,27 +84,7 @@
                     <li><a href="#" title="Link">Link</a></li>
                 </ul>
 
-                <div class="narrow my-3">
-                    <pre data-src="./code-examples/extensible-lists-01.html"><code class="language-html"></code></pre>
-                </div>
-
-            </div>
-            <!-- .narrow -->
-
-
-            <div class="narrow my-5">
-
-                <p>
-                    Add class <code>horizontal</code> for a horizontal list:
-                </p>
-
-                <ul class="extensible-list horizontal">
-                    <li><a href="#" title="Link">Link</a></li>
-                    <li><a href="#" title="Link">Link</a></li>
-                    <li><a href="#" title="Link">Link</a></li>
-                </ul>
-
-                <div class="narrow my-3">
+                <div class="my-3">
                     <pre>
                         <code class="language-html">
                             &lt;ul class="extensible-list"&gt;
@@ -124,8 +102,35 @@
             <div class="narrow my-5">
 
                 <p>
-                    Additionally, you can add <code>justify-content-center</code> or
-                    <code>justify-content-end</code> classes to horizontal lists to change their justification:
+                    Add class <code>.horizontal</code> for a horizontal list:
+                </p>
+
+                <ul class="extensible-list horizontal">
+                    <li><a href="#" title="Link">Link</a></li>
+                    <li><a href="#" title="Link">Link</a></li>
+                    <li><a href="#" title="Link">Link</a></li>
+                </ul>
+
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;ul class="extensible-list horizontal"&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+            <!-- .narrow -->
+
+            <div class="narrow my-5">
+
+                <p>
+                    Additionally, you can add <code>.justify-content-center</code> or
+                    <code>.justify-content-end</code> classes to horizontal lists to change their justification:
                 </p>
 
                 <ul class="extensible-list horizontal justify-content-center">
@@ -140,16 +145,32 @@
                     <li><a href="#" title="Link">Link</a></li>
                 </ul>
 
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;ul class="extensible-list horizontal justify-content-center"&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;ul class="extensible-list horizontal justify-content-end"&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
+                </div>
+
             </div>
             <!-- .narrow -->
-
-            <div class="narrow my-3">
-                <pre data-src="./code-examples/extensible-lists-03.html"><code class="language-html"></code></pre>
-            </div>
-    
-            <div class="narrow my-3">
-                <pre data-src="./code-examples/extensible-lists-04.html"><code class="language-html"></code></pre>
-            </div>
 
             <div class="narrow my-5">
 
@@ -163,28 +184,26 @@
                 </ul>
 
                 <div class="my-3">
-                    <pre data-src="./code-examples/extensible-lists-05.html"><code class="language-html"></code></pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;ul class="extensible-list horizontal responsive-md"&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
                 </div>
-            </div>
-            <!-- .narrow -->
 
-
-            <div class="my-6 border border-red">
-                <pre><code class="language-html">
-                    <ul class="extensible-list">
-                        <li><a href="#" title="Link">Link</a></li>
-                        <li><a href="#" title="Link">Link</a></li>
-                        <li><a href="#" title="Link">Link</a></li>
-                    </ul>
-    
-                </code></pre>
             </div>
-            
+            <!-- .narrow -->            
             
             <div class="narrow my-5">
 
-                <p>Extensible lists can be nested. By default, the child lists will automatically indent for
-                    readability.</p>
+                <p>
+                    Extensible lists can be nested. By default, the child lists will automatically indent for
+                    readability.
+                </p>
 
                 <ul class="extensible-list">
                     <li><a href="#" title="Link">Link</a></li>
@@ -201,18 +220,34 @@
                 </ul>
 
                 <div class="my-3">
-                    <pre data-src="./code-examples/extensible-lists-06.html"><code class="language-html"></code></pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;ul class="extensible-list"&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#" title="Link"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;
+                                    Title
+                                    &lt;ul class="extensible-list"&gt;
+                                        &lt;li&gt;&lt;a href="#" title="Nested Link"&gt;Nested Link&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#" title="Nested Link"&gt;Nested Link&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;a href="#" title="Nested Link"&gt;Nested Link&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        </code>
+                    </pre>
                 </div>
 
             </div>
             <!-- .narrow -->
 
-        
             <div class="narrow my-5">
 
                 <p>The SASS for extensible lists can be found in <a
                         href="https://github.com/CityOfNewYork/nyc-core-framework/blob/master/scss/_e-ui-elements.scss"
-                        target="_blank" title="View SASS on Github">scss/_e-ui-elements.scss</a></p>
+                        target="_blank" title="View SASS on Github">scss/_e-ui-elements.scss</a> under H. Extensible
+                        lists <em>H. Extensible lists</em>.</p>
             </div>
             <!-- .narrow -->
 

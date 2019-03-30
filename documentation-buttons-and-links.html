@@ -79,8 +79,10 @@
                         target="_blank">scss/_d-enhancements.scss</a>.
                 </p>
 
-                <p>Example of the modified hover and focus states made to buttons with Bootstrap's <code>btn</code>
-                    class:</p>
+                <p>
+                    Example of the modified hover and focus states made to buttons with Bootstrap's <code>btn</code>
+                    class:
+                </p>
 
                 <div class="row matrix-gutter my-3">
 
@@ -110,39 +112,6 @@
             </div>
             <!-- .narrow -->
                 
-            <div class="narrow my-5">
-
-                <h2>Disabled</h2>
-
-                <p>Buttons and links with a <code>disabled</code> class include the css rule <code>cursor:
-                        not-allowed;</code>, which
-                    on hover, indicates that the button is disabled.</p>
-
-                <ul class="extensible-list horizontal my-3">
-                    <li>
-                        <button class="btn btn-lg btn-block btn-primary disabled" type="button" aria-disabled="true"
-                            tabindex="-1">Primary</button>
-                    </li>
-                    <li>
-                        <a class="disabled" title="Link" aria-disabled="true" tabindex="-1">Link</a>
-                    </li>
-                </ul>
-
-                <div class="my-3">
-                    <pre data-src="./code-examples/buttons-and-links-01.html"><code class="language-html"></code></pre>
-                </div>
-
-                <div class="my-3">
-                    <pre data-src="./code-examples/buttons-and-links-02.html"><code class="language-html"></code></pre>
-                </div>
-
-                <div class="my-3">
-                    <pre data-src="./code-examples/buttons-and-links-03.html"><code class="language-html"></code></pre>
-                </div>
-
-            </div>
-            <!-- .narrow -->
-    
             <div class="narrow my-5">
 
                 <h2>Icons Buttons</h2>
@@ -177,10 +146,16 @@
 
                 </ul>
 
-                <p>Instances of Font Awesome icons should include a <code>role="img"</code> attribute.
+                <p>Instances of Font Awesome icons should include a <code>role="img"</code> attribute.</p>
 
-                <div class="narrow my-3">
-                    <pre data-src="./code-examples/buttons-and-links-03.html"><code class="language-html"></code></pre>
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;button class="no-btn-style" type="button"&gt;
+                                &lt;span class="fas fa-search" title="Search" role="img"&gt;&lt;/span&gt;
+                            &lt;/button&gt;
+                        </code>
+                    </pre>
                 </div>
 
             </div>
@@ -219,17 +194,73 @@
                     class provides even spacing around the text when a right-to-left language is being used.</p>
                 </p>
 
-                <div class="narrow my-3">
-                    <pre data-src="./code-examples/buttons-and-links-04.html"><code class="language-html"></code></pre>
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;button class="btn btn-lg btn-primary has-icon" type="button"&gt;
+                                &lt;span class="fab fa-accessible-icon" role="img"&gt;&lt;/span&gt;
+                                &lt;span class="title mx-1" role="img"&gt;Accessible&lt;/span&gt;
+                            &lt;/button&gt;
+                        </code>
+                    </pre>
                 </div>
 
-                <div class="narrow my-3">
-                    <pre data-src="./code-examples/buttons-and-links-05.html"><code class="language-html"></code></pre>
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;a class="has-icon" href="#1" class="text-primary" title="Link"&gt;
+                                &lt;span class="fab fa-accessible-icon font-weight-normal" role="img"&gt;&lt;/span&gt;
+                                &lt;span class="title mx-1" role="img"&gt;Accessible&lt;/span&gt;
+                            &lt;/a>
+                        </code>
+                    </pre>
                 </div>
-            
+
             </div>
             <!-- .narrow -->
 
+            <div class="narrow my-5">
+
+                <h2>Disabled States</h2>
+
+                <p>
+                    Buttons and links with a <code>disabled</code> class include the css rule <code>cursor:
+                        not-allowed;</code>, which on hover, indicates that the button is disabled.
+                </p>
+
+                <ul class="extensible-list horizontal my-3">
+                    <li>
+                        <button class="btn btn-lg btn-block btn-primary disabled" type="button" aria-disabled="true"
+                            tabindex="-1">Primary</button>
+                    </li>
+                    <li>
+                        <a class="disabled" title="Link" aria-disabled="true" tabindex="-1">Link</a>
+                    </li>
+                </ul>
+
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;button class="btn btn-lg btn-block btn-primary disabled" type="button" aria-disabled="true" tabindex="-1"&gt;
+                                Primary
+                            &lt;/button&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div class="my-3">
+                    <pre>
+                        <code class="language-html">
+                            &lt;a class="disabled" title="Link" aria-disabled="true"tabindex="-1"&gt;
+                                Link
+                            &lt;/a&gt;
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+            <!-- .narrow -->
+    
             <div class="narrow my-5">
 
                 <h2>Links within articles</h2>
