@@ -27,23 +27,24 @@ In this file:
 // A. Breakpoints
 ////////////////////////////////////////
 
-// Convert artbitrary breakpoints (i.e. 576px) to meaningful ones
+// Instead of arbitrary breakpoints (i.e. 576px), 
+// Separate each breakpoint with 240px 
 
 $grid-bp-xs:    0;
 $grid-bp-sm:    480px;
 $grid-bp-md:    720px;
 $grid-bp-lg:    960px;
 $grid-bp-xl:    1200px;
-$grid-bp-xxl:   1420px;
-$grid-bp-xxxl:  1660px;
+$grid-bp-xxl:   1440px;
+$grid-bp-xxxl:  1680px;
 
 $grid-breakpoints: (
-  xs:   $grid-bp-xs,
-  sm:   $grid-bp-sm,
-  md:   $grid-bp-md,
-  lg:   $grid-bp-lg,
-  xl:   $grid-bp-xl,
-  xxl:  $grid-bp-xxl,
+  xs: $grid-bp-xs,
+  sm: $grid-bp-sm,
+  md: $grid-bp-md,
+  lg: $grid-bp-lg,
+  xl: $grid-bp-xl,
+  xxl: $grid-bp-xxl,
   xxxl: $grid-bp-xxxl
 );
 
@@ -85,17 +86,17 @@ $grid-gutter-width: 2rem; // (32px)
 
 // Convert Grid $grid-gutter-width from REM to PX
 
-@function parseInt($n) { 
+@function parseInt($n) {
   @return $n / ($n * 0 + 1);
 }
 
 @function rem-to-px($size) {
-	$value: parseInt($size) * 16px; // 16px is the base size specified
-	@return round($value);
+  $value: parseInt($size) * 16px; // 16px is the base size specified
+  @return round($value);
 }
 
 $container-gutter: rem-to-px($grid-gutter-width);
- 
+
 $container-max-width-sm: ($grid-bp-sm - $container-gutter);
 $container-max-width-md: ($grid-bp-md - $container-gutter);
 $container-max-width-lg: ($grid-bp-lg - $container-gutter);
@@ -118,8 +119,8 @@ $container-max-widths: (
 
 $site-width: 2400px;
 $wide-width: $grid-bp-xxxl; // 1660px
-$narrow-width: 55ch;        // 55 characters
-$narrow-width-ie: 650px;    // I.E. fallback
+$narrow-width: 55ch; // 55 characters
+$narrow-width-ie: 650px; // I.E. fallback
 
 $medium-width: $narrow-width * 1.25; // Multiple of $narrow-width
 $medium-width-ie: $narrow-width-ie * 1.25; // Multiple of $narrow-width-ie
@@ -136,11 +137,11 @@ $font-awesome: 'Font Awesome 5 Free';
 // Note: Instead of manipulation Bootstrap Default variables, 
 // we create our own opt-in font size variables
 
-$fs-sm: 0.875rem;   // 14px
-$fs-md: 1rem;       // 16px
-$fs-rg: 1.167rem;   // 18.672px
-$fs-lg: 1.5rem;     // 20px
-$fs-xl: 1.75rem;    // 28px
+$fs-sm: 0.875rem; // 14px
+$fs-md: 1rem; // 16px
+$fs-rg: 1.167rem; // 18.672px
+$fs-lg: 1.5rem; // 20px
+$fs-xl: 1.75rem; // 28px
 
 // Note: Font weight vars required for customizations below
 
@@ -207,19 +208,21 @@ $cyan:    #17a2b8 !default;
 
 $accessible-colors: true;
 
-@if($accessible-colors){
+@if($accessible-colors) {
 
-  $blue:    #0029F7;
-  $indigo:  #8f51f4;
-  $purple:  #8762cd;
-  $pink:    #e8006d;
-  $red:     #ea172b;
-  $orange:  #c45500;
-  $green:   #21883f;
-  $teal:    #0c8763;
-  $cyan:    #008299;
+  $blue: #0029F7;
+  $indigo: #8f51f4;
+  $purple: #8762cd;
+  $pink: #e8006d;
+  $red: #ea172b;
+  $orange: #c45500;
+  $green: #21883f;
+  $teal: #0c8763;
+  $cyan: #008299;
 
-} // end if
+}
+
+// end if
 
 ////////////////////////////////////////
 // G. Theme colors
@@ -236,9 +239,8 @@ $dark: #0A1438;
 
 // Add white to the color map
 
-$theme-colors: (
-  "white": $white,
-  "black": $black,
+$theme-colors: ("white": $white,
+"black": $black,
 );
 
 ////////////////////////////////////////
@@ -315,11 +317,11 @@ $link-hover-decoration: none;
 
 // Set card spacing to match grid gutter width (create consistant x axis spacing on mobile)
 
-$card-spacer-x: ( $grid-gutter-width / 2 ); 
-$card-spacer-y: ( $grid-gutter-width / 2 ); 
+$card-spacer-x: ($grid-gutter-width / 2);
+$card-spacer-y: ($grid-gutter-width / 2);
 
-$card-cap-bg: rgba( $black, .05 );
-$card-border-color: rgba( $black, .2 );
+$card-cap-bg: rgba($black, .05);
+$card-border-color: rgba($black, .2);
 
 ////////////////////////////////////////
 // L. Components, navs, and dropdowns
@@ -332,7 +334,7 @@ $component-active-bg: $info;
 
 // Navs (.nav) and input padding
 
-$input-btn-padding-x: ( $grid-gutter-width / 2 );
+$input-btn-padding-x: ($grid-gutter-width / 2);
 $nav-link-padding-x: $input-btn-padding-x;
 $nav-link-padding-y: .75rem;
 
@@ -353,9 +355,9 @@ $pagination-active-bg: $secondary;
 
 $box-shadow-opacity: 0.3;
 
-$box-shadow-sm: 0 0 .5rem rgba( $black, $box-shadow-opacity );
-$box-shadow:    0 0 1rem rgba( $black, $box-shadow-opacity );
-$box-shadow-lg: 0 0 3rem rgba( $black, $box-shadow-opacity );
+$box-shadow-sm: 0 0 .5rem rgba($black, $box-shadow-opacity);
+$box-shadow: 0 0 1rem rgba($black, $box-shadow-opacity);
+$box-shadow-lg: 0 0 3rem rgba($black, $box-shadow-opacity);
 
 $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 
@@ -366,7 +368,7 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 $form-group-margin-bottom: $spacer-5;
 $input-btn-focus-width: .15rem;
 $input-focus-border-color: $blue;
-$input-btn-focus-box-shadow: 0 0 0 2px rgba( $blue, 0.75); 
+$input-btn-focus-box-shadow: 0 0 0 2px rgba($blue, 0.75);
 
 // Note: Since version 4.2.1, bootstrap added icons to validate
 // We use more descriptive Font Awesome icons, so we simply turn Bootstrap's validation icons off
@@ -379,12 +381,12 @@ $custom-control-indicator-checked-color: white;
 $custom-control-indicator-checked-bg: lighten($blue, 5%);
 $custom-control-indicator-active-bg: lighten($blue, 35%);
 
-$custom-control-indicator-active-box-shadow:   0 0 1rem rgba( $blue, $box-shadow-opacity );
+$custom-control-indicator-active-box-shadow: 0 0 1rem rgba($blue, $box-shadow-opacity);
 
 // Alerts
 
-$alert-padding-y: ( $grid-gutter-width / 2 );
-$alert-padding-x: ( $grid-gutter-width / 2 );
+$alert-padding-y: ($grid-gutter-width / 2);
+$alert-padding-x: ($grid-gutter-width / 2);
 
 ////////////////////////////////////////
 // O. Modals
@@ -392,20 +394,20 @@ $alert-padding-x: ( $grid-gutter-width / 2 );
 
 $modal-backdrop-bg: $white;
 $modal-backdrop-opacity: 0.95;
-$modal-content-border-color: rgba( $black, 0.2 );
+$modal-content-border-color: rgba($black, 0.2);
 
 ////////////////////////////////////////
 // P. Carousel
 //////////////////////////////////////// 
- 
+
 $carousel-control-color: $white !default;
 $carousel-control-opacity: .75;
- 
+
 $carousel-indicator-width: 0.75rem;
 $carousel-indicator-height: 0.75rem;
 $carousel-indicator-spacer: .25rem;
 $carousel-indicator-active-bg: $white !default;
- 
+
 $carousel-caption-width: 100%;
 
 ////////////////////////////////////////

@@ -29,27 +29,38 @@ $nyc-header-footer-text-color: $white;
 $nyc-header-footer-bg-color: $black;
 
 #nyc-top-header,
-#nyc-bottom-footer
-{ 
+#nyc-bottom-footer {
+
   & p,
-    a 
-    { color: $nyc-header-footer-text-color; }
+  a {
+    color: $nyc-header-footer-text-color;
+  }
 }
 
-#nyc-top-header{ font-size: $fs-sm; }
-#nyc-bottom-footer{ font-size: $fs-md; }
+#nyc-top-header {
+  font-size: $fs-sm;
+}
+
+#nyc-bottom-footer {
+  font-size: $fs-md;
+}
 
 #nyc-top-header,
-#nyc-bottom-footer
-{ background: $nyc-header-footer-bg-color; }
-
-#nyc-top-header{ font-weight: $font-weight-bold; }
-
-#nyc-bottom-footer{
-  hr{ @extend .opacity-20; }
+#nyc-bottom-footer {
+  background: $nyc-header-footer-bg-color;
 }
 
-#back-to-top{
+#nyc-top-header {
+  font-weight: $font-weight-bold;
+}
+
+#nyc-bottom-footer {
+  hr {
+    @extend .opacity-20;
+  }
+}
+
+#back-to-top {
   @extend .container-fluid;
   @extend .fixed-bottom;
   @include opacity(0);
@@ -57,10 +68,12 @@ $nyc-header-footer-bg-color: $black;
   text-align: right;
   transition: opacity .1s linear 0s;
 
-  &.show{ @include opacity(1); }
+  &.show {
+    @include opacity(1);
+  }
 
 }
- 
+
 ////////////////////////////////////////
 // B. Local header and primary nav
 ////////////////////////////////////////
@@ -85,75 +98,79 @@ $primary-nav-dropdown-bg-color: white;
 // Primary nav dropdown items color
 $primary-nav-dropdown-item-color: $body-color;
 
-#global-header{
+#global-header {
 
   // Remove border radius when global '$enable-rounded' is set to true 
 
   .btn,
   .input,
-  .nav-link, 
-  .dropdown-menu, 
-  .form-control
-  { border-radius: 0; }
+  .nav-link,
+  .dropdown-menu,
+  .form-control {
+    border-radius: 0;
+  }
 
   // Set primary nav color and active states (both '.nav-pills' and '.nav-right')
 
-  .nav-link{
+  .nav-link {
     font-weight: $primary-nav-link-font-weight;
     color: $primary-nav-link-color;
-    &.active{
+
+    &.active {
       text-decoration: underline;
       color: $primary-nav-link-active-color;
     }
   }
-  
+
   // Primary Nav (.nav-pills)
 
-  .nav-pills{
+  .nav-pills {
     border-left: $border-width solid $border-color;
 
     margin-left: -$border-width;
     margin-right: -$border-width;
-    
+
     @extend .nav-fill;
 
-    .nav-link{
+    .nav-link {
       border-right: $border-width solid $border-color;
 
-      &.active { 
+      &.active {
         background-color: $primary-nav-pills-link-active-bg-color;
       }
 
-      &[aria-expanded="true"]{
+      &[aria-expanded="true"] {
         color: currentColor;
         background-color: $primary-nav-dropdown-bg-color;
       }
     }
 
-  } // .nav-pills
+  }
+
+  // .nav-pills
 
   // Set .dropdown-menu styles
 
-  #nav-primary{
-  
-  .dropdown-menu{
-    background-color: $primary-nav-dropdown-bg-color;
-    border: none;
-    padding: $nav-link-padding-y $nav-link-padding-x;
+  #nav-primary {
 
-    a{
-      display: block;
-      color: $primary-nav-dropdown-item-color;
+    .dropdown-menu {
+      background-color: $primary-nav-dropdown-bg-color;
+      border: none;
+      padding: $nav-link-padding-y $nav-link-padding-x;
+
+      a {
+        display: block;
+        color: $primary-nav-dropdown-item-color;
+      }
     }
-  }
 
-  // Improve .dropdown-menu when present within .nav-pills
+    // Improve .dropdown-menu when present within .nav-pills
 
-    .nav-pills .dropdown-menu{
-      width: calc( 100% - #{$border-width});
+    .nav-pills .dropdown-menu {
+      width: calc(100% - #{$border-width});
       left: 0;
       margin: 0;
-      
+
       // When dropdowns are flush left or right, remove Bootrap transform and reposition y axis
       transform: none !important;
       top: 100% !important;
@@ -167,19 +184,20 @@ $primary-nav-dropdown-item-color: $body-color;
       }
 
       .nav-item,
-      .dropdown-menu
-      { background: none; }
-
       .dropdown-menu {
-        
-      position: static !important;
-      width: 100%;
-
-      -webkit-transform: none !important;
-      transform: none !important;
+        background: none;
       }
 
-      .dropdown-toggle{ 
+      .dropdown-menu {
+
+        position: static !important;
+        width: 100%;
+
+        -webkit-transform: none !important;
+        transform: none !important;
+      }
+
+      .dropdown-toggle {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -188,12 +206,16 @@ $primary-nav-dropdown-item-color: $body-color;
           &[aria-expanded="true"]::after {
             @include caret-up;
           }
-        } // end if
+        }
+
+        // end if
       }
     }
   }
 
-} /* #global-header */ 
+}
+
+/* #global-header */
 
 ////////////////////////////////////////
 // C. Tab skipper
@@ -201,7 +223,7 @@ $primary-nav-dropdown-item-color: $body-color;
 
 // Visible only on keyboard tabbing
 
-.tab-skipper{
+.tab-skipper {
   @extend .position-absolute;
   @extend .shadow;
 
@@ -213,7 +235,9 @@ $primary-nav-dropdown-item-color: $body-color;
   background: theme-color("light");
   color: $body-color;
 
-  &:hover{ color: currentColor; }
+  &:hover {
+    color: currentColor;
+  }
 }
 
 ////////////////////////////////////////
@@ -221,53 +245,59 @@ $primary-nav-dropdown-item-color: $body-color;
 ////////////////////////////////////////
 
 // Make alerts focusable for accessibility
- 
-.alert{
+
+.alert {
   outline: 0;
 
-  &[tabindex="-1"]{
-    &:focus{
+  &[tabindex="-1"] {
+    &:focus {
       box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
     }
   }
 }
 
-.alert-heading{
+.alert-heading {
   font-weight: $font-weight-bold;
   margin-bottom: $spacer-1;
 }
 
-.alert-text{
-  font-size: $fs-md; 
-  a{ @extend .text-reset; }
+.alert-text {
+  font-size: $fs-md;
+
+  a {
+    @extend .text-reset;
+  }
 }
 
 // Apply custom valdation for accessibility
 // The following works only when custom './js/validation.js' is present in the footer of the form's page
 
-.form-group{
+.form-group {
 
-  .invalid-feedback{
-      display: none; 
-      margin-bottom: 0.5rem;
+  .invalid-feedback {
+    display: none;
+    margin-bottom: 0.5rem;
   }
 
-  .invalid-description{
+  .invalid-description {
     font-weight: $font-weight-bold;
     margin-left: $spacer-1;
     margin-right: $spacer-1;
   }
 
-  &.is-invalid{
+  &.is-invalid {
 
     label,
-    .label
-    { color: theme-color("danger"); }
+    .label {
+      color: theme-color("danger");
+    }
 
-    .invalid-feedback{ display: block; }
+    .invalid-feedback {
+      display: block;
+    }
 
-    .form-control:invalid{
-      &:focus{
+    .form-control:invalid {
+      &:focus {
         box-shadow: 0 0 0 $input-btn-focus-width theme-color("danger");
       }
     }
@@ -276,20 +306,20 @@ $primary-nav-dropdown-item-color: $body-color;
 
 // Fieldset and Legend
 
-fieldset, 
-.fieldset{
+fieldset,
+.fieldset {
   border: $border-width solid $border-color;
   margin-bottom: $spacer-5;
 
   @if $enable-rounded {
     overflow: hidden;
-      border-radius: $border-radius;
+    border-radius: $border-radius;
   }
 
 }
 
-legend, 
-.legend{
+legend,
+.legend {
   font-size: $fs-md;
   font-weight: $font-weight-normal;
   background: $primary;
@@ -300,19 +330,19 @@ legend,
 
 // File upload
 
-.wrap-file-input{
+.wrap-file-input {
 
   position: relative;
 
-  input[type="file"]{
-    &:focus + label{ 
+  input[type="file"] {
+    &:focus+label {
       @include transition;
       border-color: $input-focus-border-color;
       box-shadow: $input-btn-focus-box-shadow;
     }
   }
 
-  .file-input-label{
+  .file-input-label {
     border: $border-width solid $input-border-color;
     display: block;
 
@@ -320,19 +350,21 @@ legend,
       border-radius: $border-radius;
     }
 
-    &:hover{
+    &:hover {
+
       .file-choose,
-      .file-name
-      { text-decoration: none; }
+      .file-name {
+        text-decoration: none;
+      }
     }
 
     .file-choose,
-    .file-name{
+    .file-name {
       width: 100%;
       text-align: center;
     }
 
-    .file-choose{ 
+    .file-choose {
       @extend .has-icon;
 
       @if $enable-rounded {
@@ -341,7 +373,7 @@ legend,
       }
     }
 
-    .file-name{ 
+    .file-name {
       @extend .font-weight-normal;
       @extend .text-truncate;
       padding: $spacer-1;
@@ -352,9 +384,11 @@ legend,
   }
 
   @include media-breakpoint-down(md) {
-      .file-choose,
-      .file-name
-      { display: block !important; }
+
+    .file-choose,
+    .file-name {
+      display: block !important;
+    }
   }
 
 }
@@ -365,7 +399,7 @@ legend,
 
 // Gradients call a custom mixin in '_c-custom-mixins.scss'
 
-[class*="overlay-gradient-"]{
+[class*="overlay-gradient-"] {
   position: relative;
   overflow: hidden;
 
@@ -382,68 +416,79 @@ legend,
 
 // Gradient Overlays
 
-.overlay-gradient-y-black::before{
+.overlay-gradient-y-black::before {
   @include linear-gradient();
 }
 
-.overlay-gradient-x-white::before{
-  @include linear-gradient(
-    $direction: to left,
+.overlay-gradient-x-white::before {
+  @include linear-gradient($direction: to left,
     $first-color: white,
     $second-color: white,
     $first-color-opacity: 0,
     $second-color-opacity: 1,
     $first-color-position: 0%,
-    $second-color-position: 100%
-  );
+    $second-color-position: 100%);
 }
 
-.overlay-gradient-x-primary::before{
-  @include linear-gradient(
-    $direction: to left,
+.overlay-gradient-x-primary::before {
+  @include linear-gradient($direction: to left,
     $first-color: $primary,
     $second-color: $primary,
     $first-color-opacity: 0,
     $second-color-opacity: .8,
     $first-color-position: 0,
-    $second-color-position: 100%
-  );
+    $second-color-position: 100%);
 }
 
-.overlay-gradient-x-info::before{
-  @include linear-gradient(
-    $direction: to right,
+.overlay-gradient-x-info::before {
+  @include linear-gradient($direction: to right,
     $first-color: theme-color("info"),
     $second-color: theme-color("info"),
     $first-color-opacity: 0,
     $second-color-opacity: 0.75,
     $first-color-position: 0,
-    $second-color-position: 100%
-  );
+    $second-color-position: 100%);
 }
 
 ////////////////////////////////////////
 // F. Featured panels
 ////////////////////////////////////////
 
-@mixin featured-panel-responsive-settings(){
-  .card-img-overlay{ position: relative; }
-  img.show-on-mobile{ @include opacity(1); }
-  [class*="overlay-gradient"]::before{ display: none; }
-  .text-shadow{ text-shadow: none; }
-  [class*="border"]{ border: none !important; }
-  [class*="shadow"]{ box-shadow: none !important; }
+@mixin featured-panel-responsive-settings() {
+  .card-img-overlay {
+    position: relative;
+  }
+
+  img.show-on-mobile {
+    @include opacity(1);
+  }
+
+  [class*="overlay-gradient"]::before {
+    display: none;
+  }
+
+  [class*="border"] {
+    border: none !important;
+  }
+
+  [class*="shadow"] {
+    box-shadow: none !important;
+  }
+
+  [class*="text-shadow"] {
+    text-shadow: none;
+  }
 }
 
-.featured-panel{
+.featured-panel {
 
-  > .card, 
-  .card-img{
+  > .card,
+  .card-img {
     border: none;
     border-radius: 0;
   }
-  
-  .card-img-overlay{ 
+
+  .card-img-overlay {
     padding-left: 0;
     padding-right: 0;
   }
@@ -453,7 +498,7 @@ legend,
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @if $next {
-      &.responsive-#{$next}{
+      &.responsive-#{$next} {
         @include media-breakpoint-down($breakpoint) {
           @include featured-panel-responsive-settings();
         }
@@ -469,40 +514,40 @@ legend,
 $bg-fixed-image-opacity: 0.2;
 $bg-fixed-height: 350px;
 
-.bg-cover{
+.bg-cover {
   position: relative;
 
-  &.fixed-height{
+  &.fixed-height {
     display: flex;
     min-height: $bg-fixed-height;
   }
 
-  > div{
+  > div {
     position: relative;
     z-index: 100;
     align-self: center;
   }
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
-    top:0;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: auto;
 
-    @include opacity( $bg-fixed-image-opacity );
+    @include opacity($bg-fixed-image-opacity);
     @include apply-background-image;
 
   }
 
   // Add your own backround classes and append them to the '.bg-cover' selector
 
-  &.bridge{
-    &::before{
+  &.bridge {
+    &::before {
       @include apply-background-image($image: 'bridge-lights');
     }
   }
@@ -519,49 +564,54 @@ $extensible-list-margin: 0.5em;
 
 @mixin extensible-list-stack {
   margin-bottom: $extensible-list-margin;
-  &:last-child{ margin-bottom: 0; }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-@mixin responsive-extensible-list-settings(){ 
-  
+@mixin responsive-extensible-list-settings() {
+
   // Remove flex properties
   display: block !important;
 
   // Remove side margin and padding 
-  margin-right:  0;
-  margin-left:  0;
-  padding-right:  0;
-  padding-left:  0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 
-  li{ 
+  li {
     @include extensible-list-stack;
     display: block !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-   }
+  }
 }
 
-.extensible-list{
+.extensible-list {
 
   @include list-unstyled();
   margin-bottom: 0;
-  
+
   // fixed padding added by user agent stylesheet after translation
   -webkit-padding-start: 0;
 
-  li ul{
+  li ul {
 
     margin-top: $extensible-list-margin;
 
     // Indent nested lists by default
 
     padding-left: $nav-link-padding-x !important;
-    padding-right: $nav-link-padding-x !important; 
+    padding-right: $nav-link-padding-x !important;
   }
 
-  li{ @include extensible-list-stack; }
+  li {
+    @include extensible-list-stack;
+  }
 
-  &.horizontal{
+  &.horizontal {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -569,7 +619,7 @@ $extensible-list-margin: 0.5em;
     margin-left: -($extensible-list-margin);
     margin-right: -($extensible-list-margin);
 
-    li{
+    li {
       margin-bottom: 0;
       margin-left: $extensible-list-margin;
       margin-right: $extensible-list-margin;
@@ -580,7 +630,7 @@ $extensible-list-margin: 0.5em;
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
       @if $next {
-        &.responsive-#{$next}{
+        &.responsive-#{$next} {
           @include media-breakpoint-down($breakpoint) {
             @include responsive-extensible-list-settings();
           }
@@ -589,7 +639,7 @@ $extensible-list-margin: 0.5em;
     }
   }
 }
-  
+
 ////////////////////////////////////////
 // I. Matrix rows
 ////////////////////////////////////////
@@ -602,29 +652,33 @@ $matrix-gutter-padding: ($grid-gutter-width / 4);
 
 $matrix-tiger-padding: 3%;
 
-.matrix-border{
+.matrix-border {
   margin-top: -($matrix-border-padding);
   margin-right: -($matrix-border-padding);
   margin-bottom: -($matrix-border-padding);
   margin-left: -($matrix-border-padding);
 
-  > [class^="col"]{ padding: $matrix-border-padding; }
+  > [class^="col"] {
+    padding: $matrix-border-padding;
+  }
 }
 
-.matrix-gutter{
+.matrix-gutter {
   margin-top: -($matrix-gutter-padding);
   margin-right: -($matrix-gutter-padding);
   margin-bottom: -($matrix-gutter-padding);
   margin-left: -($matrix-gutter-padding);
 
-  > [class^="col"]{ padding: $matrix-gutter-padding; }
+  > [class^="col"] {
+    padding: $matrix-gutter-padding;
+  }
 }
 
 ////////////////////////////////////////
 // J. Accordion and button toggle 
 ////////////////////////////////////////
 
-%fa-icon{
+%fa-icon {
   font-family: $font-awesome;
   font-weight: 900;
   font-size: inherit;
@@ -644,9 +698,8 @@ $accordion-bg-color: $light;
 $accordion-margin-y: $spacer-1;
 
 .btn-toggle,
-.accordion-group
-{
-  [data-toggle="collapse"]{
+.accordion-group {
+  [data-toggle="collapse"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -680,41 +733,50 @@ $accordion-margin-y: $spacer-1;
 }
 
 // Accordions
-  
-.accordion-group{
 
-  .card, 
-  .card-header
-  { 
+.accordion-group {
+
+  .card,
+  .card-header {
     border: 0;
-    
+
     @if $enable-rounded {
       border-radius: $border-radius;
-    } @else{
+    }
+
+    @else {
       border-radius: 0;
     }
   }
 
-  .card { 
+  .card {
     background-color: $accordion-bg-color;
     margin-bottom: $accordion-margin-y;
-    &:last-child{ margin-bottom: 0; }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  a[data-toggle="collapse"]{
-    
-    @if $accordion-button-border { border: $border-width solid $border-color; }
-    @if $accordion-button-shadow { @extend .shadow-sm; }
+  a[data-toggle="collapse"] {
+
+    @if $accordion-button-border {
+      border: $border-width solid $border-color;
+    }
+
+    @if $accordion-button-shadow {
+      @extend .shadow-sm;
+    }
 
     color: $accordion-title-color;
-  
-    &:after{ 
+
+    &:after {
       content: "\f067";
       @extend %fa-icon;
     }
 
-    &[aria-expanded="true"]{
-      
+    &[aria-expanded="true"] {
+
       @if $accordion-button-shadow {
         @extend .shadow;
       }
@@ -723,26 +785,33 @@ $accordion-margin-y: $spacer-1;
 
     // Change the right icon here. Go to https://fontawesome.com/icons
     // Find your icons and paste the unicode below
-    
-    &[aria-expanded="true"]:after{ content: "\f106"; }
-    &[aria-expanded="false"]:after{ content: "\f107"; }
+
+    &[aria-expanded="true"]:after {
+      content: "\f106";
+    }
+
+    &[aria-expanded="false"]:after {
+      content: "\f107";
+    }
   }
-  
+
 }
 
 ////////////////////////////////////////
 // K. Responsive nav tabs and pills
 ////////////////////////////////////////
 
-@mixin responsive-nav-pills-and-tabs-settings(){
-  
+@mixin responsive-nav-pills-and-tabs-settings() {
+
   flex-direction: column;
   border-color: $transparent;
 
-  .nav-link{ border-color: $border-color; }
+  .nav-link {
+    border-color: $border-color;
+  }
 
   @if $enable-rounded {
-    .nav-link:not(:last-child){ 
+    .nav-link:not(:last-child) {
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
@@ -750,19 +819,20 @@ $accordion-margin-y: $spacer-1;
 }
 
 .nav-pills,
-.nav-tabs
-{
+.nav-tabs {
 
-  &[class*="responsive-"]{
-    .nav-link{ text-align: center; }
-  } 
+  &[class*="responsive-"] {
+    .nav-link {
+      text-align: center;
+    }
+  }
 
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @if $next {
-      &.responsive-#{$next}{
+      &.responsive-#{$next} {
         @include media-breakpoint-down($breakpoint) {
           @include responsive-nav-pills-and-tabs-settings();
         }
@@ -772,36 +842,38 @@ $accordion-margin-y: $spacer-1;
 
 }
 
-.nav-tabs{
-  
+.nav-tabs {
+
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @if $next {
-      &.responsive-#{$next}{
+      &.responsive-#{$next} {
         @include media-breakpoint-down($breakpoint) {
           @include responsive-nav-pills-and-tabs-settings();
         }
       }
     }
   }
-  
-} // end each
+
+}
+
+// end each
 
 @if $enable-rounded {
 
-  .nav-pills, 
-  .nav-pills .nav-link{ 
-      border-top-left-radius: $border-radius; 
-      border-top-right-radius: $border-radius; 
+  .nav-pills,
+  .nav-pills .nav-link {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
   }
 
-  .nav-pills .nav-link{
+  .nav-pills .nav-link {
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; 
+    border-bottom-right-radius: 0;
   }
-  
+
 }
 
 ////////////////////////////////////////
@@ -810,18 +882,18 @@ $accordion-margin-y: $spacer-1;
 
 $side-by-side-margin: 0.25em;
 
-.side-by-side{
+.side-by-side {
   display: flex;
   flex-direction: row;
 
   margin-left: -($side-by-side-margin);
   margin-right: -($side-by-side-margin);
 
-  > span{
+  > span {
     margin-left: $side-by-side-margin;
     margin-right: $side-by-side-margin;
   }
-} 
+}
 
 ////////////////////////////////////////
 // M. Card
@@ -830,54 +902,64 @@ $side-by-side-margin: 0.25em;
 $default-card-borders: false;
 $default-card-backgrounds: false;
 
-@if ($default-card-borders == false) {
-  .card, 
-  .card-header,
-  .card-footer
-  { border: none; }
-} // end if
+@if ($default-card-borders==false) {
 
-@if ( $default-card-backgrounds == false ) {
-  .card, 
+  .card,
   .card-header,
-  .card-footer
-  { background-color: transparent; }
-} // end if
+  .card-footer {
+    border: none;
+  }
+}
+
+// end if
+
+@if ($default-card-backgrounds==false) {
+
+  .card,
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+  }
+}
+
+// end if
 
 ////////////////////////////////////////
 // N. Carousel
 ////////////////////////////////////////
- 
+
 $carousel: false;
- 
-@if($carousel){
- 
-  .carousel{
- 
+
+@if($carousel) {
+
+  .carousel {
+
     a[data-slide="prev"],
-    a[data-slide="next"]
-    { color: $carousel-control-color; }
- 
-    .carousel-indicators{
+    a[data-slide="next"] {
+      color: $carousel-control-color;
+    }
+
+    .carousel-indicators {
       position: static;
       margin: 0;
       padding: 0;
-      
-      > li{
+
+      > li {
         cursor: pointer;
         border-radius: 50%;
- 
+
         &::before,
-        &::after
-        { display: none; }
+        &::after {
+          display: none;
+        }
       }
     }
 
-    .carousel-caption{
+    .carousel-caption {
       padding: 0;
       bottom: 0.75rem;
 
-      > p{ 
+      > p {
         @extend .shadow-sm;
         display: inline-block;
         border-radius: $border-radius;
@@ -887,55 +969,64 @@ $carousel: false;
         @include background-opacity($light, 0.9);
       }
     }
- 
-    @include media-breakpoint-down(md){
- 
-      .carousel-caption{
+
+    @include media-breakpoint-down(md) {
+
+      .carousel-caption {
         position: static;
         background: $light;
 
-        > p{
+        > p {
           @include border-radius(0);
           box-shadow: none !important;
         }
       }
     }
   }
- 
-} // end if
+
+}
+
+// end if
 
 ////////////////////////////////////////
 // O. Tables
 ////////////////////////////////////////
 
 $table-header-color: $info;
-
 $table-font-size: $fs-md;
 
-table{
+table {
 
   font-size: $table-font-size;
 
-  th{ color: $table-header-color; }
+  th {
+    color: $table-header-color;
+  }
 
   &.table-row-mobile-stack {
 
-    thead td:empty{ border: none; }
-    
-    @include media-breakpoint-up(lg) {
-      .psuedo-cell{ display: none; }
+    thead td:empty {
+      border: none;
     }
-    
+
+    @include media-breakpoint-up(lg) {
+      .psuedo-cell {
+        display: none;
+      }
+    }
+
     @include media-breakpoint-down(md) {
 
-      thead { @include sr-only }
+      thead {
+        @include sr-only
+      }
 
       tbody tr {
         display: flex;
         flex-flow: row wrap;
         border-top: $border-width solid $table-header-color;
 
-        + tr {
+        +tr {
           margin-top: $spacer-3;
         }
       }
@@ -946,17 +1037,20 @@ table{
         word-break: break-all;
         hyphens: auto;
 
-        &[aria-hidden="true"] { flex-basis: 100%; }
+        &[aria-hidden="true"] {
+          flex-basis: 100%;
+        }
 
-        &:not([aria-hidden="true"]) { 
+        &:not([aria-hidden="true"]) {
           flex-basis: 100%;
           padding-top: 0;
           border-top: none;
-          }
+        }
 
         &:nth-of-type(2),
-        &:first-of-type 
-        { border: none; }
+        &:first-of-type {
+          border: none;
+        }
       }
 
       th {
@@ -978,9 +1072,9 @@ table{
 
 $sidebar-fixed-width-max-width: 300px;
 
-.sidebar-fixed-width{
+.sidebar-fixed-width {
   @include media-breakpoint-up(xl) {
-      max-width: $sidebar-fixed-width-max-width; 
-      border-left: $border-width solid $border-color;
+    max-width: $sidebar-fixed-width-max-width;
+    border-left: $border-width solid $border-color;
   }
 }
