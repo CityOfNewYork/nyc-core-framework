@@ -80,25 +80,58 @@ $nyc-header-footer-bg-color: $black;
 
 // Primary Navigation variables set here override Bootstrap default component settings
 
+// Global header border color
+$global-header-border-color: $border-color;
+
 // Primary nav font weight
 $primary-nav-link-font-weight: $font-weight-bold;
 
-// Primary nav link color
+// Set all links (and toggle buttons) in global header, not including links inside '#nyc-top-header' 
 $primary-nav-link-color: $body-color;
 
-// Primary nav link active (current page) color
+// Global header link active (current page) color
 $primary-nav-link-active-color: $secondary;
 
-// Primary nav-pills link active (current page) background color
-$primary-nav-pills-link-active-bg-color: $primary;
-
 // Primary nav dropdown background color
-$primary-nav-dropdown-bg-color: white;
+$primary-nav-dropdown-bg-color: $white;
 
-// Primary nav dropdown items color
-$primary-nav-dropdown-item-color: $body-color;
+// Use dark header settings
+$global-header-dark: false;
+
+// Reset variables for dark header
+@if $global-header-dark {
+  
+  $global-header-border-color: rgba(black, 0.5);
+  $primary-nav-link-color: $white;
+  $primary-nav-dropdown-bg-color: $dark;
+
+}
+
+// Toggle button color
+$global-header-toggle-button-color: $primary-nav-link-color;
 
 #global-header {
+
+  @if $global-header-dark {
+
+    background-color: $dark;
+
+    #nyc-logo-placeholder {
+      fill: $white;
+    }
+
+    .goog-te-gadget,
+    .goog-logo-link {
+      color: $white;
+    }
+
+    .goog-logo-link img {
+      margin-left: .5rem;
+      margin-right: .5rem;
+     transform: scale(1.25);
+    }
+
+  }
 
   // Remove border radius when global '$enable-rounded' is set to true 
 
@@ -110,11 +143,35 @@ $primary-nav-dropdown-item-color: $body-color;
     border-radius: 0;
   }
 
+  button[data-toggle="collapse"]{
+    color: $global-header-toggle-button-color;
+  }
+
+  .nav-link,
+  .dropdown-menu a {
+    color: $primary-nav-link-color;
+  }
+
+  hr, 
+  .border-top{
+    border-color: $global-header-border-color !important;
+  }
+ 
+  // Add opacity to toggle buttons on 'expanded'
+  
+  button[data-toggle="collapse"]{
+
+    &[aria-expanded="true"]{
+      @extend .opacity-50;
+      @include transition;
+    }
+
+  }
+
   // Set primary nav color and active states (both '.nav-pills' and '.nav-right')
 
   .nav-link {
     font-weight: $primary-nav-link-font-weight;
-    color: $primary-nav-link-color;
 
     &.active {
       text-decoration: underline;
@@ -125,23 +182,19 @@ $primary-nav-dropdown-item-color: $body-color;
   // Primary Nav (.nav-pills)
 
   .nav-pills {
-    border-left: $border-width solid $border-color;
-
+    @extend .nav-fill;
+    
+    border-left: $border-width solid $global-header-border-color;
     margin-left: -$border-width;
     margin-right: -$border-width;
 
-    @extend .nav-fill;
-
     .nav-link {
-      border-right: $border-width solid $border-color;
+      background: transparent;
+      border-right: $border-width solid $global-header-border-color;
 
       &.active {
-        background-color: $primary-nav-pills-link-active-bg-color;
-      }
-
-      &[aria-expanded="true"] {
-        color: currentColor;
-        background-color: $primary-nav-dropdown-bg-color;
+        text-decoration: underline;
+        color: $primary-nav-link-active-color;
       }
     }
 
@@ -149,68 +202,61 @@ $primary-nav-dropdown-item-color: $body-color;
 
   // Set .dropdown-menu styles
 
-  #nav-primary {
+  .dropdown-menu {
+    border: none;
+    padding: $nav-link-padding-y $nav-link-padding-x;
+    background-color: $primary-nav-dropdown-bg-color;
+  }
+
+  // Remove unneeded margin from .dropdown-menu within nav
+
+  .nav:not(.nav-pills) {
+    .dropdown-menu {
+      margin: 0;
+    }
+  }
+
+  // Improve .dropdown-menu when present within .nav-pills
+
+  .nav-pills .dropdown-menu {
+    width: calc(100% - #{$border-width});
+    left: 0;
+    margin: 0;
+
+    // When dropdowns are flush left or right, remove Bootrap transform and reposition y axis
+    transform: none !important;
+    top: 100% !important;
+  }
+
+
+  @include media-breakpoint-down(md) {
+    
+    .nav-item {
+      border-top: 1px solid $global-header-border-color;
+      width: 100%;
+    }
+    
+    .nav-item,
+    .dropdown-menu {
+      background: none;
+    }
 
     .dropdown-menu {
-      border: none;
-      padding: $nav-link-padding-y $nav-link-padding-x;
-      background-color: $primary-nav-dropdown-bg-color;
+      position: static !important;
+      width: 100%;
 
-      a {
-        color: $primary-nav-dropdown-item-color;
-      }
-    }
-
-    // Remove unneeded margin from .dropdown-menu within nav
-
-    .nav:not(.nav-pills) {
-      .dropdown-menu {
-        margin: 0;
-      }
-    }
-
-    // Improve .dropdown-menu when present within .nav-pills
-
-    .nav-pills .dropdown-menu {
-      width: calc(100% - #{$border-width});
-      left: 0;
-      margin: 0;
-
-      // When dropdowns are flush left or right, remove Bootrap transform and reposition y axis
+      -webkit-transform: none !important;
       transform: none !important;
-      top: 100% !important;
     }
 
-    @include media-breakpoint-down(md) {
+    .dropdown-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      .nav-item {
-        border-top: 1px solid $border-color;
-        width: 100%;
-      }
-
-      .nav-item,
-      .dropdown-menu {
-        background: none;
-      }
-
-      .dropdown-menu {
-
-        position: static !important;
-        width: 100%;
-
-        -webkit-transform: none !important;
-        transform: none !important;
-      }
-
-      .dropdown-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @if $enable-caret {
-          &[aria-expanded="true"]::after {
-            @include caret-up;
-          }
+      @if $enable-caret {
+        &[aria-expanded="true"]::after {
+          @include caret-up;
         }
       }
     }
@@ -563,7 +609,7 @@ $bg-fixed-height: 350px;
 // Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
 // Link lists are ideal for horizontal navs when supporting 'rtl' 
 
-$extensible-list-margin: 0.5em;
+$extensible-list-margin: 0.75em;
 
 @mixin extensible-list-stack {
   margin-bottom: $extensible-list-margin;

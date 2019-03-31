@@ -72,7 +72,7 @@ $background-image-path: '../images/feature/';
   $cover: true
   ) {
 
-  @if $extension=='.svg' {
+  @if $extension == '.svg' {
     background-image: url($background-image-path + $image + $extension);
     background-image: url($background-image-path + $image + $extension), none;
   }

@@ -29,21 +29,19 @@
 
         <div class="container-fluid wide">
 
-            <div class="row align-items-center py-2">
+            <div class="row align-items-center py-1">
 
                 <div class="col">
                     <p class="d-none d-md-flex">Name of Office</p>
                 </div>
                 <!-- .col -->
 
-                <div class="col-auto">
+                <div class="col-auto my-n1">
 
                     <ul class="extensible-list horizontal">
                         <li>
-                            <a href="http://www1.nyc.gov/home/search/index.page" title="Search all NYC.gov websites" target="_blank">Search all NYC.gov websites</a>
-                        </li>
-                        <li>
-                            <a href="http://www1.nyc.gov/" title="311" target="_blank">311</a>
+                            <a class="btn btn-info text-white rounded-0" href="#" title="Login"
+                                target="_blank">Login</a>
                         </li>
                         <li>
                             <a href="https://www1.nyc.gov/" title="NYG.gov" target="_blank">
@@ -75,16 +73,31 @@
                     <div class="col-lg py-2">
                         <div class="d-flex justify-content-center justify-content-lg-start">
                             <a class="align-self-center" href="#" title="Home">
-                                <img src="./images/nyc-logo-placeholder.svg" alt="NYC Generic Logo">
+
+                                <!-- Placeholder logo, replace with your own -->
+
+                                <svg id="nyc-logo-placeholder" data-name="NYC Bubble Logo"
+                                    xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60">
+                                    <title>NYC Bubble Logo Placeholder</title>
+                                    <polygon points="176.25 26.204 180 22.5 180 11.251 168.75 0 131.25 0 120.001 11.251 120.001 3.75 116.25 0 101.25 0 97.5
+                                        3.75 97.5 11.251 90.001 18.75 82.5 11.251 82.5 3.75 78.75 0 63.75 0 60.001 3.75 56.25 0 41.25 0 37.501 3.75
+                                        37.501 18.75 18.751 0 3.751 0 0 3.75 0 56.25 3.751 60 18.751 60 22.501 56.25 22.501 41.25 41.25 60 56.25 60
+                                        60.001 56.25 60.001 26.25 78.75 45 78.75 56.25 82.5 60 97.5 60 101.25 56.25 101.25 45 120.001 26.25 120.001
+                                        48.751 131.25 60 168.75 60 180 48.751 180 37.5 176.25 33.745 157.5 33.745 157.5 37.5 142.5 37.5 142.5 22.5 157.5
+                                        22.5 157.5 26.204 176.25 26.204" />
+                                    <path
+                                        d="M177.32981,2.5304c.3495,0,.65757-.03335.65757-.44445,0-.34343-.33634-.38486-.61614-.38486h-.56365V2.5304Zm-.52222,1.61111h-.46566V1.30412h1.07678c.68584,0,1.03433.23939,1.03433.81516a.72555.72555,0,0,1-.73939.77576l.795,1.24647h-.52829L177.247,2.92836h-.43939Zm.5081-3.58486a1.99063,1.99063,0,0,0-1.97477,2.1182,1.97357,1.97357,0,1,0,3.93637,0,1.98825,1.98825,0,0,0-1.9616-2.1182m0,4.68282a2.46874,2.46874,0,0,1-2.52427-2.56462,2.51762,2.51762,0,1,1,5.03436,0,2.48592,2.48592,0,0,1-2.51009,2.56462" />
+                                </svg>
+
                             </a>
                         </div>
                     </div>
                     <!-- .col -->
 
-                    <!-- separator -->
-                    <div class="col-12 border-top d-lg-none"></div>
-
                     <div class="col-lg-auto">
+
+                        <!-- Separator -->
+                        <hr class="mx-n2 d-lg-none">
 
                         <div class="d-lg-flex align-items-center">
 
@@ -92,21 +105,24 @@
 
                             <ul class="extensible-list horizontal justify-content-between my-2 d-lg-none">
                                 <li>
-                                    <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
-                                        aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
+                                    <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse"
+                                        data-target="#nav-primary" aria-controls="nav-primary" aria-expanded="false"
+                                        aria-label="Toggle navigation">
                                         <span class="fas fa-bars fa-lg" role="img"></span>
                                     </button>
                                 </li>
 
                                 <li>
-                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
+                                    <button class="no-btn-style" type="button" data-toggle="collapse"
+                                        data-target="#global-language" aria-controls="global-language"
                                         aria-expanded="false">
                                         <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
                                     </button>
                                 </li>
-                                
+
                                 <li>
-                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
+                                    <button class="no-btn-style" type="button" data-toggle="collapse"
+                                        data-target="#global-search" aria-controls="global-search"
                                         aria-expanded="false">
                                         <span class="fas fa-search fa-lg" title="Search" role="img"></span>
                                     </button>
@@ -119,8 +135,9 @@
 
                                     <div class="nav-item dropdown">
 
-                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-01" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false" title="Nav Item">
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-01"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            title="Nav Item">
                                             Nav Item
                                         </a>
 
@@ -139,8 +156,9 @@
 
                                     <div class="nav-item dropdown">
 
-                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-02" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false" title="Nav Item">
+                                        <a class="nav-link dropdown-toggle active" href="#" id="nav-item-02"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            title="Nav Item">
                                             Nav Item
                                         </a>
 
@@ -159,8 +177,9 @@
 
                                     <div class="nav-item dropdown">
 
-                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-03" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false" title="Nav Item">
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-03"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            title="Nav Item">
                                             Nav Item
                                         </a>
 
@@ -178,21 +197,23 @@
                                     <!-- .nav-item -->
 
                                 </nav>
-                                                
+
                             </div>
 
                             <!-- Desktop Toggle Buttons -->
 
                             <ul class="extensible-list horizontal d-none d-lg-flex">
                                 <li>
-                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
+                                    <button class="no-btn-style" type="button" data-toggle="collapse"
+                                        data-target="#global-language" aria-controls="global-language"
                                         aria-expanded="false">
                                         <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
                                     </button>
                                 </li>
-                                
+
                                 <li>
-                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
+                                    <button class="no-btn-style" type="button" data-toggle="collapse"
+                                        data-target="#global-search" aria-controls="global-search"
                                         aria-expanded="false">
                                         <span class="fas fa-search fa-lg" title="Search" role="img"></span>
                                     </button>
@@ -201,7 +222,7 @@
 
                         </div>
                         <!-- .d-flex -->
-                        
+
                     </div>
                     <!-- .col -->
 
@@ -215,13 +236,13 @@
         <!-- .wrap-header -->
 
         <div class="container-fluid border-top collapse" id="global-language">
-            <div class="narrow py-3" aria-label="Language">
+            <div class="narrow py-2" aria-label="Language">
                 <div id="google_translate_element"></div>
             </div>
         </div>
 
         <div class="container-fluid border-top collapse" id="global-search">
-            <form class="narrow py-3" aria-label="Search" role="search">
+            <form class="narrow py-2" aria-label="Search" role="search">
                 <div class="input-group">
                     <label class="sr-only" for="global-search-bar">Search</label>
                     <input class="form-control form-control-lg" id="global-search-bar" placeholder="Search">

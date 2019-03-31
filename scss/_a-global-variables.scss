@@ -239,8 +239,9 @@ $dark: #0A1438;
 
 // Add white to the color map
 
-$theme-colors: ("white": $white,
-"black": $black,
+$theme-colors: (
+  "white": $white,
+  "black": $black,
 );
 
 ////////////////////////////////////////
