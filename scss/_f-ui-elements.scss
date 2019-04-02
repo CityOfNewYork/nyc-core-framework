@@ -234,6 +234,12 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     .nav-item {
       border-top: 1px solid $global-header-border-color;
       width: 100%;
+
+      // Left align nav items that are not dropdowns
+      
+      &.nav-link{ 
+        text-align: left;
+      }
     }
     
     .nav-item,
