@@ -1262,16 +1262,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/_nyc-core-framework-starter-files/css/theme-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_nyc-core-framework-starter-files/css/theme-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/_nyc-core-framework-starter-files/css/theme.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1296,14 +1286,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/_nyc-core-framework-starter-files/global-nav-right.html",
-		"oF": 0
-		},
-	"/_nyc-core-framework-starter-files/home-nav-right.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/_nyc-core-framework-starter-files/home-nav-right.html",
 		"oF": 0
 		},
 	"/_nyc-core-framework-starter-files/images/nyc-logo-footer.svg": {
@@ -2124,6 +2106,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/_nyc-core-framework-starter-files/scss/_h-nyc-subway-icons.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/_nyc-core-framework-starter-files/scss/_i_prism-theme.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_nyc-core-framework-starter-files/scss/_i_prism-theme.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -3464,35 +3459,35 @@
 		},
 	"/images/feature/bridge-lights.jpg": {
 		"ft": 16384,
-		"iS": 194917,
+		"iS": 109996,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/bridge-lights.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/brooklyn-heights-walk.jpg": {
 		"ft": 16384,
-		"iS": 313196,
+		"iS": 648013,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/brooklyn-heights-walk.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/city-hall-flags.jpg": {
 		"ft": 16384,
-		"iS": 142677,
+		"iS": 143567,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/city-hall-flags.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/crosswalk-umbrella.jpg": {
@@ -3508,13 +3503,13 @@
 		},
 	"/images/feature/manhattan-bridge.jpg": {
 		"ft": 16384,
-		"iS": 452545,
+		"iS": 247989,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/manhattan-bridge.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/nyc-housing-portal.jpg": {
@@ -3530,13 +3525,13 @@
 		},
 	"/images/feature/nyc-skyline-at-night.jpg": {
 		"ft": 16384,
-		"iS": 109996,
+		"iS": 194909,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/nyc-skyline-at-night.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/nyc-skyline-winter.jpg": {
@@ -3563,7 +3558,7 @@
 		},
 	"/images/feature/opportunity-starts-now.jpg": {
 		"ft": 16384,
-		"iS": 39721,
+		"iS": 46223,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/opportunity-starts-now.jpg",
@@ -3618,13 +3613,13 @@
 		},
 	"/images/feature/walk-in-the-park.jpg": {
 		"ft": 16384,
-		"iS": 145061,
+		"iS": 142620,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/walk-in-the-park.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/feature/whitehall-terminal.jpg": {
@@ -3640,24 +3635,24 @@
 		},
 	"/images/feature/winter-policeman.jpg": {
 		"ft": 16384,
-		"iS": 99857,
+		"iS": 210553,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/feature/winter-policeman.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/figures/bikers.jpg": {
 		"ft": 16384,
-		"iS": 449266,
+		"iS": 452206,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/figures/bikers.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/logo-accessibility.svg": {

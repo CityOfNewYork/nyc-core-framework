@@ -92,15 +92,13 @@ $primary-nav-link-color: $body-color;
 // Global header link active (current page) color
 $primary-nav-link-active-color: $secondary;
 
-// Primary nav dropdown background color
-$primary-nav-dropdown-bg-color: $white;
-
 // Use dark header settings
-$global-header-dark: false;
+$global-header-dark: true;
+$global-header-dark-color: $dark;
 
 // Reset variables for dark header
 @if $global-header-dark {
-  
+
   $global-header-border-color: rgba(black, 0.5);
   $primary-nav-link-color: $white;
   $primary-nav-dropdown-bg-color: $dark;
@@ -114,7 +112,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
   @if $global-header-dark {
 
-    background-color: $dark;
+    background-color: $global-header-dark-color;
 
     #nyc-logo-placeholder {
       fill: $white;
@@ -205,7 +203,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   .dropdown-menu {
     border: none;
     padding: $nav-link-padding-y $nav-link-padding-x;
-    background-color: $primary-nav-dropdown-bg-color;
+    background-color: $global-header-dark-color;
   }
 
   // Remove unneeded margin from .dropdown-menu within nav

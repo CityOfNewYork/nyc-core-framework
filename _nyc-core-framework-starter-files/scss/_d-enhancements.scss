@@ -17,27 +17,29 @@ In this file:
 // A. Generic Tags
 ////////////////////////////////////////
 
-html{ background: $dark; }
+html {
+  background: $dark;
+}
 
-body{
+body {
   position: relative;
 
   // Font smoothing
 
-	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   // Set Overflow (optional) 
-  
+
   overflow-x: hidden;
 
   // Set min and max width of body
 
-	min-width: 350px;
+  min-width: 350px;
   max-width: $site-width;
-  
+
   // Set body font-size to accessible size
-  
+
   font-size: $fs-rg;
 
   // Center body
@@ -47,9 +49,17 @@ body{
 
 // Make all images responsive by default
 
-img{ @extend .img-fluid; }
+img {
+  @extend .img-fluid;
+}
 
-.figure { @extend .mb-0; }
+.figure {
+  @extend .mb-0;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
 
 ////////////////////////////////////////
 // B. Margins
@@ -57,25 +67,28 @@ img{ @extend .img-fluid; }
 
 // Remove bottom margins on ':last-child' selectors 
 
-h1, 
-h2, 
+h1,
+h2,
 h3,
 h4,
 h5,
 p,
-a, 
-ul, 
-li, 
-dl, 
-dd, 
-address
-{ 
-	&:last-child{ margin-bottom: 0; }
+a,
+ul,
+li,
+dl,
+dd,
+address {
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-// Remove Bootstrap's default margin on <hr> tags 
+// Remove Bootstrap's default margin on <hr>  tags 
 
-hr{ margin: 0; }
+hr {
+  margin: 0;
+}
 
 ////////////////////////////////////////
 // C. Accessibility
@@ -83,23 +96,30 @@ hr{ margin: 0; }
 
 // Right-to-left language translation
 
-html[dir="rtl"]{ 
+html[dir="rtl"] {
 
-  .text-right{ text-align: left !important; }
-  .text-left{ text-align: right !important; }
+  .text-right {
+    text-align: left !important;
+  }
+
+  .text-left {
+    text-align: right !important;
+  }
 
   // Flip select tags background (arrows) from right to left
-  
-  select:not(.notranslate):not(.goog-te-combo){
+
+  select:not(.notranslate):not(.goog-te-combo) {
     background-position-x: 0.75rem !important;
     padding: 0.375rem 0.75rem 0.375rem 1.75rem;
   }
 
-  select.notranslate{ text-align: left !important; }
+  select.notranslate {
+    text-align: left !important;
+  }
 
   // Fix font tag (added by Goggle Translate)
 
-  button > font{
+  button > font {
     display: inline;
     line-height: 0;
   }
@@ -107,23 +127,32 @@ html[dir="rtl"]{
   // Apply right justification all text
 
   body,
-  .dropdown-menu
-  { text-align: right; }
+  .dropdown-menu {
+    text-align: right;
+  }
+
+  // Change position of .dropdown-menu within nav
+
+  #nav-primary .nav:not(.nav-pills) {
+    .dropdown-menu {
+      right: 0;
+      left: unset;
+    }
+  }
 
   // Apply left justification to all extensible-list selectors excluding those that are centered 
 
-  .extensible-list:not(.justify-content-center){
-    .horizontal{
+  .extensible-list:not(.justify-content-center) {
+    .horizontal {
       justify-content: flex-start !important;
     }
   }
-    
+
   // Flip accordion and button toggles (found in _e-ui-elements.scss) from right to left
 
-  .accordion-group,  
-  .btn-toggle
-  { 
-    a[data-toggle="collapse"]{
+  .accordion-group,
+  .btn-toggle {
+    a[data-toggle="collapse"] {
       &::after {
         margin-left: 0;
         margin-right: auto;
@@ -133,19 +162,22 @@ html[dir="rtl"]{
 
   // Remove Google's added padding and margin for rtl translation
 
-  ul, 
-  ol, 
-  dl 
-  { -webkit-padding-start: 0 !important;  }
+  ul,
+  ol,
+  dl {
+    -webkit-padding-start: 0 !important;
+  }
 
-  dd { -webkit-margin-start: 0 !important; }
+  dd {
+    -webkit-margin-start: 0 !important;
+  }
 
   // Flip Custom Control Background from left to right
 
-  .custom-control-label{
-    &::before, 
-    &::after
-    {
+  .custom-control-label {
+
+    &::before,
+    &::after {
       right: -($custom-control-gutter + $custom-control-indicator-size);
     }
   }
@@ -156,102 +188,121 @@ html[dir="rtl"]{
     padding-right: ($custom-control-gutter + $custom-control-indicator-size);
   }
 
-  .sidebar-fixed-width{
+  .sidebar-fixed-width {
     @include media-breakpoint-up(xl) {
-        border-left: none;
-        border-right: $border-width solid $border-color;
+      border-left: none;
+      border-right: $border-width solid $border-color;
     }
   }
 
-} // end RTL
+}
+
+// end RTL
 
 // Add 'text-decoration: underline' on particular ':hover' and ':focus' selectors
 
 a,
-.btn, 
+.btn,
 .nav-link,
-.nav-item, 
-.dropdown-item
-{
-  @include hover-focus{
-    text-decoration: underline; 
+.nav-item,
+.dropdown-item {
+  @include hover-focus {
+    text-decoration: underline;
   }
 }
 
 .btn-toggle [data-toggle="collapse"],
 .accordion-group [data-toggle="collapse"],
 a.card,
-#back-to-top a, 
-.btn.file-choose
-{
-  @include hover-focus{
+#back-to-top a,
+.btn.file-choose {
+  @include hover-focus {
     text-decoration: none;
-    > span.title{ text-decoration: underline; }
-  }
-}
 
-input[type="file"]{
-  &:focus + label{ 
-    .title{
+    > span.title {
       text-decoration: underline;
     }
   }
 }
 
-.disabled{
-  @include hover-focus{
-    text-decoration: none;
-    box-shadow: none;
-    cursor: not-allowed; 
+input[type="file"] {
+  &:focus+label {
+    .title {
+      text-decoration: underline;
+    }
   }
 }
 
-a:not(.btn).disabled{ opacity: 0.5; }
-
-.has-icon{
-  @include hover-focus{
-    text-decoration: none !important;
-    span.title{ text-decoration: underline; }
+.disabled {
+  @include hover-focus {
+    text-decoration: none;
+    box-shadow: none;
+    cursor: not-allowed;
   }
-  
-  &.active{
-    span.title{ text-decoration: underline; }
+}
+
+a:not(.btn).disabled {
+  opacity: 0.5;
+}
+
+.text-reset{
+  text-decoration: underline;
+}
+
+.has-icon {
+  @include hover-focus {
+    text-decoration: none !important;
+
+    span.title {
+      text-decoration: underline;
+    }
+  }
+
+  &.active {
+    span.title {
+      text-decoration: underline;
+    }
   }
 }
 
 // Add visible underline to links within the #primary-content area
 
-#primary-content{
-  p > a:not([class]){ text-decoration: underline; }
-} 
+#primary-content {
+  p> a:not([class]) {
+    text-decoration: underline;
+  }
+}
 
 ////////////////////////////////////////
 // D. Forms
 ////////////////////////////////////////
 
-legend, 
-.legend{
+legend,
+.legend {
 
   // Remove strange default styles on 'legend' selectors
   // Styles for fieldset and legend are found in _f-ui-elements.scss
-  
+
   display: block;
   float: left;
   margin: 0;
   padding: 0;
   width: 100%;
   line-height: 1.5;
-  + * { clear: both; }
-  
+
+  +* {
+    clear: both;
+  }
+
 }
 
-fieldset{
+fieldset {
   border: $border-width solid $border-color;
   margin-bottom: $spacer-5;
   @extend .clearfix;
 }
 
-// Add 'custom-select' class to all <select> tags
+// Add 'custom-select' class to all <select>  tags
 
 select {
   -webkit-appearance: none;
@@ -259,40 +310,39 @@ select {
   @extend .custom-select;
 }
 
-label, 
-.label
-{ 
+label,
+.label {
   font-size: $fs-md;
   margin-bottom: $label-margin-bottom;
 }
 
 // Add accessible box-shadow to 'custom-control-label'
 
-.custom-control-label{
-  &::before{ 
+.custom-control-label {
+  &::before {
     box-shadow: $accessible-box-shadow;
   }
 }
 
 // Remove border-radius on 'custom-checkbox' when global $border-radius is set to true
 
-.custom-checkbox .custom-control-label{
-  &::before{ 
+.custom-checkbox .custom-control-label {
+  &::before {
     border-radius: 0;
   }
 }
 
 // Google Translate dropdown
 
-#google_translate_element{
+#google_translate_element {
   text-align: center;
 
-  select{
+  select {
     @extend .form-control-lg;
     margin-bottom: $spacer-1;
   }
 
-  .goog-logo-link{
+  .goog-logo-link {
     margin-left: auto;
     margin-right: auto;
   }
@@ -303,25 +353,43 @@ label,
 // F. Tables
 ////////////////////////////////////////
 
-// Remove Bootstrap's Default doouble bottom border on <th> 
+// Remove Bootstrap's Default doouble bottom border on <th>  
 
-thead th { @extend .border-bottom-0; }
+thead th {
+  @extend .border-bottom-0;
+}
 
 ////////////////////////////////////////
 // F. Font size media queries
 ////////////////////////////////////////
 
-@include media-breakpoint-down(md){
-  .display-1{ font-size: $display1-size * 0.75; }
-  .display-2{ font-size: $display2-size * 0.75; }
-  .display-3{ font-size: $display3-size * 0.75; }
-  .display-4{ font-size: $display4-size * 0.75; }
+@include media-breakpoint-down(md) {
+  .display-1 {
+    font-size: $display1-size * 0.75;
+  }
+
+  .display-2 {
+    font-size: $display2-size * 0.75;
+  }
+
+  .display-3 {
+    font-size: $display3-size * 0.75;
+  }
+
+  .display-4 {
+    font-size: $display4-size * 0.75;
+  }
 }
 
-@include media-breakpoint-down(sm){
-  main{
-    .fs-xl{ font-size: $fs-lg; }
-    .fs-lg{ font-size: $fs-rg; }
+@include media-breakpoint-down(sm) {
+  main {
+    .fs-xl {
+      font-size: $fs-lg;
+    }
+
+    .fs-lg {
+      font-size: $fs-rg;
+    }
   }
 }
 
@@ -335,9 +403,9 @@ thead th { @extend .border-bottom-0; }
 @supports (position: -webkit-sticky) or (position: sticky) {
   .sticky-top {
     position: sticky;
-    position:-webkit-sticky;
+    position: -webkit-sticky;
     top: 0;
-    z-index: 1020; 
+    z-index: 1020;
   }
 }
 
@@ -345,17 +413,27 @@ thead th { @extend .border-bottom-0; }
 // H. Internet Explorer 
 ////////////////////////////////////////
 
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
 
   // Display flex bug fix
   .card,
-  .figure{ display: block !important; }
+  .figure {
+    display: block !important;
+  }
 
   // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
-  .narrow{ max-width: $narrow-width-ie !important; }
-  .medium{ max-width: $medium-width-ie !important; }
-  
+  .narrow {
+    max-width: $narrow-width-ie !important;
+  }
+
+  .medium {
+    max-width: $medium-width-ie !important;
+  }
+
   // IE min-width fix
-  .fixed-height{  height: 1em; }
-  
+  .fixed-height {
+    height: 1em;
+  }
+
 }
