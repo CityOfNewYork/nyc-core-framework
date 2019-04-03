@@ -23,11 +23,16 @@
 
         html, 
         body,
-        iframe
+        iframe, 
+        #primary-content
         { min-height: 100vh; }
 
         @media only screen and (min-width: 960px) {
-            #wrap-content{ min-height: 100vh; }
+            #wrap-content, 
+            .panel,
+            iframe,
+
+            { min-height: 100vh; }
         } 
 
         iframe {
@@ -60,7 +65,7 @@
 
     <main id="content" role="main">
 
-        <div class="row no-gutters bg-opacity-black-10 h-100" id="wrap-content">
+        <div class="row no-gutters bg-opacity-black-10" id="wrap-content">
 
             <div class="col-lg-2">
 
@@ -195,7 +200,7 @@
 
             <div class="col-lg-10 bg-white" id="primary-content">
 
-                <div class="panel overflow-auto h-100" id="introduction">
+                <div class="panel overflow-auto" id="introduction">
 
                     <div class="container-fluid my-6">
 
