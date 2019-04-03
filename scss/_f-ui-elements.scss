@@ -203,9 +203,11 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   .dropdown-menu {
     border: none;
     padding: $nav-link-padding-y $nav-link-padding-x;
+
     @if $global-header-dark {
       background-color: $global-header-dark-color;
     }
+    
   }
 
   // Remove unneeded margin from .dropdown-menu within nav
