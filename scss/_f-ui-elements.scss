@@ -93,7 +93,7 @@ $primary-nav-link-color: $body-color;
 $primary-nav-link-active-color: $secondary;
 
 // Use dark header settings
-$global-header-dark: true;
+$global-header-dark: false;
 $global-header-dark-color: $dark;
 
 // Reset variables for dark header
@@ -203,7 +203,9 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   .dropdown-menu {
     border: none;
     padding: $nav-link-padding-y $nav-link-padding-x;
-    background-color: $global-header-dark-color;
+    @if $global-header-dark {
+      background-color: $global-header-dark-color;
+    }
   }
 
   // Remove unneeded margin from .dropdown-menu within nav
