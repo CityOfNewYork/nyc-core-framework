@@ -41,6 +41,14 @@
 		"oAP": "/__archive/featured-panels.html",
 		"oF": 0
 		},
+	"/__archive/fonts.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/__archive/fonts.html",
+		"oF": 0
+		},
 	"/__archive/map.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3429,14 +3437,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/example-mixed-nav.html",
-		"oF": 0
-		},
-	"/fonts.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/fonts.html",
 		"oF": 0
 		},
 	"/form.html": {
