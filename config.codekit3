@@ -3309,16 +3309,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/css/theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/css/theme-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/css/theme.css.map": {
 		"cB": 0,
 		"ft": 8192,
