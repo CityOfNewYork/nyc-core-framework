@@ -20,11 +20,6 @@
     <!-- NYC Theme CSS -->
     <link rel="stylesheet" href="./css/theme.css">
 
-    <style>
-        h3 {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
 <body>
@@ -76,9 +71,23 @@
                 <p>
                     Accessible maps can be created and customized by utilizing the <a
                         href="https://maps.nyc.gov/nyc-lib/" target="_blank"><code>nyc-lib</code></a> npm library
-                    developed and maintained by DoITT. It requires a number of css and javascript dependencies which are
+                    developed and maintained by DoITT.
+                </p>
+                <b>Please Note:</b>
+                <p>Using geolocation services requires access to the Geoclient API. If you are not an NYC employee, you
+                    must first get your Geoclient App ID and App Key from the
+                    <a href="https://developer.cityofnewyork.us/api/geoclient-api">NYC Developer Portal</a>. Please
+                    Register if you don't have an NYC Developer Portal account. Developer Management > View or Create a
+                    New Project.
+                    <br></br>
+                    If you work for NYC you may contact the DoITT GIS unit for your App ID and App Key to use a DoITT
+                    hosted and supported version of Geoclient.
+                </p>
+                <br>
+                <p>
+                    Creating a map requires a number of css and javascript dependencies which are
                     listed below. Here is an example of a map that loads facility data from a csv file, and displays the
-                    locations in a separate div.
+                    locations in a separate <code>div</code>.
                 </p>
             </div>
             <div class="medium my-5">
@@ -100,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="medium my-5">
+            <div class="medium my-3">
                 <p>To begin customizing your own maps, include the following scripts in your HTML file:</p>
 
                 <pre>
@@ -115,8 +124,9 @@
                 </pre>
             </div>
 
-            <div class="medium my-5">
-                <p>All maps require a div with a map id. Create a div in the body of your html like so:</p>
+            <div class="medium my-3">
+                <p>All maps require a <code>div</code> with a map id. Create a <code>div</code> in the body of your html
+                    like so:</p>
                 <pre>
                     <code class="language-html">
                         &lt;div id='map'&gt;&lt;/div&gt;
@@ -124,8 +134,9 @@
                 </pre>
             </div>
 
-            <div class="medium my-5">
-                <p>In a separate Javascript file or between script tags, create a nyc.ol.FrameworkMap object to get your
+            <div class="medium my-3">
+                <p>In a separate Javascript file or between script tags, create a new <code>nyc.ol.FrameworkMap</code>
+                    object to get your
                     map to appear on the screen:
                 </p>
                 <pre>
@@ -133,26 +144,19 @@
     var map = new nyc.ol.FrameworkMap({
         mapTarget: '#map', 
         startAt: '2 Metrotech Center'
-        geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+        geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=#&app_id=#'
     });
                         </code>    
                     </pre>
             </div>
-
-            <!-- map - no search -->
-            <div class="medium my-5">
-                <p>The following map should now be displayed on your page:</p>
-                <!-- <h4>No Search</h4> -->
-                <div id="map1"></div>
-
-            </div>
-
-
-            <div class="medium my-5">
+            <div class="medium">
                 <div class="extensible-list">
                     <li>
                         <code>{string} mapTarget</code> (required) - The target element for the map. This must be
                         the same as the id we created above.
+                    </li>
+                    <li>
+                        <code>{string} startAt</code> (optional) - The map will be centered at this location.
                     </li>
                     <li>
                         <code>{string} geoclientUrl</code> (required) - The URL for the Geoclient geocoder with
@@ -160,15 +164,14 @@
                         this must not be null.
                         Request an app_id and app_key from the NYC DoITT GIS Dept to begin making your own applications.
                     </li>
-                    <li>
-                        <code>{string} startAt</code> (optional) - The map will be centered at this location.
-                    </li>
                 </div>
+                <br>
+                <p>The following map should now be displayed on your page:</p>
+                <div id="map1"></div>
             </div>
 
             <div class="medium my-5">
                 <h3>Search Options</h3>
-
 
                 <div class="medium my-3">
                     <div class="extensible-list">
@@ -181,59 +184,75 @@
                         </li>
                     </div>
                 </div>
-
-                <h5>Embedded Search</h5>
-
-                <pre>
-                    <code class='language-js' > 
-var map = new nyc.ol.FrameworkMap({
-    mapTarget: '#map', 
-    startAt: '2 Metrotech Center',
-    searchTarget: true,
-    geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
-});
-                    </code>    
-                </pre>
-                <!-- map - built-in search -->
-                <div id="map2"></div>
-
-                <br><br>
-
-                <h5>External Search</h5>
-
-                <pre>
-                    <code class='language-js' > 
-                        var map = new nyc.ol.FrameworkMap({
-                            mapTarget: '#map', 
-                            startAt: '2 Metrotech Center',
-                            searchTarget: '#map-search',
-                            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
-                        });
-                    </code>    
-                </pre>
-                <p>The following HTML added will place the search bar above the map as shown below. This is just an
-                    example and you can customize it any way you want. Make sure the search target and the search
-                    input's id
-                    match up. </p>
-                <pre>
-                    <code class="language-html">
-                        &lt;div id='map'&gt;&lt;/div&gt;
-                        &lt;div class="my-2"&gt;
-                            &lt;input class="form-control form-control-lg" id="map-search" placeholder="Search Address"&gt;
-                        &lt;/div&gt;
-                    </code>
-                </pre>
-                <!-- map - external search -->
-                <br>
-                <div class="my-2">
-                    <input class="form-control form-control-lg" id="map-search1" placeholder="Search Address">
+                <div class="medium my-3">
+                    <h5>Embedded Search</h5>
+                    <div id="map2"></div>
+                    <br>
+                    <pre>
+                        <code class='language-js' > 
+    var map = new nyc.ol.FrameworkMap({
+        mapTarget: '#map', 
+        startAt: '2 Metrotech Center',
+        searchTarget: true,
+        geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=#&app_id=#'
+    });
+                        </code>    
+                    </pre>
                 </div>
-                <div id="map3"></div>
+
+                <div class="medium my-3">
+                    <h5>External Search</h5>
+                    <div class="my-2">
+                        <input class="form-control form-control-lg" id="map-search1" placeholder="Search Address">
+                    </div>
+                    <div id="map3"></div>
+                    <br>
+                    <pre>
+                        <code class='language-js' > 
+                            var map = new nyc.ol.FrameworkMap({
+                                mapTarget: '#map', 
+                                startAt: '2 Metrotech Center',
+                                searchTarget: '#map-search',
+                                geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=#&app_id=#'
+                            });
+                        </code>    
+                    </pre>
+                    <p>The following HTML added will place the search bar above the map as shown above. This is just an
+                        example and you can customize it any way you want. Make sure the search target and the search
+                        input's id
+                        match up. </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div id='map'&gt;&lt;/div&gt;
+                            &lt;div class="my-2"&gt;
+                                &lt;input class="form-control form-control-lg" id="map-search" placeholder="Search Address"&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
 
             </div>
 
             <div class="medium my-5">
                 <h3>Loading Data</h3>
+
+                <div class="my-2">
+                    <input class="form-control form-control-lg" id="map-search4" placeholder="Search Address">
+                </div>
+
+                <div id="map4"></div>
+                <div class="accordion-group my-2" role="tablist" id="accordion-01">
+                    <div class="card mb-1">
+                        <a class="card-header h4 collapse collapsed" id="list-btn" data-toggle="collapse" href="#list4"
+                            role="tab" aria-expanded="false" aria-controls="list">
+                            <span class="title" role="heading" aria-level="3">DOHMH POD Locations</span>
+                        </a>
+                        <div class="collapse" id="list4" role="tabpanel" aria-labelledby="list-btn"
+                            data-parent="#accordion-01">
+                        </div>
+                    </div>
+                </div>
+
                 <div class='extensible-list'>
                     <li>
                         <code>{string} facilityUrl</code> (required) - The URL for the facility features data. If
@@ -242,7 +261,8 @@ var map = new nyc.ol.FrameworkMap({
                     </li>
                     <li>
                         <code>{string} listTarget</code> (optional) - The target element for facility list. If you
-                        plan to display a list of facilities, create a div element like you did with the map and
+                        plan to display a list of facilities, create a <code>div</code> element like you did with the
+                        map and
                         include an id for the list, and pass it to the constructor.
                     </li>
 
@@ -251,6 +271,7 @@ var map = new nyc.ol.FrameworkMap({
                         be 'facilities' by default.
                     </li>
                 </div>
+
                 <br>
                 <pre>
                     <code class='language-js' > 
@@ -260,7 +281,7 @@ var map = new nyc.ol.FrameworkMap({
                             listTarget: '#list',
                             facilityType: 'Points of Distribution',
                             facilityUrl: 'map-data/pod.csv',
-                            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+                            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=#&app_id=#'
                         });
                     </code>    
                 </pre>
@@ -274,28 +295,6 @@ var map = new nyc.ol.FrameworkMap({
                         &lt;/div&gt;
                     </code>
                 </pre>
-
-                <!-- map - list w/collapsible -->
-                <div class="medium my-5">
-                    <div class="my-2">
-                        <input class="form-control form-control-lg" id="map-search4" placeholder="Search Address">
-                    </div>
-
-                    <div id="map4"></div>
-                    <!-- <div id="list4"></div> -->
-                    <div class="accordion-group my-2" role="tablist" id="accordion-01">
-                        <div class="card mb-1">
-                            <a class="card-header h4 collapse collapsed" id="list-btn" data-toggle="collapse"
-                                href="#list4" role="tab" aria-expanded="false" aria-controls="list">
-                                <span class="title" role="heading" aria-level="3">DOHMH POD Locations</span>
-                            </a>
-                            <div class="collapse" id="list4" role="tabpanel" aria-labelledby="list-btn"
-                                data-parent="#accordion-01">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
             <div class="medium my-5">
@@ -311,12 +310,26 @@ var map = new nyc.ol.FrameworkMap({
                     </li>
                 </div>
 
-            </div>
-
-            <!-- map - custom map marker -->
-            <div class="medium my-5">
-                <h5>Custom Map Marker (for facility icons)</h5>
-                <pre>
+                <!-- map - custom map marker -->
+                <div class="medium my-3">
+                    <h5>Custom Map Marker (for facility icons)</h5>
+                    <div class="my-2">
+                        <input class="form-control form-control-lg" id="map-search5" placeholder="Search Address">
+                    </div>
+                    <div id="map5"></div>
+                    <div class="accordion-group my-2" role="tablist" id="accordion-01">
+                        <div class="card mb-1">
+                            <a class="card-header h4 collapse collapsed" id="list-btn" data-toggle="collapse"
+                                href="#list5" role="tab" aria-expanded="false" aria-controls="list">
+                                <span class="title" role="heading" aria-level="3">DOHMH POD Locations</span>
+                            </a>
+                            <div class="collapse" id="list5" role="tabpanel" aria-labelledby="list-btn"
+                                data-parent="#accordion-01">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <pre>
                     <code class='language-js' > 
                         var map = new nyc.ol.FrameworkMap({
                             mapTarget: '#map',
@@ -325,72 +338,54 @@ var map = new nyc.ol.FrameworkMap({
                             facilityType: 'Points of Distribution',
                             facilityUrl: 'map-data/pod.csv',
                             facilityMarkerUrl: 'map-data/smile-icon.png',
-                            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
+                            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=#&app_id=#'
                         });
                     </code>    
                 </pre>
-                <br>
-                <div class="my-2">
-                    <input class="form-control form-control-lg" id="map-search5" placeholder="Search Address">
                 </div>
-                <div id="map5"></div>
-                <div class="accordion-group my-2" role="tablist" id="accordion-01">
-                    <div class="card mb-1">
-                        <a class="card-header h4 collapse collapsed" id="list-btn" data-toggle="collapse"
-                            href="#list5" role="tab" aria-expanded="false" aria-controls="list">
-                            <span class="title" role="heading" aria-level="3">DOHMH POD Locations</span>
-                        </a>
-                        <div class="collapse" id="list5" role="tabpanel" aria-labelledby="list-btn"
-                            data-parent="#accordion-01">
-                        </div>
+
+                <div class="medium my-3">
+                    <h5>Custom Location Marker (for finding a location)</h5>
+                    <div class="my-2">
+                        <input class="form-control form-control-lg" id="map-search6" placeholder="Search Address">
                     </div>
+                    <div id="map6"></div>
+                    <br>
+                    <pre>
+                        <code class='language-js' > 
+                            var map = new nyc.ol.FrameworkMap({
+                                mapTarget: '#map6',
+                                startAt: '2 Metrotech Center',
+                                searchTarget: '#map-search', 
+                                locationMarkerUrl: 'map-data/map-marker.png',
+                                geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=#&app_id=#'
+                            });
+                        </code>    
+                    </pre>
                 </div>
 
             </div>
+            <!-- .container-fluid -->
 
-            <!-- map - custom location marker -->
-            <div class="medium my-5">
-                <h5>Custom Location Marker (for finding a location)</h5>
-                <pre>
-                    <code class='language-js' > 
-                        var map = new nyc.ol.FrameworkMap({
-                            mapTarget: '#map6',
-                            startAt: '2 Metrotech Center',
-                            searchTarget: '#map-search', 
-                            locationMarkerUrl: 'map-data/map-marker.png',
-                            geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
-                        });
-                    </code>    
-                </pre>
-                <br>
-                <div class="my-2">
-                    <input class="form-control form-control-lg" id="map-search6" placeholder="Search Address">
+            <hr>
+
+            <div class="container-fluid my-2">
+
+                <div class="medium my-5">
+
+                    <h2>Additional Resources</h2>
+
+                    <p>
+                        Check out <a href="https://maps.nyc.gov/nyc-lib/">nyc-lib</a> via maps.nyc.gov for
+                        documentation,
+                        examples, and source code.
+                    </p>
+
                 </div>
-                <div id="map6"></div>
+                <!-- .narrow -->
 
             </div>
-
-        </div>
-        <!-- .container-fluid -->
-
-        <hr>
-
-        <div class="container-fluid my-2">
-
-            <div class="medium my-5">
-
-                <h2>Additional Resources</h2>
-
-                <p>
-                    Check out <a href="https://maps.nyc.gov/nyc-lib/">nyc-lib</a> via maps.nyc.gov for documentation,
-                    examples, and source code.
-                </p>
-
-            </div>
-            <!-- .narrow -->
-
-        </div>
-        <!-- .container-fluid -->
+            <!-- .container-fluid -->
 
     </main>
     <!-- #content -->
@@ -460,7 +455,6 @@ var map = new nyc.ol.FrameworkMap({
     </script>
 
     <!-- map - external search -->
-
     <script>
         var map3 = new nyc.ol.FrameworkMap({
             mapTarget: '#map3',
@@ -500,13 +494,13 @@ var map = new nyc.ol.FrameworkMap({
         var map6 = new nyc.ol.FrameworkMap({
             mapTarget: '#map6',
             startAt: '2 Metrotech Center',
-            searchTarget: '#map-search6', 
+            searchTarget: '#map-search6',
             locationMarkerUrl: 'map-data/map-marker.png',
             geoclientUrl: 'https://maps.nyc.gov/geoclient/v1/search.json?app_key=74DF5DB1D7320A9A2&app_id=nyc-lib-example'
         });
     </script>
 
-    <!-- map - custom location marker -->
+    <!-- map - first example -->
     <script>
         var map7 = new nyc.ol.FrameworkMap({
             mapTarget: '#map7',
