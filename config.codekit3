@@ -1200,6 +1200,14 @@
 		"oAP": "/css/theme.css.map",
 		"oF": 0
 		},
+	"/documentation-maps.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/documentation-maps.html",
+		"oF": 0
+		},
 	"/home-nav-across.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1617,6 +1625,28 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/map-data/map-marker.png": {
+		"ft": 32768,
+		"iS": 4686,
+		"oA": 0,
+		"oAP": "/map-data/map-marker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/map-data/smile-icon.png": {
+		"ft": 32768,
+		"iS": 253964,
+		"oA": 0,
+		"oAP": "/map-data/smile-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/readme.md": {
 		"cB": 0,
