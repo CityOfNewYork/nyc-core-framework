@@ -1408,6 +1408,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/map-data/pod.csv": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/map-data/pod.csv",
+		"oF": 0
+		},
 	"/map-data/smile-icon.png": {
 		"ft": 32768,
 		"iS": 253964,
