@@ -116,7 +116,7 @@ $container-max-widths: (
 // Set website width as well as '.narrow', '.medium', and '.wide' 
 // Classes found in _e-supplementary-classes.scss
 
-$site-width: 2400px;
+$site-width: 3000px;
 $wide-width: $grid-bp-xxxl; // 1660px
 $narrow-width: 55ch; // 55 characters
 $narrow-width-ie: 650px; // I.E. fallback
@@ -361,7 +361,7 @@ $accessible-box-shadow: 0 0 0 $border-width $input-border-color;
 // N. Forms and alerts
 //////////////////////////////////////// 
 
-$form-group-margin-bottom: $spacer-5;
+$form-group-margin-bottom: $spacer-4;
 $input-btn-focus-width: .15rem;
 $input-focus-border-color: $blue;
 $input-btn-focus-box-shadow: 0 0 0 2px rgba($blue, 0.75);

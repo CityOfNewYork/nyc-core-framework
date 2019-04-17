@@ -198,7 +198,14 @@ In this file:
 // Apply to <btn> or <a> with a Font Awesome icon <span> to ensure icon doesn't inherit 
 // text decoration underline on hover
 
+$title-margin: 0.125em;
+
 .has-icon {
+
+  span.title {
+    margin-left: $title-margin;
+    margin-right: $title-margin;
+  }
 
   &:hover {
     text-decoration: none;

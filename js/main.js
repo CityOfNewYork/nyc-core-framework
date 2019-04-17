@@ -118,3 +118,23 @@ function fireEvent(element, event) {
         return !element.dispatchEvent(evt);
     }
 }
+
+////////////////////////////////////////
+// Iframe Resize
+////////////////////////////////////////
+
+function setSize() {
+    var iframe_height = $('iframe').contents().height();
+    $('iframe').parent().height(iframe_height);
+}
+
+$('iframe').on('load', function () {
+    setSize();
+});
+
+
+
+$(window).resize(function () {
+    setSize();
+});
+

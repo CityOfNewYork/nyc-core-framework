@@ -1,6 +1,6 @@
 $(document).ready(function () {
     headers = [];    
-    $('table.table-row-mobile-stack').each(function (i) {
+    $('table.table-stack-on-mobile').each(function (i) {
         headers[i] = [];        
         currentslot = 0; 
         $(this).find('thead tr').each(function (k) {

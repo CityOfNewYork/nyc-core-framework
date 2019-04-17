@@ -17,10 +17,6 @@ In this file:
 // A. Generic Tags
 ////////////////////////////////////////
 
-html {
-  background: $dark;
-}
-
 body {
   position: relative;
 
@@ -53,6 +49,8 @@ img {
   @extend .img-fluid;
 }
 
+// Remove Unneeded figure margins
+
 .figure {
   @extend .mb-0;
   margin-block-start: 0 !important;
@@ -65,7 +63,7 @@ img {
 // B. Margins
 ////////////////////////////////////////
 
-// Remove bottom margins on ':last-child' selectors 
+// Remove bottom margins on all ':last-child' selectors 
 
 h1,
 h2,
@@ -84,7 +82,7 @@ address {
   }
 }
 
-// Remove Bootstrap's default margin on <hr>  tags 
+// Remove Bootstrap's default margin on <hr> tags 
 
 hr {
   margin: 0;
@@ -338,7 +336,7 @@ label,
   text-align: center;
 
   select {
-    @extend .form-control-lg;
+    @extend .custom-select-lg;
     margin-bottom: $spacer-1;
   }
 
@@ -431,8 +429,8 @@ screen and (-ms-high-contrast: none) {
     max-width: $medium-width-ie !important;
   }
 
-  // IE min-width fix
-  .fixed-height {
+  // IE min-height fix
+  .bg-cover {
     height: 1em;
   }
 

@@ -4,20 +4,18 @@ In this file:
 
 // A. Citywide header and footer
 // B. Local header and primary nav
-// C. Tab skipper
+// C. Skip Menu
 // D. Forms
 // E. Gradients
 // F. Featured panels
-// G. Background image cover
+// G. Banner with background
 // H. Extensible lists
 // I. Matrix rows
 // J. Accordion and button toggle
 // K. Nav tabs and pills
 // L. Side by side
 // M. Card
-// N. Carousel
-// O. Tables
-// P. Fixed width sidebar
+// N. Tables
 
 */
 
@@ -39,6 +37,9 @@ $nyc-header-footer-bg-color: $black;
 
 #nyc-top-header {
   font-size: $fs-sm;
+
+  // Display block on NYC logo fixes vertical alignment
+  img{ display: block; }
 }
 
 #nyc-bottom-footer {
@@ -275,12 +276,12 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 /* #global-header */
 
 ////////////////////////////////////////
-// C. Tab skipper
+// C. Skip Menu
 ////////////////////////////////////////
 
 // Visible only on keyboard tabbing
 
-.tab-skipper {
+.skip-menu {
   @extend .position-absolute;
   @extend .shadow;
 
@@ -555,7 +556,7 @@ legend,
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @if $next {
-      &.responsive-#{$next} {
+      &.device-#{$next} {
         @include media-breakpoint-down($breakpoint) {
           @include featured-panel-responsive-settings();
         }
@@ -565,19 +566,16 @@ legend,
 }
 
 ////////////////////////////////////////
-// G. Background image cover
+// G. Banner with background
 ////////////////////////////////////////
 
-$bg-fixed-image-opacity: 0.2;
-$bg-fixed-height: 350px;
+$banner-with-background-opacity: 0.2;
+$banner-with-background-height: 350px;
 
 .bg-cover {
   position: relative;
-
-  &.fixed-height {
-    display: flex;
-    min-height: $bg-fixed-height;
-  }
+  display: flex;
+  min-height: $banner-with-background-height;
 
   >div {
     position: relative;
@@ -596,7 +594,7 @@ $bg-fixed-height: 350px;
     left: 0;
     z-index: auto;
 
-    @include opacity($bg-fixed-image-opacity);
+    @include opacity($banner-with-background-opacity);
     @include apply-background-image;
 
   }
@@ -608,6 +606,12 @@ $bg-fixed-height: 350px;
       @include apply-background-image($image: 'bridge-lights');
     }
   }
+
+  &.placeholder {
+    &::before {
+      @include apply-background-image($image: 'placeholder-1500x750', );
+    }
+  }
 }
 
 ////////////////////////////////////////
@@ -617,7 +621,7 @@ $bg-fixed-height: 350px;
 // Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
 // Link lists are ideal for horizontal navs when supporting 'rtl' 
 
-$extensible-list-margin: 0.75em;
+$extensible-list-margin: 0.5em;
 
 @mixin extensible-list-stack {
   margin-bottom: $extensible-list-margin;
@@ -687,7 +691,7 @@ $extensible-list-margin: 0.75em;
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
       @if $next {
-        &.responsive-#{$next} {
+        &.device-#{$next} {
           @include media-breakpoint-down($breakpoint) {
             @include responsive-extensible-list-settings();
           }
@@ -757,6 +761,7 @@ $accordion-margin-y: $spacer-1;
 .btn-toggle,
 .accordion-group {
   [data-toggle="collapse"] {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -889,7 +894,7 @@ $accordion-margin-y: $spacer-1;
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @if $next {
-      &.responsive-#{$next} {
+      &.device-#{$next} {
         @include media-breakpoint-down($breakpoint) {
           @include responsive-nav-pills-and-tabs-settings();
         }
@@ -906,7 +911,7 @@ $accordion-margin-y: $spacer-1;
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @if $next {
-      &.responsive-#{$next} {
+      &.device-#{$next} {
         @include media-breakpoint-down($breakpoint) {
           @include responsive-nav-pills-and-tabs-settings();
         }
@@ -984,71 +989,7 @@ $default-card-backgrounds: false;
 // end if
 
 ////////////////////////////////////////
-// N. Carousel
-////////////////////////////////////////
-
-$carousel: false;
-
-@if($carousel) {
-
-  .carousel {
-
-    a[data-slide="prev"],
-    a[data-slide="next"] {
-      color: $carousel-control-color;
-    }
-
-    .carousel-indicators {
-      position: static;
-      margin: 0;
-      padding: 0;
-
-      >li {
-        cursor: pointer;
-        border-radius: 50%;
-
-        &::before,
-        &::after {
-          display: none;
-        }
-      }
-    }
-
-    .carousel-caption {
-      padding: 0;
-      bottom: 0.75rem;
-
-      >p {
-        @extend .shadow-sm;
-        display: inline-block;
-        border-radius: $border-radius;
-        padding: $spacer-2;
-        font-size: $fs-md;
-        color: $body-color;
-        @include background-opacity($light, 0.9);
-      }
-    }
-
-    @include media-breakpoint-down(md) {
-
-      .carousel-caption {
-        position: static;
-        background: $light;
-
-        >p {
-          @include border-radius(0);
-          box-shadow: none !important;
-        }
-      }
-    }
-  }
-
-}
-
-// end if
-
-////////////////////////////////////////
-// O. Tables
+// N. Tables
 ////////////////////////////////////////
 
 $table-header-color: $info;
@@ -1062,7 +1003,7 @@ table {
     color: $table-header-color;
   }
 
-  &.table-row-mobile-stack {
+  &.table-stack-on-mobile {
 
     thead td:empty {
       border: none;
@@ -1123,17 +1064,4 @@ table {
 
   }
 
-}
-
-////////////////////////////////////////
-// P. Fixed width sidebar
-////////////////////////////////////////
-
-$sidebar-fixed-width-max-width: 300px;
-
-.sidebar-fixed-width {
-  @include media-breakpoint-up(xl) {
-    max-width: $sidebar-fixed-width-max-width;
-    border-left: $border-width solid $border-color;
-  }
 }

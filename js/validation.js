@@ -14,12 +14,10 @@ $(document).ready(function () {
 
                         event.preventDefault();
                         event.stopPropagation();
-
                         
                         var invalid_target = $(':invalid');
                         invalid_target.closest('.form-group').addClass('is-invalid');
                         
-                        // var alert_target = $('#form-error-message');
                         var alert_target = $('.is-invalid');
                         alert_target.removeClass('d-none');
                                 
