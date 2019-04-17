@@ -104,6 +104,17 @@ html[dir="rtl"] {
     text-align: right !important;
   }
 
+  // Flip Font Awesome arrow icons
+
+  [class*="fa"] {
+    &[class*="arrow"],
+    &[class*="chevron"],
+    &[class*="angle"],
+    &[class*="caret"]{
+      transform: scaleX(-1);
+    }
+  }
+
   // Flip select tags background (arrows) from right to left
 
   select:not(.notranslate):not(.goog-te-combo) {
