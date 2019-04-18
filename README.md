@@ -9,7 +9,6 @@ NYC Core Framework is a Bootstrap-based web framework with added design patterns
 - Chris Menedes (maps)
 - Tim Keane (maps)
 - Alix Jean-Pharuns
-- Colleen McCaffrey
 - Tin Lau
 
 ## License 
