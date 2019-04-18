@@ -13,7 +13,7 @@ NYC Core Framework is a Bootstrap-based web framework with added design patterns
 
 ## Documentation
 
-Components, usage guides and examples are available at nyc.gov/nyc-core-framework
+Components, usage guides and examples are available at [nyc.gov/nyc-core-framework] (http://nyc.gov/nyc-core-framework)
 
 ## License 
 
