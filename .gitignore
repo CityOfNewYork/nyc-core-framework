@@ -1,0 +1,5 @@
+.Thumbs
+.DS_Store
+config.codekit3
+.vscode
+*.css.map
