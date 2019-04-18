@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/.vscode/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/.vscode/settings-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/article-centered.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1304,6 +1312,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/placeholder-1500x750.jpg": {
+		"ft": 16384,
+		"iS": 23749,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/placeholder-1500x750.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1421,6 +1440,17 @@
 		"iS": 253964,
 		"oA": 0,
 		"oAP": "/map-data/smile-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/project-icon.png": {
+		"ft": 32768,
+		"iS": 1035,
+		"oA": 0,
+		"oAP": "/project-icon.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1598,8 +1628,8 @@
 	"creationDate": 562879945.62698805,
 	"displayValue": "nyc-core-framework",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-cocaine",
-	"iconImageWasSetByUser": 0
+	"iconImageName": "/project-icon.png",
+	"iconImageWasSetByUser": 1
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

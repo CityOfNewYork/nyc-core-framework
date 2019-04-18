@@ -572,7 +572,7 @@ legend,
 $banner-with-background-opacity: 0.2;
 $banner-with-background-height: 350px;
 
-.bg-cover {
+.banner-with-background {
   position: relative;
   display: flex;
   min-height: $banner-with-background-height;
@@ -599,19 +599,14 @@ $banner-with-background-height: 350px;
 
   }
 
-  // Add your own backround classes and append them to the '.bg-cover' selector
+  // Add your own backround classes and append them to the '.banner-with-background' selector
 
-  &.bridge {
+  &.bridge-blur {
     &::before {
-      @include apply-background-image($image: 'bridge-lights');
+      @include apply-background-image( 'bridge-blur' );
     }
   }
 
-  &.placeholder {
-    &::before {
-      @include apply-background-image($image: 'placeholder-1500x750', );
-    }
-  }
 }
 
 ////////////////////////////////////////

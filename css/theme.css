@@ -8154,15 +8154,15 @@ legend,
   .featured-panel.device-xxxl [class*="text-shadow"] {
     text-shadow: none; } }
 
-.bg-cover {
+.banner-with-background {
   position: relative;
   display: flex;
   min-height: 350px; }
-  .bg-cover > div {
+  .banner-with-background > div {
     position: relative;
     z-index: 100;
     align-self: center; }
-  .bg-cover::before {
+  .banner-with-background::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -8175,17 +8175,12 @@ legend,
     opacity: 0.2;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
     filter: alpha(opacity=20);
-    background-image: url("../images/feature/placeholder-1500x750.jpg");
+    background-image: url("../images/placeholder-1500x750.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center; }
-  .bg-cover.bridge::before {
-    background-image: url("../images/feature/bridge-lights.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center; }
-  .bg-cover.placeholder::before {
-    background-image: url("../images/feature/placeholder-1500x750.jpg");
+  .banner-with-background.bridge-blur::before {
+    background-image: url("../images/bridge-blur.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center; }
