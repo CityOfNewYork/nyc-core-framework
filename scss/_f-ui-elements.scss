@@ -12,7 +12,7 @@ In this file:
 // H. Extensible lists
 // I. Matrix rows
 // J. Accordion and button toggle
-// K. Nav tabs and pills
+// K. Tabs
 // L. Side by side
 // M. Card
 // N. Tables
@@ -855,33 +855,67 @@ $accordion-margin-y: $spacer-1;
 }
 
 ////////////////////////////////////////
-// K. Nav tabs and pills
+// K. Tabs
 ////////////////////////////////////////
 
-@mixin responsive-nav-pills-and-tabs-settings() {
+// Tab link color (for both .nav-tabs and .nav-pills)
 
+$tab-link-color: $link-color;
+$tab-link-color: $body-color;
+
+// Tab link active styles (for .nav-tabs only)
+
+$nav-tab-active-color: $info;
+$nav-tab-active-font-weight: $font-weight-bold;
+
+@mixin device-nav-pills-and-tabs-settings {
   flex-direction: column;
   border-color: $transparent;
+  margin-bottom: $spacer-2;
 
-  .nav-link {
+  .nav-item {
+    text-align: center;
     border-color: $border-color;
   }
 
   @if $enable-rounded {
-    .nav-link:not(:last-child) {
-      border-bottom-left-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
+    border-radius: $border-radius;
+
+    .nav-item {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &:first-child {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
+
+    &+.tab-content {
+      border-radius: $border-radius;
     }
   }
 }
 
 .nav-pills,
 .nav-tabs {
+  .nav-link {
+    color: $tab-link-color;
 
-  &[class*="responsive-"] {
-    .nav-link {
-      text-align: center;
+    &.active {
+      text-decoration: underline;
     }
+  }
+
+  .nav-item {
+    text-align: center;
   }
 
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -891,32 +925,25 @@ $accordion-margin-y: $spacer-1;
     @if $next {
       &.device-#{$next} {
         @include media-breakpoint-down($breakpoint) {
-          @include responsive-nav-pills-and-tabs-settings();
+          @include device-nav-pills-and-tabs-settings;
         }
       }
     }
   }
-
 }
 
-.nav-tabs {
+// Nav tabs 'active' state
 
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-    @if $next {
-      &.device-#{$next} {
-        @include media-breakpoint-down($breakpoint) {
-          @include responsive-nav-pills-and-tabs-settings();
-        }
-      }
-    }
+.nav-tabs .nav-item {
+  &.active {
+    font-weight: $nav-tab-active-font-weight;
+    color: $nav-tab-active-color;
   }
-
 }
 
 // end each
+
+// Adjustments for border-radius
 
 @if $enable-rounded {
 
@@ -931,6 +958,10 @@ $accordion-margin-y: $spacer-1;
     border-bottom-right-radius: 0;
   }
 
+  .tab-content {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
 }
 
 ////////////////////////////////////////

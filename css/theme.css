@@ -7824,7 +7824,7 @@ In this file:
 // H. Extensible lists
 // I. Matrix rows
 // J. Accordion and button toggle
-// K. Nav tabs and pills
+// K. Tabs
 // L. Side by side
 // M. Card
 // N. Tables
@@ -8354,105 +8354,86 @@ legend,
   .accordion-group a[data-toggle="collapse"][aria-expanded="false"]:after {
     content: "\f107"; }
 
-.nav-pills[class*="responsive-"] .nav-link,
-.nav-tabs[class*="responsive-"] .nav-link {
+.nav-pills .nav-link,
+.nav-tabs .nav-link {
+  color: #212529; }
+  .nav-pills .nav-link.active,
+  .nav-tabs .nav-link.active {
+    text-decoration: underline; }
+
+.nav-pills .nav-item,
+.nav-tabs .nav-item {
   text-align: center; }
 
 @media (max-width: 479.98px) {
   .nav-pills.device-sm,
   .nav-tabs.device-sm {
     flex-direction: column;
-    border-color: transparent; }
-    .nav-pills.device-sm .nav-link,
-    .nav-tabs.device-sm .nav-link {
+    border-color: transparent;
+    margin-bottom: 1rem; }
+    .nav-pills.device-sm .nav-item,
+    .nav-tabs.device-sm .nav-item {
+      text-align: center;
       border-color: #dee2e6; } }
 
 @media (max-width: 719.98px) {
   .nav-pills.device-md,
   .nav-tabs.device-md {
     flex-direction: column;
-    border-color: transparent; }
-    .nav-pills.device-md .nav-link,
-    .nav-tabs.device-md .nav-link {
+    border-color: transparent;
+    margin-bottom: 1rem; }
+    .nav-pills.device-md .nav-item,
+    .nav-tabs.device-md .nav-item {
+      text-align: center;
       border-color: #dee2e6; } }
 
 @media (max-width: 959.98px) {
   .nav-pills.device-lg,
   .nav-tabs.device-lg {
     flex-direction: column;
-    border-color: transparent; }
-    .nav-pills.device-lg .nav-link,
-    .nav-tabs.device-lg .nav-link {
+    border-color: transparent;
+    margin-bottom: 1rem; }
+    .nav-pills.device-lg .nav-item,
+    .nav-tabs.device-lg .nav-item {
+      text-align: center;
       border-color: #dee2e6; } }
 
 @media (max-width: 1199.98px) {
   .nav-pills.device-xl,
   .nav-tabs.device-xl {
     flex-direction: column;
-    border-color: transparent; }
-    .nav-pills.device-xl .nav-link,
-    .nav-tabs.device-xl .nav-link {
+    border-color: transparent;
+    margin-bottom: 1rem; }
+    .nav-pills.device-xl .nav-item,
+    .nav-tabs.device-xl .nav-item {
+      text-align: center;
       border-color: #dee2e6; } }
 
 @media (max-width: 1439.98px) {
   .nav-pills.device-xxl,
   .nav-tabs.device-xxl {
     flex-direction: column;
-    border-color: transparent; }
-    .nav-pills.device-xxl .nav-link,
-    .nav-tabs.device-xxl .nav-link {
+    border-color: transparent;
+    margin-bottom: 1rem; }
+    .nav-pills.device-xxl .nav-item,
+    .nav-tabs.device-xxl .nav-item {
+      text-align: center;
       border-color: #dee2e6; } }
 
 @media (max-width: 1679.98px) {
   .nav-pills.device-xxxl,
   .nav-tabs.device-xxxl {
     flex-direction: column;
-    border-color: transparent; }
-    .nav-pills.device-xxxl .nav-link,
-    .nav-tabs.device-xxxl .nav-link {
+    border-color: transparent;
+    margin-bottom: 1rem; }
+    .nav-pills.device-xxxl .nav-item,
+    .nav-tabs.device-xxxl .nav-item {
+      text-align: center;
       border-color: #dee2e6; } }
 
-@media (max-width: 479.98px) {
-  .nav-tabs.device-sm {
-    flex-direction: column;
-    border-color: transparent; }
-    .nav-tabs.device-sm .nav-link {
-      border-color: #dee2e6; } }
-
-@media (max-width: 719.98px) {
-  .nav-tabs.device-md {
-    flex-direction: column;
-    border-color: transparent; }
-    .nav-tabs.device-md .nav-link {
-      border-color: #dee2e6; } }
-
-@media (max-width: 959.98px) {
-  .nav-tabs.device-lg {
-    flex-direction: column;
-    border-color: transparent; }
-    .nav-tabs.device-lg .nav-link {
-      border-color: #dee2e6; } }
-
-@media (max-width: 1199.98px) {
-  .nav-tabs.device-xl {
-    flex-direction: column;
-    border-color: transparent; }
-    .nav-tabs.device-xl .nav-link {
-      border-color: #dee2e6; } }
-
-@media (max-width: 1439.98px) {
-  .nav-tabs.device-xxl {
-    flex-direction: column;
-    border-color: transparent; }
-    .nav-tabs.device-xxl .nav-link {
-      border-color: #dee2e6; } }
-
-@media (max-width: 1679.98px) {
-  .nav-tabs.device-xxxl {
-    flex-direction: column;
-    border-color: transparent; }
-    .nav-tabs.device-xxxl .nav-link {
-      border-color: #dee2e6; } }
+.nav-tabs .nav-item.active {
+  font-weight: 700;
+  color: #A513B6; }
 
 .side-by-side {
   display: flex;
