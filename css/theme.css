@@ -7508,6 +7508,14 @@ html[dir="rtl"] .custom-control {
     border-left: none;
     border-right: 1px solid #dee2e6; } }
 
+html[dir="rtl"] #global-header .visible-search button {
+  right: unset;
+  left: 1rem; }
+
+html[dir="rtl"] #global-header .visible-search input {
+  padding-left: calc(28px + 1rem);
+  padding-right: 1rem; }
+
 a:hover, a:focus,
 .btn:hover,
 .btn:focus,
@@ -7896,9 +7904,10 @@ In this file:
   border-left: 1px solid #dee2e6;
   margin-left: -1px;
   margin-right: -1px; }
-  #global-header .nav-pills .nav-link {
-    background: transparent;
+  #global-header .nav-pills .nav-item {
     border-right: 1px solid #dee2e6; }
+  #global-header .nav-pills .nav-link {
+    background: transparent; }
     #global-header .nav-pills .nav-link.active {
       text-decoration: underline;
       color: #3B6CF6; }
@@ -7911,16 +7920,19 @@ In this file:
     position: relative; }
   #global-header .nav-pills .visible-search button {
     position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
+    right: 1rem;
     top: 50%;
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    width: 28px; }
   #global-header .nav-pills .visible-search input {
     align-self: stretch;
     font-size: 1rem;
     border: 0;
-    padding: 0.75rem 40px 0.75rem 1rem; }
+    padding-top: 0.75rem;
+    padding-right: calc(28px + 1rem);
+    padding-bottom: 0.75rem;
+    padding-left: 1rem; }
 
 #global-header .dropdown-menu {
   border: none;

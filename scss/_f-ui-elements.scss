@@ -97,6 +97,7 @@ $primary-nav-link-active-color: $secondary;
 $global-header-dark: false;
 $global-header-dark-color: $primary;
 
+// Make '.nav-item' selectors the same width regardless of text width
 $nav-pills-consistent-width: false;
 
 // Reset variables for dark header
@@ -189,16 +190,15 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     margin-left: -$border-width;
     margin-right: -$border-width;
 
-    // Make '.nav-item' selectors the same width regardless of text width
-    @if $nav-pills-consistent-width {
-      .nav-item{
+    .nav-item{
+      border-right: $border-width solid $global-header-border-color;
+      @if $nav-pills-consistent-width {
         flex: 1;
       }
     }
 
     .nav-link {
       background: transparent;
-      border-right: $border-width solid $global-header-border-color;
 
       &.active {
         text-decoration: underline;
@@ -207,10 +207,9 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
     }
     
-    // Visible search selector  
+    // When '.visible-search' is present within '#nav-primary'
 
     .visible-search {
-
       form,
       input {
         width: 100%;
@@ -241,18 +240,21 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
       button {
         position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
+        right: $nav-link-padding-x;
         top: 50%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        width: $visible-search-button-width;
       }
 
       input {
         align-self: stretch;
         font-size: $fs-md;
         border: 0;
-        padding: $nav-link-padding-y 40px $nav-link-padding-y $nav-link-padding-x;
+        padding-top: $nav-link-padding-y;
+        padding-right: calc(#{$visible-search-button-width} + #{$nav-link-padding-x});
+        padding-bottom: $nav-link-padding-y;
+        padding-left: $nav-link-padding-x;
       }
     }
 
