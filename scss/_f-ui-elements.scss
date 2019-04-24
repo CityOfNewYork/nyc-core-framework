@@ -97,6 +97,8 @@ $primary-nav-link-active-color: $secondary;
 $global-header-dark: false;
 $global-header-dark-color: $primary;
 
+$nav-pills-consistent-width: false;
+
 // Reset variables for dark header
 @if $global-header-dark {
 
@@ -187,6 +189,13 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     margin-left: -$border-width;
     margin-right: -$border-width;
 
+    // Make '.nav-item' selectors the same width regardless of text width
+    @if $nav-pills-consistent-width {
+      .nav-item{
+        flex: 1;
+      }
+    }
+
     .nav-link {
       background: transparent;
       border-right: $border-width solid $global-header-border-color;
@@ -198,12 +207,9 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
     }
     
-    // Exposed Search 
+    // Visible search selector  
 
-    .wrap-search {
-      flex-basis: 10%;
-      flex-grow: 1;
-      flex-shrink: 0;
+    .visible-search {
 
       form,
       input {
@@ -216,6 +222,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
         position: relative;
 
         @if $global-header-dark {
+
           input, button{
             color: white;
           }
@@ -225,9 +232,10 @@ $global-header-toggle-button-color: $primary-nav-link-color;
           }
           
           ::placeholder {
-            color: white;
+            color: $light;
             opacity: 1;
           }
+
         }
       }
 
@@ -241,9 +249,9 @@ $global-header-toggle-button-color: $primary-nav-link-color;
       }
 
       input {
+        align-self: stretch;
         font-size: $fs-md;
         border: 0;
-        align-self: stretch;
         padding: $nav-link-padding-y 40px $nav-link-padding-y $nav-link-padding-x;
       }
     }

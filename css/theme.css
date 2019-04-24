@@ -7902,29 +7902,25 @@ In this file:
     #global-header .nav-pills .nav-link.active {
       text-decoration: underline;
       color: #3B6CF6; }
-  #global-header .nav-pills .wrap-search {
-    flex-basis: 10%;
-    flex-grow: 1;
-    flex-shrink: 0; }
-    #global-header .nav-pills .wrap-search form,
-    #global-header .nav-pills .wrap-search input {
-      width: 100%; }
-    #global-header .nav-pills .wrap-search form {
-      display: flex;
-      height: 100%;
-      position: relative; }
-    #global-header .nav-pills .wrap-search button {
-      position: absolute;
-      right: 0.75rem;
-      top: 0.5rem;
-      top: 50%;
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
-    #global-header .nav-pills .wrap-search input {
-      font-size: 1rem;
-      border: 0;
-      align-self: stretch;
-      padding: 0.75rem 40px 0.75rem 1rem; }
+  #global-header .nav-pills .visible-search form,
+  #global-header .nav-pills .visible-search input {
+    width: 100%; }
+  #global-header .nav-pills .visible-search form {
+    display: flex;
+    height: 100%;
+    position: relative; }
+  #global-header .nav-pills .visible-search button {
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  #global-header .nav-pills .visible-search input {
+    align-self: stretch;
+    font-size: 1rem;
+    border: 0;
+    padding: 0.75rem 40px 0.75rem 1rem; }
 
 #global-header .dropdown-menu {
   border: none;
