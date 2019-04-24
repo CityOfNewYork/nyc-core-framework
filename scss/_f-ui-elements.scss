@@ -98,7 +98,7 @@ $global-header-dark: false;
 $global-header-dark-color: $primary;
 
 // Make '.nav-item' selectors the same width regardless of text width
-$nav-pills-consistent-width: false;
+$nav-pills-consistent-width: true;
 
 // Reset variables for dark header
 @if $global-header-dark {
@@ -194,7 +194,9 @@ $global-header-toggle-button-color: $primary-nav-link-color;
       border-right: $border-width solid $global-header-border-color;
       
       @if $nav-pills-consistent-width {
-        flex: 1;
+        @include media-breakpoint-up(lg) {
+          flex: 1;
+        }
       }
     }
 

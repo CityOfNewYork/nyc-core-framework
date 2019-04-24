@@ -7906,6 +7906,9 @@ In this file:
   margin-right: -1px; }
   #global-header .nav-pills .nav-item {
     border-right: 1px solid #dee2e6; }
+    @media (min-width: 960px) {
+      #global-header .nav-pills .nav-item {
+        flex: 1; } }
   #global-header .nav-pills .nav-link {
     background: transparent; }
     #global-header .nav-pills .nav-link.active {
