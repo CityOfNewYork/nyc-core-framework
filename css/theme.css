@@ -7905,8 +7905,7 @@ In this file:
   margin-left: -1px;
   margin-right: -1px; }
   #global-header .nav-pills .nav-item {
-    border-right: 1px solid #dee2e6;
-    flex: 1; }
+    border-right: 1px solid #dee2e6; }
   #global-header .nav-pills .nav-link {
     background: transparent; }
     #global-header .nav-pills .nav-link.active {

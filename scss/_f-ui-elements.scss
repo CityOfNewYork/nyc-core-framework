@@ -98,7 +98,7 @@ $global-header-dark: false;
 $global-header-dark-color: $primary;
 
 // Make '.nav-item' selectors the same width regardless of text width
-$nav-pills-consistent-width: true;
+$nav-pills-consistent-width: false;
 
 // Reset variables for dark header
 @if $global-header-dark {
