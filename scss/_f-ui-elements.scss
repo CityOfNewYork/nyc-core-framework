@@ -94,8 +94,8 @@ $primary-nav-link-color: $body-color;
 $primary-nav-link-active-color: $secondary;
 
 // Use dark header settings
-$global-header-dark: false;
-$global-header-dark-color: $dark;
+$global-header-dark: true;
+$global-header-dark-color: $primary;
 
 // Reset variables for dark header
 @if $global-header-dark {
@@ -194,6 +194,60 @@ $global-header-toggle-button-color: $primary-nav-link-color;
       &.active {
         text-decoration: underline;
         color: $primary-nav-link-active-color;
+      }
+
+    }
+    
+    // Exposed Search 
+
+    .wrap-search {
+      flex-basis: 10%;
+      flex-grow: 1;
+      // flex-shrink: 0;
+      
+
+      form,
+      input {
+        width: 100%;
+      }
+
+      form {
+        display: flex;
+        height: 100%;
+        position: relative;
+
+        @if $global-header-dark {
+          input, button{
+            color: white;
+          }
+
+          input{
+            background: rgba(black, .2);
+          }
+          
+          ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+            opacity: 1;
+            /* Firefox */
+          }
+        }
+      }
+
+      button {
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      input {
+        font-size: $fs-md;
+        border: 0;
+        align-self: stretch;
+        padding: $nav-link-padding-y 40px $nav-link-padding-y $nav-link-padding-x;
       }
     }
 
