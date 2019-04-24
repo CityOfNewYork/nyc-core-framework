@@ -220,15 +220,13 @@ $global-header-toggle-button-color: $primary-nav-link-color;
             color: white;
           }
 
-          input{
-            background: rgba(black, .2);
+          input {
+            background-color: rgba(black, .2);
           }
           
           ::placeholder {
-            /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: white;
             opacity: 1;
-            /* Firefox */
           }
         }
       }
