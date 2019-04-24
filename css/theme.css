@@ -7508,11 +7508,11 @@ html[dir="rtl"] .custom-control {
     border-left: none;
     border-right: 1px solid #dee2e6; } }
 
-html[dir="rtl"] #global-header .visible-search button {
+html[dir="rtl"] #global-header .search-in-nav button {
   right: unset;
   left: 1rem; }
 
-html[dir="rtl"] #global-header .visible-search input {
+html[dir="rtl"] #global-header .search-in-nav input {
   padding-left: calc(28px + 1rem);
   padding-right: 1rem; }
 
@@ -7905,27 +7905,28 @@ In this file:
   margin-left: -1px;
   margin-right: -1px; }
   #global-header .nav-pills .nav-item {
-    border-right: 1px solid #dee2e6; }
+    border-right: 1px solid #dee2e6;
+    flex: 1; }
   #global-header .nav-pills .nav-link {
     background: transparent; }
     #global-header .nav-pills .nav-link.active {
       text-decoration: underline;
       color: #3B6CF6; }
-  #global-header .nav-pills .visible-search form,
-  #global-header .nav-pills .visible-search input {
+  #global-header .nav-pills .search-in-nav form,
+  #global-header .nav-pills .search-in-nav input {
     width: 100%; }
-  #global-header .nav-pills .visible-search form {
+  #global-header .nav-pills .search-in-nav form {
     display: flex;
     height: 100%;
     position: relative; }
-  #global-header .nav-pills .visible-search button {
+  #global-header .nav-pills .search-in-nav button {
     position: absolute;
     right: 1rem;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 28px; }
-  #global-header .nav-pills .visible-search input {
+  #global-header .nav-pills .search-in-nav input {
     align-self: stretch;
     font-size: 1rem;
     border: 0;

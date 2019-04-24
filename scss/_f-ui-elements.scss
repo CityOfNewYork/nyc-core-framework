@@ -98,7 +98,7 @@ $global-header-dark: false;
 $global-header-dark-color: $primary;
 
 // Make '.nav-item' selectors the same width regardless of text width
-$nav-pills-consistent-width: false;
+$nav-pills-consistent-width: true;
 
 // Reset variables for dark header
 @if $global-header-dark {
@@ -192,6 +192,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
     .nav-item{
       border-right: $border-width solid $global-header-border-color;
+      
       @if $nav-pills-consistent-width {
         flex: 1;
       }
@@ -207,9 +208,9 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
     }
     
-    // When '.visible-search' is present within '#nav-primary'
+    // When '.search-in-nav' is present within '#nav-primary'
 
-    .visible-search {
+    .search-in-nav {
       form,
       input {
         width: 100%;
@@ -244,7 +245,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
         top: 50%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        width: $visible-search-button-width;
+        width: $search-in-nav-button-width;
       }
 
       input {
@@ -252,7 +253,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
         font-size: $fs-md;
         border: 0;
         padding-top: $nav-link-padding-y;
-        padding-right: calc(#{$visible-search-button-width} + #{$nav-link-padding-x});
+        padding-right: calc(#{$search-in-nav-button-width} + #{$nav-link-padding-x});
         padding-bottom: $nav-link-padding-y;
         padding-left: $nav-link-padding-x;
       }

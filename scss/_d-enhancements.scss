@@ -205,16 +205,16 @@ html[dir="rtl"] {
   }
 
   // Flip icon and padding on visible search 
-  // (when '.visible-search' is present within '#nav-primary')
+  // (when '.search-in-nav' is present within '#nav-primary')
 
-  #global-header .visible-search {
+  #global-header .search-in-nav {
     button {
       right: unset;
       left: $nav-link-padding-x;
     }
 
     input {
-      padding-left: calc(#{$visible-search-button-width} + #{$nav-link-padding-x});
+      padding-left: calc(#{$search-in-nav-button-width} + #{$nav-link-padding-x});
       padding-right: $nav-link-padding-x;
     }
   }
