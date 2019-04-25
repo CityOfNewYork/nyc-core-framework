@@ -238,3 +238,27 @@ ol {
     }
   }
 }
+
+$sides: "",
+-top,
+-right,
+-bottom,
+-left;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+
+    @each $side in $sides {
+      .border-#{$breakpoint}#{$side}-0 {
+        border#{$side}: none !important;
+      }
+
+      .border-#{$breakpoint}#{$side} {
+        border-color: $border-color;
+        border-width: 0;
+        border#{$side}-width: 1px !important;
+        border-style: solid;
+      }
+    }
+  }
+}
