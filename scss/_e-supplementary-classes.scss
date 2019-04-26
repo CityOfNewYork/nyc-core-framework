@@ -256,14 +256,14 @@ $sides: "",
     @each $side in $sides {
 
       .border-#{$breakpoint}#{$side}-0 {
-        border#{$side}: none !important;
+        border#{$side}: 0 !important;
       }
 
       .border-#{$breakpoint}#{$side} {
-        border-color: $border-color;
         border-width: 0;
-        border#{$side}-width: $border-width !important;
+        border-color: $border-color;
         border-style: solid;
+        border#{$side}-width: $border-width !important;
       }
     }
   }
