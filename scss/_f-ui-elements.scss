@@ -83,6 +83,7 @@ $nyc-header-footer-bg-color: $black;
 
 // Global header border color
 $global-header-border-color: $border-color;
+// $global-header-border-color: red;
 
 // Primary nav font weight
 $primary-nav-link-font-weight: $font-weight-bold;
@@ -95,7 +96,7 @@ $primary-nav-link-active-color: $secondary;
 
 // Use dark header settings
 $global-header-dark: false;
-$global-header-dark-color: $dark;
+$global-header-dark-color: $primary;
 
 // Make '.nav-item' selectors the same width regardless of text width
 $nav-pills-consistent-width: true;
@@ -154,8 +155,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     color: $primary-nav-link-color;
   }
 
-  hr, 
-  .border-top{
+  [class*="border-"]{
     border-color: $global-header-border-color !important;
   }
  
@@ -187,10 +187,8 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     @extend .nav-fill;
     
     border-left: $border-width solid $global-header-border-color;
-    margin-left: -$border-width;
-    margin-right: -$border-width;
 
-    .nav-item{
+    .nav-item {
       border-right: $border-width solid $global-header-border-color;
       
       @if $nav-pills-consistent-width {
@@ -208,57 +206,6 @@ $global-header-toggle-button-color: $primary-nav-link-color;
         color: $primary-nav-link-active-color;
       }
 
-    }
-    
-    // When '.search-in-nav' is present within '#nav-primary'
-
-    .search-in-nav {
-      form,
-      input {
-        width: 100%;
-      }
-
-      form {
-        display: flex;
-        height: 100%;
-        position: relative;
-
-        @if $global-header-dark {
-
-          input, button{
-            color: white;
-          }
-
-          input {
-            background-color: rgba(black, .2);
-          }
-          
-          ::placeholder {
-            color: $light;
-            opacity: 1;
-          }
-
-        }
-      }
-
-      button {
-        position: absolute;
-        right: $nav-link-padding-x;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        width: $search-in-nav-button-width;
-      }
-
-      input {
-        align-self: stretch;
-        font-size: $fs-md;
-        border: 0;
-        padding-top: $nav-link-padding-y;
-        padding-right: calc(#{$search-in-nav-button-width} + #{$nav-link-padding-x});
-        padding-bottom: $nav-link-padding-y;
-        padding-left: $nav-link-padding-x;
-      }
     }
 
   }
@@ -286,7 +233,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   // Improve .dropdown-menu when present within .nav-pills
 
   .nav-pills .dropdown-menu {
-    width: calc(100% - #{$border-width});
+    width: 100%;
     left: 0;
     margin: 0;
 
@@ -295,6 +242,65 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     top: 100% !important;
   }
 
+  // When '.nav-item-search' is present within '#nav-primary'
+
+  .nav:not(.nav-pills) {
+    .nav-item-search {
+      border: $border-width solid $global-header-border-color;
+    }
+  }
+
+  .nav-item-search {
+    position: relative;
+
+    form,
+    input {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      height: 100%;
+      position: relative;
+
+      @if $global-header-dark {
+
+        input,
+        button {
+          color: white;
+        }
+
+        input {
+          background-color: rgba(black, .2);
+        }
+
+        ::placeholder {
+          color: $light;
+          opacity: 1;
+        }
+
+      }
+    }
+
+    button {
+      position: absolute;
+      right: $nav-link-padding-x;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: $nav-item-search-button-width;
+    }
+
+    input {
+      align-self: stretch;
+      font-size: $fs-md;
+      border: 0;
+      padding-top: $nav-link-padding-y;
+      padding-right: calc(#{$nav-item-search-button-width} + #{$nav-link-padding-x});
+      padding-bottom: $nav-link-padding-y;
+      padding-left: $nav-link-padding-x;
+    }
+  }
 
   @include media-breakpoint-down(md) {
     

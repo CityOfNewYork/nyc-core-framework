@@ -334,7 +334,7 @@ $component-active-bg: $info;
 
 $input-btn-padding-x: ($grid-gutter-width / 2);
 $nav-link-padding-x: $input-btn-padding-x;
-$nav-link-padding-y: .75rem;
+$nav-link-padding-y: .5rem;
 
 $dropdown-link-active-color: $body-color;
 
@@ -370,7 +370,7 @@ $input-btn-focus-box-shadow: 0 0 0 2px rgba($blue, 0.75);
 $enable-validation-icons: false;
 
 // Visible search width
-$search-in-nav-button-width: 28px;
+$nav-item-search-button-width: 28px;
 
 // Custom checkbox and radio
 

@@ -11,7 +11,7 @@
     <!-- Corrects IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Home • NYC Core Framework</title>
+    <title>Home • NYC Templates</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -45,11 +45,12 @@
                                 <a href="http://www1.nyc.gov/" title="311" target="_blank">311</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/home/search/index.page" title="Search all NYC.gov" target="_blank">Search all NYC.gov</a>
+                                <a href="http://www1.nyc.gov/home/search/index.page" title="Search all NYC.gov"
+                                    target="_blank">Search all NYC.gov</a>
                             </li>
                             <li>
                                 <a href="https://www1.nyc.gov/" title="NYG.gov" target="_blank">
-                                    <img class="d-block" src="./images/nyc-logo-header.svg" alt="NYC Logo">
+                                    <img src="./images/nyc-logo-header.svg" alt="NYC Logo">
                                 </a>
                             </li>
                         </ul>
@@ -71,17 +72,15 @@
             <div class="container-fluid wide">
 
                 <div class="row align-items-center">
-                    
+
                     <div class="col-lg py-2">
-
                         <div class="d-flex justify-content-center justify-content-lg-start">
-
                             <a class="align-self-center" href="#" title="Home">
 
-                                <!-- Placeholder logo, replace with your own image version -->
+                                <!-- Placeholder logo, replace with your own -->
 
-                                <svg id="nyc-logo-placeholder" data-name="NYC Bubble Logo" xmlns="http://www.w3.org/2000/svg" width="180" height="60"
-                                    viewBox="0 0 180 60">
+                                <svg id="nyc-logo-placeholder" data-name="NYC Bubble Logo"
+                                    xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60">
                                     <title>NYC Bubble Logo Placeholder</title>
                                     <polygon points="176.25 26.204 180 22.5 180 11.251 168.75 0 131.25 0 120.001 11.251 120.001 3.75 116.25 0 101.25 0 97.5
                                         3.75 97.5 11.251 90.001 18.75 82.5 11.251 82.5 3.75 78.75 0 63.75 0 60.001 3.75 56.25 0 41.25 0 37.501 3.75
@@ -89,54 +88,140 @@
                                         60.001 56.25 60.001 26.25 78.75 45 78.75 56.25 82.5 60 97.5 60 101.25 56.25 101.25 45 120.001 26.25 120.001
                                         48.751 131.25 60 168.75 60 180 48.751 180 37.5 176.25 33.745 157.5 33.745 157.5 37.5 142.5 37.5 142.5 22.5 157.5
                                         22.5 157.5 26.204 176.25 26.204" />
-                                    <path d="M177.32981,2.5304c.3495,0,.65757-.03335.65757-.44445,0-.34343-.33634-.38486-.61614-.38486h-.56365V2.5304Zm-.52222,1.61111h-.46566V1.30412h1.07678c.68584,0,1.03433.23939,1.03433.81516a.72555.72555,0,0,1-.73939.77576l.795,1.24647h-.52829L177.247,2.92836h-.43939Zm.5081-3.58486a1.99063,1.99063,0,0,0-1.97477,2.1182,1.97357,1.97357,0,1,0,3.93637,0,1.98825,1.98825,0,0,0-1.9616-2.1182m0,4.68282a2.46874,2.46874,0,0,1-2.52427-2.56462,2.51762,2.51762,0,1,1,5.03436,0,2.48592,2.48592,0,0,1-2.51009,2.56462" />
+                                    <path
+                                        d="M177.32981,2.5304c.3495,0,.65757-.03335.65757-.44445,0-.34343-.33634-.38486-.61614-.38486h-.56365V2.5304Zm-.52222,1.61111h-.46566V1.30412h1.07678c.68584,0,1.03433.23939,1.03433.81516a.72555.72555,0,0,1-.73939.77576l.795,1.24647h-.52829L177.247,2.92836h-.43939Zm.5081-3.58486a1.99063,1.99063,0,0,0-1.97477,2.1182,1.97357,1.97357,0,1,0,3.93637,0,1.98825,1.98825,0,0,0-1.9616-2.1182m0,4.68282a2.46874,2.46874,0,0,1-2.52427-2.56462,2.51762,2.51762,0,1,1,5.03436,0,2.48592,2.48592,0,0,1-2.51009,2.56462" />
                                 </svg>
 
                             </a>
-
                         </div>
-                        <!-- .d-flex -->
-
                     </div>
                     <!-- .col -->
 
-                    <div class="col-lg-auto border-top border-lg-0">
+                    <div class="col-lg-auto">
 
-                        <div class="row no-gutters justify-content-between py-2">
+                        <!-- Separator -->
+                        <hr class="mx-n2 d-lg-none">
 
-                            <!-- Menu Toggle -->
-                            <div class="col-auto d-flex d-lg-none">
+                        <div class="d-lg-flex align-items-center">
 
-                                <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
-                                    aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="fas fa-bars fa-lg" role="img"></span>
-                                </button>
+                            <!-- Mobile Toggle Buttons -->
 
+                            <ul class="extensible-list horizontal justify-content-between my-2 d-lg-none">
+                                <li>
+                                    <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary"
+                                        aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="fas fa-bars fa-lg" role="img"></span>
+                                    </button>
+                                </li>
+
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
+                                        aria-expanded="false">
+                                        <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
+                                    </button>
+                                </li>
+                                
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-search" aria-controls="global-search"
+                                        aria-expanded="false">
+                                        <span class="fas fa-search fa-lg" title="Search" role="img"></span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="collapse d-lg-block mx-n2 mx-lg-2" id="nav-primary">
+
+                                <nav class="nav" role="navigation">
+
+                                    <div class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-01" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" title="Nav Item">
+                                            Nav Item
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-01">
+
+                                            <ul class="extensible-list">
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- .nav-item -->
+
+                                    <div class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-02" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" title="Nav Item">
+                                            Nav Item
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-02">
+
+                                            <ul class="extensible-list">
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- .nav-item -->
+
+                                    <div class="nav-item dropdown">
+
+                                        <a class="nav-link dropdown-toggle" href="#" id="nav-item-03" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" title="Nav Item">
+                                            Nav Item
+                                        </a>
+
+                                        <div class="dropdown-menu" aria-labelledby="nav-item-03">
+
+                                            <ul class="extensible-list">
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                                <li><a href="#" title="Link">Link</a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- .nav-item -->
+
+                                    <div class="nav-item nav-item-search">
+                                        <form aria-label="Search" role="search">
+                                            <label class="sr-only" for="global-search-bar">Search</label>
+                                            <input id="global-search-bar" placeholder="Search">
+                                            <button class="no-btn-style" type="button">
+                                                <span class="fas fa-search" title="Search" role="img"></span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <!-- .nav-item -->
+
+                                </nav>
+                                                
                             </div>
-                            <!-- .col -->
 
-                            <div class="col-auto">
+                            <!-- Desktop Toggle Buttons -->
 
-                                <ul class="extensible-list horizontal">
-                                    <li>
-                                        <a href="#1" class="btn btn-sm btn-info">Login</a>
-
-                                    </li>
-                                    <li>
-                                        <button class="no-btn-style" type="button" data-toggle="collapse"
-                                            data-target="#global-language" aria-controls="global-language"
-                                            aria-expanded="false">
-                                            <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
-                                        </button>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- .col -->
+                            <ul class="extensible-list horizontal d-none d-lg-flex">
+                                <li>
+                                    <button class="no-btn-style" type="button" data-toggle="collapse" data-target="#global-language" aria-controls="global-language"
+                                        aria-expanded="false">
+                                        <span class="fas fa-language fa-lg" title="Languages" role="img"></span>
+                                    </button>
+                                </li>
+                            </ul>
 
                         </div>
-                        <!-- .row -->
-
+                        <!-- .d-flex -->
+                        
                     </div>
                     <!-- .col -->
 
@@ -169,178 +254,128 @@
             </form>
         </div>
 
-        <div class="container-fluid collapse d-lg-block px-0 border-lg-top" id="nav-primary">
-            <div class="wide">
-                <nav class="nav nav-pills" role="navigation">
-
-                    <div class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" 
-                            href="#"  
-                            id="nav-item-01" 
-                            data-toggle="dropdown" 
-                            aria-haspopup="true"
-                            aria-expanded="false" 
-                            title="Nav Item">
-                                Nav Item
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="nav-item-01">
-
-                            <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li> 
-                                <li><a href="#" title="Link">Link</a></li> 
-                                <li><a href="#" title="Link">Link</a></li> 
-                            </ul>
-                            
-                        </div>
-
-                    </div>
-                    <!-- .nav-item -->
-
-                    <div class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" 
-                            href="#" 
-                            id="nav-item-02" 
-                            data-toggle="dropdown" 
-                            aria-haspopup="true"
-                            aria-expanded="false" 
-                            title="Nav Item">
-                                Nav Item
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="nav-item-02">
-
-                            <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-                    <!-- .nav-item -->
-
-                    <div class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle"
-                            href="#" 
-                            id="nav-item-03" 
-                            data-toggle="dropdown" 
-                            aria-haspopup="true"
-                            aria-expanded="false" 
-                            title="Nav Item">
-                                Nav Item
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="nav-item-03">
-
-                            <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-                    <!-- .nav-item -->
-
-                    <div class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle"
-                            href="#" id="nav-item-04" 
-                            data-toggle="dropdown" 
-                            aria-haspopup="true"
-                            aria-expanded="false" 
-                            title="Nav Item">
-                            Nav Item
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="nav-item-04">
-
-                            <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                            </ul>
-            
-                        </div>
-
-                    </div>
-                    <!-- .nav-item -->
-
-                    <div class="nav-item nav-item-search">
-                        <form aria-label="Search" role="search">
-                            <label class="sr-only" for="global-search-bar">Search</label>
-                            <input id="global-search-bar" placeholder="Search">
-                            <button class="no-btn-style" type="button">
-                                <span class="fas fa-search" title="Search" role="img"></span>
-                            </button>
-                        </form>
-                    </div>
-                    <!-- .nav-item -->
-
-                </nav>
-            </div>
-        </div>
-
     </header>
     <!-- #global-header -->
 
     <main id="content" role="main">
 
-        <section class="featured-panel device-md">
+        <section class="featured-panel device-lg" dir="ltr">
 
-            <div class="card bg-primary">
-                <img class="card-img opacity-40 show-on-mobile" src="https://via.placeholder.com/1500x750" alt="Card image">
-                <div class="card-img-overlay d-flex">
-                    <div class="container align-self-center">
-                        <div class="narrow text-white text-center">
-                            <h1 class="card-title display-4 font-weight-bold mb-3">Lorem ipsum dolor sit amet consectetur.</h1>
-                            <a href="#" class="btn btn-lg btn-info" title="Button Link">Button Link</a>
-                        </div>
-                    </div>
+            <div class="card bg-white">
+
+                <div class="overlay-gradient-x-white">
+                    <img class="card-img" src="https://via.placeholder.com/1500x750" alt="Card image">
                 </div>
+
+                <div class="card-img-overlay d-flex px-0">
+
+                    <div class="container align-self-center px-0">
+
+                        <div class="row no-gutters">
+
+                            <div class="col-lg-6">
+
+                                <div class="card bg-white">
+
+                                    <div class="card-body">
+                                        <h2 class="card-title text-primary">Card Title</h2>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima id
+                                            quibusdam molestiae, et nisi
+                                            nostrum exercitationem consectetur perferendis earum.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-lg btn-primary text-crimson" title="Button Link">Button Link</a>
+                                    </div>
+
+                                </div>
+                                <!-- .card -->
+
+                            </div>
+                            <!-- .col -->
+
+                        </div>
+                        <!-- .row -->
+
+                    </div>
+                    <!-- .container -->
+
+                </div>
+                <!-- .container -->
+
             </div>
+            <!-- .card -->
 
         </section>
         <!-- .featured-panel -->
+            
+        <section>
 
-        <section class="py-6">
+            <div class="container-fluid px-0">
 
-            <div class="container">
-
-                <div class="row matrix-gutter">
+                <div class="row matrix-border">
 
                     <div class="col-md">
-                        <div class="card h-100 bg-secondary">
-                            <div class="card-body text-white">
-                                <h2 class="card-title">Card Title</h2>
-                                <p class="card-text">
-                                    Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus.
-                                </p>
+                        <div class="card h-100 bg-secondary rounded-0">
+                            <div class="narrow">
+                                <div class="card-body text-white">
+                                    <h2 class="card-title h3">
+                                        <span class="fas fa-parking"></span>
+                                        <span class="mx-1">Card Title</span>
+                                    </h2>
+                                    <p class="card-text">
+                                        Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus.
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-white" title="Button Link">Button Link</a>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-lg btn-white text-crimson stretched-link" title="Button Link">Button Link</a>
-                            </div>
+                            <!-- .narrow -->
                         </div>
                     </div>
                     <!-- .col -->
 
                     <div class="col-md">
-                        <div class="card h-100 bg-secondary">
-                            <div class="card-body text-white">
-                                <h2 class="card-title">Card Title</h2>
-                                <p class="card-text">
-                                    Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus.
-                                </p>
+                        <div class="card h-100 bg-secondary rounded-0">
+                            <div class="narrow">
+                                <div class="card-body text-white">
+                                    <h2 class="card-title h3">
+                                        <span class="fas fa-school"></span>
+                                        <span class="mx-1">Card Title</span>
+                                    </h2>
+                                    <p class="card-text">
+                                        Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus.
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-white" title="Button Link">Button Link</a>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-lg btn-white text-crimson stretched-link" title="Button Link">Button Link</a>
+                            <!-- .narrow -->
+                        </div>
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md">
+                        <div class="card h-100 bg-secondary rounded-0">
+                            <div class="narrow">
+                                <div class="card-body text-white">
+                                    <h2 class="card-title h3">
+                                        <span class="fas fa-trash-alt"></span>
+                                        <span class="mx-1">Card Title</span>
+                                    </h2>
+                                    <p class="card-text">
+                                        Mus malesuada dapibus ac condimentum habitasse a praesent commodo penatibus.
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-white" title="Button Link">Button Link</a>
+                                </div>
                             </div>
+                            <!-- .narrow -->
                         </div>
                     </div>
                     <!-- .col -->
@@ -353,6 +388,38 @@
 
         </section>
             
+        <section class="py-6">
+
+            <div class="container">
+
+                <h2 class="mb-3">Lorem ipsum dolor</h2>
+
+                <div class="row mb-3">
+
+                    <div class="col-md mb-2 mb-md-0">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>                
+                    </div>
+                    <!-- .col -->
+
+                    <div class="col-md">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
+                
+                <a href="#" class="btn btn-lg btn-primary" title="Button Link">Button Link</a>
+
+            </div>
+            <!-- .container -->
+        
+        </section>
+
         <section class="py-6 bg-light">
 
             <div class="container">
@@ -361,7 +428,7 @@
 
                     <div class="row align-items-baseline">
                         <div class="col-lg">
-                            <h2 class="text-primary">Section Title</h2>
+                            <h2 class="text-primary">NYC Programs & Initiatives</h2>
                         </div>
                         <!-- .col -->
 
@@ -448,90 +515,7 @@
             <!-- .container -->
 
         </section>
-
-        <section class="py-6">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-lg mb-3 mb-lg-0">
-                        <h2 class="h1">Lorem ipsum dolor sit amet consectetur elit</h2>
-                        <a class="btn btn-lg btn-primary mt-2 d-none d-lg-inline-block" href="#" aria-hidden="true" title="Button Link">Button Link</a>
-                    </div>
-
-                    <div class="col-lg">
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore voluptas quod magni saepe. Expedita ab vitae quo, dolore modi nesciunt deserunt voluptatibus? Quidem ducimus est non quisquam exercitationem.
-                        </p>
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minima id quibusdam molestiae, et nisi nostrum exercitationem consectetur perferendis earum.
-                        </p>
-
-                        <a href="#" class="btn btn-lg btn-primary mt-2 d-lg-none" title="Button Link">Button Link</a>
-                    </div>
-                    <!-- .col -->
-
-                </div>
-                <!-- .row -->
-
-            </div>
-            <!-- .container -->
         
-        </section>
-
-        <section class="featured-panel device-lg">
-
-            <div class="card bg-primary">
-
-                <img class="card-img opacity-20 show-on-mobile" src="https://via.placeholder.com/1500x750" alt="Card image">
-                
-                <div class="card-img-overlay d-flex px-0">
-                    <div class="container align-self-center">
-
-                        <div class="row text-center text-white">
-
-                            <div class="col-lg-4 py-3">
-                                <h2 class="h4">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit minima id quibusdam.
-                                </p>
-                                <a class="btn btn-info" href="#" title="Button Link">Button Link</a>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-lg-4 py-3">
-                                <h2 class="h4">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit minima id quibusdam.
-                                </p>
-                                <a class="btn btn-info" href="#" title="Button Link">Button Link</a>
-                            </div>
-                            <!-- .col -->
-
-                            <div class="col-lg-4 py-3">
-                                <h2 class="h4">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit minima id quibusdam.
-                                </p>
-                                <a class="btn btn-info" href="#" title="Button Link">Button Link</a>
-                            </div>
-                            <!-- .col -->
-
-                        </div>
-                        <!-- .col -->
-
-                    </div>
-                    <!-- .row -->
-
-                </div>
-                <!-- .container -->
-            </div>
-            <!-- .card -->
-
-        </section>
         
     </main>
     <!-- #content -->
@@ -632,7 +616,8 @@
                     </div>
                     <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
                         <ul class="extensible-list">
-                            <li><a class="lang-select" href="#" data-lang="ht" title="Kreyòl Ayisyen">Kreyòl Ayisyen</a></li>
+                            <li><a class="lang-select" href="#" data-lang="ht" title="Kreyòl Ayisyen">Kreyòl Ayisyen</a>
+                            </li>
                             <li><a class="lang-select" href="#" data-lang="ko" title="한국어">한국어</a></li>
                         </ul>
                     </div>
@@ -666,30 +651,31 @@
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="http://www1.nyc.gov/nyc-resources/agencies.page" title="Directory of City Agencies"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/nyc-resources/agencies.page"
+                                            title="Directory of City Agencies" target="_blank">
                                             <strong>Directory of City Agencies</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://a858-nycnotify.nyc.gov/notifynyc/" title="Notify NYC" target="_blank">
+                                        <a href="https://a858-nycnotify.nyc.gov/notifynyc/" title="Notify NYC"
+                                            target="_blank">
                                             <strong>Notify NYC</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www1.nyc.gov/connect/mobile-applications.page" title="NYC Mobile Apps"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/connect/mobile-applications.page"
+                                            title="NYC Mobile Apps" target="_blank">
                                             <strong>NYC Mobile Apps</strong>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="http://www1.nyc.gov/home/contact-us.page" title="Contact NYC Government"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/home/contact-us.page"
+                                            title="Contact NYC Government" target="_blank">
                                             <strong>Contact NYC Government</strong>
                                         </a>
                                     </li>
@@ -709,8 +695,8 @@
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&" title="City Employees"
-                                            target="_blank">
+                                        <a href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&"
+                                            title="City Employees" target="_blank">
                                             <strong>City Employees</strong>
                                         </a>
                                     </li>
@@ -721,8 +707,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page" title="Resident Toolkit"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page"
+                                            title="Resident Toolkit" target="_blank">
                                             <strong>Resident Toolkit</strong>
                                         </a>
                                     </li>
@@ -744,16 +730,18 @@
 
                         <ul class="extensible-list horizontal fs-sm py-0">
                             <li>
-                                <a href="http://www1.nyc.gov/home/privacy-policy.page" title="Privacy Policy" target="_blank">Privacy
+                                <a href="http://www1.nyc.gov/home/privacy-policy.page" title="Privacy Policy"
+                                    target="_blank">Privacy
                                     Policy</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/home/terms-of-use.page" title="Terms of Use" target="_blank">Terms
+                                <a href="http://www1.nyc.gov/home/terms-of-use.page" title="Terms of Use"
+                                    target="_blank">Terms
                                     of Use</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/site/mopd/index.page" title="Mayor's Office for People with Disabilities"
-                                    target="_blank">
+                                <a href="http://www1.nyc.gov/site/mopd/index.page"
+                                    title="Mayor's Office for People with Disabilities" target="_blank">
                                     <span class="fab fa-lg fa-accessible-icon"></span>
                                 </a>
                             </li>
