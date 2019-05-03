@@ -38,8 +38,10 @@ $nyc-header-footer-bg-color: $black;
 #nyc-top-header {
   font-size: $fs-sm;
 
-  // Display block on NYC logo fixes vertical alignment
-  img{ display: block; }
+  // Display block on NYC logo ensures vertical alignment
+  img {
+    display: block;
+  }
 }
 
 #nyc-bottom-footer {
@@ -72,7 +74,6 @@ $nyc-header-footer-bg-color: $black;
   &.show {
     @include opacity(1);
   }
-
 }
 
 ////////////////////////////////////////
@@ -81,22 +82,23 @@ $nyc-header-footer-bg-color: $black;
 
 // Primary Navigation variables set here override Bootstrap default component settings
 
+// Global Header background color
+$global-header-bg-color: white;
+
 // Global header border color
 $global-header-border-color: $border-color;
-// $global-header-border-color: red;
 
 // Primary nav font weight
 $primary-nav-link-font-weight: $font-weight-bold;
 
-// Set all links (and toggle buttons) in global header, not including links inside '#nyc-top-header' 
+// Set all links (and toggle buttons) in global header, not including links inside '#nyc-top-header'
 $primary-nav-link-color: $body-color;
 
 // Global header link active (current page) color
 $primary-nav-link-active-color: $secondary;
 
-// Use dark header settings
+// Use dark header settings (set the background color inside 'Reset variables for dark header' conditional below)
 $global-header-dark: false;
-$global-header-dark-color: $primary;
 
 // Make '.nav-item' selectors the same width regardless of text width
 $nav-pills-consistent-width: true;
@@ -104,20 +106,19 @@ $nav-pills-consistent-width: true;
 // Reset variables for dark header
 @if $global-header-dark {
 
+  $global-header-bg-color: $primary;
+
   $global-header-border-color: rgba(black, 0.5);
   $primary-nav-link-color: $white;
-  $primary-nav-dropdown-bg-color: $dark;
-
 }
 
 // Toggle button color
 $global-header-toggle-button-color: $primary-nav-link-color;
 
 #global-header {
+  background-color: $global-header-bg-color;
 
   @if $global-header-dark {
-
-    background-color: $global-header-dark-color;
 
     #nyc-logo-placeholder {
       fill: $white;
@@ -131,12 +132,11 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     .goog-logo-link img {
       margin-left: .5rem;
       margin-right: .5rem;
-     transform: scale(1.25);
+      transform: scale(1.25);
     }
-
   }
 
-  // Remove border radius when global '$enable-rounded' is set to true 
+  // Remove border radius when global '$enable-rounded' is set to true
 
   .btn,
   .input,
@@ -146,7 +146,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     border-radius: 0;
   }
 
-  button[data-toggle="collapse"]{
+  button[data-toggle="collapse"] {
     color: $global-header-toggle-button-color;
   }
 
@@ -155,19 +155,18 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     color: $primary-nav-link-color;
   }
 
-  [class*="border-"]{
+  [class*="border-"] {
     border-color: $global-header-border-color !important;
   }
- 
-  // Add opacity to toggle buttons on 'expanded'
-  
-  button[data-toggle="collapse"]{
 
-    &[aria-expanded="true"]{
+  // Add opacity to toggle buttons on 'expanded'
+
+  button[data-toggle="collapse"] {
+    &[aria-expanded="true"] {
       @extend .opacity-50;
+
       @include transition;
     }
-
   }
 
   // Set primary nav color and active states (both '.nav-pills' and '.nav-right')
@@ -185,12 +184,12 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
   .nav-pills {
     @extend .nav-fill;
-    
+
     border-left: $border-width solid $global-header-border-color;
 
     .nav-item {
       border-right: $border-width solid $global-header-border-color;
-      
+
       @if $nav-pills-consistent-width {
         @include media-breakpoint-up(lg) {
           flex: 1;
@@ -205,9 +204,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
         text-decoration: underline;
         color: $primary-nav-link-active-color;
       }
-
     }
-
   }
 
   // Set .dropdown-menu styles
@@ -217,9 +214,8 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     padding: $nav-link-padding-y $nav-link-padding-x;
 
     @if $global-header-dark {
-      background-color: $global-header-dark-color;
+      background-color: $global-header-bg-color;
     }
-    
   }
 
   // Remove unneeded margin from .dropdown-menu within nav
@@ -227,6 +223,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   .nav:not(.nav-pills) {
     .dropdown-menu {
       margin: 0;
+      @extend .shadow;
     }
   }
 
@@ -271,14 +268,13 @@ $global-header-toggle-button-color: $primary-nav-link-color;
         }
 
         input {
-          background-color: rgba(black, .2);
+          background-color: rgba(black, 0.2);
         }
 
         ::placeholder {
           color: $light;
           opacity: 1;
         }
-
       }
     }
 
@@ -303,18 +299,17 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   }
 
   @include media-breakpoint-down(md) {
-    
     .nav-item {
       border-top: 1px solid $global-header-border-color;
       width: 100%;
 
       // Left align nav items that are not dropdowns
-      
-      &.nav-link{ 
+
+      &.nav-link {
         text-align: left;
       }
     }
-    
+
     .nav-item,
     .dropdown-menu {
       background: none;
@@ -323,7 +318,6 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     .dropdown-menu {
       position: static !important;
       width: 100%;
-
       -webkit-transform: none !important;
       transform: none !important;
     }
@@ -340,7 +334,6 @@ $global-header-toggle-button-color: $primary-nav-link-color;
       }
     }
   }
-
 }
 
 /* #global-header */
@@ -353,6 +346,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
 .skip-menu {
   @extend .position-absolute;
+
   @extend .shadow;
 
   top: $spacer;
@@ -401,7 +395,6 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 // The following works only when custom './js/validation.js' is present in the footer of the form's page
 
 .form-group {
-
   .invalid-feedback {
     display: none;
     margin-bottom: 0.5rem;
@@ -443,7 +436,6 @@ fieldset,
     overflow: hidden;
     border-radius: $border-radius;
   }
-
 }
 
 legend,
@@ -459,12 +451,12 @@ legend,
 // File upload
 
 .wrap-file-input {
-
   position: relative;
 
   input[type="file"] {
     &:focus+label {
       @include transition;
+
       border-color: $input-focus-border-color;
       box-shadow: $input-btn-focus-box-shadow;
     }
@@ -503,12 +495,13 @@ legend,
 
     .file-name {
       @extend .font-weight-normal;
+
       @extend .text-truncate;
+
       padding: $spacer-1;
       display: block;
       white-space: normal;
     }
-
   }
 
   @include media-breakpoint-down(md) {
@@ -518,7 +511,6 @@ legend,
       display: block !important;
     }
   }
-
 }
 
 ////////////////////////////////////////
@@ -538,51 +530,32 @@ legend,
     left: -1px;
     right: -1px;
     bottom: -1px;
-
   }
 }
 
 // Gradient Overlays
 
 .overlay-gradient-y-black::before {
-  @include linear-gradient();
+  @include linear-gradient;
 }
 
 .overlay-gradient-x-white::before {
-  @include linear-gradient($direction: to left,
-    $first-color: white,
-    $second-color: white,
-    $first-color-opacity: 0,
-    $second-color-opacity: 1,
-    $first-color-position: 0%,
-    $second-color-position: 100%);
+  @include linear-gradient($direction: to left, $first-color: white, $second-color: white, $first-color-opacity: 0, $second-color-opacity: 1, $first-color-position: 0%, $second-color-position: 100%);
 }
 
 .overlay-gradient-x-primary::before {
-  @include linear-gradient($direction: to left,
-    $first-color: $primary,
-    $second-color: $primary,
-    $first-color-opacity: 0,
-    $second-color-opacity: .8,
-    $first-color-position: 0,
-    $second-color-position: 100%);
+  @include linear-gradient($direction: to left, $first-color: $primary, $second-color: $primary, $first-color-opacity: 0, $second-color-opacity: 0.8, $first-color-position: 0, $second-color-position: 100%);
 }
 
 .overlay-gradient-x-info::before {
-  @include linear-gradient($direction: to right,
-    $first-color: theme-color("info"),
-    $second-color: theme-color("info"),
-    $first-color-opacity: 0,
-    $second-color-opacity: 0.75,
-    $first-color-position: 0,
-    $second-color-position: 100%);
+  @include linear-gradient($direction: to right, $first-color: theme-color("info"), $second-color: theme-color("info"), $first-color-opacity: 0, $second-color-opacity: 0.75, $first-color-position: 0, $second-color-position: 100%);
 }
 
 ////////////////////////////////////////
 // F. Featured panels
 ////////////////////////////////////////
 
-@mixin featured-panel-responsive-settings() {
+@mixin featured-panel-responsive-settings {
   .card-img-overlay {
     position: relative;
   }
@@ -628,7 +601,7 @@ legend,
     @if $next {
       &.device-#{$next} {
         @include media-breakpoint-down($breakpoint) {
-          @include featured-panel-responsive-settings();
+          @include featured-panel-responsive-settings;
         }
       }
     }
@@ -666,17 +639,15 @@ $banner-with-background-height: 350px;
 
     @include opacity($banner-with-background-opacity);
     @include apply-background-image;
-
   }
 
   // Add your own backround classes and append them to the '.banner-with-background' selector
 
   &.bridge-blur {
     &::before {
-      @include apply-background-image( 'bridge-blur' );
+      @include apply-background-image("bridge-blur");
     }
   }
-
 }
 
 ////////////////////////////////////////
@@ -684,7 +655,7 @@ $banner-with-background-height: 350px;
 ////////////////////////////////////////
 
 // Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
-// Link lists are ideal for horizontal navs when supporting 'rtl' 
+// Link lists are ideal for horizontal navs when supporting 'rtl'
 
 $extensible-list-margin: 0.5em;
 
@@ -696,12 +667,11 @@ $extensible-list-margin: 0.5em;
   }
 }
 
-@mixin responsive-extensible-list-settings() {
-
+@mixin responsive-extensible-list-settings {
   // Remove flex properties
   display: block !important;
 
-  // Remove side margin and padding 
+  // Remove side margin and padding
   margin-right: 0;
   margin-left: 0;
   padding-right: 0;
@@ -709,6 +679,7 @@ $extensible-list-margin: 0.5em;
 
   li {
     @include extensible-list-stack;
+
     display: block !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -716,15 +687,14 @@ $extensible-list-margin: 0.5em;
 }
 
 .extensible-list {
+  @include list-unstyled;
 
-  @include list-unstyled();
   margin-bottom: 0;
 
   // fixed padding added by user agent stylesheet after translation
   -webkit-padding-start: 0;
 
   li ul {
-
     margin-top: $extensible-list-margin;
 
     // Indent nested lists by default
@@ -741,9 +711,8 @@ $extensible-list-margin: 0.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    margin-left: -($extensible-list-margin);
-    margin-right: -($extensible-list-margin);
+    margin-left: -$extensible-list-margin;
+    margin-right: -$extensible-list-margin;
 
     li {
       margin-bottom: 0;
@@ -758,7 +727,7 @@ $extensible-list-margin: 0.5em;
       @if $next {
         &.device-#{$next} {
           @include media-breakpoint-down($breakpoint) {
-            @include responsive-extensible-list-settings();
+            @include responsive-extensible-list-settings;
           }
         }
       }
@@ -771,18 +740,18 @@ $extensible-list-margin: 0.5em;
 ////////////////////////////////////////
 
 // Note: Add to '.row' class to create a grid of colums
-// with equal spacing on all sides, not just the gutters 
+// with equal spacing on all sides, not just the gutters
 
-$matrix-border-padding: ($border-width / 2);
-$matrix-gutter-padding: ($grid-gutter-width / 4);
+$matrix-border-padding: $border-width / 2;
+$matrix-gutter-padding: $grid-gutter-width / 4;
 
 $matrix-tiger-padding: 3%;
 
 .matrix-border {
-  margin-top: -($matrix-border-padding);
-  margin-right: -($matrix-border-padding);
-  margin-bottom: -($matrix-border-padding);
-  margin-left: -($matrix-border-padding);
+  margin-top: -$matrix-border-padding;
+  margin-right: -$matrix-border-padding;
+  margin-bottom: -$matrix-border-padding;
+  margin-left: -$matrix-border-padding;
 
   >[class^="col"] {
     padding: $matrix-border-padding;
@@ -790,10 +759,10 @@ $matrix-tiger-padding: 3%;
 }
 
 .matrix-gutter {
-  margin-top: -($matrix-gutter-padding);
-  margin-right: -($matrix-gutter-padding);
-  margin-bottom: -($matrix-gutter-padding);
-  margin-left: -($matrix-gutter-padding);
+  margin-top: -$matrix-gutter-padding;
+  margin-right: -$matrix-gutter-padding;
+  margin-bottom: -$matrix-gutter-padding;
+  margin-left: -$matrix-gutter-padding;
 
   >[class^="col"] {
     padding: $matrix-gutter-padding;
@@ -836,13 +805,12 @@ $accordion-margin-y: $spacer-1;
 // Button toggle
 
 .btn-toggle {
-
   [data-toggle="collapse"] {
-
     overflow: hidden;
 
     &::after {
       content: "\f067";
+
       @extend %fa-icon;
     }
 
@@ -886,7 +854,6 @@ $accordion-margin-y: $spacer-1;
   }
 
   a[data-toggle="collapse"] {
-
     @if $accordion-button-border {
       border: $border-width solid $border-color;
     }
@@ -899,15 +866,14 @@ $accordion-margin-y: $spacer-1;
 
     &:after {
       content: "\f067";
+
       @extend %fa-icon;
     }
 
     &[aria-expanded="true"] {
-
       @if $accordion-button-shadow {
         @extend .shadow;
       }
-
     }
 
     // Change the right icon here. Go to https://fontawesome.com/icons
@@ -921,7 +887,6 @@ $accordion-margin-y: $spacer-1;
       content: "\f107";
     }
   }
-
 }
 
 ////////////////////////////////////////
@@ -1044,14 +1009,15 @@ $side-by-side-margin: 0.25em;
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  margin-left: -$side-by-side-margin;
+  margin-right: -$side-by-side-margin;
 
-  margin-left: -($side-by-side-margin);
-  margin-right: -($side-by-side-margin);
-
-  > span {
+  >span {
     margin-left: $side-by-side-margin;
     margin-right: $side-by-side-margin;
+
     // line-height: normal;
+
   }
 }
 
@@ -1062,7 +1028,7 @@ $side-by-side-margin: 0.25em;
 $default-card-borders: false;
 $default-card-backgrounds: false;
 
-@if ($default-card-borders==false) {
+@if $default-card-borders==false {
 
   .card,
   .card-header,
@@ -1073,7 +1039,7 @@ $default-card-backgrounds: false;
 
 // end if
 
-@if ($default-card-backgrounds==false) {
+@if $default-card-backgrounds==false {
 
   .card,
   .card-header,
@@ -1092,7 +1058,6 @@ $table-header-color: $info;
 $table-font-size: $fs-md;
 
 table {
-
   font-size: $table-font-size;
 
   th {
@@ -1100,7 +1065,6 @@ table {
   }
 
   &.table-stack-on-mobile {
-
     thead td:empty {
       border: none;
     }
@@ -1111,10 +1075,10 @@ table {
       }
     }
 
-    @include media-breakpoint-down(md) {
 
+    @include media-breakpoint-down(md) {
       thead {
-        @include sr-only
+        @include sr-only;
       }
 
       tbody tr {
@@ -1155,9 +1119,6 @@ table {
         border-width: 0 0 $border-width 0;
         font-size: 1.25em;
       }
-
     }
-
   }
-
 }
