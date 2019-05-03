@@ -169,18 +169,6 @@ html[dir="rtl"] {
     }
   }
 
-  // Remove Google's added padding and margin for rtl translation
-
-  ul,
-  ol,
-  dl {
-    -webkit-padding-start: 0 !important;
-  }
-
-  dd {
-    -webkit-margin-start: 0 !important;
-  }
-
   // Flip Custom Control Background from left to right
 
   .custom-control-label {
@@ -205,7 +193,7 @@ html[dir="rtl"] {
   }
 
   // Flip icon and padding on visible search 
-  // (when '.nav-item-search' is present within '#nav-primary')
+  // (when '.search-in-nav' is present within '#nav-primary')
 
   #global-header .nav-item-search {
     button {
@@ -218,6 +206,21 @@ html[dir="rtl"] {
       padding-right: $nav-link-padding-x;
     }
   }
+
+  // Flip border 'left' and 'right'
+
+  [class*="border-"] {
+    &[class*="-right"] {
+      border-right-width: 0 !important;
+      border-left-width: $border-width !important;
+    }
+
+    &[class*="-left"] {
+      border-right-width: $border-width !important;
+      border-left-width: 0 !important;
+    }
+  }
+
 }
 
 // end RTL
