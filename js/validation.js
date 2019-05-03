@@ -18,7 +18,7 @@ $(document).ready(function () {
                         var invalid_target = $(':invalid');
                         invalid_target.closest('.form-group').addClass('is-invalid');
                         
-                        var alert_target = $('.is-invalid');
+                        var alert_target = $('.is-invalid:first');
                         alert_target.removeClass('d-none');
                                 
                         $('html, body').animate({
