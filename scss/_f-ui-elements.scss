@@ -643,9 +643,9 @@ $banner-with-background-height: 350px;
 
   // Add your own backround classes and append them to the '.banner-with-background' selector
 
-  &.bridge-blur {
+  &.taxi-blur {
     &::before {
-      @include apply-background-image("bridge-blur");
+      @include apply-background-image("taxi-blur");
     }
   }
 }
