@@ -17,9 +17,7 @@ In this file:
 // M. Box shadows
 // N. Forms and alerts
 // O. Modals
-// P. Carousel
-// Q. Figures
-// R. Code
+// P. Figures
 
 */
 
@@ -394,28 +392,7 @@ $modal-backdrop-opacity: 0.95;
 $modal-content-border-color: rgba($black, 0.2);
 
 ////////////////////////////////////////
-// P. Carousel
-//////////////////////////////////////// 
-
-$carousel-control-color: $white !default;
-$carousel-control-opacity: .75;
-
-$carousel-indicator-width: 0.75rem;
-$carousel-indicator-height: 0.75rem;
-$carousel-indicator-spacer: .25rem;
-$carousel-indicator-active-bg: $white !default;
-
-$carousel-caption-width: 100%;
-
-////////////////////////////////////////
 // Q. Figures
 ////////////////////////////////////////
 
 $figure-caption-font-size: $fs-md;
-
-////////////////////////////////////////
-// R. Code
-////////////////////////////////////////
-
-$code-font-size: 87.5%;
-$code-color: $cyan;
