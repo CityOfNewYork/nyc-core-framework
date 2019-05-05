@@ -649,6 +649,12 @@ $banner-with-background-height: 350px;
     }
   }
 
+  &.vessel {
+    &::before {
+      @include apply-background-image("vessel");
+    }
+  }
+
 }
 
 ////////////////////////////////////////
