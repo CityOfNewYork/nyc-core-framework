@@ -643,18 +643,11 @@ $banner-with-background-height: 350px;
 
   // Add your own backround classes and append them to the '.banner-with-background' selector
 
-  &.traffic {
+  &.oculus {
     &::before {
-      @include apply-background-image("traffic");
+      @include apply-background-image("oculus");
     }
   }
-
-  &.train-in-motion {
-    &::before {
-      @include apply-background-image("train-in-motion");
-    }
-  }
-
 
 }
 
