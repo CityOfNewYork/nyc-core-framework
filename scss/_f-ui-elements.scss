@@ -648,13 +648,7 @@ $banner-with-background-height: 350px;
       @include apply-background-image("oculus");
     }
   }
-
-  &.vessel {
-    &::before {
-      @include apply-background-image("vessel");
-    }
-  }
-
+  
 }
 
 ////////////////////////////////////////
