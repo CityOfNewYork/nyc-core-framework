@@ -157,14 +157,14 @@ html[dir="rtl"] {
     }
   }
 
-  // Flip accordion and button toggles (found in _e-ui-elements.scss) from right to left
+  // Apply margin to opposite side of the icon (found in _e-ui-elements.scss)
 
   .accordion-group,
   .btn-toggle {
-    a[data-toggle="collapse"] {
+    [data-toggle="collapse"] {
       &::after {
         margin-left: 0;
-        margin-right: auto;
+        margin-right: $spacer-2;
       }
     }
   }

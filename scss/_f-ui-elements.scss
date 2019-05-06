@@ -769,7 +769,6 @@ $matrix-tiger-padding: 3%;
     padding: $matrix-gutter-padding;
   }
 }
-
 ////////////////////////////////////////
 // J. Accordion and button toggle 
 ////////////////////////////////////////
@@ -795,23 +794,30 @@ $accordion-margin-y: $spacer-1;
 
 .btn-toggle,
 .accordion-group {
+
   [data-toggle="collapse"] {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
+  [data-toggle="collapse"]::after {
+    margin-left: $spacer-2;
+  }
+
 }
 
 // Button toggle
 
 .btn-toggle {
+
   [data-toggle="collapse"] {
+
     overflow: hidden;
 
     &::after {
       content: "\f067";
-
       @extend %fa-icon;
     }
 
@@ -855,6 +861,7 @@ $accordion-margin-y: $spacer-1;
   }
 
   a[data-toggle="collapse"] {
+
     @if $accordion-button-border {
       border: $border-width solid $border-color;
     }
@@ -867,14 +874,15 @@ $accordion-margin-y: $spacer-1;
 
     &:after {
       content: "\f067";
-
       @extend %fa-icon;
     }
 
     &[aria-expanded="true"] {
+
       @if $accordion-button-shadow {
         @extend .shadow;
       }
+
     }
 
     // Change the right icon here. Go to https://fontawesome.com/icons
@@ -888,6 +896,7 @@ $accordion-margin-y: $spacer-1;
       content: "\f107";
     }
   }
+
 }
 
 ////////////////////////////////////////
