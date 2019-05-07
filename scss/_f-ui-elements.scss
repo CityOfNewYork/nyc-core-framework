@@ -243,6 +243,8 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
   .nav:not(.nav-pills) {
     .nav-item-search {
+      margin-left: $spacer-1;
+      margin-right: $spacer-1;
       border: $border-width solid $global-header-border-color;
     }
   }
