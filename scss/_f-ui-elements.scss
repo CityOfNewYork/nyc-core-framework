@@ -924,7 +924,7 @@ $nav-tab-active-font-weight: $font-weight-bold;
 
 @mixin device-nav-pills-and-tabs-settings {
   flex-direction: column;
-  border-color: $transparent;
+  border-color: transparent;
   margin-bottom: $spacer-2;
 
   .nav-item {
