@@ -92,9 +92,10 @@ $info: #A513B6;
 $light: #e6ecf7;
 $dark: #0A1438;
 
-// Add black to our theme's color map
+// Add white and black to our theme's color map
 
 $theme-colors: (
+    "white": $white,
     "black": $black
 );
 
