@@ -174,7 +174,7 @@ $spacers: (0: 0, 1: $spacer-1, 2: $spacer-2, 3: $spacer-3, 4: $spacer-4, 5: $spa
 
 // Set grid gutter width equal to '$spacer-2' (32px)
 
-$grid-gutter-width: $spacer-2;
+$grid-gutter-width: ($spacer-2 *2);
 
 // Convert Grid $grid-gutter-width from REM to PX 
 

@@ -98,7 +98,7 @@ $primary-nav-link-color: $body-color;
 $primary-nav-link-active-color: $secondary;
 
 // Use dark header settings (set the background color inside 'Reset variables for dark header' conditional below)
-$global-header-dark: false;
+$global-header-dark: true;
 
 // Make '.nav-item' selectors the same width regardless of text width
 $nav-pills-consistent-width: true;
@@ -1047,7 +1047,7 @@ $side-by-side-margin: 0.25em;
 $default-card-borders: false;
 $default-card-backgrounds: false;
 
-@if $default-card-borders==false {
+@if $default-card-borders == false {
 
   .card,
   .card-header,
@@ -1058,7 +1058,7 @@ $default-card-backgrounds: false;
 
 // end if
 
-@if $default-card-backgrounds==false {
+@if $default-card-backgrounds == false {
 
   .card,
   .card-header,
