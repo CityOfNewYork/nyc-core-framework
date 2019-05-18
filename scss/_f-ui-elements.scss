@@ -98,7 +98,7 @@ $primary-nav-link-color: $body-color;
 $primary-nav-link-active-color: $secondary;
 
 // Use dark header settings (set the background color inside 'Reset variables for dark header' conditional below)
-$global-header-dark: true;
+$global-header-dark: false;
 
 // Make '.nav-item' selectors the same width regardless of text width
 $nav-pills-consistent-width: true;
