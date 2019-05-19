@@ -166,7 +166,15 @@ $spacer-4: $spacer * 3; // 48px
 $spacer-5: $spacer * 4; // 64px
 $spacer-6: $spacer * 6; // 96px
 
-$spacers: (0: 0, 1: $spacer-1, 2: $spacer-2, 3: $spacer-3, 4: $spacer-4, 5: $spacer-5, 6: $spacer-6);
+$spacers: (
+    0: 0, 
+    1: $spacer-1, 
+    2: $spacer-2, 
+    3: $spacer-3, 
+    4: $spacer-4, 
+    5: $spacer-5, 
+    6: $spacer-6
+);
 
 ////////////////////////////////////////
 // F. Grid gutter and container widths
@@ -268,7 +276,7 @@ $enable-responsive-font-sizes: true;
 
 // Border width
 
-$border-width: 1px; // equal to 1px
+$border-width: 1px;
 
 // Enable Rounded
 
