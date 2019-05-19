@@ -2,20 +2,20 @@
 
 In this file:
 
-// A. Breakpoints floating bar
-// B. Container highlighter
+// A. Floating breakpoints bar
+// B. Container background color
 
 */
 
 ////////////////////////////////////////
-// A. Breakpoints floating bar
+// A. Floating breakpoints bar
 ////////////////////////////////////////
 
-$breakpoints-bar: false;
+// Floating bar with visible breakpoints
 
-$breakpoints-bar-bg: fade-out(purple, 0.1);
+$floating-breakpoints-bar: false;
 
-@if $breakpoints-bar {
+@if $floating-breakpoints-bar {
 
     html {
 
@@ -29,9 +29,9 @@ $breakpoints-bar-bg: fade-out(purple, 0.1);
             display: block;
             color: white;
             text-align: center;
-            padding: $spacer-3;
+            padding: $spacer-2;
             z-index: 5000;
-            background: $breakpoints-bar-bg;
+            background-color: rgba(purple, 0.9);
         }
 
         @each $breakpoint in map-keys($grid-breakpoints) {
@@ -48,29 +48,26 @@ $breakpoints-bar-bg: fade-out(purple, 0.1);
 // end if
 
 ////////////////////////////////////////
-// B. Container highlighter
+// B. Container background color
 ////////////////////////////////////////
 
-$highlight-containers: false;
+// Add background color to containers
 
-@if $highlight-containers {
+$container-background-color: false;
+
+@if $container-background-color {
 
     .container {
-        background: fade-out(red, 0.25) !important;
+        background-color: rgba(red, 0.55) !important;
     }
 
     .narrow {
-        background: fade-out(orange, 0.25) !important;
+        background-color: rgba(orange, 0.75) !important;
     }
 
     .wide {
-        background: fade-out(green, 0.25) !important;
+        background-color: rgba(green, 0.75) !important;
     }
-
-    // .matrix{ background: fade-out(blue, 0.25) !important; }
-    // .extensible-list{ background: fade-out(purple, 0.25) !important; }
-    // .extensible-list li{ background: fade-out(pink, 0.25) !important; }
-
 }
 
 // end if
