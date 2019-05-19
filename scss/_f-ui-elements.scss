@@ -39,6 +39,7 @@ $nyc-header-footer-bg-color: $black;
   font-size: $fs-sm;
 
   // Display block on NYC logo ensures vertical alignment
+
   img {
     display: block;
   }
@@ -66,13 +67,13 @@ $nyc-header-footer-bg-color: $black;
 #back-to-top {
   @extend .container-fluid;
   @extend .fixed-bottom;
-  @include opacity(0);
+  opacity: 0;
 
   text-align: right;
   transition: opacity .1s linear 0s;
 
   &.show {
-    @include opacity(1);
+    opacity: 1;
   }
 }
 
@@ -570,7 +571,7 @@ legend,
   }
 
   img.show-on-mobile {
-    @include opacity(1);
+    opacity: 1;
   }
 
   [class*="overlay-gradient"]::before {
@@ -646,7 +647,8 @@ $banner-with-background-height: 350px;
     left: 0;
     z-index: auto;
 
-    @include opacity($banner-with-background-opacity);
+    opacity: $banner-with-background-opacity;
+
     @include apply-background-image;
   }
 
