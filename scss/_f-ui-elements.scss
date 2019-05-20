@@ -356,7 +356,6 @@ $global-header-toggle-button-color: $primary-nav-link-color;
 
 .skip-menu {
   @extend .position-absolute;
-
   @extend .shadow;
 
   top: $spacer;
@@ -364,7 +363,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   z-index: 900;
   padding: $spacer-2;
   font-size: $fs-md;
-  background: theme-color("light");
+  background: $light;
   color: $body-color;
 
   &:hover {
@@ -566,6 +565,7 @@ legend,
 ////////////////////////////////////////
 
 @mixin featured-panel-responsive-settings {
+  
   .card-img-overlay {
     position: relative;
   }
