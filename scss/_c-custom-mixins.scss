@@ -30,7 +30,7 @@ In this file:
 // B. Background image
 ////////////////////////////////////////
 
-$background-image-path: '../images/feature/';
+$background-image-path: '../images/';
 
 @mixin apply-background-image($image: 'placeholder-1500x750',
   $extension: '.jpg',
