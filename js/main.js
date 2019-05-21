@@ -24,16 +24,29 @@ $(document).ready(function () {
     }
     
     observer.observe(target, config);
-    
+
     ////////////////////////////////////////
-    // Language and Search Toggles Shown
+    // Language, Search, and Menu Toggle
     ////////////////////////////////////////
 
-    $('#global-search').on('shown.bs.collapse', function () {
-        document.getElementById('global-search-bar').focus();
-    }).on('show.bs.collapse', function () {
-        document.getElementById('global-search-bar').blur();
+    $('#global-language').on('show.bs.collapse', function () {
+        $('#global-search').collapse('hide');
+        $('#nav-primary').collapse('hide');
     });
+
+    $('#global-search').on('show.bs.collapse', function () {
+        $('#global-language').collapse('hide');
+        $('#nav-primary').collapse('hide');
+    });
+
+    $('#nav-primary').on('show.bs.collapse', function () {
+        $('#global-search').collapse('hide');
+        $('#global-language').collapse('hide');
+    });
+
+    ////////////////////////////////////////
+    // Language and Search Toggle Focus
+    ////////////////////////////////////////
 
     $('#global-language').on('shown.bs.collapse', function () {
         $('.goog-te-combo').focus();
@@ -41,23 +54,10 @@ $(document).ready(function () {
         $('.goog-te-combo').blur();
     });
 
-    ////////////////////////////////////////
-    // Language and Search Toggles Shown
-    ////////////////////////////////////////
-
-    $('#global-search').on('show.bs.collapse', function () {
-        $('#global-language').collapse('hide');
-        $('#nav-primary').collapse('hide');
-    });
-
-    $('#global-language').on('show.bs.collapse', function () {
-        $('#global-search').collapse('hide');
-        $('#nav-primary').collapse('hide');
-    });
-
-    $('#nav-primary').on('show.bs.collapse', function () {
-        $('#global-search').collapse('hide');
-        $('#global-language').collapse('hide');
+    $('#global-search').on('shown.bs.collapse', function () {
+        document.getElementById('global-search-bar').focus();
+    }).on('show.bs.collapse', function () {
+        document.getElementById('global-search-bar').blur();
     });
 
     ////////////////////////////////////////
