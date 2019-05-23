@@ -159,7 +159,7 @@ $global-header-toggle-button-color: $primary-nav-link-color;
   [class*="border-"] {
     border-color: $global-header-border-color !important;
   }
-
+  
   // Add opacity to toggle buttons on 'expanded'
 
   button[data-toggle="collapse"] {
