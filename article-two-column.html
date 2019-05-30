@@ -23,7 +23,7 @@
 
 <body>
     
-    <a class="sr-only sr-only-focusable skip-menu" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
+    <a class="sr-only sr-only-focusable skip-menu" href="#skip-header-target" title="Skip Header">Skip Header</a>
 
     <header id="global-header" role="banner">
 
@@ -262,7 +262,7 @@
     <main role="main">
 
         <!-- Add your Custom image class below (after 'banner-with-background') -->
-        <section class="bg-primary banner-with-background">
+        <section class="bg-primary banner-with-background oculus">
 
             <div class="container">
                 <div class="row">
@@ -280,17 +280,26 @@
         </section>
         <!-- .bg-cover -->
 
-        <article class="container">
+        <article class="container" id="skip-header-target">
 
             <div class="row">
 
-                <div class="col-lg-3 mt-5 mt-lg-0">
+                <div class="col-lg-3">
 
-                    <div class="sticky-top py-lg-5">
+                    <div class="mt-4">
 
-                        <nav role="navigation">
+                        <a class="sr-only sr-only-focusable skip-menu" href="#primary-content" title="Skip Nav">Skip Nav</a>
 
-                            <div class="list-group">
+                        <div class="btn-toggle d-lg-none">
+                            <button class="btn btn-block btn-lg btn-dark" data-toggle="collapse" data-target="#secondary-navigation"
+                                aria-expanded="false" aria-controls="secondary-navigation">
+                                <span class="title">Title</span>
+                            </button>
+                        </div>
+
+                        <nav class="collapse d-lg-block" id="secondary-navigation" role="navigation">
+
+                            <div class="list-group custom-active">
                                 <a href="#1" class="list-group-item list-group-item-action active" title="Link">
                                     Link
                                 </a>
@@ -326,7 +335,7 @@
                             Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
                             dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
                             potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                            dictumst porttitor est volutpat.
+                            dictumst porttitor <a href="#1" title="est volutpat">est volutpat</a>.
                         </p>
 
                         <p>
