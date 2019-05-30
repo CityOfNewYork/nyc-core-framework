@@ -24,7 +24,7 @@
 
 <body>
     
-    <a class="sr-only sr-only-focusable skip-menu" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
+    <a class="sr-only sr-only-focusable skip-menu" href="#skip-target-01" title="Skip Main Navigation">Skip Main Navigation</a>
 
     <header id="global-header" role="banner">
 
@@ -263,7 +263,7 @@
     <main role="main">
 
         <!-- Add your Custom image class below (after 'banner-with-background') -->
-        <section class="bg-primary banner-with-background oculus">
+        <div class="bg-primary banner-with-background oculus">
 
             <div class="container">
                 <div class="row">
@@ -278,16 +278,19 @@
             </div>
             <!-- .container -->
 
-        </section>
+        </div>
         <!-- .bg-cover -->
 
         <article class="container">
 
-            <div class="row">
+            <div class="row" id="skip-target-01">
 
                 <div class="col-lg-3">
 
-                    <div class="sticky-top mt-4 mt-lg-0 py-lg-5">
+
+                    <div class="mt-5 bg-danger">
+
+                        <a class="sr-only sr-only-focusable skip-menu" href="#skip-target-02" title="Skip Main Navigation">Skip Nav</a>
 
                         <div class="btn-toggle d-lg-none">
                             <button class="btn btn-block btn-lg btn-dark" data-toggle="collapse" data-target="#secondary-navigation"
@@ -296,9 +299,9 @@
                             </button>
                         </div>
 
-                        <nav class="collapse d-lg-block" id="secondary-navigation" role="navigation">
+                        <nav class="collapse d-lg-block" id="" role="navigation">
 
-                            <div class="list-group">
+                            <div class="list-group custom">
                                 <a href="#1" class="list-group-item list-group-item-action active" title="Link">
                                     Link
                                 </a>
