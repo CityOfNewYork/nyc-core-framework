@@ -659,6 +659,12 @@ $banner-with-background-height: 350px;
       @include apply-background-image("oculus");
     }
   }
+
+  // Make height smaller on smaller viewports
+
+  @include media-breakpoint-down(md) {
+    min-height: calc(#{$banner-with-background-height} * 0.75);
+  }
   
 }
 

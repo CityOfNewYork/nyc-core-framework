@@ -28,3 +28,17 @@ In this file:
 ////////////////////////////////////////
 
 // Put anything you want here
+
+#secondary-navigation{
+
+    a.active{
+
+        background-color: unset;
+        font-weight: $font-weight-bold;
+        border-color: $border-color;
+        border-left-color: $info;
+        border-left-width: ($border-width * 2);
+        color: $info;
+
+    }
+}
