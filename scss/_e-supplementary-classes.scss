@@ -212,6 +212,14 @@ $title-margin: 0.125em;
       text-decoration: underline;
     }
   }
+
+  // Position icon and title to either side
+
+  &.disperse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 ////////////////////////////////////////
