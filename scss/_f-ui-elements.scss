@@ -38,6 +38,10 @@ $nyc-header-footer-bg-color: $black;
 #nyc-top-header {
   font-size: $fs-sm;
 
+  a {
+    font-weight: $font-weight-bold;
+  }
+
   // Display block on NYC logo ensures vertical alignment
 
   img {
@@ -52,10 +56,6 @@ $nyc-header-footer-bg-color: $black;
 #nyc-top-header,
 #nyc-bottom-footer {
   background: $nyc-header-footer-bg-color;
-}
-
-#nyc-top-header {
-  font-weight: $font-weight-bold;
 }
 
 #nyc-bottom-footer {
