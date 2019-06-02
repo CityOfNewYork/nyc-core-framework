@@ -266,15 +266,26 @@
         <!-- Add your Custom image class below (after 'banner-with-background') -->
         <div class="bg-primary banner-with-background oculus">
 
-            <div class="container-fluid">
-                <div class="narrow">
+            <div class="container-fluid my-auto">
+                <div class="narrow my-3">
                     <h1 class="display-4 text-white">Page Title</h1>
                 </div>
             </div>
             <!-- .container -->
 
+            <!-- Toggle #sidebar-nav on mobile -->
+            <div class="container-fluid d-xl-none">
+                <div class="narrow">
+                    <div class="btn-toggle narrow">
+                        <button class="btn btn-block btn-lg btn-primary shadow" data-toggle="collapse" data-target="#sidebar-nav"
+                            aria-expanded="false" aria-controls="sidebar-nav">
+                            <span class="title">Title</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <!-- .bg-cover -->
 
         <article class="container-fluid" id="skip-header-target">
 
@@ -282,19 +293,7 @@
 
                 <div class="col-xl-2 border-xl-right">
 
-                    <div class="bg-dark mx-n2">
-
-                        <div class="btn-toggle narrow d-xl-none border-left border-right border-black">
-                            <button class="btn btn-block btn-lg btn-dark" data-toggle="collapse" data-target="#secondary-navigation"
-                                aria-expanded="false" aria-controls="secondary-navigation">
-                                <span class="title">Title</span>
-                            </button>
-                        </div>
-
-                    </div>
-                    <!-- .bg-dark -->
-
-                    <div class="sticky-top narrow collapse d-xl-block" id="secondary-navigation">
+                    <div class="sticky-top narrow collapse d-xl-block" id="sidebar-nav">
 
                         <nav class="mx-xl-n2 pt-4 py-xl-0" role="navigation">
 

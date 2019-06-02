@@ -622,18 +622,20 @@ legend,
 // G. Banner with background
 ////////////////////////////////////////
 
-$banner-with-background-opacity: 0.2;
+$banner-with-background-opacity: 0.3;
 $banner-with-background-height: 350px;
 
 .banner-with-background {
   position: relative;
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
   min-height: $banner-with-background-height;
 
   >div {
     position: relative;
-    z-index: 100;
-    align-self: center;
+    z-index: auto;
   }
 
   &::before {
