@@ -271,10 +271,6 @@ a:not(.btn).disabled {
   opacity: 0.5;
 }
 
-.text-reset{
-  text-decoration: underline;
-}
-
 .has-icon {
   @include hover-focus {
     text-decoration: none !important;
