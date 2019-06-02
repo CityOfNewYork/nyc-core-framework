@@ -57,12 +57,16 @@ $container-background-color: false;
 
 @if $container-background-color {
 
-    .container {
+    [class*="container"] {
         background-color: rgba(red, 0.55) !important;
     }
 
     .narrow {
         background-color: rgba(orange, 0.75) !important;
+    }
+
+    .medium {
+        background-color: rgba(yellow, 0.75) !important;
     }
 
     .wide {
