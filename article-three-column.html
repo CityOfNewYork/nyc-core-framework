@@ -282,21 +282,26 @@
 
                 <div class="col-xl-2 border-xl-right" id="sidebar">
 
-                    <div class="sticky-top narrow mt-4 mt-xl-0">
+                    <div class="bg-dark mx-n2">
 
-                        <div class="btn-toggle d-xl-none">
-                            <button class="btn btn-block btn-lg btn-dark" data-toggle="collapse"
-                                data-target="#secondary-navigation" aria-expanded="false"
-                                aria-controls="secondary-navigation">
+                        <div class="btn-toggle narrow d-xl-none border-left border-right border-black">
+                            <button class="btn btn-block btn-lg btn-dark shadow" data-toggle="collapse" data-target="#secondary-navigation"
+                                aria-expanded="false" aria-controls="secondary-navigation">
                                 <span class="title">Title</span>
                             </button>
                         </div>
 
-                        <nav class="collapse d-xl-block mx-xl-n2" id="secondary-navigation" role="navigation">
+                    </div>
+                    <!-- .narrow -->
+
+                    <div class="sticky-top narrow collapse d-xl-block" id="secondary-navigation">
+
+                        <nav class="mx-xl-n2 pt-4 py-xl-0" role="navigation">
 
                             <a class="sr-only sr-only-focusable skip-menu" href="#primary-content" title="Skip Nav">Skip Nav</a>
 
-                            <div class="list-group list-group-flush">
+                            <div class="list-group list-group-flush border-bottom">
+
                                 <a href="#1" class="list-group-item list-group-item-action active" title="Link">
                                     Link
                                 </a>
@@ -312,6 +317,7 @@
                                 <a href="#1" class="list-group-item list-group-item-action" title="Link">
                                     Link
                                 </a>
+
                             </div>
 
                         </nav>
