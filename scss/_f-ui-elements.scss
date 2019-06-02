@@ -621,7 +621,7 @@ legend,
 // G. Banner with background
 ////////////////////////////////////////
 
-$banner-with-background-opacity: 0.3;
+$banner-with-background-opacity: 0.2;
 $banner-with-background-height: 350px;
 
 .banner-with-background {
@@ -632,7 +632,7 @@ $banner-with-background-height: 350px;
   
   min-height: $banner-with-background-height;
 
-  >div {
+  >* {
     position: relative;
     z-index: auto;
   }
