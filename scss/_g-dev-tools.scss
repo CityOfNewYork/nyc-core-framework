@@ -54,24 +54,26 @@ $floating-breakpoints-bar: false;
 // Add background color to containers
 
 $container-background-color: false;
+$container-background-opacity: 0.5;
 
 @if $container-background-color {
 
     [class*="container"] {
-        background-color: rgba(red, 0.55) !important;
+        background-color: rgba(red, $container-background-opacity) !important;
     }
 
     .narrow {
-        background-color: rgba(orange, 0.75) !important;
+        background-color: rgba(orange, $container-background-opacity) !important;
     }
 
     .medium {
-        background-color: rgba(yellow, 0.75) !important;
+        background-color: rgba(yellow, $container-background-opacity) !important;
     }
 
     .wide {
-        background-color: rgba(green, 0.75) !important;
+        background-color: rgba(green, $container-background-opacity) !important;
     }
+
 }
 
 // end if

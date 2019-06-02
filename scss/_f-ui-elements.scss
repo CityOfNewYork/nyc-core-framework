@@ -570,7 +570,7 @@ legend,
     position: relative;
   }
 
-  img.show-on-mobile {
+  img.full-opacity-on-device {
     opacity: 1;
   }
 
@@ -600,8 +600,7 @@ legend,
   }
 
   .card-img-overlay {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -762,10 +761,8 @@ $extensible-list-margin: 0.5em;
 // Note: Add to '.row' class to create a grid of colums
 // with equal spacing on all sides, not just the gutters
 
-$matrix-border-padding: $border-width / 2;
-$matrix-gutter-padding: $grid-gutter-width / 4;
-
-$matrix-tiger-padding: 3%;
+$matrix-border-padding: ($border-width / 2);
+$matrix-gutter-padding: ($grid-gutter-width / 4);
 
 .matrix-border {
   margin-top: -$matrix-border-padding;
