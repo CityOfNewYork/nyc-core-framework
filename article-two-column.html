@@ -282,24 +282,35 @@
         </div>
         <!-- .bg-cover -->
 
+        <!-- Toggle  -->
+
+        <div class="bg-dark d-lg-none">
+
+            <div class="container">
+
+                <div class="btn-toggle narrow border-left border-right border-black">
+                    <button class="btn btn-block btn-lg btn-dark" data-toggle="collapse" data-target="#sidebar-nav"
+                        aria-expanded="false" aria-controls="sidebar-nav">
+                        <span class="title">Title</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- .bg-dark -->
+
         <article class="container" id="skip-header-target">
 
             <div class="row">
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 collapse d-lg-block" id="sidebar-nav">
 
                     <div class="mt-4">
 
                         <a class="sr-only sr-only-focusable skip-menu" href="#primary-content" title="Skip Nav">Skip Nav</a>
 
-                        <div class="btn-toggle d-lg-none">
-                            <button class="btn btn-block btn-lg btn-dark" data-toggle="collapse" data-target="#secondary-navigation"
-                                aria-expanded="false" aria-controls="secondary-navigation">
-                                <span class="title">Title</span>
-                            </button>
-                        </div>
-
-                        <nav class="collapse d-lg-block" id="secondary-navigation" role="navigation">
+                        <nav role="navigation">
 
                             <div class="list-group custom-active">
                                 <a href="#1" class="list-group-item list-group-item-action active" title="Link">
