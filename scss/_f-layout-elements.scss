@@ -107,7 +107,7 @@ $nav-pills-consistent-width: true;
 // Reset variables for dark header
 @if $global-header-dark {
 
-  $global-header-bg-color: $dark;
+  $global-header-bg-color: $primary;
 
   $global-header-border-color: rgba(black, 0.5);
   $primary-nav-link-color: $white;
