@@ -22,10 +22,10 @@
 </head>
 
 <body>
-    
+
     <!-- For keyboard users -->
-    <a class="sr-only sr-only-focusable skip-menu" href="#primary-content" title="Skip Header">Skip Header</a>
-    
+    <a class="sr-only sr-only-focusable skip-menu" href="#skip-header-target" title="Skip Header">Skip Header</a>
+
     <header id="global-header" role="banner">
 
         <div id="nyc-top-header">
@@ -161,7 +161,7 @@
 
                                         <a class="nav-link dropdown-toggle" href="#" id="nav-item-02"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            title="Nav Item" role="button">
+                                            title="Nav Item">
                                             Nav Item
                                         </a>
 
@@ -263,234 +263,332 @@
 
     <main role="main">
 
-        <!-- Add your custom image class below (replace 'oculus' with your own custom class) -->
+        <!-- Add your Custom image class below (after 'banner-with-background') -->
         <div class="bg-primary banner-with-background oculus">
 
-            <div class="container my-auto">
-                <div class="narrow my-3">
-                    <h1 class="display-4 text-white">Page Title</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 offset-lg-3">
+                        <div class="narrow">
+                            <h1 class="display-4 text-white">Page Title</h1>
+                        </div>
+                    </div>
+                    <!-- .col -->
                 </div>
+                <!-- .row -->
             </div>
             <!-- .container -->
 
         </div>
         <!-- .bg-cover -->
 
-        <article class="container overflow-hidden" id="primary-content">
+        <!-- Toggle  -->
 
-            <div class="my-5">
+        <div class="bg-dark d-lg-none">
 
-                <div class="narrow my-4">
+            <div class="container">
 
-                    <h2>Lorem ipsum dolor sit amet</h2>
+                <div class="btn-toggle narrow border-left border-right border-black">
+                    <button class="btn btn-block btn-lg btn-dark" data-toggle="collapse" data-target="#sidebar-nav"
+                        aria-expanded="false" aria-controls="sidebar-nav">
+                        <span class="title">Title</span>
+                    </button>
+                </div>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium
-                        et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor <a href="#1" title="est volutpat">est volutpat</a>.
-                    </p>
+            </div>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
+        </div>
+        <!-- .bg-dark -->
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
+        <article class="container" id="skip-header-target">
 
-                    <div class="accordion-group my-4" role="tablist" id="accordion-01">
+            <div class="row">
 
-                        <div class="card">
+                <div class="col-lg-3 collapse d-lg-block" id="sidebar-nav">
 
-                            <a class="card-header h4 collapse collapsed" id="acc-button-01" data-toggle="collapse"
-                                href="#panel-acc-button-01" role="tab" aria-expanded="false"
-                                aria-controls="panel-acc-button-01">
-                                <span class="title" role="heading" aria-level="2">Accordion Title</span>
-                            </a>
+                    <div class="mt-4">
 
-                            <div class="collapse" id="panel-acc-button-01" role="tabpanel" aria-labelledby="acc-button-01"
-                                data-parent="#accordion-01">
+                        <a class="sr-only sr-only-focusable skip-menu" href="#primary-content" title="Skip Nav">Skip
+                            Nav</a>
 
-                                <div class="card-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident
-                                        natus, unde fugit
-                                        voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium
-                                        ipsam neque
-                                        consequatur voluptates.
-                                    </p>
-                                </div>
+                        <nav role="navigation">
 
+                            <div class="list-group custom-active">
+                                <a href="#1" class="list-group-item list-group-item-action active" title="Link">
+                                    Link
+                                </a>
+                                <a href="#1" class="list-group-item list-group-item-action" title="Link">
+                                    Link
+                                </a>
+                                <a href="#1" class="list-group-item list-group-item-action" title="Link">
+                                    Link
+                                </a>
+                                <a href="#1" class="list-group-item list-group-item-action" title="Link">
+                                    Link
+                                </a>
+                                <a href="#1" class="list-group-item list-group-item-action" title="Link">
+                                    Link
+                                </a>
                             </div>
-                            <!-- .collapse -->
 
-                        </div>
-                        <!-- .card -->
-
-                        <div class="card">
-
-                            <a class="card-header h4 collapse collapsed" id="acc-button-02" data-toggle="collapse"
-                                href="#panel-acc-button-02" role="tab" aria-expanded="false"
-                                aria-controls="panel-acc-button-02">
-                                <span class="title" role="heading" aria-level="2">Accordion Title</span>
-                            </a>
-
-                            <div class="collapse" id="panel-acc-button-02" role="tabpanel" aria-labelledby="acc-button-02"
-                                data-parent="#accordion-01">
-
-                                <div class="card-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident
-                                        natus, unde fugit
-                                        voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium
-                                        ipsam neque
-                                        consequatur voluptates.
-                                    </p>
-                                </div>
-
-                            </div>
-                            <!-- .collapse -->
-
-                        </div>
-                        <!-- .card -->
-
-                        <div class="card">
-
-                            <a class="card-header h4 collapse collapsed" id="acc-button-03" data-toggle="collapse"
-                                href="#panel-acc-button-03" role="tab" aria-expanded="false"
-                                aria-controls="panel-acc-button-03">
-                                <span class="title" role="heading" aria-level="2">Accordion Title</span>
-                            </a>
-
-                            <div class="collapse" id="panel-acc-button-03" role="tabpanel" aria-labelledby="acc-button-03"
-                                data-parent="#accordion-01">
-
-                                <div class="card-body">
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis provident
-                                        natus, unde fugit
-                                        voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit praesentium
-                                        ipsam neque
-                                        consequatur voluptates.
-                                    </p>
-                                </div>
-
-                            </div>
-                            <!-- .collapse -->
-
-                        </div>
-                        <!-- .card -->
+                        </nav>
 
                     </div>
-                    <!-- .accordion-group -->
-
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
-
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
-
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
+                    <!-- .sticky-top -->
 
                 </div>
-                <!-- .narrow -->
+                <!-- .col -->
 
-                <div class="medium my-4">
+                <div class="col-lg-9 overflow-hidden" id="primary-content">
 
-                    <figure class="figure">
-                        <img class="figure-img" src="https://via.placeholder.com/1000x500" alt="Placeholder">
-                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                    </figure>
+                    <div class="narrow my-5">
 
-                </div>
-                <!-- .container -->
+                        <h2>Lorem ipsum dolor sit amet</h2>
 
-                <div class="narrow my-4">
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor <a href="#1" title="est volutpat">est volutpat</a>.
+                        </p>
 
-                    <h2>Excepteur sint occaecat</h2>
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
+                        <div class="accordion-group my-4" role="tablist" id="accordion-01">
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium et
-                        dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi mi
-                        dictumst porttitor est volutpat.
-                    </p>
+                            <div class="card">
 
-                </div>
-                <!-- .narrow -->
-
-                <footer class="narrow my-4" id="article-footer">
-
-                    <div class="border-top border-dark">
-
-                        <ul class="extensible-list horizontal text-muted mt-3" id="share-buttons">
-                            <li class="text-muted">
-                                <span class="fas fa-share" title="Share this page" role="img"></span>
-                            </li>
-                            <li>
-                                <a class="text-muted" href="#" title="Share on Facebook">
-                                    <span class="fab fa-facebook-f"></span>
+                                <a class="card-header h4 collapse collapsed" id="acc-button-01" data-toggle="collapse"
+                                    href="#panel-acc-button-01" role="tab" aria-expanded="false"
+                                    aria-controls="panel-acc-button-01">
+                                    <span class="title" role="heading" aria-level="2">Accordion Title</span>
                                 </a>
-                            </li>
-                            <li>
-                                <a class="text-muted" href="#" title="Share on Twitter">
-                                    <span class="fab fa-twitter"></span>
+
+                                <div class="collapse" id="panel-acc-button-01" role="tabpanel"
+                                    aria-labelledby="acc-button-01" data-parent="#accordion-01">
+
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis
+                                            provident
+                                            natus, unde fugit
+                                            voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit
+                                            praesentium
+                                            ipsam neque
+                                            consequatur voluptates.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <!-- .collapse -->
+
+                            </div>
+                            <!-- .card -->
+
+                            <div class="card">
+
+                                <a class="card-header h4 collapse collapsed" id="acc-button-02" data-toggle="collapse"
+                                    href="#panel-acc-button-02" role="tab" aria-expanded="false"
+                                    aria-controls="panel-acc-button-02">
+                                    <span class="title" role="heading" aria-level="2">Accordion Title</span>
                                 </a>
-                            </li>
-                            <li>
-                                <a class="text-muted" href="#" title="Share through email">
-                                    <span class="fa fa-envelope"></span>
+
+                                <div class="collapse" id="panel-acc-button-02" role="tabpanel"
+                                    aria-labelledby="acc-button-02" data-parent="#accordion-01">
+
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis
+                                            provident
+                                            natus, unde fugit
+                                            voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit
+                                            praesentium
+                                            ipsam neque
+                                            consequatur voluptates.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <!-- .collapse -->
+
+                            </div>
+                            <!-- .card -->
+
+                            <div class="card">
+
+                                <a class="card-header h4 collapse collapsed" id="acc-button-03" data-toggle="collapse"
+                                    href="#panel-acc-button-03" role="tab" aria-expanded="false"
+                                    aria-controls="panel-acc-button-03">
+                                    <span class="title" role="heading" aria-level="2">Accordion Title</span>
                                 </a>
-                            </li>
-                        </ul>
+
+                                <div class="collapse" id="panel-acc-button-03" role="tabpanel"
+                                    aria-labelledby="acc-button-03" data-parent="#accordion-01">
+
+                                    <div class="card-body">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore debitis
+                                            provident
+                                            natus, unde fugit
+                                            voluptatibus quia molestias odit deleniti, maxime tempora quod magni sit
+                                            praesentium
+                                            ipsam neque
+                                            consequatur voluptates.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <!-- .collapse -->
+
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- .accordion-group -->
+
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
+
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
+
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
 
                     </div>
                     <!-- .narrow -->
 
-                </footer>
-                <!-- #article-footer -->
+                    <div class="medium my-5">
+
+                        <figure class="figure">
+                            <img class="figure-img" src="https://via.placeholder.com/800x400" alt="Placeholder">
+                            <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                        </figure>
+
+                    </div>
+                    <!-- .container -->
+
+                    <div class="narrow my-5">
+
+                        <h2>Excepteur sint occaecat</h2>
+
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
+
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
+
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis
+                            pretium et
+                            dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien
+                            potenti non vestibulum aptent non cum ullamcorper fusce tincidunt class scelerisque facilisi
+                            mi
+                            dictumst porttitor est volutpat.
+                        </p>
+
+                    </div>
+                    <!-- .narrow -->
+
+                    <footer class="narrow my-5" id="article-footer">
+
+                        <div class="border-top border-dark py-3">
+
+                            <ul class="extensible-list horizontal text-muted" id="share-buttons">
+                                <li class="text-muted">
+                                    <span class="fas fa-share" title="Share this page" role="img"></span>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#" title="Share on Facebook">
+                                        <span class="fab fa-facebook-f"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#" title="Share on Twitter">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-muted" href="#" title="Share through email">
+                                        <span class="fa fa-envelope"></span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- .narrow -->
+
+                    </footer>
+                    <!-- #article-footer -->
+
+                </div>
+                <!-- #primary-content -->
 
             </div>
-            <!-- .my-5 -->
+            <!-- .row -->
 
         </article>
         <!-- #primary-content -->
 
     </main>
+    <!-- #content -->
 
     <footer role="contentinfo">
 
@@ -514,7 +612,8 @@
                     </div>
                     <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
                         <ul class="extensible-list">
-                            <li><a class="lang-select" href="#" data-lang="ht" title="Kreyòl Ayisyen">Kreyòl Ayisyen</a></li>
+                            <li><a class="lang-select" href="#" data-lang="ht" title="Kreyòl Ayisyen">Kreyòl Ayisyen</a>
+                            </li>
                             <li><a class="lang-select" href="#" data-lang="ko" title="한국어">한국어</a></li>
                         </ul>
                     </div>
@@ -548,30 +647,31 @@
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="http://www1.nyc.gov/nyc-resources/agencies.page" title="Directory of City Agencies"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/nyc-resources/agencies.page"
+                                            title="Directory of City Agencies" target="_blank">
                                             <strong>Directory of City Agencies</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://a858-nycnotify.nyc.gov/notifynyc/" title="Notify NYC" target="_blank">
+                                        <a href="https://a858-nycnotify.nyc.gov/notifynyc/" title="Notify NYC"
+                                            target="_blank">
                                             <strong>Notify NYC</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www1.nyc.gov/connect/mobile-applications.page" title="NYC Mobile Apps"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/connect/mobile-applications.page"
+                                            title="NYC Mobile Apps" target="_blank">
                                             <strong>NYC Mobile Apps</strong>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="http://www1.nyc.gov/home/contact-us.page" title="Contact NYC Government"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/home/contact-us.page"
+                                            title="Contact NYC Government" target="_blank">
                                             <strong>Contact NYC Government</strong>
                                         </a>
                                     </li>
@@ -591,8 +691,8 @@
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&" title="City Employees"
-                                            target="_blank">
+                                        <a href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&"
+                                            title="City Employees" target="_blank">
                                             <strong>City Employees</strong>
                                         </a>
                                     </li>
@@ -603,8 +703,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page" title="Resident Toolkit"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page"
+                                            title="Resident Toolkit" target="_blank">
                                             <strong>Resident Toolkit</strong>
                                         </a>
                                     </li>
@@ -626,16 +726,18 @@
 
                         <ul class="extensible-list horizontal fs-sm py-0">
                             <li>
-                                <a href="http://www1.nyc.gov/home/privacy-policy.page" title="Privacy Policy" target="_blank">Privacy
+                                <a href="http://www1.nyc.gov/home/privacy-policy.page" title="Privacy Policy"
+                                    target="_blank">Privacy
                                     Policy</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/home/terms-of-use.page" title="Terms of Use" target="_blank">Terms
+                                <a href="http://www1.nyc.gov/home/terms-of-use.page" title="Terms of Use"
+                                    target="_blank">Terms
                                     of Use</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/site/mopd/index.page" title="Mayor's Office for People with Disabilities"
-                                    target="_blank">
+                                <a href="http://www1.nyc.gov/site/mopd/index.page"
+                                    title="Mayor's Office for People with Disabilities" target="_blank">
                                     <span class="fab fa-lg fa-accessible-icon"></span>
                                 </a>
                             </li>
@@ -656,11 +758,16 @@
     </footer>
 
     <!-- jQuery (full, compressed version) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- Popper.js and Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
     <!-- Google Translate -->
     <script>
