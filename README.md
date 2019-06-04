@@ -1,6 +1,6 @@
 ## About
 
-NYC Core Framework is a Bootstrap-based web framework with added design patterns and other components optimized for accessibility, translatability, usability, and clarity of presentation. NYC Core Framework is the product of hard work by team members from the [NYC Gov Lab & Studio](https://nyc.gov/govlabstudio) at the City's Department of Information Technology and Telecommunications (DoITT). Thank you to:
+NYC Core Framework is a Bootstrap-based web framework with added design patterns and other components optimized for accessibility, translatability, usability, and clarity of presentation. NYC Core Framework is the product of hard work by team members from the [NYC Gov Lab & Studio](http://nyc.gov/govlabstudio) at the City's Department of Information Technology and Telecommunications (DoITT). Thank you to:
 - Carl Avidano
 - Sean Gribbon
 - Lois Last
