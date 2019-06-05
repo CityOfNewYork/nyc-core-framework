@@ -98,16 +98,16 @@ $primary-nav-link-color: $body-color;
 // Global header link active (current page) color
 $primary-nav-link-active-color: $secondary;
 
-// Use dark header settings (set the background color inside 'Reset variables for dark header' conditional below)
-$global-header-dark: false;
-
 // Make '.nav-item' selectors the same width regardless of text width
 $nav-pills-consistent-width: true;
+
+// Use dark header settings (set the background color inside 'Reset variables for dark header' conditional below)
+$global-header-dark: false;
 
 // Reset variables for dark header
 @if $global-header-dark {
 
-  $global-header-bg-color: $primary;
+  $global-header-bg-color: $dark;
 
   $global-header-border-color: rgba(black, 0.5);
   $primary-nav-link-color: $white;
