@@ -625,8 +625,6 @@ $banner-with-background-opacity: 0.25;
 
 .banner-with-background {
   position: relative;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   
   min-height: $banner-with-background-height;
