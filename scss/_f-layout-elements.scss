@@ -13,9 +13,8 @@ In this file:
 // I. Matrix rows
 // J. Accordion and button toggle
 // K. Tabs
-// L. Side by side
-// M. Card
-// N. Tables
+// L. Cards
+// M. Tables
 
 */
 
@@ -785,6 +784,7 @@ $matrix-gutter-padding: ($grid-gutter-width / 4);
     padding: $matrix-gutter-padding;
   }
 }
+
 ////////////////////////////////////////
 // J. Accordion and button toggle 
 ////////////////////////////////////////
@@ -1026,29 +1026,7 @@ $nav-tab-active-font-weight: $font-weight-bold;
 }
 
 ////////////////////////////////////////
-// L. Side by side
-////////////////////////////////////////
-
-$side-by-side-margin: 0.25em;
-
-.side-by-side {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  margin-left: -$side-by-side-margin;
-  margin-right: -$side-by-side-margin;
-
-  >span {
-    margin-left: $side-by-side-margin;
-    margin-right: $side-by-side-margin;
-
-    // line-height: normal;
-
-  }
-}
-
-////////////////////////////////////////
-// M. Card
+// L. Cards
 ////////////////////////////////////////
 
 $default-card-borders: false;
@@ -1063,8 +1041,6 @@ $default-card-backgrounds: false;
   }
 }
 
-// end if
-
 @if $default-card-backgrounds == false {
 
   .card,
@@ -1073,8 +1049,6 @@ $default-card-backgrounds: false;
     background-color: transparent;
   }
 }
-
-// end if
 
 ////////////////////////////////////////
 // N. Tables
