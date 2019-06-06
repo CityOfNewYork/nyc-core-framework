@@ -221,6 +221,33 @@ html[dir="rtl"] {
     }
   }
 
+  [class*="offset-"] {
+    margin-left: 0;
+  }
+
+  @each $breakpoint,
+  $breakpoint-val in $grid-breakpoints {
+
+    @media(min-width: #{$breakpoint-val}) {
+
+      @for $i from 1 through $grid-columns - 1 {
+
+        @if $breakpoint=='xs' {
+          .offset-#{$i} {
+            margin-right: calc(100% / 12 * #{$i});
+          }
+
+        }
+
+        @else {
+          .offset-#{$breakpoint}-#{$i} {
+            margin-right: calc(100% / 12 * #{$i});
+          }
+        }
+      }
+    }
+  }
+
 }
 
 // end RTL
