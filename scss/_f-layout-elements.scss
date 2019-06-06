@@ -1041,7 +1041,6 @@ $default-card-backgrounds: false;
 
 @if $default-card-backgrounds == false {
 
-  .card,
   .card-header,
   .card-footer {
     background-color: transparent;
