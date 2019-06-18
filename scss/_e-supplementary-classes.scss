@@ -194,18 +194,10 @@ $icon-margin: 0.5em;
 
 .has-icon {
 
-  &:hover {
-    text-decoration: none;
+  // Ensure Font Awesome icons keep correct weight 
 
-    span.title {
-      text-decoration: underline;
-    }
-  }
-
-  &.active {
-    span.title {
-      text-decoration: underline;
-    }
+  [class*="fa-"] {
+    font-weight: 400;
   }
 
   // Position icon and title to either side
@@ -221,7 +213,7 @@ $icon-margin: 0.5em;
   &:not(.disperse){
 
     span.title {
-      margin-left: $icon-margin
+      margin-left: $icon-margin;
     }
 
   }
