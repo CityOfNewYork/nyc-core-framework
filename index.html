@@ -26,7 +26,7 @@
     <!-- For keyboard users -->
     <a class="sr-only sr-only-focusable skip-menu" href="#skip-header-target">Skip Header</a>
 
-    <header class="shadow-sm" id="global-header" role="banner">
+    <header id="global-header" role="banner">
 
         <div id="nyc-top-header">
 
@@ -36,7 +36,8 @@
 
                     <div class="col-auto">
                         <p class="d-none d-md-flex">
-                            <a href="https://www1.nyc.gov/">nyc.gov</a><span class="mx-1" aria-hidden="true">|</span>
+                            <a href="https://www1.nyc.gov/">nyc.gov</a>
+                            <span class="mx-1" aria-hidden="true">|</span>
                             Name of Office
                         </p>
                     </div>
@@ -46,15 +47,15 @@
 
                         <ul class="extensible-list horizontal">
                             <li>
-                                <a href="http://www1.nyc.gov/" title="311" target="_blank">311</a>
+                                <a href="http://www1.nyc.gov/" target="_blank">311</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/home/search/index.page" title="Search all NYC.gov"
-                                    target="_blank">Search all NYC.gov</a>
+                                <a href="http://www1.nyc.gov/home/search/index.page" target="_blank">Search all
+                                    NYC.gov</a>
                             </li>
                             <li>
-                                <a href="https://www1.nyc.gov/" title="NYG.gov" target="_blank">
-                                    <img class="d-block" src="./images/nyc-logo-header.svg" alt="NYC Logo">
+                                <a href="https://www1.nyc.gov/" title="Go to nyc.gov" target="_blank">
+                                    <img src="./images/nyc-logo-header.svg" alt="NYC Logo">
                                 </a>
                             </li>
                         </ul>
@@ -83,7 +84,7 @@
 
                             <a class="align-self-center" href="#" title="Home">
 
-                                <!-- Placeholder logo, replace with your own image version -->
+                                <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
 
                                 <svg id="nyc-logo-placeholder" data-name="NYC Bubble Logo"
                                     xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60">
@@ -129,16 +130,18 @@
                                         <a href="#1" class="btn btn-sm btn-info">Login</a>
                                     </li>
                                     <li>
-                                        <button class="no-btn-style" type="button" data-toggle="collapse"
-                                            data-target="#global-language" aria-controls="global-language"
-                                            aria-expanded="false">
+                                        <button class="no-btn-style" type="button" title="Language"
+                                            data-toggle="collapse" data-target="#global-language"
+                                            aria-controls="global-language" aria-expanded="false">
+                                            <span class="sr-only">Language</span>
                                             <span class="fas fa-language fa-lg" role="img"></span>
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="no-btn-style" type="button" data-toggle="collapse"
+                                        <button class="no-btn-style" type="button" title="Search" data-toggle="collapse"
                                             data-target="#global-search" aria-controls="global-search"
                                             aria-expanded="false">
+                                            <span class="sr-only">Search</span>
                                             <span class="fas fa-search fa-lg" role="img"></span>
                                         </button>
                                     </li>
@@ -163,7 +166,7 @@
         <!-- .wrap-header -->
 
         <div class="container-fluid border-top collapse" id="global-language">
-            <div class="narrow py-2" aria-label="Language">
+            <div class="narrow py-2">
                 <div id="google_translate_element"></div>
             </div>
         </div>
@@ -174,7 +177,7 @@
                     <label class="sr-only" for="global-search-bar">Search</label>
                     <input class="form-control form-control-lg" id="global-search-bar" placeholder="Search">
                     <div class="input-group-btn">
-                        <button class="btn btn-primary btn-lg" type="button">
+                        <button class="btn btn-primary btn-lg" type="button" title="Search">
                             <span class="fas fa-arrow-right" role="img"></span>
                         </button>
                     </div>
@@ -183,22 +186,24 @@
         </div>
 
         <div class="container-fluid collapse d-lg-block px-0 border-lg-top" id="nav-primary">
+
             <div class="wide">
+
                 <nav class="nav nav-pills" role="navigation">
 
                     <div class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="nav-item-01" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" title="Nav Item">
+                            aria-haspopup="true" aria-expanded="false" role="button">
                             Nav Item
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="nav-item-01">
 
                             <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
                             </ul>
 
                         </div>
@@ -209,16 +214,16 @@
                     <div class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="nav-item-02" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" title="Nav Item">
+                            aria-haspopup="true" aria-expanded="false" role="button">
                             Nav Item
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="nav-item-02">
 
                             <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
                             </ul>
 
                         </div>
@@ -229,16 +234,16 @@
                     <div class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="nav-item-03" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" title="Nav Item">
+                            aria-haspopup="true" aria-expanded="false" role="button">
                             Nav Item
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="nav-item-03">
 
                             <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
                             </ul>
 
                         </div>
@@ -249,16 +254,16 @@
                     <div class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="nav-item-04" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" title="Nav Item">
+                            aria-haspopup="true" aria-expanded="false" role="button">
                             Nav Item
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="nav-item-04">
 
                             <ul class="extensible-list">
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
-                                <li><a href="#" title="Link">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
                             </ul>
 
                         </div>
@@ -267,7 +272,10 @@
                     <!-- .nav-item -->
 
                 </nav>
+
             </div>
+            <!-- .wide -->
+
         </div>
 
     </header>
@@ -309,32 +317,32 @@
 
                     <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
                         <ul class="extensible-list">
-                            <li><a class="lang-select" href="#" data-lang="ar" title="عربى">عربى</a></li>
-                            <li><a class="lang-select" href="#" data-lang="bn" title="বাঙালি">বাঙালি</a></li>
+                            <li><a class="lang-select" href="#" data-lang="ar">عربى</a></li>
+                            <li><a class="lang-select" href="#" data-lang="bn">বাঙালি</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
                         <ul class="extensible-list">
-                            <li><a class="lang-select" href="#" data-lang="zh-CN" title="中文">中文</a></li>
-                            <li><a class="lang-select" href="#" data-lang="fr" title="français">français</a></li>
+                            <li><a class="lang-select" href="#" data-lang="zh-CN">中文</a></li>
+                            <li><a class="lang-select" href="#" data-lang="fr">français</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
                         <ul class="extensible-list">
-                            <li><a class="lang-select" href="#" data-lang="ht" title="Kreyòl Ayisyen">Kreyòl Ayisyen</a></li>
-                            <li><a class="lang-select" href="#" data-lang="ko" title="한국어">한국어</a></li>
+                            <li><a class="lang-select" href="#" data-lang="ht">Kreyòl Ayisyen</a></li>
+                            <li><a class="lang-select" href="#" data-lang="ko">한국어</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md-4 col-lg mb-2 mb-lg-0">
                         <ul class="extensible-list">
-                            <li><a class="lang-select" href="#" data-lang="pl" title="Polskie">Polskie</a></li>
-                            <li><a class="lang-select" href="#" data-lang="ru" title="русский">русский</a></li>
+                            <li><a class="lang-select" href="#" data-lang="pl">Polskie</a></li>
+                            <li><a class="lang-select" href="#" data-lang="ru">русский</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-md-4 col-lg">
                         <ul class="extensible-list">
-                            <li><a class="lang-select" href="#" data-lang="es" title="Español">Español</a></li>
-                            <li><a class="lang-select" href="#" data-lang="ur" title="اردو">اردو</a></li>
+                            <li><a class="lang-select" href="#" data-lang="es">Español</a></li>
+                            <li><a class="lang-select" href="#" data-lang="ur">اردو</a></li>
                         </ul>
                     </div>
                 </div>
@@ -355,40 +363,37 @@
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="http://www1.nyc.gov/nyc-resources/agencies.page" title="Directory of City Agencies"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/nyc-resources/agencies.page" target="_blank">
                                             <strong>Directory of City Agencies</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://a858-nycnotify.nyc.gov/notifynyc/" title="Notify NYC" target="_blank">
+                                        <a href="https://a858-nycnotify.nyc.gov/notifynyc/" target="_blank">
                                             <strong>Notify NYC</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www1.nyc.gov/connect/mobile-applications.page" title="NYC Mobile Apps"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/connect/mobile-applications.page" target="_blank">
                                             <strong>NYC Mobile Apps</strong>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="http://www1.nyc.gov/home/contact-us.page" title="Contact NYC Government"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/home/contact-us.page" target="_blank">
                                             <strong>Contact NYC Government</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://a856-citystore.nyc.gov/" title="CityStore" target="_blank">
+                                        <a href="https://a856-citystore.nyc.gov/" target="_blank">
                                             <strong>CityStore</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://maps.nyc.gov/doitt/nycitymap/" title="Maps" target="_blank">
+                                        <a href="http://maps.nyc.gov/doitt/nycitymap/" target="_blank">
                                             <strong>Maps</strong>
                                         </a>
                                     </li>
@@ -398,19 +403,18 @@
                             <div class="col-lg mb-3 mb-lg-0">
                                 <ul class="extensible-list">
                                     <li>
-                                        <a href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&" title="City Employees"
+                                        <a href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&"
                                             target="_blank">
                                             <strong>City Employees</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www1.nyc.gov/connect/social-media.page" title="Stay Connected"
-                                            target="_blank">
+                                        <a href="http://www1.nyc.gov/connect/social-media.page" target="_blank">
                                             <strong>Stay Connected</strong>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page" title="Resident Toolkit"
+                                        <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page"
                                             target="_blank">
                                             <strong>Resident Toolkit</strong>
                                         </a>
@@ -425,24 +429,25 @@
 
                     <div class="col-md-6 col-lg-4">
 
-                        <a href="#">
+                        <a href="https://www1.nyc.gov" title="Go to nyc.gov" target="_blank">
                             <img src="./images/nyc-logo-footer.svg" alt="NYC Logo" class="mb-2">
                         </a>
-                        <p class="fs-sm">City of New York - 2019 All Rights Reserved. NYC is a trademark and service
+                        <p class="fs-sm">City of New York - 2018 All Rights Reserved. NYC is a trademark and service
                             mark of the City of New York.</p>
 
                         <ul class="extensible-list horizontal fs-sm py-0">
                             <li>
-                                <a href="http://www1.nyc.gov/home/privacy-policy.page" title="Privacy Policy" target="_blank">Privacy
+                                <a href="http://www1.nyc.gov/home/privacy-policy.page" target="_blank">Privacy
                                     Policy</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/home/terms-of-use.page" title="Terms of Use" target="_blank">Terms
+                                <a href="http://www1.nyc.gov/home/terms-of-use.page" target="_blank">Terms
                                     of Use</a>
                             </li>
                             <li>
-                                <a href="http://www1.nyc.gov/site/mopd/index.page" title="Mayor's Office for People with Disabilities"
-                                    target="_blank">
+                                <a href="http://www1.nyc.gov/site/mopd/index.page"
+                                    title="Mayor's Office for People with Disabilities" target="_blank">
+                                    <span class="sr-only">Mayor's Office for People with Disabilities</span>
                                     <span class="fab fa-lg fa-accessible-icon"></span>
                                 </a>
                             </li>
