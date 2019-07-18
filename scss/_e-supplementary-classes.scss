@@ -194,12 +194,6 @@ $icon-margin: 0.5em;
 
 .has-icon {
 
-  // Ensure Font Awesome icons keep correct weight 
-
-  [class*="fa-"] {
-    font-weight: 400;
-  }
-
   // Position icon and title to either side
 
   &.disperse {
