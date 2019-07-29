@@ -21,23 +21,23 @@ In this file:
 // Font size variables are set in /scss/_a-global-variables.scss
 
 .fs-sm {
-  font-size: $fs-sm;
+    font-size: $fs-sm;
 }
 
 .fs-md {
-  font-size: $fs-md;
+    font-size: $fs-md;
 }
 
 .fs-rg {
-  font-size: $fs-rg;
+    font-size: $fs-rg;
 }
 
 .fs-lg {
-  font-size: $fs-lg;
+    font-size: $fs-lg;
 }
 
 .fs-xl {
-  font-size: $fs-xl;
+    font-size: $fs-xl;
 }
 
 ////////////////////////////////////////
@@ -49,49 +49,45 @@ In this file:
 .narrow,
 .medium,
 .wide {
-  margin-left: auto;
-  margin-right: auto
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.narrow {
-  max-width: $narrow-width;
+.narrow,
+.narrow-width {
+    max-width: $narrow-width;
 }
 
-.medium {
-  max-width: $medium-width;
+.medium,
+.medium-width {
+    max-width: $medium-width;
 }
 
 .wide {
-  max-width: $wide-width;
+    max-width: $wide-width;
 }
 
 ////////////////////////////////////////
 // C. Responsive borders
 ////////////////////////////////////////
 
-$sides: "",
--top,
--right,
--bottom,
--left;
+$sides: "", -top, -right, -bottom, -left;
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
+    @include media-breakpoint-up($breakpoint) {
+        @each $side in $sides {
+            .border-#{$breakpoint}#{$side}-0 {
+                border#{$side}: 0 !important;
+            }
 
-    @each $side in $sides {
-
-      .border-#{$breakpoint}#{$side}-0 {
-        border#{$side}: 0 !important;
-      }
-
-      .border-#{$breakpoint}#{$side} {
-        border-width: 0;
-        border-color: $border-color;
-        border-style: solid;
-        border#{$side}-width: $border-width !important;
-      }
+            .border-#{$breakpoint}#{$side} {
+                border-width: 0;
+                border-color: $border-color;
+                border-style: solid;
+                border#{$side}-width: $border-width !important;
+            }
+        }
     }
-  }
 }
 
 ////////////////////////////////////////
@@ -101,53 +97,53 @@ $sides: "",
 // Object opacity
 
 .opacity-10 {
-  opacity: 0.10;
+    opacity: 0.10;
 }
 
 .opacity-20 {
-  opacity: 0.20;
+    opacity: 0.20;
 }
 
 .opacity-30 {
-  opacity: 0.30;
+    opacity: 0.30;
 }
 
 .opacity-40 {
-  opacity: 0.40;
+    opacity: 0.40;
 }
 
 .opacity-50 {
-  opacity: 0.50;
+    opacity: 0.50;
 }
 
 .opacity-60 {
-  opacity: 0.60;
+    opacity: 0.60;
 }
 
 .opacity-70 {
-  opacity: 0.70;
+    opacity: 0.70;
 }
 
 .opacity-80 {
-  opacity: 0.80;
+    opacity: 0.80;
 }
 
 .opacity-90 {
-  opacity: 0.90;
+    opacity: 0.90;
 }
 
 // Background color opacity
 
 .bg-opacity-black-25 {
-  background-color: rgba($black, 0.25);
+    background-color: rgba($black, 0.25);
 }
 
 .bg-opacity-black-50 {
-  background-color: rgba($black, 0.5);
+    background-color: rgba($black, 0.5);
 }
 
 .bg-opacity-black-75 {
-  background-color: rgba($black, 0.75);
+    background-color: rgba($black, 0.75);
 }
 
 ////////////////////////////////////////
@@ -157,13 +153,13 @@ $sides: "",
 // Soft shadow
 
 .text-shadow {
-  text-shadow: 0 0 6px rgba($black, 1);
+    text-shadow: 0 0 6px rgba($dark, 1);
 }
 
 // Hard shadow equal to border width (ideal for text over image readability)
 
 .text-shadow-border {
-  text-shadow: 0 0 $border-width rgba($black, 1);
+    text-shadow: 0 0 $border-width rgba($black, 1);
 }
 
 ////////////////////////////////////////
@@ -173,14 +169,13 @@ $sides: "",
 // Remove default styles associated with buttons
 
 .no-btn-style {
-  color: currentColor;
-  font-weight: inherit;
-  border-color: transparent;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
+    color: currentColor;
+    font-weight: inherit;
+    border-color: transparent;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
 }
-
 
 ////////////////////////////////////////
 // G. Has icon
@@ -193,25 +188,21 @@ $sides: "",
 $icon-margin: 0.5em;
 
 .has-icon {
+    // Position icon and title to either side
 
-  // Position icon and title to either side
-
-  &.disperse {
-    display: flex;
-    width: 100%;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &:not(.disperse){
-
-    span.title {
-      margin-left: $icon-margin;
+    &.disperse {
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
     }
 
-  }
-
+    &:not(.disperse) {
+        span.title {
+            margin-left: $icon-margin;
+        }
+    }
 }
 
 ////////////////////////////////////////
@@ -222,13 +213,12 @@ $icon-margin: 0.5em;
 
 ul,
 ol {
-  &.paragraph-li {
-    li {
-      margin-top: $paragraph-margin-bottom;
-      margin-bottom: $paragraph-margin-bottom;
-
+    &.paragraph-li {
+        li {
+            margin-top: $paragraph-margin-bottom;
+            margin-bottom: $paragraph-margin-bottom;
+        }
     }
-  }
 }
 
 ////////////////////////////////////////
@@ -244,41 +234,41 @@ ol {
 .z-index-700,
 .z-index-800,
 .z-index-900 {
-  position: relative;
+    position: relative;
 }
 
 .z-index-100 {
-  z-index: 100;
+    z-index: 100;
 }
 
 .z-index-200 {
-  z-index: 200;
+    z-index: 200;
 }
 
 .z-index-300 {
-  z-index: 300;
+    z-index: 300;
 }
 
 .z-index-400 {
-  z-index: 400;
+    z-index: 400;
 }
 
 .z-index-500 {
-  z-index: 500;
+    z-index: 500;
 }
 
 .z-index-600 {
-  z-index: 600;
+    z-index: 600;
 }
 
 .z-index-700 {
-  z-index: 700;
+    z-index: 700;
 }
 
 .z-index-800 {
-  z-index: 800;
+    z-index: 800;
 }
 
 .z-index-900 {
-  z-index: 900;
+    z-index: 900;
 }
