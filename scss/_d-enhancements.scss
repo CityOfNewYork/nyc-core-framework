@@ -458,6 +458,7 @@ thead th {
   }
 }
 
+
 ////////////////////////////////////////
 // H. Internet Explorer 
 ////////////////////////////////////////
@@ -472,11 +473,16 @@ screen and (-ms-high-contrast: none) {
   }
 
   // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
-  .narrow {
+  .narrow, 
+  .narrow-width {
+    border-top: 1px solid transparent;
     max-width: $narrow-width-ie !important;
   }
 
-  .medium {
+  .medium,
+  .medium-width
+  {
+    border-top: 1px solid transparent;
     max-width: $medium-width-ie !important;
   }
 
