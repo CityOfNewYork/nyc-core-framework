@@ -245,15 +245,30 @@ $sizes: (
 
 $font-awesome: "Font Awesome 5 Free";
 
+// We'll use Bootstrap's default $font-family-sans-serif as a fallback for our custom font
+
+$font-family-sans-serif: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
+
 // Font sizes
-// Note: Instead of manipulation Bootstrap Default variables, 
+// Instead of manipulation Bootstrap Default variables, 
 // we create our own opt-in font size variables
 
 $fs-sm: 0.875rem; // 14px
 $fs-md: 1rem; // 16px
 $fs-rg: 1.167rem; // 18.672px
 $fs-lg: 1.25rem; // 20px
-$fs-xl: 1.75rem; // 28px
+$fs-xl: 1.5rem; // 28px
 
 // Make Bootstrap's small and large font-sizes align with our font-size scale
 
@@ -261,17 +276,17 @@ $font-size-lg: $fs-lg;
 $font-size-sm: $fs-sm;
 $small-font-size: $fs-sm;
 
-// Note: Font weight vars required for customizations below
+// Enable responsive font sizes
 
-$font-weight-light: 200;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$font-weight-bolder: 900;
+$enable-responsive-font-sizes: true;
 
-// h1 - h6 font weight
+// Font-weight values should match the weights that you import (above)
 
-$headings-font-weight: $font-weight-bold;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
 
 // .display-* selector font weight
 
@@ -280,14 +295,14 @@ $display2-weight: $font-weight-bold;
 $display3-weight: $font-weight-bold;
 $display4-weight: $font-weight-bold;
 
+// h1 - h6 font-weight
+
+$headings-font-weight: $font-weight-bold;
+
 // Lead font style
 
 $lead-font-size: $fs-lg;
 $lead-font-weight: $font-weight-normal;
-
-// Responsive font sizes
-
-$enable-responsive-font-sizes: true;
 
 ////////////////////////////////////////
 // I. Border and border radius
