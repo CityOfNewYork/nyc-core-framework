@@ -281,11 +281,9 @@ $enable-responsive-font-sizes: true;
 
 // Font-weight values should match the weights that you import (above)
 
-$font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-bold: 700 !default;
-$font-weight-bolder: bolder !default;
 
 // .display-* selector font weight
 
@@ -380,8 +378,8 @@ $dropdown-link-active-color: $body-color;
 
 // '.list-group' settings
 
-// $list-group-hover-bg: transparent;
-// $list-group-action-active-bg: transparent;
+$list-group-hover-bg: transparent;
+$list-group-action-active-bg: transparent;
 $list-group-item-padding-y: 0.5rem !default;
 $list-group-item-padding-x: $spacer-2;
 
