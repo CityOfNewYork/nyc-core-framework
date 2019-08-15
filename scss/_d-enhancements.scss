@@ -221,6 +221,8 @@ html[dir="rtl"] {
     }
   }
 
+  // Flip 'offset-x' margins
+  
   [class*="offset-"] {
     margin-left: 0;
   }
