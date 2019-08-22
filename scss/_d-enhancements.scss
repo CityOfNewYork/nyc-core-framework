@@ -19,7 +19,7 @@ In this file:
 
 body {
   position: relative;
-
+  
   // Font smoothing
 
   -webkit-font-smoothing: antialiased;
@@ -31,7 +31,6 @@ body {
 
   // Set min and max width of body
 
-  min-width: 350px;
   max-width: $site-width;
 
   // Set body font-size to accessible size
