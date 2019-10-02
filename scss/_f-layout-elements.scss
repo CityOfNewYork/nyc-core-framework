@@ -22,6 +22,24 @@ In this file:
 // A. Citywide header and footer
 ////////////////////////////////////////
 
+
+[id="languages"]{
+
+  ul{
+    @extend .extensible-list;
+    @extend .row;
+    
+    li{
+      @extend .col-6;
+      @extend .col-md-4;
+      @include media-breakpoint-up(lg) {
+        flex-basis: 20%;
+      }
+    }
+  }
+
+}
+
 // $nyc-header-footer-text-color: $white;
 // $nyc-header-footer-bg-color: $black;
 
