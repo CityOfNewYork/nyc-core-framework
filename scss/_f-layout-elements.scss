@@ -22,59 +22,59 @@ In this file:
 // A. Citywide header and footer
 ////////////////////////////////////////
 
-$nyc-header-footer-text-color: $white;
-$nyc-header-footer-bg-color: $black;
+// $nyc-header-footer-text-color: $white;
+// $nyc-header-footer-bg-color: $black;
 
-#nyc-top-header,
-#nyc-bottom-footer {
+// #nyc-top-header,
+// #nyc-bottom-footer {
 
-  & p,
-  a {
-    color: $nyc-header-footer-text-color;
-  }
-}
+//   & p,
+//   a {
+//     color: $nyc-header-footer-text-color;
+//   }
+// }
 
-#nyc-top-header {
-  font-size: $fs-sm;
+// #nyc-top-header {
+//   font-size: $fs-sm;
 
-  a {
-    font-weight: $font-weight-bold;
-  }
+//   a {
+//     font-weight: $font-weight-bold;
+//   }
 
-  // Display block on NYC logo ensures vertical alignment
+//   // Display block on NYC logo ensures vertical alignment
 
-  img {
-    display: block;
-  }
-}
+//   img {
+//     display: block;
+//   }
+// }
 
-#nyc-bottom-footer {
-  font-size: $fs-md;
-}
+// #nyc-bottom-footer {
+//   font-size: $fs-md;
+// }
 
-#nyc-top-header,
-#nyc-bottom-footer {
-  background: $nyc-header-footer-bg-color;
-}
+// #nyc-top-header,
+// #nyc-bottom-footer {
+//   background: $nyc-header-footer-bg-color;
+// }
 
-#nyc-bottom-footer {
-  hr {
-    @extend .opacity-20;
-  }
-}
+// #nyc-bottom-footer {
+//   hr {
+//     @extend .opacity-20;
+//   }
+// }
 
-#back-to-top {
-  @extend .container-fluid;
-  @extend .fixed-bottom;
-  opacity: 0;
+// #back-to-top {
+//   @extend .container-fluid;
+//   @extend .fixed-bottom;
+//   opacity: 0;
 
-  text-align: right;
-  transition: opacity .1s linear 0s;
+//   text-align: right;
+//   transition: opacity .1s linear 0s;
 
-  &.show {
-    opacity: 1;
-  }
-}
+//   &.show {
+//     opacity: 1;
+//   }
+// }
 
 ////////////////////////////////////////
 // B. Local header and primary nav

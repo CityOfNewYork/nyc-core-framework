@@ -691,7 +691,7 @@ pre code {
   }
 }
 
-.container-fluid, #back-to-top {
+.container-fluid {
   width: 100%;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -6312,7 +6312,7 @@ button.bg-black:focus {
   z-index: 1030;
 }
 
-.fixed-bottom, #back-to-top {
+.fixed-bottom {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -10162,7 +10162,7 @@ In this file:
   opacity: 0.10;
 }
 
-.opacity-20, #nyc-bottom-footer hr {
+.opacity-20 {
   opacity: 0.20;
 }
 
@@ -10308,44 +10308,6 @@ In this file:
 // M. Tables
 
 */
-#nyc-top-header p,
-#nyc-top-header a,
-#nyc-bottom-footer p,
-#nyc-bottom-footer a {
-  color: #fff;
-}
-
-#nyc-top-header {
-  font-size: 0.875rem;
-}
-
-#nyc-top-header a {
-  font-weight: 700;
-}
-
-#nyc-top-header img {
-  display: block;
-}
-
-#nyc-bottom-footer {
-  font-size: 1rem;
-}
-
-#nyc-top-header,
-#nyc-bottom-footer {
-  background: #000;
-}
-
-#back-to-top {
-  opacity: 0;
-  text-align: right;
-  transition: opacity .1s linear 0s;
-}
-
-#back-to-top.show {
-  opacity: 1;
-}
-
 #global-header {
   background-color: white;
 }
@@ -11199,22 +11161,6 @@ In this file:
 // B. Container background color
 
 */
-[class*="container"] {
-  background-color: rgba(255, 0, 0, 0.5) !important;
-}
-
-.narrow {
-  background-color: rgba(255, 165, 0, 0.5) !important;
-}
-
-.medium {
-  background-color: rgba(255, 255, 0, 0.5) !important;
-}
-
-.wide {
-  background-color: rgba(0, 128, 0, 0.5) !important;
-}
-
 [class*="subway-icon"] {
   position: relative;
   font-size: .75em;
