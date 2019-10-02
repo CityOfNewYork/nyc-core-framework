@@ -22,77 +22,28 @@ In this file:
 // A. Citywide header and footer
 ////////////////////////////////////////
 
+// Evenly space out the language list across devices
 
 [id="languages"]{
 
   ul{
+
     @extend .extensible-list;
     @extend .row;
     
     li{
+
       @extend .col-6;
       @extend .col-md-4;
+
       @include media-breakpoint-up(lg) {
         flex-basis: 20%;
       }
+    
     }
   }
 
 }
-
-// $nyc-header-footer-text-color: $white;
-// $nyc-header-footer-bg-color: $black;
-
-// #nyc-top-header,
-// #nyc-bottom-footer {
-
-//   & p,
-//   a {
-//     color: $nyc-header-footer-text-color;
-//   }
-// }
-
-// #nyc-top-header {
-//   font-size: $fs-sm;
-
-//   a {
-//     font-weight: $font-weight-bold;
-//   }
-
-//   // Display block on NYC logo ensures vertical alignment
-
-//   img {
-//     display: block;
-//   }
-// }
-
-// #nyc-bottom-footer {
-//   font-size: $fs-md;
-// }
-
-// #nyc-top-header,
-// #nyc-bottom-footer {
-//   background: $nyc-header-footer-bg-color;
-// }
-
-// #nyc-bottom-footer {
-//   hr {
-//     @extend .opacity-20;
-//   }
-// }
-
-// #back-to-top {
-//   @extend .container-fluid;
-//   @extend .fixed-bottom;
-//   opacity: 0;
-
-//   text-align: right;
-//   transition: opacity .1s linear 0s;
-
-//   &.show {
-//     opacity: 1;
-//   }
-// }
 
 ////////////////////////////////////////
 // B. Local header and primary nav
