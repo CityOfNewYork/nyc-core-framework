@@ -330,6 +330,9 @@ $btn-border-radius-lg: $border-radius;
 
 $btn-font-weight: $font-weight-bold;
 
+// Make slightly larger for accessible hit-state for buttons
+$input-btn-padding-y: $spacer-1;
+
 // Links
 
 $link-color: $blue;
