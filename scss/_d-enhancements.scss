@@ -474,17 +474,11 @@ screen and (-ms-high-contrast: none) {
   }
 
   // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
-  .narrow, 
-  .narrow-width {
-    border-top: 1px solid transparent;
-    max-width: $narrow-width-ie !important;
-  }
 
-  .medium,
-  .medium-width
-  {
+  .narrow, 
+  .medium{
     border-top: 1px solid transparent;
-    max-width: $medium-width-ie !important;
+
   }
 
   // IE min-height fix

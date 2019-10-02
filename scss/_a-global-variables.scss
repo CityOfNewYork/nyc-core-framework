@@ -217,11 +217,9 @@ $container-max-widths: (
 
 $site-width: 3000px;
 $wide-width: 1680px; // 1660px
-$narrow-width: 55ch; // 55 characters
-$narrow-width-ie: 650px; // I.E. fallback
+$narrow-width: 40rem; // Approximately 55 characters wide
 
 $medium-width: $narrow-width * 1.25; // Multiple of $narrow-width
-$medium-width-ie: $narrow-width-ie * 1.25; // Multiple of $narrow-width-ie
 
 // Add sizes to Bootstrap's size utilities
 

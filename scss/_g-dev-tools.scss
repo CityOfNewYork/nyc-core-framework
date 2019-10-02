@@ -51,7 +51,7 @@ $floating-breakpoints-bar: false;
 
 // Add background color to containers
 
-$container-background-color: false;
+$container-background-color: true;
 $container-background-opacity: 0.5;
 
 @if $container-background-color {

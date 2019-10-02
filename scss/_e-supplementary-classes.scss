@@ -45,14 +45,17 @@ In this file:
 ////////////////////////////////////////
 
 // Additional width variables are set in /scss/_a-global-variables.scss
-
 .narrow,
+.narrow-2,
 .medium,
 .wide {
     margin-left: auto;
     margin-right: auto;
 }
+.narrow-2{
+    max-width: 40rem;
 
+}
 .narrow,
 .narrow-width {
     max-width: $narrow-width;
