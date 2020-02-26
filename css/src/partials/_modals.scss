@@ -1,0 +1,113 @@
+/*
+
+In this file:
+
+// A. Modal Styles
+// B. Modal Animation
+
+*/
+
+//////////////////////////////////////////////
+// A. Modal Styles
+//////////////////////////////////////////////
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2500;
+    
+    // Use Psuedo element for background
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: currentColor;
+        opacity: 0.8;
+    }
+}
+
+.modal-container {
+    font-size: var(font-size-rg);
+    @extend .bc-white;
+    @extend .box-shadow;
+    padding: var(--s3);
+    max-width: 500px;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1, h2, h3 { margin-bottom: 0; }
+}
+
+.modal-body {
+    padding-top: var(--s4);
+    padding-bottom: var(--s4);
+}
+
+//////////////////////////////////////////////
+// A. Modal Animation
+//////////////////////////////////////////////
+
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.modal-slide {
+  display: none;
+}
+
+.modal-slide.is-open {
+  display: block;
+}
+
+.modal-slide[aria-hidden="false"] .modal-overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.modal-slide[aria-hidden="false"] .modal-container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.modal-slide[aria-hidden="true"] .modal-overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.modal-slide[aria-hidden="true"] .modal-container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.modal-slide .modal-container,
+.modal-slide .modal-overlay {
+  will-change: transform;
+}

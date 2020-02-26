@@ -1,0 +1,67 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Functions
+// C. Mixins
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+$breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1440px
+);
+
+//////////////////////////////////////////////
+// B. Functions
+//////////////////////////////////////////////
+
+// Name of the next breakpoint, or null for the last breakpoint.
+
+@function breakpoint-value($name, $breakpoints) {
+  $value: map-get($breakpoints, $name);
+  @return if($value !=0, $value, null);
+}
+
+@function breakpoint-modifier($name, $breakpoints) {
+  @return if(breakpoint-value($name, $breakpoints)==null, "", "--#{$name}");
+}
+
+//////////////////////////////////////////////
+// C. Mixins
+//////////////////////////////////////////////
+
+// Breakpoint up
+
+@mixin breakpoint-up($breakpoint) {
+  @if ($breakpoint != xs) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+// Breakpoint down
+
+@mixin breakpoint-down($breakpoint) {
+  @if ($breakpoint !=xs) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}

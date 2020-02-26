@@ -1,0 +1,188 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Spacer Map
+// C. Padding and Margin Spacer Classes
+// D. Padding and Margin Static Classes
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root {    
+    --s1: 0.25rem;
+    --s2: 0.75rem;
+    --s3: 1rem;
+    --s4: 2.5rem;
+    --s5: 5rem;
+}
+
+//////////////////////////////////////////////
+// B. Spacer Map
+//////////////////////////////////////////////
+
+$spacers: (
+    1: var(--s1), 
+    2: var(--s2), 
+    3: var(--s3), 
+    4: var(--s4), 
+    5: var(--s5)
+);
+
+//////////////////////////////////////////////
+// C. Padding and Margin Spacer Classes
+//////////////////////////////////////////////
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        @each $key, $value in $spacers {
+
+            // Padding
+
+            .p-#{$key}#{$mod} {
+                padding: #{$value};
+            }
+
+            .px-#{$key}#{$mod} {
+                padding-left: #{$value};
+                padding-right: #{$value};
+            }
+
+            .py-#{$key}#{$mod} {
+                padding-top: #{$value};
+                padding-bottom: #{$value};
+            }
+
+            .pt-#{$key}#{$mod} {
+                padding-top: #{$value};
+            }
+
+            .pr-#{$key}#{$mod} {
+                padding-right: #{$value};
+            }
+
+            .pb-#{$key}#{$mod} {
+                padding-bottom: #{$value};
+            }
+
+            .pl-#{$key}#{$mod} {
+                padding-left: #{$value};
+            }
+
+            // Margin
+
+            .m-#{$key}#{$mod} {
+                margin: #{$value};
+            }
+
+            .mx-#{$key}#{$mod} {
+                margin-left: #{$value};
+                margin-right: #{$value};
+            }
+
+            .my-#{$key}#{$mod} {
+                margin-top: #{$value};
+                margin-bottom: #{$value};
+            }
+
+            .mt-#{$key}#{$mod} {
+                margin-top: #{$value};
+            }
+
+            .mr-#{$key}#{$mod} {
+                margin-right: #{$value};
+            }
+
+            .mb-#{$key}#{$mod} {
+                margin-bottom: #{$value};
+            }
+
+            .ml-#{$key}#{$mod} {
+                margin-left: #{$value};
+            }
+
+            // Negative Margin
+
+            .m-n#{$key}#{$mod} {
+                margin: calc(#{$value} * -1);
+            }
+
+            .mx-n#{$key}#{$mod} {
+                margin-left: calc(#{$value} * -1);
+                margin-right: calc(#{$value} * -1);
+            }
+
+            .my-n#{$key}#{$mod} {
+                margin-top: calc(#{$value} * -1);
+                margin-bottom: calc(#{$value} * -1);
+            }
+
+            .mt-n#{$key}#{$mod} {
+                margin-top: calc(#{$value} * -1);
+            }
+
+            .mr-n#{$key}#{$mod} {
+                margin-right: calc(#{$value} * -1);
+            }
+
+            .mb-n#{$key}#{$mod} {
+                margin-bottom: calc(#{$value} * -1);
+            }
+
+            .ml-n#{$key}#{$mod} {
+                margin-left: calc(#{$value} * -1);
+            }
+
+        }
+    }
+}
+
+////////////////////////////////////////////
+// D. Padding and Margin Static Classes
+////////////////////////////////////////////
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .p-0#{$mod} {
+            padding: 0;
+        }
+
+        .m-0#{$mod} {
+            margin: 0;
+        }
+
+        .mx-auto#{$mod} {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .my-auto#{$mod} {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .mt-auto#{$mod} {
+            margin-top: auto;
+        }
+
+        .mr-auto#{$mod} {
+            margin-right: auto;
+        }
+
+        .mb-auto#{$mod} {
+            margin-bottom: auto;
+        }
+
+        .ml-auto#{$mod} {
+            margin-left: auto;
+        }
+    }
+}

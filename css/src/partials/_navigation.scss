@@ -1,0 +1,254 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Nav
+// D. Nav Divider
+// E. Dropdown
+
+*/
+
+////////////////////////////////////////
+// A. Variables
+////////////////////////////////////////
+
+:root {
+    --nav--divider-padding-x: 1em;
+    --nav--divider-padding-y: 0.5em;
+    --dropdown-z-index: 6000;
+}
+
+////////////////////////////////////////
+// B. Nav
+////////////////////////////////////////
+
+[class*="nav"] {
+    --gap-size: var(--s3);
+    
+    @extend %list-no-style;
+    line-height: normal;
+
+    > li {
+        position: relative;
+    }
+
+    [aria-current] {
+        font-weight: $font-weight-bold;
+        text-decoration: underline;
+    }
+}
+
+[class*="nav"]:not([class*="--divider"]) {
+
+    > li:not(:last-child) {
+        margin-bottom: calc(var(--gap-size) * .75);
+    }
+
+    > li > [data-toggle="dropdown"] ~ ul {
+        padding: var(--gap-size);
+        margin-left: calc(var(--gap-size) * -1);
+        margin-right: calc(var(--gap-size) * -1);
+        width: calc(100% + (var(--gap-size) * 2));
+    }
+
+    > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: var(--dropdown-icon-caret-border);
+        width: 240px;
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+        @include breakpoint-up($breakpoint) {
+            $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+            &.horizontal#{$mod} {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: calc(-1 * var(--gap-size));
+                margin-right: calc(-1 * var(--gap-size));
+
+                > li {
+                    margin-left: var(--gap-size);
+                    margin-right: var(--gap-size);
+                    margin-bottom: 0 !important;
+                }
+
+                > li >[data-toggle="dropdown"] ~ ul {
+                    min-width: 200px;
+                    position: absolute;
+                    left: 0;
+                }
+
+                > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+.nav--gap-xs {
+    --gap-size: var(--s1);
+}
+
+.nav--gap-sm {
+    --gap-size: var(--s2);
+}
+
+.nav--no-gap {
+    --gap-size: 0;
+}
+
+////////////////////////////////////////
+// D. Nav Divider
+////////////////////////////////////////
+
+.nav--divider {
+
+    &:not([class*="bc-"]) {
+        border-color: inherit;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    > li:not(:last-child) {
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
+    }
+
+    > li > a {
+        display: block;
+    }
+
+    > li > a,
+    > li > [data-toggle="dropdown"] ~ ul {
+        padding: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
+    }
+
+    > li > [data-toggle="dropdown"] ~ ul {
+        border-top-width: 0 !important;
+    }
+
+    [data-toggle="dropdown"] {
+        justify-content: space-between;
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+        @include breakpoint-up($breakpoint) {
+            $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+            &.horizontal#{$mod} {
+                display: flex;
+                flex-direction: row;
+
+                > li {
+                    flex: 1;
+                    text-align: center;
+                    border-bottom-style: none !important; // Thanks, IE.
+
+                    &:not(:last-child) {
+                        border-right-width: var(--default-border-width);
+                        border-right-style: var(--default-border-style);
+                        border-color: inherit;
+                    }
+                }
+
+                [data-toggle="dropdown"] {
+                    justify-content: center;
+                }
+
+                &[class*="border"] {
+                    > li > [data-toggle="dropdown"] ~ ul {
+                        border-width: var(--default-border-width);
+                        border-style: var(--default-border-style);
+                        border-top-width: 0;
+                        border-color: inherit;
+                        width: calc(100% + (var(--default-border-width) * 2));
+                    }
+                }
+
+                [data-toggle="dropdown"] ~ ul {
+                    position: absolute;
+                    width: 100%;
+                    left: calc(var(--default-border-width) * -1);
+                }
+            }
+        }
+    }
+}
+
+////////////////////////////////////////
+// E. Dropdown
+////////////////////////////////////////
+
+[data-toggle="dropdown"]:not([class*="btn-icon"]) {
+    @include caret("down");
+
+    &[aria-expanded="true"]::after {
+        @include caret-up;
+    }
+}
+
+[data-toggle="dropdown"][class*="-icon"] ~ ul {
+    --dropdown-icon-caret: 0.5rem;
+    --dropdown-icon-caret-border: calc(var(--dropdown-icon-caret) + (var(--default-border-width) * 2));
+
+    &[class*="border-"]:before {
+        content: "";
+        position: absolute;
+        top: calc(var(--dropdown-icon-caret-border) * -1);
+        left: calc(50% - var(--dropdown-icon-caret-border));
+        margin-top: calc(var(--root-border-width) * -1);
+
+        @include caret-up(var(--dropdown-icon-caret-border));
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: calc(var(--dropdown-icon-caret) * -1);
+        left: calc(50% - var(--dropdown-icon-caret));
+
+        @include caret-up(var(--dropdown-icon-caret));
+    }
+}
+
+[data-toggle="dropdown"] ~ ul {
+    --dropdown-link-margin: 0.5rem;
+
+    @extend %list-no-style;
+
+    &:not([class*="fs-"]) {
+        font-size: inherit;
+    }
+
+    font-weight: normal;
+    position: static;
+    top: 100%;
+    width: 100%;
+
+    z-index: var(--dropdown-z-index);
+    text-align: left;
+
+    > li {
+        margin-left: 0;
+        margin-right: 0;
+
+        &:not(:last-child) {
+            margin-bottom: var(--dropdown-link-margin);
+        }
+    }
+
+    display: none;
+
+    &.shown {
+        display: block;
+    }
+}

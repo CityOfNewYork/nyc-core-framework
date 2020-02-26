@@ -1,0 +1,112 @@
+/*
+
+In this file:
+
+// A. Variables
+// A. Buttons
+// B. Button Icon
+// C. I.E. 11 Support
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root {
+    --btn-padding-x: 1em;
+    --btn-padding-y: 0.5em;
+}
+
+//////////////////////////////////////////////
+// B. Button Settings
+//////////////////////////////////////////////
+
+[class*="btn"] {
+
+    @extend .hover-focus;
+
+    display: inline-block;
+    color: inherit;
+    background-color: unset;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    line-height: normal;
+
+    cursor: pointer;
+
+    &:not([class*="-icon"]) {
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+    }
+    
+    &:hover {
+        opacity: .9;
+    }
+
+    &[class*="-outline"] {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+    }
+}
+
+//////////////////////////////////////////////
+// C. Button Icon
+//////////////////////////////////////////////
+
+.btn-icon {
+    --btn-icon-size: 2.5em;
+
+    display: inline-flex;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+
+    span[class*="fa"]{
+        font-size: calc(var(--btn-icon-size) * 0.5);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: currentColor;
+        opacity: 0.075;
+        display: none;
+    }
+
+    &:hover, 
+    &:focus {
+        
+        &::before {
+            display: block;
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// D. I.E. 11 Support
+//////////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+    .btn-icon {
+        display: table-cell; 
+
+        span[class*="fa"] {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+}

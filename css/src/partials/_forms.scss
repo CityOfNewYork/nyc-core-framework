@@ -1,0 +1,324 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Common Form Elements
+// C. Checkboxes and Radios
+// D. Switches
+// E. Validation and Feedback
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root {
+
+    --input-border-width: calc(var(--default-border-width) * 2);
+    --input-border-width: var(--default-border-width);
+    --input-border-color: currentColor;
+
+    --checkbox-radio-size: 1.25rem;
+    --checkbox-radio-color: var(--secondary);
+}
+
+//////////////////////////////////////////////
+// B. Basic Form Styles
+//////////////////////////////////////////////
+
+// Shared Styles
+
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border: none;
+    border-bottom-width: var(--input-border-width);
+    border-bottom-style: var(--default-border-style);
+    border-bottom-color: var(--input-border-color);
+    background-color: transparent;
+    color: inherit;
+    font-size: var(--font-size-rg);
+}
+
+button,
+fieldset{
+    border: 0;
+}
+
+// Form Group
+
+.form-group{
+    margin-bottom: var(--s4);
+    margin-top: var(--s4);
+}
+
+// Form Field
+
+.form-group__field {
+    --field-padding: 1rem;
+    --action-btn-width: 3rem;
+
+    position: relative;
+
+    // Psuedo Background color
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: currentColor;
+        opacity: 0.05;
+        pointer-events: none;
+    }
+}
+
+.field__input,
+.field__label {
+    line-height: inherit;
+}
+
+.field__label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.field__label,
+.field__input {
+    padding-top: var(--field-padding);
+    padding-right: var(--field-padding);
+    padding-bottom: var(--field-padding);
+    padding-left: var(--field-padding);
+}
+
+.field__input:focus, 
+.field__input:active, 
+.has-value .field__input {
+    padding-top: calc(var(--field-padding) * 1.5);
+    padding-bottom: calc(var(--field-padding) * 0.5);
+}
+
+.field__input:focus + .field__label,
+.field__input:active + .field__label,
+.has-value .field__label{
+    font-size: var(--font-size-sm);
+    padding-top: calc(var(--field-padding) * 0.25);
+}
+
+.field__input-wrap {
+    width: 100%;
+    @include caret("down");
+
+    &::after{
+        pointer-events: none;
+        position: absolute;
+        right: var(--s2);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.form-group__field.has-action > .field__input {
+    padding-right: calc(var(--field-padding) + var(--action-btn-width));
+}
+
+.form-group__field.has-action > button {
+    padding: 0;
+    background: transparent;
+    width: var(--action-btn-width);
+    position: absolute;
+    right: calc(var(--field-padding) * 0.5);
+    top: calc(var(--field-padding) * 0.5);
+    bottom: calc(var(--field-padding) * 0.5);
+}
+
+//////////////////////////////////////////////
+// C. Checkboxes and Radios
+//////////////////////////////////////////////
+
+.form-group__radio,
+.form-group__checkbox {
+    position: relative;
+    padding-left: calc(var(--checkbox-radio-size) * 1.75);
+    padding-right: calc(var(--checkbox-radio-size) * 1.75);
+    flex: 0 0 100%;
+    color: inherit !important;
+}
+
+.form-group__radio > input[type="radio"],
+.form-group__checkbox > input[type="checkbox"] {
+    margin: 0;
+    appearance: none;
+    opacity: .01;
+    z-index: -10;
+    background-color: transparent;
+
+}
+
+//
+// Make sure the label is only as wide as the
+// inner text requires it to be.
+//
+
+.form-group__radio > .radio__label,
+.form-group__checkbox > .checkbox__label {
+    display: inline-block;
+    width: auto;
+    line-height: var(--base-line-height);
+    margin-top: -0.375rem;
+}
+
+//
+// Note, the :before pseudo-element is the new
+// "bounds" or "box" of the checkbox.
+// It must be the same height, width and
+// position of the native checkbox element.
+//
+
+.form-group__checkbox > input[type="checkbox"]{
+    background-color: red;
+    width: 300px;
+    height: 300px;
+}
+
+.form-group__radio > input[type="radio"],
+.form-group__radio > .radio__label::before,
+
+.form-group__checkbox > input[type="checkbox"],
+.form-group__checkbox > .checkbox__label::before,
+.form-group__checkbox > .checkbox__label::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--checkbox-radio-size);
+    width: var(--checkbox-radio-size);
+}
+
+// 
+// Base styles for use on both
+// pseudo elements.
+//
+
+.form-group__radio > .radio__label::before,
+.form-group__radio > .radio__label::after,
+
+.form-group__checkbox > .checkbox__label::before,
+.form-group__checkbox > .checkbox__label::after {
+    content: "";
+    position: absolute;
+}
+
+//
+// Styles for the custom box boundary.
+//
+
+.form-group__radio > .radio__label::before,
+.form-group__checkbox > .checkbox__label::before {
+    box-shadow: 0 0 0 var(--input-border-width) var(--input-border-color);
+    height: var(--checkbox-radio-size);
+    width: var(--checkbox-radio-size);
+}
+
+.form-group__radio>.radio__label::before,
+.form-group__radio>.radio__label::after{
+    border-radius: 50%;
+}
+
+//
+// Defining States
+//
+
+.form-group__checkbox > input:focus ~ .checkbox__label::before {
+    border-color: transparent;
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+//
+// This recreates the "check" mark.
+//
+
+.form-group__checkbox > .checkbox__label::after {
+
+    height: calc(var(--checkbox-radio-size) * .75);
+    width: calc(var(--checkbox-radio-size) * .5);
+    left: calc(var(--checkbox-radio-size) * .25);
+
+    border-right: 0.25rem solid currentColor;
+    border-bottom: 0.25rem solid currentColor;
+
+    transform: rotate(45deg);
+}
+
+.form-group__radio > .radio__label::after {
+
+    background-color: currentColor;
+    
+    height: calc(var(--checkbox-radio-size) * .5);
+    width: calc(var(--checkbox-radio-size) * .5);
+    left: calc(var(--checkbox-radio-size) * .25);
+    top: calc(var(--checkbox-radio-size) * .25);
+}
+
+
+input:checked ~ [class*="__label"]::before {
+    border: none;
+    box-shadow: 0 0 0 var(--input-border-width) currentColor;
+    background-color: currentColor;
+}
+
+// :checked styles
+
+/* For Windows high contrast mode. */
+
+
+
+input:not(:checked) ~ [class*="__label"]::after {
+    opacity: 0;
+}
+
+input:checked ~ [class*="__label"]::after {
+    opacity: 1;
+}
+
+//////////////////////////////////////////////
+// E. Validation and Feedback
+//////////////////////////////////////////////
+
+.invalid-feedback {
+    display: none;
+}
+
+small {
+    display: block;
+    margin-top: var(--s2);
+    font-size: var(font-size-sm);
+    opacity: 0.75;
+}
+
+.alert {
+    @extend .rounded-r;
+
+    padding: var(--s3) var(--s3) var(--s3);
+    border-left-style: var(--default-border-style);
+    border-left-color: var(--primary);
+    border-left-width: calc(var(--default-border-width) * 2);
+
+    p {
+        margin-bottom: var(--s2);
+    }
+
+    .header > .text {
+        font-weight: $font-weight-bold;
+        margin-left: var(--spacer-1);
+        margin-right: var(--spacer-1);
+    }
+}

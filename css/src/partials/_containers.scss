@@ -1,0 +1,54 @@
+/*
+
+In this file:
+
+// A. Placeholders
+// B. Containers
+// C. Width Variants
+
+*/
+
+//////////////////////////////////////////////
+// A. Placeholders
+//////////////////////////////////////////////
+
+%center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//////////////////////////////////////////////
+// B. Containers
+//////////////////////////////////////////////
+
+.container {
+    @extend %center;
+    padding-left: var(--s3);
+    padding-right: var(--s3);
+}
+
+//////////////////////////////////////////////
+// C. Width Variants
+//////////////////////////////////////////////
+
+$narrow-w: 40rem; // Approximately 55 characters wide
+$medium-w: $narrow-w * 1.5;
+$wide-w: $narrow-w * 2;
+
+.narrow, 
+.medium,
+.wide{
+    @extend %center;
+}
+ 
+.narrow {
+    max-width: $narrow-w;
+}
+
+.medium {
+    max-width: $medium-w;
+}
+
+.wide {
+    max-width: $wide-w;
+}

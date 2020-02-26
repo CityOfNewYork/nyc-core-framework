@@ -1,0 +1,61 @@
+/*
+
+In this file:
+
+// A. Placeholders
+// B. Link Styles
+
+*/
+
+//////////////////////////////////////////////
+// A. Placeholders
+//////////////////////////////////////////////
+
+%list-no-style {
+    list-style: none;
+    // padding: unset;
+    // margin: unset;
+}
+
+%expanded-link {
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: auto;
+        content: "";
+    }
+}
+
+//////////////////////////////////////////////
+// B. Link Styles
+//////////////////////////////////////////////
+
+a{
+    @extend .hover-focus;
+
+    color: inherit;
+
+    &.underline{
+        text-decoration: underline;
+    }
+
+    &.expanded-link {
+        @extend %expanded-link;
+    }
+}
+
+p > a {
+    text-decoration: underline;
+}
+
+//////////////////////////////////////////////
+// C. Ancor Links
+//////////////////////////////////////////////
+
+html {
+    scroll-behavior: smooth;
+}

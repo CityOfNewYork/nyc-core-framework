@@ -1,0 +1,127 @@
+/*
+
+In this file:
+
+// A. Floating breakpoints bar
+// B. Container background color
+
+*/
+
+////////////////////////////////////////
+// A. Floating breakpoints bar
+////////////////////////////////////////
+
+// Floating bar with visible breakpoints
+
+$floating-breakpoints-bar: true;
+
+@if $floating-breakpoints-bar {
+
+    html {
+
+        // Remove height added by Google Translate
+        height: auto !important;
+
+        &::before {
+            @extend .sticky-top;
+            @extend .box-shadow-sm;
+            font-family: $base-font;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: var(--s3);
+            z-index: 5000;
+            background-color: rgba(purple, 0.9);
+        }
+
+        @each $breakpoint in map-keys($breakpoints) {
+            &::before {
+                @include breakpoint-up($breakpoint) {
+                    content: 'Breakpoint: '+ $breakpoint;
+                }
+            }
+        }
+    }
+
+}
+
+////////////////////////////////////////
+// B. Container background color
+////////////////////////////////////////
+
+// Add background color to containers
+
+$container-background-color: false;
+$container-background-opacity: 0.5;
+
+@if $container-background-color {
+
+    [class*="container"] {
+        background-color: rgba(red, $container-background-opacity) !important;
+    }
+
+    .narrow {
+        background-color: rgba(orange, $container-background-opacity) !important;
+    }
+
+    .medium {
+        background-color: rgba(yellow, $container-background-opacity) !important;
+    }
+
+    .wide {
+        background-color: rgba(green, $container-background-opacity) !important;
+    }
+
+}
+
+////////////////////////////////////////
+// C. Table Columns
+////////////////////////////////////////
+
+// Add background color to containers
+
+$table-column-background-color: true;
+$table-column-background-opacity: 0.5;
+
+@if $table-column-background-color {
+
+    th,
+    td {
+        &.col-a {
+            background-color: rgba(red, $table-column-background-opacity) !important;
+        }
+
+        &.col-b {
+            background-color: rgba(orange, $table-column-background-opacity) !important;
+        }
+
+        &.col-c {
+            background-color: rgba(yellow, $table-column-background-opacity) !important;
+        }
+
+        &.col-d {
+            background-color: rgba(green, $table-column-background-opacity) !important;
+        }
+
+        &.col-e {
+            background-color: rgba(blue, $table-column-background-opacity) !important;
+        }
+
+        &.col-f {
+            background-color: rgba(purple, $table-column-background-opacity) !important;
+        }
+
+        &.col-g {
+            background-color: rgba(pink, $table-column-background-opacity) !important;
+        }
+
+        &.col-h {
+            background-color: rgba(gray, $table-column-background-opacity) !important;
+        }
+
+        &.col-i {
+            background-color: rgba(tan, $table-column-background-opacity) !important;
+        }
+    }
+
+}

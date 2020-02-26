@@ -1,0 +1,54 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Accordion Settings
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+$acc-padding-x: var(--s3);
+$acc-padding-y: var(--s3);
+
+$acc-transition: 0.25s ease-out;
+
+//////////////////////////////////////////////
+// B. Accordion Settings
+//////////////////////////////////////////////
+
+// Accordion Button
+
+[data-toggle="accordion"]{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    border-top-color: inherit;
+    border-top-width: var(--default-border-width);
+    border-top-style: var(--default-border-style);
+
+    padding: $acc-padding-y $acc-padding-x;
+
+    @include caret(down);
+
+    &[aria-expanded="true"]::after {
+        @include caret-up;
+    }
+}
+
+// Accordion Panel
+
+[data-accordion="panel"] {
+    overflow: hidden;
+
+    max-height: 0;
+    transition: max-height $acc-transition;
+    
+    > [data-accordion="content"] {
+        padding: $acc-padding-y $acc-padding-x;
+    }
+}

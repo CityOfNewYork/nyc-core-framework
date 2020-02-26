@@ -1,0 +1,20 @@
+/*
+
+In this file:
+
+// A. Collapse Class
+// B. I.E. 11 Support
+
+*/
+
+//////////////////////////////////////////////
+// A. Collapse Class
+//////////////////////////////////////////////
+
+.collapse {
+    display: none;
+
+    &.shown{
+        display: block;
+    }
+}

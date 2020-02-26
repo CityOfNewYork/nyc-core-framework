@@ -1,0 +1,258 @@
+/*
+
+In this file:
+
+// A. Variables
+// A. Base Font Settings
+// B. Font Weight Classes
+// B. Font Size Classes
+// C. Headings
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+// Sans Serif Font Fallback (credit: Bootstrap 4)
+
+$base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// Import Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&display=swap');
+
+// Set Custom vars
+
+:root {
+
+    --base-font-family: "Source Sans Pro";
+    --base-font-weight-normal: 400;
+    --base-font-weight-bold: 700;
+
+    --base-font-size: 20px;
+    --base-line-height: 1.45;
+
+    --font-size-sm: calc(var(--base-font-size) * 0.7);  // 14px
+    --font-size-md: calc(var(--base-font-size) * 0.8);  // 16px
+    --font-size-rg: calc(var(--base-font-size) * 1);    // 20px
+    --font-size-lg: calc(var(--base-font-size) * 1.2);  // 24px
+    --font-size-xl: calc(var(--base-font-size) * 1.4);  // 28px
+
+    // Header Fonts
+
+    --banner-headline-font-size: calc(var(--base-font-size) * 3.8);
+
+    --h1-font-size: calc(var(--base-font-size) * 3);
+    --h2-font-size: calc(var(--base-font-size) * 2.2);
+    --h3-font-size: calc(var(--base-font-size) * 1.8);
+    --h4-font-size: calc(var(--base-font-size) * 1.6);
+    --h5-font-size: calc(var(--base-font-size) * 1.4); // 24px
+    --h6-font-size: calc(var(--base-font-size) * 1.1); // 22px
+}
+
+//////////////////////////////////////////////
+// A. Font Weight Classes
+//////////////////////////////////////////////
+
+$font-weights: (
+    normal: var(--base-font-weight-normal),
+    bold: var(--base-font-weight-bold),
+);
+
+@each $key, $value in $font-weights {
+    .fw-#{$key} {
+        font-weight: $value;
+    }
+}
+
+//////////////////////////////////////////////
+// A. Font Size Classes
+//////////////////////////////////////////////
+
+$font-sizes: (
+
+    sm: (
+        size: var(--font-size-sm)
+    ),
+
+    md: (
+        size: var(--font-size-md)
+    ),
+    
+    rg: (
+        size: var(--font-size-rg)
+    ),
+
+    lg: (
+        size: var(--font-size-lg)
+    ),
+    
+    xl: (
+        size: var(--font-size-xl)
+    )
+);
+
+@each $name, $font-size-map in $font-sizes {
+    .fs-#{$name} {
+        font-size: map-get($font-size-map, "size");
+
+        @if map-has-key($font-size-map, "line-height") {
+            line-height: map-get($font-size-map, "line-height");
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// B. Headings
+//////////////////////////////////////////////
+
+h1, .h1,
+h2, .h2, 
+h3, .h3,
+h4, .h4,
+h5, .h5, 
+h6, .h6 {
+    font-weight: $font-weight-bold;
+    line-height: 1;
+
+    margin-bottom: var(--s3);
+}
+
+h1, .h1{
+   font-size: var(--h1-font-size);
+}
+
+h2, .h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3, .h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4, .h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5, .h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6, .h6 {
+    font-size: var(--h6-font-size);
+}
+
+.banner-headline {
+    @extend .fw-normal;
+    @include breakpoint-up(lg){
+        font-size: var(--banner-headline-font-size);
+    }
+}
+
+//////////////////////////////////////////////
+// B. Body
+//////////////////////////////////////////////
+
+
+html{
+    font-size: 1rem;
+}
+
+body {
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    font-family: var(--base-font-family), $base-font-fallbacks;
+    font-weight: var(--base-font-weight-normal);
+}
+
+@include breakpoint-down(md){
+    :root{
+        --base-font-size: 18px;
+    }
+}
+
+p, p + ul:not([class]), blockquote {
+    margin-bottom: 1.5rem;
+}
+
+p + ul:not([class]) {
+    list-style-position: inside;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    li {
+        margin-bottom: var(--s3);
+    }
+}
+
+figure {
+    margin-top: var(--s4);
+    margin-bottom: var(--s4);
+
+    figcaption {
+        font-size: var(--font-size-md);
+        opacity: .75;
+        margin-top: var(--s2);
+    }
+}
+
+hr {
+    height: unset;
+    @extend .border-t;
+}
+
+blockquote {
+    position: relative;
+    font-size: var(font-size-lg);
+    padding-left: var(--s3);
+    
+    .left-quote {
+        position: absolute;
+        margin-top: var(--spacer-1);
+        margin-left: -var(--s3);
+    }
+
+    p{
+        margin-bottom: .125em;
+    }
+
+    footer{
+        font-size: .75em;
+    }
+}
+
+small,
+.small {
+  font-size: var(--font-size-md);
+}
+
+mark,
+.mark {
+  padding: .125rem;
+  background-color: rgba(yellow, .75);
+}
+
+//////////////////////////////////////////////
+// C. Text Utilities
+//////////////////////////////////////////////
+
+.t-center{
+   text-align: center;
+}
+
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.break-word {
+    word-wrap: break-word;
+}

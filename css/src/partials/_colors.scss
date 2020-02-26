@@ -1,0 +1,152 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Background Color Classes
+// C. Text Color Classes
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root{
+
+    // Theme Color Palette
+
+    --primary: #25caa4;
+    --secondary: #6500d6;
+    --dark: #262345;
+    --light: #f1f4f6;
+
+    --text-on-primary: var(--dark);
+    --text-on-secondary: white;
+
+    // Feedback Colors
+
+    --confirm: #0caa63;
+    --warn: #dc3545;
+
+    // Accessible Link Color
+
+    --a11y-link-color: blue;
+
+    // Accessible Form Input Border Color
+
+    --a11y-input-border-color: #777677;
+}
+
+//////////////////////////////////////////////
+// B. Color Map
+//////////////////////////////////////////////
+
+$theme-colors: (
+
+    "white": (
+        swatch: white,
+        text: var(--dark),
+        border: rgba(black, 0.125),
+        link: var(--a11y-link-color)
+    ),
+        
+    "primary": (
+        swatch: var(--primary),
+        text: var(--text-on-primary),
+        border: rgba(black, 0.125)
+    ), 
+    
+    "secondary": (
+        swatch: var(--secondary),
+        text: var(--text-on-secondary),
+        border: rgba(black, 0.25)
+    ), 
+    
+    "dark": (
+        swatch: var(--dark),
+        text: white,
+        border: rgba(white, 0.125)
+    ), 
+    
+    "light": (
+        swatch: var(--light), 
+        text: var(--dark), 
+        border: rgba(gray, 0.25),
+        link: var(--a11y-link-color)
+    )
+);
+
+//////////////////////////////////////////////
+// C. Background Color Classes 
+//////////////////////////////////////////////
+
+[class*="bc-"] {
+    --background-color: white;
+    --text-color: black;
+    --border-color: gray;
+    --link-color: currentColor;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+
+    * {
+        &:not([class*="bc-"]):not(input):not(textarea):not(select) {
+            border-color: inherit;
+        }
+    }
+
+    td:not([class*="bc-"]) > a:not([class*="tc-"]),
+    p > a:not([class*="bc-"]){
+        color: var(--link-color);
+    }
+
+    [data-toggle="dropdown"] ~ ul {
+        background-color: var(--background-color);
+    }
+
+    [data-toggle="dropdown"][class*="-icon"] ~ ul::before{
+        color: var(--border-color);
+    }
+
+    [data-toggle="dropdown"][class*="-icon"] ~ ul::after {
+        color: var(--background-color);
+    }
+
+    .form-group__radio > input ~ [class*="__label"]::after,
+    .form-group__checkbox > input ~ [class*="__label"]::after {
+        color: var(--background-color);
+    }
+}
+
+@each $name, $color-map in $theme-colors {
+    $background: map-get($color-map, "swatch");
+    $text: map-get($color-map, "text");
+    $border: map-get($color-map, "border");
+    $link: map-get($color-map, "link");
+
+    .bc-#{$name} {
+        --background-color: #{$background};
+        --text-color: #{$text};
+        --border-color: #{$border};
+        --link-color: #{$link};
+    }
+}
+
+//////////////////////////////////////////////
+// C. Text Color Classes 
+//////////////////////////////////////////////
+
+@each $name, $color-map in $theme-colors {
+    @if $name != "confirm" and $name != "warn" {
+        .tc-#{$name} {
+            content: $name;
+            color: map-get($color-map, "swatch");
+        }
+    }
+}
+
+.tc-link{
+    color: var(--a11y-link-color);
+}

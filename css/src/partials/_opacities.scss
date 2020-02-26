@@ -1,0 +1,40 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Opacity Classes
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+$opacities: (
+    10: 0.10,
+    20: 0.20,
+    30: 0.30,
+    40: 0.40,
+    50: 0.50,
+    60: 0.60,
+    70: 0.70,
+    80: 0.80,
+    90: 0.90
+);
+
+//////////////////////////////////////////////
+// B. Opacity Classes
+//////////////////////////////////////////////
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        @each $name, $value in $opacities {
+            .opacity-#{$name}#{$mod} {
+                opacity: $value;
+            }
+        }
+    }
+}

@@ -1,26 +1,62 @@
-## About
+# NYC Core Framework
 
-NYC Core Framework is a Bootstrap-based web framework with added design patterns and other components optimized for accessibility, translatability, usability, and clarity of presentation. NYC Core Framework is the product of hard work by team members from the [NYC Gov Lab & Studio](http://nyc.gov/govlabstudio) at the City's Department of Information Technology and Telecommunications (DoITT). Thank you to:
-- Carl Avidano
-- Sean Gribbon
-- Lois Last
-- Visham Subrath
-- Chris James
-- Chris Menedes (maps)
-- Tim Keane (maps)
-- Alix Jean-Pharuns
-- Tin Lau
+NYC Core Framework is an open-source front end toolkit for building modern, accessible websites and applications. Natura11y's simple codebase is easy to understand and reduces the need for package managers and third-party dependencies.
 
-## Documentation
+## Description
 
-Components, usage guides and examples are available at http://nyc.gov/nyc-core-framework
+An in-depth paragraph about your project and overview of use.
 
-## License 
+## Getting Started
 
-The NYC Core Framework is copyright 2019 the City of New York, and distributed under the terms of the [MIT License](https://github.com/cityofnewyork/nyc-core-framework/blob/master/license.md). The NYC Core Framework is derived from [Bootstrap 4](https://github.com/twbs/bootstrap/), copyright 2011-2019 Twitter, Inc. and The Bootstrap Authors. The Bootstrap 4 source code is released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). 
+### Dependencies
 
-NYC Core Framework uses [Font Awesome](https://fontawesome.com) icons.
+* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* ex. Windows 10
 
-## Versions
+### Installing
 
-NYC Core Framework version 1.0.0 Alphabet City uses Bootstrap 4.3.1 and Font Awesome 5.8.1
+* How/where to download your program
+* Any modifications needed to be made to files/folders
+
+### Executing program
+
+* How to run the program
+* Step-by-step bullets
+```
+code blocks for commands
+```
+
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+
+Contributors names and contact info
+
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+## Version History
+
+* 0.2
+    * Various bug fixes and optimizations
+    * See [commit change]() or See [release history]()
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* [dbader](https://github.com/dbader/readme-template)
+* [zenorocha](https://gist.github.com/zenorocha/4526327)
+* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)

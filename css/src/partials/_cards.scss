@@ -1,0 +1,28 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card__header {
+    font-size: var(--font-size-md);
+    padding: var(--s2) var(--s3);
+}
+
+.card__body,
+.card__footer {
+    padding: var(--s3);
+}
+
+.card__footer {
+    margin-top: auto;
+}
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+    // Display flex bug fix
+    .card * { 
+        min-height: 0.01px;
+    }
+}

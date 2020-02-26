@@ -1,0 +1,29 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Z-index Classes
+// Component
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+$z-index-values: 100, 300, 600, 900, 1200; 
+
+//////////////////////////////////////////////
+// B. Z-index Classes
+//////////////////////////////////////////////
+
+[class*="z-index"]{
+    position: relative;
+}
+
+@each $z-index in $z-index-values {
+    .z-index-#{$z-index} {
+        z-index: $z-index;
+    }
+}

@@ -1,0 +1,44 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Box Shadows
+// C. Text Shadows
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+$box-shadow-opacity: 0.125;
+
+$box-shadow-sm: 0 0 0.5rem rgba(black, $box-shadow-opacity);
+$box-shadow : 0 0 1.5rem rgba(black, $box-shadow-opacity);
+
+//////////////////////////////////////////////
+// B. Box Shadows
+//////////////////////////////////////////////
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .box-shadow-sm#{$mod} {
+            box-shadow: $box-shadow-sm;
+        }
+
+        .box-shadow#{$mod} {
+            box-shadow: $box-shadow;
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// c. Text Shadows
+//////////////////////////////////////////////
+
+.text-shadow {
+    text-shadow: 0 0 6px rgba(black, 0.5);
+}

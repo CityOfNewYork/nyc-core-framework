@@ -1,0 +1,124 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Backdrop
+// C. Banner Fixed
+// D. I.E. 11 Support
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root{
+    --backdrop-fixed-height: 375px;
+}
+
+//////////////////////////////////////////////
+// B. Backdrop
+//////////////////////////////////////////////
+
+[class*="backdrop"] {
+    position: relative;
+
+    .backdrop__image {
+        min-width: 100%;
+    }
+
+    .backdrop__cover {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        > * {
+            width: 100%;
+        }
+    }
+
+    .backdrop__image-credit {
+        width: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        background-color: inherit;
+
+        p {
+            font-size: var(--font-size-sm);
+            padding: .25rem .75rem;
+        }
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .backdrop#{$mod} {
+            .backdrop__cover {
+                position: absolute;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// C. Backdrop Fixed
+//////////////////////////////////////////////
+
+.backdrop--fixed {
+    display: flex;
+    flex-direction: column;
+    min-height: var(--backdrop-fixed-height);
+
+    > * {
+        position: relative;
+        z-index: auto;
+        width: 100%;
+    }
+
+    .backdrop__image {
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .backdrop__cover {
+        position: relative;
+        display: initial;
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    
+    @include breakpoint-down(md) {
+        min-height: calc(var(--backdrop-fixed-height) * 0.75);
+    }
+}
+
+//////////////////////////////////////////////
+// D. I.E. 11 Support
+//////////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+    .backdrop--fixed {
+        overflow: hidden;
+        height: 1em;
+
+        .backdrop__image {
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

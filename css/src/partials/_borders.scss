@@ -1,0 +1,155 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Border Classes
+// C. Border Radius Classes
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root {
+    
+    // Border
+
+    --default-border-width: 1px;
+    --default-border-style: solid;
+
+    // Border Radius
+    
+    --border-radius: 0.5em;
+}
+
+//////////////////////////////////////////////
+// B. Border Classes
+//////////////////////////////////////////////
+
+[class*="border"]:not([class*="bc-"]){
+    border-color: inherit;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .border#{$mod} {
+            border-width: var(--default-border-width);
+            border-style: var(--default-border-style);
+        }
+
+        .border-t#{$mod} {
+            border-top-width: var(--default-border-width);
+            border-top-style: var(--default-border-style);
+        }
+
+        .border-r#{$mod} {
+            border-right-width: var(--default-border-width);
+            border-right-style: var(--default-border-style);
+        }
+
+        .border-b#{$mod} {
+            border-bottom-width: var(--default-border-width);
+            border-bottom-style: var(--default-border-style);
+        }
+
+        .border-l#{$mod} {
+            border-left-width: var(--default-border-width);
+            border-left-style: var(--default-border-style);
+        }
+
+        .border-0#{$mod} {
+            border: none;
+        }
+
+        .border-t0#{$mod} {
+            border-top: none;
+        }
+
+        .border-r0#{$mod} {
+            border-right: none;
+        }
+
+        .border-b0#{$mod} {
+            border-bottom: none;
+        }
+
+        .border-l0#{$mod} {
+            border-left: none;
+        }
+    }
+}
+
+@each $name, $color-map in $theme-colors {
+    
+    .border-#{$name} {
+        border-color: map-get( $color-map, "swatch") !important;
+    }
+
+    .border-t-#{$name} {
+        border-top-color: map-get($color-map, "swatch") !important;
+    }
+
+    .border-r-#{$name} {
+        border-right-color: map-get($color-map, "swatch") !important;
+    }
+
+    .border-b-#{$name} {
+        border-bottom-color: map-get($color-map, "swatch") !important;
+    }
+
+    .border-l-#{$name} {
+        border-left-color: map-get($color-map, "swatch") !important;
+    }
+}
+
+.border-input{
+    border-color: var(--input-border-color);
+}
+
+//////////////////////////////////////////////
+// C. Border Radius Classes
+//////////////////////////////////////////////
+
+[class*="rounded"]{
+    overflow: hidden;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.rounded-pill {
+    border-radius: 40rem;
+}
+
+.rounded {
+    border-radius: var(--border-radius);
+}
+
+.rounded-t {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.rounded-r {
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.rounded-b {
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.rounded-l {
+    border-top-left-radius: var(--border-radius) !important;
+    border-bottom-left-radius: var(--border-radius) !important;
+}
+
+.rounded-0 {
+    border-radius: 0;
+}

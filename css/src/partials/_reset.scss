@@ -1,0 +1,301 @@
+/*
+
+In this file:
+
+// A. Eric Meyer's CSS Reset
+// B. Margin Bottom
+// C. Theme Presets
+// D. Forms
+
+*/
+
+//////////////////////////////////////////////
+// A. Eric Meyer's CSS Reset
+//////////////////////////////////////////////
+
+// http://meyerweb.com/eric/tools/css/reset/
+// v2.0 | 20110126
+// License: none (public domain)
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: unset;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+// HTML5 display-role reset for older browsers
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+// ol,
+// ul {
+//     list-style: none;
+// }
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: unset;
+}
+
+//////////////////////////////////////////////
+// B. Margin Bottom
+//////////////////////////////////////////////
+
+// Remove bottom margins on all ':last-child' selectors 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul,
+li,
+dl,
+dd,
+blockquote,
+address {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+//////////////////////////////////////////////
+// C. Theme Presets
+//////////////////////////////////////////////
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(black, 0);
+}
+
+body {
+    font-weight: normal;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    position: relative;
+
+    // Font smoothing
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    color: inherit;
+    font-size: inherit;
+    border: unset;
+    border-radius: unset;
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0
+    }
+
+    &.d-block{
+        width: 100%;
+    }
+}
+
+//////////////////////////////////////////////
+// D. Forms
+//////////////////////////////////////////////
+
+label,
+.label,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    font-size: inherit;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+select{
+    border-radius: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    appearance: unset;
+    // Hide Select default icon on IE
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+input{
+    margin: unset;
+    padding: unset;
+
+    &::-ms-clear {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+}
+
+// Remove FireFox specific 'inner-focus' styles
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+legend {
+    // Correct color inheritance in IE
+    color: inherit;
+    display: table;
+    // Correct the text wrapping in Edge and IE
+    line-height: normal;
+    max-width: 100%;
+    white-space: normal;
+}
