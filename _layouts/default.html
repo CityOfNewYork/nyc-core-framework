@@ -71,7 +71,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="{{site.baseurl}}/documentation">Documentation</a>
+                            <a href="{{site.baseurl}}/documentation" {% if page.url  contains '/documentation' %} aria-current="page"{% endif %}>Documentation</a>
                         </li>
                         <li>
                             <a href="#1">Templates</a>
