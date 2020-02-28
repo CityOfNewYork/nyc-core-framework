@@ -8,4 +8,4 @@ collections:
     output: true
     permalink: /documentation/:path/
     order:
-      get-started.md
+      - get-started.md
