@@ -7,3 +7,7 @@
 {% if page.title == 'Home' %}    
 <script src="{{site.baseurl}}/js/dist/home.js"></script>
 {% endif %}
+
+{% if page.url contains '/documentation' %}
+<script src="{{site.baseurl}}/js/lib/prism.js"></script>
+{% endif %}
