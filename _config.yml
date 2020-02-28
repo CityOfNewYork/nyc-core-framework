@@ -7,3 +7,5 @@ collections:
   documentation:
     output: true
     permalink: /documentation/:path/
+    order:
+      get-started.md
