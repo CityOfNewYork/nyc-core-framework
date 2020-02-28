@@ -1,0 +1,344 @@
+---
+layout: documentation
+title: "Get Started"
+---
+
+<div class="my-5">
+
+    <div class="container narrow my-4">
+
+        <h2 class="h1">
+            Make beautiful, accessible websites easier and faster.
+        </h2>
+        <p>
+            The NYC Core Framework is an open-source front end toolkit for building modern websites and
+            browser-based applications. Our lightweight codebase is easy to understand—and at the same time—provides a
+            wealth of customizable components ideal for projects of all scopes and sizes.
+        </p>
+        <p>
+            <a href="#1">Download or Clone on GitHub</a>
+        </p>
+    
+    </div>
+    <!-- .container -->
+
+    <hr class="my-5" id="natura11yFiles">
+
+    <div class="container narrow my-4">
+        <h2>The Files</h2>
+        <p>Natura11y consists of the following files and folders:</p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <figure class="container narrow my-4">
+
+        <div class="code-toolbar">
+            <pre class="hide-toolbar language-plaintext"><code class=" language-plaintext">
+nyc-core-framework/
+├── css/
+│   └── theme.css
+├── images/
+├── js/
+│   └── main.js
+├── scss/
+│   ├── _accessibility.scss
+│   ├── _accordions.scss
+│   ├── _aspect-ratios.scss
+│   ├── _borders.scss
+│   ├── _breakpoints.scss
+│   ├── _buttons.scss
+│   ├── _collapse.scss
+│   ├── _containers.scss
+│   ├── _dev-tools.scss
+│   ├── _display.scss
+│   ├── _flex.scss
+│   ├── _forms.scss
+│   ├── _globals.scss
+│   ├── _gradients.scss
+│   ├── _grid.scss
+│   ├── _ie-support.scss
+│   ├── _links.scss
+│   ├── _modals.scss
+│   ├── _navigation.scss
+│   ├── _opacities.scss
+│   ├── _position.scss
+│   ├── _reset.scss
+│   ├── _gradients.scss
+│   ├── _shadows.scss
+│   ├── _sizing.scss
+│   ├── _spacing.scss
+│   ├── _spacing.scss
+│   ├── _tables.scss
+│   └── _z-index.scss
+└── index.html</code></pre>
+            <div class="toolbar">
+                <div class="toolbar-item"><span>Plaintext</span></div>
+                <div class="toolbar-item"><a>Copy</a></div>
+            </div>
+        </div>
+
+    </figure>
+
+
+
+
+    <div class="container narrow my-4">
+        <p>The framework itself predominantly made up of <a href="/documentation/get-started#customizingWithSASS">SASS
+                partials</a>. Before we cover customization, let's look at Natura11y's CSS and Javascript dependencies.
+        </p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <hr class="my-5" id="cssAndJavascript">
+
+
+
+
+    <div class="container narrow my-4">
+        <h2>CSS and Javascript</h2>
+        <p>At its core, Natura11y relies on only four dependencies. Within the <code>&lt;head&gt;</code> tag of
+            <strong>index.html</strong>, you will find a stylesheet <code>&lt;link&gt;</code> to <a
+                href="https://fontawesome.com/">Font Awesome</a>, an open-source icon library, and another
+            <code>&lt;link&gt;</code> for our theme's principle stylesheet, with the path
+            <strong>/css/theme.css</strong>.</p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <figure class="container narrow my-4">
+
+        <div class="code-toolbar">
+            <pre
+                class="hide-toolbar language-html"><code class=" language-html"><span class="token comment">&lt;!-- Font Awesome --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./fontawesome/css/all.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Theme CSS --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./css/theme.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+            <div class="toolbar">
+                <div class="toolbar-item"><span>HTML</span></div>
+                <div class="toolbar-item"><a>Copy</a></div>
+            </div>
+        </div>
+
+    </figure>
+
+
+
+
+    <div class="container narrow my-4">
+        <p>Near the closing <code>&lt;body&gt;</code> tag, we link to our theme's javascript file, with the path
+            <strong>/js/main.js</strong>.</p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <figure class="container narrow my-4">
+
+        <div class="code-toolbar">
+            <pre
+                class="hide-toolbar language-html"><code class=" language-html"><span class="token comment">&lt;!-- Main JS --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/js/main.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+            <div class="toolbar">
+                <div class="toolbar-item"><span>HTML</span></div>
+                <div class="toolbar-item"><a>Copy</a></div>
+            </div>
+        </div>
+
+    </figure>
+
+
+
+
+    <div class="container narrow my-4">
+        <p>And finally, also near the closing <code>&lt;body&gt;</code> tag, a polyfill for Internet Explorer 11 is
+            included. This dependency is required only if you wish to support this last version of Internet Explorer.
+        </p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <figure class="container narrow my-4">
+
+        <div class="code-toolbar">
+            <pre
+                class="hide-toolbar language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    window<span class="token punctuation">.</span>MSInputMethodContext <span class="token operator">&amp;&amp;</span> document<span class="token punctuation">.</span>documentMode <span class="token operator">&amp;&amp;</span> document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;script src="./js/ie11CustomProperties.js"&gt;&lt;\x2fscript&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+            <div class="toolbar">
+                <div class="toolbar-item"><span>HTML</span></div>
+                <div class="toolbar-item"><a>Copy</a></div>
+            </div>
+        </div>
+
+    </figure>
+
+
+
+
+    <hr class="my-5" id="customizingWithSass">
+
+
+
+
+    <div class="container narrow my-4">
+        <h2>Customizing with Sass</h2>
+        <p>Natura11y is customizable using <a href="https://sass-lang.com/">Sass</a> (SCSS). The theme's stylesheet,
+            <strong>/css/theme.css</strong> is generated (or compiled) from the central SASS file, with the path <a
+                href="https://github.com/cavidano/natura11y-inclusive-framework/blob/master/scss/theme.scss"><strong>/scss/theme.scss</strong></a>.
+        </p>
+        <p>At the top of <strong>theme.scss</strong> in <em>Section A. SCSS Imports</em>, all dependent SASS partials
+            are imported. These partials are located in the <strong>/scss/base/</strong> directory. They work together
+            and act as building blocks for styling our theme.</p>
+        <p>Some partials are required, while others are optional—and can be safely commented out or altogether removed.
+        </p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <figure class="container narrow my-4">
+
+        <div class="code-toolbar">
+            <pre
+                class="hide-toolbar language-scss"><code class=" language-scss"><span class="token comment">////////////////////////////////////////</span>
+<span class="token comment">// A. SCSS Imports</span>
+<span class="token comment">////////////////////////////////////////</span>
+
+<span class="token comment">// Required</span>
+
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/globals"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/reset"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/accessibility"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/breakpoints"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/spacing"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/typography"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/buttons"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/colors"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/links"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/borders"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/containers"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/sizing"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/grid"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/flex"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/display"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/navigation"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/collapse"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/backdrops"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/z-index"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/position"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Optional</span>
+
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/shadows"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/gradients"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/accordions"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/modals"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/forms"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/aspect-ratios"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/opacities"</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/tables"</span><span class="token punctuation">;</span></code></pre>
+            <div class="toolbar">
+                <div class="toolbar-item"><span>Sass (Scss)</span></div>
+                <div class="toolbar-item"><a>Copy</a></div>
+            </div>
+        </div>
+
+    </figure>
+
+
+
+
+    <div class="container narrow my-4">
+        <p>For your convenience, SASS files in the Natura11y Framework are divided into alphabetically labeled
+            <em>Sections</em>, with an <em>In this File</em> key at the very top. Throughout the documentation, we'll
+            often refer to a section (e.g., Section A.) within a partial, when describing a feature or
+            customization.<br></p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <div class="container narrow my-4">
+        <h3>Adding your own CSS</h3>
+        <p>We recommend adding your own CSS or Sass under <em>Section B.</em> of <strong>/scss/theme.scss</strong>. This
+            way your customizations are in one place and remain separated from the building blocks (SASS partials) of
+            the framework.</p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <figure class="container narrow my-4">
+
+        <div class="code-toolbar">
+            <pre class="hide-toolbar language-scss"><code class=" language-scss"><span class="token comment">//////////////////////////////////////////////</span>
+<span class="token comment">// B. Custom Theme Styles</span>
+<span class="token comment">//////////////////////////////////////////////</span>
+
+<span class="token comment">// Put anything here</span>
+
+<span class="token comment">// Logo</span>
+
+<span class="token selector">a[data-logo="brand"] </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+
+    <span class="token selector">svg </span><span class="token punctuation">{</span>
+        <span class="token property">fill</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+            <div class="toolbar">
+                <div class="toolbar-item"><span>Sass (Scss)</span></div>
+                <div class="toolbar-item"><a>Copy</a></div>
+            </div>
+        </div>
+
+    </figure>
+
+
+
+
+    <hr class="my-5">
+
+
+
+
+    <div class="container narrow my-4">
+        <h2>Browser Support</h2>
+        <p>In the spirit of inclusivity, Natura11y aims to support all modern browsers—including Internet Explorer
+            11—which still today is widely used in government agencies, non-governmental organizations, and
+            grandparents' houses. </p>
+        <p>Note that proxy browsers (such as Opera Mini, Opera Mobile’s Turbo mode, UC Browser Mini, Amazon Silk) have
+            not been tested.</p>
+    </div>
+    <!-- .container -->
+
+
+
+</div>
+
+
+<section class="container narrow my-4">
+
+    <h2>
+        Get Started
+    </h2>
+
+ 
+
+</section>
+

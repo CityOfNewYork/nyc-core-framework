@@ -317,7 +317,7 @@ small {
     }
 
     .header > .text {
-        font-weight: $font-weight-bold;
+        @extend .fw-bold;
         margin-left: var(--spacer-1);
         margin-right: var(--spacer-1);
     }

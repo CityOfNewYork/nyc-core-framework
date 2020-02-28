@@ -23,10 +23,8 @@ In this file:
     --secondary: #00D5A0;
     --dark: #000050;
     --light: #f1f4f6;
-
     --text-on-primary: white;
     --text-on-secondary: var(--dark);
-
     --backdrop-fixed-height: 300px;
 }
 
@@ -42,7 +40,6 @@ In this file:
     }
 
     @include breakpoint-down(md) {
-
         text-align: center;
 
         .grid {
@@ -55,16 +52,15 @@ In this file:
                 right: 0;
                 bottom: 0;
                 display: flex;
-                background-color: rgba(white, .75);
+                background-color: rgba(white, 0.75);
             }
 
-            .message>div {
+            .message > div {
                 margin-top: auto;
                 margin-bottom: auto;
                 padding: var(--s4);
                 background-color: transparent;
             }
-
         }
     }
 }

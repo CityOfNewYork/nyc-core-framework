@@ -3,7 +3,10 @@
     {% for doc in site.documentation %}
     
     <li>
-        {{ doc.title }}
+        <a href="{{site.baseurl}}/documentation/{{doc.slug}}" {% if page.url contains {{doc.slug}} %}
+            aria-current="page" {% endif %}>
+            {{ doc.title }}
+        </a>
     </li>
     
     {% endfor %}

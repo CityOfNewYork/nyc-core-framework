@@ -113,7 +113,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5, 
 h6, .h6 {
-    font-weight: $font-weight-bold;
+    @extend .fw-bold;
     line-height: 1;
 
     margin-bottom: var(--s3);
