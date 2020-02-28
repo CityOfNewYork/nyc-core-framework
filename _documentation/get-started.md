@@ -1,4 +1,5 @@
 ---
+layout: documentation
 title: "Get Started"
 ---
 

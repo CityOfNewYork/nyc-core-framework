@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+{% include head.html %}
+
+<body class="bc-white">
+
+    {% include global-header.html %}
+
+    <main id="skip-header-content" role="main">
+
+        <div class="d-none--lg overflow-hidden">
+            <a class="btn bc-dark d-block py-3" href="#1" data-toggle="collapse" data-target="#sidebar" role="button">Documentation</a>
+        </div>
+
+        <div class="grid">
+
+            <div class="grid__col-2--lg collapse d-block--lg bc-light" id="sidebar">
+
+                <div class="sticky-top narrow p-3">
+
+                    {% include sidebar.html %}
+
+                </div>
+                <!-- .stick-top -->
+
+            </div>
+            <!-- col -->
+
+            <div class="grid__col-10--lg overflow-hidden" id="primary-content">
+
+                <div class="container bc-secondary overflow-hidden">
+
+                    <div class="narrow my-5">
+
+                        <div class="grid">
+                            <div class="grid__col-10--lg">
+                                <div class="narrow">
+                                    <h1 class="banner-headline mb-4">
+                                        {{ page.title }}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- .container -->
+
+                </div>
+
+                <div class="container my-5">
+
+                    {{ content }}
+
+                </div>
+                <!-- .my-5 -->
+
+            </div>
+            <!-- col -->
+
+        </div>
+        <!-- .grid -->
+
+    </main>
+
+    {% include global-footer.html %}
+
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 
 baseurl: /nyc-core-framework
 exclude: ['readme.md']
+permalink: pretty
 
 collections:
   documentation:
