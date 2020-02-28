@@ -1,0 +1,2 @@
+baseurl: /nyc-core-framework
+exclude: ['readme.md']
