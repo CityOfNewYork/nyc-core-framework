@@ -1,4 +1,5 @@
-ccccbaseurl: /nyc-core-framework
+
+baseurl: /nyc-core-framework
 exclude: ['readme.md']
 
 collections:
