@@ -12,7 +12,6 @@ code[class*="language-"],
 pre[class*="language-"] {
     color: white;
     background: none;
-    text-shadow: 0 1px white;
     font-family: "Roboto Mono", monospace;
 	font-size: var(--font-size-md);
 	font-weight: normal;
@@ -29,6 +28,7 @@ pre[class*="language-"] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    border-radius: .5rem;
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
