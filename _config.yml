@@ -1,7 +1,7 @@
-permalink: pretty
-baseurl: /nyc-core-framework
+ccccbaseurl: /nyc-core-framework
 exclude: ['readme.md']
 
 collections:
   documentation:
     output: true
+    permalink: /documentation/:path/
