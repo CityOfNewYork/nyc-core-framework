@@ -1,5 +1,5 @@
 
-baseurl: /nyc-core-framework
+baseurl: ''
 permalink: pretty
 
 exclude: ['readme.md']
