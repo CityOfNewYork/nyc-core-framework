@@ -3,12 +3,13 @@ layout: documentation
 title: "Backdrops"
 ---
 
-
 <div class="container narrow my-4">
     <h2 class="h1">A panorama of possibilities.</h2>
-    <p>Natura11y's Backdrop components place a translucent image behind any custom content. Backdrops offer two distinct
+    <p>
+        Backdrop components place a translucent image behind any custom content. Backdrops offer two distinct
         variations: an image-proportional backdrop that scales and stacks responsively, and a fixed-height backdrop that
-        can adjust to the height of its inner content.</p>
+        can adjust to the height of its inner content.
+    </p>
 </div>
 
 <div class="container narrow my-4">
@@ -19,10 +20,229 @@ title: "Backdrops"
             <span class="text">Image Accessibility</span>
         </p>
 
-        <p>Backdrops replace CSS background images with inline HTML images so screen readers can read the image's
-            <em>alt</em> text. </p>
+        <p>
+            Backdrops replace CSS background images with inline HTML images so screen readers can read the image's
+            <em>alt</em> text.
+        </p>
+
         <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
 
     </div>
 
 </div>
+
+<hr class="my-5" id="image-proportional">
+
+<div class="container narrow my-4">
+    <h2>Image-proportional</h2>
+    <p>
+        The default <code>.backdrop</code> selector requires two immediate children. The first is an image with a class
+        of <code>.backdrop__image</code>. This image sets the size (proportional width and height) of our backdrop. The
+        second direct child is a block-level element with a class of <code>.backdrop__cover</code>, inside of which
+        custom content can be placed.
+    </p>
+    <p>
+        Examples on this page include the <code>.backdrop__image-credit</code> selector which is not required and can be
+        customized in <a href="#1"><strong>/scss/base/_backdrops.scss</strong></a>.
+    </p>
+    <p>Here is a practical example of an image-proportional backdrop:</p>
+</div>
+
+<figure class="my-5">
+
+    <div class="backdrop--md bc-dark">
+
+        <img class="backdrop__image opacity-40--md" src="{{ site.baseurl }}/images/examples/backdrop-example-01.jpg" alt="Placeholder">
+
+        <div class="backdrop__cover">
+
+            <div class="container medium my-4">
+
+                <h1 class="banner-headline t-center text-shadow mb-4">
+                    Lorem ipsum dolor sit amet consectetur
+                </h1>
+
+                <div class="narrow">
+
+                    <div class="grid--gap-lg cols--sm justify-center">
+
+                        <div class="grid__col">
+                            <a class="btn bc-primary d-block bc-white box-shadow" href="#1">Link</a>
+                        </div>
+                        <!-- .grid__col -->
+
+                        <div class="grid__col">
+                            <a class="btn bc-secondary d-block bc-white box-shadow" href="#1">Link</a>
+                        </div>
+                        <!-- .grid__col -->
+
+                    </div>
+                    <!-- .grid -->
+
+                </div>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+
+        <div class="backdrop__image-credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
+    </div>
+    <!-- .backdrop -->
+</figure>
+
+<div class="container narrow my-4">
+    <p>Let's review the code used to create the example above:</p>
+</div>
+
+<figure class="container medium my-4">
+
+    <div class="code-toolbar">
+
+        <pre class="language-html">
+            <code class=" language-html">
+                &lt;div class="backdrop--md bc-dark"&gt;
+
+                    &lt;img class="backdrop__image opacity-40--md" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+
+                    &lt;div class="backdrop__cover"&gt;
+
+                        &lt;div class="container medium my-4"&gt;
+
+                            &lt;h1 class="banner-headline t-center text-shadow mb-4"&gt;
+                                Lorem ipsum dolor sit amet consectetur
+                            &lt;/h1&gt;
+
+                            &lt;div class="narrow"&gt;
+
+                                &lt;div class="grid--gutters cols--sm justify-center"&gt;
+
+                                    &lt;div class="grid__col"&gt;
+                                        &lt;a class="btn bc-primary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- .grid__col --&gt;
+
+                                    &lt;div class="grid__col"&gt;
+                                        &lt;a class="btn bc-secondary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- .grid__col --&gt;
+
+                                &lt;/div&gt;
+                                &lt;!-- .grid --&gt;
+
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+                        &lt;!-- .container --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .backdrop__cover --&gt;
+
+                    &lt;div class="backdrop__image-credit"&gt;
+                        &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                    &lt;/div&gt;
+                    
+                &lt;/div&gt;
+                &lt;!-- .backdrop --&gt;
+            </code>
+        </pre>
+
+    </div>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        On the first line, notice the <code>--lg</code> appended to <code>.backdrop</code>. This breakpoint modifier
+        tells the backdrop when <code>.cover</code> should overlay <code>.image</code>. Until this breakpoint,
+        <code>.image</code> and <code>.cover</code> appear stacked (one over the other vertically), for smaller
+        viewports. Make your browser smaller to see it in action.
+    </p>
+</div>
+
+<div class="container narrow my-4">
+    <h3>Background-color and Image Opacity Classes</h3>
+    <p>
+        Backdrops utilize two other Natura11y Inclusive Framework features: <a href="#1">Background-color</a> and <a
+            href="#1">Opacity</a> classes. The opacity class (<code>.opacity-40--lg</code>) applies a CSS opacity to the
+        image, allowing the background color (set with <code>.bc-dark</code>) to show through.
+    </p>
+    <p>
+        Did you see that opacity classes have their own breakpoint modifiers? If present, the opacity will be set only at
+        the given breakpoint.
+    </p>
+    <p>In the example above, we're telling <code>.backdrop</code> to position the <code>.cover</code> absolute over the
+        <code>.image</code> at the large breakpoint. Also at the large breakpoint, a 40% opacity is applied to the
+        image.
+    </p>
+    <p>
+        All of this together makes it easy to create responsive backdrops with different types of content. Consider the
+        example below. Two backdrops are placed inside our <a href="#1">grid</a> columns, with no
+        breakpoints specified for the backdrop or image opacity.
+    </p>
+</div>
+
+<figure class="container medium my-4">
+
+    <div class="grid--gap cols--md t-center">
+
+        <div class="grid__col">
+
+            <div class="backdrop bc-primary rounded">
+
+                <img class="backdrop__image opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover">
+
+                    <div class="container my-4">
+
+                        <a href="#1" class="h3">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- col -->
+
+        <div class="grid__col">
+
+            <div class="backdrop bc-secondary rounded">
+
+                <img class="backdrop__image opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover align-center">
+
+                    <div class="container my-4">
+
+                        <a href="#1" class="h3">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- grid__col -->
+
+    </div>
+    <!-- grid -->
+
+
+    <figcaption>
+        <p>
+            Photos by <a href="#1">Zdeněk Macháček</a> on <a href="#1">Unsplash</a>
+        </p>
+    </figcaption>
+
+
+</figure>
