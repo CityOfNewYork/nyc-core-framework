@@ -186,7 +186,7 @@ title: "Backdrops"
     </p>
 </div>
 
-<figure class="container medium my-4">
+<figure class="container medium my-5">
 
     <div class="grid--gap cols--md t-center">
 
@@ -352,4 +352,44 @@ title: "Backdrops"
 
 <div class="container narrow my-4">
     <p>The HTML for the above example:</p>
+</div>
+
+<figure class="container medium my-4">
+
+    <div class="code-toolbar">
+        <pre>
+            <code class="language-html">
+                &lt;div class="backdrop--fixed bc-dark"&gt;
+
+                    &lt;img class="backdrop__image opacity-40" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+
+                    &lt;div class="backdrop__cover"&gt;
+
+                        &lt;div class="container wide my-4"&gt;
+
+                            &lt;h1 class="banner-headline text-shadow mb-4"&gt;
+                                Lorem ipsum dolor
+                            &lt;/h1&gt;
+
+                        &lt;/div&gt;
+                        &lt;!-- .container --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .backdrop__cover --&gt;
+
+                    &lt;div class="backdrop__image-credit"&gt;
+                        &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+                &lt;!-- .backdrop --&gt;
+            </code>
+        </pre>
+    </div>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>The <code>.backdrop--fixed</code> selector stretches to fit the content within <code>.backdrop__cover</code>.
+        Consider the following layout:</p>
 </div>
