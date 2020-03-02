@@ -10,7 +10,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-    color: white;
+    color: inherit;
     background: none;
     font-family: "Roboto Mono", monospace;
 	font-size: var(--font-size-md);
@@ -31,7 +31,7 @@ pre[class*="language-"] {
     border-radius: .5rem;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+/* pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
     text-shadow: none;
     background: #b3d4fc;
@@ -41,24 +41,22 @@ pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
     text-shadow: none;
     background: #b3d4fc;
-}
-
-@media print {
-    code[class*="language-"],
-    pre[class*="language-"] {
-        text-shadow: none;
-    }
-}
+} */
 
 /* Code blocks */
+
 pre[class*="language-"] {
-    padding: 1em;
-    margin: .5em 0;
+    padding-top: var(--s4);
+    padding-right: var(--s3);
+    padding-left: var(--s3);
+    padding-bottom: var(--s3);
+
     overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
+    color: white;
     background: var(--dark);
 }
 
@@ -109,7 +107,6 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
     color: #9a6e3a;
-    background: hsla(0, 0%, 100%, 0.5);
 }
 
 .token.atrule,
@@ -140,4 +137,48 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
+}
+
+
+
+div.code-toolbar {
+    position: relative;
+}
+
+div.code-toolbar > .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--s2) var(--s3);
+    display: flex;
+    justify-content: space-between;
+}
+
+div.code-toolbar > .toolbar .toolbar-item {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+}
+
+div.code-toolbar > .toolbar .toolbar-item span {
+    color: white;
+    font-weight: normal;
+}
+
+div.code-toolbar > .toolbar .toolbar-item a {
+    color: var(--secondary);
+    cursor: pointer;
+    text-decoration: underline solid currentColor;
+}
+
+pre.hide-toolbar {
+    padding-top: var(--s3);
+    padding-bottom: var(--s3);
+
+}
+
+pre.hide-toolbar + div.toolbar {
+    display: none;
 }
