@@ -1,9 +1,12 @@
 
 baseurl: /nyc-core-framework
-exclude: ['readme.md']
 permalink: pretty
 
+exclude: ['readme.md']
+  
 collections:
   documentation:
     output: true
     permalink: /documentation/:path/
+    order: 
+      - get-started.html
