@@ -237,12 +237,119 @@ title: "Backdrops"
     </div>
     <!-- grid -->
 
-
     <figcaption>
         <p>
             Photos by <a href="#1">Zdeněk Macháček</a> on <a href="#1">Unsplash</a>
         </p>
     </figcaption>
 
+</figure>
+
+<div class="container narrow my-4">
+    <p>The HTML for the above example:</p>
+</div>
+
+<figure class="container narrow my-4">
+
+    <div class="code-toolbar">
+
+        <pre class="language-html">
+            <code class="language-html">
+                &lt;div class="grid--gutters cols--md t-center"&gt;
+
+                    &lt;div class="grid__col"&gt;
+
+                        &lt;div class="backdrop bc-primary rounded"&gt;
+
+                            &lt;img class="backdrop__image opacity-30" src="https://via.placeholder.com/750x375" alt="Placeholder"&gt;
+
+                            &lt;div class="backdrop__cover"&gt;
+
+                                &lt;div class="container my-4"&gt;
+
+                                    &lt;a href="#1" class="h3"&gt;Title Link&lt;/a&gt;
+
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- cover --&gt;
+
+                        &lt;/div&gt;
+                        &lt;!-- .backdrop-feature --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- col --&gt;
+
+                    &lt;div class="grid__col"&gt;
+
+                        &lt;div class="backdrop bc-secondary rounded"&gt;
+
+                            &lt;img class="backdrop__image opacity-30" src="https://via.placeholder.com/750x375" alt="Placeholder"&gt;
+
+                            &lt;div class="backdrop__cover align-center"&gt;
+
+                                &lt;div class="container my-4"&gt;
+
+                                    &lt;a href="#1" class="h3"&gt;Title Link&lt;/a&gt;
+
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- cover --&gt;
+
+                        &lt;/div&gt;
+                        &lt;!-- .backdrop-feature --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- grid__col --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- grid --&gt;
+            </code>
+        </pre>
+        
+    </div>
 
 </figure>
+
+<hr class="my-5">
+
+<div class="container narrow my-4">
+    <h2>Fixed Height Backdrops</h2>
+    <p>
+        Another way to use backdrops is to append the <code>--fixed</code> modifier to <code>.backdrop</code> resulting
+        in <code>.backdrop--fixed</code>. Now the backdrop has a fixed height. The height value is set in <em>section
+            B</em>. of the <a href="#1">/scss/base/_backdrops.scss</a> partial.
+    </p>
+</div>
+
+<figure class="my-5">
+
+    <div class="backdrop--fixed bc-dark">
+
+        <img class="backdrop__image opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-04.jpg" alt="Placeholder">
+
+        <div class="backdrop__cover">
+
+            <div class="container wide my-4">
+
+                <h1 class="banner-headline text-shadow mb-4">
+                    Lorem ipsum dolor
+                </h1>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+
+        <div class="backdrop__image-credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
+    </div>
+    <!-- .backdrop -->
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>The HTML for the above example:</p>
+</div>
