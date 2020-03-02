@@ -107,44 +107,43 @@ title: "Get Started"
 
         <div class="code-toolbar">
             <pre class="hide-toolbar language-html">
-                <code class=" language-html"><span class="token comment">&lt;!-- Font Awesome --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./fontawesome/css/all.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <code class="language-html">
+                    &lt;!-- Font Awesome --&gt;
+                    &lt;link rel="stylesheet" href="./fontawesome/css/all.min.css"&gt;
 
-<span class="token comment">&lt;!-- Theme CSS --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./css/theme.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
-            <div class="toolbar">
-                <div class="toolbar-item"><span>HTML</span></div>
-                <div class="toolbar-item"><a>Copy</a></div>
-            </div>
+                    &lt;!-- Theme CSS --&gt;
+                    &lt;link rel="stylesheet" href="./css/theme.css"&gt;
+                </code>
+            </pre>
+
         </div>
 
     </figure>
 
     <div class="container narrow my-4">
-        <p>Near the closing <code>&lt;body&gt;</code> tag, we link to our theme's javascript file, with the path
-            <strong>/js/main.js</strong>.</p>
+        <p>
+            Near the closing <code>&lt;body&gt;</code> tag, we link to our theme's javascript file, with the path
+            <strong>/js/main.js</strong>.
+        </p>
     </div>
     <!-- .container -->
 
     <figure class="container narrow my-4">
 
         <div class="code-toolbar">
-            <pre
-                class="hide-toolbar language-html"><code class=" language-html"><span class="token comment">&lt;!-- Main JS --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/js/main.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
-            <div class="toolbar">
-                <div class="toolbar-item"><span>HTML</span></div>
-                <div class="toolbar-item"><a>Copy</a></div>
-            </div>
+            <pre class="hide-toolbar language-html">
+                <code class="language-html">
+                    &lt;!-- Main JS --&gt;
+                    &lt;script src="/js/main.js"&gt;&lt;/script&gt;
+                </code>
+            </pre>
         </div>
 
     </figure>
 
-
-
-
     <div class="container narrow my-4">
-        <p>And finally, also near the closing <code>&lt;body&gt;</code> tag, a polyfill for Internet Explorer 11 is
+        <p>
+            And finally, also near the closing <code>&lt;body&gt;</code> tag, a polyfill for Internet Explorer 11 is
             included. This dependency is required only if you wish to support this last version of Internet Explorer.
         </p>
     </div>
