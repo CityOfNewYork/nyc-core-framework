@@ -1,0 +1,32 @@
+{
+  "name": "nyc-core-framework-website",
+  "version": "1.0.0",
+  "description": "NYC Core Framework is an open-source front end toolkit for building modern, accessible websites and applications. Natura11y's simple codebase is easy to understand and reduces the need for package managers and third-party dependencies.",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CityOfNewYork/nyc-core-framework-website.git"
+  },
+  "keywords": [],
+  "author": "Carl Avidano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CityOfNewYork/nyc-core-framework-website/issues"
+  },
+  "homepage": "https://github.com/CityOfNewYork/nyc-core-framework-website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-shorthand-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "element-closest-polyfill": "^1.0.0"
+  }
+}
