@@ -1,9 +1,12 @@
-/* PrismJS 1.19.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+sass+scss&plugins=line-highlight+show-language+normalize-whitespace+toolbar+copy-to-clipboard */
-/**
+/* 
+ * 
+ * PrismJS 1.19.0
+ * https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+sass+scss&plugins=line-highlight+show-language+normalize-whitespace+toolbar+copy-to-clipboard
+ * 
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
  * @author Rose Pritchard
+ * 
  */
 
 code[class*="language-"],
@@ -11,7 +14,7 @@ pre[class*="language-"] {
 	color: #ccc;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+	font-size: var(--font-size-md);
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -31,6 +34,7 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
+
 pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
@@ -179,24 +183,13 @@ div.code-toolbar {
 
 div.code-toolbar > .toolbar {
 	position: absolute;
-	top: .3em;
-	right: .2em;
-	transition: opacity 0.3s ease-in-out;
-	opacity: 0;
-}
-
-div.code-toolbar:hover > .toolbar {
-	opacity: 1;
-}
-
-/* Separate line b/c rules are thrown out if selector is invalid.
-   IE11 and old Edge versions don't support :focus-within. */
-div.code-toolbar:focus-within > .toolbar {
-	opacity: 1;
-}
-
-div.code-toolbar > .toolbar .toolbar-item {
-	display: inline-block;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+	padding: var(--s2) var(--s3);
 }
 
 div.code-toolbar > .toolbar a {
@@ -211,6 +204,7 @@ div.code-toolbar > .toolbar button {
 	line-height: normal;
 	overflow: visible;
 	padding: 0;
+
 	-webkit-user-select: none; /* for button */
 	-moz-user-select: none;
 	-ms-user-select: none;
