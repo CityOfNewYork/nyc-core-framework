@@ -43,7 +43,8 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #2d2d2d;
+	background-color: var(--dark);
+	/* background: #2d2d2d; */
 }
 
 /* Inline code */
@@ -230,5 +231,9 @@ div.code-toolbar > .toolbar span:hover,
 div.code-toolbar > .toolbar span:focus {
 	color: inherit;
 	text-decoration: none;
+}
+
+pre.hide-toolbar + div.toolbar {
+	display: none;
 }
 
