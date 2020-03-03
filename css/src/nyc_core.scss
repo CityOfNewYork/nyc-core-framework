@@ -76,3 +76,5 @@ a[data-logo="brand"] {
 .overflow-hidden {
     overflow: hidden;
 }
+
+@include a11y-resize-text();
