@@ -26,7 +26,7 @@ In this file:
 
     // Feedback Colors
 
-    --confirm: hsla(166, 69%, 47%, .125);
+    --confirm: #B5EBCC;
     --warn: #dc3545;
 
     // Accessible Link Color
@@ -77,9 +77,9 @@ $theme-colors: (
     ),
 
     "confirm": (
-        swatch: var(--confirm),
-        text: var(--secondary),
-        border: var(--secondary)
+        swatch: #e5fff3,
+        text: #007f49,
+        border: #007f49
     )
 
 );
