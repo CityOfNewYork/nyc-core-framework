@@ -31,25 +31,13 @@ pre[class*="language-"] {
     border-radius: .5rem;
 }
 
-/* pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #b3d4fc;
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #b3d4fc;
-} */
-
 /* Code blocks */
 
 pre[class*="language-"] {
     padding-top: var(--s4);
     padding-right: var(--s3);
     padding-left: var(--s3);
-    padding-bottom: var(--s3);
+    padding-bottom: var(--s4);
 
     overflow: auto;
 }
