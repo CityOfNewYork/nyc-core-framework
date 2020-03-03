@@ -30,7 +30,6 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
-
 }
 
 /* Code blocks */
@@ -47,12 +46,40 @@ pre[class*="language-"] {
 	/* background: #2d2d2d; */
 }
 
+pre[class*="language-"]:not([class*="hide-toolbar"]){
+	padding-top: var(--s5);
+}
+
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+
+/* :not(pre) > code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
+	background-color: red;
+} */
+
+p > code {
+    position: relative;
+    padding: 0.1em 0.25em;
+    white-space: normal;
+    color: inherit;
+    font-size: 0.875em;
 }
+
+
+p > code::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: currentColor;
+    opacity: .095;
+    border-radius: .25em;
+}
+
 
 .token.comment,
 .token.block-comment,
@@ -136,12 +163,14 @@ pre[data-line] {
 .line-highlight {
 	position: absolute;
 	left: 0;
-	right: 0;
+	width: 100%;
 	padding: inherit 0;
-	margin-top: 1em; /* Same as .prism’s padding-top */
 
-	background: hsla(24, 20%, 50%,.08);
-	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	/* margin-top: 1em; */
+	margin-top: var(--s5); /* Same as .prism’s padding-top */
+
+	/* background-color: ; */
+	background: linear-gradient(to right, hsla(0, 0%, 100%, .175), hsla(0, 0%, 100%, 0));
 
 	pointer-events: none;
 
@@ -153,18 +182,12 @@ pre[data-line] {
 	.line-highlight[data-end]:after {
 		content: attr(data-start);
 		position: absolute;
-		top: .4em;
-		left: .6em;
-		min-width: 1em;
-		padding: 0 .5em;
-		background-color: hsla(24, 20%, 50%,.4);
-		color: hsl(24, 20%, 95%);
-		font: bold 65%/1.5 sans-serif;
-		text-align: center;
-		vertical-align: .3em;
-		border-radius: 999px;
-		text-shadow: none;
-		box-shadow: 0 1px white;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 1em;
+		color: var(--secondary);
+		font-size: var(--font-size-sm);
+		font-weight: bold;
 	}
 
 	.line-highlight[data-end]:after {
@@ -183,17 +206,20 @@ div.code-toolbar {
 }
 
 div.code-toolbar > .toolbar {
+	display: flex;
+	justify-content: space-between;
+	padding: var(--s2) var(--s3);
+
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: red;
-	display: flex;
-	justify-content: space-between;
-	padding: var(--s2) var(--s3);
+	
+	border-bottom: 1px solid hsla(0, 0%, 100%, .125) !important;
 }
 
-div.code-toolbar > .toolbar a {
+div.code-toolbar > .toolbar a, 
+div.code-toolbar > .toolbar button {
 	cursor: pointer;
 }
 
@@ -209,9 +235,21 @@ div.code-toolbar > .toolbar button {
 	-webkit-user-select: none; /* for button */
 	-moz-user-select: none;
 	-ms-user-select: none;
+
+	font-weight: bold;
+	color: var(--secondary);
 }
 
-div.code-toolbar > .toolbar a,
+
+.toolbar-item {
+	font-size: var(--font-size-md);
+}
+
+.toolbar-item:nth-child(1){
+	color: white;
+}
+
+/* div.code-toolbar > .toolbar a,
 div.code-toolbar > .toolbar button,
 div.code-toolbar > .toolbar span {
 	color: #bbb;
@@ -231,7 +269,7 @@ div.code-toolbar > .toolbar span:hover,
 div.code-toolbar > .toolbar span:focus {
 	color: inherit;
 	text-decoration: none;
-}
+} */
 
 pre.hide-toolbar + div.toolbar {
 	display: none;

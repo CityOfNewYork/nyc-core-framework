@@ -4,15 +4,19 @@ title: "Backdrops"
 ---
 
 <div class="container narrow my-4">
+
     <h2 class="h1">A panorama of possibilities.</h2>
+    
     <p>
         Backdrop components place a translucent image behind any custom content. Backdrops offer two distinct
         variations: an image-proportional backdrop that scales and stacks responsively, and a fixed-height backdrop that
         can adjust to the height of its inner content.
     </p>
+    
 </div>
 
 <div class="container narrow my-4">
+
     <div class="alert bc-confirm my-3">
 
         <p class="header">
@@ -34,18 +38,23 @@ title: "Backdrops"
 <hr class="my-5" id="image-proportional">
 
 <div class="container narrow my-4">
+
     <h2>Image-proportional</h2>
+    
     <p>
         The default <code>.backdrop</code> selector requires two immediate children. The first is an image with a class
         of <code>.backdrop__image</code>. This image sets the size (proportional width and height) of our backdrop. The
         second direct child is a block-level element with a class of <code>.backdrop__cover</code>, inside of which
         custom content can be placed.
     </p>
+    
     <p>
         Examples on this page include the <code>.backdrop__image-credit</code> selector which is not required and can be
         customized in <a href="#1"><strong>/scss/base/_backdrops.scss</strong></a>.
     </p>
+    
     <p>Here is a practical example of an image-proportional backdrop:</p>
+
 </div>
 
 <figure class="my-5">
@@ -101,57 +110,53 @@ title: "Backdrops"
 
 <figure class="container medium my-4">
 
-    <div class="code-toolbar">
+    <pre data-line="1">
+        <code class="language-html">
+            &lt;div class="backdrop--md bc-dark"&gt;
 
-        <pre class="language-html">
-            <code class=" language-html">
-                &lt;div class="backdrop--md bc-dark"&gt;
+                &lt;img class="backdrop__image opacity-40--md" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
 
-                    &lt;img class="backdrop__image opacity-40--md" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+                &lt;div class="backdrop__cover"&gt;
 
-                    &lt;div class="backdrop__cover"&gt;
+                    &lt;div class="container medium my-4"&gt;
 
-                        &lt;div class="container medium my-4"&gt;
+                        &lt;h1 class="banner-headline t-center text-shadow mb-4"&gt;
+                            Lorem ipsum dolor sit amet consectetur
+                        &lt;/h1&gt;
 
-                            &lt;h1 class="banner-headline t-center text-shadow mb-4"&gt;
-                                Lorem ipsum dolor sit amet consectetur
-                            &lt;/h1&gt;
+                        &lt;div class="narrow"&gt;
 
-                            &lt;div class="narrow"&gt;
+                            &lt;div class="grid--gutters cols--sm justify-center"&gt;
 
-                                &lt;div class="grid--gutters cols--sm justify-center"&gt;
-
-                                    &lt;div class="grid__col"&gt;
-                                        &lt;a class="btn bc-primary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
-                                    &lt;/div&gt;
-                                    &lt;!-- .grid__col --&gt;
-
-                                    &lt;div class="grid__col"&gt;
-                                        &lt;a class="btn bc-secondary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
-                                    &lt;/div&gt;
-                                    &lt;!-- .grid__col --&gt;
-
+                                &lt;div class="grid__col"&gt;
+                                    &lt;a class="btn bc-primary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
                                 &lt;/div&gt;
-                                &lt;!-- .grid --&gt;
+                                &lt;!-- .grid__col --&gt;
+
+                                &lt;div class="grid__col"&gt;
+                                    &lt;a class="btn bc-secondary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;!-- .grid__col --&gt;
 
                             &lt;/div&gt;
+                            &lt;!-- .grid --&gt;
 
                         &lt;/div&gt;
-                        &lt;!-- .container --&gt;
 
                     &lt;/div&gt;
-                    &lt;!-- .backdrop__cover --&gt;
+                    &lt;!-- .container --&gt;
 
-                    &lt;div class="backdrop__image-credit"&gt;
-                        &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
-                    &lt;/div&gt;
-                    
                 &lt;/div&gt;
-                &lt;!-- .backdrop --&gt;
-            </code>
-        </pre>
+                &lt;!-- .backdrop__cover --&gt;
 
-    </div>
+                &lt;div class="backdrop__image-credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
 
 </figure>
 
