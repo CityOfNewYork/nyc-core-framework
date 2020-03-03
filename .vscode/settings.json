@@ -1,3 +1,11 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "liveSassCompile.settings.includeItems": [
+        "css/src/nyc_core.scss"        
+    ],
+    "liveSassCompile.settings.formats": [{
+        "format": "compressed",
+        "extensionName": ".css",
+        "savePath": "css/dist"
+    }]
 }

@@ -34,7 +34,7 @@ In this file:
     }
 
     [aria-current] {
-        font-weight: $font-weight-bold;
+        font-weight: var(--base-font-weight-bold);
         text-decoration: underline;
     }
 }
