@@ -318,8 +318,14 @@ small {
     
     background: linear-gradient(
         to top, 
-        rgba(white, 0.8) 0%, 
-        rgba(white, 0.8) 100%), var(--color1);
+        rgba(white, 0.9) 0%, 
+        rgba(white, 0.9) 100%), var(--color1
+    );
+    
+    border-left-style: var(--default-border-style);
+    border-left-color: var(--color1);
+    border-left-width: calc(var(--default-border-width) * 2);
+    border-color: var(--color1);
 
 }
 
@@ -328,9 +334,7 @@ small {
     @extend .rounded-r;
 
     padding: var(--s3) var(--s3) var(--s3);
-    border-left-style: var(--default-border-style);
-    border-left-color: var(--primary);
-    border-left-width: calc(var(--default-border-width) * 2);
+    
 
     p {
         margin-bottom: var(--s2);
