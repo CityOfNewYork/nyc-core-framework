@@ -314,18 +314,20 @@ small {
 
 .alert {
 
-    color: var(--color1);
+    color: var(--warn);
     
-    background: linear-gradient(
-        to top, 
-        rgba(white, 0.9) 0%, 
-        rgba(white, 0.9) 100%), var(--color1
-    );
+    background: 
+        linear-gradient(
+            to top, 
+            rgba(white, 0.9) 0%, 
+            rgba(white, 0.9) 100%), var(--warn
+        );
     
     border-left-style: var(--default-border-style);
-    border-left-color: var(--color1);
+    border-left-color: var(--warn);
     border-left-width: calc(var(--default-border-width) * 2);
-    border-color: var(--color1);
+    border-color: var(--warn);
+    border-right-color: transparent;
 
 }
 
