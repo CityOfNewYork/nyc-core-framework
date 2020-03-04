@@ -304,6 +304,26 @@ small {
     opacity: 0.75;
 }
 
+
+
+
+
+:root {
+    --color1: red;
+}
+
+.alert {
+
+    color: var(--color1);
+    
+    background: linear-gradient(
+        to top, 
+        rgba(white, 0.8) 0%, 
+        rgba(white, 0.8) 100%), var(--color1);
+
+}
+
+
 .alert {
     @extend .rounded-r;
 
