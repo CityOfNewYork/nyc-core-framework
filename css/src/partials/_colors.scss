@@ -24,18 +24,15 @@ In this file:
     --text-on-primary: var(--dark);
     --text-on-secondary: white;
 
-    // Feedback Colors
+    // Form Feedback and Alert Colors
 
     --confirm: #0caa63;
+    --attention: purple;
     --warn: #dc3545;
 
     // Accessible Link Color
 
     --a11y-link-color: blue;
-
-    // Accessible Form Input Border Color
-
-    --a11y-input-border-color: #777677;
 }
 
 //////////////////////////////////////////////
@@ -139,11 +136,9 @@ $theme-colors: (
 //////////////////////////////////////////////
 
 @each $name, $color-map in $theme-colors {
-    @if $name != "confirm" and $name != "warn" {
-        .tc-#{$name} {
-            content: $name;
-            color: map-get($color-map, "swatch");
-        }
+    .tc-#{$name} {
+        content: $name;
+        color: map-get($color-map, "swatch");
     }
 }
 
