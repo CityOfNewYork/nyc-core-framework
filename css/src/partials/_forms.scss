@@ -300,7 +300,11 @@ input:checked ~ [class*="__label"]::after {
     overflow: hidden;
 
     padding: var(--s3);
+
+    &:not([class*='bc-']){
+
     background-color: white;
+    }
 
     p:not(:last-child) {
         margin-bottom: var(--s2);
