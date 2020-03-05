@@ -30,14 +30,16 @@ In this file:
 
     // Form Feedback and Alert Colors
 
-    --confirm: #0caa63;
-    --attention: purple;
+    --confirm: #008230;
+    --attention: var(--secondary);
     --warn: #dc3545;
 }
 
 //////////////////////////////////////////////
-// B. Theme Color Map
+// B. Color Maps
 //////////////////////////////////////////////
+
+// Theme Colors
 
 $theme-colors: (
 
@@ -74,10 +76,12 @@ $theme-colors: (
     )
 );
 
+// Feedback Colors
+
 $feedback-colors: (
     confirm: var(--confirm),
-    warn: var(--warn),
     attention: var(--attention),
+    warn: var(--warn)
 );
 
 //////////////////////////////////////////////
@@ -141,12 +145,6 @@ $feedback-colors: (
 // C. Text Color Classes 
 //////////////////////////////////////////////
 
-[class*="tc-"] {
-    a {
-        color: currentColor !important;
-    }
-}
-
 @each $name, $color-map in $theme-colors {
     .tc-#{$name} {
         content: $name;
@@ -162,4 +160,10 @@ $feedback-colors: (
 
 .tc-link {
     color: var(--a11y-link-color);
+}
+
+[class*="tc-"] {
+    a {
+        color: currentColor !important;
+    }
 }
