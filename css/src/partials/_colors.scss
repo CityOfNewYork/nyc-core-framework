@@ -81,7 +81,8 @@ $theme-colors: (
 $feedback-colors: (
     confirm: var(--confirm),
     attention: var(--attention),
-    warn: var(--warn)
+    warn: var(--warn),
+    carl: yellow
 );
 
 //////////////////////////////////////////////
@@ -147,14 +148,7 @@ $feedback-colors: (
 
 @each $name, $color-map in $theme-colors {
     .tc-#{$name} {
-        content: $name;
         color: map-get($color-map, "swatch");
-    }
-}
-
-@each $name, $value in $feedback-colors {
-    .tc-#{$name} {
-        color: $value;
     }
 }
 

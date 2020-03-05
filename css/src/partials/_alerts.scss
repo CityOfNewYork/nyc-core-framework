@@ -1,0 +1,63 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Accordion Settings
+
+*/
+
+//////////////////////////////////////////////
+// A. Alert Classes
+//////////////////////////////////////////////
+
+.alert,
+[class*="alert--"] {
+    position: relative;
+    overflow: hidden;
+
+    padding: var(--s3);
+    background-color: white;
+
+    p:not(:last-child) {
+        margin-bottom: var(--s2);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: currentColor;
+        opacity: 0.075;
+    }
+
+    &[class*="border-"] {
+        border-color: currentColor !important;
+    }
+
+    a{
+        color: inherit !important;
+    }
+}
+
+.alert__title > .text {
+    font-weight: var(--base-font-weight-bold);
+    margin-left: var(--s1);
+    margin-right: var(--s1);
+}
+
+@each $name, $value in $feedback-colors {
+
+    .alert--#{$name} {
+        color: $value;
+    }
+
+    .alert--#{$name}-impact {
+        color: white;
+        background-color: $value;
+    }
+}
