@@ -321,7 +321,6 @@ input:checked ~ [class*="__label"]::after {
     &[class*="border-"]{
         border-color: currentColor !important;
     }
-
 }
 
 .alert__title > .text {
