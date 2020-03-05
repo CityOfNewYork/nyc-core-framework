@@ -297,14 +297,6 @@ input:checked ~ [class*="__label"]::after {
     display: none;
 }
 
-small {
-    display: block;
-    margin-top: var(--s2);
-    font-size: var(font-size-sm);
-    opacity: 0.75;
-}
-
-
 
 
 
@@ -312,7 +304,7 @@ small {
     --color1: red;
 }
 
-.alert {
+[class*="alert"] {
 
     color: var(--warn);
     
@@ -323,11 +315,11 @@ small {
             rgba(white, 0.9) 100%), var(--warn
         );
     
-    border-left-style: var(--default-border-style);
-    border-left-color: var(--warn);
-    border-left-width: calc(var(--default-border-width) * 2);
-    border-color: var(--warn);
-    border-right-color: transparent;
+    // border-left-style: var(--default-border-style);
+    // border-left-color: var(--warn);
+    // border-left-width: calc(var(--default-border-width) * 2);
+    // border-color: var(--warn);
+    // border-right-color: transparent;
 
 }
 

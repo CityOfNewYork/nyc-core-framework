@@ -1,0 +1,16 @@
+current directory: /Users/carlavidano/Dropbox/_Avidano_Digital/_Websites/nyc-core-framework/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/Users/carlavidano/.rbenv/versions/2.6.3/bin/ruby -I /Users/carlavidano/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20200301-16021-3oyej7.rb extconf.rb
+creating Makefile
+
+current directory: /Users/carlavidano/Dropbox/_Avidano_Digital/_Websites/nyc-core-framework/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /Users/carlavidano/Dropbox/_Avidano_Digital/_Websites/nyc-core-framework/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/carlavidano/Dropbox/_Avidano_Digital/_Websites/nyc-core-framework/vendor/bundle/ruby/2.6.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20200301-16021-1rtvgpy
