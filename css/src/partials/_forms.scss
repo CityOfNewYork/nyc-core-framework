@@ -6,7 +6,7 @@ In this file:
 // B. Common Form Elements
 // C. Checkboxes and Radios
 // D. Switches
-// E. Validation and Feedback
+// E. Form Feedback and Alerts
 
 */
 
@@ -279,8 +279,6 @@ input:checked ~ [class*="__label"]::before {
 
 /* For Windows high contrast mode. */
 
-
-
 input:not(:checked) ~ [class*="__label"]::after {
     opacity: 0;
 }
@@ -290,35 +288,44 @@ input:checked ~ [class*="__label"]::after {
 }
 
 //////////////////////////////////////////////
-// E. Validation and Feedback
+// E. Form Feedback and Alerts
 //////////////////////////////////////////////
 
 .invalid-feedback {
     display: none;
 }
 
-small {
-    display: block;
-    margin-top: var(--s2);
-    font-size: var(font-size-sm);
-    opacity: 0.75;
-}
-
 .alert {
-    @extend .rounded-r;
+    position: relative;
+    overflow: hidden;
 
-    padding: var(--s3) var(--s3) var(--s3);
-    border-left-style: var(--default-border-style);
-    // border-left-color: var(--primary);
-    border-left-width: calc(var(--default-border-width) * 2);
+    padding: var(--s3);
+    background-color: white;
 
-    p {
+    p:not(:last-child) {
         margin-bottom: var(--s2);
     }
 
-    .header > .text {
-        @extend .fw-bold;
-        margin-left: var(--spacer-1);
-        margin-right: var(--spacer-1);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: currentColor;
+        opacity: 0.075;
     }
+
+    &[class*="border-"]{
+        border-color: currentColor !important;
+    }
+
+}
+
+.alert__title > .text {
+    font-weight: var(--base-font-weight-bold);
+    margin-left: var(--s1);
+    margin-right: var(--s1);
 }

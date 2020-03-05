@@ -26,6 +26,8 @@ In this file:
     --text-on-primary: white;
     --text-on-secondary: var(--dark);
 
+    --attention: var(--primary);
+
     --backdrop-fixed-height: 300px;
     --base-font-size: 21px;
 }
@@ -65,4 +67,9 @@ In this file:
             }
         }
     }
+}
+
+.alert {
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
 }
