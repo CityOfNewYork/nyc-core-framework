@@ -24,19 +24,19 @@ In this file:
     --text-on-primary: var(--dark);
     --text-on-secondary: white;
 
+    // Accessible Link Color
+
+    --a11y-link-color: blue;
+
     // Form Feedback and Alert Colors
 
     --confirm: #0caa63;
     --attention: purple;
     --warn: #dc3545;
-
-    // Accessible Link Color
-
-    --a11y-link-color: blue;
 }
 
 //////////////////////////////////////////////
-// B. Color Map
+// B. Theme Color Map
 //////////////////////////////////////////////
 
 $theme-colors: (
@@ -72,6 +72,12 @@ $theme-colors: (
         border: rgba(gray, 0.25),
         link: var(--a11y-link-color)
     )
+);
+
+$feedback-colors: (
+    confirm: var(--confirm),
+    warn: var(--warn),
+    attention: var(--attention),
 );
 
 //////////////////////////////////////////////
@@ -135,6 +141,12 @@ $theme-colors: (
 // C. Text Color Classes 
 //////////////////////////////////////////////
 
+[class*="tc-"] {
+    a {
+        color: currentColor !important;
+    }
+}
+
 @each $name, $color-map in $theme-colors {
     .tc-#{$name} {
         content: $name;
@@ -142,6 +154,12 @@ $theme-colors: (
     }
 }
 
-.tc-link{
+@each $name, $value in $feedback-colors {
+    .tc-#{$name} {
+        color: $value;
+    }
+}
+
+.tc-link {
     color: var(--a11y-link-color);
 }
