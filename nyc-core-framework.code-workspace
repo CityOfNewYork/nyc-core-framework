@@ -5,7 +5,8 @@
   		"liveServer.settings.port": 5502, 
 
   		"liveSassCompile.settings.includeItems": [
-  			"css/src/nyc_core.scss" // Where the main SASS file is located
+			// Main SASS file is location
+  			"css/src/nyc_core.scss"
   		],
 
   		"liveSassCompile.settings.formats": [

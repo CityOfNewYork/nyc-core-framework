@@ -1,0 +1,61 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Alert Classes
+
+*/
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////
+// B. Alert Classes
+//////////////////////////////////////////////
+
+.alert,
+[class*="alert--"] {
+    position: relative;
+    overflow: hidden;
+
+    padding: var(--s3);
+
+    p:not(:last-child) {
+        margin-bottom: var(--s2);
+    }
+
+    &[class*="border-"] {
+        border-color: currentColor !important;
+    }
+
+    &:not([class*="-assert"]){
+        background-color: white;
+    }
+
+    a{
+        color: inherit !important;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: currentColor;
+        opacity: var(--alert-bg-opacity);
+    }
+
+}
+
+.alert__title > .text {
+    font-weight: var(--base-font-weight-bold);
+    margin-left: var(--s1);
+    margin-right: var(--s1);
+}
