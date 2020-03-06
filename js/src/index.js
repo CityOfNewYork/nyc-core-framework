@@ -23,8 +23,6 @@ window.onload = () => {
 
             let expanded = dropdownButton.getAttribute("aria-expanded");
 
-            console.log(dropdownButton.getAttribute("aria-expanded"));
-
             if (expanded == "true") {
                 dropdownButton.setAttribute("aria-expanded", false);
                 return;
@@ -107,8 +105,6 @@ window.onload = () => {
             const collapseTargetID = event.target.getAttribute('data-target').replace(/#/, '');
 
             const collapseTarget = document.getElementById(collapseTargetID);
-
-            console.log(collapseTarget);
 
             collapseTarget.classList.toggle('shown');
         })

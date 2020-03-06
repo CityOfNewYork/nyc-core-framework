@@ -2,8 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        nyc_core: './js/src/index.js',
-        home: './js/src/home.js',
+        nyc_core: './js/src/index.js'
     },
     output: {
         filename: '[name].js',
