@@ -70,3 +70,24 @@ In this file:
         }
     }
 }
+
+a[data-link="external"]{
+    &::after {
+         display: inline-block;
+         font-style: normal;
+         font-variant: normal;
+         text-rendering: auto;
+         -webkit-font-smoothing: antialiased;
+
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+
+
+        content: "\f35d";
+
+        margin-left: var(--s1);
+        margin-right: var(--s1);
+
+        color: inherit;
+    }
+}

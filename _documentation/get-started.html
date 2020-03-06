@@ -13,9 +13,18 @@ title: "Get Started"
         browser-based applications. Our lightweight codebase is easy to understand—and at the same time—provides a
         wealth of accessible components ideal for projects of any size and complexity.
     </p>
-    <p>
-        <a href="#1">Download or Clone on GitHub</a>
-    </p>
+
+    <ul class="nav tc-link">
+        <li>
+            <a href="#quickStart">CDN Quick Start</a>
+        </li>
+        <li>
+            <a href="#1">NPM Install</a>
+        </li>
+        <li>
+            <a href="#1" data-link="external">Clone or Dowload from GitHub</a>
+        </li>
+    </ul>
 
 </div>
 <!-- .container -->
@@ -24,50 +33,57 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <h2>The Files at a Glance</h2>
-    <p>The whole NYC Core Framework is made up of the following files and folders:</p>
+    <p>
+        The essence of the NYC Core Framework is made up of the following files and folders:
+    </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow my-4">
     
-    <pre class="hide-toolbar" data-line="1">
+    <pre class="hide-toolbar" data-line="4, 40">
         <code class="language-plaintext">
             nyc-core-framework/
             ├── css/
-            │   └── theme.css
+            │   ├── dist/
+            |   │   └── nyc_core.css
+            │   ├── lib/
+            │   └── src/
+            |       ├── nyc_core.scss
+            |       └── partials/
+            |           ├── _accessibility.scss
+            |           ├── _accordions.scss
+            |           ├── _aspect-ratios.scss
+            |           ├── _backdrops.scss
+            |           ├── _borders.scss
+            |           ├── _breakpoints.scss
+            |           ├── _buttons.scss
+            |           ├── _cards.scss
+            |           ├── _collapse.scss
+            |           ├── _colors.scss
+            |           ├── _dev-tools.scss
+            |           ├── _display.scss
+            |           ├── _flex.scss
+            |           ├── _forms.scss
+            |           ├── _gradients.scss
+            |           ├── _grid.scss
+            |           ├── _links.scss
+            |           ├── _mixins.scss
+            |           ├── _modals.scss
+            |           ├── _navigation.scss
+            |           ├── _opacities.scss
+            |           ├── _shadows.scss
+            |           ├── _sizing.scss
+            |           ├── _spacing.scss
+            |           ├── _tables.scss
+            |           ├── _typography.scss
+            |           ├── _z-index.scss
+            |           └── _rtl.scss
             ├── images/
             ├── js/
-            │   └── main.js
-            ├── scss/
-            │   ├── _accessibility.scss
-            │   ├── _accordions.scss
-            │   ├── _aspect-ratios.scss
-            │   ├── _borders.scss
-            │   ├── _breakpoints.scss
-            │   ├── _buttons.scss
-            │   ├── _collapse.scss
-            │   ├── _containers.scss
-            │   ├── _dev-tools.scss
-            │   ├── _display.scss
-            │   ├── _flex.scss
-            │   ├── _forms.scss
-            │   ├── _globals.scss
-            │   ├── _gradients.scss
-            │   ├── _grid.scss
-            │   ├── _ie-support.scss
-            │   ├── _links.scss
-            │   ├── _modals.scss
-            │   ├── _navigation.scss
-            │   ├── _opacities.scss
-            │   ├── _position.scss
-            │   ├── _reset.scss
-            │   ├── _gradients.scss
-            │   ├── _shadows.scss
-            │   ├── _sizing.scss
-            │   ├── _spacing.scss
-            │   ├── _spacing.scss
-            │   ├── _tables.scss
-            │   └── _z-index.scss
+            │   ├── dist/
+            |   │   └── nyc_core.js
+            │   └── lib/
             └── index.html
         </code>
     </pre>
@@ -76,8 +92,24 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        The framework itself predominantly made up of <a href="/documentation/get-started#customizingWithSASS">SASS
-            partials</a>. Before we cover customization, let's look at the CSS and Javascript dependencies.
+        In the above figure, take notice the two highlighted files: <strong>/css/dist/nyc_core.css</strong> (line
+        4), <strong>/js/dist/nyc_core.js</strong> (line 40).
+    </p>
+    <p>
+        These core CSS and Javascript files are the <strong>only two dependencies</strong> required to begin using
+        the NYC Core Framework! If you are new to the Framework (or to programming in general) we recommend accessing
+        these files from our CDN. For CDN instructions, follow our <em>Quick Start Guide below</em>.
+    </p>
+    
+</div>
+<!-- .container -->
+
+<hr class="my-5" id="quickStart">
+
+<div class="container narrow my-4">
+    <h2>Quick Start</h2>
+    <p>
+         Get up and running in a New York minute. Basic knowledge of HTML and CSS is all you'll need.
     </p>
 </div>
 <!-- .container -->
