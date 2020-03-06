@@ -3,12 +3,20 @@
 In this file:
 
 // A. Variables
-// B. Accordion Settings
+// B. Alert Classes
 
 */
 
 //////////////////////////////////////////////
-// A. Alert Classes
+// B. Variables
+//////////////////////////////////////////////
+
+:root{
+    --alert-light-bg-opacity: .075;
+}
+
+//////////////////////////////////////////////
+// B. Alert Styles
 //////////////////////////////////////////////
 
 .alert,
@@ -17,7 +25,10 @@ In this file:
     overflow: hidden;
 
     padding: var(--s3);
-    background-color: white;
+
+    a{
+        color: inherit !important;
+    }
 
     p:not(:last-child) {
         margin-bottom: var(--s2);
@@ -32,15 +43,19 @@ In this file:
         left: 0;
 
         background-color: currentColor;
-        opacity: 0.075;
+        opacity: var(--alert-light-bg-opacity);
     }
 
     &[class*="border-"] {
         border-color: currentColor !important;
     }
 
-    a{
-        color: inherit !important;
+    &:not([class*="-dark"]){
+        background-color: white;
+    }
+    
+    &[class*="-dark"] > ::before {
+        display: none;
     }
 }
 
@@ -48,16 +63,4 @@ In this file:
     font-weight: var(--base-font-weight-bold);
     margin-left: var(--s1);
     margin-right: var(--s1);
-}
-
-@each $name, $value in $feedback-colors {
-
-    .alert--#{$name} {
-        color: $value;
-    }
-
-    .alert--#{$name}-impact {
-        color: white;
-        background-color: $value;
-    }
 }

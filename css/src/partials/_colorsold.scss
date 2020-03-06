@@ -12,7 +12,7 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-:root {
+:root{
 
     // Theme Color Palette
 
@@ -33,13 +33,15 @@ In this file:
     // Form Feedback and Alert Colors
 
     --confirm: #008230;
-    --attention: #3953B1;
+    --attention: var(--secondary);
     --warn: #dc3545;
 }
 
 //////////////////////////////////////////////
-// B. Theme Color Map
+// B. Color Maps
 //////////////////////////////////////////////
+
+// Theme Colors
 
 $theme-colors: (
 
@@ -76,9 +78,7 @@ $theme-colors: (
     )
 );
 
-//////////////////////////////////////////////
-// C. Feedback Color Map
-//////////////////////////////////////////////
+// Feedback Colors
 
 $feedback-colors: (
     confirm: var(--confirm),
@@ -87,7 +87,7 @@ $feedback-colors: (
 );
 
 //////////////////////////////////////////////
-// D. Background Color Classes 
+// C. Background Color Classes 
 //////////////////////////////////////////////
 
 [class*="bc-"] {
@@ -144,12 +144,19 @@ $feedback-colors: (
 }
 
 //////////////////////////////////////////////
-// E. Text Color Classes 
+// C. Text Color Classes 
 //////////////////////////////////////////////
 
 @each $name, $color-map in $theme-colors {
     .tc-#{$name} {
+        content: $name;
         color: map-get($color-map, "swatch");
+    }
+}
+
+@each $name, $value in $feedback-colors {
+    .tc-#{$name} {
+        color: $value;
     }
 }
 
@@ -160,21 +167,5 @@ $feedback-colors: (
 [class*="tc-"] {
     a {
         color: currentColor !important;
-    }
-}
-
-//////////////////////////////////////////////
-// F. Alert Color Classes 
-//////////////////////////////////////////////
-
-@each $name, $value in $feedback-colors {
-
-    .alert--#{$name}-light {
-        color: $value;
-    }
-
-    .alert--#{$name}-dark {
-        color: white;
-        background-color: $value;
     }
 }
