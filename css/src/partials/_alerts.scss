@@ -35,6 +35,7 @@ In this file:
     }
 
     &::before {
+        pointer-events: none;
         content: '';
         position: absolute;
         top: 0;
@@ -44,6 +45,7 @@ In this file:
 
         background-color: currentColor;
         opacity: var(--alert-light-bg-opacity);
+
     }
 
     &[class*="border-"] {
