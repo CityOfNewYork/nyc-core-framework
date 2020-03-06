@@ -1,6 +1,6 @@
 {
   "name": "nyc-core-framework-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "NYC Core Framework is an open-source front end toolkit for building modern, accessible websites and applications. Natura11y's simple codebase is easy to understand and reduces the need for package managers and third-party dependencies.",
   "private": true,
   "scripts": {
