@@ -169,11 +169,11 @@ $feedback-colors: (
 
 @each $name, $value in $feedback-colors {
 
-    .alert--#{$name} {
+    .alert--#{$name}-light {
         color: $value;
     }
 
-    .alert--#{$name}-assert {
+    .alert--#{$name}-dark {
         color: white;
         background-color: $value;
     }

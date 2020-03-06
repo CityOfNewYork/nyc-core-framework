@@ -11,10 +11,12 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-
+:root{
+    --alert-light-bg-opacity: .075;
+}
 
 //////////////////////////////////////////////
-// B. Alert Classes
+// B. Alert Styles
 //////////////////////////////////////////////
 
 .alert,
@@ -24,20 +26,12 @@ In this file:
 
     padding: var(--s3);
 
-    p:not(:last-child) {
-        margin-bottom: var(--s2);
-    }
-
-    &[class*="border-"] {
-        border-color: currentColor !important;
-    }
-
-    &:not([class*="-assert"]){
-        background-color: white;
-    }
-
     a{
         color: inherit !important;
+    }
+
+    p:not(:last-child) {
+        margin-bottom: var(--s2);
     }
 
     &::before {
@@ -49,9 +43,20 @@ In this file:
         left: 0;
 
         background-color: currentColor;
-        opacity: var(--alert-bg-opacity);
+        opacity: var(--alert-light-bg-opacity);
     }
 
+    &[class*="border-"] {
+        border-color: currentColor !important;
+    }
+
+    &:not([class*="-dark"]){
+        background-color: white;
+    }
+    
+    &[class*="-dark"] > ::before {
+        display: none;
+    }
 }
 
 .alert__title > .text {
