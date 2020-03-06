@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "element-closest-polyfill": "^1.0.0"
+    "element-closest-polyfill": "^1.0.0",
+    "npm-install-missing": "^0.1.4"
   }
 }
