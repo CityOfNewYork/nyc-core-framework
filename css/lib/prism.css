@@ -53,11 +53,13 @@ pre[class*="language-"]:not([class*="hide-toolbar"]){
 /* Inline code */
 
 p > code {
-    position: relative;
+	position: relative;
+	display: inline-block;
     padding: 0.1em 0.25em;
     white-space: normal;
     color: inherit;
-    font-size: 0.875em;
+	font-size: 0.875em;
+	color: var(--attention);
 }
 
 p > code::before {

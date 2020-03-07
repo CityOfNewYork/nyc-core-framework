@@ -34,7 +34,7 @@ title: "Get Started"
 <div class="container narrow my-4">
     <h2>The Files at a Glance</h2>
     <p>
-        The essence of the NYC Core Framework is made up of the following files and folders:
+        The NYC Core Framework includes the following files and folders:
     </p>
 </div>
 <!-- .container -->
@@ -83,7 +83,9 @@ title: "Get Started"
             ├── js/
             │   ├── dist/
             |   │   └── nyc_core.js
-            │   └── lib/
+            │   ├── lib/
+            │   ├── src/
+            |   │   └── index.js
             └── index.html
         </code>
     </pre>
@@ -101,7 +103,7 @@ title: "Get Started"
     </p>
     <p>
         These CSS and Javascript files are the <strong>only two dependencies</strong> generated from 
-        the NYC Core Framework. If you are new to the Framework (or to web development in general) follow our <em>Quick Start Guide</em> in the next
+        the NYC Core Framework. If you are new to the Framework (or web development in general) follow our <em>Quick Start Guide</em> in the next
         section for CDN instructions.
     </p>
     
@@ -113,86 +115,128 @@ title: "Get Started"
 <div class="container narrow my-4">
     <h2>Quick Start CDN</h2>
     <p>
-         Get up and running in a New York minute. Basic knowledge of HTML and CSS is all you'll need.
+         Get up and running in a New York minute. Add the following <code>&lt;head&gt;</code> tag
+         <code>&lt;head&gt;</code> to the top of your HTML:
     </p>
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="cssAndJavascript"> 
+<figure class="container medium my-4">
 
-    <div class="container narrow my-4">
-        <h2>CSS and Javascript</h2>
-        <p>
-            The NYC Core Framework relies on only four dependencies. Within the <code>&lt;head&gt;</code> tag of
-            <strong>index.html</strong>, you will find a stylesheet <code>&lt;link&gt;</code> to <a
-                href="https://fontawesome.com/">Font Awesome</a>, an open-source icon library, and another
-            <code>&lt;link&gt;</code> for our theme's principle stylesheet, with the path
-            <strong>/css/theme.css</strong>.
-        </p>
+    <pre data-line="4, 12, 15">
+        <code class="language-html">
+            &lt;head&gt;
+
+                &lt;!-- IE Compatibility Mode --&gt;
+                &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+
+                &lt;meta charset="utf-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+                &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
+
+                &lt;!-- Font Awesome Kit --&gt;
+                &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+                &lt;!-- Theme Stylesheets --&gt;
+                &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
+
+            &lt;/head&gt;
+        </code>
+    </pre>
+
+    <figcaption>
+        Figure 2 - The <code>&lt;head&gt;</code> tag
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Lines 4, 12, and 15 (highlighted in Figure 2) are required. Learn the purpose of each line in the table below.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <div class="scroll-x">
+
+        <table class="fs-md">
+
+            <thead>
+
+                <tr>
+                    <th class="w-20">Line</th>
+                    <th>What it does</th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <p>
+                            Meta tag for correcting Internet Explorer 11 rendering when in combatibility mode.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>
+                        <p>
+                            Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
+                            an open-source icon library, used for iconography accross the framework.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>
+                        <p>
+                            CDN (Content Delivery Network) access to the latest stable version of the our Framework's core stylesheet.
+                        </p>
+                    </td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+
     </div>
-    <!-- .container -->
+    <!-- .scroll-x -->
 
-    <figure class="container narrow my-4">
+</figure>
 
-        <pre class="hide-toolbar">
-            <code class="language-html">
-                &lt;!-- Font Awesome --&gt;
-                &lt;link rel="stylesheet" href="./fontawesome/css/all.min.css"&gt;
+<div class="container narrow my-4">
+    <p>
+        Next, include include the following dependencies after the <code>&lt;footer&gt;</code> and before the closing
+        <code>&lt;body&gt;</code> tag.
+    </p>
+</div>
+<!-- .container -->
 
-                &lt;!-- Theme CSS --&gt;
-                &lt;link rel="stylesheet" href="./css/theme.css"&gt;
-            </code>
-        </pre>
+<figure class="container medium my-4">
 
-    </figure>
+    <pre data-line="1,4,5,6,7,8">
+        <code class="language-html">
+            &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/js/dist/nyc_core.js">&lt;/script&gt;
 
-    <div class="container narrow my-4">
-        <p>
-            Near the closing <code>&lt;body&gt;</code> tag, we link to our theme's javascript file, with the path
-            <strong>/js/main.js</strong>.
-        </p>
-    </div>
-    <!-- .container -->
+            &lt;!-- IE Custom Properties Polyfill --&gt;
+            &lt;script&gt;
+                window.MSInputMethodContext && document.documentMode && document.write(
+                    '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
+                );
+            &lt;/script&gt;
+        </code>
+    </pre>
 
-    <figure class="container narrow my-4">
+<figcaption>
+    Figure 3 - Required <code>&lt;footer&gt;</code> scripts
+</figcaption>
 
-        <pre class="hide-toolbar">
-            <code class="language-html">
-                &lt;!-- Main JS --&gt;
-                &lt;script src="/js/main.js"&gt;&lt;/script&gt;
-            </code>
-        </pre>
-
-    </figure>
-
-    <div class="container narrow my-4">
-        <p>
-            And finally, also near the closing <code>&lt;body&gt;</code> tag, a polyfill for Internet Explorer 11 is
-            included. This dependency is required only if you wish to support this last version of Internet Explorer.
-        </p>
-    </div>
-    <!-- .container -->
-
-
-
-
-    <figure class="container narrow my-4">
-
-        <div class="code-toolbar">
-            <pre
-                class="hide-toolbar language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-    window<span class="token punctuation">.</span>MSInputMethodContext <span class="token operator">&amp;&amp;</span> document<span class="token punctuation">.</span>documentMode <span class="token operator">&amp;&amp;</span> document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;script src="./js/ie11CustomProperties.js"&gt;&lt;\x2fscript&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
-            <div class="toolbar">
-                <div class="toolbar-item"><span>HTML</span></div>
-                <div class="toolbar-item"><a>Copy</a></div>
-            </div>
-        </div>
-
-    </figure>
-
-
-
+</figure>
 
     <hr class="my-5" id="customizingWithSass">
 
