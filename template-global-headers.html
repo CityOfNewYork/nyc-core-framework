@@ -4,32 +4,22 @@
 
 <head>
 
+    <!-- IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Global Headers • NYC Core Framework</title>
 
-    <!-- IE Custom Properties Polyfill-->
-    <script>
-        window.MSInputMethodContext && document.documentMode && document.write(
-            '<script src="./js/lib/ie11CustomProperties.js"><\x2fscript>');
-    </script>
-
     <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/3251f524b1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
 
     <!-- Standart NYC.gov Font -->
     <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
 
     <!-- Theme Stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css">
-
-    <style>
-        :root {
-            --base-font-family: "neue-haas-grotesk-text";
-        }
-    </style>
 
 </head>
 
@@ -703,6 +693,13 @@
     <!-- #global-header -->
 
     <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/js/dist/nyc_core.js"></script>
+
+    <!-- IE Custom Properties Polyfill -->
+    <script>
+        window.MSInputMethodContext && document.documentMode && document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
+        );
+    </script>
     
 </body>
 

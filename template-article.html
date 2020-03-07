@@ -4,21 +4,16 @@
 
 <head>
 
+    <!-- IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Template Article • NYC Core Framework</title>
 
-    <!-- IE Custom Properties Polyfill -->
-    <script>
-        window.MSInputMethodContext && document.documentMode && document.write(
-            '<script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/js/lib/ie11CustomProperties.js"><\x2fscript>'
-        );
-    </script>
-
     <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/3251f524b1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
 
     <!-- Standart NYC.gov Font -->
     <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
@@ -593,46 +588,14 @@
 
     </footer>
 
-    <!-- modal example -->
-    <div class="modal modal-slide" id="modal-1" aria-hidden="true">
-        
-        <div class="modal-overlay" tabindex="-1" data-micromodal-close>
-            
-            <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                
-                <header class="modal-header">
-                    <h2 class="h3" id="modal-1-title">
-                        Micromodal
-                    </h2>
-                    <button class="btn-icon" aria-label="Close modal" data-micromodal-close>
-                        <span class="sr-only">Close Modal</span>
-                        <span class="fas fa-times"></span>
-                    </button>
-                </header>
-
-                <main class="modal-body" id="modal-1-content">
-                    <p>
-                        Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself.
-                        Also, <code>esc</code> to close modal.
-                    </p>
-                </main>
-
-                <footer class="grid gap-sm cols--md">
-                    <div>
-                        <button class="btn bc-primary d-block">Continue</button>
-                    </div>
-                    <!-- .grid__col -->
-                    <div>
-                        <button class="btn bc-dark d-block" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                    </div>
-                    <!-- .grid__col -->
-                </footer>
-            </div>
-        </div>
-    </div>
-    <!-- .modal -->
-
     <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/js/dist/nyc_core.js"></script>
+
+    <!-- IE Custom Properties Polyfill -->
+    <script>
+        window.MSInputMethodContext && document.documentMode && document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
+        );
+    </script>
     
 </body>
 
