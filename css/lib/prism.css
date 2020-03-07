@@ -42,6 +42,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
+	border-radius: 0.5em;
 	background-color: var(--dark);
 }
 
