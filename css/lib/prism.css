@@ -35,7 +35,7 @@ pre[class*="language-"] {
 /* Code blocks */
 
 pre[class*="language-"] {
-	padding: 1em;
+	padding: 2em 1em;
 	margin: .5em 0;
 	overflow: auto;
 }
@@ -59,7 +59,7 @@ p > code {
     white-space: normal;
     color: inherit;
 	font-size: 0.875em;
-	color: var(--attention);
+	color: var(--confirm);
 }
 
 p > code::before {
@@ -171,7 +171,7 @@ pre[data-line] {
 }
 
 .hide-toolbar .line-highlight{
-	margin-top: 1em; 
+	margin-top: 2em; 
 }
 
 .line-highlight:before,

@@ -14,9 +14,9 @@ title: "Get Started"
         wealth of accessible components ideal for projects of any size and complexity.
     </p>
 
-    <ul class="nav tc-link">
+    <ul class="nav horizontal--md tc-link">
         <li>
-            <a href="#QuickStartCDN">CDN Quick Start</a>
+            <a href="#QuickStartGuide">Quick Start Guide</a>
         </li>
         <li>
             <a href="#1" data-link="external">NPM Install</a>
@@ -98,129 +98,120 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        In Figure 1 above, pay attention to the highlighted files: <strong>/css/dist/nyc_core.css</strong> (line
+        In Figure 1 (above), pay attention to the highlighted files: <strong>/css/dist/nyc_core.css</strong> (line
         4), <strong>/js/dist/nyc_core.js</strong> (line 40).
     </p>
     <p>
         These CSS and Javascript files are the <strong>only two dependencies</strong> generated from 
-        the NYC Core Framework. If you are new to the Framework (or web development in general) follow our <em>Quick Start Guide</em> in the next
-        section for CDN instructions.
+        the NYC Core Framework, and they're available via CDN (Content Delivery Network).
+    </p>
+    <p>
+         If you are new to the Framework (or web development in general) follow our <em>Quick Start Guide</em> in the
+         next section to get started.
     </p>
     
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="QuickStartCDN">
+<hr class="my-5" id="QuickStartGuide">
 
 <div class="container narrow my-4">
-    <h2>Quick Start CDN</h2>
+    <h2>Quick Start Guide</h2>
     <p>
-         Get up and running in a New York minute. Add the following <code>&lt;head&gt;</code> tag
-         <code>&lt;head&gt;</code> to the top of your HTML:
+         Get up and running in a New York minute. Place the following scripts in the <code>&lt;head&gt;</code> tag of your HTML file:
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container medium my-4">
 
-    <pre data-line="4, 12, 15">
+    <pre data-line="2, 10, 13">
         <code class="language-html">
-            &lt;head&gt;
+            &lt;!-- IE Compatibility Mode --&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
 
-                &lt;!-- IE Compatibility Mode --&gt;
-                &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 
-                &lt;meta charset="utf-8"&gt;
-                &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+            &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
 
-                &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
+            &lt;!-- Font Awesome Kit --&gt;
+            &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
 
-                &lt;!-- Font Awesome Kit --&gt;
-                &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
-
-                &lt;!-- Theme Stylesheets --&gt;
-                &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
-
-            &lt;/head&gt;
+            &lt;!-- NYC Core Stylesheet --&gt;
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
         </code>
     </pre>
 
     <figcaption>
-        Figure 2 - The <code>&lt;head&gt;</code> tag
+      <p>Figure 2 - Required <code>&lt;head&gt;</code> tag scripts</p>  
     </figcaption>
 
 </figure>
 
 <div class="container narrow my-4">
     <p>
-        Lines 4, 12, and 15 (highlighted in Figure 2) are required. Learn the purpose of each line in the table below.
+        Lines 2, 10, and 13 (highlighted in Figure 2) are required. Learn what these scripts do in the table below.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow my-4">
 
-    <div class="scroll-x">
+    <table class="fs-md">
+        <thead>
+            <tr>
+                <th class="w-30">Line #</th>
+                <th class="w-70">What it does</th>
+            </tr>
+        </thead>
+        <tbody>
 
-        <table class="fs-md">
+            <tr>
+                <td>2</td>
+                <td>
+                    <p>
+                        Meta tag for correcting Internet Explorer 11 page rendering issues with compatibility mode. This tag must be first within the <code>&lt;head&gt;</code> in order for it to work.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>
+                    <p>
+                        Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
+                        an open-source icon library, used for iconography accross the framework.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>
+                    <p>
+                        Our Framework's latest stable version of the core stylesheet available via CDN.
+                    </p>
+                </td>
+            </tr>
+            
+        </tbody>
 
-            <thead>
-
-                <tr>
-                    <th class="w-20">Line</th>
-                    <th>What it does</th>
-                </tr>
-
-            </thead>
-            <tbody>
-
-                <tr>
-                    <td>4</td>
-                    <td>
-                        <p>
-                            Meta tag for correcting Internet Explorer 11 rendering when in combatibility mode.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>
-                        <p>
-                            Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
-                            an open-source icon library, used for iconography accross the framework.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>
-                        <p>
-                            CDN (Content Delivery Network) access to the latest stable version of the our Framework's core stylesheet.
-                        </p>
-                    </td>
-                </tr>
-                
-            </tbody>
-
-        </table>
-
-    </div>
-    <!-- .scroll-x -->
+    </table>
 
 </figure>
 
 <div class="container narrow my-4">
     <p>
-        Next, include include the following dependencies after the <code>&lt;footer&gt;</code> and before the closing
-        <code>&lt;body&gt;</code> tag.
+        Next, include the following scripts after the <code>&lt;footer&gt;</code> tag and before the closing
+        <code>&lt;/body&gt;</code> tag.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container medium my-4">
 
-    <pre data-line="1,4,5,6,7,8">
+    <pre data-line="2,5,6,7,8,9">
         <code class="language-html">
+            &lt;!-- NYC Core Javascript --&gt;
             &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/js/dist/nyc_core.js">&lt;/script&gt;
 
             &lt;!-- IE Custom Properties Polyfill --&gt;
@@ -232,19 +223,60 @@ title: "Get Started"
         </code>
     </pre>
 
-<figcaption>
-    Figure 3 - Required <code>&lt;footer&gt;</code> scripts
-</figcaption>
+    <figcaption>
+        <p>Figure 3 - Required scripts near the <code>&lt;/body&gt;</code> tag</p> 
+    </figcaption>
 
 </figure>
 
-    <hr class="my-5" id="customizingWithSass">
+<div class="container narrow my-4">
+    <p>
+        In Figure 3, line 2 is required for the Framework, and lines 5-9 are required if you wish to support IE 11. 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <table class="fs-md">
+        <thead>
+            <tr>
+                <th class="w-30">Line #</th>
+                <th class="w-70">What it does</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>2</td>
+                <td>
+                    <p>
+                        Our Framework's latest stable version of the core Javascript file available via CDN.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>5-9</td>
+                <td>
+                    <p>
+                        A Custom Properties polyfill for IE11. Thanks to Tobias Buschor | https://git.io/fjXMN
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</figure>
+
+    <hr class="my-5" id="customPropteries">
 
 
 
 
     <div class="container narrow my-4">
-        <h2>Customizing with Sass</h2>
+        <h2>Custom Properties</h2>
         <p>
             The NYC Core Framework is customizable using <a href="https://sass-lang.com/">Sass</a> (SCSS). The theme's stylesheet,
             <strong>/css/theme.css</strong> is generated (or compiled) from the central SASS file, with the path <a href="#1"><strong>/scss/theme.scss</strong></a>.
@@ -256,118 +288,3 @@ title: "Get Started"
         </p>
     </div>
     <!-- .container -->
-
-
-
-
-    <figure class="container narrow my-4">
-
-        <div class="code-toolbar">
-            <pre
-                class="hide-toolbar language-scss"><code class=" language-scss"><span class="token comment">////////////////////////////////////////</span>
-<span class="token comment">// A. SCSS Imports</span>
-<span class="token comment">////////////////////////////////////////</span>
-
-<span class="token comment">// Required</span>
-
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/globals"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/reset"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/accessibility"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/breakpoints"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/spacing"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/typography"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/buttons"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/colors"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/links"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/borders"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/containers"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/sizing"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/grid"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/flex"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/display"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/navigation"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/collapse"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/backdrops"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/z-index"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/position"</span><span class="token punctuation">;</span>
-
-<span class="token comment">// Optional</span>
-
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/shadows"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/gradients"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/accordions"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/modals"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/forms"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/aspect-ratios"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/opacities"</span><span class="token punctuation">;</span>
-<span class="token keyword keyword-@import">@import</span> <span class="token string">"base/tables"</span><span class="token punctuation">;</span></code></pre>
-            <div class="toolbar">
-                <div class="toolbar-item"><span>Sass (Scss)</span></div>
-                <div class="toolbar-item"><a>Copy</a></div>
-            </div>
-        </div>
-
-    </figure>
-
-
-
-
-    <div class="container narrow my-4">
-        <p>For your convenience, SASS files in the NYC Core Framework are divided into alphabetically labeled
-            <em>Sections</em>, with an <em>In this File</em> key at the very top. Throughout the documentation, we'll
-            often refer to a section (e.g., Section A.) within a partial, when describing a feature or
-            customization.<br></p>
-    </div>
-    <!-- .container -->
-
-
-
-
-    <div class="container narrow my-4">
-        <h3>Adding your own CSS</h3>
-        <p>We recommend adding your own CSS or Sass under <em>Section B.</em> of <strong>/scss/theme.scss</strong>. This
-            way your customizations are in one place and remain separated from the building blocks (SASS partials) of
-            the framework.</p>
-    </div>
-    <!-- .container -->
-
-
-
-
-    <figure class="container narrow my-4">
-
-        <div class="code-toolbar">
-            <pre class="hide-toolbar language-scss"><code class=" language-scss"><span class="token comment">//////////////////////////////////////////////</span>
-<span class="token comment">// B. Custom Theme Styles</span>
-<span class="token comment">//////////////////////////////////////////////</span>
-
-<span class="token comment">// Put anything here</span>
-
-<span class="token comment">// Logo</span>
-
-<span class="token selector">a[data-logo="brand"] </span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
-
-    <span class="token selector">svg </span><span class="token punctuation">{</span>
-        <span class="token property">fill</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-            <div class="toolbar">
-                <div class="toolbar-item"><span>Sass (Scss)</span></div>
-                <div class="toolbar-item"><a>Copy</a></div>
-            </div>
-        </div>
-
-    </figure>
-
-<hr class="my-5">
-
-<div class="container narrow my-4">
-    <h2>Browser Support</h2>
-    <p>In the spirit of inclusivity, we aim to support all modern browsers—including Internet Explorer
-        11—which still today is widely used in government agencies, non-governmental organizations, and
-        grandparents' houses. </p>
-    <p>Note that proxy browsers (such as Opera Mini, Opera Mobile’s Turbo mode, UC Browser Mini, Amazon Silk) have
-        not been tested.</p>
-</div>
-<!-- .container -->
