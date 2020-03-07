@@ -15,9 +15,8 @@
     <!-- Font Awesome Kit -->
     <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
 
-    <!-- Theme Stylesheets -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css">
+     <!-- Theme Stylesheets https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version -->
+     <link rel="stylesheet" href="./css/dist/nyc_core.css">
 
 </head>
 
@@ -38,7 +37,7 @@
                     <div class="aspect-ratio--3by2 border">
                         <div class="aspect-ratio__element flex-row ai-center">
                             <div class="w-100 p-4">
-                                <ul class="nav" role="navigation">
+                                <ul class="nav tc-link" role="navigation">
                                     <li>
                                         <a href="#1">Link</a>
                                     </li>
@@ -417,6 +416,19 @@
         window.MSInputMethodContext && document.documentMode && document.write(
             '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
         );
+    </script>
+
+    <script>
+
+        window.onload = () => {
+
+            const externalLinks = document.querySelectorAll('[data-link="external"]');
+
+            for (const link of externalLinks) {
+                link.insertAdjacentHTML('beforeend', '<span class="sr-only">Opens a new window</span>');
+            }
+        };
+        
     </script>
     
 </body>

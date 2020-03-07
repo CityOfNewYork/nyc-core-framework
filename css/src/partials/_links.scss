@@ -70,11 +70,13 @@ a[data-link="external"]::after {
     font-weight: 900;
     content: "\f35d";
 
+
 }
 
 
 [data-fa-pseudo-element=":after"]{
-    font-size: 0.75em;
+    font-size: 0.6em;
     color: currentColor;
     margin-left: var(--s1);
+    vertical-align: baseline;
 }

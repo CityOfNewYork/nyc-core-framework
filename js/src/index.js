@@ -130,4 +130,17 @@ window.onload = () => {
 
     }
 
+    //////////////////////////////////////////////
+    // E. External Links
+    //////////////////////////////////////////////
+
+    window.onload = () => {
+
+        const externalLinks = document.querySelectorAll('[data-link="external"]');
+
+        for (const link of externalLinks) {
+            link.insertAdjacentHTML('beforeend', '<span class="sr-only">Opens a new window</span>');
+        }
+    };
+
 }; /* window.load */
