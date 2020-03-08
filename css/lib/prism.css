@@ -55,10 +55,11 @@ pre[class*="language-"]:not([class*="hide-toolbar"]){
 p > code {
 	position: relative;
 	display: inline-block;
-    padding: 0.1em 0.25em;
+	padding: 0.075rem 0.25rem;
     white-space: normal;
     color: inherit;
 	font-size: 0.875em;
+	line-height: 1.4;
 	color: var(--confirm);
 }
 
