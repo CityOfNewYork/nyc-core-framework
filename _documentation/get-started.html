@@ -16,13 +16,13 @@ title: "Get Started"
 
     <ul class="nav horizontal--md tc-link">
         <li>
-            <a href="#QuickStartGuide">Quick Start Guide</a>
+            <a href="#quickStartGuide">Quick Start Guide</a>
         </li>
         <li>
-            <a href="#1" data-link="external">NPM Install</a>
+            <a href="#1">NPM Install</a>
         </li>
         <li>
-            <a href="#1" data-link="external">GitHub</a>
+            <a href="#1">GitHub</a>
         </li>
     </ul>
 
@@ -32,9 +32,9 @@ title: "Get Started"
 <hr class="my-5" id="theFiles">
 
 <div class="container narrow my-4">
-    <h2>The Files at a Glance</h2>
+    <h2>The Framework at a Glance</h2>
     <p>
-        The NYC Core Framework includes the following files and folders:
+        The NYC Core Framework includes the following files and folders.
     </p>
 </div>
 <!-- .container -->
@@ -89,32 +89,104 @@ title: "Get Started"
         </code>
     </pre>
     <figcaption>
-        Figure 1 - Depiction of the NYC Core Framework's folders and files
+        Figure 1 - The NYC Core Framework's folders and files
     </figcaption>
 </figure>
 
 <div class="container narrow my-4">
+
+    <h3>CSS and Javascript</h3>
     <p>
         In Figure 1 (above), pay attention to the highlighted files: <strong>/css/dist/nyc_core.css</strong> (line
         4), <strong>/js/dist/nyc_core.js</strong> (line 40).
     </p>
     <p>
-        These CSS and Javascript files are the <strong>only two dependencies</strong> generated from 
-        the NYC Core Framework, and they are available via CDN (Content Delivery Network).
-    </p>
-    <p>
-         If you are new to the Framework (or web development in general) follow our <em>Quick Start Guide</em> in the
-         next section to get started.
+        These CSS and Javascript files are the <strong>only two dependencies</strong> generated from
+        the NYC Core Framework, and they are available via CDN (Content Delivery Network). Follow our <a
+            href="#quickStartGuide"><em>Quick Start Guide</em></a> (in the
+        next section) to get started with these core files.
     </p>
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="QuickStartGuide">
+<div class="container narrow my-4">
+    <h4>Directory Structure</h4>
+    <p>
+        At the root of the Framework, the <strong>/css</strong> and <strong>/js</strong> directories each contain the
+        same three subdirectories: <strong>/dist</strong>, <strong>/lib</strong>, and <strong>/src</strong>.
+    </p>
+</div>
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar">
+        <code class="language-plaintext">
+            ├── css/
+            │   ├── dist/
+            │   ├── lib/
+            │   └── src/
+            └── js/
+                ├── dist/
+                ├── lib/
+                └── src/
+        </code>
+    </pre>
+    <figcaption>
+        Figure 2 - The Framework's CSS and JS directories
+    </figcaption>
+</figure>
+
+<figure class="container narrow my-4">
+    <table class="fs-md">
+        <thead>
+            <tr>
+                <th class="w-30">Directory</th>
+                <th class="w-70">Intention</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <strong>dist</strong> 
+                </td>
+                <td>
+                    <p>
+                        Ready-to-use code that was compiled locally by a source (the core CSS and JS files live in their respective <strong>/dist</strong> directories).
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>lib</strong>
+                </td>
+                <td>
+                    <p>
+                        Third-party dependencies that do not require a build process. (e.g. an added JS plugin's stylesheet).
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>src</strong>
+                </td>
+                <td>
+                    <p>
+                        Original source code that needs to be manipulated or compiled before it can be used.
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</figure>
+
+<hr class="my-5" id="quickStartGuide">
 
 <div class="container narrow my-4">
     <h2>Quick Start Guide</h2>
     <p>
-        Get up and running in a New York minute. Create a plain HTML document and add the code from Figure 2 (below).
+        Get up and running in a New York minute. Create a plain HTML document and add the code from Figure 3 (below).
     </p>
 </div>
 <!-- .container -->
@@ -152,7 +224,7 @@ title: "Get Started"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Example of code for a basic HTML file.</p>
+        <p>Figure 3 - Example of code for a basic HTML file.</p>
     </figcaption>
 </figure>
 
@@ -216,13 +288,13 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-      <p>Figure 3 - Required <code>&lt;head&gt;</code> tag scripts</p>  
+      <p>Figure 4 - Required <code>&lt;head&gt;</code> tag scripts</p>  
     </figcaption>
 </figure>
 
 <div class="container narrow my-4">
     <p>
-        Lines 2, 10, and 13 (highlighted in Figure 3) are required. Learn what these scripts do in the table below.
+        Lines 2, 10, and 13 (highlighted in Figure 4) are required. Learn what these scripts do in the table below.
     </p>
 </div>
 <!-- .container -->
@@ -295,14 +367,14 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-        <p>Figure 4 - Required scripts near the <code>&lt;/body&gt;</code> tag</p> 
+        <p>Figure 5 - Required scripts near the <code>&lt;/body&gt;</code> tag</p> 
     </figcaption>
 
 </figure>
 
 <div class="container narrow my-4">
     <p>
-        In Figure 4, line 2 is required for the Framework, while lines 5-9 are required if you wish to support IE 11. 
+        In Figure 5, line 2 is required for the Framework, while lines 5-9 are required if you wish to support IE 11. 
     </p>
 </div>
 <!-- .container -->
@@ -344,12 +416,9 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        With the required scripts mentioned in the <em>Quick Start Guide</em> (above) placed into your HTML document,
-        you're ready to modify the look and feel of your layouts.
-    </p>
-    <p>
-        It is possible to personalize your layouts <a href="#1">using Sass</a>, however, the NYC Core Framework
-        (version 2.0) provides a more convenient customization methodology with CSS Custom Properties.
+        With the required scripts mentioned in the <em>Quick Start Guide</em> (above) placed into <a
+            href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/_examples/quick_start/step-3.html">an HTML
+        document</a>, you're ready to modify the look and feel of your layouts.
     </p>
 </div>
 <!-- .container -->
@@ -359,9 +428,12 @@ title: "Get Started"
 <div class="container narrow my-4">
     <h2>Custom Properties</h2>
     <p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
-            data-link="external">Custom properties</a> (also known as CSS variables) are similar to <a
-            href="https://sass-lang.com/documentation/variables" data-link="external">Sass variables</a> because they
+        It is possible to personalize NYC Core Framework <a href="#1">using Sass</a>, however, since version 2.0, we offer a more convenient methodology with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+        >Custom Properties</a>.
+    </p>
+    <p>
+        Custom properties (also known as CSS variables) are similar to <a
+            href="https://sass-lang.com/documentation/variables">Sass variables</a> because they
             both allow you to store reusable values. Custom properties, however, provide additional benefits not offered by Sass variables.
     </p>
 </div>
@@ -380,7 +452,7 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-        <p>Figure 5 - Basic example of Sass variable usage.</p>
+        <p>Figure 6 - Basic example of Sass variable usage.</p>
     </figcaption>
 
 </figure>
@@ -398,7 +470,7 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-        <p>Figure 6 - Basic example of custom property usage.</p>
+        <p>Figure 7 - Basic example of custom property usage.</p>
     </figcaption>
 
 </figure>
@@ -470,7 +542,7 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-        <p>Figure 9 - Example of a locally scoped custom property.</p>
+        <p>Figure 10 - Example of a locally scoped custom property.</p>
     </figcaption>
 
 </figure>
@@ -492,8 +564,11 @@ title: "Get Started"
 
     <h3>Customizing Properties With a Second Stylesheet</h3>
     <p>
+        To begin this brief exercise, download or copy the contents of our <a href="#1">Custom Properties Example</a> and save it into your project's root directory. Preview it in a browser.
+    </p>
+    <p>
         Create a new CSS document and name it <em>theme-properties.css</em>, then
-        save it to the <strong>/css/dist/</strong> directory within your project.
+        save it to the <strong>/css/lib/</strong> directory within your project.
     </p>
     <p>
         Next, open your HTML document and add a link to <em>theme-properties.css</em> below
@@ -511,12 +586,12 @@ title: "Get Started"
             &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
 
             &lt;!-- Custom Theme Properties --&gt;
-            &lt;link rel="stylesheet" href="./css/dist/theme-properties.css"&gt;
+            &lt;link rel="stylesheet" href="./css/lib/theme-properties.css"&gt;
         </code>
     </pre>
 
     <figcaption>
-        <p>Figure 6 - Properties defined in <em>theme-properties.css</em> will override properties defined in <em>nyc_core.css</em>.</p>
+        <p>Figure 11 - Properties defined in <em>theme-properties.css</em> will override properties defined in <em>nyc_core.css</em>.</p>
     </figcaption>
 
 </figure>
@@ -543,7 +618,7 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-        <p>Figure 7 - Lorem ipsum dolor sit amet consectetur</p>
+        <p>Figure 12 - Lorem ipsum dolor sit amet consectetur</p>
     </figcaption>
 
 </figure>

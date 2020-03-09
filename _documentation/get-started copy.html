@@ -1,3 +1,7 @@
+---
+layout: documentation
+title: "Get Started"
+---
 
 <div class="container narrow my-4">
 
@@ -15,10 +19,10 @@
             <a href="#QuickStartGuide">Quick Start Guide</a>
         </li>
         <li>
-            <a href="#1" data-link="external">NPM Install</a>
+            <a href="#1">NPM Install</a>
         </li>
         <li>
-            <a href="#1" data-link="external">GitHub</a>
+            <a href="#1">GitHub</a>
         </li>
     </ul>
 
@@ -28,15 +32,14 @@
 <hr class="my-5" id="theFiles">
 
 <div class="container narrow my-4">
-    <h2>The Files at a Glance</h2>
+    <h2>The Framework at a Glance</h2>
     <p>
         The NYC Core Framework includes the following files and folders:
     </p>
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
-    
+<figure class="container narrow my-4">    
     <pre class="hide-toolbar" data-line="4, 40">
         <code class="language-plaintext">
             nyc-core-framework/
@@ -85,11 +88,9 @@
             └── index.html
         </code>
     </pre>
-
     <figcaption>
         Figure 1 - Depiction of the NYC Core Framework's folders and files
     </figcaption>
-    
 </figure>
 
 <div class="container narrow my-4">
@@ -99,7 +100,7 @@
     </p>
     <p>
         These CSS and Javascript files are the <strong>only two dependencies</strong> generated from 
-        the NYC Core Framework, and they're available via CDN (Content Delivery Network).
+        the NYC Core Framework, and they are available via CDN (Content Delivery Network).
     </p>
     <p>
          If you are new to the Framework (or web development in general) follow our <em>Quick Start Guide</em> in the
@@ -119,7 +120,6 @@
 <!-- .container -->
 
 <figure class="container medium my-4">
-
     <pre data-line="9,11,15,21">
         <code class="language-html">
             &lt;!DOCTYPE html&gt;
@@ -151,15 +151,12 @@
             &lt;/html&gt;
         </code>
     </pre>
-
     <figcaption>
         <p>Figure 2 - Example of code for a basic HTML file.</p>
     </figcaption>
-
 </figure>
 
 <figure class="container narrow my-4">
-
     <table class="fs-md">
         <thead>
             <tr>
@@ -190,7 +187,6 @@
         </tbody>
 
     </table>
-
 </figure>
 
 <div class="container narrow my-4">
@@ -201,7 +197,6 @@
 <!-- .container -->
 
 <figure class="container medium my-4">
-
     <pre data-line="2, 10, 13">
         <code class="language-html">
             &lt;!-- IE Compatibility Mode --&gt;
@@ -223,7 +218,6 @@
     <figcaption>
       <p>Figure 3 - Required <code>&lt;head&gt;</code> tag scripts</p>  
     </figcaption>
-
 </figure>
 
 <div class="container narrow my-4">
@@ -350,14 +344,10 @@
 
 <div class="container narrow my-4">
     <p>
-        With the required scripts mentioned in the <em>Quick Start Guide</em> (above) placed into your HTML document,
-        you're ready to modify the look and feel of your layouts.
+        With the required scripts mentioned in the <em>Quick Start Guide</em> (above) placed into <a
+            href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/_examples/quick_start/step-3.html">an HTML
+        document</a>, you're ready to modify the look and feel of your layouts.
     </p>
-    <p>
-        It's possible to personalize your layouts <a href="#1">using Sass</a>, however, the NYC Core Framework
-        (version 2.0) provides a more convenient customization methodology with CSS Custom Properties.
-    </p>
-    
 </div>
 <!-- .container -->
 
@@ -365,49 +355,145 @@
 
 <div class="container narrow my-4">
     <h2>Custom Properties</h2>
-    <p> 
-        In the NYC Core Framework, the color palette, font styles, spacing, and other design characteristics are declared using
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" data-link="external">custom properties</a>, instead of Sass variables.
+    <p>
+        It is possible to personalize NYC Core Framework <a href="#1">using Sass</a>, however, since version 2.0, we offer a more convenient methodology with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+        >Custom Properties</a>.
     </p>
     <p>
-        Custom properties are different than Sass variables because they are native to CSS syntax. This means you are not required to set up a <a href="https://sass-lang.com/install">Sass development
-            environment</a> to modify them.
-    </p>
-    <p>
-        Custom properties can also change at runtime.
+        Custom properties (also known as CSS variables) are similar to <a
+            href="https://sass-lang.com/documentation/variables">Sass variables</a> because they
+            both allow you to store reusable values. Custom properties, however, provide additional benefits not offered by Sass variables.
     </p>
 </div>
 <!-- .container -->
-
 
 <figure class="container narrow my-4">
 
     <pre class="hide-toolbar">
         <code class="language-scss">
-            // Sass Variable
-            $primary: #25caa4;
+            $primary: navy;
 
-            // CSS Custom Property
-            --primary: #25caa4;
+            .selector--primary{
+                background-color: $primary
+            }
         </code>
     </pre>
 
     <figcaption>
-        <p>Figure 5 - Example of a Sass variable and Custom Property declaration </p>
+        <p>Figure 5 - Basic example of Sass variable usage.</p>
+    </figcaption>
+
+</figure>
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            --primary: navy;
+
+            .selector--primary{
+                background-color: var(--primary);
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 6 - Basic example of custom property usage.</p>
     </figcaption>
 
 </figure>
 
 <div class="container narrow my-4">
-    
     <p>
-        In the <em>Quick Start Guide</em> (above) we include the NYC Core stylesheet via CDN.
+        Custom properties are native CSS syntax. This means you do not need to set up a <a
+            href="https://sass-lang.com/install">Sass development environment</a> to modify them. Additionally, custom
+        properties can be scoped globally to the HTML (using the <code>:root</code> pseudo-class) and scoped locally to a selector (e.g.
+        <code>.selector--primary</code>).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            :root{
+                --primary: navy;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 8 - Example of a globally scoped custom property.</p>
+    </figcaption>
+
+</figure>
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            .selector--primary {
+                --primary: navy;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 9 - Example of a locally scoped custom property.</p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Custom properties can be scoped globally and redefined locally. Consider the following example where <code>--primary</code> is defined
+        on <code>:root</code>, and redefined on <code>.selector--primary</code>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+
+            :root{
+                --primary: navy;
+            }
+
+            .selector--primary {
+                --primary: maroon;
+            }
+
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 9 - Example of a locally scoped custom property.</p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        In the NYC Core Framework, the color palette, font styles, spacing, and other design characteristics are
+        declared using custom properties.
+    </p>
+    <p>
+        If you read the <em>Quick Start Guide</em> (above) you learned how to include the Framework's core stylesheet via CDN. Next,
+        you will learn how to customize your layouts with a second stylesheet referenced just below the core stylesheet.
     </p>
 
+</div>
+<!-- .container -->
+
+<div class="container narrow my-4">
+
+    <h3>Customizing Properties With a Second Stylesheet</h3>
     <p>
-        You have the ability to update certain properties defined in this stylesheet by redefining them in a second
-        stylesheet. To see how this works, create a new CSS document and name it <em>theme-properties.css</em>, then
-        save it to the <strong>/css/dist/</strong> directory.
+        Create a new CSS document and name it <em>theme-properties.css</em>, then
+        save it to the <strong>/css/dist/</strong> directory within your project.
     </p>
     <p>
         Next, open your HTML document and add a link to <em>theme-properties.css</em> below
@@ -464,8 +550,9 @@
 
 <div class="container narrow my-4">
     <p>
-         A common best practice is to define custom properties on the :root pseudo-class, so that it can be applied
-         globally across your HTML document.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor at eaque quia accusamus, nostrum voluptates
+        ipsum nesciunt doloremque facere quae beatae ratione magni quibusdam cupiditate quisquam recusandae aspernatur
+        libero ut.
     </p>
 </div>
 <!-- .container -->
