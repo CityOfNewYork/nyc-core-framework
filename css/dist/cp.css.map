@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,AAAA,aAAa,AAAA,CACT,gBAAgB,CAAE,cAAc,CACnC",
-    "sources": [
-        "../lib/cp.scss"
-    ],
-    "names": [],
-    "file": "cp.css"
-}

@@ -564,8 +564,25 @@ title: "Get Started"
 
     <h3>Customizing Properties With a Second Stylesheet</h3>
     <p>
-        To begin this brief exercise, download or copy the contents of our <a href="#1">Custom Properties Example</a> and save it into your project's root directory. Preview it in a browser.
+        To begin this brief exercise, download or copy the contents of our <a
+            href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/_examples/getting_started/custom-properties-1.html">Custom
+            Properties Example</a> and save it into your project's root directory.
     </p>
+
+    <p>Preview it in a browser. It should resemble the figure below.</p>
+
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+    
+    <div class="aspect-ratio--16by9 box-shadow--sm">
+        <iframe class="aspect-ratio__element" src="{{ site.baseurl }}/examples/get-started/custom-properties-01.html"></iframe>
+    </div>
+
+</figure>
+
+<div class="container narrow my-4">
     <p>
         Create a new CSS document and name it <em>theme-properties.css</em>, then
         save it to the <strong>/css/lib/</strong> directory within your project.
@@ -574,12 +591,10 @@ title: "Get Started"
         Next, open your HTML document and add a link to <em>theme-properties.css</em> below
         <em>nyc_core.css</em>.
     </p>
-
 </div>
 <!-- .container -->
 
 <figure class="container medium my-4">
-
     <pre class="hide-toolbar">
         <code class="language-html">
             &lt;!-- NYC Core Stylesheet --&gt;
@@ -589,11 +604,9 @@ title: "Get Started"
             &lt;link rel="stylesheet" href="./css/lib/theme-properties.css"&gt;
         </code>
     </pre>
-
     <figcaption>
         <p>Figure 11 - Properties defined in <em>theme-properties.css</em> will override properties defined in <em>nyc_core.css</em>.</p>
     </figcaption>
-
 </figure>
 
 <div class="container narrow my-4">
