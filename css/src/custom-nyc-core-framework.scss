@@ -75,6 +75,68 @@ table{
     line-height: var(--base-line-height);
 }
 
-.iframe-document{
-    transform: scale(0.5);
+
+
+.browser{
+    --browser-bar-height: 2.5rem;
+
+    overflow: hidden;
+    border-radius: 0.25em;
+
+    box-shadow: 0 0 0.75rem rgba(black, 0.125);
+
+    @include breakpoint-down(md) {
+        --browser-bar-height: 2rem;
+
+        [class*="aspect-ratio--"] {
+            height: 400px;
+        }
+
+        [class*="aspect-ratio--"]::before {
+            padding-top: 0;
+        }
+
+        .aspect-ratio__element {
+            position: relative;
+        }
+    }
+}
+
+.browser__bar{
+    height: var(--browser-bar-height);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: hsl(0%, 0%, 80%);
+
+    > div{
+        display: flex;
+        flex-direction: row;
+        margin-left: calc(var(--browser-bar-height) * 0.25);
+        margin-right: calc(var(--browser-bar-height) * 0.25);
+    }
+
+    > div > span{
+        height: calc( var(--browser-bar-height) * 0.5 );
+        width: calc( var(--browser-bar-height) * 0.5 );
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        display: inline-block;
+        border-radius: 75%;
+        opacity: 0.5;
+
+        &:nth-child(1) {
+            background-color: red;
+        }
+
+        &:nth-child(2) {
+            background-color: orange;
+        }
+
+        &:nth-child(3) {
+            background-color: green;
+        }
+
+    }
 }

@@ -562,11 +562,11 @@ title: "Get Started"
 
 <div class="container narrow my-4">
 
-    <h3>Customizing Properties With a Second Stylesheet</h3>
+    <h3>Customizing Properties Using a Second Stylesheet</h3>
     <p>
         To begin this brief exercise, download or copy the contents of our <a
             href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/_examples/getting_started/custom-properties-1.html">Custom
-            Properties Example</a> and save it into your project's root directory.
+            Properties Example</a> and save it as an HTML document into your project's root directory.
     </p>
 
     <p>Preview it in a browser. It should resemble the figure below.</p>
@@ -575,11 +575,24 @@ title: "Get Started"
 <!-- .container -->
 
 <figure class="container medium my-4">
-    
-    <div class="aspect-ratio--16by9 box-shadow--sm">
-        <iframe class="aspect-ratio__element" src="{{ site.baseurl }}/examples/get-started/custom-properties-01.html"></iframe>
-    </div>
 
+    <div class="browser">
+
+        <div class="browser__bar" aria-hidden="true">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="aspect-ratio--16by9">
+            <iframe class="aspect-ratio__element" src="{{ site.baseurl }}/examples/get-started/custom-properties-01.html"></iframe>
+        </div>
+
+    </div>
+    <!-- .browser -->
+    
 </figure>
 
 <div class="container narrow my-4">
