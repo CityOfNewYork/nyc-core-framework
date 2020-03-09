@@ -554,7 +554,7 @@ title: "Get Started"
     </p>
     <p>
         If you read the <em>Quick Start Guide</em> (above) you learned how to include the Framework's core stylesheet via CDN. Next,
-        you will learn how to customize your layouts with a second stylesheet referenced just below the core stylesheet.
+        you will learn how to customize our look and feel using custom properties.
     </p>
 
 </div>
@@ -574,16 +574,16 @@ title: "Get Started"
 </div>
 <!-- .container -->
 
-<figure class="container medium my-4">
-
-    {% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-01.html" %}
-    
-</figure>
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-01.html" %}
 
 <div class="container narrow my-4">
     <p>
-        Create a new CSS document and name it <em>theme-properties.css</em>, then
-        save it to the <strong>/css/lib/</strong> directory within your project.
+        The four colors represented here (primary, secondary, dark, and light) come from our core stylesheet (via CDN). We can update these values
+        with a second stylesheet referenced just below the core stylesheet.
+    </p>
+    <p>
+        Within your project, create a new CSS document and name it <em>theme-properties.css</em> and
+        save it to the <strong>/css/lib/</strong> directory.
     </p>
     <p>
         Next, open your HTML document and add a link to <em>theme-properties.css</em> below
@@ -617,13 +617,13 @@ title: "Get Started"
 
 <figure class="container narrow my-4">
 
-    <pre data-line="1">
+    <pre>
         <code class="language-css">
             :root {
-                --primary: #25caa4;
-                --secondary: #6500d6;
-                --dark: #262345;
-                --light: #f1f4f6;
+                --primary: red;
+                --secondary: green;
+                --dark: black;
+                --light: tan;
             }
         </code>
     </pre>
@@ -634,11 +634,13 @@ title: "Get Started"
 
 </figure>
 
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-02.html" %}
+
 <div class="container narrow my-4">
     <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor at eaque quia accusamus, nostrum voluptates
-        ipsum nesciunt doloremque facere quae beatae ratione magni quibusdam cupiditate quisquam recusandae aspernatur
-        libero ut.
+        Did your colors update to these kind-of ugly ones? We have the ability to change much more than just colors.
+        The table below provides a bird's eye-view of the custom properties we can change with our
+        <em>theme-properties.css</em> stylesheet.
     </p>
 </div>
 <!-- .container -->
