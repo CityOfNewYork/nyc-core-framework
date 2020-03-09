@@ -1,7 +1,3 @@
----
-layout: documentation
-title: "Get Started"
----
 
 <div class="container narrow my-4">
 
@@ -368,21 +364,50 @@ title: "Get Started"
 <hr class="my-5" id="cssCustomPropteries">
 
 <div class="container narrow my-4">
-    <h2>CSS Custom Properties</h2>
+    <h2>Custom Properties</h2>
     <p> 
-        In NYC Core Framework, colors, fonts, and other styles can be customized using <a
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" data-link="external">CSS
-            custom properties</a> (CSS Variables).
+        In the NYC Core Framework, the color palette, font styles, spacing, and other design characteristics are declared using
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" data-link="external">custom properties</a>, instead of Sass variables.
     </p>
     <p>
-        It's no longer required to set up a <a href="https://sass-lang.com/install">Sass development environment</a> to apply
-        your own styles to the Framework. In the <em>Quick Start Guide</em> (above) we include the NYC Core stylesheet via CDN.
+        Custom properties are different than Sass variables because they are native to CSS syntax. This means you are not required to set up a <a href="https://sass-lang.com/install">Sass development
+            environment</a> to modify them.
+    </p>
+    <p>
+        Custom properties can also change at runtime.
+    </p>
+</div>
+<!-- .container -->
+
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            // Sass Variable
+            $primary: #25caa4;
+
+            // CSS Custom Property
+            --primary: #25caa4;
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 5 - Example of a Sass variable and Custom Property declaration </p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    
+    <p>
+        In the <em>Quick Start Guide</em> (above) we include the NYC Core stylesheet via CDN.
     </p>
 
     <p>
         You have the ability to update certain properties defined in this stylesheet by redefining them in a second
-        stylesheet. To see how this works, create a new CSS document and name it <em>theme-properties.css</em>, then save it
-        to the <strong>/css/dist/</strong> directory.
+        stylesheet. To see how this works, create a new CSS document and name it <em>theme-properties.css</em>, then
+        save it to the <strong>/css/dist/</strong> directory.
     </p>
     <p>
         Next, open your HTML document and add a link to <em>theme-properties.css</em> below
@@ -405,14 +430,14 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-        <p>Figure 5 - Properties defined in <em>theme-properties.css</em> will override properties defined in <em>nyc_core.css</em>.</p>
+        <p>Figure 6 - Properties defined in <em>theme-properties.css</em> will override properties defined in <em>nyc_core.css</em>.</p>
     </figcaption>
 
 </figure>
 
 <div class="container narrow my-4">
     <p>
-        Wit <em>theme-properties.css</em> open, add the following theme color declarations, and save the file.
+        With <em>theme-properties.css</em> open, add the following theme color declarations, and save the file.
     </p>
 
 </div>
@@ -432,7 +457,7 @@ title: "Get Started"
     </pre>
 
     <figcaption>
-        <p>Figure 6 - Lorem ipsum dolor sit amet consectetur</p>
+        <p>Figure 7 - Lorem ipsum dolor sit amet consectetur</p>
     </figcaption>
 
 </figure>
