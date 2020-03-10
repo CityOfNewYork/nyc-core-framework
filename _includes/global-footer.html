@@ -25,21 +25,26 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
-        const iframe = document.getElementsByTagName("iframe")[0];
-        const iframeWindow = iframe.contentWindow;
+        const iframeList = document.getElementsByTagName("iframe");
 
-        getIframeDocHeight = () => {
+        for (const iframe of iframeList) {
 
-            const iframeWindowHeight = iframeWindow.document.body.scrollHeight;
+            const iframeWindow = iframe.contentWindow;
 
-            console.log(iframeWindowHeight);
+            getIframeDocHeight = () => {
 
-            iframe.style.height = iframeWindowHeight + 'px';
+                const iframeWindowHeight = iframeWindow.document.body.scrollHeight;
+
+                console.log(iframeWindowHeight);
+
+                iframe.style.height = iframeWindowHeight + 'px';
+
+            }
+
+            iframe.addEventListener('load', getIframeDocHeight);
+            window.addEventListener('resize', getIframeDocHeight);
 
         }
-
-        iframe.addEventListener('load', getIframeDocHeight);
-        window.addEventListener('resize', getIframeDocHeight);
 
     });
 

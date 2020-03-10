@@ -84,7 +84,8 @@ td > p{
     --browser-bar-height: 2rem;
 
     overflow: hidden;
-    border-radius: 0.25em;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 
     box-shadow: 0 0 0.75rem rgba(black, 0.125);
 
@@ -94,25 +95,15 @@ td > p{
         display:block;
         min-height: 300px;
     }
-
-    @include breakpoint-down(md) {
-        --browser-bar-height: 2rem;
-
-        // iframe {
-        //     height: 400px;
-        // }
-
-
-    }
 }
 
 .browser__bar{
     height: var(--browser-bar-height);
-
+    
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: hsl(0%, 0%, 80%);
+    background-color: hsla(200, 10%, 70%, 0.5);
 
     > div{
         display: flex;
@@ -122,12 +113,17 @@ td > p{
     }
 
     > div > span{
+
         height: calc( var(--browser-bar-height) * 0.5 );
         width: calc( var(--browser-bar-height) * 0.5 );
+        
         margin-left: 0.25rem;
         margin-right: 0.25rem;
+        
         display: inline-block;
-        border-radius: 75%;
+        border-radius: 50%;
+
+        background-color: hsla(0, 0%, 0%, 0.5);
         opacity: 0.5;
 
         &:nth-child(1) {
@@ -142,5 +138,8 @@ td > p{
             background-color: green;
         }
 
+        &:nth-child(4) {
+            background-color: purple;
+        }
     }
 }
