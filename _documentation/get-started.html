@@ -578,9 +578,8 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        The four colors represented here (primary, secondary, dark, and light) come from our core stylesheet (via CDN).
-        Because we're using custom properties, we can update these values
-        with a second stylesheet referenced just below the core stylesheet.
+        The four colors represented here (primary, secondary, dark, and light) are declared as custom properties in our
+        core stylesheet which is loaded via CDN. We can update these values in a second stylesheet referenced just below the core stylesheet.
     </p>
     <p>
         Within your project, create a new CSS file and name it <em>theme-properties.css</em> and
@@ -634,14 +633,26 @@ title: "Get Started"
     </figcaption>
 
 </figure>
+
 {% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-02.html" %}
 
 <div class="container narrow my-4">
     <p>
-        Did your colors update to the blue palette? We have the ability to change much more than just colors. 
+        Did your colors update to the blue palette? Using this simple method, we have the ability to change more than just colors. 
         Let's update our theme's base font family and base font size.
     </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+</div>
+<!-- .container -->
 
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-03.html" %}
+
+
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-04.html" %}
+
+<div class="container narrow my-4">
     <p>
         The table below provides a bird's eye-view of the custom properties we can change with our
         <em>theme-properties.css</em> stylesheet.
