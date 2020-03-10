@@ -1,9 +1,31 @@
+# Name of website
+title: NYC Core Framework
 
-baseurl: '/nyc-core-framework/docs/2.0'
+# Short description of your site
+description: NYC's open source accessible design system
+
+# URL (Local)
+baseurl: '/nyc-core-framework'
+
+# Archive (Append '/version/x.x')
+# baseurl: '/nyc-core-framework/version/2.0'
+
 permalink: pretty
 
-exclude: ['readme.md']
+exclude:
+  - readme.md
   
+  # Uncomment (exclude) for versioning
+  - node_modules/*
+  - version/*
+  - .babelrc
+  - Gemfile
+  - Gemfile.lock
+  - nyc-core-framework.code-workspace
+  - package-lock.json
+  - package.json
+  - webpack.config.js
+
 collections:
   documentation:
     output: true
