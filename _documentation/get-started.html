@@ -609,7 +609,7 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        With <em>theme-properties.css</em> open, add the following theme color declarations, save this file, and refresh your broswer.
+        With <em>theme-properties.css</em> open, add the following theme color declarations, save this file, and refresh your browser.
     </p>
 
 </div>
@@ -689,27 +689,21 @@ title: "Get Started"
 
 <figure class="container medium my-4">
 
-    <table class="fs-md">
+    <table class="fs-md my-3">
         <thead>
             <tr>
-                <th class="w-30">Design Property</th>
-                <th class="w-40">Default Value</th>
-                <th class="w-30">Found in /css/src/partials/</th>
+                <th class="w-30">Colors</th>
+                <th class="w-30">Custom Property</th>
+                <th>Default Value</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Theme Colors</td>
-                <td>
-                    <p>--primary:#0080f8;</p>
-                    <p>--secondary:#0080f8;</p>
-                    <p>--dark:#0080f8;</p>
-                    <p>--light:#0080f8;</p>
-                    <p>--primary:#0080f8;</p>
-                    <p>--primary:#0080f8;</p>  
-                </td>
-                <td>
-                    <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/css/src/partials/_colors.scss">
+                <td rowspan="11">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <a class="fs-sm" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/css/src/partials/_colors.scss">
                         <strong>
                             _colors.scss
                         </strong>
@@ -717,21 +711,181 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>Theme Colors</td>
                 <td>
-                    <p>--primary:#0080f8;</p>
-                    <p>--secondary:#0080f8;</p>
-                    <p>--dark:#0080f8;</p>
-                    <p>--light:#0080f8;</p>
-                    <p>--primary:#0080f8;</p>
-                    <p>--primary:#0080f8;</p>  
+                    --primary
                 </td>
                 <td>
-                    <a href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/css/src/partials/_colors.scss">
+                    #25caa4
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --secondary
+                </td>
+                <td>
+                    #6500d6
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --dark
+                </td>
+                <td>
+                    #262345
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --light
+                </td>
+                <td>
+                    #f1f4f6
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --text-on-primary
+                </td>
+                <td>
+                    var(--dark)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --text-on-secondary
+                </td>
+                <td>
+                    white
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --a11y-link-color
+                </td>
+                <td>
+                    blue
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --confirm
+                </td>
+                <td>
+                    #008230
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --attention
+                </td>
+                <td>
+                    #3953B1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --warn
+                </td>
+                <td>
+                    #dc3545
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <table class="fs-md my-3">
+        <thead>
+            <tr>
+                <th class="w-30">Typography</th>
+                <th class="w-30">Custom Property</th>
+                <th>Default Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="11">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <a class="fs-sm"
+                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/css/src/partials/_colors.scss">
                         <strong>
-                            _colors.scss
+                            _typography.scss
                         </strong>
                     </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-font-family
+                </td>
+                <td>
+                    "Source Sans Pro"
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-font-weight-normal
+                </td>
+                <td>
+                    400
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-font-weight-bold
+                </td>
+                <td>
+                    700
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-line-height
+                </td>
+                <td>
+                    1.5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-sm
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 0.7)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-md
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 0.8)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-rg
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 1)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-lg
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 1.2)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-xl
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 1.4)
                 </td>
             </tr>
         </tbody>
