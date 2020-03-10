@@ -1,6 +1,6 @@
 <header class="bc-primary" id="global-header" role="banner">
 
-    {% if page.url contains '/version/' %}
+    {% if site.baseurl contains '/version/' %}
     
     <div class="bc-dark py-4 position-relative">
 
@@ -58,6 +58,9 @@
                         <ul class="fs-md box-shadow-sm--lg">
                             <li class="fw-bold">
                                 <a href="{{ site.baseurl }}/">v2.0 - Battery Park</a>
+                            </li>
+                            <li>
+                                <a href="{{ site.baseurl }}/version/1.5">v1.5 - Test Version</a>
                             </li>
                             <li>
                                 <a href="http://nyc.gov/nyc-core-framework">v1.0 - Alphabet City</a>

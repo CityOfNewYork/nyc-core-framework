@@ -1,0 +1,157 @@
+/*
+
+In this file:
+
+// A. Imports
+// B. Custom Properties
+// C. Theme Styles
+
+*/
+
+//////////////////////////////////////////////
+// A. Imports
+//////////////////////////////////////////////
+
+@import "partials/breakpoints";
+
+//////////////////////////////////////////////
+// B. Custom Properties
+//////////////////////////////////////////////
+
+:root {
+    --primary: #222BE6;
+    --secondary: #00D5A0;
+    --dark: #000050;
+    --light: #f1f4f6;
+    --text-on-primary: white;
+    --text-on-secondary: var(--dark);
+
+    --attention: var(--primary);
+
+    --base-font-size: 20px;
+    --base-line-height: 1.5;
+
+    --base-font-family: "neue-haas-grotesk-text";
+}
+
+//////////////////////////////////////////////
+// C. Theme Styles
+//////////////////////////////////////////////
+
+.callout {
+    overflow: hidden;
+
+    .message {
+        position: relative;
+    }
+
+    @include breakpoint-down(md) {
+        text-align: center;
+
+        .grid {
+            position: relative;
+
+            .message {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                background-color: rgba(white, 0.75);
+            }
+
+            .message > div {
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: var(--s4);
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+table{
+    line-height: var(--base-line-height);
+}
+
+td > p{
+    margin-bottom: 0.5em;
+}
+
+
+.browser{
+    --browser-bar-height: 2rem;
+
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    box-shadow: 0 0 0.75rem rgba(black, 0.125);
+
+    iframe {
+        border: none;
+        width: 100%;
+        display:block;
+        min-height: 200px;
+    }
+}
+
+.browser__bar{
+    display: flex;
+    flex-direction: row;
+    height: var(--browser-bar-height);
+    
+    background-color: hsla(200, 10%, 70%, 0.5);
+
+    > div{
+        display: flex;
+        flex-direction: row;
+        margin-left: calc(var(--browser-bar-height) * 0.25);
+        margin-right: calc(var(--browser-bar-height) * 0.25);
+    }
+
+    > div > span{
+
+        align-self: center;
+
+        height: calc( var(--browser-bar-height) * 0.375 );
+        width: calc( var(--browser-bar-height) * 0.375 );
+        
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        
+        display: inline-block;
+        border-radius: 50%;
+
+        background-color: hsla(0, 0%, 0%, 0.5);
+        opacity: 0.5;
+
+        &:nth-child(1) {
+            background-color: red;
+        }
+
+        &:nth-child(2) {
+            background-color: orange;
+        }
+
+        &:nth-child(3) {
+            background-color: green;
+        }
+
+        &:nth-child(4) {
+
+            height: calc(var(--browser-bar-height) - 0.375rem);
+            width: calc(var(--browser-bar-height) * 3);
+            background-color: hsla(0, 0%, 100%, 0.95);
+
+            margin-top: auto;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+
+            border-radius: 0;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+    }
+}

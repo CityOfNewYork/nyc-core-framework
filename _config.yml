@@ -8,17 +8,20 @@ description: NYC's open source accessible design system
 baseurl: '/nyc-core-framework'
 
 # Archive (Append '/version/x.x')
-# baseurl: '/nyc-core-framework/version/2.0'
+# baseurl: '/nyc-core-framework/version/1.5'
 
+# Permalinks
 permalink: pretty
 
+# Exclude
 exclude:
   - readme.md
   
-  # Uncomment (exclude) for versioning
-  - node_modules/*
-  - version/*
+  # Comment (exclude) for versioning
+  # - version/*`
+
   - .babelrc
+  - node_modules/*
   - Gemfile
   - Gemfile.lock
   - nyc-core-framework.code-workspace
