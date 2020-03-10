@@ -88,20 +88,21 @@ td > p{
 
     box-shadow: 0 0 0.75rem rgba(black, 0.125);
 
+    iframe {
+        border: none;
+        width: 100%;
+        display:block;
+        min-height: 300px;
+    }
+
     @include breakpoint-down(md) {
         --browser-bar-height: 2rem;
 
-        [class*="aspect-ratio--"] {
-            height: 400px;
-        }
+        // iframe {
+        //     height: 400px;
+        // }
 
-        [class*="aspect-ratio--"]::before {
-            padding-top: 0;
-        }
 
-        .aspect-ratio__element {
-            position: relative;
-        }
     }
 }
 

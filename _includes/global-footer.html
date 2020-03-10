@@ -19,3 +19,28 @@
 <script src="{{ site.baseurl }}/js/lib/prism.js"></script>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 {% endif %}
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const iframe = document.getElementsByTagName("iframe")[0];
+        const iframeWindow = iframe.contentWindow;
+
+        getIframeDocHeight = () => {
+
+            const iframeWindowHeight = iframeWindow.document.body.scrollHeight;
+
+            console.log(iframeWindowHeight);
+
+            iframe.style.height = iframeWindowHeight + 'px';
+
+        }
+
+        iframe.addEventListener('load', getIframeDocHeight);
+        window.addEventListener('resize', getIframeDocHeight);
+
+    });
+
+</script>
