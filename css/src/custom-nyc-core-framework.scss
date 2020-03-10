@@ -93,16 +93,15 @@ td > p{
         border: none;
         width: 100%;
         display:block;
-        min-height: 300px;
+        min-height: 400px;
     }
 }
 
 .browser__bar{
-    height: var(--browser-bar-height);
-    
     display: flex;
     flex-direction: row;
-    align-items: center;
+    height: var(--browser-bar-height);
+    
     background-color: hsla(200, 10%, 70%, 0.5);
 
     > div{
@@ -114,8 +113,10 @@ td > p{
 
     > div > span{
 
-        height: calc( var(--browser-bar-height) * 0.5 );
-        width: calc( var(--browser-bar-height) * 0.5 );
+        align-self: center;
+
+        height: calc( var(--browser-bar-height) * 0.375 );
+        width: calc( var(--browser-bar-height) * 0.375 );
         
         margin-left: 0.25rem;
         margin-right: 0.25rem;
@@ -139,7 +140,18 @@ td > p{
         }
 
         &:nth-child(4) {
-            background-color: purple;
+
+            height: calc(var(--browser-bar-height) - 0.375rem);
+            width: calc(var(--browser-bar-height) * 3);
+            background-color: hsla(0, 0%, 100%, 0.95);
+
+            margin-top: auto;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+
+            border-radius: 0;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
         }
     }
 }
