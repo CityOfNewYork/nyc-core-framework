@@ -75,10 +75,13 @@ table{
     line-height: var(--base-line-height);
 }
 
+td > p{
+    margin-bottom: 0.5em;
+}
 
 
 .browser{
-    --browser-bar-height: 2.5rem;
+    --browser-bar-height: 2rem;
 
     overflow: hidden;
     border-radius: 0.25em;
