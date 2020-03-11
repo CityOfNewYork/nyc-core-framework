@@ -4,12 +4,29 @@ title: "Theming"
 ---
 
 <div class="container narrow my-4">
+
     <h2 class="h1">
         Distinguish yourself without starting from scratch.
     </h2>
+    
     <p>
         The NYC Core Framwork makes it easy to apply your own color combinations, typography, spacing, and sizing to our prebuilt layouts and components.  
     </p>
+
+    <div class="alert--attention-light my-4">
+
+        <p class="alert__title">
+            <span class="fas fa-exclamation-circle fa-lg" aria-hidden="true"></span>
+            <span class="text">Attention Title</span>
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum <a href="#1">quos natus
+                aliquam</a>.
+        </p>
+
+    </div>
+
     <p>
         While it's possible to customize NYC Core Framework <a href="#1">using Sass</a>, since version 2.0, we offer a
         more convenient approach to theming with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">Custom Properties</a>
@@ -21,7 +38,7 @@ title: "Theming"
 <hr class="my-5" id="customProperties">
 
 <div class="container narrow my-4">
-    <h2>Custom Properties</h2>
+    <h2>Using Custom Properties</h2>
     <p>
         Custom properties are similar to <a
             href="https://sass-lang.com/documentation/variables">Sass variables</a> because they
@@ -163,7 +180,7 @@ title: "Theming"
 <div class="container narrow my-4">
     <h3>Color Exercise</h3>
     <p>
-        Let's start by updating our theme colors. Copy the following HTML document and save it into your project's root directory.
+        Let's start by customizing our theme colors. Copy and paste the HTML below into a new document. Save it as <em>theming-example.html</em> into your project's root directory.
     </p>
 </div>
 <!-- .container -->
@@ -308,11 +325,45 @@ title: "Theming"
 <div class="container narrow my-4">
     <p>
         Did your colors update to the blue palette? Using this simple method, we have the ability to change more than just colors. 
-        Let's update our theme's base font family and base font size.
+        
     </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow my-4">
+    <h3>Typography Exercise</h3>
     <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        We can easily update our theme's base font family and base font size. Reopen <em>theming-example.html</em>, and add (or replace) the following content within the <code>main</code> tag.
     </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="container narrow my-5"&gt;
+
+                &lt;h1&gt;Lorem ipsum dolor&lt;/h1&gt;
+
+                &lt;p&gt;
+                    Malesuada dapibus ac condimentum habitasse a praesent commodo
+                    penatibus parturient duis pretium et dolor parturient Est vehicula
+                    facilisis ad proin condimentum pretium augue accumsan sapien potenti
+                    non vestibulum aptent non cum ullamcorper
+                    &lt;a href="#1"&gt;porttitor est volutpat&lt;/a&gt;.
+                &lt;/p&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .container --&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 11 - Example of basic HTML file.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>You should see the following text in your browser.</p>
 </div>
 <!-- .container -->
 
