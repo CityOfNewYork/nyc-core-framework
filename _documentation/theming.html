@@ -2,13 +2,18 @@
 layout: documentation
 title: "Theming"
 ---
+
 <div class="container narrow my-4">
     <h2 class="h1">
-        Create your own look and feel without starting from scratch.
+        Distinguish yourself without starting from scratch.
     </h2>
     <p>
-        In this section, learn about the high-level accessibility features built into the NYC Core Framework, and
-        circumstances to look out for when developing your custom templates.
+        The NYC Core Framwork makes it easy to apply your own color combinations, typography, spacing, and sizing to our prebuilt layouts and components.  
+    </p>
+    <p>
+        While it's possible to customize NYC Core Framework <a href="#1">using Sass</a>, since version 2.0, we offer a
+        more convenient approach to theming with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">Custom Properties</a>
+        (also known as CSS variables).
     </p>
 </div>
 <!-- .container -->
@@ -18,13 +23,9 @@ title: "Theming"
 <div class="container narrow my-4">
     <h2>Custom Properties</h2>
     <p>
-        It is possible to personalize NYC Core Framework <a href="#1">using Sass</a>, however, since version 2.0, we offer a more convenient methodology with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
-        >Custom Properties</a>.
-    </p>
-    <p>
-        Custom properties (also known as CSS variables) are similar to <a
+        Custom properties are similar to <a
             href="https://sass-lang.com/documentation/variables">Sass variables</a> because they
-            both allow you to store reusable values. Custom properties, however, provide additional benefits not offered by Sass variables.
+        both allow you to store reusable values.
     </p>
 </div>
 <!-- .container -->
@@ -67,9 +68,10 @@ title: "Theming"
 
 <div class="container narrow my-4">
     <p>
-        Custom properties are native CSS syntax. This means you do not need to set up a <a
-            href="https://sass-lang.com/install">Sass development environment</a> to modify them. Additionally, custom
-        properties can be scoped globally to the HTML (using the <code>:root</code> pseudo-class) and scoped locally to a selector (e.g.
+        Custom properties, however, provide additional benefits that Sass variables do not. Custom properties are native CSS syntax. This means you do
+        not need to set up a <a href="https://sass-lang.com/install">Sass development environment</a> to modify them.
+        Additionally, custom properties can be scoped globally to the HTML (using the <code>:root</code> pseudo-class) and scoped locally to
+        a selector (e.g.
         <code>.selector--primary</code>).
     </p>
 </div>
@@ -146,21 +148,98 @@ title: "Theming"
 </div>
 <!-- .container -->
 
+<hr class="my-5" id="themingExercise">
 <div class="container narrow my-4">
-
-    <h3>Customize Your Theme Using a Second Stylesheet</h3>
+    <h2>Theming in Practice</h2>
     <p>
-        If you read the <em>Quick Start Guide</em> (above) you learned how to include the Framework's core stylesheet via CDN. Next,
-        we'll show you the easiest way to customize your theme.
+        Our <a href="{{ site.baseurl }}/nyc-core-framework/documentation/get-started/#quickStartGuide">Quick Start
+            Guide</a> shows you how to include the Framework's core stylesheet via CDN. Now you will learn how to
+        customize your
+        theme using a second stylesheet.
     </p>
-    <p>
-        To begin this exercise, download or copy the contents of our <a
-            href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/_examples/getting_started/custom-properties-1.html">Custom
-            Properties Example</a> and save it as an HTML document into your project's root directory.
-    </p>
+</div>
+<!-- .container -->
 
+<div class="container narrow my-4">
+    <h3>Color Exercise</h3>
+    <p>
+        Let's start by updating our theme colors. Copy the following HTML document and save it into your project's root directory.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+    <pre>
+        <code class="language-html">
+
+           &lt;!DOCTYPE html&gt;
+
+            &lt;html lang="en" dir="ltr"&gt;
+
+                &lt;head&gt;
+
+                    &lt;!-- IE Compatibility Mode --&gt;
+                    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+                    &lt;title&gt;Theme Color • NYC Core Framework&lt;/title&gt;
+
+                    &lt;!-- Font Awesome Kit --&gt;
+                    &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+                    &lt;!-- NYC Core Stylesheet --&gt;
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
+                    
+                &lt;/head&gt;
+
+                &lt;body class="bc-white"&gt;
+
+                    &lt;main id="skip-header-content" role="main"&gt;
+
+                        &lt;div class="container narrow my-5"&gt;
+
+                            &lt;div class="bc-primary p-3 my-2"&gt;
+                                &lt;p&gt;Primary&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="bc-secondary p-3 my-2"&gt;
+                                &lt;p&gt;Secondary&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="bc-dark p-3 my-2"&gt;
+                                &lt;p&gt;Dark&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="bc-light p-3 my-2"&gt;
+                                &lt;p&gt;Light&lt;/p&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+                        &lt;!-- .container --&gt;        
+
+                    &lt;/main&gt;
+
+                    &lt;!-- NYC Core Javascript --&gt;
+                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/js/dist/nyc_core.js"&gt;&lt;/script&gt;
+
+                    &lt;!-- IE Custom Properties Polyfill --&gt;
+                    &lt;script&gt;
+                        window.MSInputMethodContext && document.documentMode && document.write(
+                            '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
+                        );
+                    &lt;/script&gt;
+
+                &lt;/body&gt;
+
+            &lt;/html&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 11 - Example of basic HTML file.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
     <p>Preview it in a browser. It should resemble the figure below.</p>
-
 </div>
 <!-- .container -->
 
