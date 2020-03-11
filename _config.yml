@@ -35,3 +35,4 @@ collections:
     permalink: /documentation/:path/
     order: 
       - get-started.html
+      - theming.html

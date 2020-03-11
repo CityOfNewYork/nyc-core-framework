@@ -1,0 +1,485 @@
+---
+layout: documentation
+title: "Theming"
+---
+<div class="container narrow my-4">
+    <h2 class="h1">
+        Create your own look and feel without starting from scratch.
+    </h2>
+    <p>
+        In this section, learn about the high-level accessibility features built into the NYC Core Framework, and
+        circumstances to look out for when developing your custom templates.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="my-5" id="customProperties">
+
+<div class="container narrow my-4">
+    <h2>Custom Properties</h2>
+    <p>
+        It is possible to personalize NYC Core Framework <a href="#1">using Sass</a>, however, since version 2.0, we offer a more convenient methodology with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+        >Custom Properties</a>.
+    </p>
+    <p>
+        Custom properties (also known as CSS variables) are similar to <a
+            href="https://sass-lang.com/documentation/variables">Sass variables</a> because they
+            both allow you to store reusable values. Custom properties, however, provide additional benefits not offered by Sass variables.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            $primary: navy;
+
+            .selector--primary{
+                background-color: $primary
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 6 - Basic example of Sass variable usage.</p>
+    </figcaption>
+
+</figure>
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            --primary: navy;
+
+            .selector--primary{
+                background-color: var(--primary);
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 7 - Basic example of custom property usage.</p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Custom properties are native CSS syntax. This means you do not need to set up a <a
+            href="https://sass-lang.com/install">Sass development environment</a> to modify them. Additionally, custom
+        properties can be scoped globally to the HTML (using the <code>:root</code> pseudo-class) and scoped locally to a selector (e.g.
+        <code>.selector--primary</code>).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            :root{
+                --primary: navy;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 8 - Example of a globally scoped custom property.</p>
+    </figcaption>
+
+</figure>
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            .selector--primary {
+                --primary: navy;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 9 - Example of a locally scoped custom property.</p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Custom properties can be scoped globally and redefined locally. Consider the following example where <code>--primary</code> is defined
+        on <code>:root</code>, and redefined on <code>.selector--primary</code>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+
+            :root{
+                --primary: navy;
+            }
+
+            .selector--primary {
+                --primary: maroon;
+            }
+
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 10 - Example of a locally scoped custom property.</p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        In the NYC Core Framework, the color palette, font styles, spacing utilities, and other design characteristics are
+        declared using custom properties.
+    </p>
+
+</div>
+<!-- .container -->
+
+<div class="container narrow my-4">
+
+    <h3>Customize Your Theme Using a Second Stylesheet</h3>
+    <p>
+        If you read the <em>Quick Start Guide</em> (above) you learned how to include the Framework's core stylesheet via CDN. Next,
+        we'll show you the easiest way to customize your theme.
+    </p>
+    <p>
+        To begin this exercise, download or copy the contents of our <a
+            href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/_examples/getting_started/custom-properties-1.html">Custom
+            Properties Example</a> and save it as an HTML document into your project's root directory.
+    </p>
+
+    <p>Preview it in a browser. It should resemble the figure below.</p>
+
+</div>
+<!-- .container -->
+
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-01.html" %}
+
+<div class="container narrow my-4">
+    <p>
+        The four colors represented here (primary, secondary, dark, and light) are declared as custom properties in our
+        core stylesheet which is loaded via CDN. We can update these values in a second stylesheet referenced just below the core stylesheet.
+    </p>
+    <p>
+        Within your project, create a new CSS file and name it <em>theme-properties.css</em> and
+        save it to the <strong>/css/lib/</strong> directory.
+    </p>
+    <p>
+        Next, open your HTML document and add a link to <em>theme-properties.css</em> below
+        <em>nyc_core.css</em>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;!-- NYC Core Stylesheet --&gt;
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
+
+            &lt;!-- Custom Theme Properties --&gt;
+            &lt;link rel="stylesheet" href="./css/lib/theme-properties.css"&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 11 - Properties defined in <em>theme-properties.css</em> will override properties defined in <em>nyc_core.css</em>.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        With <em>theme-properties.css</em> open, add the following theme color declarations, save this file, and refresh your browser.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <pre>
+        <code class="language-css">
+            :root {
+                --primary:#0080f8;
+                --secondary: #004080;
+                --dark: #09172c;
+                --light: #e6f6fe;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 12 - Lorem ipsum dolor sit amet consectetur</p>
+    </figcaption>
+
+</figure>
+
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-02.html" %}
+
+<div class="container narrow my-4">
+    <p>
+        Did your colors update to the blue palette? Using this simple method, we have the ability to change more than just colors. 
+        Let's update our theme's base font family and base font size.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
+</div>
+<!-- .container -->
+
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-03.html" %}
+
+<div class="container narrow my-4">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate eaque repellat praesentium expedita nobis quas, beatae voluptatibus minus aperiam assumenda.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <pre>
+        <code class="language-css">
+            @import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap');
+
+            :root {
+                --base-font-family: "Lora", serif;
+                --base-font-size: 20px;
+                --base-line-height: 1.5;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 13 - Lorem ipsum dolor sit amet consectetur</p>
+    </figcaption>
+
+</figure>
+
+{% include browser-iframe.html iframe_url="/examples/get-started/custom-properties-04.html" %}
+
+<div class="container narrow my-4">
+    <p>
+        The table below provides a bird's eye-view of the custom properties we can change with our
+        <em>theme-properties.css</em> stylesheet.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+
+    <table class="fs-md my-3">
+        <thead>
+            <tr>
+                <th class="w-30">Colors</th>
+                <th class="w-30">Custom Property</th>
+                <th>Default Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="11">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <a class="fs-sm" href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/css/src/partials/_colors.scss">
+                        <strong>
+                            _colors.scss
+                        </strong>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --primary
+                </td>
+                <td>
+                    #25caa4
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --secondary
+                </td>
+                <td>
+                    #6500d6
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --dark
+                </td>
+                <td>
+                    #262345
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --light
+                </td>
+                <td>
+                    #f1f4f6
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --text-on-primary
+                </td>
+                <td>
+                    var(--dark)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --text-on-secondary
+                </td>
+                <td>
+                    white
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --a11y-link-color
+                </td>
+                <td>
+                    blue
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --confirm
+                </td>
+                <td>
+                    #008230
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --attention
+                </td>
+                <td>
+                    #3953B1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --warn
+                </td>
+                <td>
+                    #dc3545
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <table class="fs-md my-3">
+        <thead>
+            <tr>
+                <th class="w-30">Typography</th>
+                <th class="w-30">Custom Property</th>
+                <th>Default Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="11">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <a class="fs-sm"
+                        href="https://github.com/CityOfNewYork/nyc-core-framework/blob/new-version/css/src/partials/_colors.scss">
+                        <strong>
+                            _typography.scss
+                        </strong>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-font-family
+                </td>
+                <td>
+                    "Source Sans Pro"
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-font-weight-normal
+                </td>
+                <td>
+                    400
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-font-weight-bold
+                </td>
+                <td>
+                    700
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --base-line-height
+                </td>
+                <td>
+                    1.5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-sm
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 0.7)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-md
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 0.8)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-rg
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 1)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-lg
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 1.2)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    --font-size-xl
+                </td>
+                <td>
+                    calc(var(--base-font-size) * 1.4)
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</figure>
