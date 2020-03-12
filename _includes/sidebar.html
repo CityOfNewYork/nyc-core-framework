@@ -1,6 +1,6 @@
 <ul class="nav fs-md" role="navigation">
 
-    {% for doc in site.documentation %}
+    {% for doc in site.docs-introduction %}
     
     <li>
         <a href="{{site.baseurl}}/documentation/{{doc.slug}}" {% if page.url contains {{doc.slug}} %}
@@ -12,3 +12,21 @@
     {% endfor %}
 
 </ul>
+
+<hr class="my-3 mx-n3">
+
+<ul class="nav fs-md" role="navigation">
+
+    {% for doc in site.docs-components-and-classes %}
+
+    <li>
+        <a href="{{site.baseurl}}/documentation/{{doc.slug}}" {% if page.url contains {{doc.slug}} %}
+            aria-current="page" {% endif %}>
+            {{ doc.title }}
+        </a>
+    </li>
+
+    {% endfor %}
+
+</ul>
+

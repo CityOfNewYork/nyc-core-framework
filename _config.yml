@@ -30,9 +30,15 @@ exclude:
   - webpack.config.js
 
 collections:
-  documentation:
+
+  docs-introduction:
     output: true
     permalink: /documentation/:path/
     order: 
       - get-started.html
       - theming.html
+      - accessibility.html
+
+  docs-components-and-classes:
+    output: true
+    permalink: /documentation/:path/
