@@ -6,14 +6,14 @@
 
   		"liveSassCompile.settings.includeItems": [
 			// Main SASS file is location
-  			"css/src/nyc_core.scss"
+  			"src/css/nyc_core.scss"
   		],
 
   		"liveSassCompile.settings.formats": [
 			{
 				"format": "compressed",
 				"extensionName": ".css",
-				"savePath": "/css/dist"
+				"savePath": "/dist/css"
 		  	}
 		],
 

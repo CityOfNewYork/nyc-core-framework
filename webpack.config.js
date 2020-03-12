@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        nyc_core: './js/src/index.js'
+        nyc_core: './src/js/index.js'
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, './js/dist')
+        path: path.resolve(__dirname, './dist/js')
     },
     mode: 'production',
     module: {
