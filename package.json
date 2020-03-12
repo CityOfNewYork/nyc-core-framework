@@ -4,7 +4,7 @@
   "description": "NYC Core Framework is an open-source front end toolkit for building modern, accessible websites and applications.",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
