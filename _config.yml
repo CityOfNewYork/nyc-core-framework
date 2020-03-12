@@ -39,6 +39,6 @@ collections:
       - theming.html
       - accessibility.html
 
-  docs-components-and-classes:
+  docs-examples:
     output: true
     permalink: /documentation/:path/
