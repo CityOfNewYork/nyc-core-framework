@@ -32,6 +32,7 @@ $acc-transition: 0.25s ease-out;
     border-top-style: var(--default-border-style);
 
     padding: $acc-padding-y $acc-padding-x;
+    margin-bottom: 0;
 
     @include caret(down);
 
