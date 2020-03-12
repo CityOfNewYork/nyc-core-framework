@@ -36,9 +36,9 @@ collections:
     permalink: /documentation/:path/
     order: 
       - get-started.html
-      - theming.html
+      - customization.html
       - accessibility.html
 
-  docs-examples:
+  docs-a-z:
     output: true
     permalink: /documentation/:path/

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Theming"
+title: "Customization"
 ---
 
 <div class="container narrow my-4">
@@ -8,8 +8,7 @@ title: "Theming"
         Distinguish yourself without starting from scratch.
     </h2>
     <p>
-        The NYC Core Framwork makes it easy to apply your own color combinations, typography, spacing, and sizing to our
-        prebuilt templates and components.
+        Apply your own color, typography, spacing, and sizing to our prebuilt templates and components. There are two fundamentally different ways to customize the NYC Core Framwork—with our CDN stylesheet and CSS custom properties, or with a Sass development environment.
     </p>
 </div>
 <!-- .container -->
@@ -17,16 +16,15 @@ title: "Theming"
 <hr class="my-5" id="customProperties">
 
 <div class="container narrow my-4">
-    <h2>Custom Properties</h2>
+    <h2>CDN and Custom Properties</h2>
     <p>
-        <a href="Custom properties">Custom properties</a> (also known as CSS variables) are similar to <a
-            href="https://sass-lang.com/documentation/variables">Sass variables</a> because they
-        both allow you to store and reuse values in your CSS (see Figure 6 and 7 below). Custom properties, however, provide additional benefits that Sass
+        Our <a href="{{ site.baseurl }}/nyc-core-framework/documentation/get-started/#quickStartGuide">Quick Start Guide</a> shows you how to include the Framework's core stylesheet via CDN. In the Framework, the colors, fonts, breakpoints, and utility values are declared using custom properties (also known as CSS variables)
+    <p>
+        If you're unfamiliar with custom properties, <a href="#1">read the MDN web docs</a>. They are similar to <a href="https://sass-lang.com/documentation/variables">Sass variables</a> because they both allow you to store and reuse values in your CSS (see Figure 6 and 7 below). Custom properties, however, provide additional benefits that Sass
         variables do not.
      </p>
 </div>
 <!-- .container -->
-
 
 <figure class="container narrow my-4">
 
@@ -66,13 +64,7 @@ title: "Theming"
 
 <div class="container narrow my-4">
     <p>
-        Custom properties are native to CSS, and can update at runtime, so we
-        do not need to set up a Sass development environment to modify them. In the NYC Core Framework, the colors,
-        fonts, breakpoints, and utility values are declared using custom properties.
-    </p>
-    <p>
-        Our <a href="{{ site.baseurl }}/nyc-core-framework/documentation/get-started/#quickStartGuide">Quick Start
-            Guide</a> shows you how to include the Framework's core stylesheet via CDN. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Because custom properties can update at runtime, we can modify values from our CDN stylesheet by declaring new values in a second stylesheet.
     </p>
 </div>
 <!-- .container -->
@@ -81,7 +73,7 @@ title: "Theming"
 
 
 <div class="container narrow my-4">
-    <h3>Color Exercise</h3>
+    <h3>Customizing Colors</h3>
     <p>
         Let's start by customizing our theme colors. Copy and paste the HTML below into a new document. Save it as <em>theming-example.html</em> into your project's root directory.
     </p>
@@ -234,7 +226,7 @@ title: "Theming"
 <!-- .container -->
 
 <div class="container narrow my-4">
-    <h3>Typography Exercise</h3>
+    <h3>Customizing Fonts</h3>
     <p>
         We can easily update our theme's base font family and base font size. Reopen <em>theming-example.html</em>, and add (or replace) the following content within the <code>main</code> tag.
     </p>
