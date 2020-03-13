@@ -21,16 +21,42 @@ In this file:
     --dark: #262345;
     --light: #f1f4f6;
 
-    // Text Colors for Primary and Secondary
-
-    --text-on-primary: var(--dark);
-    --text-on-secondary: white;
-
     // Accessible Link Color
 
     --a11y-link-color: blue;
 
-    // Form Feedback and Alert Colors
+    // Associated Primary Colors
+
+    --primary-text: var(--dark);
+    --primary-border: hsla(0, 0%, 0%, 0.125);
+    --primary-link: currentColor;
+
+    // Associated Secondary Colors
+
+    --secondary-text: white;
+    --secondary-border: hsla(0, 0%, 0%, 0.25);
+    --secondary-link: currentColor;
+
+    // Associated Dark Colors
+
+    --dark-text: white;
+    --dark-border: hsla(0, 0%, 100%, 0.125);
+    --dark-link: currentColor;
+
+    // Associated Light Colors
+
+    --light-text: var(--dark);
+    --light-border: hsl(0, 0%, 50%, 0.25);
+    --light-link: var(--a11y-link-color);
+
+
+    // Associated Light Colors
+
+    --white-text: var(--dark);
+    --white-border: hsl(0, 0%, 50%, 0.25);
+    --white-link: var(--a11y-link-color);
+
+    // Alert and Form Feedback Colors
 
     --confirm: #008230;
     --attention: #3953B1;
@@ -44,43 +70,46 @@ In this file:
 $theme-colors: (
 
     "white": (
-        swatch: white,
-        text: var(--dark),
-        border: rgba(black, 0.125),
-        link: var(--a11y-link-color)
-    ),
+        swatch: var(--white),
+        text: var(--white-text),
+        border: var(--white-border),
+        link: var(--white-link)
+    ), 
         
     "primary": (
         swatch: var(--primary),
-        text: var(--text-on-primary),
-        border: rgba(black, 0.125)
+        text: var(--primary-text),
+        border: var(--primary-border),
+        link: var(--primary-link)
     ), 
     
     "secondary": (
         swatch: var(--secondary),
-        text: var(--text-on-secondary),
-        border: rgba(black, 0.25)
+        text: var(--secondary-text),
+        border: var(--secondary-border),
+        link: var(--secondary-link)
     ), 
     
     "dark": (
         swatch: var(--dark),
-        text: white,
-        border: rgba(white, 0.125)
+        text: var(--dark-text),
+        border: var(--dark-border),
+        link: var(--dark-link)
     ), 
     
     "light": (
-        swatch: var(--light), 
-        text: var(--dark), 
-        border: rgba(gray, 0.25),
-        link: var(--a11y-link-color)
+        swatch: var(--light),
+        text: var(--light-text),
+        border: var(--light-border),
+        link: var(--light-link)
     )
 );
 
 //////////////////////////////////////////////
-// C. Feedback Color Map
+// C. Alert Color Map
 //////////////////////////////////////////////
 
-$feedback-colors: (
+$alert-colors: (
     confirm: var(--confirm),
     attention: var(--attention),
     warn: var(--warn)
@@ -153,21 +182,21 @@ $feedback-colors: (
     }
 }
 
-.tc-link {
-    color: var(--a11y-link-color);
-}
-
 [class*="tc-"] {
     a {
         color: currentColor !important;
     }
 }
 
+.tc-link {
+    color: var(--a11y-link-color);
+}
+
 //////////////////////////////////////////////
 // F. Alert Color Classes 
 //////////////////////////////////////////////
 
-@each $name, $value in $feedback-colors {
+@each $name, $value in $alert-colors {
 
     .alert--#{$name}-light {
         color: $value;

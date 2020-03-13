@@ -6,7 +6,7 @@
 
   		"liveSassCompile.settings.includeItems": [
 			// Main SASS file is location
-  			"src/css/nyc_core.scss"
+  			"src/scss/nyc_core.scss"
   		],
 
   		"liveSassCompile.settings.formats": [
