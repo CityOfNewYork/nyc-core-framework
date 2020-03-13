@@ -1,0 +1,607 @@
+---
+layout: documentation
+title: "Navigation"
+---
+
+<div class="container narrow my-4">
+    <p>
+        An assortment of responsive navigation menus are available with only a few simple classes.
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow my-4">
+    <div class="alert--attention-light my-3">
+        <p class="alert__title">
+            <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
+            <span class="text">Navigation Accessibility</span>
+        </p>
+        <p>
+            Like our buttons, navigation features visible hover and focus states to communicate a button's
+            current state to the user.
+        </p>
+        <p>Learn more about <a href="#1">visible hover and focus</a>.</p>
+    </div>
+    <!-- .alert -->
+</div>
+<!-- .container -->
+
+<hr class="my-5" id="basicNavigation">
+
+<div class="container narrow my-4">
+    <h2>Basic Navigation</h2>
+    <p>
+        Add the class <code>.nav</code> to a <code>&lt;ul&gt;</code> for a simple vertical menu.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100 p-4">
+                <ul class="nav" role="navigation">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;ul class="nav" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 1 - Simple vertical navigation menu.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        For a horizontal menu, apply the <code>.horizontal</code> class.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100 p-4">
+                <ul class="nav horizontal" role="navigation">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;ul class="nav horizontal" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2 - Simple horizontal menu</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <h3>Breakpoint Modifier</h3>
+    <p>
+        Append a breakpoint modifier (e.g., <code>--md</code>) to the <code>.horizontal</code> class, and the menu goes
+        from vertical to horizontal at a specific breakpoint. The example navigation below starts as vertical navigation and
+        switches to horizontal at the medium breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100 p-4">
+                <ul class="nav horizontal--md" role="navigation">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;ul class="nav horizontal--md" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 3 - Horizontal navigation with breakpoint modifier.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <h3>Justification</h3>
+    <p>
+        Use our <a href="#1">flex classes</a> for centered or right-aligned navigation.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center p-4">
+            <div class="w-100">
+                <ul class="nav horizontal jc-center my-3" role="navigation jc-center">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+                <ul class="nav horizontal jc-end my-3" role="navigation jc-center">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;ul class="nav horizontal jc-center" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;ul class="nav horizontal jc-end" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 4 - Added flex classes provide centered and right-justified navigation.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Change the link color, font size, and font-weight by adding utility classes directly to any ancestor.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100 p-4">
+                <ul class="nav horizontal jc-center tc-link fs-lg fw-bold" role="navigation">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container medium my-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;ul class="nav horizontal jc-center tc-link fs-lg fw-bold" role="navigation"&gt;
+                ...
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 5 - Added utility classes provide a specific color, size, weight.</p>
+    </figcaption>
+</figure>
+
+<hr class="my-5" id="borderedNavigation">
+
+<div class="container narrow my-4">
+    <h2>Bordered Navigation</h2>
+    <p>Add the <code>.nav--divider</code> class to a <code>&lt;ul&gt;</code> tag for vertical, bordered navigation menu.</p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100 p-4">
+                <ul class="nav--divider" role="navigation jc-center">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;ul class="nav--divider" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 6 - Simple vertical divided menu</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        The aforementioned <code>.horizontal</code> class with breakpoint modifier (e.g., <code>--md</code>) also apply
+        to <code>.nav-divider</code> selectors.
+    </p>
+</div>
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100 p-4">
+                <ul class="nav--divider horizontal" role="navigation jc-center">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;ul class="nav--divider horizontal" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 7 - Simple horizontal divided menu</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Add an outer border to the menu with our <a href="#1">border</a> classes.
+    </p>
+</div>
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100 p-4">
+                <ul class="nav--divider horizontal border" role="navigation jc-center">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;ul class="nav-divider border" role="navigation"&gt;
+            ...
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>
+            Figure 8 - Our <a href="#1">border</a> classes can be added directly to <code>.nav--divider</code> selectors
+        </p>
+    </figcaption>
+</figure>
+
+<hr class="my-5" id="basicNavigation">
+
+<div class="container narrow my-4">
+    <h2>Dropdowns</h2>
+    <p>Dropdowns can easily be include within both <code>.nav</code> and <code>.nav--divider</code> selectors.</p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element d-flex">
+            <div class="w-100 p-4 as-center--md">
+                <ul class="nav horizontal jc-center" role="navigation">
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element d-flex">
+            <div class="w-100 p-4 as-center--md">
+                <ul class="nav--divider horizontal border jc-center" role="navigation">
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        All that is needed to create a dropdown is the data attribute <code>data-toggle="dropdown"</code> on a link, and
+        a sibling <code>&lt;ul&gt;</code> for the sub-navigation directly after. In Figure 9 below, lines 3 through 14 make up the dropdown.
+    </p>
+</div>
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar" data-line="3,4,5,6,7,8,9,10,11,12,13,14">
+        <code class="language-html">
+            &lt;ul class="nav--divider horizontal border jc-center" role="navigation"&gt;
+                &lt;li&gt;
+                    &lt;a href="#1" data-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>
+            Figure 8 - Our <a href="#1">border</a> classes can be added directly to <code>.nav--divider</code> selectors
+        </p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Dropdowns work as expected in verticle navigation.
+    </p>
+</div>
+
+<figure class="container narrow my-4">
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element d-flex">
+            <div class="w-100 p-4 as-center--md">
+                <ul class="nav--divider border jc-center" role="navigation">
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
