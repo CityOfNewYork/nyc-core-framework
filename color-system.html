@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
 
     <!-- Theme Stylesheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css">
+    <link rel="stylesheet" href="./dist/css/nyc_core.css">
 
 </head>
 
@@ -37,62 +37,111 @@
             <div class="my-5">
 
                 <div class="container t-center">
-                    <h1>Colors</h1>
+                    <h1>Color System</h1>
                 </div>
 
-                <figure class="container narrow mar-y s4">
+                <figure class="container mar-y s4">
 
-                    <div class="alert tc-confirm border-l my-3">
+                    <div class="container medium my-5">
 
-                        <p class="alert__title">
-                            <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-                            <span class="text">Image Accessibility</span>
-                        </p>
+                        <div class="grid--gap cols--lg">
 
-                        <p>
-                            Backdrops replace CSS background images with inline HTML images so screen readers can read the
-                            image's <em>alt</em> text.
-                        </p>
+                            <div class="grid__col">
+                                <div class="px-2 py-3 bc-primary d-none--lg">
+                                    <p class="mb-0"><strong>Primary</strong></p>
+                                    <p class="mb-0">#666666</p>
+                                </div>
+                                <!-- px-2 -->
+                                 <div class="aspect-ratio--1by1 d-none d-block--lg">
+                                     <div class="aspect-ratio__element bc-primary">
+                                         <div class="m-2">
+                                             <p class="mb-0"><strong>Primary</strong></p>
+                                             <p class="mb-0">#666666</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <!-- aspect-ratio -->
+                            </div>
+                            <!-- col -->
 
-                        <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
+                            <div class="grid__col">
+                                <div class="px-2 py-3 bc-secondary d-none--lg">
+                                    <p class="mb-0"><strong>Secondary</strong></p>
+                                    <p class="mb-0">#666666</p>
+                                </div>
+                                <!-- px-2 -->
+                                <div class="aspect-ratio--1by1 d-none d-block--lg">
+                                    <div class="aspect-ratio__element bc-secondary">
+                                        <div class="m-2">
+                                            <p class="mb-0"><strong>Secondary</strong></p>
+                                            <p class="mb-0">#666666</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- aspect-ratio -->
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__col">
+                                <div class="px-2 py-3 bc-dark d-none--lg">
+                                    <p class="mb-0"><strong>Dark</strong></p>
+                                    <p class="mb-0">#666666</p>
+                                </div>
+                                <!-- px-2 -->
+                                <div class="aspect-ratio--1by1 d-none d-block--lg">
+                                    <div class="aspect-ratio__element bc-dark">
+                                        <div class="m-2">
+                                            <p class="mb-0"><strong>Dark</strong></p>
+                                            <p class="mb-0">#666666</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- aspect-ratio -->
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__col">
+                                <div class="px-2 py-3 bc-light d-none--lg">
+                                    <p class="mb-0"><strong>Light</strong></p>
+                                    <p class="mb-0">#666666</p>
+                                </div>
+                                <!-- px-2 -->
+                                <div class="aspect-ratio--1by1 d-none d-block--lg">
+                                    <div class="aspect-ratio__element bc-light">
+                                        <div class="m-2">
+                                            <p class="mb-0"><strong>Light</strong></p>
+                                            <p class="mb-0">#666666</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- aspect-ratio -->
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__col">
+                                <div class="px-2 py-3 bc-white border d-none--lg">
+                                    <p class="mb-0"><strong>White</strong></p>
+                                    <p class="mb-0">#666666</p>
+                                </div>
+                                <!-- px-2 -->
+                                <div class="aspect-ratio--1by1 d-none d-block--lg">
+                                    <div class="aspect-ratio__element bc-white border">
+                                        <div class="m-2">
+                                            <p class="mb-0"><strong>White</strong></p>
+                                            <p class="mb-0">#666666</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- aspect-ratio -->
+                            </div>
+                            <!-- col -->
+
+                        </div>
+                        <!-- .grid -->
 
                     </div>
+                    <!-- .container -->
 
-                    <div class="alert tc-attention border-l my-3">
-
-                        <p class="alert__title">
-                            <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-                            <span class="text">Image Accessibility</span>
-                        </p>
-
-                        <p>
-                            Backdrops replace CSS background images with inline HTML images so screen readers can read
-                            the
-                            image's <em>alt</em> text.
-                        </p>
-
-                        <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.
-                        </p>
-
-                    </div>
-
-                    <div class="alert tc-warn border-l my-3">
-
-                        <p class="alert__title">
-                            <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-                            <span class="text">Image Accessibility</span>
-                        </p>
-
-                        <p>
-                            Backdrops replace CSS background images with inline HTML images so screen readers can read
-                            the
-                            image's <em>alt</em> text.
-                        </p>
-
-                        <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.
-                        </p>
-
-                    </div>
                     
                 </figure>
                 
