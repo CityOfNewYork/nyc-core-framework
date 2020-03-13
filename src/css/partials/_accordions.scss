@@ -14,7 +14,7 @@ In this file:
 $acc-padding-x: var(--s3);
 $acc-padding-y: var(--s3);
 
-$acc-transition: 0.25s ease-out;
+$acc-transition: 0.2s ease-out;
 
 //////////////////////////////////////////////
 // B. Accordion Settings
@@ -22,7 +22,8 @@ $acc-transition: 0.25s ease-out;
 
 // Accordion Button
 
-[data-toggle="accordion"]{
+[data-toggle="accordion"] {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     width: 100%;
