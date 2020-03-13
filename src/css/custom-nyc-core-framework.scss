@@ -23,8 +23,9 @@ In this file:
     --secondary: #00D5A0;
     --dark: #000050;
     --light: #f1f4f6;
-    --text-on-primary: white;
-    --text-on-secondary: var(--dark);
+
+    --primary-text: white;
+    --secondary-text: var(--dark);
 
     --attention: var(--primary);
 
