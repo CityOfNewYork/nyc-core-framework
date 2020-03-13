@@ -64,7 +64,9 @@ title: "Customization"
 
 <div class="container narrow my-4">
     <p>
-        Because custom properties can update at runtime, we can modify values from our CDN stylesheet by declaring new values in a second stylesheet.
+        Because custom properties can update at runtime, we can modify values from our CDN stylesheet by declaring new
+        values in a second stylesheet. With th following exercise, learn how to customize your theme colors using this
+        methodology.
     </p>
 </div>
 <!-- .container -->
@@ -75,7 +77,7 @@ title: "Customization"
 <div class="container narrow my-4">
     <h3>Customizing Colors</h3>
     <p>
-        Let's start by customizing our theme colors. Copy and paste the HTML below into a new document. Save it as <em>theming-example.html</em> into your project's root directory.
+        Copy and paste the HTML below into a new document. Save it as <em>theming-example.html</em> into your project's root directory.
     </p>
 </div>
 <!-- .container -->
@@ -102,7 +104,7 @@ title: "Customization"
                     &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
 
                     &lt;!-- NYC Core Stylesheet --&gt;
-                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
                     
                 &lt;/head&gt;
 
@@ -131,7 +133,7 @@ title: "Customization"
                     &lt;/main&gt;
 
                     &lt;!-- NYC Core Javascript --&gt;
-                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/js/dist/nyc_core.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"&gt;&lt;/script&gt;
 
                     &lt;!-- IE Custom Properties Polyfill --&gt;
                     &lt;script&gt;
@@ -177,7 +179,7 @@ title: "Customization"
     <pre class="hide-toolbar">
         <code class="language-html">
             &lt;!-- NYC Core Stylesheet --&gt;
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/css/dist/nyc_core.css"&gt;
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
 
             &lt;!-- Custom Theme Properties --&gt;
             &lt;link rel="stylesheet" href="./css/lib/theme-properties.css"&gt;
@@ -302,7 +304,187 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
+<div class="accordion-group container narrow my-4">
+
+    <button class="h5" id="acc-button-01" data-toggle="accordion" aria-expanded="false"
+        aria-controls="panel-acc-button-01">
+        Colors
+    </button>
+
+    <div data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+        <div class="class" data-accordion="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                ducimus quam provident repellendus eos.
+            </p>
+
+            <table class="fs-md my-3">
+                <thead>
+                    <tr>
+                        <th class="w-50">Custom Property</th>
+                        <th class="w-50">Default Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            --primary
+                        </td>
+                        <td>
+                            #25caa4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --secondary
+                        </td>
+                        <td>
+                            #6500d6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --dark
+                        </td>
+                        <td>
+                            #262345
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --light
+                        </td>
+                        <td>
+                            #f1f4f6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --text-on-primary
+                        </td>
+                        <td>
+                            var(--dark)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --text-on-secondary
+                        </td>
+                        <td>
+                            white
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --a11y-link-color
+                        </td>
+                        <td>
+                            blue
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --confirm
+                        </td>
+                        <td>
+                            #008230
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --attention
+                        </td>
+                        <td>
+                            #3953B1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            --warn
+                        </td>
+                        <td>
+                            #dc3545
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+        <!-- data-accordion="content" -->
+
+    </div>
+    <!-- panel -->
+
+    <button class="h5" id="acc-button-01" data-toggle="accordion" aria-expanded="false"
+        aria-controls="panel-acc-button-01">
+        Typography
+    </button>
+
+    <div data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+        <div class="class" data-accordion="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                ducimus quam provident repellendus eos libero error adipisci laudantium
+                exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                ducimus quam provident repellendus eos libero error adipisci laudantium
+                exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+            </p>
+        </div>
+
+    </div>
+    <!-- panel -->
+
+    <button class="h5" id="acc-button-01" data-toggle="accordion" aria-expanded="false"
+        aria-controls="panel-acc-button-01">
+        Breakpoints
+    </button>
+
+    <div data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+        <div class="class" data-accordion="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                ducimus quam provident repellendus eos libero error adipisci laudantium
+                exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                ducimus quam provident repellendus eos libero error adipisci laudantium
+                exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                ducimus quam provident repellendus eos libero error adipisci laudantium
+                exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+            </p>
+        </div>
+        <!-- panel -->
+
+    </div>
+    <!-- .card -->
+
+</div>
+<!-- .accordion-group -->
+
+<figure class="container narrow my-4 d-none">
 
     <div class="">
        <h4>Colors</h4>
@@ -318,97 +500,7 @@ title: "Customization"
 
     </div>
 
-    <table class="fs-md my-3">
-        <thead>
-            <tr>
-                <th class="w-50">Custom Property</th>
-                <th class="w-50">Default Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    --primary
-                </td>
-                <td>
-                    #25caa4
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --secondary
-                </td>
-                <td>
-                    #6500d6
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --dark
-                </td>
-                <td>
-                    #262345
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --light
-                </td>
-                <td>
-                    #f1f4f6
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --text-on-primary
-                </td>
-                <td>
-                    var(--dark)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --text-on-secondary
-                </td>
-                <td>
-                    white
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --a11y-link-color
-                </td>
-                <td>
-                    blue
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --confirm
-                </td>
-                <td>
-                    #008230
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --attention
-                </td>
-                <td>
-                    #3953B1
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    --warn
-                </td>
-                <td>
-                    #dc3545
-                </td>
-            </tr>
-        </tbody>
 
-    </table>
 
     <table class="fs-md my-3">
         <thead>
