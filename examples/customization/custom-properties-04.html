@@ -7,6 +7,13 @@
     <!-- IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- IE Custom Properties Polyfill -->
+    <script>
+        window.MSInputMethodContext && document.documentMode && document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
+        );
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,13 +63,6 @@
 
     <!-- NYC Core Javascript -->
     <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
-
-    <!-- IE Custom Properties Polyfill -->
-    <script>
-        window.MSInputMethodContext && document.documentMode && document.write(
-            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
-        );
-    </script>
 
 </body>
 

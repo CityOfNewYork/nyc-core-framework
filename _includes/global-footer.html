@@ -71,18 +71,11 @@
 
 <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
 
-<!-- IE Custom Properties Polyfill -->
-<script>
-    window.MSInputMethodContext && document.documentMode && document.write(
-        '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
-    );
-</script>
-
 {% if page.title == 'Home' %}  
 <script src="{{ site.baseurl }}/dist/js/home.js"></script>
 {% endif %}
 
 {% if page.url contains '/documentation' %}
 <script src="{{ site.baseurl }}/lib/js/prism.js"></script>
-<script src="{{ site.baseurl }}/lib/js/iframe-height.js"></script>
+<script src="{{ site.baseurl }}/dist/js/iframe-height.js"></script>
 {% endif %}
