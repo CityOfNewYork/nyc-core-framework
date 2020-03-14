@@ -1,4 +1,4 @@
-<footer class="bc-primary fs-md t-center">
+<footer class="bc-primary fs-md t-center" role="contentinfo">
 
     <h2 class="sr-only">
         Page Footer
@@ -78,43 +78,11 @@
     );
 </script>
 
-{% if page.title == 'Home' %}    
+{% if page.title == 'Home' %}  
 <script src="{{ site.baseurl }}/dist/js/home.js"></script>
 {% endif %}
 
 {% if page.url contains '/documentation' %}
-
 <script src="{{ site.baseurl }}/lib/js/prism.js"></script>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
+<script src="{{ site.baseurl }}/lib/js/iframe-height.js"></script>
 {% endif %}
-
-
-<script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        const iframeList = document.getElementsByTagName("iframe");
-
-        for (const iframe of iframeList) {
-
-            const iframeWindow = iframe.contentWindow;
-
-            getIframeDocHeight = () => {
-
-                let iframeWindowHeight = iframeWindow.document.body.scrollHeight;
-
-                console.log(iframeWindowHeight);
-
-                iframe.style.height = iframeWindowHeight + 'px';
-
-            }
-
-            iframe.addEventListener('load', getIframeDocHeight);
-            window.addEventListener('resize', getIframeDocHeight);
-
-        }
-
-    });
-
-</script>
