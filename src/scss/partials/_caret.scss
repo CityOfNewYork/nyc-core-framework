@@ -14,6 +14,7 @@ $default-caret-size: 0.25em;
 }
 
 @mixin caret-up($size: $default-caret-size) {
+    // transform: scaleY(-1);
     border-top: 0;
     border-right: $size solid transparent;
     border-bottom: $size solid;

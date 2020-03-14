@@ -17,6 +17,12 @@
 
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css">
+
+    <style>
+        body{
+            --backdrop-fixed-height: 200px;
+        }
+    </style>
     
 </head>
 
@@ -96,7 +102,7 @@
 
         <div class="grid row-reverse--md">
 
-            <div class="grid__col-2--md border-l--md">
+            <div class="grid__col-2--md box-shadow-sm z-index-800" id="sidebar">
 
                 <ul class="nav--divider fs-md" role="navigation">
                     <li>
@@ -141,7 +147,28 @@
             </div>
             <!-- .grid__col -->
 
-            <div class="grid__col-10--md p-3">
+            <div class="grid__col-10--md" id="primary-content">
+
+                <div class="backdrop--fixed">
+
+                    <img class="backdrop__image opacity-30" src="../../images/examples/backdrop-example-02.jpg" alt="Placeholder">
+
+                    <div class="backdrop__cover">
+
+                        <div class="container narrow my-4">
+
+                            <h1 class="banner-headline mb-4">
+                                Lorem ipsum dolor
+                            </h1>
+
+                        </div>
+                        <!-- .container -->
+
+                    </div>
+                    <!-- .backdrop__cover -->
+
+                </div>
+                <!-- .backdrop -->
 
                 <div class="container narrow my-4">
 
