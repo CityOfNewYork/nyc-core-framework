@@ -6,7 +6,7 @@ title: "Color System"
 <div class="container narrow my-4">
     <p>
         The NYC Core Framework's one-of-a-kind color system allows you to intuitively manage colors and apply them
-        like themes across components and content.
+        across components and content.
     </p>
 </div>
 <!-- .container -->
@@ -31,14 +31,15 @@ title: "Color System"
 <div class="container narrow my-4">
     <h2>Theme Colors</h2>
     <p>
-        The following colors make up your theme's color palette.
+        The following palette makes up your fundamental theme colors.
     </p>
 </div>
 <!-- .container -->
 
 <div class="container medium my-4">
 
-    <div class="grid--gap cols--md fs-md" style="
+    <div class="grid--gap cols--md fs-md"
+        style="
         --primary: #25caa4;
         --secondary: #6500d6;
         --dark: #262345;
@@ -143,18 +144,30 @@ title: "Color System"
 <!-- .container -->
 <div class="container narrow my-4">
     <p>
-       <em>White</em> is considered as a color because each theme color in the NYC Core Framework is assigned predesignated text color, link color, and border color.
-    </p> 
+        In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. In our templates and examples, you may have noticed the <code>&lt;body&gt;</code> tag has a <code>.bc-white</code> class applied (Figure 1).
+    </p>
 </div>
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;body class="bc-white"&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 1 - Example of the <em>white</em> background color class.</p>
+    </figcaption>
+</figure>
 
 <div class="container narrow my-4">
     <h3>Background Color Classes</h3>
     <p>
-        White is considered a color because of how our theme's palette is used to compose our <a
-            href="/documentation/colors#background-colorClasses">background-color classes</a>.
-    </p>
+        Our background color classes make it easy to apply color to an element, without needing to apply colors to that
+        elements (or child elements) text and borders. Each theme color (e.g. <em>primary</em>) is assigned predesignated text color, link color, and border color.
+    </p> 
     <p>
-        Included in our palette are two additional colors, <em>Confirm</em> and <em>Warn</em>, which are designated for
-        use with alert and error messages:
+        Let's add some color to this otherwise boring layout:
     </p>
 </div>
+
+{% include browser-iframe.html iframe_url="/examples/color-system/theming-01.html" %}
