@@ -4,7 +4,7 @@ module.exports = {
     entry: {
         nyc_core: './src/js/index.js',
         home: './src/js/home.js',
-        iframe_height: './src/js/iframe-height.js'
+        iframe_height: './src/js/iframe_height.js'
     },
     output: {
         filename: '[name].js',

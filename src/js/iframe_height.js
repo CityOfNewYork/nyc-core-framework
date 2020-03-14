@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const iframeWindow = iframe.contentWindow;
 
-        getIframeDocHeight = () => {
+        const getIframeDocHeight = () => {
 
             let iframeWindowHeight = iframeWindow.document.body.scrollHeight;
             iframe.style.height = iframeWindowHeight + 'px';
