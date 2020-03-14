@@ -107,9 +107,17 @@
 
     <main class="overflow-hidden" id="skip-header-content" role="main">
 
+        <div class="container narrow my-3 d-none--md">
+
+            <a class="btn d-block box-shadow-sm" href="#1" data-toggle="collapse" data-target="#sidebar" role="button">
+                Jump To
+            </a>
+
+        </div>
+
         <div class="grid row-reverse--md">
 
-            <div class="grid__col-2--md box-shadow-sm z-index-800 bc-secondary" id="sidebar">
+            <div class="grid__col-2--md box-shadow-sm--md z-index-800 collapse d-block--md bc-secondary" id="sidebar">
 
                 <ul class="nav--divider fs-md" role="navigation">
                     <li>
@@ -158,14 +166,14 @@
 
                 <div class="backdrop--fixed">
 
-                    <img class="backdrop__image opacity-20" src="../../images/examples/backdrop-example-02.jpg" alt="Placeholder">
+                    <img class="backdrop__image opacity-30" src="../../images/examples/backdrop-example-02.jpg" alt="Placeholder">
 
                     <div class="backdrop__cover">
 
                         <div class="container narrow my-4">
 
                             <h1 class="banner-headline mb-4">
-                                Lorem ipsum dolor
+                                Page Title
                             </h1>
 
                         </div>
@@ -177,23 +185,38 @@
                 </div>
                 <!-- .backdrop -->
 
-                <div class="container narrow my-4">
+                <div class="overflow-hidden">
 
-                    <h1 class="h3">Lorem ipsum dolor</h1>
+                    <div class="container narrow my-4">
 
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium
-                        et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper <a href="#1">porttitor est volutpat</a>.
-                    </p>
-                    <p>
-                        Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium
-                        et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
-                        potenti non vestibulum aptent non cum ullamcorper <a href="#1">porttitor est volutpat</a>.
-                    </p>
+                        <h1 class="h3">Section Header</h1>
 
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium
+                            et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan sapien
+                            potenti non vestibulum aptent non cum ullamcorper <a href="#1">porttitor est volutpat</a>.
+                        </p>
+
+                    </div>
+                    <!-- .container -->
+                
+                    <hr class="my-3">
+
+                    <div class="container narrow my-4">
+
+                        <h1 class="h3">Section Header</h1>
+
+                        <p>
+                            Malesuada dapibus ac condimentum habitasse a praesent commodo penatibus parturient duis pretium
+                            et dolor parturient cum. Est vehicula facilisis ad proin condimentum pretium augue accumsan
+                            sapien potenti non vestibulum aptent non cum ullamcorper <a href="#1">porttitor est volutpat</a>.
+                        </p>
+
+                    </div>
+                    <!-- .container -->
+                
                 </div>
-                <!-- .container -->
+                <!-- .overflow-hidden -->
 
             </div>
             <!-- .grid__col -->
@@ -203,8 +226,8 @@
 
     </main>
 
-    <footer class="container p-3 t-right fs-sm box-shadow-sm z-index-900" role="contentinfo">
-        <a href="#">To Top</a>
+    <footer class="container p-3 t-right fs-sm box-shadow-sm z-index-900 bc-primary" role="contentinfo">
+        <a href="#1">To Top</a>
     </footer>
 
     <!-- NYC Core Javascript -->
