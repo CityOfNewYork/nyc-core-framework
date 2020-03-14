@@ -6,7 +6,7 @@ title: "Color System"
 <div class="container narrow my-4">
     <p>
         The NYC Core Framework's one-of-a-kind color system allows you to intuitively manage colors and apply them
-        across components and content.
+        across pages, components, and content.
     </p>
 </div>
 <!-- .container -->
@@ -31,7 +31,7 @@ title: "Color System"
 <div class="container narrow my-4">
     <h2>Theme Colors</h2>
     <p>
-        The following palette makes up your fundamental theme colors.
+        The following simple palette makes your theme colors.
     </p>
 </div>
 <!-- .container -->
@@ -145,7 +145,9 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. In our templates and examples, you may have noticed the <code>&lt;body&gt;</code> tag has a <code>.bc-white</code> class applied (Figure 1).
+        In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. In our
+        templates and examples, you may have noticed the <code>&lt;body&gt;</code> tag has a <code>.bc-white</code>
+        class applied (Figure 1).
     </p>
 </div>
 <!-- .container -->
@@ -154,6 +156,8 @@ title: "Color System"
     <pre class="hide-toolbar">
         <code class="language-html">
             &lt;body class="bc-white"&gt;
+                ...
+            &lt;/body&gt;
         </code>
     </pre>
     <figcaption>
@@ -161,8 +165,10 @@ title: "Color System"
     </figcaption>
 </figure>
 
+<hr class="my-5" id="backgroundColorClasses">
+
 <div class="container narrow my-4">
-    <h3>Background Color Classes</h3>
+    <h2>Background Color Classes</h2>
     <p>
         Our background color classes make it easy to apply color to an element, without needing to apply colors to that
         elements (or child elements) text and borders. Each theme color (e.g. <em>primary</em>) is assigned predesignated text color, link color, and border color.
@@ -173,3 +179,5 @@ title: "Color System"
 </div>
 
 {% include browser-iframe.html iframe_url="/examples/color-system/theming-01.html" %}
+
+{% include browser-iframe.html iframe_url="/examples/color-system/theming-02.html" %}

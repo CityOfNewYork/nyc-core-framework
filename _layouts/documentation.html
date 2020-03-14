@@ -1,71 +1,55 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html lang="en" dir="ltr">
+<div class="d-none--lg overflow-hidden">
+    <a class="btn bc-dark d-block py-3" href="#1" data-toggle="collapse" data-target="#sidebar" role="button">Documentation</a>
+</div>
 
-{% include head.html %}
+<div class="grid">
 
-<body class="bc-white">
+    <div class="grid__col-2--lg collapse d-block--lg bc-light" id="sidebar">
 
-    {% include global-header.html %}
+        <div class="sticky-top narrow p-3">
 
-    <main id="skip-header-content" role="main">
+            {% include sidebar.html %}
 
-        <div class="d-none--lg overflow-hidden">
-            <a class="btn bc-dark d-block py-3" href="#1" data-toggle="collapse" data-target="#sidebar" role="button">Documentation</a>
         </div>
+        <!-- .stick-top -->
 
-        <div class="grid">
+    </div>
+    <!-- col -->
 
-            <div class="grid__col-2--lg collapse d-block--lg bc-light" id="sidebar">
+    <div class="grid__col-10--lg overflow-hidden" id="primary-content">
 
-                <div class="sticky-top narrow p-3">
+        <div class="bc-secondary overflow-hidden">
 
-                    {% include sidebar.html %}
+            <div class="narrow my-5">
 
-                </div>
-                <!-- .stick-top -->
-
-            </div>
-            <!-- col -->
-
-            <div class="grid__col-10--lg overflow-hidden" id="primary-content">
-
-                <div class="bc-secondary overflow-hidden">
-
-                    <div class="narrow my-5">
-
-                        <div class="grid">
-                            <div class="grid__col-10--lg">
-                                <div class="container narrow">
-                                    <h1 class="banner-headline">
-                                        {{ page.title }}
-                                    </h1>
-                                </div>
-                            </div>
+                <div class="grid">
+                    <div class="grid__col-10--lg">
+                        <div class="container narrow">
+                            <h1 class="banner-headline">
+                                {{ page.title }}
+                            </h1>
                         </div>
-
                     </div>
-                    <!-- .container -->
-
                 </div>
-
-                <div class="my-5">
-
-                    {{ content }}
-
-                </div>
-                <!-- .my-5 -->
 
             </div>
-            <!-- col -->
+            <!-- .container -->
 
         </div>
-        <!-- .grid -->
 
-    </main>
+        <div class="my-5">
 
-    {% include global-footer.html %}
+            {{ content }}
 
-</body>
+        </div>
+        <!-- .my-5 -->
 
-</html>
+    </div>
+    <!-- col -->
+
+</div>
+<!-- .grid -->
