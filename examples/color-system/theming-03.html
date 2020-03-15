@@ -27,16 +27,15 @@
 
     <style>
         body{
-            --base-font-size: 18px;
             --backdrop-fixed-height: 200px;
         }
     </style>
     
 </head>
 
-<body class="bc-white">
+<body class="bc-dark">
 
-    <header class="box-shadow-sm z-index-900" id="global-header" role="banner">
+    <header class="box-shadow-sm z-index-900 bc-primary" id="global-header" role="banner">
 
         <div class="container">
 
@@ -63,7 +62,7 @@
 
                 <div class="grid__col-auto ml-auto m-0--md order-3--md d-flex">
 
-                    <ul class="nav--gap-xs horizontal jc-end" role="list">
+                    <ul class="nav--gap-xs fs-md horizontal jc-end" role="list">
                         <li>
                             <a class="btn-icon" href="#1" title="Search">
                                 <span class="sr-only">Search</span>
@@ -118,9 +117,9 @@
 
         <div class="grid row-reverse--md">
 
-            <div class="grid__col-2--md box-shadow-sm--md z-index-800 collapse d-block--md" id="sidebar">
+            <div class="grid__col-2--md box-shadow-sm--md z-index-800 collapse d-block--md bc-secondary" id="sidebar">
 
-                <ul class="nav--divider" role="navigation">
+                <ul class="nav--divider fs-md" role="navigation">
                     <li>
                         <a href="#1" data-toggle="dropdown">Dropdown</a>
                         <ul>
@@ -227,7 +226,7 @@
 
     </main>
 
-    <footer class="container p-3 t-right fs-sm box-shadow-sm z-index-900" role="contentinfo">
+    <footer class="container p-3 t-right fs-sm box-shadow-sm z-index-900 bc-primary" role="contentinfo">
         <a href="#1">To Top</a>
     </footer>
 

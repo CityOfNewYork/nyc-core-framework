@@ -173,16 +173,130 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        Each theme color (e.g. <em>primary</em>) is assigned predesignated <strong>text color</strong> , <strong>link
-            color</strong>, and <strong>border color</strong>.
+        Each theme color (e.g. <em>primary</em>) is assigned a predesignated <strong>text color</strong> , <strong>link
+            color</strong>, and <strong>border color</strong>. This predesignation occurs in our Sass partial for colors,
+        found in <a href="#1"><strong>/src/partials/_color.scss</strong></a>.
     </p>
+
+    <p>
+        Figure 2 (below) represents the custom properties (variables) located at the top of this partial.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar" data-line="5, 16,17,18">
+        <code class="language-scss">
+            :root {
+
+                // Theme Color Palette
+
+                --primary: #25caa4;
+                --secondary: #6500d6;
+                --dark: #262345;
+                --light: #f1f4f6;
+
+                // Accessible Link Color
+
+                --a11y-link-color: blue;
+
+                // Associated Primary Colors
+
+                --primary-text: var(--dark);
+                --primary-border: hsla(0, 0%, 0%, 0.125);
+                --primary-link: currentColor;
+
+                // Associated Secondary Colors
+
+                --secondary-text: white;
+                --secondary-border: hsla(0, 0%, 0%, 0.25);
+                --secondary-link: currentColor;
+
+                // Associated Dark Colors
+
+                --dark-text: white;
+                --dark-border: hsla(0, 0%, 100%, 0.125);
+                --dark-link: currentColor;
+
+                // Associated Light Colors
+
+                --light-text: var(--dark);
+                --light-border: hsl(0, 0%, 50%, 0.25);
+                --light-link: var(--a11y-link-color);
+
+                // Associated Light Colors
+
+                --white-text: var(--dark);
+                --white-border: hsl(0, 0%, 50%, 0.25);
+                --white-link: var(--a11y-link-color);
+
+                // Alert and Form Feedback Colors
+
+                --confirm: #008230;
+                --attention: #3953B1;
+                --warn: #dc3545;
+            }
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+    </figcaption>
+</figure>
+
+<figure class="container narrow my-4">
+    <table class="fs-md">
+        <thead>
+            <tr>
+                <th class="w-30">Line #</th>
+                <th class="w-70">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5</td>
+                <td>
+                    <p>
+                        Declaration of our <em>Primary</em> theme color.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>
+                    <p>
+                        Color of all text within a <code>.bc-primary</code> selector.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>
+                    <p>
+                        Color of all borders within a <code>.bc-primary</code> selector.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>
+                    <p>
+                        Color of all general links inside of <code>&lt;p&gt;</code> tags within a <code>.bc-primary</code> selector.
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</figure>
+
+<div class="container narrow my-4">
     <p>
         When a background color class is applied to an element, its text, borders, and links (only those inside
         <code>&lt;p&gt;</code> tags) automatically inherit their appropriate predesignated color.
     </p>
-
     <p>
-        Let's apply these background color classes to our <a href="{{ site.baseurl}}/documentation/cards/">cards</a>:
+        Let's apply our background color classes to Framework <a href="{{ site.baseurl}}/documentation/cards/">cards</a>:
     </p>
 </div>
 <!-- .container -->
@@ -298,8 +412,8 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        With the card examples we only specified the background color class (see Figure 2 below), and the text color, link
-        color, and border colors inherit their correct colors. 
+        With the above card examples we only specified the background color class (see Figure 3), and the text color, link
+        color, and border colors inherit their predesignated colors.
     </p>
 </div>
 <!-- .container -->
@@ -329,7 +443,7 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+        <p>Figure 3 - Example of the <em>primary</em> background color class applied to a card.</p>
     </figcaption>
 </figure>
 
@@ -372,16 +486,29 @@ title: "Color System"
 <div class="container narrow my-4">
     <h3>Inheritance and Selectivity</h3>
     <p>
-        Apply a background color class to any element along the DOM (Document Object Model) and every child element within will
-        inherit their designated theme color properties until a new property is specified.
+        Apply a background color class to any element along the DOM (Document Object Model) and every child element within that selector will
+        inherit their designated theme color properties until a new class is specified.
     </p>
     <p>
-        In other words, <strong>background color classes are infinitely nestable</strong>. In the example below, only one
-        background color class has been applied to the <code>&lt;body&gt;</code> tag.
+        In other words, <strong>background color classes are infinitely nestable</strong>. Let's look at the concept of nesting in practice.
+    </p>
+    <p>
+        The layout below has only one
+        background color class applied to the <code>&lt;body&gt;</code> tag. Notice the text, link, and border colors across the document are correct, regardless of their position in the DOM. 
     </p>
 </div>
 <!-- .container -->
 
 {% include browser-iframe.html iframe_url="/examples/color-system/theming-01.html" %}
 
+<div class="container narrow my-4">
+    <p>
+        What if we wanted a dark theme for our entire page? Of course, completely dark pages are not recommended for
+        readability, but we'll use it for sake of demonstration here.
+    </p>
+</div>
+<!-- .container -->
+
 {% include browser-iframe.html iframe_url="/examples/color-system/theming-02.html" %}
+
+{% include browser-iframe.html iframe_url="/examples/color-system/theming-03.html" %}
