@@ -20,6 +20,7 @@ exclude:
   # Comment (exclude) for versioning
   # - version/*`
 
+  - src/*
   - .babelrc
   - node_modules/*
   - Gemfile

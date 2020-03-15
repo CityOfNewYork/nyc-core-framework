@@ -33,7 +33,7 @@ title: "Color System"
 <div class="container narrow my-4">
     <h2>Theme Colors</h2>
     <p>
-        The following palette makes up our default <em>theme colors</em> . 
+        The following palette makes up our default <em>theme colors</em>. 
     </p>
 </div>
 <!-- .container -->
@@ -142,7 +142,7 @@ title: "Color System"
     <p>
         Modify these colors with <a href="{{ site.baseurl }}/documentation/customization/#customProperties">custom
             properties</a> or create additional colors <a href="#1">using Sass</a>. These theme colors generate our
-        background color classes (below), <a href="#1">text color classes</a> , and <a href="#1">border classes</a>.
+        background color classes (below), <a href="#1">text color classes</a>, and <a href="#1">border classes</a>.
     </p>
 </div>
 <!-- .container -->
@@ -178,7 +178,11 @@ title: "Color System"
     </p>
     <p>
         When a background color class is applied to an element, its text, borders, and links (only those inside
-        <code>&lt;p&gt;</code> tags) automatically inherit their respective predesignated color.
+        <code>&lt;p&gt;</code> tags) automatically inherit their appropriate predesignated color.
+    </p>
+
+    <p>
+        Let's apply these background color classes to our <a href="{{ site.baseurl}}/documentation/cards/">cards</a>:
     </p>
 </div>
 <!-- .container -->
@@ -293,9 +297,87 @@ title: "Color System"
 </figure>
 
 <div class="container narrow my-4">
-    <h3>Inheritance and Specicifity</h3>
     <p>
-        Using only our background classes, let's add some color to this otherwise boring layout.
+        With the card examples we only specified the background color class (see Figure 2 below), and the text color, link
+        color, and border colors inherit their correct colors. 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+    <pre data-line="1">
+        <code class="language-html">
+            &lt;div class="card bc-secondary rounded border my-3">
+
+                &lt;div class="card__header border-b"&gt;
+                    &lt;p&gt;Walt Whitman&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="card__body"&gt;
+                    &lt;h2 class="h5"&gt;&lt;em&gt;Mannahatta&lt;/em&gt;&lt;/h2&gt;
+                    &lt;p&gt;
+                        I WAS asking for something specific and perfect for my city,
+                        Whereupon lo! upsprang the the [NYC Core Framework].
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                        &lt;a href="#1"&gt;Read Full Poem&lt;/a&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .card --&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        To be sure, each of our theme colors (above) are available as a background color class:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="bc-primary"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-secondary"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-dark"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-light"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-white"&gt;
+                ...
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <h3>Inheritance and Selectivity</h3>
+    <p>
+        Apply a background color class to any element along the DOM (Document Object Model) and every child element within will
+        inherit their designated theme color properties until a new property is specified.
+    </p>
+    <p>
+        In other words, <strong>background color classes are infinitely nestable</strong>. In the example below, only one
+        background color class has been applied to the <code>&lt;body&gt;</code> tag.
     </p>
 </div>
 <!-- .container -->
