@@ -42,14 +42,18 @@ title: "Get Started"
 <!-- .container -->
 
 <figure class="container narrow my-4">    
-    <pre class="hide-toolbar" data-line="4, 40">
+    <pre class="hide-toolbar" data-line="4,6">
         <code class="language-plaintext">
             nyc-core-framework/
-            ├── css/
-            │   ├── dist/
+            ├── dist/
+            │   ├── css/
             |   │   └── nyc_core.css
-            │   ├── lib/
-            │   └── src/
+            │   ├── js/
+            |   │   └── nyc_core.js
+            ├── src/
+            │   ├── js/
+            |   │   └── nyc_core.js
+            |   └── scss/
             |       ├── nyc_core.scss
             |       └── partials/
             |           ├── _accessibility.scss
@@ -81,17 +85,11 @@ title: "Get Started"
             |           ├── _z-index.scss
             |           └── _rtl.scss
             ├── images/
-            ├── js/
-            │   ├── dist/
-            |   │   └── nyc_core.js
-            │   ├── lib/
-            │   ├── src/
-            |   │   └── index.js
             └── index.html
         </code>
     </pre>
     <figcaption>
-        Figure 1 - The NYC Core Framework's folders and files
+        Figure 1 - The NYC Core Framework's file structure.
     </figcaption>
 </figure>
 
@@ -100,13 +98,12 @@ title: "Get Started"
     <h3>CSS and Javascript</h3>
     <p>
         In Figure 1 (above), pay attention to the highlighted files: <strong>/dist/css/nyc_core.css</strong> (line
-        4), <strong>/dist/js/nyc_core.js</strong> (line 40).
+        4), <strong>/dist/js/nyc_core.js</strong> (line 6).
     </p>
     <p>
         These CSS and Javascript files are the <strong>only two dependencies</strong> generated from
         the NYC Core Framework, and they are available via CDN (Content Delivery Network). Follow our <a
-            href="#quickStartGuide"><em>Quick Start Guide</em></a> (in the
-        next section) to get started with these core files.
+            href="#quickStartGuide"><em>Quick Start Guide</em></a> below to get started with these core files.
     </p>
 </div>
 <!-- .container -->
@@ -172,7 +169,8 @@ title: "Get Started"
                 <td>9</td>
                 <td>
                     <p>
-                        Assigns the "white" theme color to the <code>&lt;body&gt;</code> tag. Learn how our <a href="#1">color system</a>
+                        Assigns the "white" theme color to the <code>&lt;body&gt;</code> tag. Learn how our <a
+                            href="{{ site.baseurl }}/documentation/color-system/">color system</a>
                         makes it easy to apply accessible colors to your layouts.
                     </p>
                 </td>
