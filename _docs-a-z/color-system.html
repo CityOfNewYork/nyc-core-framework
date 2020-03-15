@@ -506,9 +506,48 @@ title: "Color System"
         What if we wanted a dark theme for our entire page? Of course, completely dark pages are not recommended for
         readability, but we'll use it for sake of demonstration here.
     </p>
+    <p>
+        To create our dark theme, let's change our background color class from <code>.bc-white</code> to
+        <code>.bc-dark</code> on our <code>&lt;body&gt;</code> tag.
+    </p>
 </div>
 <!-- .container -->
 
 {% include browser-iframe.html iframe_url="/examples/color-system/theming-02.html" %}
+<div class="container narrow my-4">
+    <p>
+        Let's make our header, sidebar, and footer stand out by adding background color class to them as well.
+    </p>
+</div>
+<!-- .container -->
 
 {% include browser-iframe.html iframe_url="/examples/color-system/theming-03.html" %}
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="bc-primary"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-secondary"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-dark"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-light"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="bc-white"&gt;
+                ...
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+    </figcaption>
+</figure>
