@@ -3,6 +3,8 @@ layout: documentation
 title: "Color System"
 ---
 
+{% assign style_default_theme_colors = "style='--primary: #25caa4; --secondary: #6500d6; --dark: #262345; --light: #f1f4f6; --primary-text: var(--dark); --secondary-text: white;'" %}
+
 <div class="container narrow my-4">
     <p>
         The NYC Core Framework's dymnamic color system allows you to intuitively manage colors and apply them
@@ -31,21 +33,14 @@ title: "Color System"
 <div class="container narrow my-4">
     <h2>Theme Colors</h2>
     <p>
-        The following simple palette makes your theme colors.
+        The following palette makes up our default <em>theme colors</em> . 
     </p>
 </div>
 <!-- .container -->
 
-<div class="container medium my-4">
+<figure class="container medium my-4">
 
-    <div class="grid--gap cols--md fs-md"
-        style="
-        --primary: #25caa4;
-        --secondary: #6500d6;
-        --dark: #262345;
-        --light: #f1f4f6;
-        --primary-text: var(--dark);
-        --secondary-text: white;">
+    <div class="grid--gap cols--md fs-md" {{ style_default_theme_colors }}>
 
         <div class="grid__col">
             <div class="px-2 py-3 bc-primary d-none--lg">
@@ -140,14 +135,25 @@ title: "Color System"
     </div>
     <!-- .grid -->
 
-</div>
+</figure>
 <!-- .container -->
 
 <div class="container narrow my-4">
     <p>
-        In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. In our
-        templates and examples, you may have noticed the <code>&lt;body&gt;</code> tag has a <code>.bc-white</code>
-        class applied (Figure 1).
+        Modify these colors with <a href="{{ site.baseurl }}/documentation/customization/#customProperties">custom
+            properties</a> or create additional colors <a href="#1">using Sass</a>. These theme colors generate our
+        background color classes (below), <a href="#1">text color classes</a> , and <a href="#1">border classes</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="my-5" id="backgroundColorClasses">
+
+<div class="container narrow my-4">
+    <h2>Background Color Classes</h2>
+    <p>
+        In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. Throught our templates and examples, you
+        may have noticed the <code>&lt;body&gt;</code> tag has a <code>.bc-white</code> class applied (Figure 1).
     </p>
 </div>
 <!-- .container -->
@@ -165,18 +171,134 @@ title: "Color System"
     </figcaption>
 </figure>
 
-<hr class="my-5" id="backgroundColorClasses">
+<div class="container narrow my-4">
+    <p>
+        Each theme color (e.g. <em>primary</em>) is assigned predesignated <strong>text color</strong> , <strong>link
+            color</strong>, and <strong>border color</strong>.
+    </p>
+    <p>
+        When a background color class is applied to an element, its text, borders, and links (only those inside
+        <code>&lt;p&gt;</code> tags) automatically inherit their respective predesignated color.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <div {{ style_default_theme_colors }}>
+
+        <div class="card bc-primary rounded border my-3">
+
+            <div class="card__header border-b">
+                <p>Walt Whitman</p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h5"><em>Mannahatta</em></h2>
+                <p>
+                    I WAS asking for something specific and perfect for my city,
+                    Whereupon lo! upsprang the the [NYC Core Framework].
+                </p>
+                <p>
+                    <a href="#1">Read Full Poem</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card bc-secondary rounded border my-3">
+
+            <div class="card__header border-b">
+                <p>Walt Whitman</p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h5"><em>Mannahatta</em></h2>
+                <p>
+                    I WAS asking for something specific and perfect for my city,
+                    Whereupon lo! upsprang the the [NYC Core Framework].
+                </p>
+                <p>
+                    <a href="#1">Read Full Poem</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card bc-dark rounded border my-3">
+
+            <div class="card__header border-b">
+                <p>Walt Whitman</p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h5"><em>Mannahatta</em></h2>
+                <p>
+                    I WAS asking for something specific and perfect for my city,
+                    Whereupon lo! upsprang the the [NYC Core Framework].
+                </p>
+                <p>
+                    <a href="#1">Read Full Poem</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card bc-light rounded border my-3">
+
+            <div class="card__header border-b">
+                <p>Walt Whitman</p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h5"><em>Mannahatta</em></h2>
+                <p>
+                    I WAS asking for something specific and perfect for my city,
+                    Whereupon lo! upsprang the the [NYC Core Framework].
+                </p>
+                <p>
+                    <a href="#1">Read Full Poem</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card bc-white rounded border my-3">
+
+            <div class="card__header border-b">
+                <p>Walt Whitman</p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h5"><em>Mannahatta</em></h2>
+                <p>
+                    I WAS asking for something specific and perfect for my city,
+                    Whereupon lo! upsprang the the [NYC Core Framework].
+                </p>
+                <p>
+                    <a href="#1">Read Full Poem</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+    </div>
+    <!-- default theme -->
+
+</figure>
 
 <div class="container narrow my-4">
-    <h2>Background Color Classes</h2>
-    <p>
-        Our background color classes make it easy to apply color to an element, without needing to apply colors to that
-        elements (or child elements) text and borders. Each theme color (e.g. <em>primary</em>) is assigned predesignated text color, link color, and border color.
-    </p> 
+    <h3>Inheritance and Specicifity</h3>
     <p>
         Using only our background classes, let's add some color to this otherwise boring layout.
     </p>
 </div>
+<!-- .container -->
 
 {% include browser-iframe.html iframe_url="/examples/color-system/theming-01.html" %}
 
