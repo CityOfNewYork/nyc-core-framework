@@ -173,123 +173,11 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        Each theme color (e.g. <em>primary</em>) is assigned a predesignated <strong>text color</strong> , <strong>link
-            color</strong>, and <strong>border color</strong>. This predesignation occurs in our Sass partial for colors,
-        found in <a href="#1"><strong>/src/partials/_color.scss</strong></a>.
-    </p>
-
-    <p>
-        Figure 2 (below) represents the custom properties (variables) located at the top of this partial.
+        Each theme color (e.g. <em>primary</em>) is assigned a <a href="">predesignated</a>  <strong>text color</strong> , <strong>link
+            color</strong>, and <strong>border color</strong>.
     </p>
 </div>
 <!-- .container -->
-
-<figure class="container narrow my-4">
-    <pre class="hide-toolbar" data-line="5, 16,17,18">
-        <code class="language-scss">
-            :root {
-
-                // Theme Color Palette
-
-                --primary: #25caa4;
-                --secondary: #6500d6;
-                --dark: #262345;
-                --light: #f1f4f6;
-
-                // Accessible Link Color
-
-                --a11y-link-color: blue;
-
-                // Associated Primary Colors
-
-                --primary-text: var(--dark);
-                --primary-border: hsla(0, 0%, 0%, 0.125);
-                --primary-link: currentColor;
-
-                // Associated Secondary Colors
-
-                --secondary-text: white;
-                --secondary-border: hsla(0, 0%, 0%, 0.25);
-                --secondary-link: currentColor;
-
-                // Associated Dark Colors
-
-                --dark-text: white;
-                --dark-border: hsla(0, 0%, 100%, 0.125);
-                --dark-link: currentColor;
-
-                // Associated Light Colors
-
-                --light-text: var(--dark);
-                --light-border: hsl(0, 0%, 50%, 0.25);
-                --light-link: var(--a11y-link-color);
-
-                // Associated Light Colors
-
-                --white-text: var(--dark);
-                --white-border: hsl(0, 0%, 50%, 0.25);
-                --white-link: var(--a11y-link-color);
-
-                // Alert and Form Feedback Colors
-
-                --confirm: #008230;
-                --attention: #3953B1;
-                --warn: #dc3545;
-            }
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
-    </figcaption>
-</figure>
-
-<figure class="container narrow my-4">
-    <table class="fs-md">
-        <thead>
-            <tr>
-                <th class="w-30">Line #</th>
-                <th class="w-70">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>5</td>
-                <td>
-                    <p>
-                        Declaration of our <em>Primary</em> theme color.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td>
-                    <p>
-                        Color of all text within a <code>.bc-primary</code> selector.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td>
-                    <p>
-                        Color of all borders within a <code>.bc-primary</code> selector.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>
-                    <p>
-                        Color of all general links inside of <code>&lt;p&gt;</code> tags within a <code>.bc-primary</code> selector.
-                    </p>
-                </td>
-            </tr>
-
-        </tbody>
-
-    </table>
-</figure>
-
 <div class="container narrow my-4">
     <p>
         When a background color class is applied to an element, its text, borders, and links (only those inside
@@ -493,8 +381,8 @@ title: "Color System"
         In other words, <strong>background color classes are infinitely nestable</strong>. Let's look at the concept of nesting in practice.
     </p>
     <p>
-        The layout below has only one
-        background color class applied to the <code>&lt;body&gt;</code> tag. Notice the text, link, and border colors across the document are correct, regardless of their position in the DOM. 
+        The layout below has only one background color class applied to the <code>&lt;body&gt;</code> tag. Notice the
+        text, link, and border colors across the document are correct, regardless of their position in the DOM.
     </p>
 </div>
 <!-- .container -->
@@ -558,4 +446,121 @@ title: "Color System"
     <figcaption>
         <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
     </figcaption>
+</figure>
+
+<div class="container narrow my-4" id="cool">
+    <h3>Predesignated Colors</h3>
+    <p>
+        This predesignation occurs in our Sass partial for colors, found in <a href="#1"><strong>/src/partials/_color.scss</strong></a>
+    </p>
+   <p>
+       Figure 2 (below) represents the custom properties (variables) located at the top of this partial.
+   </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar" data-line="5, 16,17,18">
+        <code class="language-scss">
+            :root {
+
+                // Theme Color Palette
+
+                --primary: #25caa4;
+                --secondary: #6500d6;
+                --dark: #262345;
+                --light: #f1f4f6;
+
+                // Accessible Link Color
+
+                --a11y-link-color: blue;
+
+                // Associated Primary Colors
+
+                --primary-text: var(--dark);
+                --primary-border: hsla(0, 0%, 0%, 0.125);
+                --primary-link: currentColor;
+
+                // Associated Secondary Colors
+
+                --secondary-text: white;
+                --secondary-border: hsla(0, 0%, 0%, 0.25);
+                --secondary-link: currentColor;
+
+                // Associated Dark Colors
+
+                --dark-text: white;
+                --dark-border: hsla(0, 0%, 100%, 0.125);
+                --dark-link: currentColor;
+
+                // Associated Light Colors
+
+                --light-text: var(--dark);
+                --light-border: hsl(0, 0%, 50%, 0.25);
+                --light-link: var(--a11y-link-color);
+
+                // Associated Light Colors
+
+                --white-text: var(--dark);
+                --white-border: hsl(0, 0%, 50%, 0.25);
+                --white-link: var(--a11y-link-color);
+
+                // Alert and Form Feedback Colors
+
+                --confirm: #008230;
+                --attention: #3953B1;
+                --warn: #dc3545;
+            }
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+    </figcaption>
+</figure>
+
+<figure class="container narrow my-4">
+    <table class="fs-md">
+        <thead>
+            <tr>
+                <th class="w-30">Line #</th>
+                <th class="w-70">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5</td>
+                <td>
+                    <p>
+                        Declaration of our <em>Primary</em> theme color.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>
+                    <p>
+                        Color of all text within a <code>.bc-primary</code> selector.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>
+                    <p>
+                        Color of all borders within a <code>.bc-primary</code> selector.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>
+                    <p>
+                        Color of all general links inside of <code>&lt;p&gt;</code> tags within a <code>.bc-primary</code> selector.
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
 </figure>
