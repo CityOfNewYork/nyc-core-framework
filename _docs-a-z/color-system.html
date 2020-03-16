@@ -45,14 +45,14 @@ title: "Color System"
         <div class="grid__col">
             <div class="px-2 py-3 bc-primary d-none--lg">
                 <p class="mb-0"><strong>Primary</strong></p>
-                <p class="mb-0">#666666</p>
+                <p class="mb-0">#25caa4</p>
             </div>
             <!-- px-2 -->
                 <div class="aspect-ratio--1by1 d-none d-block--lg">
                     <div class="aspect-ratio__element bc-primary">
                         <div class="m-2">
                             <p class="mb-0"><strong>Primary</strong></p>
-                            <p class="mb-0">#666666</p>
+                            <p class="mb-0">#25caa4</p>
                         </div>
                     </div>
                 </div>
@@ -63,14 +63,14 @@ title: "Color System"
         <div class="grid__col">
             <div class="px-2 py-3 bc-secondary d-none--lg">
                 <p class="mb-0"><strong>Secondary</strong></p>
-                <p class="mb-0">#666666</p>
+                <p class="mb-0">#6500d6</p>
             </div>
             <!-- px-2 -->
             <div class="aspect-ratio--1by1 d-none d-block--lg">
                 <div class="aspect-ratio__element bc-secondary">
                     <div class="m-2">
                         <p class="mb-0"><strong>Secondary</strong></p>
-                        <p class="mb-0">#666666</p>
+                        <p class="mb-0">#6500d6</p>
                     </div>
                 </div>
             </div>
@@ -81,14 +81,14 @@ title: "Color System"
         <div class="grid__col">
             <div class="px-2 py-3 bc-dark d-none--lg">
                 <p class="mb-0"><strong>Dark</strong></p>
-                <p class="mb-0">#666666</p>
+                <p class="mb-0">#262345</p>
             </div>
             <!-- px-2 -->
             <div class="aspect-ratio--1by1 d-none d-block--lg">
                 <div class="aspect-ratio__element bc-dark">
                     <div class="m-2">
                         <p class="mb-0"><strong>Dark</strong></p>
-                        <p class="mb-0">#666666</p>
+                        <p class="mb-0">#262345</p>
                     </div>
                 </div>
             </div>
@@ -99,14 +99,14 @@ title: "Color System"
         <div class="grid__col">
             <div class="px-2 py-3 bc-light d-none--lg">
                 <p class="mb-0"><strong>Light</strong></p>
-                <p class="mb-0">#666666</p>
+                <p class="mb-0">#f1f4f6</p>
             </div>
             <!-- px-2 -->
             <div class="aspect-ratio--1by1 d-none d-block--lg">
                 <div class="aspect-ratio__element bc-light">
                     <div class="m-2">
                         <p class="mb-0"><strong>Light</strong></p>
-                        <p class="mb-0">#666666</p>
+                        <p class="mb-0">#f1f4f6</p>
                     </div>
                 </div>
             </div>
@@ -117,14 +117,14 @@ title: "Color System"
         <div class="grid__col">
             <div class="px-2 py-3 bc-white border d-none--lg">
                 <p class="mb-0"><strong>White</strong></p>
-                <p class="mb-0">#666666</p>
+                <p class="mb-0">#ffffff</p>
             </div>
             <!-- px-2 -->
             <div class="aspect-ratio--1by1 d-none d-block--lg">
                 <div class="aspect-ratio__element bc-white border">
                     <div class="m-2">
                         <p class="mb-0"><strong>White</strong></p>
-                        <p class="mb-0">#666666</p>
+                        <p class="mb-0">#ffffff</p>
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@ title: "Color System"
     <p>
         You can modify these colors with <a href="{{ site.baseurl }}/documentation/customization/#customProperties">CSS custom 
         properties</a> or <a href="#1">Sass</a>. These theme colors generate our
-        background color classes (below), <a href="#1">text color classes</a>, and <a href="#1">border color classes</a>.
+        background-color classes (below), <a href="#1">text color classes</a>, and <a href="#1">border color classes</a>.
     </p>
 </div>
 <!-- .container -->
@@ -150,7 +150,7 @@ title: "Color System"
 <hr class="my-5" id="backgroundColorClasses">
 
 <div class="container narrow my-4">
-    <h2>Background Color Classes</h2>
+    <h2>Background-color Classes</h2>
     <p>
         In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. Throughout our templates and examples, you
         may have noticed the <code>&lt;body&gt;</code> tag has a <code>.bc-white</code> class applied (Figure 1).
@@ -167,7 +167,7 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 1 - Example usage of the <em>white</em> background color class.</p>
+        <p>Figure 1 - Example usage of the <em>white</em> background-color class.</p>
     </figcaption>
 </figure>
 
@@ -238,7 +238,7 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Example of our color system's custom property declarations located at the top of the <a href="#1">Sass partial</a> for colors.</p>
+        <p>Figure 2 - Example of our color system's custom property declarations inside of the Framework's <a href="#1">Sass partial</a> for colors.</p>
     </figcaption>
 </figure>
 
@@ -255,7 +255,7 @@ title: "Color System"
                 <td>5</td>
                 <td>
                     <p>
-                        Declaration of our <em>Primary</em> theme color.
+                        Our theme's <em>Primary</em> color.
                     </p>
                 </td>
             </tr>
@@ -263,7 +263,7 @@ title: "Color System"
                 <td>16</td>
                 <td>
                     <p>
-                        Color of all text within a <code>.bc-primary</code> selector.
+                        Color of all text within <code>.bc-primary</code>.
                     </p>
                 </td>
             </tr>
@@ -271,7 +271,7 @@ title: "Color System"
                 <td>17</td>
                 <td>
                     <p>
-                        Color of all borders within a <code>.bc-primary</code> selector.
+                        Color of all borders within <code>.bc-primary</code>.
                     </p>
                 </td>
             </tr>
@@ -279,7 +279,7 @@ title: "Color System"
                 <td>18</td>
                 <td>
                     <p>
-                        Color of all general links inside of <code>&lt;p&gt;</code> tags within a <code>.bc-primary</code> selector.
+                        Color of all paragraph links within<code>.bc-primary</code>.
                     </p>
                 </td>
             </tr>
@@ -291,11 +291,11 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        When a background color class is applied to an element, its text, borders, and links (only those inside
+        When a background-color class is applied to an element, its text, borders, and links (only those inside
         <code>&lt;p&gt;</code> tags) automatically inherit their appropriate predesignated color.
     </p>
     <p>
-        Let's apply our background color classes to Framework <a href="{{ site.baseurl}}/documentation/cards/">cards</a>:
+        Let's apply our background-color classes to Framework <a href="{{ site.baseurl}}/documentation/cards/">cards</a>:
     </p>
 </div>
 <!-- .container -->
@@ -411,7 +411,7 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        With the above cards, we only specified the background color class (e.g. <code>.bc-primary</code>). Each card's text,
+        With the above cards, we only specified the background-color class (e.g. <code>.bc-primary</code>). Each card's text,
         borders, and paragraph links inherit their assigned colors. Figure 3 below displays the HTML used to create the
         <em>Primary</em> card.
     </p>
@@ -449,7 +449,7 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        Each one of our theme colors (above) are available as a background color classes (Figure 4):
+        Each one of our theme colors (above) are available as a background-color class (Figure 4):
     </p>
 </div>
 <!-- .container -->
@@ -479,22 +479,23 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 4 - Background color classes generated from our theme colors.</p>
+        <p>Figure 4 - Our theme color generated background-color classes.</p>
     </figcaption>
 </figure>
 
 <div class="container narrow my-4" id="cool">
     <h3>Inheritance and Selectivity</h3>
     <p>
-        Apply a background color class to any element along the DOM (Document Object Model) and every child element
+        Apply a background-color class to any element along the DOM (Document Object Model) and every child element
         within inherits their appropriate colors until a new class is specified.
     </p>
     <p>
-        In other words, <strong>background color classes are infinitely nestable</strong>. Let's look at the concept of nesting in practice.
+        In other words, <strong>background-color classes are infinitely nestable</strong>. Let's look at the concept of nesting in practice.
     </p>
     <p>
-        The layout below has only one background color class applied to the <code>&lt;body&gt;</code> tag. Notice the
-        text, link, and border colors across the document are correct, regardless of their position in the DOM.
+        The layout below has  a <code>.bc-white</code> class applied to the <code>&lt;body&gt;</code> tag. Notice the
+        text, border, and link colors across the page receive their assigned color, regardless of their position in
+        the DOM.
     </p>
 </div>
 <!-- .container -->
@@ -504,10 +505,10 @@ title: "Color System"
 <div class="container narrow my-4">
     <p>
         Suppose we want a dark theme for our entire page. Of course, dark pages are <em>not</em> recommended for
-        readability, but we'll make one for sake of demonstration here.
+        readability, but we've made one here for sake of demonstration.
     </p>
     <p>
-        To create our dark theme, we changed the <code>.bc-white</code> class (on our
+        To create our dark theme, we changed the <code>.bc-white</code> class (applied to the
         <code>&lt;body&gt;</code> tag) to <code>.bc-dark</code>.
     </p>
 </div>
@@ -517,7 +518,7 @@ title: "Color System"
 <div class="container narrow my-4">
     <p>
         That was easy but now our page looks really flat. Let's make our header, sidebar, and footer stand out by adding
-        background color class to them as well.
+        background-color classes to them as well.
     </p>
 </div>
 <!-- .container -->
@@ -557,6 +558,6 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+        <p>Figure 2 - Example of the <em>primary</em> background-color class applied to a card.</p>
     </figcaption>
 </figure>
