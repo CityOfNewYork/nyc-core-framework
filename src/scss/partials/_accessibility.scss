@@ -56,11 +56,13 @@ In this file:
 .hover-focus {
     &:hover,
     &:focus {
+        
         &:not([class*="sr-only-focusable"]):not(.expanded-link) {
             position: relative;
             z-index: 5000;
         }
-        &:not([class*="btn-icon"]){
+
+        &:not([class*="btn-icon"]):not([class*="has-icon"]) {
             text-decoration: underline;
         }
     }

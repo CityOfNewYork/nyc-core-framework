@@ -3,8 +3,9 @@
 In this file:
 
 // A. Variables
-// A. Buttons
-// B. Button Icon
+// B. Button Settings
+// C. Button With Icon
+// C. Button Icon Only
 // C. I.E. 11 Support
 
 */
@@ -23,7 +24,6 @@ In this file:
 //////////////////////////////////////////////
 
 [class*="btn"] {
-
     @extend .hover-focus;
 
     display: inline-block;
@@ -36,10 +36,10 @@ In this file:
 
     cursor: pointer;
 
-    &:not([class*="-icon"]) {
+    &:not([class*="btn-icon"]) {
         padding: var(--btn-padding-y) var(--btn-padding-x);
     }
-    
+
     &:hover {
         opacity: .9;
     }
@@ -52,6 +52,31 @@ In this file:
 
 //////////////////////////////////////////////
 // C. Button Icon
+//////////////////////////////////////////////
+
+.has-icon {
+
+    > span.text {
+        margin-left: .25em;
+        margin-right: .25em;
+    }
+
+    &:hover,
+    &:focus{
+        > span.text {
+            text-decoration: underline;
+        }
+    }
+
+    &.disperse{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+//////////////////////////////////////////////
+// C. Button Icon Only
 //////////////////////////////////////////////
 
 .btn-icon {
