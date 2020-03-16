@@ -140,9 +140,9 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        Modify these colors with <a href="{{ site.baseurl }}/documentation/customization/#customProperties">custom
-            properties</a> or create additional colors <a href="#1">using Sass</a>. These theme colors generate our
-        background color classes (below), <a href="#1">text color classes</a>, and <a href="#1">border classes</a>.
+        You can modify these colors with <a href="{{ site.baseurl }}/documentation/customization/#customProperties">CSS custom 
+        properties</a> or <a href="#1">Sass</a>. These theme colors generate our
+        background color classes (below), <a href="#1">text color classes</a>, and <a href="#1">border color classes</a>.
     </p>
 </div>
 <!-- .container -->
@@ -152,7 +152,7 @@ title: "Color System"
 <div class="container narrow my-4">
     <h2>Background Color Classes</h2>
     <p>
-        In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. Throught our templates and examples, you
+        In the NYC Core Framework <em>white</em> is treated as a color and it serves as your default theme color. Throughout our templates and examples, you
         may have noticed the <code>&lt;body&gt;</code> tag has a <code>.bc-white</code> class applied (Figure 1).
     </p>
 </div>
@@ -167,19 +167,18 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 1 - Example of the <em>white</em> background color class.</p>
+        <p>Figure 1 - Example usage of the <em>white</em> background color class.</p>
     </figcaption>
 </figure>
 
 <div class="container narrow my-4">
     <p>
-        Each theme color (e.g. <em>Primary</em>) is assigned a predesignated <strong>text color</strong>, <strong>link 
-        color</strong>, and <strong>border color</strong>. This predesignation occurs in our Sass partial for colors,
-        found in <a href="#1"><strong>/src/partials/_color.scss</strong></a>.
+        In the Framework, each theme color (e.g. <em>Primary</em>) is assigned a designated <strong>text color</strong>, <strong>link 
+        color</strong>, and <strong>border color</strong>.
     </p>
-
     <p>
-        Figure 2 (below) represents the custom properties (variables) located at the top of this partial.
+        This designation occurs within our Sass partial for colors, located in <a href="#1"><strong>/src/partials/_color.scss</strong></a>.
+        In Figure 2 (below), the <em>Primary</em> theme color declarations are highlighted.
     </p>
 </div>
 <!-- .container -->
@@ -239,7 +238,7 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+        <p>Figure 2 - Example of our color system's custom property declarations located at the top of the <a href="#1">Sass partial</a> for colors.</p>
     </figcaption>
 </figure>
 
@@ -412,9 +411,9 @@ title: "Color System"
 
 <div class="container narrow my-4">
     <p>
-        With the above cards, we only specified the background color class (e.g. <code>.bc-primary</code>), and the
-        text, links, and borders inherit their predesignated colors. Figure 3 below displays the HTML used to
-        create the <em>Primary</em> card.
+        With the above cards, we only specified the background color class (e.g. <code>.bc-primary</code>). Each card's text,
+        borders, and paragraph links inherit their assigned colors. Figure 3 below displays the HTML used to create the
+        <em>Primary</em> card.
     </p>
 </div>
 <!-- .container -->
@@ -422,7 +421,7 @@ title: "Color System"
 <figure class="container medium my-4">
     <pre data-line="1">
         <code class="language-html">
-            &lt;div class="card bc-secondary rounded border my-3">
+            &lt;div class="card bc-primary rounded border my-3">
 
                 &lt;div class="card__header border-b"&gt;
                     &lt;p&gt;Walt Whitman&lt;/p&gt;
@@ -444,13 +443,13 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 3 - Example of the <em>primary</em> background color class applied to a card.</p>
+        <p>Figure 3 - Example HTML used to create the <em>Primary</em> card.</p>
     </figcaption>
 </figure>
 
 <div class="container narrow my-4">
     <p>
-        To be sure, each of our theme colors (above) are available as a background color class:
+        Each one of our theme colors (above) are available as a background color classes (Figure 4):
     </p>
 </div>
 <!-- .container -->
@@ -480,7 +479,7 @@ title: "Color System"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Example of the <em>primary</em> background color class applied to a card.</p>
+        <p>Figure 4 - Background color classes generated from our theme colors.</p>
     </figcaption>
 </figure>
 
