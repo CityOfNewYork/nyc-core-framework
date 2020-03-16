@@ -10,7 +10,7 @@ title: "Get Started"
     </h2>
     <p>
         The NYC Core Framework is an open-source front end toolkit for building modern websites and
-        browser-based applications. Our lightweight codebase is easy to understand—and at the same time—provides a
+        web applications. Our lightweight codebase is easy to understand—and at the same time—provides a
         wealth of accessible components ideal for projects of any size and complexity.
     </p>
 
@@ -102,8 +102,8 @@ title: "Get Started"
     </p>
     <p>
         These CSS and Javascript files are the <strong>only two dependencies</strong> generated from
-        the NYC Core Framework, and they are available to be used via CDN (Content Delivery Network). Follow our <a
-            href="#quickStartGuide"><em>Quick Start Guide</em></a> below to get started with these core files.
+        the NYC Core Framework, and they are available to be used via CDN (Content Delivery Network). 
+        Follow our <em>Quick Start Guide</em> below to get started with these core files.
     </p>
 </div>
 <!-- .container -->
@@ -197,10 +197,17 @@ title: "Get Started"
 <!-- .container -->
 
 <figure class="container medium my-4">
-    <pre data-line="2, 10, 13">
+    <pre data-line="2,5,6,7,8,9,17,20">
         <code class="language-html">
             &lt;!-- IE Compatibility Mode --&gt;
             &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+
+            &lt;!-- IE Custom Properties Polyfill --&gt;
+            &lt;script&gt;
+                window.MSInputMethodContext && document.documentMode && document.write(
+                    '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
+                );
+            &lt;/script&gt;
 
             &lt;meta charset="utf-8"&gt;
             &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
@@ -222,7 +229,7 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        Lines 2, 10, and 13 (highlighted in Figure 4) are required. Learn what these scripts do in the table below.
+        Highlighted in Figure 4, line 2, and 5 through 7 are required for Internet Explorer 11 support. Lines 17 and 20 are required for the Framework. Learn what these scripts do in the table below.
     </p>
 </div>
 <!-- .container -->
@@ -247,7 +254,16 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>10</td>
+                <td>5-9</td>
+                <td>
+                    <p>
+                        This Custom Properties polyfill for IE 11 needs to placed before any stylesheet or style reference. All other browsers will not load this script. Thanks to
+                        Tobias Buschor | <a href="#1">https://git.io/fjXMN</a>.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>17</td>
                 <td>
                     <p>
                         Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
@@ -256,7 +272,7 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>13</td>
+                <td>20</td>
                 <td>
                     <p>
                         Our Framework's latest stable version of the core stylesheet (available via CDN.
@@ -272,7 +288,7 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        Next, include the following scripts after the closing <code>&lt;/footer&gt;</code> tag and before the closing
+        Next, include the following script after the closing <code>&lt;/footer&gt;</code> tag and before the closing
         <code>&lt;/body&gt;</code> tag.
     </p>
 </div>
@@ -284,13 +300,6 @@ title: "Get Started"
         <code class="language-html">
             &lt;!-- NYC Core Javascript --&gt;
             &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js">&lt;/script&gt;
-
-            &lt;!-- IE Custom Properties Polyfill --&gt;
-            &lt;script&gt;
-                window.MSInputMethodContext && document.documentMode && document.write(
-                    '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
-                );
-            &lt;/script&gt;
         </code>
     </pre>
 
@@ -322,16 +331,7 @@ title: "Get Started"
                 <td>2</td>
                 <td>
                     <p>
-                        Our Framework's latest stable version of the core Javascript file (available via CDN).
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>5-9</td>
-                <td>
-                    <p>
-                        A Custom Properties polyfill for IE 11. All other browsers will not load this script. Thanks to
-                        Tobias Buschor | <a href="#1">https://git.io/fjXMN</a>.
+                        CDN link to the Framework's latest stable core Javascript file.
                     </p>
                 </td>
             </tr>
