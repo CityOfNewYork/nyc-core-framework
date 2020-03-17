@@ -3,7 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Button Settings
+// B. Default Button
+// C. Button Outline
 // C. Button With Icon
 // D. Button Icon Only
 // E. I.E. 11 Support
@@ -21,7 +22,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Button Settings
+// B. Default Button
 //////////////////////////////////////////////
 
 .btn {
@@ -109,7 +110,7 @@ In this file:
     }
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
