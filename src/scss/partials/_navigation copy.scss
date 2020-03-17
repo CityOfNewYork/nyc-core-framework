@@ -23,8 +23,8 @@ In this file:
 // B. Nav
 ////////////////////////////////////////
 
-.nav {
-    --gap-size: var(--s2);
+[class*="nav"] {
+    --gap-size: var(--s3);
     
     @extend %list-no-style;
     line-height: normal;
@@ -39,7 +39,7 @@ In this file:
     }
 }
 
-.nav:not([class*="nav--divider"]) {
+[class*="nav"]:not([class*="--divider"]) {
 
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * .75);
@@ -63,7 +63,7 @@ In this file:
         @include breakpoint-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.nav--horizontal#{$mod} {
+            &.horizontal#{$mod} {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -144,7 +144,7 @@ In this file:
         @include breakpoint-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.nav--horizontal#{$mod} {
+            &.horizontal#{$mod} {
                 display: flex;
                 flex-direction: row;
 
