@@ -33,8 +33,6 @@ In this file:
 .sr-only-focusable {
     &:active,
     &:focus {
-        @extend .bc-primary;
-        
         position: absolute;
         top: var(--s2);
         left: var(--s2);
@@ -46,6 +44,8 @@ In this file:
         white-space: normal;
         padding: var(--s2) var(--s3);
         font-size: var(--font-size-rg);
+        
+        @extend .bc-primary;
     }
 }
 
