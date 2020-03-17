@@ -188,7 +188,7 @@ In this file:
 // E. Dropdown
 ////////////////////////////////////////
 
-[data-toggle="dropdown"]:not([class*="btn-icon"]) {
+[data-toggle="dropdown"]:not([class*="btn--icon-only"]) {
     @include caret("down");
 
     &[aria-expanded="true"]::after {

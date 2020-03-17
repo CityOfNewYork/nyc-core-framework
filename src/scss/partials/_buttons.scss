@@ -5,8 +5,8 @@ In this file:
 // A. Variables
 // B. Button Settings
 // C. Button With Icon
-// C. Button Icon Only
-// C. I.E. 11 Support
+// D. Button Icon Only
+// E. I.E. 11 Support
 
 */
 
@@ -17,15 +17,14 @@ In this file:
 :root {
     --btn-padding-x: 1em;
     --btn-padding-y: 0.5em;
+    --btn--icon-only-size: 2em;
 }
 
 //////////////////////////////////////////////
 // B. Button Settings
 //////////////////////////////////////////////
 
-[class*="btn"] {
-    @extend .hover-focus;
-
+.btn {
     display: inline-block;
     color: inherit;
     background-color: unset;
@@ -33,67 +32,73 @@ In this file:
     vertical-align: middle;
     user-select: none;
     line-height: normal;
-
     cursor: pointer;
 
-    &:not([class*="btn-icon"]) {
-        padding: var(--btn-padding-y) var(--btn-padding-x);
-    }
+    @extend .hover-focus;
 
     &:hover {
-        opacity: .9;
+        opacity: 0.9;
     }
 
-    &[class*="-outline"] {
-        background-color: transparent;
-        box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+    &:not([class*="--icon-only"]) {
+        padding: var(--btn-padding-y) var(--btn-padding-x);
     }
 }
 
 //////////////////////////////////////////////
-// C. Button Icon
+// C. Button Outline
 //////////////////////////////////////////////
 
-.has-icon {
+.btn--outline {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+}
 
-    > span.text {
-        margin-left: .25em;
-        margin-right: .25em;
-    }
+//////////////////////////////////////////////
+// D. Button Has Icon
+//////////////////////////////////////////////
+
+.btn--has-icon {
 
     &:hover,
     &:focus{
-        > span.text {
+        .btn__text {
             text-decoration: underline;
         }
     }
 
-    &.disperse{
+    .btn__text {
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+
+    &--disperse{
         display: flex;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
     }
 }
 
 //////////////////////////////////////////////
-// C. Button Icon Only
+// E. Button Icon Only
 //////////////////////////////////////////////
 
-.btn-icon {
-    --btn-icon-size: 2.5em;
-
-    display: inline-flex;
+.btn--icon-only {
     position: relative;
-    border-radius: 50%;
+    display: inline-flex;
+    width: var(--btn--icon-only-size);
+    height: var(--btn--icon-only-size);
+
     overflow: hidden;
-    width: var(--btn-icon-size);
-    height: var(--btn-icon-size);
+    border-radius: 50%;
+
     align-items: center;
     justify-content: center;
     font-size: inherit;
 
-    span[class*="fa"]{
-        font-size: calc(var(--btn-icon-size) * 0.5);
+    [data-icon] {
+        font-size: calc(var(--btn--icon-only-size) * 0.5);
     }
 
     &::before {
@@ -125,7 +130,7 @@ In this file:
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
 
-    .btn-icon {
+    .btn--icon-only {
         display: table-cell; 
 
         span[class*="fa"] {
