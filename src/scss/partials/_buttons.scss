@@ -139,14 +139,12 @@ In this file:
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-
-    .btn--icon-only {
+    .btn.btn--icon-only {
         display: table-cell; 
 
-        span[class*="fa"] {
+        .btn__icon {
             margin-right: auto;
             margin-left: auto;
         }
     }
-
 }
