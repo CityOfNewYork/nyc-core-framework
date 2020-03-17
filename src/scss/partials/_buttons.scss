@@ -36,8 +36,12 @@ In this file:
 
     @extend .hover-focus;
 
-    &:hover {
-        opacity: 0.9;
+    transition: opacity 0.5s;
+
+    &:hover, 
+    &:focus, 
+    &:active {
+        opacity: 0.85;
     }
 
     &:not([class*="--icon-only"]) {
@@ -58,7 +62,7 @@ In this file:
 // D. Button Has Icon
 //////////////////////////////////////////////
 
-.btn--has-icon {
+[class*="btn--has-icon"] {
 
     &:hover,
     &:focus{
@@ -66,18 +70,18 @@ In this file:
             text-decoration: underline;
         }
     }
-
-    .btn__text {
+    
+    @at-root .btn__text {
         margin-left: 0.25em;
         margin-right: 0.25em;
     }
+}
 
-    &--disperse{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
+.btn--has-icon--disperse {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 //////////////////////////////////////////////
@@ -87,6 +91,7 @@ In this file:
 .btn--icon-only {
     position: relative;
     display: inline-flex;
+
     width: var(--btn--icon-only-size);
     height: var(--btn--icon-only-size);
 
@@ -96,6 +101,8 @@ In this file:
     align-items: center;
     justify-content: center;
     font-size: inherit;
+    
+    z-index: 1;
 
     [data-icon] {
         font-size: calc(var(--btn--icon-only-size) * 0.5);
@@ -109,16 +116,18 @@ In this file:
         bottom: 0;
         left: 0;
 
+        border-radius: inherit;
+        transition: opacity 0.5s;
         background-color: currentColor;
-        opacity: 0.075;
-        display: none;
+        pointer-events: none;
+
+        opacity: 0;
     }
 
     &:hover, 
     &:focus {
-        
         &::before {
-            display: block;
+            opacity: 0.075;
         }
     }
 }
