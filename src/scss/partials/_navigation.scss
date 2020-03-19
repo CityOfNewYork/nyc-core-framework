@@ -76,7 +76,7 @@ In this file:
                     margin-bottom: 0 !important;
                 }
 
-                > li >[data-toggle="dropdown"] ~ ul {
+                > li > [data-toggle="dropdown"] ~ ul {
                     min-width: 200px;
                     position: absolute;
                     left: 0;

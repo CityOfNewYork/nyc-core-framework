@@ -12,15 +12,31 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
+
+    // Alert and Form Feedback Colors
+
+    --confirm: #008230;
+    --attention: #3953B1;
+    --warn: #dc3545;
+
     --alert-light-bg-opacity: .075;
 }
+
+//////////////////////////////////////////////
+// C. Alert Color Map
+//////////////////////////////////////////////
+
+$alert-colors: (
+    confirm: var(--confirm),
+    attention: var(--attention),
+    warn: var(--warn)
+);
 
 //////////////////////////////////////////////
 // B. Alert Styles
 //////////////////////////////////////////////
 
-.alert,
-[class*="alert--"] {
+.alert {
     position: relative;
     overflow: hidden;
 
@@ -30,38 +46,57 @@ In this file:
         color: inherit !important;
     }
 
-    p:not(:last-child) {
-        margin-bottom: var(--s2);
-    }
-
-    &::before {
-        pointer-events: none;
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        background-color: currentColor;
-        opacity: var(--alert-light-bg-opacity);
-    }
-
     &[class*="border-"] {
         border-color: currentColor !important;
     }
 
-    &:not([class*="-dark"]){
+    &:not([class*="--dark"]):not([class*="bc-"]) {
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            pointer-events: none;
+
+            background-color: currentColor;
+            opacity: var(--alert-light-bg-opacity);
+        }
+
         background-color: white;
     }
-    
-    &[class*="-dark"] > ::before {
-        display: none;
+
+    @at-root .alert__header {
+        margin-bottom: var(--s2);
+    }
+
+    @at-root .alert__title {
+        font-weight: var(--base-font-weight-bold);
+        margin-left: var(--s1);
+        margin-right: var(--s1);
+    }
+
+    @at-root .alert__title {
+        p {
+            margin-bottom: var(--s2);
+        }
     }
 }
 
-.alert__title > .text {
-    font-weight: var(--base-font-weight-bold);
-    margin-left: var(--s1);
-    margin-right: var(--s1);
+//////////////////////////////////////////////
+// F. Alert Color Classes 
+//////////////////////////////////////////////
+
+@each $name, $value in $alert-colors {
+
+    .alert--#{$name} {
+        color: $value;
+    }
+
+    .alert--#{$name}--dark {
+        color: white;
+        background-color: $value;
+    }
 }

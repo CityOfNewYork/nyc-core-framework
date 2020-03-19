@@ -49,18 +49,11 @@ In this file:
     --light-border: hsla(0, 0%, 50%, 0.25);
     --light-link: var(--a11y-link-color);
 
-
     // Associated Light Colors
 
     --white-text: var(--dark);
     --white-border: hsla(0, 0%, 50%, 0.25);
     --white-link: var(--a11y-link-color);
-
-    // Alert and Form Feedback Colors
-
-    --confirm: #008230;
-    --attention: #3953B1;
-    --warn: #dc3545;
 }
 
 //////////////////////////////////////////////
@@ -103,16 +96,6 @@ $theme-colors: (
         border: var(--light-border),
         link: var(--light-link)
     )
-);
-
-//////////////////////////////////////////////
-// C. Alert Color Map
-//////////////////////////////////////////////
-
-$alert-colors: (
-    confirm: var(--confirm),
-    attention: var(--attention),
-    warn: var(--warn)
 );
 
 //////////////////////////////////////////////
@@ -190,20 +173,4 @@ $alert-colors: (
 
 .tc-link {
     color: var(--a11y-link-color);
-}
-
-//////////////////////////////////////////////
-// F. Alert Color Classes 
-//////////////////////////////////////////////
-
-@each $name, $value in $alert-colors {
-
-    .alert--#{$name}-light {
-        color: $value;
-    }
-
-    .alert--#{$name}-dark {
-        color: white;
-        background-color: $value;
-    }
 }
