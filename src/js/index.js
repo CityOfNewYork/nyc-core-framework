@@ -98,11 +98,9 @@ window.onload = () => {
 
         collapseButton.setAttribute("aria-expanded", false);
 
-        // collapseButton.classList.toggle('fa-times')
-
         collapseButton.addEventListener('click', function (event) {
 
-            const collapseTargetID = event.target.getAttribute('data-target').replace(/#/, '');
+            const collapseTargetID = event.target.getAttribute('data-target');
 
             const collapseTarget = document.getElementById(collapseTargetID);
 
