@@ -3,7 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Accordion Settings
+// B. Accordion Button
+// C. Accordion Panel
 
 */
 
@@ -11,30 +12,28 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-$acc-padding-x: var(--s3);
-$acc-padding-y: var(--s3);
+$accordion-padding-x: var(--s3);
+$accordion-padding-y: var(--s3);
 
-$acc-transition: 0.2s ease-out;
+$accordion-transition: 0.2s ease-out;
 
 //////////////////////////////////////////////
-// B. Accordion Settings
+// B. Accordion Button
 //////////////////////////////////////////////
 
-// Accordion Button
-
-[data-toggle="accordion"] {
-    cursor: pointer;
+.accordion__button {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
     background-color: transparent;
+    cursor: pointer;
 
-    border-top-color: inherit;
+    border-top-color: currentColor;
     border-top-width: var(--default-border-width);
     border-top-style: var(--default-border-style);
 
-    padding: $acc-padding-y $acc-padding-x;
+    padding: $accordion-padding-y $accordion-padding-x;
     margin-bottom: 0;
 
     @include caret(down);
@@ -44,15 +43,17 @@ $acc-transition: 0.2s ease-out;
     }
 }
 
-// Accordion Panel
+//////////////////////////////////////////////
+// C. Accordion Panel
+//////////////////////////////////////////////
 
-[data-accordion="panel"] {
+.accordion__panel {
     overflow: hidden;
 
     max-height: 0;
-    transition: max-height $acc-transition;
+    transition: max-height $accordion-transition;
     
     > [data-accordion="content"] {
-        padding: $acc-padding-y $acc-padding-x;
+        padding: $accordion-padding-y $accordion-padding-x;
     }
 }
