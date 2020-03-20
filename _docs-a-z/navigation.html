@@ -9,20 +9,22 @@ title: "Navigation"
     </p>
 </div>
 <!-- .container -->
-
 <div class="container narrow my-4">
     <div class="alert alert--attention my-3">
-        <p class="alert__title">
-            <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-            <span class="text">Navigation Accessibility</span>
-        </p>
-        <p>
-            Like our buttons, navigation features visible hover and focus states to communicate a button's
-            current state to the user.
-        </p>
-        <p>Learn more about <a href="#1">visible hover and focus</a>.</p>
+        <div class="alert__header">
+            <p>
+                <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
+                <span class="alert__title">Navigation Accessibility</span>
+            </p>
+        </div>
+        <div class="alert__body">
+            <p>
+                Like our buttons, navigation features visible hover and focus states to communicate a button's
+                current state to the user.
+            </p>
+            <p>Learn more about <a href="#1">visible hover and focus</a>.</p>
+        </div>
     </div>
-    <!-- .alert -->
 </div>
 <!-- .container -->
 
@@ -80,7 +82,7 @@ title: "Navigation"
 
 <div class="container narrow my-4">
     <p>
-        For a horizontal menu, apply the <code>.horizontal</code> class.
+        For a horizontal menu, apply the <code>.nav--horizontal</code> modifier class.
     </p>
 </div>
 <!-- .container -->
@@ -89,7 +91,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center">
             <div class="w-100 p-4">
-                <ul class="nav horizontal" role="navigation">
+                <ul class="nav nav--horizontal" role="navigation">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -109,7 +111,7 @@ title: "Navigation"
 <figure class="container narrow my-4">
     <pre>
         <code class="language-html">
-            &lt;ul class="nav horizontal" role="navigation"&gt;
+            &lt;ul class="nav nav--horizontal" role="navigation"&gt;
                 &lt;li&gt;
                     &lt;a href="#1"&gt;Link&lt;/a&gt;
                 &lt;/li&gt;
@@ -128,11 +130,10 @@ title: "Navigation"
 </figure>
 
 <div class="container narrow my-4">
-    <h3>Breakpoint Modifier</h3>
     <p>
-        Append a breakpoint modifier (e.g., <code>--md</code>) to the <code>.horizontal</code> class, and the menu goes
-        from vertical to horizontal at a specific breakpoint. The example navigation below starts as vertical navigation and
-        switches to horizontal at the medium breakpoint.
+        The <code>.nav--horizontal</code> modifier class accepts an additional (chained) breakpoint modifier (e.g.,
+        <code>--md</code>). With the <code>.nav--horizontal--md</code> class present, the navigation below starts as a vertical menu and
+        switches to a horizontal menu at the medium breakpoint.
     </p>
 </div>
 <!-- .container -->
@@ -141,7 +142,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center">
             <div class="w-100 p-4">
-                <ul class="nav horizontal--md" role="navigation">
+                <ul class="nav nav--horizontal--md" role="navigation">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -161,7 +162,7 @@ title: "Navigation"
 <figure class="container narrow my-4">
     <pre>
         <code class="language-html">
-            &lt;ul class="nav horizontal--md" role="navigation"&gt;
+            &lt;ul class="nav nav--horizontal--md" role="navigation"&gt;
                 &lt;li&gt;
                     &lt;a href="#1"&gt;Link&lt;/a&gt;
                 &lt;/li&gt;
@@ -191,7 +192,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center p-4">
             <div class="w-100">
-                <ul class="nav horizontal jc-center my-3" role="navigation jc-center">
+                <ul class="nav nav--horizontal jc-center my-3" role="navigation jc-center">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -202,7 +203,7 @@ title: "Navigation"
                         <a href="#1">Link</a>
                     </li>
                 </ul>
-                <ul class="nav horizontal jc-end my-3" role="navigation jc-center">
+                <ul class="nav nav--horizontal jc-end my-3" role="navigation jc-center">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -222,7 +223,7 @@ title: "Navigation"
 <figure class="container narrow my-4">
     <pre>
         <code class="language-html">
-            &lt;ul class="nav horizontal jc-center" role="navigation"&gt;
+            &lt;ul class="nav nav--horizontal jc-center" role="navigation"&gt;
                 &lt;li&gt;
                     &lt;a href="#1"&gt;Link&lt;/a&gt;
                 &lt;/li&gt;
@@ -234,7 +235,7 @@ title: "Navigation"
                 &lt;/li&gt;
             &lt;/ul&gt;
 
-            &lt;ul class="nav horizontal jc-end" role="navigation"&gt;
+            &lt;ul class="nav nav--horizontal jc-end" role="navigation"&gt;
                 &lt;li&gt;
                     &lt;a href="#1"&gt;Link&lt;/a&gt;
                 &lt;/li&gt;
@@ -263,7 +264,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center">
             <div class="w-100 p-4">
-                <ul class="nav horizontal jc-center tc-link fs-lg fw-bold" role="navigation">
+                <ul class="nav nav--horizontal jc-center tc-link fs-lg fw-bold" role="navigation">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -283,7 +284,7 @@ title: "Navigation"
 <figure class="container medium my-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;ul class="nav horizontal jc-center tc-link fs-lg fw-bold" role="navigation"&gt;
+            &lt;ul class="nav nav--horizontal jc-center tc-link fs-lg fw-bold" role="navigation"&gt;
                 ...
             &lt;/ul&gt;
         </code>
@@ -297,7 +298,7 @@ title: "Navigation"
 
 <div class="container narrow my-4">
     <h2>Bordered Navigation</h2>
-    <p>Add the <code>.nav--divider</code> class to a <code>&lt;ul&gt;</code> tag for vertical, bordered navigation menu.</p>
+    <p>Add the <code>.nav--divider</code> modifier class to a <code>.nav</code> selector for vertical, bordered navigation menu.</p>
 </div>
 <!-- .container -->
 
@@ -305,7 +306,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center">
             <div class="w-100 p-4">
-                <ul class="nav--divider" role="navigation jc-center">
+                <ul class="nav nav--divider" role="navigation jc-center">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -325,7 +326,7 @@ title: "Navigation"
 <figure class="container narrow my-4">
     <pre>
         <code class="language-html">
-            &lt;ul class="nav--divider" role="navigation"&gt;
+            &lt;ul class="nav nav--divider" role="navigation"&gt;
                 &lt;li&gt;
                     &lt;a href="#1"&gt;Link&lt;/a&gt;
                 &lt;/li&gt;
@@ -345,7 +346,8 @@ title: "Navigation"
 
 <div class="container narrow my-4">
     <p>
-        The aforementioned <code>.horizontal</code> class with breakpoint modifier (e.g., <code>--md</code>) also apply
+        The horizontal and breakpoint modifier classes (<code>.nav--horizontal</code> and
+        <code>.nav--horizontal--{bp}</code> where <em>bp</em> is the breakpoint shorthand) also apply
         to <code>.nav-divider</code> selectors.
     </p>
 </div>
@@ -354,7 +356,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center">
             <div class="w-100 p-4">
-                <ul class="nav--divider horizontal" role="navigation jc-center">
+                <ul class="nav nav--divider nav--horizontal--md" role="navigation jc-center">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -374,7 +376,7 @@ title: "Navigation"
 <figure class="container narrow my-4">
     <pre>
         <code class="language-html">
-            &lt;ul class="nav--divider horizontal" role="navigation"&gt;
+            &lt;ul class="nav nav--divider nav--horizontal--md" role="navigation"&gt;
                 &lt;li&gt;
                     &lt;a href="#1"&gt;Link&lt;/a&gt;
                 &lt;/li&gt;
@@ -402,7 +404,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center">
             <div class="w-100 p-4">
-                <ul class="nav--divider horizontal border" role="navigation jc-center">
+                <ul class="nav nav--divider nav--horizontal border" role="navigation jc-center">
                     <li>
                         <a href="#1">Link</a>
                     </li>
@@ -422,7 +424,7 @@ title: "Navigation"
 <figure class="container narrow my-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;ul class="nav-divider border" role="navigation"&gt;
+            &lt;ul class="nav nav--divider nav--horizontal border" role="navigation"&gt;
             ...
             &lt;/ul&gt;
         </code>
@@ -446,7 +448,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element d-flex">
             <div class="w-100 p-4 as-center--md">
-                <ul class="nav horizontal jc-center" role="navigation">
+                <ul class="nav nav--horizontal jc-center" role="navigation">
                     <li>
                         <a href="#1" data-toggle="dropdown">Dropdown</a>
                         <ul>
@@ -486,7 +488,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element d-flex">
             <div class="w-100 p-4 as-center--md">
-                <ul class="nav--divider horizontal border jc-center" role="navigation">
+                <ul class="nav nav--divider nav--horizontal border jc-center" role="navigation">
                     <li>
                         <a href="#1" data-toggle="dropdown">Dropdown</a>
                         <ul>
@@ -532,7 +534,7 @@ title: "Navigation"
 <figure class="container narrow my-4">
     <pre class="hide-toolbar" data-line="3,4,5,6,7,8,9,10,11,12,13,14">
         <code class="language-html">
-            &lt;ul class="nav--divider horizontal border jc-center" role="navigation"&gt;
+            &lt;ul class="nav--divider nav--horizontal border jc-center" role="navigation"&gt;
                 &lt;li&gt;
                     &lt;a href="#1" data-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
                     &lt;ul&gt;
@@ -570,7 +572,7 @@ title: "Navigation"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element d-flex">
             <div class="w-100 p-4 as-center--md">
-                <ul class="nav--divider border jc-center" role="navigation">
+                <ul class="nav nav--divider border jc-center" role="navigation">
                     <li>
                         <a href="#1" data-toggle="dropdown">Dropdown</a>
                         <ul>

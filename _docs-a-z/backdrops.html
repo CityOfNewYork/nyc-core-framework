@@ -47,18 +47,107 @@ title: "Backdrops"
     </p>
     
     <p>
-        Examples on this page include the <code>.backdrop__credit</code> selector which is not required and can be
-        customized in <a href="#1"><strong>/scss/base/_backdrops.scss</strong></a>.
+        Examples on this page include the <code>.backdrop__credit</code> selector which is not required but offers an easy way to credit an image.
     </p>
     
-    <p>Here is a practical example of an image-proportional backdrop:</p>
+    <p>Here is a basic example of an image-proportional backdrop:</p>
 
 </div>
 <!-- .container -->
 
+<figure class="container narrow my-4">
+    <div class="backdrop bc-dark rounded">
+        <img class="backdrop__image opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+        <div class="backdrop__cover">
+            <div class="container t-center">
+                <div class="w-80 mx-auto">
+                    <p class="h3 text-shadow">
+                        <em>What hurrying human tides, or day or night!</em> 
+                    </p>
+                    <p>—Walt Whitman, <a href="#1"><em>Broadway</a></em></p>
+                </div>
+            </div>
+        </div>
+        <!-- cover -->
+    </div>
+    <!-- .backdrop -->
+</figure>
+
+<div class="container narrow my-4">
+    <p>Let's review the code used to create the example above:</p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+
+    <pre data-line="1,3,5,6,7,8,9,10,11,12,13,14">
+        <code class="language-html">
+            &lt;div class="backdrop bc-dark rounded"&gt;
+
+                &lt;img class="backdrop__image opacity-40" src="https://via.placeholder.com/750x325" alt="Placeholder"&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+                    &lt;div class="container t-center"&gt;
+                        &lt;div class="w-80 mx-auto"&gt;
+                            &lt;p class="h3 text-shadow"&gt;
+                                &lt;em&gt;What hurrying human tides, or day or night!&lt;/em&gt; 
+                            &lt;/p&gt;
+                            &lt;p&gt;—Walt Whitman, &lt;a href="#1"&gt;&lt;em&gt;Broadway&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- backdrop__cover --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
+
+</figure>
+
+
+<figure class="container narrow my-4">
+    <table class="fs-md">
+        <thead>
+            <tr>
+                <th class="w-30">Line #</th>
+                <th class="w-70">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>
+                    <p>
+                        The <code>.backdrop</code> class is required on all backdrop selectors. The
+                        <code>.bc-dark</code> class sets the background and text color, and <code>.rounded</code>
+                        creates the <a href="#1">rounded corners</a>.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore eveniet libero facilis maxime repellat dolorum reprehenderit.
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</figure>
+
+
+
+
+
+
 <figure class="my-5">
 
-    <div class="backdrop--md bc-dark">
+    <div class="backdrop backdrop--stack--md bc-dark">
 
         <img class="backdrop__image opacity-40--md" src="{{ site.baseurl }}/images/examples/backdrop-example-01.jpg" alt="Placeholder">
 
@@ -218,7 +307,7 @@ title: "Backdrops"
 
         <div class="grid__col">
 
-            <div class="backdrop bc-secondary rounded">
+            <div class="backdrop bc-dark rounded">
 
                 <img class="backdrop__image opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
 
