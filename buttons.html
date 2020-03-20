@@ -20,9 +20,6 @@
     <!-- Font Awesome Kit -->
     <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
 
-    <!-- Standart NYC.gov Font -->
-    <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
-
     <!-- Theme Stylesheets -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
 
@@ -87,7 +84,7 @@
                     <div class="aspect-ratio--3by2 border">
                         <div class="aspect-ratio__element flex-row jc-center ai-center">
                             <div class="w-100">
-                                <a class="btn bc-primary d-block" href="#1">
+                                <a class="btn bc-primary d-block" href="#1" data-toggle="collapse">
                                     Button
                                 </a>
                             </div>
@@ -95,6 +92,27 @@
                     </div>
 
                 </figure>
+
+                <figure class="container narrow my-4">
+
+                    <div class="aspect-ratio--3by2 bc-light">
+                        <div class="aspect-ratio__element flex-row jc-center ai-center">
+                            <div class="">
+                                <a class="btn btn--icon-only" href="#1" title="Menu" title="Menu" data-toggle="collapse" data-target="#my-target">
+                                    <span class="sr-only">Menu</span>
+                                    <span class="fas fa-bars" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <div class="collapse" id="my-target">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, illum quisquam. Tenetur quod quam expedita obcaecati nulla voluptatibus numquam in. Id, at nisi! Repudiandae labore aperiam ad velit commodi enim!
+                    </p>
+                </div>
 
                 <figure class="container narrow my-4">
 
@@ -246,19 +264,19 @@
                             <div class="w-100">
                                 <ul class="nav nav--horizontal jc-center">
                                     <li>
-                                        <a class="btn--icon-only" href="#1" title="My Account">
+                                        <a class="btn btn--icon-only" href="#1" title="My Account">
                                             <span class="sr-only">My Account</span>
                                             <span class="fas fa-user" aria-hidden="true"></span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="btn--icon-only" href="#1" title="Edit">
+                                        <a class="btn btn--icon-only" href="#1" title="Edit">
                                             <span class="sr-only">Edit</span>
                                             <span class="fas fa-pen" aria-hidden="true"></span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="btn--icon-only" href="#1" title="Sign Out">
+                                        <a class="btn btn--icon-only" href="#1" title="Sign Out">
                                             <span class="sr-only">Sign Out</span>
                                             <span class="fas fa-sign-out-alt" aria-hidden="true"></span>
                                         </a>
@@ -344,7 +362,7 @@
         <a href="#" data-scroll="top">To Top</a>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
+    <script src="./dist/js/nyc_core.js"></script>
 
 </body>
 

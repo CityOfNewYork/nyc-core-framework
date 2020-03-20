@@ -98,15 +98,15 @@ window.onload = () => {
 
         collapseButton.setAttribute("aria-expanded", false);
 
-        collapseButton.addEventListener('click', () => {
+        collapseButton.addEventListener('click', (event) => {
 
-            const collapseTargetID = event.target.getAttribute('data-target');
+            const collapseTargetID = event.target.getAttribute('data-target').replace(/#/, '');
 
             const collapseTarget = document.getElementById(collapseTargetID);
 
            console.log(collapseTargetID);
 
-            // collapseTarget.classList.toggle('shown');
+            collapseTarget.classList.toggle('shown');
         })
     }
 
