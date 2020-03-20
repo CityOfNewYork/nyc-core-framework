@@ -3,7 +3,6 @@
 In this file:
 
 // A. Collapse Class
-// B. I.E. 11 Support
 
 */
 
@@ -12,17 +11,9 @@ In this file:
 //////////////////////////////////////////////
 
 .collapse {
-    max-height: 0;
-    height: 0;
-    transition: max-height 0.3s ease-out;
-
-    position: absolute;
-    top:-30000px;
-    left: -30000px;
-
+    display: none;
+    
     &.shown {
-        position: static;
-        overflow: hidden;
-        height: auto;
+        display: block;
     }
 }
