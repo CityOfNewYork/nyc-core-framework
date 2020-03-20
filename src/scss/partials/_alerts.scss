@@ -46,7 +46,7 @@ $alert-colors: (
         color: inherit !important;
     }
 
-    &[class*="border-"] {
+    &[class*="border"] {
         border-color: currentColor !important;
     }
 
