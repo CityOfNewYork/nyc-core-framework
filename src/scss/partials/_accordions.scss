@@ -33,13 +33,19 @@ $accordion-transition: 0.2s ease-out;
     border-top-width: var(--default-border-width);
     border-top-style: var(--default-border-style);
 
-    padding: $accordion-padding-y $accordion-padding-x;
     margin-bottom: 0;
+    padding: $accordion-padding-y $accordion-padding-x;
 
     @include caret(down);
 
+    &:not([aria-expanded="true"])::after {
+        transition: transform $accordion-transition;
+        transform: rotate(0deg);
+    }
+
     &[aria-expanded="true"]::after {
-        @include caret-up;
+        transition: transform $accordion-transition;
+        transform: rotate(180deg);
     }
 }
 
