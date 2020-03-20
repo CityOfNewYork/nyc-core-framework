@@ -12,9 +12,17 @@ In this file:
 //////////////////////////////////////////////
 
 .collapse {
-    display: none;
+    max-height: 0;
+    height: 0;
+    transition: max-height 0.3s ease-out;
 
-    &.shown{
-        display: block;
+    position: absolute;
+    top:-30000px;
+    left: -30000px;
+
+    &.shown {
+        position: static;
+        overflow: hidden;
+        height: auto;
     }
 }

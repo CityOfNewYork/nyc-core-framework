@@ -104,8 +104,6 @@ window.onload = () => {
 
             const collapseTarget = document.getElementById(collapseTargetID);
 
-           console.log(collapseTargetID);
-
             collapseTarget.classList.toggle('shown');
         })
     }
