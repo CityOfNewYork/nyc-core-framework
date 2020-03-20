@@ -78,7 +78,7 @@ $alert-colors: (
         margin-right: var(--s1);
     }
 
-    @at-root .alert__title {
+    @at-root .alert__body {
         p {
             margin-bottom: var(--s2);
         }
