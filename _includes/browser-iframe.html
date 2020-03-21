@@ -1,5 +1,12 @@
-<figure class="container medium my-4">
-    
+
+{% if include.iframe_width %}
+    {% assign width_class = include.iframe_width %}
+{% else %}
+    {% assign width_class = 'medium' %}
+{% endif %}
+
+<figure class="container {{ width_class }} my-4">
+
     <div class="browser">
 
         <div class="browser__bar">

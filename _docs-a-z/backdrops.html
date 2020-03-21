@@ -75,7 +75,7 @@ title: "Backdrops"
         opacity to the backdrop's feature image, allowing the background color (set with <code>.bc-dark</code> on the
         backdrop selector) to show through.
     </p>
-    <p>Consider the following code used to create the example above:</p>
+    <p>Consider the code used to create the example above:</p>
 </div>
 
 <figure class="container medium my-4">
@@ -157,7 +157,7 @@ title: "Backdrops"
     </p>
 </div>
 
-<figure class="container medium my-5">
+<figure class="container medium my-4">
 
     <div class="grid--gap cols--md t-center" {{ site.style_default_theme_colors }}>
 
@@ -209,6 +209,22 @@ title: "Backdrops"
     <!-- grid -->
 
 </figure>
+
+<div class="container narrow my-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        When using image proportional backdrops for featured content (such as a homepage marquee) the content may be
+        too tall for the image on smaller viewports, causing the layout to break.
+    </p>
+    <p>
+        To remedy this, include the <em>stack breakpoint modifier</em>
+        (e.g. <code>.backdrop--stack--md</code>) which places the image above the content vertically until the viewport
+        reaches the specified breakpoint.
+    </p>
+</div>
+
+{% include browser-iframe.html iframe_url="/examples/backdrops/stack-breakpoint-modifier-01.html" iframe_width="mobile" %}
+{% include browser-iframe.html iframe_url="/examples/backdrops/stack-breakpoint-modifier-01.html"  %}
 
 <!--
     
