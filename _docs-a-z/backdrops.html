@@ -152,7 +152,7 @@ title: "Backdrops"
 
 <div class="container narrow my-4">
     <p>
-        The two following examples use <code>bc-primary</code> (left) and <code>.bc-secondary</code> (right). The <code>&lt;a&gt;</code>
+        The following two examples use <code>.bc-primary</code> (left) and <code>.bc-secondary</code> (right). The <code>&lt;a&gt;</code>
         tag within <code>backdrop__cover</code> includes a <code>.expanded-link</code> class, making the whole backdrop clickable.
     </p>
 </div>
@@ -213,27 +213,12 @@ title: "Backdrops"
 <div class="container narrow my-4">
     <h3>Breakpoint Modifiers</h3>
     <p>
-        When using image proportional backdrops for featured content (such as a homepage marquee) the content may be
-        too tall for the image on smaller viewports, causing the layout to break.
-    </p>
-    <p>
-        To remedy this, include the <em>stack breakpoint modifier</em>
-        (e.g. <code>.backdrop--stack--md</code>) which places the image above the content vertically until the viewport
-        reaches the specified breakpoint.
+        When using image proportional backdrops for featured content (like the full-width example below) the content may become
+        too tall for the image on small viewports.
     </p>
 </div>
 
-{% include browser-iframe.html iframe_url="/examples/backdrops/stack-breakpoint-modifier-01.html" iframe_width="mobile" %}
-{% include browser-iframe.html iframe_url="/examples/backdrops/stack-breakpoint-modifier-01.html"  %}
-
-<!--
-    
-    <p>
-        Examples on this page include the <code>.backdrop__credit</code> selector which is not required but offers an easy way to credit an image.
-    </p>
-    -->
-
-<figure class="my-5">
+<figure class="my-4">
 
     <div class="backdrop backdrop--stack--md bc-dark" {{ site.style_default_theme_colors }}>
 
@@ -281,14 +266,38 @@ title: "Backdrops"
 </figure>
 
 <div class="container narrow my-4">
-    <p>Let's review the code used to create the example above:</p>
+    <p>
+        Include a <em>stack breakpoint modifier</em> (e.g. <code>.backdrop--stack--md</code>) to a
+        <code>.backdrop</code> selector and the backdrop's image is placed above the content vertically until the
+        viewport reaches the desired breakpoint specified in the modifier.
+    </p>
+</div>
+
+{% include browser-iframe.html iframe_url="/examples/backdrops/stack-breakpoint-modifier-01.html" iframe_width="narrow" %}
+
+<!--
+    
+    <p>
+        Examples on this page include the <code>.backdrop__credit</code> selector which is not required but offers an easy way to credit an image.
+    </p>
+    -->
+
+<div class="container narrow my-4">
+    <p>
+        The above example shows how the same full-with backdrop appears on a smaller (mobile) viewport.
+    </p>
+    <p>
+        Notice the image is at full opacity. That's because our <a href="#1">opacity classes</a> have their own a breakpoint modifiers. Adding <code>.opacity-40--md</code> to the <code>.backdrop__image</code> selector gives that image
+        a specified opacity (40%) at the medium (md) breakpoint.
+    </p>
+    <p>Examine the code used to create the backdrops above:</p>
 </div>
 
 <figure class="container medium my-4">
 
     <pre data-line="1">
         <code class="language-html">
-            &lt;div class="backdrop--md bc-dark"&gt;
+            &lt;div class="backdrop backdrop--stack--md bc-dark"&gt;
 
                 &lt;img class="backdrop__image opacity-40--md" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
 
@@ -338,89 +347,10 @@ title: "Backdrops"
 
 <div class="container narrow my-4">
     <p>
-        On the first line, notice the <code>--lg</code> appended to <code>.backdrop</code>. This breakpoint modifier
-        tells the backdrop when <code>.cover</code> should overlay <code>.image</code>. Until this breakpoint,
-        <code>.image</code> and <code>.cover</code> appear stacked (one over the other vertically), for smaller
-        viewports. Make your browser smaller to see it in action.
+        All of this together makes it easy to create responsive backdrops with different flavors of color and content. What if we don't want our backdrop's size to be dictated by the image?
     </p>
 </div>
-
-<div class="container narrow my-4">
-    <h3>Background-color and Image Opacity Classes</h3>
-    <p>
-        Did you see that opacity classes have their own breakpoint modifiers? If present, the opacity will be set only at
-        the given breakpoint.
-    </p>
-    <p>In the example above, we're telling <code>.backdrop</code> to position the <code>.cover</code> absolute over the
-        <code>.image</code> at the large breakpoint. Also at the large breakpoint, a 40% opacity is applied to the
-        image.
-    </p>
-    <p>
-        All of this together makes it easy to create responsive backdrops with different types of content. Consider the
-        example below. Two backdrops are placed inside our <a href="#1">grid</a> columns, with no
-        breakpoints specified for the backdrop or image opacity.
-    </p>
-</div>
-<div class="container narrow my-4">
-    <p>The HTML for the above example:</p>
-</div>
-
-<figure class="container medium my-4">
-
-    <pre>
-        <code class="language-html">
-            &lt;div class="grid--gutters cols--md t-center"&gt;
-
-                &lt;div class="grid__col"&gt;
-
-                    &lt;div class="backdrop bc-primary rounded"&gt;
-
-                        &lt;img class="backdrop__image opacity-30" src="https://via.placeholder.com/750x375" alt="Placeholder"&gt;
-
-                        &lt;div class="backdrop__cover"&gt;
-
-                            &lt;div class="container my-4"&gt;
-
-                                &lt;a href="#1" class="h3"&gt;Title Link&lt;/a&gt;
-
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- cover --&gt;
-
-                    &lt;/div&gt;
-                    &lt;!-- .backdrop-feature --&gt;
-
-                &lt;/div&gt;
-                &lt;!-- col --&gt;
-
-                &lt;div class="grid__col"&gt;
-
-                    &lt;div class="backdrop bc-secondary rounded"&gt;
-
-                        &lt;img class="backdrop__image opacity-30" src="https://via.placeholder.com/750x375" alt="Placeholder"&gt;
-
-                        &lt;div class="backdrop__cover align-center"&gt;
-
-                            &lt;div class="container my-4"&gt;
-
-                                &lt;a href="#1" class="h3"&gt;Title Link&lt;/a&gt;
-
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;!-- cover --&gt;
-
-                    &lt;/div&gt;
-                    &lt;!-- .backdrop-feature --&gt;
-
-                &lt;/div&gt;
-                &lt;!-- grid__col --&gt;
-
-            &lt;/div&gt;
-            &lt;!-- grid --&gt;
-        </code>
-    </pre>
-
-</figure>
+<!-- .container -->
 
 <hr class="my-5">
 
@@ -433,11 +363,11 @@ title: "Backdrops"
     </p>
 </div>
 
-<figure class="my-5">
+<figure class="my-4">
 
-    <div class="backdrop backdrop--fixed bc-dark">
+    <div class="backdrop backdrop--fixed bc-dark" {{ site.style_default_theme_colors }}>
 
-        <img class="backdrop__image opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-04.jpg" alt="Placeholder">
+        <img class="backdrop__image opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-05.jpg" alt="Placeholder">
 
         <div class="backdrop__cover">
 
@@ -510,9 +440,9 @@ title: "Backdrops"
 
  <figure class="my-5">
 
-     <div class="backdrop backdrop--fixed bc-dark">
+     <div class="backdrop backdrop--fixed bc-dark" {{ site.style_default_theme_colors }}>
 
-         <img class="backdrop__image opacity-20" src="{{ site.baseurl }}/images/examples/backdrop-example-05.jpg" alt="Placeholder">
+         <img class="backdrop__image opacity-20" src="{{ site.baseurl }}/images/examples/backdrop-example-06.jpg" alt="Placeholder">
 
          <div class="backdrop__cover t-center">
 
