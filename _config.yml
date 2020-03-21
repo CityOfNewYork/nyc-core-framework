@@ -30,6 +30,7 @@ exclude:
   - package.json
   - webpack.config.js
 
+# Collections
 collections:
 
   docs-introduction:
@@ -43,3 +44,12 @@ collections:
   docs-a-z:
     output: true
     permalink: /documentation/:path/
+
+# Custom Global Vars
+style_default_theme_colors: 
+    'style="--primary: #25caa4;
+            --secondary: #6500d6;
+            --dark: #262345;
+            --light: #f1f4f6;
+            --primary-text: var(--dark);
+            --secondary-text: white;"'

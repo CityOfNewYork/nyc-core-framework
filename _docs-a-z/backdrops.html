@@ -2,15 +2,14 @@
 layout: documentation
 title: "Backdrops"
 ---
+{% assign style_default_theme_colors = cool %}
 
 <div class="container narrow my-4">
-    
     <p>
-        Our versatile Backdrops place a translucent image behind any custom content. Backdrops offer two distinct
-        variations: an image-proportional backdrop that scales and stacks responsively, and a fixed-height backdrop that
-        can, when needed, adjust to the height of its inner content.
-    </p>
-    
+        The Backdrop component places a translucent image behind any custom content. Backdrops offer two distinct variations: an
+        image-proportional backdrop that scales and stacks responsively, and a fixed-height backdrop that can, when needed,
+        adjust to the height of its inner content.
+    </p>    
 </div>
 <!-- .container -->
 
@@ -37,7 +36,7 @@ title: "Backdrops"
 
 <div class="container narrow my-4">
 
-    <h2>Image-proportional</h2>
+    <h2>Image Proportional</h2>
     
     <p>
         The default <code>.backdrop</code> selector requires two immediate children. The first is an image with a class
@@ -46,17 +45,13 @@ title: "Backdrops"
         custom content can be placed.
     </p>
     
-    <p>
-        Examples on this page include the <code>.backdrop__credit</code> selector which is not required but offers an easy way to credit an image.
-    </p>
-    
     <p>Here is a basic example of an image-proportional backdrop:</p>
 
 </div>
 <!-- .container -->
 
 <figure class="container narrow my-4">
-    <div class="backdrop bc-dark rounded">
+    <div class="backdrop bc-dark rounded" {{ site.style_default_theme_colors }}>
         <img class="backdrop__image opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
         <div class="backdrop__cover">
             <div class="container t-center">
@@ -74,9 +69,13 @@ title: "Backdrops"
 </figure>
 
 <div class="container narrow my-4">
-    <p>Let's review the code used to create the example above:</p>
+    <p>
+        Backdrops utilize two other Framework features: the <a href="{{ site.baseurl }}/documentation/color-system/#backgroundColorClasses">Background-color</a> and <a
+            href="#1">Opacity</a> classes. The opacity class (<code>.opacity-40</code>) applies an opacity to the
+        image, allowing the background color (set with <code>.bc-dark</code>) to show through.
+    </p>
+    <p>Consider the following code used to create the above example:</p>
 </div>
-<!-- .container -->
 
 <figure class="container medium my-4">
 
@@ -104,7 +103,7 @@ title: "Backdrops"
     </pre>
 
 </figure>
-
+<!-- .container -->
 
 <figure class="container narrow my-4">
     <table class="fs-md">
@@ -121,8 +120,8 @@ title: "Backdrops"
                 <td>
                     <p>
                         The <code>.backdrop</code> class is required on all backdrop selectors. The
-                        <code>.bc-dark</code> class sets the background and text color, and <code>.rounded</code>
-                        creates the <a href="#1">rounded corners</a>.
+                        <code>.bc-dark</code> class sets the background and text color, while the <code>.rounded</code>
+                        class creates the <a href="#1">rounded corners</a>.
                     </p>
                 </td>
             </tr>
@@ -130,7 +129,18 @@ title: "Backdrops"
                 <td>3</td>
                 <td>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore eveniet libero facilis maxime repellat dolorum reprehenderit.
+                        The <code>.backdrop__image</code> class is required for the primary image of the backdrop. The
+                        <code>.opacity-40</code> class sets a 40% opacity to the image.
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>5-14</td>
+                <td>
+                    <p>
+                        Contextual content is held within <code>.backdrop__cover</code>. Nearly
+                        anything can be placed inside of this selector.
                     </p>
                 </td>
             </tr>
@@ -140,10 +150,78 @@ title: "Backdrops"
     </table>
 </figure>
 
+<div class="container narrow my-4">
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur omnis itaque accusamus, labore natus
+        dolorum. Natus sed enim, magni doloribus ut illo, officia repellat consequuntur quos error in cupiditate maxime?
+    </p>
+</div>
 
+<figure class="container medium my-5">
 
+    <div class="grid--gap cols--md t-center" {{ site.style_default_theme_colors }}>
 
+        <div class="grid__col">
 
+            <div class="backdrop bc-primary rounded">
+
+                <img class="backdrop__image opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover">
+
+                    <div class="container my-4">
+
+                        <a href="#1" class="h3">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- col -->
+
+        <div class="grid__col">
+
+            <div class="backdrop bc-secondary rounded">
+
+                <img class="backdrop__image opacity-50" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover align-center">
+
+                    <div class="container my-4">
+
+                        <a href="#1" class="h3">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- grid__col -->
+
+    </div>
+    <!-- grid -->
+
+    <figcaption>
+        <p>
+            Photos by <a href="#1">Zdeněk Macháček</a> on <a href="#1">Unsplash</a>
+        </p>
+    </figcaption>
+
+</figure>
+
+<!--
+    
+    <p>
+        Examples on this page include the <code>.backdrop__credit</code> selector which is not required but offers an easy way to credit an image.
+    </p>
+    -->
 
 <figure class="my-5">
 
@@ -260,11 +338,6 @@ title: "Backdrops"
 <div class="container narrow my-4">
     <h3>Background-color and Image Opacity Classes</h3>
     <p>
-        Backdrops utilize two other Natura11y Inclusive Framework features: <a href="#1">Background-color</a> and <a
-            href="#1">Opacity</a> classes. The opacity class (<code>.opacity-40--lg</code>) applies a CSS opacity to the
-        image, allowing the background color (set with <code>.bc-dark</code>) to show through.
-    </p>
-    <p>
         Did you see that opacity classes have their own breakpoint modifiers? If present, the opacity will be set only at
         the given breakpoint.
     </p>
@@ -278,66 +351,6 @@ title: "Backdrops"
         breakpoints specified for the backdrop or image opacity.
     </p>
 </div>
-
-<figure class="container medium my-5">
-
-    <div class="grid--gap cols--md t-center">
-
-        <div class="grid__col">
-
-            <div class="backdrop bc-primary rounded">
-
-                <img class="backdrop__image opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-02.jpg" alt="Placeholder">
-
-                <div class="backdrop__cover">
-
-                    <div class="container my-4">
-
-                        <a href="#1" class="h3">Title Link</a>
-
-                    </div>
-                </div>
-                <!-- cover -->
-
-            </div>
-            <!-- .backdrop-feature -->
-
-        </div>
-        <!-- col -->
-
-        <div class="grid__col">
-
-            <div class="backdrop bc-dark rounded">
-
-                <img class="backdrop__image opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
-
-                <div class="backdrop__cover align-center">
-
-                    <div class="container my-4">
-
-                        <a href="#1" class="h3">Title Link</a>
-
-                    </div>
-                </div>
-                <!-- cover -->
-
-            </div>
-            <!-- .backdrop-feature -->
-
-        </div>
-        <!-- grid__col -->
-
-    </div>
-    <!-- grid -->
-
-    <figcaption>
-        <p>
-            Photos by <a href="#1">Zdeněk Macháček</a> on <a href="#1">Unsplash</a>
-        </p>
-    </figcaption>
-
-</figure>
-
 <div class="container narrow my-4">
     <p>The HTML for the above example:</p>
 </div>

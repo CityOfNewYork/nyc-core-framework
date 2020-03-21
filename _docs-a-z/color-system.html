@@ -3,8 +3,6 @@ layout: documentation
 title: "Color System"
 ---
 
-{% assign style_default_theme_colors = "style='--primary: #25caa4; --secondary: #6500d6; --dark: #262345; --light: #f1f4f6; --primary-text: var(--dark); --secondary-text: white;'" %}
-
 <div class="container narrow my-4">
     <p>
         The NYC Core Framework's dynamic color system allows you to intuitively manage colors and apply them
@@ -42,7 +40,7 @@ title: "Color System"
 
 <figure class="container medium my-4">
 
-    <div class="grid--gap cols--md fs-md" {{ style_default_theme_colors }}>
+    <div class="grid--gap cols--md fs-md" {{ site.style_default_theme_colors }}>
 
         <div class="grid__col">
             <div class="px-2 py-3 bc-primary d-none--lg">
@@ -306,7 +304,7 @@ title: "Color System"
 
 <figure class="container narrow my-4">
 
-    <div {{ style_default_theme_colors }}>
+    <div {{ site.style_default_theme_colors }}>
 
         <div class="card bc-primary rounded border my-3">
 
