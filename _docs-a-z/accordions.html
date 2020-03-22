@@ -3,16 +3,15 @@ layout: documentation
 title: "Accordions"
 ---
 
-<figure class="container narrow">
+<figure class="container narrow my-5">
 
-    <div class="accordion">
+    <div class="accordion-group bc-secondary fs-md rounded">
 
-        <button class="accordion__button h5" id="acc-button-01" data-toggle="accordion" aria-expanded="false"
-            aria-controls="panel-acc-button-01">
+        <button class="accordion__button fs-rg fw-bold" id="acc-button-group-a-01" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="true">
             Accordion Title
         </button>
 
-        <div class="accordion__panel" data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+        <div class="accordion__panel show" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="region">
 
             <div data-accordion="content">
                 <p>
@@ -26,14 +25,13 @@ title: "Accordions"
             </div>
 
         </div>
-        <!-- panel -->
+        <!-- .accordion__panel -->
 
-        <button class="accordion__button h5" id="acc-button-01" data-toggle="accordion" aria-expanded="false"
-            aria-controls="panel-acc-button-01">
+        <button class="accordion__button h6" id="acc-button-group-a-02" data-toggle="accordion" aria-controls="acc-panel-group-a-02" aria-expanded="false">
             Accordion Title
         </button>
 
-        <div class="accordion__panel" data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+        <div class="accordion__panel" id="acc-panel-group-a-02" data-accordion="panel" aria-labelledby="acc-button-group-a-02" role="region">
 
             <div data-accordion="content">
                 <p>
@@ -47,14 +45,13 @@ title: "Accordions"
             </div>
 
         </div>
-        <!-- panel -->
+        <!-- .accordion__panel -->
 
-        <button class="accordion__button h5" id="acc-button-01" data-toggle="accordion" aria-expanded="false"
-            aria-controls="panel-acc-button-01">
+        <button class="accordion__button h6" id="acc-button-group-a-03" data-toggle="accordion" aria-controls="acc-panel-group-a-03" aria-expanded="false">
             Accordion Title
         </button>
 
-        <div class="accordion__panel" data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+        <div class="accordion__panel" id="acc-panel-group-a-03" data-accordion="panel" aria-labelledby="acc-button-group-a-03" role="region">
 
             <div data-accordion="content">
                 <p>
@@ -68,7 +65,7 @@ title: "Accordions"
             </div>
 
         </div>
-        <!-- panel -->
+        <!-- .accordion__panel -->
 
     </div>
     <!-- .accordion -->
