@@ -54,13 +54,23 @@ window.onload = () => {
 
         let currentAccordionPanel = accordionButton.nextElementSibling;
 
-        accordionButton.setAttribute("aria-expanded", false);
+        let expanded = accordionButton.getAttribute("aria-expanded");
+
+        if (expanded === "true") {
+            currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
+            currentAccordionPanel.classList.add('show');
+        } else {
+            accordionButton.setAttribute("aria-expanded", false);
+            currentAccordionPanel.style.maxHeight = null;
+        }
 
         accordionButton.addEventListener('click', function (event) {
 
             event.preventDefault();
 
             for (const otherAccordionPanel of accPanelList) {
+                
+                otherAccordionPanel.classList.remove('show');
 
                 if (otherAccordionPanel !== currentAccordionPanel) {
                     otherAccordionPanel.classList.remove('shown');
@@ -73,7 +83,7 @@ window.onload = () => {
 
             let expanded = accordionButton.getAttribute("aria-expanded");
 
-            if (expanded == "true") {
+            if (expanded === "true") {
                 accordionButton.setAttribute("aria-expanded", false);
             } else if (expanded === "false") {
                 accordionButton.setAttribute("aria-expanded", true);

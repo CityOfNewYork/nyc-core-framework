@@ -56,8 +56,11 @@ $accordion-transition: 0.2s ease-out;
 .accordion__panel {
     overflow: hidden;
 
-    max-height: 0;
     transition: max-height $accordion-transition;
+
+    &:not(.show){
+        max-height: 0;
+    }
     
     > [data-accordion="content"] {
         padding: $accordion-padding-y $accordion-padding-x;
