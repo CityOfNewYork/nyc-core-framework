@@ -36,6 +36,8 @@ $accordion-transition: 0.2s ease-out;
     margin-bottom: 0;
     padding: $accordion-padding-y $accordion-padding-x;
 
+    @extend .hover-focus;
+
     @include caret(down);
 
     &:not([aria-expanded="true"])::after {
