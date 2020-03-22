@@ -47,65 +47,56 @@ window.onload = () => {
     // B. Accordion
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll('.accordion-group')).forEach(function (accordion) {
+    const accButtonList = document.querySelectorAll('[data-toggle="accordion"]');
+    const accPanelList = document.querySelectorAll('[data-accordion="panel"]');
 
-        const accButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
-        const accPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
+    for (const accordionButton of accButtonList) {
 
-        for (const accordionButton of accButtonList) {
-            
-            let currentAccordionPanel = accordionButton.nextElementSibling;
+        let currentAccordionPanel = accordionButton.nextElementSibling;
+
+        let expanded = accordionButton.getAttribute("aria-expanded");
+
+        if (expanded === "true") {
+            currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
+            currentAccordionPanel.classList.add('show');
+        } else {
+            accordionButton.setAttribute("aria-expanded", false);
+            currentAccordionPanel.style.maxHeight = null;
+        }
+
+        accordionButton.addEventListener('click', function (event) {
+
+            event.preventDefault();
+
+            for (const otherAccordionPanel of accPanelList) {
+                
+                otherAccordionPanel.classList.remove('show');
+
+                if (otherAccordionPanel !== currentAccordionPanel) {
+                    otherAccordionPanel.classList.remove('shown');
+                    otherAccordionPanel.style.maxHeight = null;
+                    otherAccordionPanel.previousElementSibling.setAttribute("aria-expanded", false);
+                }
+            }
+
+            currentAccordionPanel.classList.toggle('shown');
 
             let expanded = accordionButton.getAttribute("aria-expanded");
 
             if (expanded === "true") {
-                currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
-                currentAccordionPanel.classList.add('show');
-            } else {
                 accordionButton.setAttribute("aria-expanded", false);
-                currentAccordionPanel.style.maxHeight = null;
-                currentAccordionPanel.setAttribute("aria-hidden", true);
+            } else if (expanded === "false") {
+                accordionButton.setAttribute("aria-expanded", true);
             }
 
-            accordionButton.addEventListener('click', function (event) {
+            if (currentAccordionPanel.style.maxHeight) {
+                currentAccordionPanel.style.maxHeight = null;
+            } else {
+                currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
+            }
 
-                event.preventDefault();
-
-                for (const otherAccordionPanel of accPanelList) {
-                    
-                    otherAccordionPanel.classList.remove('show');
-
-                    if (otherAccordionPanel !== currentAccordionPanel) {
-                        otherAccordionPanel.classList.remove('shown');
-                        otherAccordionPanel.style.maxHeight = null;
-                        otherAccordionPanel.previousElementSibling.setAttribute("aria-expanded", false);
-                        otherAccordionPanel.setAttribute("aria-hidden", true);
-                    }
-                }
-
-                currentAccordionPanel.classList.toggle('shown');
-
-                let expanded = accordionButton.getAttribute("aria-expanded");
-
-                if (expanded === "true") {
-                    accordionButton.setAttribute("aria-expanded", false);
-                    currentAccordionPanel.setAttribute("aria-hidden", true);
-                } else if (expanded === "false") {
-                    accordionButton.setAttribute("aria-expanded", true);
-                    currentAccordionPanel.setAttribute("aria-hidden", false);
-                }
-
-                if (currentAccordionPanel.style.maxHeight) {
-                    currentAccordionPanel.style.maxHeight = null;
-                } else {
-                    currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
-                    currentAccordionPanel.setAttribute("aria-hidden", false);
-                }
-
-            });
-        }
-
-    }); // end for
+        });
+    }
 
     //////////////////////////////////////////////
     // D. Toggle

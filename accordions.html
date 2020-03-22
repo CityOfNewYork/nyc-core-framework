@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="bc-white">
+<body class="bc-secondary">
 
     <main id="skip-header-content" role="main">
 
@@ -39,15 +39,15 @@
                      <h1>Accordions</h1>
                  </div>
 
-                <figure class="container narrow my-4">
+                <figure class="container narrow my-5">
 
-                    <div class="accordion" role="tablist">
+                    <div class="accordion-group">
 
-                        <button class="accordion__button h5" id="acc-button-group-a-01" data-toggle="accordion" aria-expanded="true" aria-controls="acc-panel-group-a-01">
+                        <button class="accordion__button h5" id="acc-button-group-a-01" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="true">
                             Accordion Title
                         </button>
 
-                        <div class="accordion__panel show" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="tabpanel">
+                        <div class="accordion__panel show" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="region">
 
                             <div data-accordion="content">
                                 <p>
@@ -61,13 +61,13 @@
                             </div>
 
                         </div>
-                        <!-- panel -->
+                        <!-- .accordion__panel -->
 
-                        <button class="accordion__button h5" id="acc-button-01" data-toggle="accordion" aria-expanded="false" aria-controls="panel-acc-button-01">
+                        <button class="accordion__button h5" id="acc-button-group-a-02" data-toggle="accordion" aria-controls="acc-panel-group-a-02" aria-expanded="false">
                             Accordion Title
                         </button>
 
-                        <div class="accordion__panel" data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+                        <div class="accordion__panel" id="acc-panel-group-a-02" data-accordion="panel" aria-labelledby="acc-button-group-a-02" role="region">
 
                             <div data-accordion="content">
                                 <p>
@@ -81,14 +81,13 @@
                             </div>
 
                         </div>
-                        <!-- panel -->
+                        <!-- .accordion__panel -->
 
-                        <button class="accordion__button h5" id="acc-button-01" data-toggle="accordion"
-                            aria-expanded="false" aria-controls="panel-acc-button-01">
+                        <button class="accordion__button h5" id="acc-button-group-a-03" data-toggle="accordion" aria-controls="acc-panel-group-a-03" aria-expanded="false">
                             Accordion Title
                         </button>
 
-                        <div class="accordion__panel" data-accordion="panel" aria-labelledby="acc-button-01" role="tabpanel">
+                        <div class="accordion__panel" id="acc-panel-group-a-03" data-accordion="panel" aria-labelledby="acc-button-group-a-03" role="region">
 
                             <div data-accordion="content">
                                 <p>
@@ -102,10 +101,79 @@
                             </div>
 
                         </div>
-                        <!-- panel -->
+                        <!-- .accordion__panel -->
 
                     </div>
-                    <!-- .accordion-group -->
+                    <!-- .accordion -->
+
+                </figure>
+
+                <figure class="container narrow my-5">
+
+                    <div class="accordion-group">
+
+                        <button class="accordion__button h5" id="acc-button-group-b-01" data-toggle="accordion" aria-controls="acc-panel-group-b-01" aria-expanded="true">
+                            Accordion Title
+                        </button>
+
+                        <div class="accordion__panel show" id="acc-panel-group-b-01" data-accordion="panel" aria-labelledby="acc-button-group-b-01" role="region">
+
+                            <div data-accordion="content">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- .accordion__panel -->
+
+                        <button class="accordion__button h5" id="acc-button-group-b-02" data-toggle="accordion" aria-controls="acc-panel-group-b-02" aria-expanded="false">
+                            Accordion Title
+                        </button>
+
+                        <div class="accordion__panel" id="acc-panel-group-b-02" data-accordion="panel" aria-labelledby="acc-button-group-b-02" role="region">
+
+                            <div data-accordion="content">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- .accordion__panel -->
+
+                        <button class="accordion__button h5" id="acc-button-group-b-03" data-toggle="accordion" aria-controls="acc-panel-group-b-03" aria-expanded="false">
+                            Accordion Title
+                        </button>
+
+                        <div class="accordion__panel" id="acc-panel-group-b-03" data-accordion="panel" aria-labelledby="acc-button-group-b-03" role="region">
+
+                            <div data-accordion="content">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- .accordion__panel -->
+
+                    </div>
+                    <!-- .accordion -->
 
                 </figure>
                 
