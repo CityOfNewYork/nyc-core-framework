@@ -5,8 +5,9 @@ title: "Accordions"
 
 <div class="container narrow my-4">
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
-        voluptatibus.
+        Accordions should be used judiciously under special circumstances. Accordions are most practical when only
+        specific content might be relevant to a visitor—like an FAQ page, or when several topics are covered on a
+        single page. It's best to avoid using accordions to simply make long pages appear shorter.
     </p>
 </div>
 <!-- .container -->
@@ -21,8 +22,7 @@ title: "Accordions"
         </div>
         <div class="alert__body">
             <p>
-                Backdrops replace CSS background images with inline HTML images so screen readers can read the
-                image's <em>alt</em> text. Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quasi alias culpa quisquam deserunt nobis molestiae.</p>
         </div>
     </div>
 </div>
@@ -31,17 +31,17 @@ title: "Accordions"
 <hr class="my-5" id="accordionGroup">
 
 <div class="container narrow my-4">
-    <h2>Accordion Group</h2>
+    <h2>The Accordion Group</h2>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
-        voluptatibus.
+        In the NYC Core Framework, accordions are treated as a group within the <code>.accordion-group</code> selector,
+        which is required for the accordions to properly close one another.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow my-4">
 
-    <div class="accordion-group">
+    <div class="accordion-group bc-light">
 
         <button class="accordion__button h6" id="acc-button-group-a-01" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="false">
             Accordion Title
@@ -55,8 +55,7 @@ title: "Accordions"
                     ducimus quam provident repellendus eos libero error adipisci laudantium
                     exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
                     quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
-                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                    velit culpa eveniet tenetur.
                 </p>
             </div>
 
@@ -75,8 +74,7 @@ title: "Accordions"
                     ducimus quam provident repellendus eos libero error adipisci laudantium
                     exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
                     quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
-                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                    velit culpa eveniet tenetur.
                 </p>
             </div>
 
@@ -95,8 +93,7 @@ title: "Accordions"
                     ducimus quam provident repellendus eos libero error adipisci laudantium
                     exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
                     quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
-                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                    velit culpa eveniet tenetur.
                 </p>
             </div>
 
@@ -107,11 +104,14 @@ title: "Accordions"
     <!-- .accordion -->
 
 </figure>
+
 <div class="container narrow my-4">
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
-        voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione
-        doloremque corporis voluptatibus.
+        Each subsequent accordion inside of <code>.accordion-group</code> includes a selector called
+        <code>.accordion__button</code>. This is the accordion's header and triggers the accordion panel to open and close. 
+    </p>
+    <p>
+        The next selector, <code>.accordion__panel</code>, holds the content associated with its preceding accordion header.
     </p>
 </div>
 <!-- .container -->
@@ -135,7 +135,7 @@ title: "Accordions"
                 &lt;/div&gt;
                 &lt;!-- .accordion__panel --&gt;
 
-                &lt;!-- Repeat as needed --&gt;
+                &lt;!-- Repeat as the above as needed --&gt;
 
             &lt;/div&gt;
             &lt;!-- .accordion --&gt;
@@ -144,7 +144,7 @@ title: "Accordions"
     </pre>
     <figcaption>
         <p>
-            Figure 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Figure 1 - The NYC Core Framework's basic accordion set up.
         </p>
     </figcaption>
 </figure>
@@ -164,8 +164,7 @@ title: "Accordions"
                 <td>1</td>
                 <td>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laboriosam quaerat veritatis
-                        sunt placeat quam? Sit deleniti officia dignissimos quod.
+                        The <code>.accordion-group</code> selector is required. This selector groups a set of topics (accordion headers) with one another, so only one accordion at a time opens in their group. 
                     </p>
                 </td>
             </tr>
@@ -173,8 +172,10 @@ title: "Accordions"
                 <td>3-5</td>
                 <td>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laboriosam quaerat veritatis
-                        sunt placeat quam? Sit deleniti officia dignissimos quod.
+                        Each <code>.accordion__button</code> toggles its next sibling (<code>.accordion__panel</code>)
+                        selector open and close. These attributes are required: <code>data-toggle="accordion"</code>,
+                        and <code>aria-controls="{x}"</code> where <em>x</em> equals the <code>id</code> attribute
+                        of the associated <code>.accordion__panel</code>.
                     </p>
                 </td>
             </tr>
@@ -182,8 +183,8 @@ title: "Accordions"
                 <td>7-13</td>
                 <td>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laboriosam quaerat veritatis
-                        sunt placeat quam? Sit deleniti officia dignissimos quod.
+                        The <code>.accordion__panel</code> required a direct child selector with a
+                        <code>data-accordion="content"</code> attribute. Inside of this selector is where your panel's content is placed.
                     </p>
                 </td>
             </tr>
@@ -194,10 +195,177 @@ title: "Accordions"
 </figure>
 
 <div class="container narrow my-4">
-    <h3>Opened by Default</h3>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
-        voluptatibus.
+        Be aware that custom padding directly applied to the <code>.accordion__panel</code> selector will not work.
+        If you wish to apply custom padding to the accordion panel, either with CSS or one of our <a href="#1">predefined padding
+        classes</a>, you may do so on the <code>.accordion__panel</code> selector's child <code>&lt;div&gt;</code>, which includes the
+        <code>data-accordion="content"</code> attribute (see Figure 1, line 8).
+    </p>
+    
+</div>
+<!-- .container -->
+
+<div class="container narrow my-4">
+    <h3>Accordion Headers</h3>
+    <p>
+        Semantically, accordion headers should match the information architecture of the page. For example, if an accordion
+        group lives directly below a page's <code>&lt;h1&gt;</code> header tag, the accordion headers should be
+        <code>&lt;h2&gt;</code> tags, or have an <code>aria-level="2"</code> attribute present.
+    </p>
+    <p>
+        For this reason, you can decide which semantic HTML tags you need for the <code>.accordion__button</code> selector.
+        When placed directly below an <code>&lt;h1&gt;</code> header tag, both examples below are correct:
     </p>
 </div>
 <!-- .container -->
+
+<figure class="container narrow my-4">
+    <pre class="hide-toolbar" data-line="8,19">
+        <code class="language-html">
+            &lt;!-- Accordion Header as h2 --&gt;
+
+            &lt;h2 class="accordion__button h6"
+                id="..."
+                data-toggle="accordion"
+                aria-controls="..."
+                aria-expanded="false"
+                role="button"&gt;
+                    Accordion Title
+            &lt;/h2&gt;
+            
+            &lt;!-- Accordion Header as button --&gt;
+
+            &lt;button class="accordion__button h6"
+                id="..."
+                data-toggle="accordion"
+                aria-controls="..."
+                aria-expanded="false"
+                aria-level="2"&gt;
+                    Accordion Title
+            &lt;/button&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>
+            Figure 2 - Two examples of valid accordion headers.
+        </p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        With the examples in Figure 2, notice the <code>h6</code> class. Our <a href="#1">header classes</a> are
+        particularly convenient when a semantic header (e.g. <code>&lt;h2&gt;</code>)
+        needs to be visually bigger or smaller than its natural markup style—or when something that is not a semantic header
+        (e.g. <code>&lt;button&gt;</code>) should mimic the appearance of a header.
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow my-4">
+    <h3>Open by Default</h3>
+    <p>
+        You may want one of your accordions in a group to be open by default (when the page loads) like this example:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <div class="accordion-group bc-light">
+
+        <button class="accordion__button h6" id="acc-button-group-b-01" data-toggle="accordion" aria-controls="acc-panel-group-b-01" aria-expanded="true">
+            Accordion Title
+        </button>
+
+        <div class="accordion__panel show" id="acc-panel-group-b-01" data-accordion="panel" aria-labelledby="acc-button-group-b-01" role="region">
+
+            <div data-accordion="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                    velit culpa eveniet tenetur.
+                </p>
+            </div>
+
+        </div>
+        <!-- .accordion__panel -->
+
+        <button class="accordion__button h6" id="acc-button-group-b-02" data-toggle="accordion" aria-controls="acc-panel-group-b-02" aria-expanded="false">
+            Accordion Title
+        </button>
+
+        <div class="accordion__panel" id="acc-panel-group-b-02" data-accordion="panel" aria-labelledby="acc-button-group-b-02" role="region">
+
+            <div data-accordion="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                    velit culpa eveniet tenetur.
+                </p>
+            </div>
+
+        </div>
+        <!-- .accordion__panel -->
+
+        <button class="accordion__button h6" id="acc-button-group-b-03" data-toggle="accordion" aria-controls="acc-panel-group-b-03" aria-expanded="false">
+            Accordion Title
+        </button>
+
+        <div class="accordion__panel" id="acc-panel-group-b-03" data-accordion="panel" aria-labelledby="acc-button-group-b-03" role="region">
+
+            <div data-accordion="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                    velit culpa eveniet tenetur.
+                </p>
+            </div>
+
+        </div>
+        <!-- .accordion__panel -->
+
+    </div>
+    <!-- .accordion -->
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        On the <code>.accordion__button</code> selector, make sure the the <code>aria-expanded</code> attribute is set
+        to <code>"true"</code> (see Figure 3, line 5). Additionally, on the related <code>.accordion__panel</code>
+        selector, include the class <code>.show</code> (see Figure 3, line 9).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+    <pre class="hide-toolbar" data-line="5,9">
+        <code class="language-html">
+                &lt;button class="accordion__button h6"
+                    id="..."
+                    data-toggle="accordion"
+                    aria-controls="..."
+                    aria-expanded="true"&gt;
+                        Accordion Title
+                &lt;/button&gt;
+
+                &lt;div class="accordion__panel show" id="..." data-accordion="panel" aria-labelledby="..." role="region"&gt;
+                    &lt;div data-accordion="content"&gt;
+                            ...
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>
+            Figure 3 - Example HTML required for an accordion's panel to be open by default.
+        </p>
+    </figcaption>
+</figure>
