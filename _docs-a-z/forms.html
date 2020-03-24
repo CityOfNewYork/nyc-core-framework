@@ -2,3 +2,209 @@
 layout: documentation
 title: "Forms"
 ---
+
+<div class="container medium my-4">
+
+    <div class="alert alert--confirm my-2">
+
+        <div class="alert__header">
+            <p>
+                <span class="fas fa-check-circle fa-lg" aria-hidden="true"></span>
+                <span class="alert__title">Alert Confirm</span>
+            </p>
+        </div>
+
+        <div class="alert__body">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                <a href="#1">quos natus aliquam</a>.
+            </p>
+        </div>
+
+    </div>
+    <!-- .alert -->
+
+
+    <form class="needs-validation my-3" novalidate>
+
+        <span class="required-fields-annotation d-none" aria-hidden="true">* Required field</span>
+
+        <fieldset>
+
+            <div class="form-group">
+            
+                <label class="form-group__field has-action">
+
+                    <input class="field__input" type="text" name="email_address">
+                    <p class="field__label">Enter Search Phrase</p>
+                    
+                    <button href="#1" title="Search">
+                        <span class="sr-only">Search</span>
+                        <span class="fas fa-search"></span>
+                    </button>
+                </label>
+
+            </div>
+            <!-- .form-group -->
+
+            <div class="form-group">
+                <div class="grid--gap-lg cols-6--md">
+
+                    <div class="grid__col">
+                        <label class="form-group__field">
+                            <input class="field__input" type="text" name="user_name">
+                            <p class="field__label">First Name</p>
+                        </label>
+                    </div>
+
+                    <div class="grid__col">
+                        <label class="form-group__field">
+                            <input class="field__input" type="text" name="user_name">
+                            <p class="field__label">Last Name</p>
+                        </label>
+                    </div>
+
+                </div> 
+            </div>
+            <!-- .form-group -->
+            
+            <div class="form-group">
+                <label class="form-group__field">
+                    <input class="field__input" type="text" name="email_address">
+                    <p class="field__label">Email Address</p>
+                </label>
+            </div>
+            <!-- .form-group -->
+
+            <div class="form-group">
+
+                <label class="form-group__field">
+                    <div class="field__input-wrap">
+                        <select class="field__input" name="Boroughs" required>
+                            <option value=""></option>
+                            <option value="Bronx">Bronx</option>
+                            <option value="Brooklyn">Brooklyn</option>
+                            <option value="Manhattan">Manhattan</option>
+                            <option value="Staten Island">Staten Island</option>
+                            <option value="Queens">Queens</option>
+                        </select>
+                    </div>
+                    <p class="field__label">Borough</p>
+
+                </label>
+            </div>
+            <!-- .form-group -->
+
+        </fieldset>
+        
+        
+        <div class="form-group validate-parent" role="group" aria-labelledby="checkbox-group-label">
+
+            <p class="label" id="checkbox-group-label">
+                Select multiple options
+            </p>
+
+            <p class="invalid-feedback">
+                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                <span class="invalid-description">Error message description</span>
+                <span class="invalid-instruction">How to fix instructions</span>
+            </p>
+
+            <ul class="nav" role="list">
+                <li>
+                    <label class="form-group__checkbox">
+                        <input type="checkbox" name="checkbox-group-example" required>
+                        <span class="checkbox__label">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita velit porro provident soluta nobis ex eligendi maxime assumenda, beatae debitis illum maiores inventore rerum dolorem nihil. Voluptatum saepe aperiam cupiditate.
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="form-group__checkbox">
+                        <input type="checkbox" name="checkbox-group-example" required>
+                        <span class="checkbox__label">
+                            Option One
+                        </span>
+                    </label>
+                </li>
+                <li>
+                    <label class="form-group__checkbox">
+                        <input type="checkbox" name="checkbox-group-example" required>
+                        <span class="checkbox__label">
+                            Option One
+                        </span>
+                    </label>
+                </li>
+            </ul>
+
+        </div>
+        <!-- .form-group -->
+
+        <div class="form-group validate-parent" role="group" aria-labelledby="checkbox-group-label">
+
+            <p class="label" id="checkbox-group-label">
+                Select a single option
+            </p>
+
+            <p class="invalid-feedback">
+                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                <span class="invalid-description">Error message description</span>
+                <span class="invalid-instruction">How to fix instructions</span>
+            </p>
+
+            <ul class="nav" role="list">
+                <li>
+                    <label class="form-group__radio">
+                        <input type="radio" name="radio-group-example" required>
+                        <span class="radio__label">
+                            Option One
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="form-group__radio">
+                        <input type="radio" name="radio-group-example" required>
+                        <span class="radio__label">
+                            Option One
+                        </span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="form-group__radio">
+                        <input type="radio" name="radio-group-example" required>
+                        <span class="radio__label">
+                            Option One
+                        </span>
+                    </label>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- .form-group -->
+
+        <div class="form-group validate-parent">
+
+            <label class="form-group__field">
+                <textarea class="field__input" id="message" rows="4"></textarea>
+                <p class="field__label">Message</p>
+            </label>
+
+            <p class="invalid-feedback">
+                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                <span class="invalid-description">Error message description</span>
+                <span class="invalid-instruction">How to fix instructions</span>
+            </p>
+
+        </div>
+        <!-- .form-group -->
+
+        <button class="btn d-block bc-secondary fw-bold" type="submit">Submit</button>
+
+    </form>
+    <!-- .needs-validation -->
+
+</div>
+<!-- .container -->

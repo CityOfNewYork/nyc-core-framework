@@ -164,3 +164,11 @@ td > p{
 
     max-width: 440px;
 }
+
+#custom-property-list{
+
+    [aria-expanded="true"]{
+        color: var(--secondary);
+    }
+
+}

@@ -313,18 +313,25 @@ title: "Customization"
 </div>
 <!-- .container -->
 
+<div class="container narrow my-4">
+    <h4>Custom Property Laundry List</h4>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sapiente ducimus sequi dicta molestiae.
+    </p>
+</div>
+<!-- .container -->
+
 <div class="container medium my-4">
 
-    <div class="accordion">
+    <div class="accordion-group bc-dark rounded" id="custom-property-list">
 
-        <button class="accordion__button h5" id="acc-colors" data-toggle="accordion" aria-expanded="true" aria-controls="panel-acc-colors">
+        <button class="accordion__button h5 box-shadow" id="acc-colors" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="true">
             Colors
         </button>
 
-        <div class="accordion__panel shown" data-accordion="panel" aria-labelledby="acc-colors" role="tabpanel">
-
-            <div data-accordion="content">
-                <table class="fs-md my-3">
+        <div class="accordion__panel show" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-colors" role="region">
+             <div class="mx-n3" data-accordion="content">
+                <table class="fs-md">
                     <thead>
                         <tr>
                             <th class="w-40">Custom Property</th>
@@ -416,18 +423,16 @@ title: "Customization"
 
                 </table>
             </div>
-
         </div>
-        <!-- panel -->
+        <!-- .accordion__panel -->
 
-        <button class="accordion__button h5" id="acc-colors" data-toggle="accordion" aria-expanded="false" aria-controls="panel-acc-colors">
+        <button class="accordion__button h5" id="acc-typography" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="false">
             Typography
         </button>
 
-        <div class="accordion__panel" data-accordion="panel" aria-labelledby="acc-colors" role="tabpanel">
-
+        <div class="accordion__panel" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-typography" role="region">
             <div data-accordion="content">
-                <table class="fs-md my-3">
+                <table class="fs-md">
                     <thead>
                         <tr>
                             <th class="w-40">Custom Property</th>
@@ -519,9 +524,8 @@ title: "Customization"
 
                 </table>
             </div>
-
         </div>
-        <!-- panel -->
+        <!-- .accordion__panel -->
 
     </div>
     <!-- .accordion -->

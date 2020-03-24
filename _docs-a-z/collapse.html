@@ -2,3 +2,60 @@
 layout: documentation
 title: "Collapse"
 ---
+
+<div class="container narrow my-4">
+    <p>
+        A simple way to toggle the visibility of any content from a button located anywhere in the DOM tree.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="my-5">
+
+<div class="container narrow my-4">
+    <h2>The Collapse Relationship</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, perspiciatis. Nostrum culpa maxime velit
+        recusandae, voluptates ex iste accusamus consequatur!
+    </p>
+</div>
+<!-- .container -->
+
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+       <button class="btn bc-primary d-block rounded" data-toggle="collapse" data-target="#target-id">
+           Navigation
+       </button>
+
+       <div class="bc-light rounded collapse my-3" id="target-id">
+           <ul class="nav nav--divider" id="" role="navigation">
+               <li>
+                   <a href="#1">Link</a>
+               </li>
+               <li>
+                   <a href="#1">Link</a>
+               </li>
+               <li>
+                   <a href="#1">Link</a>
+               </li>
+           </ul>
+       </div>
+
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="alert alert--confirm--dark"&gt;
+                ...
+            &lt;/div&gt;
+            &lt;!-- .alert --&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>
+            Figure 3 - Example HTML required for an accordion's panel to be open by default.
+        </p>
+    </figcaption>
+</figure>
