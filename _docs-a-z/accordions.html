@@ -3,15 +3,51 @@ layout: documentation
 title: "Accordions"
 ---
 
-<figure class="container narrow my-5">
+<div class="container narrow my-4">
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
+        voluptatibus.
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow my-4">
+    <div class="alert alert--attention my-3">
+        <div class="alert__header">
+            <p>
+                <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
+                <span class="alert__title">Accordion Accessibility</span>
+            </p>
+        </div>
+        <div class="alert__body">
+            <p>
+                Backdrops replace CSS background images with inline HTML images so screen readers can read the
+                image's <em>alt</em> text. Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
+        </div>
+    </div>
+</div>
+<!-- .container -->
+
+<hr class="my-5" id="accordionGroup">
+
+<div class="container narrow my-4">
+    <h2>Accordion Group</h2>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
+        voluptatibus.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
 
     <div class="accordion-group">
 
-        <button class="accordion__button h6" id="acc-button-group-a-01" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="true">
+        <button class="accordion__button h6" id="acc-button-group-a-01" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="false">
             Accordion Title
         </button>
 
-        <div class="accordion__panel show" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="region">
+        <div class="accordion__panel" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="region">
 
             <div data-accordion="content">
                 <p>
@@ -71,3 +107,97 @@ title: "Accordions"
     <!-- .accordion -->
 
 </figure>
+<div class="container narrow my-4">
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
+        voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione
+        doloremque corporis voluptatibus.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4">
+    <pre data-line="1,3,4,5,7,8,9,10,11,12,13">
+        <code class="language-html">
+            
+            &lt;div class="accordion-group"&gt;
+
+                &lt;button class="accordion__button h6" id="acc-button-group-a-01" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="false"&gt;
+                    Accordion Title
+                &lt;/button&gt;
+
+                &lt;div class="accordion__panel" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="region"&gt;
+                    &lt;div data-accordion="content"&gt;
+                        &lt;p&gt;
+                            ...
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- .accordion__panel --&gt;
+
+                &lt;!-- Repeat as needed --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .accordion --&gt;
+
+        </code>
+    </pre>
+    <figcaption>
+        <p>
+            Figure 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+    </figcaption>
+</figure>
+
+<figure class="container narrow my-4">
+
+    <table class="fs-md">
+        <thead>
+            <tr>
+                <th class="w-30">Line #</th>
+                <th class="w-70">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laboriosam quaerat veritatis
+                        sunt placeat quam? Sit deleniti officia dignissimos quod.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>3-5</td>
+                <td>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laboriosam quaerat veritatis
+                        sunt placeat quam? Sit deleniti officia dignissimos quod.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>7-13</td>
+                <td>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laboriosam quaerat veritatis
+                        sunt placeat quam? Sit deleniti officia dignissimos quod.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</figure>
+
+<div class="container narrow my-4">
+    <h3>Opened by Default</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea harum, quod suscipit ratione doloremque corporis
+        voluptatibus.
+    </p>
+</div>
+<!-- .container -->
