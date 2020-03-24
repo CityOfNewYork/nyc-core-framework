@@ -53,9 +53,10 @@ window.onload = () => {
         const accPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
 
         for (const accordionButton of accButtonList) {
+
+            accordionButton.setAttribute("tabindex", 0);
             
             let currentAccordionPanel = accordionButton.nextElementSibling;
-
             let expanded = accordionButton.getAttribute("aria-expanded");
 
             if (expanded === "true") {
@@ -67,12 +68,17 @@ window.onload = () => {
                 currentAccordionPanel.setAttribute("aria-hidden", true);
             }
 
-            accordionButton.addEventListener('click', function (event) {
+            const initAccordion = () => {
 
+                event.stopPropagation();
                 event.preventDefault();
 
+                let elementName = Element.tagName = event.target.tagName;
+
+                // console.log(elementName);
+
                 for (const otherAccordionPanel of accPanelList) {
-                    
+
                     otherAccordionPanel.classList.remove('show');
 
                     if (otherAccordionPanel !== currentAccordionPanel) {
@@ -101,7 +107,19 @@ window.onload = () => {
                     currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
                     currentAccordionPanel.setAttribute("aria-hidden", false);
                 }
+            }
 
+            accordionButton.addEventListener('click', (event) => {
+                initAccordion(event);
+            });
+
+            accordionButton.addEventListener('keyup', (event) => {
+                if (event.keyCode === 13 && event.target.tagName !== 'BUTTON') {
+                    console.log(event.target.tagName);
+                    initAccordion(event);
+                } else {
+                    return;
+                }
             });
         }
 
@@ -118,6 +136,8 @@ window.onload = () => {
         collapseButton.setAttribute("aria-expanded", false);
 
         collapseButton.addEventListener('click', (event) => {
+
+            console.log(event.target.tagName);
 
             const collapseTargetID = event.target.getAttribute('data-target').replace(/#/, '');
 
