@@ -147,10 +147,8 @@ window.onload = () => {
     // F. Modal
     //////////////////////////////////////////////
 
-    const modal = document.querySelector('.modal');
+    const modalList = document.querySelectorAll('.modal');
     const modalButtonList = document.querySelectorAll('[data-modal-open]');
-
-    modal.setAttribute("aria-hidden", true);
 
     const initModal = (modalTarget) => {
 
@@ -201,6 +199,14 @@ window.onload = () => {
                 focusedElementBeforeModal.focus();
             }
         }
+    }
+
+    for (const modal of modalList) {
+        
+        const modalOverlay = modal.querySelector('.modal-overlay');
+        modalOverlay.setAttribute('tabindex',  '-1');
+
+        modal.setAttribute("aria-hidden", true);
     }
 
     for (const modalButton of modalButtonList) {
