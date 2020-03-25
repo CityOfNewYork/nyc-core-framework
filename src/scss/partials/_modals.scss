@@ -11,7 +11,7 @@ In this file:
 // A. Modal Styles
 //////////////////////////////////////////////
 
-.modal{
+.modal {
   display: none;
 
   &[aria-hidden="false"] {
@@ -30,6 +30,7 @@ In this file:
     justify-content: center;
     align-items: center;
     z-index: 10000;
+    // background-color: inherit;
     
     // Use Psuedo element for background
     
@@ -40,8 +41,7 @@ In this file:
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: currentColor;
-        opacity: 0.9;
+        opacity: 0.8;
     }
 }
 
@@ -52,6 +52,8 @@ In this file:
   max-height: 100vh;
   overflow-y: auto;
   z-index: 20000;
+  background-color: inherit;
+
   @extend .box-shadow;
 }
 

@@ -123,7 +123,9 @@ $theme-colors: (
         color: var(--link-color);
     }
 
-    [data-toggle="dropdown"] ~ ul {
+    [data-toggle="dropdown"] ~ ul, 
+    .modal-overlay::before,
+    .modal-container {
         background-color: var(--background-color);
     }
 
