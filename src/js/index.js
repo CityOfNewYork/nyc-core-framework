@@ -152,7 +152,7 @@ window.onload = () => {
 
     const initModal = (modalTarget) => {
 
-        const modalClose = modalTarget.querySelector('[data-micromodal-close]');
+        const modalClose = modalTarget.querySelector('[data-modal-close]');
 
         modalTarget.setAttribute("aria-hidden", false);
 
@@ -161,6 +161,7 @@ window.onload = () => {
 
         // add the key listener  
         modalTarget.addEventListener('keydown', processEscapeTabKeys);
+
         modalClose.addEventListener('click', closeModal);
 
         // Find all focusable modal elements
@@ -177,7 +178,6 @@ window.onload = () => {
         firstElementOfModal.focus();
 
         function closeModal() {
-            console.log('close');
             modalTarget.setAttribute("aria-hidden", true);
             focusedElementBeforeModal.focus();
         }
@@ -202,9 +202,13 @@ window.onload = () => {
     }
 
     for (const modal of modalList) {
-        
-        const modalOverlay = modal.querySelector('.modal-overlay');
+        const modalOverlay = modal.querySelector('.modal__overlay');
+        const modalContainer = modal.querySelector('.modal__container');
+
         modalOverlay.setAttribute('tabindex',  '-1');
+
+        modalContainer.setAttribute('role', 'dialog');
+        modalContainer.setAttribute('aria-modal', 'true');
 
         modal.setAttribute("aria-hidden", true);
     }

@@ -20,7 +20,7 @@ In this file:
 
 }
 
-.modal-overlay {
+.modal__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ In this file:
     }
 }
 
-.modal-container {
+.modal__container {
   position: relative;
   overflow-y: auto;
   z-index: auto;
@@ -56,17 +56,21 @@ In this file:
   @extend .box-shadow;
 }
 
-.modal-header {
+.modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  h1, h2, h3 { margin-bottom: 0; }
+  h1, h2, h3, h4, h5, h6 { margin-bottom: 0; }
 }
 
-.modal-body {
+.modal__body {
     padding-top: var(--s3);
     padding-bottom: var(--s3);
+}
+
+.modal__footer {
+  // Put styles here
 }
 
 //////////////////////////////////////////////
@@ -93,31 +97,23 @@ In this file:
     to { transform: translateY(-10%); }
 }
 
-.modal-slide {
-  display: none;
-}
-
-.modal-slide.is-open {
-  display: block;
-}
-
-.modal-slide[aria-hidden="false"] .modal-overlay {
+.modal--slide[aria-hidden="false"] .modal__overlay {
   animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.modal-slide[aria-hidden="false"] .modal-container {
+.modal--slide[aria-hidden="false"] .modal__container {
   animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
 }
 
-.modal-slide[aria-hidden="true"] .modal-overlay {
+.modal--slide[aria-hidden="true"] .modal__overlay {
   animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.modal-slide[aria-hidden="true"] .modal-container {
+.modal--slide[aria-hidden="true"] .modal__container {
   animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
 }
 
-.modal-slide .modal-container,
-.modal-slide .modal-overlay {
+.modal--slide .modal__container,
+.modal--slide .modal__overlay {
   will-change: transform;
 }
