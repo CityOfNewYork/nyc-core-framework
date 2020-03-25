@@ -3,7 +3,7 @@ import 'element-closest-polyfill';
 window.onload = () => {
 
     //////////////////////////////////////////////
-    // B. Dropdowns
+    // A. Dropdowns
     //////////////////////////////////////////////
 
     const dropdownButtonList = document.querySelectorAll('[data-toggle="dropdown"]');
