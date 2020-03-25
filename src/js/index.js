@@ -135,8 +135,6 @@ window.onload = () => {
 
         collapseButton.addEventListener('click', (event) => {
 
-            console.log(event.target.tagName);
-
             const collapseTargetID = event.target.getAttribute('data-target').replace(/#/, '');
 
             const collapseTarget = document.getElementById(collapseTargetID);
@@ -144,32 +142,32 @@ window.onload = () => {
             collapseTarget.classList.toggle('shown');
         })
     }
+
     //////////////////////////////////////////////
     // F. Modal
     //////////////////////////////////////////////
 
-    const modal = document.querySelector('.modal');
-    const modalButton = document.querySelector('[data-modal-open]');
-    const modalClose = document.querySelector('[data-micromodal-close]');
-    
+    const modal= document.querySelector('.modal');
+    const modalButtonList = document.querySelectorAll('[data-modal-open]');
+
     modal.setAttribute("aria-hidden", true);
 
-    const initModal = () => {
+    const initModal = (modalTarget) => {
 
-        console.log('Cool');
+        const modalClose = modalTarget.querySelector('[data-micromodal-close]');
 
-        modal.setAttribute("aria-hidden", false);
+        modalTarget.setAttribute("aria-hidden", false);
 
         // element that was focused before modal opened
         let focusedElementBeforeModal = document.activeElement;
 
         // add the key listener  
-        modal.addEventListener('keydown', processEscapeTabKeys);
+        modalTarget.addEventListener('keydown', processEscapeTabKeys);
         modalClose.addEventListener('click', closeModal);
 
         // Find all focusable modal elements
         const modalElements = 'input:not([disabled]), button:not([disabled]), a:not([disabled]';
-        let focusableElements = modal.querySelectorAll(modalElements);
+        let focusableElements = modalTarget.querySelectorAll(modalElements);
 
         // Convert NodeList to Array only for IE 11
         // focusableElements = Array.prototype.slice.call(focusableElements);
@@ -180,9 +178,9 @@ window.onload = () => {
         // Focus on first element of the modal - firstName
         firstElementOfModal.focus();
 
-        function closeModal(){
+        function closeModal() {
             console.log('close');
-            modal.setAttribute("aria-hidden", true);
+            modalTarget.setAttribute("aria-hidden", true);
             focusedElementBeforeModal.focus();
         }
 
@@ -195,17 +193,29 @@ window.onload = () => {
                     firstElementOfModal.focus();
                 }
             }
-            
+
             // ESCAPE key handler (close the modal)
             if (event.keyCode === 27) {
 
-                modal.setAttribute("aria-hidden", true);
+                modalTarget.setAttribute("aria-hidden", true);
                 focusedElementBeforeModal.focus();
             }
         }
     }
-    
-    modalButton.addEventListener( 'click', initModal );
+
+    for (const modalButton of modalButtonList) {
+
+        modalButton.addEventListener('click', (event) => {
+
+            const modalTargetID = event.target.getAttribute('data-modal-open').replace(/#/, '');
+            const modalTarget = document.getElementById(modalTargetID);
+
+            console.log(modalTarget);
+
+            initModal(modalTarget);
+        });
+
+    }
 
     //////////////////////////////////////////////
     // E. Forms

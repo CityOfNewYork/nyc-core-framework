@@ -32,9 +32,15 @@
                     <h1>Modal</h1>
                 </div>
 
-                <figure class="container narrow mar-y s4">
+                <figure class="container narrow my-2">
 
-                    <button class="btn d-block bc-dark" data-modal-open="modal-1">Open Modal</button>
+                    <button class="btn d-block bc-dark" data-modal-open="modal-1">Open Modal 1</button>
+
+                </figure>
+
+                <figure class="container narrow my-2">
+
+                    <button class="btn d-block bc-secondary" data-modal-open="modal-2">Open Modal 2</button>
 
                 </figure>
 
@@ -46,7 +52,6 @@
         
     </main>
 
-    <!-- Modal -->
     <div class="modal" id="modal-1" aria-hidden="true">
 
         <div class="modal-overlay" tabindex="-1">
@@ -55,7 +60,7 @@
 
                 <header class="modal-header">
                     <h2 class="h3" id="modal-1-title">
-                        Micromodal
+                        Modal 1
                     </h2>
                     <button class="btn-icon" aria-label="Close modal" data-micromodal-close>
                         <span class="sr-only">Close Modal</span>
@@ -83,7 +88,46 @@
             </div>
         </div>
     </div>
-    <!-- .modal -->
+    <!-- #modal-1 -->
+
+    <div class="modal" id="modal-2" aria-hidden="true">
+
+        <div class="modal-overlay" tabindex="-1">
+
+            <div class="modal-container bc-dark" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+                <header class="modal-header">
+                    <h2 class="h3" id="modal-1-title">
+                        Modal 2
+                    </h2>
+                    <button class="btn-icon" aria-label="Close modal" data-micromodal-close>
+                        <span class="sr-only">Close Modal</span>
+                        <span class="fas fa-times"></span>
+                    </button>
+                </header>
+
+                <main class="modal-body" id="modal-1-content">
+                    <p>
+                        Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself.
+                        Also, <code>esc</code> to close modal.
+                    </p>
+                </main>
+
+                <footer class="grid cols--md">
+                    <div>
+                        <button class="btn bc-primary d-block">Continue</button>
+                    </div>
+                    <!-- .grid__col -->
+                    <div>
+                        <button class="btn bc-dark d-block" data-micromodal-close
+                            aria-label="Close this dialog window">Close</button>
+                    </div>
+                    <!-- .grid__col -->
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- #modal-1 -->
 
     <script src="./dist/js/nyc_core.js"></script>
 
