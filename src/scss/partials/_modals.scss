@@ -30,7 +30,6 @@ In this file:
     justify-content: center;
     align-items: center;
     z-index: 10000;
-    // background-color: inherit;
     
     // Use Psuedo element for background
     
@@ -47,11 +46,11 @@ In this file:
 
 .modal-container {
   position: relative;
-  padding: var(--s3);
-  max-width: 500px;
-  max-height: 100vh;
   overflow-y: auto;
-  z-index: 20000;
+  z-index: auto;
+  padding: var(--s3);
+  width: 100%;
+  max-height: 100vh;
   background-color: inherit;
 
   @extend .box-shadow;
@@ -66,8 +65,8 @@ In this file:
 }
 
 .modal-body {
-    padding-top: var(--s4);
-    padding-bottom: var(--s4);
+    padding-top: var(--s3);
+    padding-bottom: var(--s3);
 }
 
 //////////////////////////////////////////////
