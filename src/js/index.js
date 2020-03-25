@@ -197,9 +197,7 @@ window.onload = () => {
 
             // ESCAPE key handler (close the modal)
             if (event.keyCode === 27) {
-
-                modalTarget.setAttribute("aria-hidden", true);
-                focusedElementBeforeModal.focus();
+                closeModal();
             }
         }
     }
