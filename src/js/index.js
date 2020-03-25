@@ -147,7 +147,7 @@ window.onload = () => {
     // F. Modal
     //////////////////////////////////////////////
 
-    const modal= document.querySelector('.modal');
+    const modal = document.querySelector('.modal');
     const modalButtonList = document.querySelectorAll('[data-modal-open]');
 
     modal.setAttribute("aria-hidden", true);
