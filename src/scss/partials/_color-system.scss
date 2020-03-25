@@ -102,6 +102,7 @@ $theme-colors: (
 // D. Background Color Classes 
 //////////////////////////////////////////////
 
+body,
 [class*="bc-"] {
     --background-color: white;
     --text-color: black;
@@ -155,6 +156,10 @@ $theme-colors: (
         --border-color: #{$border};
         --link-color: #{$link};
     }
+}
+
+body:not([class="bc-"]){
+    @extend .bc-white;
 }
 
 //////////////////////////////////////////////

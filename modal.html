@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="bc-white">
+<body>
 
     <main id="skip-header-content" role="main">
 
@@ -41,9 +41,9 @@
 
                 <figure class="container narrow my-4">
 
-                    <button class="btn d-block bc-dark my-3" data-modal-open="modal-1">Open Modal 1</button>
+                    <button class="btn btn--outline tc-secondary d-block my-3" data-modal-open="modal-1">Open Modal 1</button>
 
-                    <button class="btn d-block bc-secondary my-2" data-modal-open="modal-2">Open Modal 2</button>
+                    <button class="btn btn--outline d-block bc-secondary my-2" data-modal-open="modal-2">Open Modal 2</button>
 
                 </figure>
 
@@ -59,9 +59,9 @@
 
         <div class="modal__overlay">
 
-            <div class="modal__container medium rounded" aria-labelledby="modal-1-title">
+            <div class="modal__container narrow rounded" aria-labelledby="modal-1-title">
 
-                <header class="modal__header border-b">
+                <header class="modal__header">
                     <h2 class="h5" id="modal-1-title">
                         Modal Title One
                     </h2>
@@ -72,11 +72,22 @@
                 </header>
 
                 <main class="modal__body" id="modal-1-content">
+
                     <p>
                        Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti perspiciatis
-                       tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis
-                       architecto at quasi adipisci ut.
+                       tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
                     </p>
+
+                    <p>
+                       Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti perspiciatis
+                       tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
+                    </p>
+
+                    <p>
+                       Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti perspiciatis
+                       tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
+                    </p>
+
                 </main>
 
                 <footer class="modal__footer border-t">
@@ -91,7 +102,7 @@
     </div>
     <!-- #modal-1 -->
 
-    <div class="modal modal--slide bc-dark" id="modal-2">
+    <div class="modal modal--slide" id="modal-2">
 
         <div class="modal__overlay">
 
@@ -128,7 +139,7 @@
     <!-- #modal-1 -->
 
     <script src="./dist/js/nyc_core.js"></script>
-    
+
 </body>
 
 </html>
