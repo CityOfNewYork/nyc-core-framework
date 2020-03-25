@@ -11,6 +11,15 @@ In this file:
 // A. Modal Styles
 //////////////////////////////////////////////
 
+.modal{
+  display: none;
+
+  &[aria-hidden="false"] {
+    display: block;
+  }
+
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -20,30 +29,30 @@ In this file:
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2500;
+    z-index: 10000;
     
     // Use Psuedo element for background
     
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         background-color: currentColor;
-        opacity: 0.8;
+        opacity: 0.9;
     }
 }
 
 .modal-container {
-    font-size: var(font-size-rg);
-    @extend .bc-white;
-    @extend .box-shadow;
-    padding: var(--s3);
-    max-width: 500px;
-    max-height: 100vh;
-    overflow-y: auto;
+  position: relative;
+  padding: var(--s3);
+  max-width: 500px;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 20000;
+  @extend .box-shadow;
 }
 
 .modal-header {

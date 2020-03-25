@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Alerts • NYC Core Framework</title>
+    <title>Modal • NYC Core Framework</title>
 
     <!-- Font Awesome Kit -->
     <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@
 
                 <figure class="container narrow mar-y s4">
 
-                    <button class="btn d-block--md bc-dark open-modal" data-micromodal-trigger="modal-1">cool</button>
+                    <button class="btn d-block bc-dark" data-modal-open="modal-1">Open Modal</button>
 
                 </figure>
 
@@ -46,12 +46,12 @@
         
     </main>
 
-    <!-- modal example -->
-    <div class="modal modal-slide" id="modal-1" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal" id="modal-1" aria-hidden="true">
 
-        <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal-overlay" tabindex="-1">
 
-            <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <div class="modal-container bc-dark" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
 
                 <header class="modal-header">
                     <h2 class="h3" id="modal-1-title">
@@ -70,14 +70,13 @@
                     </p>
                 </main>
 
-                <footer class="grid gap-sm cols--md">
+                <footer class="grid cols--md">
                     <div>
                         <button class="btn bc-primary d-block">Continue</button>
                     </div>
                     <!-- .grid__col -->
                     <div>
-                        <button class="btn bc-dark d-block" data-micromodal-close
-                            aria-label="Close this dialog window">Close</button>
+                        <button class="btn bc-dark d-block" data-micromodal-close aria-label="Close this dialog window">Close</button>
                     </div>
                     <!-- .grid__col -->
                 </footer>
@@ -85,10 +84,6 @@
         </div>
     </div>
     <!-- .modal -->
-
-    <footer class="container bc-dark t-center py-4">
-        <a href="#" data-scroll="top">To Top</a>
-    </footer>
 
     <script src="./dist/js/nyc_core.js"></script>
 
