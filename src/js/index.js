@@ -151,9 +151,6 @@ window.onload = () => {
     const modalButtonList = document.querySelectorAll('[data-modal-open]');
 
     const initModal = (modalTarget) => {
-
-        const modalClose = modalTarget.querySelector('[data-modal-close]');
-
         modalTarget.setAttribute("aria-hidden", false);
 
         // element that was focused before modal opened
@@ -162,7 +159,12 @@ window.onload = () => {
         // add the key listener  
         modalTarget.addEventListener('keydown', processEscapeTabKeys);
 
-        modalClose.addEventListener('click', closeModal);
+        const modalCloseList = modalTarget.querySelectorAll('[data-modal-close]');
+
+        for (const modalClose of modalCloseList) {
+            modalClose.addEventListener('click', closeModal);
+            modalClose.setAttribute("aria-label", "Close Modal Window")
+        }
 
         // Find all focusable modal elements
         const modalElements = 'input:not([disabled]), button:not([disabled]), a:not([disabled]';
