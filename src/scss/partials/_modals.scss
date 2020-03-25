@@ -30,6 +30,7 @@ In this file:
     justify-content: center;
     align-items: center;
     z-index: 10000;
+    padding: var(--s3);
     
     // Use Psuedo element for background
     
@@ -40,7 +41,7 @@ In this file:
         right: 0;
         bottom: 0;
         left: 0;
-        opacity: 0.8;
+        opacity: 0.9;
     }
 }
 
@@ -48,7 +49,6 @@ In this file:
   position: relative;
   overflow-y: auto;
   z-index: auto;
-  padding: var(--s3);
   width: 100%;
   max-height: 100vh;
   background-color: inherit;
@@ -60,6 +60,7 @@ In this file:
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding: var(--s2) var(--s3);
 
   h1, h2, h3, h4, h5, h6 { margin-bottom: 0; }
 
@@ -68,9 +69,9 @@ In this file:
   }
 }
 
-.modal__body {
-    padding-top: var(--s3);
-    padding-bottom: var(--s3);
+.modal__body, 
+.modal__footer{
+    padding: var(--s3);
 }
 
 .modal__footer {

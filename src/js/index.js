@@ -151,6 +151,7 @@ window.onload = () => {
     const modalButtonList = document.querySelectorAll('[data-modal-open]');
 
     const initModal = (modalTarget) => {
+
         modalTarget.setAttribute("aria-hidden", false);
 
         // element that was focused before modal opened
@@ -163,7 +164,7 @@ window.onload = () => {
 
         for (const modalClose of modalCloseList) {
             modalClose.addEventListener('click', closeModal);
-            modalClose.setAttribute("aria-label", "Close Modal Window")
+            modalClose.setAttribute("aria-label", "Close Modal Window");
         }
 
         // Find all focusable modal elements
