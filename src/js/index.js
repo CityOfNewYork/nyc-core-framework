@@ -47,7 +47,7 @@ window.onload = () => {
     // B. Accordion
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll('.accordion-group')).forEach(function (accordion) {
+    Array.prototype.slice.call(document.querySelectorAll('.accordion')).forEach(function (accordion) {
 
         const accButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
         const accPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
@@ -126,138 +126,142 @@ window.onload = () => {
     // C. Tabs
     //////////////////////////////////////////////
 
-    // const tablist = document.querySelectorAll('[role="tablist"]');
-    const tabButtonList = document.querySelectorAll('[role="tab"]');
-    const tabPanelList = document.querySelectorAll('[role="tabpanel"]');
+    Array.prototype.slice.call(document.querySelectorAll('[data-tab-group]')).forEach(function (tab) {
 
-    // For easy reference
-    const keys = {
-        end: 35,
-        home: 36,
-        left: 37,
-        right: 39,
-        enter: 13,
-        space: 32
-    };
+        // const tablist = document.querySelectorAll('[role="tablist"]');
+        const tabButtonList = tab.querySelectorAll('[role="tab"]');
+        const tabPanelList = tab.querySelectorAll('[role="tabpanel"]');
 
-    // Add or subtract depending on key pressed
-    const direction = {
-        37: -1,
-        39: 1,
-    };
-
-    function addListeners(index) {
-        tabButtonList[index].addEventListener('click', clickEventListener);
-        tabButtonList[index].addEventListener('keydown', keydownEventListener);
-        tabButtonList[index].addEventListener('keyup', keyupEventListener);
-
-        // Build an array with all tabs (<button>s) in it
-        tabButtonList[index].index = index;
-    };
-
-     for (let i = 0; i < tabButtonList.length; ++i) {
-         addListeners(i);
-     };
-
-    // When a tab is clicked, activateTab is fired to activate it
-    function clickEventListener(event) {
-        var tab = event.target;
-        activateTab(tab);
-    };
-
-    // Handle keydown on tabs
-    function keydownEventListener(event) {
-        var key = event.keyCode;
-
-        switch (key) {
-            case keys.end:
-                event.preventDefault();
-                // Activate last tab
-                focusLastTab();
-                break;
-            case keys.home:
-                event.preventDefault();
-                // Activate first tab
-                focusFirstTab();
-                break;
+        // For easy reference
+        const keys = {
+            end: 35,
+            home: 36,
+            left: 37,
+            right: 39,
+            enter: 13,
+            space: 32
         };
-    };
 
-    // Handle keyup on tabs
-    function keyupEventListener(event) {
-        var key = event.keyCode;
-
-        switch (key) {
-            case keys.left:
-            case keys.right:
-                switchTabOnArrowPress(event);
-                break;
-            case keys.enter:
-            case keys.space:
-                activateTab(event.target);
-                break;
+        // Add or subtract depending on key pressed
+        const direction = {
+            37: -1,
+            39: 1,
         };
-    };
 
-    // Either focus the next, previous, first, or last tab
-    // depending on key pressed
-    
-    function switchTabOnArrowPress(event) {
-        var pressed = event.keyCode;
+        function addListeners(index) {
+            tabButtonList[index].addEventListener('click', clickEventListener);
+            tabButtonList[index].addEventListener('keydown', keydownEventListener);
+            tabButtonList[index].addEventListener('keyup', keyupEventListener);
 
-        if (direction[pressed]) {
-            let target = event.target;
+            // Build an array with all tabs (<button>s) in it
+            tabButtonList[index].index = index;
+        };
 
-            if (target !== undefined) {
-                if (tabButtonList[target.index + direction[pressed]]) {
-                    tabButtonList[target.index + direction[pressed]].focus();
-                } else if (pressed === keys.left) {
+        for (let i = 0; i < tabButtonList.length; ++i) {
+            addListeners(i);
+        };
+
+        // When a tab is clicked, activateTab is fired to activate it
+        function clickEventListener(event) {
+            var tab = event.target;
+            activateTab(tab);
+        };
+
+        // Handle keydown on tabs
+        function keydownEventListener(event) {
+            var key = event.keyCode;
+
+            switch (key) {
+                case keys.end:
+                    event.preventDefault();
+                    // Activate last tab
                     focusLastTab();
-                } else if (pressed === keys.right) {
+                    break;
+                case keys.home:
+                    event.preventDefault();
+                    // Activate first tab
                     focusFirstTab();
+                    break;
+            };
+        };
+
+        // Handle keyup on tabs
+        function keyupEventListener(event) {
+            var key = event.keyCode;
+
+            switch (key) {
+                case keys.left:
+                case keys.right:
+                    switchTabOnArrowPress(event);
+                    break;
+                case keys.enter:
+                case keys.space:
+                    activateTab(event.target);
+                    break;
+            };
+        };
+
+        // Either focus the next, previous, first, or last tab
+        // depending on key pressed
+        
+        function switchTabOnArrowPress(event) {
+            var pressed = event.keyCode;
+
+            if (direction[pressed]) {
+                let target = event.target;
+
+                if (target !== undefined) {
+                    if (tabButtonList[target.index + direction[pressed]]) {
+                        tabButtonList[target.index + direction[pressed]].focus();
+                    } else if (pressed === keys.left) {
+                        focusLastTab();
+                    } else if (pressed === keys.right) {
+                        focusFirstTab();
+                    };
                 };
             };
         };
-    };
 
-    // Activates any given tab panel
-    function activateTab(tab) {
-        
-        // Deactivate all other tabs
-        deactivateTabs();
+        // Activates any given tab panel
+        function activateTab(tab) {
+            
+            // Deactivate all other tabs
+            deactivateTabs();
 
-        // Set the tab as selected
-        tab.setAttribute('aria-selected', 'true');
+            // Set the tab as selected
+            tab.setAttribute('aria-selected', 'true');
 
-        // Get the value of aria-controls (which is an ID)
-        var controls = tab.getAttribute('aria-controls');
+            // Get the value of aria-controls (which is an ID)
+            var controls = tab.getAttribute('aria-controls');
 
-        // Remove hidden attribute from tab panel to make it visible
-        document.getElementById(controls).removeAttribute('hidden');
-    };
+            // Remove hidden attribute from tab panel to make it visible
+            document.getElementById(controls).removeAttribute('hidden');
+        };
 
-    // Deactivate all tabs and tab panels
-    function deactivateTabs() {
+        // Deactivate all tabs and tab panels
+        function deactivateTabs() {
 
-        for (const panel of tabPanelList) {
-            panel.setAttribute('aria-selected', 'false');
-        }
+            for (const panel of tabPanelList) {
+                panel.setAttribute('aria-selected', 'false');
+            }
 
-        for (const panel of tabPanelList) {
-            panel.setAttribute('hidden', 'hidden');
-        }
-        
-    };
+            for (const panel of tabPanelList) {
+                panel.setAttribute('hidden', 'hidden');
+            }
+            
+        };
 
-    // Make a guess
-    function focusFirstTab() {
-        tabButtonList[0].focus();
-    };
+        // Make a guess
+        function focusFirstTab() {
+            tabButtonList[0].focus();
+        };
 
-    // Make a guess
-    function focusLastTab() {
-        tabButtonList[tabButtonList.length - 1].focus();
-    };
+        // Make a guess
+        function focusLastTab() {
+            tabButtonList[tabButtonList.length - 1].focus();
+        };
+
+    }); // end for
 
     //////////////////////////////////////////////
     // D. Toggle
