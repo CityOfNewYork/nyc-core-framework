@@ -140,7 +140,6 @@
                 up: 38,
                 right: 39,
                 down: 40,
-                delete: 46,
                 enter: 13,
                 space: 32
             };
@@ -205,39 +204,12 @@
                 switch (key) {
                     case keys.left:
                     case keys.right:
-                        determineOrientation(event);
-                        break;
-                    case keys.delete:
-                        determineDeletable(event);
+                        switchTabOnArrowPress(event);
                         break;
                     case keys.enter:
                     case keys.space:
                         activateTab(event.target);
                         break;
-                };
-            };
-
-            // When a tablist’s aria-orientation is set to vertical,
-            // only up and down arrow should function.
-            // In all other cases only left and right arrow function.
-            function determineOrientation(event) {
-                var key = event.keyCode;
-                var vertical = tablist.getAttribute('aria-orientation') == 'vertical';
-                var proceed = true;
-
-                if (vertical) {
-                    if (key === keys.up || key === keys.down) {
-                        event.preventDefault();
-                        proceed = true;
-                    };
-                } else {
-                    if (key === keys.left || key === keys.right) {
-                        proceed = true;
-                    };
-                };
-
-                if (proceed) {
-                    switchTabOnArrowPress(event);
                 };
             };
 
