@@ -112,7 +112,7 @@ In this file:
     &:not([class*="bc-"]) {
         border-color: inherit;
 
-        a {
+        a, button {
             color: inherit;
         }
     }
@@ -123,11 +123,14 @@ In this file:
         border-bottom-color: inherit;
     }
 
-    > li > a {
+    > li > a, 
+    > li > button {
         display: block;
+        width: 100%;
     }
 
-    > li > a,
+    > li > a, 
+    > li > button,
     > li > [data-toggle="dropdown"] ~ ul {
         padding: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
     }

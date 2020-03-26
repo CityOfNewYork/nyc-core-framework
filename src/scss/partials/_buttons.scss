@@ -25,6 +25,11 @@ In this file:
 // B. Default Button
 //////////////////////////////////////////////
 
+button, 
+.btn{
+    @extend .hover-focus;
+}
+
 .btn {
     display: inline-block;
     color: inherit;
@@ -34,8 +39,6 @@ In this file:
     user-select: none;
     line-height: normal;
     cursor: pointer;
-
-    @extend .hover-focus;
 
     transition: opacity 0.5s;
 
