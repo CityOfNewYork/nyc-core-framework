@@ -16,9 +16,15 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
+
+    // Buttons with Text
     --btn-padding-x: 1em;
     --btn-padding-y: 0.5em;
+    --btn-font-weight: bold;
+
+    // Icon Only
     --btn--icon-only-size: 2em;
+
 }
 
 //////////////////////////////////////////////
@@ -58,6 +64,7 @@ button,
     }
 
     &:not([class*="--icon-only"]) {
+        font-weight: var(--btn-font-weight);
         padding: var(--btn-padding-y) var(--btn-padding-x);
     }
 }
@@ -130,10 +137,10 @@ button,
         left: 0;
 
         border-radius: inherit;
-        transition: opacity 0.5s;
         background-color: currentColor;
         pointer-events: none;
 
+        transition: opacity 0.5s;
         opacity: 0;
     }
 

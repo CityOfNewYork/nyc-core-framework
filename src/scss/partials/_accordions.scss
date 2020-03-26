@@ -22,6 +22,7 @@ $accordion-transition: 0.2s ease-out;
 //////////////////////////////////////////////
 
 .accordion__button {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -38,6 +39,22 @@ $accordion-transition: 0.2s ease-out;
         border-top-color: inherit;
     }
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border-radius: inherit;
+        background-color: currentColor;
+        pointer-events: none;
+
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+
     @extend .hover-focus;
 
     @include caret(down);
@@ -49,6 +66,11 @@ $accordion-transition: 0.2s ease-out;
 
     &[aria-expanded="true"]{
         text-decoration: underline;
+
+        &::before {
+            opacity: 0.05;
+        }
+
         &::after{
             transition: transform $accordion-transition;
             transform: rotate(180deg);

@@ -44,16 +44,19 @@ table.table-striped {
         position: relative;
         
         &::before {
-            pointer-events: none;
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
 
+            border-radius: inherit;
             background-color: currentColor;
-            opacity: 0.05;
+            pointer-events: none;
+
+            transition: opacity 0.5s;
+            opacity: 0.5;
         }
     }
 }
