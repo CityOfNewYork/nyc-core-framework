@@ -123,7 +123,7 @@ window.onload = () => {
     }); // end for
 
     //////////////////////////////////////////////
-    // B. Tabs
+    // C. Tabs
     //////////////////////////////////////////////
 
     // const tablist = document.querySelectorAll('[role="tablist"]');
@@ -280,7 +280,7 @@ window.onload = () => {
     }
 
     //////////////////////////////////////////////
-    // F. Modal
+    // E. Modal
     //////////////////////////////////////////////
 
     const modalList = document.querySelectorAll('.modal');
@@ -363,7 +363,7 @@ window.onload = () => {
     }
 
     //////////////////////////////////////////////
-    // E. Forms
+    // F. Forms
     //////////////////////////////////////////////
 
     const inputFieldList = document.querySelectorAll('input[type="text"], textarea, select');
@@ -383,7 +383,7 @@ window.onload = () => {
     }
 
     //////////////////////////////////////////////
-    // E. External Links
+    // G. External Links
     //////////////////////////////////////////////
 
     const externalLinks = document.querySelectorAll('[data-link="external"]');
