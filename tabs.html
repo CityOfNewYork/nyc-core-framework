@@ -41,65 +41,60 @@
 
                 <figure class="container medium my-4">
 
-                    <div class="container medium">
+                    <ul class="nav nav--divider nav--horizontal--md border" role="navigation" role="tablist">
+                        <li>
+                            <button aria-selected="true"
+                                aria-controls="tab-panel-01"
+                                id="tab-button-01"
+                                role="tab">
+                                Tab
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-selected="false"
+                                aria-controls="tab-panel-02"
+                                id="tab-button-02"
+                                role="tab">
+                                Tab
+                            </button>
+                        </li>
+                        <li>
+                            <button aria-selected="false"
+                                aria-controls="tab-panel-03"
+                                id="tab-button-03"
+                                role="tab">
+                                Tab
+                            </button>
+                        </li>
+                    </ul>
 
-                        <ul class="nav nav--divider nav--horizontal--md border" role="navigation" role="tablist">
-                            <li>
-                                <button aria-selected="true"
-                                    aria-controls="tab-panel-01"
-                                    id="tab-button-01"
-                                    role="tab">
-                                    Tab
-                                </button>
-                            </li>
-                            <li>
-                                <button aria-selected="false"
-                                    aria-controls="tab-panel-02"
-                                    id="tab-button-02"
-                                    role="tab">
-                                    Tab
-                                </button>
-                            </li>
-                            <li>
-                                <button aria-selected="false"
-                                    aria-controls="tab-panel-03"
-                                    id="tab-button-03"
-                                    role="tab">
-                                    Tab
-                                </button>
-                            </li>
-                        </ul>
+                    <div class="p-3" id="tab-panel-01" aria-labelledby="tab-button-01" role="tabpanel">
+                        <h6>Tab 01</h6>
+                        <p>
+                            Nils Frahm is a German musician, composer and record producer based in Berlin. He is known
+                            for combining classical and electronic music and for an unconventional approach to the piano
+                            in which he mixes a grand piano, upright piano, Roland Juno-60, Rhodes piano, drum machine,
+                            and Moog Taurus.
+                        </p>
+                    </div>
 
-                        <div class="p-3" id="tab-panel-01" aria-labelledby="tab-button-01" role="tabpanel">
-                            <h6>Tab 01</h6>
-                            <p>
-                                Nils Frahm is a German musician, composer and record producer based in Berlin. He is known
-                                for combining classical and electronic music and for an unconventional approach to the piano
-                                in which he mixes a grand piano, upright piano, Roland Juno-60, Rhodes piano, drum machine,
-                                and Moog Taurus.
-                            </p>
-                        </div>
+                    <div class="p-3" id="tab-panel-02" aria-labelledby="tab-button-02" role="tabpanel" hidden="">
+                        <h6>Tab 02</h6>
+                        <p>
+                            Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
+                            was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
+                            gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
+                        </p>
+                    </div>
 
-                        <div class="p-3" id="tab-panel-02" aria-labelledby="tab-button-02" role="tabpanel" hidden="">
-                            <h6>Tab 02</h6>
-                            <p>
-                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
-                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
-                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
-                            </p>
-                        </div>
-
-                        <div class="p-3" id="tab-panel-03" aria-labelledby="tab-button-02" role="tabpanel" hidden="">
-                            <h6>Tab 03</h6>
-                            <p>
-                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
-                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
-                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
-                            </p>
-                        </div>
-
-                </div>
-                <!-- .container -->
+                    <div class="p-3" id="tab-panel-03" aria-labelledby="tab-button-02" role="tabpanel" hidden="">
+                        <h6>Tab 03</h6>
+                        <p>
+                            Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
+                            was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
+                            gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
+                        </p>
+                    </div>
 
                 </figure>
 
@@ -121,35 +116,24 @@
 
         (function () {
 
-            var tablist = document.querySelectorAll('[role="tablist"]')[0];
-            var tabs;
-            var panels;
-
-            generateArrays();
-
-            function generateArrays() {
-                tabs = document.querySelectorAll('[role="tab"]');
-                panels = document.querySelectorAll('[role="tabpanel"]');
-            };
+            const tablist = document.querySelectorAll('[role="tablist"]');
+            const tabs = document.querySelectorAll('[role="tab"]');
+            const panels = document.querySelectorAll('[role="tabpanel"]');
 
             // For easy reference
-            var keys = {
+            const keys = {
                 end: 35,
                 home: 36,
                 left: 37,
-                up: 38,
                 right: 39,
-                down: 40,
                 enter: 13,
                 space: 32
             };
 
             // Add or subtract depending on key pressed
-            var direction = {
+            const direction = {
                 37: -1,
-                38: -1,
                 39: 1,
-                40: 1
             };
 
             // Bind listeners
@@ -187,13 +171,6 @@
                         // Activate first tab
                         focusFirstTab();
                         break;
-
-                        // Up and down are in keydown
-                        // because we need to prevent page scroll >:)
-                    case keys.up:
-                    case keys.down:
-                        determineOrientation(event);
-                        break;
                 };
             };
 
@@ -215,6 +192,7 @@
 
             // Either focus the next, previous, first, or last tab
             // depending on key pressed
+            
             function switchTabOnArrowPress(event) {
                 var pressed = event.keyCode;
 
@@ -223,9 +201,9 @@
                     if (target.index !== undefined) {
                         if (tabs[target.index + direction[pressed]]) {
                             tabs[target.index + direction[pressed]].focus();
-                        } else if (pressed === keys.left || pressed === keys.up) {
+                        } else if (pressed === keys.left) {
                             focusLastTab();
-                        } else if (pressed === keys.right || pressed == keys.down) {
+                        } else if (pressed === keys.right) {
                             focusFirstTab();
                         };
                     };
@@ -233,13 +211,10 @@
             };
 
             // Activates any given tab panel
-            function activateTab(tab, setFocus) {
-                setFocus = setFocus || true;
+            function activateTab(tab) {
+               
                 // Deactivate all other tabs
                 deactivateTabs();
-
-                // Remove tabindex attribute
-                tab.removeAttribute('tabindex');
 
                 // Set the tab as selected
                 tab.setAttribute('aria-selected', 'true');
@@ -249,17 +224,11 @@
 
                 // Remove hidden attribute from tab panel to make it visible
                 document.getElementById(controls).removeAttribute('hidden');
-
-                // Set focus when required
-                if (setFocus) {
-                    tab.focus();
-                };
             };
 
             // Deactivate all tabs and tab panels
             function deactivateTabs() {
                 for (t = 0; t < tabs.length; t++) {
-                    tabs[t].setAttribute('tabindex', '-1');
                     tabs[t].setAttribute('aria-selected', 'false');
                 };
 
@@ -278,54 +247,8 @@
                 tabs[tabs.length - 1].focus();
             };
 
-            // Detect if a tab is deletable
-            function determineDeletable(event) {
-                target = event.target;
-
-                if (target.getAttribute('data-deletable') !== null) {
-                    // Delete target tab
-                    deleteTab(event, target);
-
-                    // Update arrays related to tabs widget
-                    generateArrays();
-
-                    // Activate the closest tab to the one that was just deleted
-                    if (target.index - 1 < 0) {
-                        activateTab(tabs[0]);
-                    } else {
-                        activateTab(tabs[target.index - 1]);
-                    };
-                };
-            };
-
-            // Deletes a tab and its panel
-            function deleteTab(event) {
-                var target = event.target;
-                var panel = document.getElementById(target.getAttribute('aria-controls'));
-
-                target.parentElement.removeChild(target);
-                panel.parentElement.removeChild(panel);
-            };
-
-            // Determine whether there should be a delay
-            // when user navigates with the arrow keys
-            function determineDelay() {
-                var hasDelay = tablist.hasAttribute('data-delay');
-                var delay = 0;
-
-                if (hasDelay) {
-                    var delayValue = tablist.getAttribute('data-delay');
-                    if (delayValue) {
-                        delay = delayValue;
-                    } else {
-                        // If no value is specified, default to 300ms
-                        delay = 300;
-                    };
-                };
-
-                return delay;
-            };
         }());
+
     </script>
     
 </body>
