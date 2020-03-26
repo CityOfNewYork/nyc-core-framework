@@ -1,46 +1,38 @@
 ////////////////////////////////////////
-// E. Dropdown
+// A. Caret
 ////////////////////////////////////////
 
-// Caret
-
 $default-caret-size: 0.25em;
+$default-caret-margin: 0.375em;
 
-@mixin caret-down($size: $default-caret-size) {
+// Create caret icon
+
+@mixin caret-icon( $size: $default-caret-size ) {
     border-top: $size solid;
     border-right: $size solid transparent;
     border-bottom: 0;
     border-left: $size solid transparent;
 }
 
-@mixin caret-up($size: $default-caret-size) {
-    // transform: scaleY(-1);
-    border-top: 0;
-    border-right: $size solid transparent;
-    border-bottom: $size solid;
-    border-left: $size solid transparent;
-}
+// Add Caret ::aftter
 
-@mixin caret( $direction: "down" ) {
+@mixin add-caret( $location: "append" ) {
 
     display: flex;
     align-items: center;
-
+    
     &::after {
-
         content: "";
         display: inline-block;
-        margin-left: var(--s1);
-        margin-right: var(--s1);
 
+        @include caret-icon;
+
+        margin-left: $default-caret-margin;
+        margin-right: $default-caret-margin;
         color: inherit;
-
-        @if $direction=="down" {
-            @include caret-down;
-        }
-
-        @else if $direction=="up" {
-            @include caret-up;
-        }
+    } 
+    
+    @if $location == "prepend" {
+        flex-direction: row-reverse;
     }
 }

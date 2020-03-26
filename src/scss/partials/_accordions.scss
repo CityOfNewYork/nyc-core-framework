@@ -57,7 +57,7 @@ $accordion-transition: 0.2s ease-out;
 
     @extend .hover-focus;
 
-    @include caret(down);
+    @include add-caret("after");
 
     &:not([aria-expanded="true"])::after {
         transition: transform $accordion-transition;

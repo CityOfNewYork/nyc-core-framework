@@ -115,7 +115,7 @@ fieldset{
 
 .field__input-wrap {
     width: 100%;
-    @include caret("down");
+    @include add-caret("after");
 
     &::after{
         pointer-events: none;

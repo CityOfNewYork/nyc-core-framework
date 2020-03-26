@@ -192,10 +192,10 @@ In this file:
 ////////////////////////////////////////
 
 [data-toggle="dropdown"]:not([class*="btn--icon-only"]) {
-    @include caret("down");
+    @include add-caret;
 
     &[aria-expanded="true"]::after {
-        @include caret-up;
+        transform: rotate(180deg);
     }
 }
 
@@ -203,15 +203,15 @@ In this file:
     --dropdown-icon-caret: 0.5rem;
     --dropdown-icon-caret-border: calc(var(--dropdown-icon-caret) + (var(--default-border-width) * 2));
 
-    &[class*="border-"]:before {
-        content: "";
-        position: absolute;
-        top: calc(var(--dropdown-icon-caret-border) * -1);
-        left: calc(50% - var(--dropdown-icon-caret-border));
-        margin-top: calc(var(--root-border-width) * -1);
+    // &[class*="border-"]:before {
+    //     content: "";
+    //     position: absolute;
+    //     top: calc(var(--dropdown-icon-caret-border) * -1);
+    //     left: calc(50% - var(--dropdown-icon-caret-border));
+    //     margin-top: calc(var(--root-border-width) * -1);
 
-        @include caret-up(var(--dropdown-icon-caret-border));
-    }
+        // @include caret-up(var(--dropdown-icon-caret-border));
+    // }
 
     &:after {
         content: "";
@@ -219,7 +219,7 @@ In this file:
         top: calc(var(--dropdown-icon-caret) * -1);
         left: calc(50% - var(--dropdown-icon-caret));
 
-        @include caret-up(var(--dropdown-icon-caret));
+        // @include caret-up(var(--dropdown-icon-caret));
     }
 }
 
