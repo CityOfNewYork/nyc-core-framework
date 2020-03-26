@@ -128,26 +128,12 @@ button,
         font-size: calc(var(--btn--icon-only-size) * 0.5);
     }
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        border-radius: inherit;
-        background-color: currentColor;
-        pointer-events: none;
-
-        transition: opacity 0.5s;
-        opacity: 0;
-    }
+    @extend .subtle-fill;
 
     &:hover, 
     &:focus {
         &::before {
-            opacity: 0.075;
+            --subtle-fill-opacity: 0.075;
         }
     }
 }

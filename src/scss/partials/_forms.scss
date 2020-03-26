@@ -61,22 +61,9 @@ fieldset{
 .form-group__field {
     --field-padding: 1rem;
     --action-btn-width: 3rem;
-
-    position: relative;
-
-    // Psuedo Background color
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: currentColor;
-        opacity: 0.05;
-        pointer-events: none;
-    }
+    
+    @extend .subtle-fill;
+     --subtle-fill-opacity: 0.075;
 }
 
 .field__input,

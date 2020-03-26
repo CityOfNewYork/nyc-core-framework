@@ -36,3 +36,31 @@ $default-caret-margin: 0.375em;
         flex-direction: row-reverse;
     }
 }
+
+////////////////////////////////////////
+// B. Subtle Fill
+////////////////////////////////////////
+
+.subtle-fill {
+    --subtle-fill-opacity: 0; // hide until otherwise specified
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border-radius: inherit;
+        background-color: currentColor;
+        pointer-events: none;
+
+        transition: opacity 0.5s;
+        opacity: var(--subtle-fill-opacity);
+    }
+
+}
+
+

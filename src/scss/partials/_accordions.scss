@@ -39,23 +39,8 @@ $accordion-transition: 0.2s ease-out;
         border-top-color: inherit;
     }
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        border-radius: inherit;
-        background-color: currentColor;
-        pointer-events: none;
-
-        transition: opacity 0.5s;
-        opacity: 0;
-    }
-
     @extend .hover-focus;
+    @extend .subtle-fill;
 
     @include add-caret("after");
 
@@ -63,12 +48,13 @@ $accordion-transition: 0.2s ease-out;
         transition: transform $accordion-transition;
         transform: rotate(0deg);
     }
+    
 
     &[aria-expanded="true"]{
         text-decoration: underline;
 
         &::before {
-            opacity: 0.05;
+            --subtle-fill-opacity: 0.05;
         }
 
         &::after{
