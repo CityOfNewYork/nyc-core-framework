@@ -54,7 +54,7 @@ In this file:
     }
 
     > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
-        margin-left: 0;
+        margin-left: calc( var(--gap-size) * -1);
         margin-right: 0;
         margin-top: 1rem;
         width: 240px;
@@ -86,6 +86,10 @@ In this file:
                 > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
                     left: 50%;
                     transform: translateX(-50%);
+                    margin-left: 0;
+                    &::after{
+                        left: 50%;
+                    }
                 }
             }
         }
@@ -205,6 +209,7 @@ In this file:
 }
 
 [data-toggle="dropdown"][class*="-icon"] ~ ul {
+    position: relative;
     --dropdown-pointer-size: 0.75rem;
 
     margin-top: 50px;
@@ -214,7 +219,7 @@ In this file:
         content: "";
         position: absolute;
         top: 0;
-        left: 50%;
+        left: calc(var(--gap-size) + var(--dropdown-pointer-size) + 4px);
         transform: translateX(-50%) rotate(45deg);
 
         width:  var(--dropdown-pointer-size);
@@ -231,7 +236,7 @@ In this file:
 }
 
 [data-toggle="dropdown"] ~ ul {
-    --dropdown-link-margin: 0.5rem;
+    --dropdown-link-margin: 0.5em;
 
     @extend %list-no-style;
 
