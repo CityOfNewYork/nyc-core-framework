@@ -43,7 +43,7 @@ button {
     }
 }
 
-button:not([role="tab"]), 
+button, 
 .btn{
     @extend .hover-focus;
 }

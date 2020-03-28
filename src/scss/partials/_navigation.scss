@@ -152,7 +152,7 @@ In this file:
         justify-content: space-between;
     }
 
-    > li > .tab {
+    &.nav--tabs > li > button {
         overflow: hidden;
         @extend .subtle-fill;
         --subtle-fill-opacity: 0.05;
@@ -208,14 +208,14 @@ In this file:
                     }
                 }
 
-                > li > .tab[aria-selected="true"] {
+                &.nav--tabs > li > button[aria-selected="true"] {
                     padding-top: 1em;
                 }
 
-                > li:not(:first-child) > .tab[aria-selected="true"] {
+                &.nav--tabs > li:not(:first-child) > button[aria-selected="true"] {
                     margin-left: calc(var(--default-border-width) * -1);
                     border-left-color: inherit;
-                 }
+                }
 
                 [data-toggle="dropdown"] {
                     justify-content: center;
@@ -236,19 +236,9 @@ In this file:
                     width: 100%;
                     left: calc(var(--default-border-width) * -1);
                 }
-            }  // end horizontal
-
+            }
         }
     }
-
-    // &.nav--tabs [role="tab"]{
-
-    //     & {
-    //     }
-
-    //     background-color: red;
-
-    // }
 }
 
 ////////////////////////////////////////
