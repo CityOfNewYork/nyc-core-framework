@@ -153,6 +153,7 @@ In this file:
     }
 
     > li > .tab {
+        overflow: hidden;
         @extend .subtle-fill;
         --subtle-fill-opacity: 0.05;
 
@@ -160,15 +161,13 @@ In this file:
             transition: none;
         }
 
-        overflow: hidden;
-
         &::after {
-            position: absolute;
             content: "";
+            position: absolute;
             top: 0;
             right: calc(var(--default-border-width) * -1);
             left: calc(var(--default-border-width) * -1);
-            height: .125rem;
+            height: calc(var(--default-border-width) * 2);
             background-color: currentColor;
             z-index: 5500;
             opacity: 0.125;
@@ -209,10 +208,9 @@ In this file:
                     }
                 }
 
-                 > li > .tab[aria-selected="true"] {
-                    padding-top: 1.5rem;
-
-                 }
+                > li > .tab[aria-selected="true"] {
+                    padding-top: 1em;
+                }
 
                 > li:not(:first-child) > .tab[aria-selected="true"] {
                     margin-left: calc(var(--default-border-width) * -1);
