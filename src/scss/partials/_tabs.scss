@@ -7,50 +7,34 @@
     }
 
     [role="tablist"] {
-        @extend %list-no-style;
-        display: flex;
         align-items: baseline;
         z-index: 1000;
+
     }
 
     [role="tabpanel"] {
-        border-top-width: var(--default-border-width);
-        border-top-style: var(--default-border-style);
-        border-top-color: inherit;
 
         margin-top: calc(var(--default-border-width) * -1);
         z-index: 950;
     }
-
-    // [role="tablist"] > li {
-    //     &:not(:first-child) {
-    //         margin-left: calc(var(--default-border-width) * -1);
-    //     }
-    // }
     
     [role="tablist"] > li > [role="tab"] {
 
         padding: 0.5em 1em;
+        border-top-style: var(--default-border-style);
+        border-top-width: var(--default-border-width);
+        
 
         &[aria-selected="false"] {
             @extend .subtle-fill;
             --subtle-fill-opacity: 0.05;
-            outline: 0;
-            border-width: var(--default-border-width);
-            border-style: var(--default-border-style);
-            border-color: inherit;
+
+            border-bottom-style: var(--default-border-style);
+            border-bottom-width: var(--default-border-width);
         }
         
         &[aria-selected="true"] {
-            position: relative;
-
-            outline: none;
-            z-index: 500;
-            border-width: var(--default-border-width);
-            border-style: var(--default-border-style);
-            border-color: inherit;
-            border-bottom-color: transparent;
-            padding-top: 1.25rem;
+            padding-top: 1.5rem;
 
             &::after{
                 position: absolute;
@@ -70,20 +54,20 @@
 
 .tabs--fill {
 
-[role="tablist"]  {
-    display: flex;
-    flex-direction: row;
+    [role="tablist"]  {
+        display: flex;
+        flex-direction: row;
 
-}
+    }
 
-[role="tablist"] > li {
-    flex: 1;
-}
+    [role="tablist"] > li {
+        flex: 1;
+    }
 
-[role="tablist"] > li > [role="tab"] {
-   display: block;
-   width: 100%;
-}
+    [role="tablist"] > li > [role="tab"] {
+    display: block;
+    width: 100%;
+    }
 
 
 

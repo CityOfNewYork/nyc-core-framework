@@ -31,12 +31,15 @@ In this file:
 // B. Default Button
 //////////////////////////////////////////////
 
-button:not([class]){
-    background-color: transparent;
+button {
+    cursor: pointer;
+    
+    &:not([class]){
+        background-color: transparent;
+    }
 
     &[aria-selected=true] {
         font-weight: bold;
-        text-decoration: underline;
     }
 }
 

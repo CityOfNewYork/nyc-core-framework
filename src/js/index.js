@@ -148,6 +148,8 @@ window.onload = () => {
             39: 1,
         };
 
+
+
         function addListeners(index) {
             tabButtonList[index].addEventListener('click', clickEventListener);
             tabButtonList[index].addEventListener('keydown', keydownEventListener);
@@ -192,6 +194,7 @@ window.onload = () => {
             switch (key) {
                 case keys.left:
                 case keys.right:
+                    event.target.blur();
                     switchTabOnArrowPress(event);
                     break;
                 case keys.enter:
@@ -262,6 +265,7 @@ window.onload = () => {
         };
 
     }); // end for
+
 
     //////////////////////////////////////////////
     // D. Toggle
@@ -394,6 +398,32 @@ window.onload = () => {
 
     for (const link of externalLinks) {
         link.insertAdjacentHTML('beforeend', '<span class="sr-only">Opens a new window</span>');
+    }
+
+    //////////////////////////////////////////////
+    // G. Focusable Buttons
+    //////////////////////////////////////////////
+
+    const focusableButtonList = document.querySelectorAll('[role="tab"], .btn');
+
+    for (const button of focusableButtonList) {
+
+        let mouseDown = false;
+
+        button.addEventListener('mousedown', () => {
+            mouseDown = true;
+        });
+
+        button.addEventListener('mouseup', () => {
+            mouseDown = false;
+        });
+
+        button.addEventListener('focus', (event) => {
+            if (mouseDown) {
+                event.target.blur();
+            }
+        });
+
     }
 
 }; /* window.load */
