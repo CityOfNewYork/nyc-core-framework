@@ -152,6 +152,42 @@ In this file:
         justify-content: space-between;
     }
 
+    > li > .tab {
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.05;
+
+        &::before{
+            transition: none;
+        }
+
+        overflow: hidden;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: calc(var(--default-border-width) * -1);
+            left: calc(var(--default-border-width) * -1);
+            height: .125rem;
+            background-color: currentColor;
+            z-index: 5500;
+            opacity: 0.125;
+        }
+
+        &[aria-selected="true"] {
+            --subtle-fill-opacity: 0;
+            overflow: visible;
+            color: var(--secondary);
+            border-left-style: var(--default-border-style);
+            border-left-width: var(--default-border-width);
+            border-left-color: transparent;
+        }
+
+        &[aria-selected="true"]::after {
+            opacity: 1;
+        }
+    }
+
     @each $breakpoint in map-keys($breakpoints) {
         @include breakpoint-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
@@ -159,6 +195,7 @@ In this file:
             &.nav--horizontal#{$mod} {
                 display: flex;
                 flex-direction: row;
+                align-items: baseline;
 
                 > li {
                     flex: 1;
@@ -171,6 +208,16 @@ In this file:
                         border-color: inherit;
                     }
                 }
+
+                 > li > .tab[aria-selected="true"] {
+                    padding-top: 1.5rem;
+
+                 }
+
+                > li:not(:first-child) > .tab[aria-selected="true"] {
+                    margin-left: calc(var(--default-border-width) * -1);
+                    border-left-color: inherit;
+                 }
 
                 [data-toggle="dropdown"] {
                     justify-content: center;
@@ -191,9 +238,19 @@ In this file:
                     width: 100%;
                     left: calc(var(--default-border-width) * -1);
                 }
-            }
+            }  // end horizontal
+
         }
     }
+
+    // &.nav--tabs [role="tab"]{
+
+    //     & {
+    //     }
+
+    //     background-color: red;
+
+    // }
 }
 
 ////////////////////////////////////////

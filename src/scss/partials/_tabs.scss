@@ -26,8 +26,6 @@
         
 
         &[aria-selected="false"] {
-            @extend .subtle-fill;
-            --subtle-fill-opacity: 0.05;
 
             border-bottom-style: var(--default-border-style);
             border-bottom-width: var(--default-border-width);
