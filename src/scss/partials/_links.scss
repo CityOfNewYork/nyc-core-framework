@@ -11,10 +11,6 @@ In this file:
 // A. Placeholders
 //////////////////////////////////////////////
 
-%list-no-style {
-    list-style: none;
-}
-
 %expanded-link {
     &::before {
         position: absolute;

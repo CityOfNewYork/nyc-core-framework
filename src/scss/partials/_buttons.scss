@@ -40,7 +40,7 @@ button:not([class]){
     }
 }
 
-button, 
+button:not([role="tab"]), 
 .btn{
     @extend .hover-focus;
 }

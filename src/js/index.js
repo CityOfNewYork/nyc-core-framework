@@ -241,8 +241,8 @@ window.onload = () => {
         // Deactivate all tabs and tab panels
         function deactivateTabs() {
 
-            for (const panel of tabPanelList) {
-                panel.setAttribute('aria-selected', 'false');
+            for (const tab of tabButtonList) {
+                tab.setAttribute('aria-selected', 'false');
             }
 
             for (const panel of tabPanelList) {

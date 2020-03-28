@@ -124,6 +124,8 @@ html,
         color: var(--link-color);
     }
 
+    .tabs [role="tab"],
+    .tabs [role="tabpanel"],
     [data-toggle="dropdown"] ~ ul, 
     .modal__overlay::before,
     .modal__container {
