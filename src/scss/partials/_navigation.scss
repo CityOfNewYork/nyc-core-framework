@@ -37,6 +37,31 @@ In this file:
         font-weight: var(--base-font-weight-bold);
         text-decoration: underline;
     }
+}
+
+.nav--tabs{
+    position: relative;
+    --tab-bar-opacity: 0.125;
+
+    > li > button:not([class]) {
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.05;
+        width: 100%;
+
+        &::before{
+            transition: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: calc(var(--default-border-width) * 2);
+            background-color: currentColor;
+        }
+    }
 
 }
 
@@ -60,6 +85,41 @@ In this file:
         width: 240px;
     }
 
+    &.nav--tabs {
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: calc(var(--default-border-width) * -2);
+            right: calc( var(--gap-size));
+            left: calc(var(--gap-size));
+            height: calc(var(--default-border-width) * 2);
+            background-color: currentColor;
+            opacity: var(--tab-bar-opacity);
+            display: none;
+        }
+    }
+
+    &.nav--tabs > li > button:not([class]) {
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+    }
+    
+    &.nav--tabs > li > button {
+        &::after {
+            top: 100%;
+            display: none;
+        }
+
+        &[aria-selected="true"] {
+            overflow: visible;
+        }
+
+        &[aria-selected="true"]::after {
+            display: block;
+            top: 100%;
+        }
+    }
+
     @each $breakpoint in map-keys($breakpoints) {
         @include breakpoint-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
@@ -70,6 +130,15 @@ In this file:
                 align-items: center;
                 margin-left: calc(-1 * var(--gap-size));
                 margin-right: calc(-1 * var(--gap-size));
+
+                &.nav--tabs::before{
+                    display: block;
+                }
+
+                &.nav--tabs > li > button[aria-selected="true"]::after {
+                    display: block;
+                    margin-bottom: calc(var(--default-border-width) * -2);
+                }
 
                 > li {
                     margin-left: var(--gap-size);
@@ -152,34 +221,29 @@ In this file:
         justify-content: space-between;
     }
 
+    &.nav--tabs > li{
+        border-bottom: none;
+    }
+
     &.nav--tabs > li > button {
         overflow: hidden;
-        @extend .subtle-fill;
-        --subtle-fill-opacity: 0.05;
-
-        &::before{
-            transition: none;
-        }
 
         &::after {
-            content: "";
-            position: absolute;
-            top: 0;
             right: calc(var(--default-border-width) * -1);
             left: calc(var(--default-border-width) * -1);
-            height: calc(var(--default-border-width) * 2);
-            background-color: currentColor;
-            z-index: 5500;
             opacity: 0.125;
         }
 
         &[aria-selected="true"] {
             --subtle-fill-opacity: 0;
-            overflow: visible;
-            color: var(--secondary);
+            
             border-left-style: var(--default-border-style);
             border-left-width: var(--default-border-width);
             border-left-color: transparent;
+        }
+
+        &[aria-selected="true"]:not(:focus) {
+            overflow: visible;
         }
 
         &[aria-selected="true"]::after {
@@ -260,7 +324,7 @@ In this file:
     margin-top: 50px;
     overflow: visible;
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         top: 0;

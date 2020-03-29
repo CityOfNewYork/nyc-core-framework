@@ -148,8 +148,6 @@ window.onload = () => {
             39: 1,
         };
 
-
-
         function addListeners(index) {
             tabButtonList[index].addEventListener('click', clickEventListener);
             tabButtonList[index].addEventListener('keydown', keydownEventListener);
@@ -239,6 +237,7 @@ window.onload = () => {
 
             // Remove hidden attribute from tab panel to make it visible
             document.getElementById(controls).removeAttribute('hidden');
+
         };
 
         // Deactivate all tabs and tab panels
@@ -249,7 +248,7 @@ window.onload = () => {
             }
 
             for (const panel of tabPanelList) {
-                panel.setAttribute('hidden', 'hidden');
+                panel.setAttribute('hidden', '');
             }
             
         };
@@ -265,7 +264,6 @@ window.onload = () => {
         };
 
     }); // end for
-
 
     //////////////////////////////////////////////
     // D. Toggle
