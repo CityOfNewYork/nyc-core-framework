@@ -54,12 +54,12 @@ In this file:
     &:hover,
     &:focus {
         
-        &:not(.sr-only-focusable):not(.expanded-link) {
+        &:not(.sr-only-focusable):not(.expanded-link){
             position: relative;
             z-index: 5000;
         }
 
-        &:not([class*="-icon"]) {
+        &:not([class*="-icon"]):not([role="tab"])  {
             text-decoration: underline;
         }
     }

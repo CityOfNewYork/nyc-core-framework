@@ -38,11 +38,7 @@ In this file:
 
         display: block;
         width: 100%;
-
-        &::before {
-            transition: none;
-        }
-
+        
         &::after {
             content: "";
             position: absolute;

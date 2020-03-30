@@ -24,7 +24,6 @@ In this file:
 
     // Icon Only
     --btn--icon-only-size: 2em;
-
 }
 
 //////////////////////////////////////////////
@@ -41,9 +40,6 @@ button {
     &[aria-selected=true] {
         font-weight: bold;
     }
-
-   color: hsl(343, 41%, 13%)
-
 }
 
 button, 
@@ -135,6 +131,10 @@ button,
     }
 
     @extend .subtle-fill;
+
+    ::before{
+        transition: opacity 0.5s;
+    }
 
     &:hover, 
     &:focus {
