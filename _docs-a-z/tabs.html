@@ -1,13 +1,11 @@
 ---
 layout: documentation
-title: "Accordions"
+title: "Tabs"
 ---
 
 <div class="container narrow my-4">
     <p>
-        Every so often the the need for accordions will arise. Hovever, accordions should be used judiciously and under special circumstances. Accordions are most practical when only
-        specific content might be relevant to a visitor—like an FAQ page, or when several topics are covered on a
-        single page. It's best to avoid using accordions to simply make long pages appear shorter.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ipsum quo molestias sunt consequatur aliquam, vero deleniti autem temporibus nostrum.
     </p>
 </div>
 <!-- .container -->
@@ -17,7 +15,7 @@ title: "Accordions"
         <div class="alert__header">
             <p>
                 <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-                <span class="alert__title">Accordion Accessibility</span>
+                <span class="alert__title">Tabs Accessibility</span>
             </p>
         </div>
         <div class="alert__body">
@@ -28,80 +26,159 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="accordionGroup">
+<hr class="my-5" id="">
 
 <div class="container narrow my-4">
-    <h2>The Accordion Selector</h2>
+    <h2>Styled Tabs</h2>
     <p>
-        In the NYC Core Framework, accordions are treated as a group within the <code>.accordion</code> selector,
-        which is required for the accordions to properly close one another.
+        The NYC Core Framework offers two premade tab styles. Both require a <code>.tabs</code> class on a <code>&lt;ul&gt;</code>.
     </p>
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
+<figure class="container medium my-4">
 
-    <div class="accordion">
+    <div class="my-3" data-tab-group>
 
-        <button class="accordion__button h6" id="acc-button-group-a-01" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="false">
-            Accordion Title
-        </button>
+        <ul class="tabs tabs--horizontal--md" role="tablist">
+            <li>
+                <button aria-selected="true"
+                    aria-controls="tab-panel-example-a-01"
+                    id="tab-button-example-a-01"
+                    role="tab">
+                    Tab
+                </button>
+            </li>
+            <li>
+                <button aria-selected="false"
+                    aria-controls="tab-panel-example-a-02"
+                    id="tab-button-example-a-02"
+                    role="tab">
+                    Tab
+                </button>
+            </li>
+            <li>
+                <button aria-selected="false"
+                    aria-controls="tab-panel-example-a-03"
+                    id="tab-button-example-a-03"
+                    role="tab">
+                    Tab
+                </button>
+            </li>
+        </ul>
 
-        <div class="accordion__panel" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="region">
-
-            <div data-accordion="content">
+        <div id="tab-panel-example-a-01" aria-labelledby="tab-button-example-a-01" role="tabpanel">
+            <div class="container py-4">
+                <p class="h4">Tab Panel 01</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
-                    ducimus quam provident repellendus eos libero error adipisci laudantium
-                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
-                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                    velit culpa eveniet tenetur.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores ducimus quam
+                    provident repellendus eos libero error adipisci laudantium exercitationem, nisi quos deserunt, ab
+                    facere similique molestiae vitae. Reiciendis, quam incidunt. Doloremque autem explicabo ad quisquam
+                    sunt dolore similique, aliquid velit culpa eveniet tenetur.
                 </p>
             </div>
-
+            <!-- .container -->
         </div>
-        <!-- .accordion__panel -->
 
-        <button class="accordion__button h6" id="acc-button-group-a-02" data-toggle="accordion" aria-controls="acc-panel-group-a-02" aria-expanded="false">
-            Accordion Title
-        </button>
-
-        <div class="accordion__panel" id="acc-panel-group-a-02" data-accordion="panel" aria-labelledby="acc-button-group-a-02" role="region">
-
-            <div data-accordion="content">
+        <div id="tab-panel-example-a-02" aria-labelledby="tab-button-example-a-02" role="tabpanel" hidden="">
+            <div class="container py-4">
+                <p class="h4">Tab Panel 02</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
-                    ducimus quam provident repellendus eos libero error adipisci laudantium
-                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
-                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                    velit culpa eveniet tenetur.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores ducimus quam
+                    provident repellendus eos libero error adipisci laudantium exercitationem, nisi quos deserunt, ab
+                    facere similique molestiae vitae. Reiciendis, quam incidunt. Doloremque autem explicabo ad quisquam
+                    sunt dolore similique, aliquid velit culpa eveniet tenetur.
                 </p>
             </div>
-
+            <!-- .container -->
         </div>
-        <!-- .accordion__panel -->
 
-        <button class="accordion__button h6" id="acc-button-group-a-03" data-toggle="accordion" aria-controls="acc-panel-group-a-03" aria-expanded="false">
-            Accordion Title
-        </button>
-
-        <div class="accordion__panel" id="acc-panel-group-a-03" data-accordion="panel" aria-labelledby="acc-button-group-a-03" role="region">
-
-            <div data-accordion="content">
+        <div id="tab-panel-example-a-03" aria-labelledby="tab-button-example-a-02" role="tabpanel" hidden="">
+            <div class="container py-4">
+                <p class="h4">Tab Panel 03</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
-                    ducimus quam provident repellendus eos libero error adipisci laudantium
-                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
-                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                    velit culpa eveniet tenetur.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores ducimus quam
+                    provident repellendus eos libero error adipisci laudantium exercitationem, nisi quos deserunt, ab
+                    facere similique molestiae vitae. Reiciendis, quam incidunt. Doloremque autem explicabo ad quisquam
+                    sunt dolore similique, aliquid velit culpa eveniet tenetur.
                 </p>
             </div>
-
+            <!-- .container -->
         </div>
-        <!-- .accordion__panel -->
 
     </div>
-    <!-- .accordion -->
+    <!-- tabs -->
+
+    <div class="my-3" data-tab-group>
+
+        <ul class="tabs tabs--span tabs--horizontal--md" role="tablist">
+            <li>
+                <button aria-selected="true"
+                    aria-controls="tab-panel-example-b-01"
+                    id="tab-button-example-b-01"
+                    role="tab">
+                    Tab
+                </button>
+            </li>
+            <li>
+                <button aria-selected="false"
+                    aria-controls="tab-panel-example-b-02"
+                    id="tab-button-example-b-02"
+                    role="tab">
+                    Tab
+                </button>
+            </li>
+            <li>
+                <button aria-selected="false"
+                    aria-controls="tab-panel-example-b-03"
+                    id="tab-button-example-b-03"
+                    role="tab">
+                    Tab
+                </button>
+            </li>
+        </ul>
+
+        <div id="tab-panel-example-b-01" aria-labelledby="tab-button-example-b-01" role="tabpanel">
+            <div class="container py-4">
+                <p class="h4">Tab Panel 01</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores ducimus quam
+                    provident repellendus eos libero error adipisci laudantium exercitationem, nisi quos deserunt, ab
+                    facere similique molestiae vitae. Reiciendis, quam incidunt. Doloremque autem explicabo ad quisquam
+                    sunt dolore similique, aliquid velit culpa eveniet tenetur.
+                </p>
+            </div>
+            <!-- .container -->
+        </div>
+
+        <div id="tab-panel-example-b-02" aria-labelledby="tab-button-example-b-02" role="tabpanel" hidden="">
+            <div class="container py-4">
+                <p class="h4">Tab Panel 02</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores ducimus quam
+                    provident repellendus eos libero error adipisci laudantium exercitationem, nisi quos deserunt, ab
+                    facere similique molestiae vitae. Reiciendis, quam incidunt. Doloremque autem explicabo ad quisquam
+                    sunt dolore similique, aliquid velit culpa eveniet tenetur.
+                </p>
+            </div>
+            <!-- .container -->
+        </div>
+
+        <div id="tab-panel-example-b-03" aria-labelledby="tab-button-example-b-02" role="tabpanel" hidden="">
+            <div class="container py-4">
+                <p class="h4">Tab Panel 03</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores ducimus quam
+                    provident repellendus eos libero error adipisci laudantium exercitationem, nisi quos deserunt, ab
+                    facere similique molestiae vitae. Reiciendis, quam incidunt. Doloremque autem explicabo ad quisquam
+                    sunt dolore similique, aliquid velit culpa eveniet tenetur.
+                </p>
+            </div>
+            <!-- .container -->
+        </div>
+
+    </div>
+    <!-- tabs -->
 
 </figure>
 
