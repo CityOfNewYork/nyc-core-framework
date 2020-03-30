@@ -14,11 +14,13 @@ In this file:
 ////////////////////////////////////////
 
 :root {
+
     --tab-padding-x: 1em;
     --tab-padding-y: 0.5em;
 
     --accent-bar-size: calc(var(--default-border-width) * 2);
     --accent-bar-opacity: 1;
+    
 }
 
 ////////////////////////////////////////
@@ -45,30 +47,17 @@ In this file:
             top: 0;
             right: 0;
             left: 0;
-            height: calc( var(--default-border-width) * 2 );
+            height: var(--accent-bar-size);
             background-color: currentColor;
             opacity: 0.125;
         }
     }
 
-    [aria-selected="true"] {
+    button[aria-selected="true"] {
         font-weight: var(--base-font-weight-bold);
 
         &::after {
             opacity: 1;
-        }
-    }
-
-    @each $breakpoint in map-keys($breakpoints) {
-        @include breakpoint-up($breakpoint) {
-            $mod: breakpoint-modifier($breakpoint, $breakpoints);
-
-            &.tabs--horizontal#{$mod} {
-                display: flex;
-                flex-direction: row;
-                align-items: baseline;
-
-            }
         }
     }
 }
@@ -81,12 +70,20 @@ In this file:
         top: 100%;
         right: 0;
         left: 0;
-        height: calc(var(--default-border-width) * 2);
+        height: var(--accent-bar-size);
         background-color: currentColor;
         opacity: 0.125;
+
+        display: none;
+    }
+
+    > li{
+        margin-bottom: var(--accent-bar-size);
     }
 
     > li > button {
+        padding-bottom: calc( var(--tab-padding-y) + var(--accent-bar-size));
+
         &::after,
         &::before {
             display: none;
@@ -103,9 +100,33 @@ In this file:
             display: block;
         }
     }
+
+    @each $breakpoint in map-keys($breakpoints) {
+        @include breakpoint-up($breakpoint) {
+            $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+            &.tabs--horizontal#{$mod} {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+
+                &::before {
+                    display: block;
+                }
+
+                > li {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 .tabs--span {
+
+    > li > button {
+        padding-top: calc(var(--tab-padding-y) + var(--accent-bar-size));
+    }
 
     > li > button[aria-selected="true"] {
         &::before {
@@ -140,7 +161,7 @@ In this file:
                 }
 
                 > li > button[aria-selected="true"] {
-                    padding-top: 1em;
+                    padding-top: calc(1em + var(--accent-bar-size));
                     border-color: inherit !important;
                 }
             }
