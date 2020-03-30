@@ -35,7 +35,7 @@ In this file:
         position: relative;
     }
 
-    [aria-current] {
+    > li a[aria-current] {
         font-weight: var(--base-font-weight-bold);
         text-decoration: underline;
     }
@@ -122,7 +122,7 @@ In this file:
     &:not([class*="bc-"]) {
         border-color: inherit;
 
-        a, button {
+        a {
             color: inherit;
         }
     }
@@ -133,14 +133,12 @@ In this file:
         border-bottom-color: inherit;
     }
 
-    > li > a, 
-    > li > button {
+    > li > a {
         display: block;
         width: 100%;
     }
 
-    > li > a, 
-    > li > button,
+    > li > a,
     > li > [data-toggle="dropdown"] ~ ul {
         padding: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
     }
