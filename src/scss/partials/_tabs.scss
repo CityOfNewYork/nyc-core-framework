@@ -20,11 +20,22 @@ In this file:
 
     --accent-bar-size: calc(var(--default-border-width) * 2);
     --accent-bar-opacity: 1;
-    
 }
 
 ////////////////////////////////////////
-// B. Tabs
+// B. Data Tab Group
+////////////////////////////////////////
+
+[data-tab-group] {
+    &[class*="bc-"] {
+        > .tabs--span > li > button::after {
+            display: none;
+        }
+    }
+}
+
+////////////////////////////////////////
+// C. Tabs Class
 ////////////////////////////////////////
 
 .tabs {
@@ -132,20 +143,8 @@ In this file:
         &::before {
             display: none;
         }
-        
-        border-color: transparent;
     }
 
-    > li:not(:first-child) > button[aria-selected="true"] {
-        border-left-width: var(--default-border-width);
-        border-left-style: var(--default-border-style);
-    }
-
-    > li:not(:last-child) > button[aria-selected="true"] {
-        border-right-width: var(--default-border-width);
-        border-right-style: var(--default-border-style);
-    }
-    
     @each $breakpoint in map-keys($breakpoints) {
         @include breakpoint-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
@@ -155,14 +154,9 @@ In this file:
                 flex-direction: row;
                 align-items: baseline;
 
-                > li {
+                >li {
                     flex: 1;
-                    text-align: center;
-                }
-
-                > li > button[aria-selected="true"] {
-                    padding-top: calc(1em + var(--accent-bar-size));
-                    border-color: inherit !important;
+                    flex-basis: 0;
                 }
             }
         }
