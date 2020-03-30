@@ -1,5 +1,6 @@
 %list-no-style {
     list-style: none;
+    line-height: normal;
 }
 
 ////////////////////////////////////////
@@ -66,4 +67,63 @@ $default-caret-margin: 0.375em;
     }
 }
 
+////////////////////////////////////////
+// C. Bar
+////////////////////////////////////////
+
+// :root{
+// }
+
+// %accent-bar{
+//     position: relative;
+
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         height: var(--accent-bar-size);
+//         opacity: var(--accent-bar-opacity);
+//         background-color: currentColor;
+//         top: 0;
+//         right: 0;
+//         left: 0;
+//     }
+// }
+
+// .accent-bar-top{
+//     @extend %accent-bar;
+
+//     &::after {
+//     }
+// }
+
+// .accent-bar-right {
+//     @extend %accent-bar;
+//     &::after {
+//         height: unset;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         width: var(--accent-bar-size); 
+//     }
+// }
+
+// .accent-bar-bottom {
+//     @extend %accent-bar;
+//     &::after {
+//         top: calc(100% - var(--accent-bar-size));
+//         right: 0;
+//         left: 0;
+//     }
+// }
+
+// .accent-bar-left {
+//     @extend %accent-bar;
+//     &::after {
+//         height: unset;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         width: var(--accent-bar-size); 
+//     }
+// }
 
