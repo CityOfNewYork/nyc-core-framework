@@ -128,7 +128,6 @@ window.onload = () => {
 
     Array.prototype.slice.call(document.querySelectorAll('[data-tab-group]')).forEach(function (tab) {
 
-        // const tablist = document.querySelectorAll('[role="tablist"]');
         const tabButtonList = tab.querySelectorAll('[role="tab"]');
         const tabPanelList = tab.querySelectorAll('[role="tabpanel"]');
 
@@ -233,10 +232,13 @@ window.onload = () => {
             tab.setAttribute('aria-selected', 'true');
 
             // Get the value of aria-controls (which is an ID)
-            var controls = tab.getAttribute('aria-controls');
+            let controls = tab.getAttribute('aria-controls');
+
+            let currentTabPanel = document.getElementById(controls);
 
             // Remove hidden attribute from tab panel to make it visible
-            document.getElementById(controls).removeAttribute('hidden');
+            currentTabPanel.removeAttribute('hidden');
+            currentTabPanel.classList.add('shown');
 
         };
 
@@ -249,6 +251,8 @@ window.onload = () => {
 
             for (const panel of tabPanelList) {
                 panel.setAttribute('hidden', '');
+
+                panel.classList.remove('shown');
             }
             
         };
