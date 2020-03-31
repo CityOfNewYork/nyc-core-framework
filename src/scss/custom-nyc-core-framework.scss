@@ -19,6 +19,7 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
+    
     --primary: #222BE6;
     --secondary: #00D5A0;
     --dark: #000050;
@@ -33,6 +34,8 @@ In this file:
     --base-line-height: 1.5;
 
     --base-font-family: "neue-haas-grotesk-text";
+
+    --btn-font-weight: normal;
 }
 
 //////////////////////////////////////////////
@@ -167,8 +170,17 @@ td > p{
 
 #custom-property-list{
 
-    [aria-expanded="true"]{
+    .accordion__button{
         color: var(--secondary);
+
+        &[aria-expanded="true"]{
+            color: white;
+        }
+        
+        &[aria-expanded="true"]::before {
+            --subtle-fill-opacity: 0.125;
+        }
     }
+
 
 }

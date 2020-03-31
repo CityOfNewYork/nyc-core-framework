@@ -324,16 +324,16 @@ title: "Customization"
 <div class="container medium my-4">
     <div class="accordion bc-dark rounded" id="custom-property-list">
 
-        <button class="accordion__button h5 box-shadow"
+        <button class="accordion__button h6"
                 id="acc-colors"
                 data-toggle="accordion"
                 aria-controls="acc-panel-group-a-01"
                 aria-expanded="true">
-            Colors
+                Colors
         </button>
 
         <div class="accordion__panel show" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-colors" role="region">
-             <div class="mx-n3" data-accordion="content">
+            <div class="mx-n3" data-accordion="content">
                 <table class="fs-md">
                     <thead>
                         <tr>
@@ -429,12 +429,12 @@ title: "Customization"
         </div>
         <!-- .accordion__panel -->
 
-        <button class="accordion__button h5" id="acc-typography" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="false">
+        <button class="accordion__button h6" id="acc-typography" data-toggle="accordion" aria-controls="acc-panel-group-a-01" aria-expanded="false">
             Typography
         </button>
 
         <div class="accordion__panel" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-typography" role="region">
-            <div data-accordion="content">
+            <div class="mx-n3" data-accordion="content">
                 <table class="fs-md">
                     <thead>
                         <tr>
@@ -445,82 +445,221 @@ title: "Customization"
                     <tbody>
                         <tr>
                             <td>
-                                --primary
+                                --base-font-weight-normal
                             </td>
                             <td>
-                                #25caa4
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                --secondary
-                            </td>
-                            <td>
-                                #6500d6
+                                "Source Sans Pro"
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                --dark
+                                --base-font-weight-normal
                             </td>
                             <td>
-                                #262345
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                --light
-                            </td>
-                            <td>
-                                #f1f4f6
+                                400
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                --text-on-primary
+                                --base-font-weight-bold
                             </td>
                             <td>
-                                var(--dark)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                --text-on-secondary
-                            </td>
-                            <td>
-                                white
+                                700
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                --a11y-link-color
+                                --base-font-size
                             </td>
                             <td>
-                                blue
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                --confirm
-                            </td>
-                            <td>
-                                #008230
+                                20px
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                --attention
+                                --base-line-height:
                             </td>
                             <td>
-                                #3953B1
+                                1.45
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                --warn
+                                --font-size-sm
                             </td>
                             <td>
-                                #dc3545
+                                calc( var(--base-font-size) * 0.7 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --font-size-md
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 0.8 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --font-size-rg: 
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 1 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --font-size-xl
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 1.4 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --banner-headline-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 3.8 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --h1-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 3 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --h2-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 2.2 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --h3-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 1.8 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --h4-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 1.6 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --h5-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 1.4 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --h6-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 1.1 )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --h6-font-size
+                            </td>
+                            <td>
+                                calc( var(--base-font-size) * 1.1 )
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <!-- .accordion__panel -->
+
+        <button class="accordion__button h6"
+                id="acc-buttons"
+                data-toggle="accordion"
+                aria-controls="acc-panel-buttons"
+                aria-expanded="false">
+                Buttons
+        </button>
+
+        <div class="accordion__panel" id="acc-panel-buttons" data-accordion="panel" aria-labelledby="acc-buttons"
+            role="region">
+            <div class="mx-n3" data-accordion="content">
+                <table class="fs-md">
+                    <thead>
+                        <tr>
+                            <th class="w-40">Custom Property</th>
+                            <th class="w-60">Default Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                --btn-padding-x
+                            </td>
+                            <td>
+                                1em
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --btn-padding-y
+                            </td>
+                            <td>
+                                0.5em
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                --btn--icon-only-size
+                            </td>
+                            <td>
+                                2em
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <!-- .accordion__panel -->
+
+        <button class="accordion__button h6"
+                id="acc-backdrops"
+                data-toggle="accordion"
+                aria-controls="acc-panel-backdrops"
+                aria-expanded="false">
+                Backdrops
+        </button>
+
+        <div class="accordion__panel" id="acc-panel-backdrops" data-accordion="panel" aria-labelledby="acc-backdrops" role="region">
+            <div class="mx-n3" data-accordion="content">
+                <table class="fs-md">
+                    <thead>
+                        <tr>
+                            <th class="w-40">Custom Property</th>
+                            <th class="w-60">Default Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                --backdrop-fixed-height
+                            </td>
+                            <td>
+                                375px
                             </td>
                         </tr>
                     </tbody>
