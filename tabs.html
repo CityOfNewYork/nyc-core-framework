@@ -28,14 +28,14 @@
     <style>
 
         .tabs button[aria-selected="true"]{
-            color: var(--secondary);
+            color: var(--secondary); /**/
         }
 
     </style>
 
 </head>
 
-<body >
+<body>
 
     <main id="skip-header-content" role="main">
 
@@ -47,63 +47,81 @@
                     <h1>Tabs</h1>
                 </div>
 
-                <figure class="container medium my-4" data-tab-group>
+                <figure class="container medium my-4">
 
-                    <ul class="nav nav--divider nav--horizontal--md border" role="navigation" role="tablist">
-                        <li>
-                            <button aria-selected="true"
-                                aria-controls="tab-panel-group-a-01"
-                                id="tab-button-group-a-01"
-                                role="tab">
-                                Tab
-                            </button>
-                        </li>
-                        <li>
-                            <button aria-selected="false"
-                                aria-controls="tab-panel-group-a-02"
-                                id="tab-button-group-a-02"
-                                role="tab">
-                                Tab
-                            </button>
-                        </li>
-                        <li>
-                            <button aria-selected="false"
-                                aria-controls="tab-panel-group-a-03"
-                                id="tab-button-group-a-03"
-                                role="tab">
-                                Tab
-                            </button>
-                        </li>
-                    </ul>
+                    <div data-tab-group>
 
-                    <div class="p-3" id="tab-panel-group-a-01" aria-labelledby="tab-button-group-a-01" role="tabpanel">
-                        <h6>Tab 01</h6>
-                        <p>
-                            Nils Frahm is a German musician, composer and record producer based in Berlin. He is known
-                            for combining classical and electronic music and for an unconventional approach to the piano
-                            in which he mixes a grand piano, upright piano, Roland Juno-60, Rhodes piano, drum machine,
-                            and Moog Taurus.
-                        </p>
+                        <ul class="tabs tabs--horizontal--md" role="tablist">
+                            <li>
+                                <button aria-selected="true"
+                                    aria-controls="tab-panel-group-a-01"
+                                    id="tab-button-group-a-01" role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button aria-selected="false"
+                                    aria-controls="tab-panel-group-a-02"
+                                    id="tab-button-group-a-02" role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button aria-selected="false"
+                                    aria-controls="tab-panel-group-a-03"
+                                    id="tab-button-group-a-03" role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab__panel" id="tab-panel-group-a-01" aria-labelledby="tab-button-group-a-01" role="tabpanel">
+                            <div class="container py-4">
+                                <h2 class="h4">Tab 01</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                        <div class="tab__panel" id="tab-panel-group-a-02" aria-labelledby="tab-button-group-a-02" role="tabpanel" hidden="">
+                            <div class="container py-4">
+                                <h2 class="h4">Tab 02</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                        <div class="tab__panel" id="tab-panel-group-a-03" aria-labelledby="tab-button-group-a-02" role="tabpanel" hidden="">
+                            <div class="container py-4">
+                                <h2 class="h4">Tab 03</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
                     </div>
-
-                    <div class="p-3" id="tab-panel-group-a-02" aria-labelledby="tab-button-group-a-02" role="tabpanel" hidden="">
-                        <h6>Tab 02</h6>
-                        <p>
-                            Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
-                            was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
-                            gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
-                        </p>
-                    </div>
-
-                    <div class="p-3" id="tab-panel-group-a-03" aria-labelledby="tab-button-group-a-02" role="tabpanel" hidden="">
-                        <h6>Tab 03</h6>
-                        <p>
-                            Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
-                            was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
-                            gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
-                        </p>
-                    </div>
-
+                    <!-- tabs -->
                 </figure>
 
                 <figure class="container medium my-4">
@@ -112,131 +130,73 @@
 
                         <ul class="tabs tabs--span tabs--horizontal--md" role="tablist">
                             <li>
-                                <button aria-selected="true"
-                                    aria-controls="tab-panel-group-b-01"
-                                    id="tab-button-group-b-01"
-                                    role="tab">
+                                <button aria-selected="true" aria-controls="tab-panel-group-b-01"
+                                    id="tab-button-group-b-01" role="tab">
                                     Tab
                                 </button>
                             </li>
                             <li>
-                                <button aria-selected="false"
-                                    aria-controls="tab-panel-group-b-02"
-                                    id="tab-button-group-b-02"
-                                    role="tab">
+                                <button aria-selected="false" aria-controls="tab-panel-group-b-02"
+                                    id="tab-button-group-b-02" role="tab">
                                     Tab
                                 </button>
                             </li>
                             <li>
-                                <button aria-selected="false"
-                                    aria-controls="tab-panel-group-b-03"
-                                    id="tab-button-group-b-03"
-                                    role="tab">
+                                <button aria-selected="false" aria-controls="tab-panel-group-b-03"
+                                    id="tab-button-group-b-03" role="tab">
                                     Tab
                                 </button>
                             </li>
                         </ul>
 
-                        <div class="p-3" id="tab-panel-group-b-01" aria-labelledby="tab-button-group-b-01" role="tabpanel">
-                            <h6>Tab 01</h6>
-                            <p>
-                                Nils Frahm is a German musician, composer and record producer based in Berlin. He is known
-                                for combining classical and electronic music and for an unconventional approach to the piano
-                                in which he mixes a grand piano, upright piano, Roland Juno-60, Rhodes piano, drum machine,
-                                and Moog Taurus.
-                            </p>
+                        <div class="tab__panel" id="tab-panel-group-b-01" aria-labelledby="tab-button-group-b-01" role="tabpanel">
+                            <div class="container py-4">
+                                <h2 class="h4">Tab 01</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
                         </div>
 
-                        <div class="p-3" id="tab-panel-group-b-02" aria-labelledby="tab-button-group-b-02" role="tabpanel" hidden="">
-                            <h6>Tab 02</h6>
-                            <p>
-                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
-                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
-                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
-                            </p>
+                        <div class="tab__panel" id="tab-panel-group-b-02" aria-labelledby="tab-button-group-b-02" role="tabpanel" hidden="">
+                            <div class="container py-4">
+                                <h2 class="h4">Tab 02</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
                         </div>
 
-                        <div class="p-3" id="tab-panel-group-b-03" aria-labelledby="tab-button-group-b-02" role="tabpanel" hidden="">
-                            <h6>Tab 03</h6>
-                            <p>
-                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics,
-                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified
-                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
-                            </p>
-                        </div>
-
-                    </div>
-                    <!-- tabs -->
-                </figure>
-
-                <figure class="container medium my-4">
-
-                    <div data-tab-group>
-
-                        <ul class="tabs tabs--horizontal--md" role="tablist">
-                            <li>
-                                <button aria-selected="true" aria-controls="tab-panel-group-c-01"
-                                    id="tab-button-group-c-01" role="tab">
-                                    Tab
-                                </button>
-                            </li>
-                            <li>
-                                <button aria-selected="false" aria-controls="tab-panel-group-c-02"
-                                    id="tab-button-group-c-02" role="tab">
-                                    Tab
-                                </button>
-                            </li>
-                            <li>
-                                <button aria-selected="false"
-                                    aria-controls="tab-panel-group-c-03"
-                                    id="tab-button-group-c-03" role="tab">
-                                    Tab
-                                </button>
-                            </li>
-                        </ul>
-
-                        <div class="p-3" id="tab-panel-group-c-01" aria-labelledby="tab-button-group-c-01"
-                            role="tabpanel">
-                            <h6>Tab 01</h6>
-                            <p>
-                                Nils Frahm is a German musician, composer and record producer based in Berlin. He is
-                                known
-                                for combining classical and electronic music and for an unconventional approach to the
-                                piano
-                                in which he mixes a grand piano, upright piano, Roland Juno-60, Rhodes piano, drum
-                                machine,
-                                and Moog Taurus.
-                            </p>
-                        </div>
-
-                        <div class="p-3" id="tab-panel-group-c-02" aria-labelledby="tab-button-group-c-02"
-                            role="tabpanel" hidden="">
-                            <h6>Tab 02</h6>
-                            <p>
-                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album,
-                                Philharmonics,
-                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was
-                                certified
-                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000
-                                Copies.
-                            </p>
-                        </div>
-
-                        <div class="p-3" id="tab-panel-group-c-03" aria-labelledby="tab-button-group-c-02"
-                            role="tabpanel" hidden="">
-                            <h6>Tab 03</h6>
-                            <p>
-                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album,
-                                Philharmonics,
-                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was
-                                certified
-                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000
-                                Copies.
-                            </p>
+                        <div class="tab__panel" id="tab-panel-group-b-03" aria-labelledby="tab-button-group-b-02" role="tabpanel" hidden="">
+                            <div class="container py-4">
+                                <h2 class="h4">Tab 03</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
                         </div>
 
                     </div>
                     <!-- tabs -->
+
                 </figure>
 
                 <figure class="container medium my-4">

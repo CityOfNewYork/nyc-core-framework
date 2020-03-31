@@ -14,7 +14,6 @@ In this file:
 ////////////////////////////////////////
 
 :root {
-
     --tab-padding-x: 1em;
     --tab-padding-y: 0.5em;
 
@@ -139,7 +138,8 @@ In this file:
         padding-top: calc(var(--tab-padding-y) + var(--accent-bar-size));
     }
 
-    > li > button[aria-selected="true"] {
+    >li>button[aria-selected="true"] {
+        box-shadow: none;
         &::before {
             display: none;
         }
