@@ -3,9 +3,10 @@
 In this file:
 
 // A. Variables
-// B. Tabs
-// D. Nav Divider
-// E. Dropdown
+// B. Tabs 
+// C. Tabs Span
+// D. Tab Panel
+// E. Tabs With 'bc-*' Class
 
 */
 
@@ -22,24 +23,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Tab with Background Color Class
-////////////////////////////////////////
-
-.tabs,
-[data-tab-group] {
-    &[class*="bc-"] {
-        ::after {
-            display: none;
-        }
-        [aria-current="page"],
-        [aria-selected="true"] {
-            text-decoration: underline;
-        }
-    }
-}
-
-////////////////////////////////////////
-// C. Tabs Class
+// B. Tabs
 ////////////////////////////////////////
 
 .tabs {
@@ -141,6 +125,10 @@ In this file:
     }
 }
 
+////////////////////////////////////////
+// C. Tabs Span
+////////////////////////////////////////
+
 .tabs--span {
 
     > li > a,
@@ -169,6 +157,35 @@ In this file:
                     flex-basis: 0;
                 }
             }
+        }
+    }
+}
+
+////////////////////////////////////////
+// D. Tab Panel
+////////////////////////////////////////
+
+.tab__panel {
+    display: none;
+
+    &.shown{
+        display: block;
+    }
+}
+
+////////////////////////////////////////
+// E. With 'bc-*' Class
+////////////////////////////////////////
+
+.tabs,
+[data-tab-group] {
+    &[class*="bc-"] {
+        ::after {
+            display: none;
+        }
+        [aria-current="page"],
+        [aria-selected="true"] {
+            text-decoration: underline;
         }
     }
 }

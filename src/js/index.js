@@ -236,9 +236,8 @@ window.onload = () => {
 
             let currentTabPanel = document.getElementById(controls);
 
-            // Remove hidden attribute from tab panel to make it visible
-            currentTabPanel.removeAttribute('hidden');
             currentTabPanel.classList.add('shown');
+            currentTabPanel.removeAttribute('hidden');
 
         };
 
@@ -250,9 +249,8 @@ window.onload = () => {
             }
 
             for (const panel of tabPanelList) {
-                panel.setAttribute('hidden', '');
-
                 panel.classList.remove('shown');
+                panel.setAttribute('hidden', '');
             }
             
         };
