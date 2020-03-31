@@ -22,13 +22,18 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Data Tab Group
+// B. Tab with Background Color Class
 ////////////////////////////////////////
 
+.tabs,
 [data-tab-group] {
     &[class*="bc-"] {
-        > .tabs--span > li > button::after {
+        ::after {
             display: none;
+        }
+        [aria-current="page"],
+        [aria-selected="true"] {
+            text-decoration: underline;
         }
     }
 }
@@ -41,6 +46,7 @@ In this file:
     @extend %list-no-style;
     position: relative;
 
+    > li > a,
     > li > button {
         position: relative;
         padding: var(--tab-padding-y) var(--tab-padding-x);
@@ -50,6 +56,7 @@ In this file:
 
         display: block;
         width: 100%;
+        text-align: center;
         
         &::after {
             content: "";
@@ -63,7 +70,8 @@ In this file:
         }
     }
 
-    button[aria-selected="true"] {
+    [aria-current="page"],
+    [aria-selected="true"] {
         font-weight: var(--base-font-weight-bold);
 
         &::after {
@@ -83,7 +91,6 @@ In this file:
         height: var(--accent-bar-size);
         background-color: currentColor;
         opacity: 0.125;
-
         display: none;
     }
 
@@ -91,6 +98,7 @@ In this file:
         margin-bottom: var(--accent-bar-size);
     }
 
+    > li > a,
     > li > button {
         padding-bottom: calc( var(--tab-padding-y) + var(--accent-bar-size));
 
@@ -104,7 +112,8 @@ In this file:
         }
     }
 
-    > li > button[aria-selected="true"] {
+    [aria-current="page"],
+    [aria-selected="true"] {
         &::after,
         &::before {
             display: block;
@@ -134,12 +143,13 @@ In this file:
 
 .tabs--span {
 
+    > li > a,
     > li > button {
         padding-top: calc(var(--tab-padding-y) + var(--accent-bar-size));
     }
 
-    >li>button[aria-selected="true"] {
-        box-shadow: none;
+    [aria-current="page"],
+    [aria-selected="true"] {
         &::before {
             display: none;
         }
@@ -154,7 +164,7 @@ In this file:
                 flex-direction: row;
                 align-items: baseline;
 
-                >li {
+                > li {
                     flex: 1;
                     flex-basis: 0;
                 }
