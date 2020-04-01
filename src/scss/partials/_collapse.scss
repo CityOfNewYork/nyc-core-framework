@@ -3,7 +3,6 @@
 In this file:
 
 // A. Collapse Class
-// B. I.E. 11 Support
 
 */
 
@@ -13,8 +12,8 @@ In this file:
 
 .collapse {
     display: none;
-
-    &.shown{
+    
+    &.shown {
         display: block;
     }
 }

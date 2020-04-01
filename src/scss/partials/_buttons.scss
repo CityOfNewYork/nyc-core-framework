@@ -3,9 +3,11 @@
 In this file:
 
 // A. Variables
-// A. Buttons
-// B. Button Icon
-// C. I.E. 11 Support
+// B. Default Button
+// C. Button Outline
+// C. Button With Icon
+// D. Button Icon Only
+// E. I.E. 11 Support
 
 */
 
@@ -14,18 +16,38 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
+
+    // Buttons with Text
     --btn-padding-x: 1em;
     --btn-padding-y: 0.5em;
+    --btn-font-weight: bold;
+
+    // Icon Only
+    --btn--icon-only-size: 2em;
 }
 
 //////////////////////////////////////////////
-// B. Button Settings
+// B. Default Button
 //////////////////////////////////////////////
 
-[class*="btn"] {
+button {
+    cursor: pointer;
+    
+    &:not([class]){
+        background-color: transparent;
+    }
 
+    &[aria-selected=true] {
+        font-weight: bold;
+    }
+}
+
+button, 
+.btn{
     @extend .hover-focus;
+}
 
+.btn {
     display: inline-block;
     color: inherit;
     background-color: unset;
@@ -33,62 +55,91 @@ In this file:
     vertical-align: middle;
     user-select: none;
     line-height: normal;
-
     cursor: pointer;
 
-    &:not([class*="-icon"]) {
-        padding: var(--btn-padding-y) var(--btn-padding-x);
-    }
-    
-    &:hover {
-        opacity: .9;
+    transition: opacity 0.5s;
+
+    &:hover, 
+    &:focus, 
+    &:active {
+        opacity: 0.85;
     }
 
-    &[class*="-outline"] {
-        background-color: transparent;
-        box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+    &:not([class*="--icon-only"]) {
+        font-weight: var(--btn-font-weight);
+        padding: var(--btn-padding-y) var(--btn-padding-x);
     }
 }
 
 //////////////////////////////////////////////
-// C. Button Icon
+// C. Button Outline
 //////////////////////////////////////////////
 
-.btn-icon {
-    --btn-icon-size: 2.5em;
+.btn--outline {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+}
 
-    display: inline-flex;
+//////////////////////////////////////////////
+// D. Button Has Icon
+//////////////////////////////////////////////
+
+[class*="btn--has-icon"] {
+
+    &:hover,
+    &:focus{
+        .btn__text {
+            text-decoration: underline;
+        }
+    }
+    
+    @at-root .btn__text {
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+}
+
+.btn--has-icon--disperse {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//////////////////////////////////////////////
+// E. Button Icon Only
+//////////////////////////////////////////////
+
+.btn--icon-only {
     position: relative;
-    border-radius: 50%;
+    display: inline-flex;
+
+    width: var(--btn--icon-only-size);
+    height: var(--btn--icon-only-size);
+
     overflow: hidden;
-    width: var(--btn-icon-size);
-    height: var(--btn-icon-size);
+    border-radius: 50%;
+
     align-items: center;
     justify-content: center;
     font-size: inherit;
+    
+    z-index: 1;
 
-    span[class*="fa"]{
-        font-size: calc(var(--btn-icon-size) * 0.5);
+    [data-icon] {
+        font-size: calc(var(--btn--icon-only-size) * 0.5);
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    @extend .subtle-fill;
 
-        background-color: currentColor;
-        opacity: 0.075;
-        display: none;
+    ::before{
+        transition: opacity 0.5s;
     }
 
     &:hover, 
     &:focus {
-        
         &::before {
-            display: block;
+            --subtle-fill-opacity: 0.075;
         }
     }
 }
@@ -99,14 +150,12 @@ In this file:
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-
-    .btn-icon {
+    .btn.btn--icon-only {
         display: table-cell; 
 
-        span[class*="fa"] {
+        .btn__icon {
             margin-right: auto;
             margin-left: auto;
         }
     }
-
 }

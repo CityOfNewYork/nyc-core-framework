@@ -61,22 +61,9 @@ fieldset{
 .form-group__field {
     --field-padding: 1rem;
     --action-btn-width: 3rem;
-
-    position: relative;
-
-    // Psuedo Background color
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: currentColor;
-        opacity: 0.05;
-        pointer-events: none;
-    }
+    
+    @extend .subtle-fill;
+     --subtle-fill-opacity: 0.075;
 }
 
 .field__input,
@@ -115,7 +102,7 @@ fieldset{
 
 .field__input-wrap {
     width: 100%;
-    @include caret("down");
+    @include add-caret("after");
 
     &::after{
         pointer-events: none;
@@ -293,43 +280,4 @@ input:checked ~ [class*="__label"]::after {
 
 .invalid-feedback {
     display: none;
-}
-
-.alert {
-    position: relative;
-    overflow: hidden;
-
-    padding: var(--s3);
-
-    &:not([class*='bc-']){
-
-    background-color: white;
-    }
-
-    p:not(:last-child) {
-        margin-bottom: var(--s2);
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        background-color: currentColor;
-        opacity: 0.075;
-    }
-
-    &[class*="border-"]{
-        border-color: currentColor !important;
-    }
-
-}
-
-.alert__title > .text {
-    font-weight: var(--base-font-weight-bold);
-    margin-left: var(--s1);
-    margin-right: var(--s1);
 }

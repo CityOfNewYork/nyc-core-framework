@@ -12,8 +12,6 @@ In this file:
 //////////////////////////////////////////////
 
 // Only display content to screen readers
-// See: https://a11yproject.com/posts/how-to-hide-content/
-// See: https://hugogiraudel.com/2016/10/13/css-hide-and-seek/
 
 .sr-only {
     overflow: hidden;
@@ -33,8 +31,6 @@ In this file:
 .sr-only-focusable {
     &:active,
     &:focus {
-        @extend .bc-primary;
-        
         position: absolute;
         top: var(--s2);
         left: var(--s2);
@@ -46,6 +42,7 @@ In this file:
         white-space: normal;
         padding: var(--s2) var(--s3);
         font-size: var(--font-size-rg);
+        @extend .bc-primary;
     }
 }
 
@@ -56,11 +53,13 @@ In this file:
 .hover-focus {
     &:hover,
     &:focus {
-        &:not([class*="sr-only-focusable"]):not(.expanded-link) {
+        
+        &:not(.sr-only-focusable):not(.expanded-link) {
             position: relative;
             z-index: 5000;
         }
-        &:not([class*="btn-icon"]){
+
+        &:not([class*="-icon"]) {
             text-decoration: underline;
         }
     }

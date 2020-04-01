@@ -78,4 +78,59 @@
 {% if page.url contains '/documentation' %}
 <script src="{{ site.baseurl }}/lib/js/prism.js"></script>
 <script src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
+
+{% endif %}
+
+{% if page.title == 'Customization' %}
+
+<script>
+
+    const customPropButtonList = document.querySelectorAll('[data-clipboard]');
+
+    for (const customPropButton of customPropButtonList) {
+
+        let myButtonText = customPropButton.innerHTML.trim().replace(/&nbsp;/g, '');
+
+        customPropButton.addEventListener('click', function (event) {
+
+            event.preventDefault();
+
+            let currentRow = event.target.closest('tr');
+
+            let myCustomPropertyName = currentRow.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
+            let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
+
+            let myClipboardText = myCustomPropertyName + ':' + ' ' + myCustomPropertyValue + ';';
+
+            for (otherButtons of customPropButtonList){
+                otherButtons.innerHTML = myButtonText;
+            }
+
+            if( myClipboardText ){
+                event.target.innerHTML = 'Copied!';
+            }
+
+            // Create an auxiliary hidden input
+            var aux = document.createElement( 'input' );
+
+            // Get the text from the element passed into the input
+            aux.setAttribute( 'value', myClipboardText );
+
+            // Append the aux input to the body
+            document.body.appendChild(aux);
+
+            // Highlight the content
+            aux.select();
+
+            // Execute the copy command
+            document.execCommand( 'copy' );
+
+            // Remove the input from the body
+            document.body.removeChild(aux);
+
+        });
+    }
+
+</script>
+
 {% endif %}

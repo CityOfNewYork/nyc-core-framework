@@ -23,23 +23,22 @@ In this file:
 // B. Nav
 ////////////////////////////////////////
 
-[class*="nav"] {
+.nav {
     --gap-size: var(--s3);
     
     @extend %list-no-style;
-    line-height: normal;
 
     > li {
         position: relative;
     }
 
-    [aria-current] {
+    > li a[aria-current] {
         font-weight: var(--base-font-weight-bold);
         text-decoration: underline;
     }
 }
 
-[class*="nav"]:not([class*="--divider"]) {
+.nav:not([class*="nav--divider"]) {
 
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * .75);
@@ -53,9 +52,9 @@ In this file:
     }
 
     > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
-        margin-left: 0;
+        margin-left: calc( var(--gap-size) * -1);
         margin-right: 0;
-        margin-top: var(--dropdown-icon-caret-border);
+        margin-top: 1rem;
         width: 240px;
     }
 
@@ -63,7 +62,7 @@ In this file:
         @include breakpoint-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.horizontal#{$mod} {
+            &.nav--horizontal#{$mod} {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -76,7 +75,7 @@ In this file:
                     margin-bottom: 0 !important;
                 }
 
-                > li >[data-toggle="dropdown"] ~ ul {
+                > li > [data-toggle="dropdown"] ~ ul {
                     min-width: 200px;
                     position: absolute;
                     left: 0;
@@ -85,22 +84,30 @@ In this file:
                 > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
                     left: 50%;
                     transform: translateX(-50%);
+                    margin-left: 0;
+                    &::after{
+                        left: 50%;
+                    }
                 }
             }
         }
     }
-}
 
-.nav--gap-xs {
-    --gap-size: var(--s1);
-}
+    &.nav--gap-0 {
+        --gap-size: 0;
+    }
 
-.nav--gap-sm {
-    --gap-size: var(--s2);
-}
+    &.nav--gap-xs {
+        --gap-size: var(--s1);
+    }
 
-.nav--no-gap {
-    --gap-size: 0;
+    &.nav--gap-sm {
+        --gap-size: var(--s2);
+    }
+
+    &.nav--gap-lg {
+        --gap-size: var(--s4);
+    }
 }
 
 ////////////////////////////////////////
@@ -112,7 +119,7 @@ In this file:
     &:not([class*="bc-"]) {
         border-color: inherit;
 
-        a {
+        a, button {
             color: inherit;
         }
     }
@@ -123,11 +130,14 @@ In this file:
         border-bottom-color: inherit;
     }
 
-    > li > a {
+    > li > a, 
+    > li > button {
         display: block;
+        width: 100%;
     }
 
-    > li > a,
+    > li > a, 
+    > li > button,
     > li > [data-toggle="dropdown"] ~ ul {
         padding: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
     }
@@ -144,9 +154,10 @@ In this file:
         @include breakpoint-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.horizontal#{$mod} {
+            &.nav--horizontal#{$mod} {
                 display: flex;
                 flex-direction: row;
+                align-items: baseline;
 
                 > li {
                     flex: 1;
@@ -188,40 +199,43 @@ In this file:
 // E. Dropdown
 ////////////////////////////////////////
 
-[data-toggle="dropdown"]:not([class*="btn-icon"]) {
-    @include caret("down");
+[data-toggle="dropdown"]:not([class*="btn--icon-only"]) {
+    @include add-caret;
 
     &[aria-expanded="true"]::after {
-        @include caret-up;
+        transform: rotate(180deg);
     }
 }
 
 [data-toggle="dropdown"][class*="-icon"] ~ ul {
-    --dropdown-icon-caret: 0.5rem;
-    --dropdown-icon-caret-border: calc(var(--dropdown-icon-caret) + (var(--default-border-width) * 2));
+    position: relative;
+    --dropdown-pointer-size: 0.75rem;
 
-    &[class*="border-"]:before {
+    margin-top: 50px;
+    overflow: visible;
+
+    &::after {
         content: "";
         position: absolute;
-        top: calc(var(--dropdown-icon-caret-border) * -1);
-        left: calc(50% - var(--dropdown-icon-caret-border));
-        margin-top: calc(var(--root-border-width) * -1);
+        top: 0;
+        left: calc(var(--gap-size) + var(--dropdown-pointer-size) + 4px);
+        transform: translateX(-50%) rotate(45deg);
 
-        @include caret-up(var(--dropdown-icon-caret-border));
-    }
+        width:  var(--dropdown-pointer-size);
+        height:  var(--dropdown-pointer-size);
+        margin-top: calc( var(--dropdown-pointer-size) * -0.5 - var(--default-border-width) );
 
-    &:after {
-        content: "";
-        position: absolute;
-        top: calc(var(--dropdown-icon-caret) * -1);
-        left: calc(50% - var(--dropdown-icon-caret));
-
-        @include caret-up(var(--dropdown-icon-caret));
+        background-color: inherit;
+        border-color: inherit;
+        border-left-width: inherit;
+        border-left-style: inherit;
+        border-top-width: inherit;
+        border-top-style: inherit;
     }
 }
 
 [data-toggle="dropdown"] ~ ul {
-    --dropdown-link-margin: 0.5rem;
+    --dropdown-link-margin: 0.5em;
 
     @extend %list-no-style;
 

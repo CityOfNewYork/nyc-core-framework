@@ -1,23 +1,42 @@
+/*
+
+In this file:
+
+// A. Card
+// B. I.E. 11 Support
+
+*/
+
+//////////////////////////////////////////////
+// A. Card
+//////////////////////////////////////////////
+
 .card {
     position: relative;
+    height: 100%;
+    
     display: flex;
     flex-direction: column;
-    height: 100%;
+
+    @at-root .card__header {
+        font-size: var(--font-size-md);
+        padding: var(--s2) var(--s3);
+    }
+
+    @at-root 
+    .card__body,
+    .card__footer {
+        padding: var(--s3);
+    }
+
+    @at-root .card__footer {
+        margin-top: auto;
+    }
 }
 
-.card__header {
-    font-size: var(--font-size-md);
-    padding: var(--s2) var(--s3);
-}
-
-.card__body,
-.card__footer {
-    padding: var(--s3);
-}
-
-.card__footer {
-    margin-top: auto;
-}
+//////////////////////////////////////////////
+// B. I.E. 11 Support
+//////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {

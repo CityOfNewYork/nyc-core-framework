@@ -46,21 +46,14 @@ In this file:
     // Associated Light Colors
 
     --light-text: var(--dark);
-    --light-border: hsl(0, 0%, 50%, 0.25);
+    --light-border: hsla(0, 0%, 50%, 0.25);
     --light-link: var(--a11y-link-color);
-
 
     // Associated Light Colors
 
     --white-text: var(--dark);
-    --white-border: hsl(0, 0%, 50%, 0.25);
+    --white-border: hsla(0, 0%, 50%, 0.25);
     --white-link: var(--a11y-link-color);
-
-    // Alert and Form Feedback Colors
-
-    --confirm: #008230;
-    --attention: #3953B1;
-    --warn: #dc3545;
 }
 
 //////////////////////////////////////////////
@@ -106,19 +99,10 @@ $theme-colors: (
 );
 
 //////////////////////////////////////////////
-// C. Alert Color Map
-//////////////////////////////////////////////
-
-$alert-colors: (
-    confirm: var(--confirm),
-    attention: var(--attention),
-    warn: var(--warn)
-);
-
-//////////////////////////////////////////////
 // D. Background Color Classes 
 //////////////////////////////////////////////
 
+html,
 [class*="bc-"] {
     --background-color: white;
     --text-color: black;
@@ -140,7 +124,11 @@ $alert-colors: (
         color: var(--link-color);
     }
 
-    [data-toggle="dropdown"] ~ ul {
+    .tabs [role="tab"],
+    .tabs [role="tabpanel"],
+    [data-toggle="dropdown"] ~ ul, 
+    .modal__overlay::before,
+    .modal__container {
         background-color: var(--background-color);
     }
 
@@ -172,6 +160,10 @@ $alert-colors: (
     }
 }
 
+html:not([class="bc-"]){
+    @extend .bc-white;
+}
+
 //////////////////////////////////////////////
 // E. Text Color Classes 
 //////////////////////////////////////////////
@@ -190,20 +182,4 @@ $alert-colors: (
 
 .tc-link {
     color: var(--a11y-link-color);
-}
-
-//////////////////////////////////////////////
-// F. Alert Color Classes 
-//////////////////////////////////////////////
-
-@each $name, $value in $alert-colors {
-
-    .alert--#{$name}-light {
-        color: $value;
-    }
-
-    .alert--#{$name}-dark {
-        color: white;
-        background-color: $value;
-    }
 }

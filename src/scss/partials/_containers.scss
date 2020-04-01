@@ -2,27 +2,27 @@
 
 In this file:
 
-// A. Placeholders
+// A. Variables
 // B. Containers
 // C. Width Variants
 
 */
 
 //////////////////////////////////////////////
-// A. Placeholders
+// A. Variables
 //////////////////////////////////////////////
 
-%center {
-    margin-left: auto;
-    margin-right: auto;
+:root{
+    --narrow-width: 40rem; // Approximately 55 characters wide
+    --medium-width: calc( var(--narrow-width) * 1.5);
+    --wide-width: calc( var(--narrow-width) * 2);
 }
 
 //////////////////////////////////////////////
-// B. Containers
+// B. Container Class
 //////////////////////////////////////////////
 
 .container {
-    @extend %center;
     padding-left: var(--s3);
     padding-right: var(--s3);
 }
@@ -31,24 +31,21 @@ In this file:
 // C. Width Variants
 //////////////////////////////////////////////
 
-$narrow-w: 40rem; // Approximately 55 characters wide
-$medium-w: $narrow-w * 1.5;
-$wide-w: $narrow-w * 2;
-
 .narrow, 
 .medium,
 .wide{
-    @extend %center;
+    margin-left: auto;
+    margin-right: auto;
 }
  
 .narrow {
-    max-width: $narrow-w;
+    max-width: var(--narrow-width);
 }
 
 .medium {
-    max-width: $medium-w;
+    max-width: var(--medium-width);
 }
 
 .wide {
-    max-width: $wide-w;
+    max-width: var(--wide-width);
 }

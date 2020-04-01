@@ -21,14 +21,20 @@ In this file:
 // B. Backdrop
 //////////////////////////////////////////////
 
-[class*="backdrop"] {
+.backdrop {
     position: relative;
 
-    .backdrop__image {
+    &:not([class*="--stack"]):not([class*="--fixed"]) {
+        .backdrop__cover {
+            position: absolute;
+        }
+    }
+
+    @at-root .backdrop__image {
         min-width: 100%;
     }
 
-    .backdrop__cover {
+    @at-root .backdrop__cover {
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -42,7 +48,7 @@ In this file:
         }
     }
 
-    .backdrop__credit {
+    @at-root .backdrop__credit {
         width: auto;
         position: absolute;
         top: 0;
@@ -61,7 +67,7 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .backdrop#{$mod} {
+        .backdrop--stack#{$mod} {
             .backdrop__cover {
                 position: absolute;
             }
@@ -78,7 +84,7 @@ In this file:
     flex-direction: column;
     min-height: var(--backdrop-fixed-height);
 
-    > * {
+    > *:not(.backdrop__credit) {
         position: relative;
         z-index: auto;
         width: 100%;
