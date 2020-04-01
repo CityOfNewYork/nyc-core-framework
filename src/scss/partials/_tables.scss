@@ -13,22 +13,26 @@ In this file:
 
 :root{
 
-
     --table-cell-padding-x: 1em;
     --table-cell-padding-y: 0.5em;
 
+    --default-table-size: var(--fs-md);
 }
 
 table.table {
     width: 100%;
     line-height: inherit;
 
+    &:not([class="fs-"]){
+        font-size: var(--default-table-size);
+    }
+
     tr{
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
         border-color: inherit;
-        color: inherit;
     }
+    
     th,
     td {
         text-align: inherit;
