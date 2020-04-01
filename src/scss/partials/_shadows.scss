@@ -3,8 +3,9 @@
 In this file:
 
 // A. Variables
-// B. Box Shadows
-// C. Text Shadows
+// B. Responsive Box Shadows
+// C. Box Shadow Modifiers
+// D. Text Shadows
 
 */
 
@@ -12,10 +13,10 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-$box-shadow-opacity: 0.125;
-
-$box-shadow-sm: 0 0 0.5rem rgba(black, $box-shadow-opacity);
-$box-shadow : 0 0 1.5rem rgba(black, $box-shadow-opacity);
+:root {
+    --box-shadow-opacity: 0.125;
+    --box-shadow-size: 1rem;
+}
 
 //////////////////////////////////////////////
 // B. Box Shadows
@@ -25,14 +26,24 @@ $box-shadow : 0 0 1.5rem rgba(black, $box-shadow-opacity);
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .box-shadow-sm#{$mod} {
-            box-shadow: $box-shadow-sm;
-        }
-
         .box-shadow#{$mod} {
-            box-shadow: $box-shadow;
+            box-shadow: 0 0 var(--box-shadow-size) rgba(black, var(--box-shadow-opacity));
         }
     }
+}
+
+//////////////////////////////////////////////
+// c. Text Shadows
+//////////////////////////////////////////////
+
+.box-shadow--lg {
+    --box-shadow-size: 2rem;
+
+}
+
+.box-shadow--sm {
+    --box-shadow-size: 0.5rem;
+
 }
 
 //////////////////////////////////////////////

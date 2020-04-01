@@ -13,13 +13,17 @@ In this file:
 
 :root{
 
-    --table-cell-padding-x: 1em;
-    --table-cell-padding-y: 0.5em;
+    --table-cell-padding-x: 1.5em;
+    --table-cell-padding-y: 0.75em;
 
-    --default-table-size: var(--fs-md);
+    --default-table-size: var(--font-size-md);
 }
 
-table.table {
+//////////////////////////////////////////////
+// A. Table Class
+//////////////////////////////////////////////
+
+.table {
     width: 100%;
     line-height: inherit;
 
@@ -30,14 +34,13 @@ table.table {
     tr{
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
-        border-color: inherit;
     }
-    
-    th,
-    td {
-        text-align: inherit;
+
+    th, 
+    td{
         padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
         vertical-align: top;
+        text-align: inherit;
     }
 
     thead th {
@@ -47,7 +50,7 @@ table.table {
             width: auto;
         }
 
-        &.action {
+        &.w-fit{
             width: 2%;
             white-space: nowrap;
         }
@@ -68,15 +71,25 @@ table.table {
     }
 }
 
-.table--striped {
+.table--bordered{
+    th,
+    td {
 
+        &:not(:first-child){
+            border-left-width: var(--default-border-width);
+            border-left-style: var(--default-border-style);
+        }
+    }
+}
+
+.table--striped {
     tbody tr:nth-of-type(odd) td {
         @extend .subtle-fill;
         --subtle-fill-opacity: 0.0375;
     }
 }
 
-.va-middle{
+.table--va-middle{
     td{
         vertical-align: middle;
     }
