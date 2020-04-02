@@ -105,6 +105,7 @@ window.onload = () => {
                     currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
                     currentAccordionPanel.setAttribute("aria-hidden", false);
                 }
+
             }
 
             accordionButton.addEventListener('click', (event) => {
@@ -404,7 +405,7 @@ window.onload = () => {
     // G. Focusable Buttons
     //////////////////////////////////////////////
 
-    const focusableButtonList = document.querySelectorAll('[role="tab"], .btn');
+    const focusableButtonList = document.querySelectorAll('[role="tab"], .btn, [data-toggle="accordion"]');
 
     for (const button of focusableButtonList) {
 
