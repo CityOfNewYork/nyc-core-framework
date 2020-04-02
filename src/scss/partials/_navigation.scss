@@ -24,7 +24,7 @@ In this file:
 ////////////////////////////////////////
 
 .nav {
-    --gap-size: var(--s3);
+    --gap-size: var(--s2);
     
     @extend %list-no-style;
 
@@ -93,20 +93,14 @@ In this file:
         }
     }
 
-    &.nav--gap-0 {
-        --gap-size: 0;
-    }
 
-    &.nav--gap-xs {
-        --gap-size: var(--s1);
-    }
+}
 
-    &.nav--gap-sm {
-        --gap-size: var(--s2);
-    }
-
-    &.nav--gap-lg {
-        --gap-size: var(--s4);
+@each $key, $value in $spacers {
+    @if ($key != 2) {
+        .nav--gap-#{$key} {
+            --gap-size: #{$value};
+        }
     }
 }
 
