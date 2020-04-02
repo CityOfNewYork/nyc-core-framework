@@ -14,36 +14,48 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --box-shadow-opacity: 0.125;
-    --box-shadow-size: 1rem;
+    --base-shadow-unit: 1rem;
+    --base-shadow-opacity: 0.125;
 }
 
 //////////////////////////////////////////////
 // B. Box Shadows
 //////////////////////////////////////////////
 
+[class*="box-shadow"] {
+    --shadow-opacity: 0;
+
+    box-shadow:
+        0 calc(var(--base-shadow-unit) * 0.5) calc(var(--base-shadow-unit) * 1) rgba(0, 0, 0, calc(var(--shadow-opacity) * 1)),
+        0 calc(var(--base-shadow-unit) * 1) calc(var(--base-shadow-unit) * 2) rgba(0, 0, 0, calc(var(--shadow-opacity) * 0.5)),
+        0 calc(var(--base-shadow-unit) * 1.5) calc(var(--base-shadow-unit) * 3) rgba(0, 0, 0, calc(var(--shadow-opacity) * 0.25));
+}
+
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
-
+        
         .box-shadow#{$mod} {
-            box-shadow: 0 0 var(--box-shadow-size) rgba(black, var(--box-shadow-opacity));
+            --shadow-opacity: var(--base-shadow-opacity);
         }
     }
 }
 
 //////////////////////////////////////////////
-// c. Text Shadows
+// c. Shadow Modifier
 //////////////////////////////////////////////
 
-.box-shadow--depth-lg {
-    --box-shadow-size: 2rem;
-
+.shadow-size--sm {
+    --base-shadow-unit: 0.5rem;
 }
 
-.box-shadow--depth-sm {
-    --box-shadow-size: 0.5rem;
+.shadow-size--lg {
+    --base-shadow-unit: 2rem;
 }
+
+// .shadow-size--3 {
+//     --box-shadow-size: 2.5rem;
+// }
 
 //////////////////////////////////////////////
 // c. Text Shadows

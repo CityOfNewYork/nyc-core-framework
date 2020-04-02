@@ -20,7 +20,7 @@ $columns: 12;
 // B. Grid Configuration
 //////////////////////////////////////////////
 
-[class^="grid"]:not([class*="__col"]) {
+.grid:not([class*="__col"]) {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -49,21 +49,22 @@ $columns: 12;
     }
 }
 
-.grid--gap-lg {
-    --gap-size: var(--s4);
-}
-
-.grid--gap-sm {
-    --gap-size: var(--s2);
+.grid--gap-border {
+    --gap-size: var(--default-border-width);
 }
 
 .grid--gap-xs {
     --gap-size: var(--s1);
 }
 
-.grid--gap-border {
-    --gap-size: var(--default-border-width);
+.grid--gap-sm {
+    --gap-size: var(--s2);
 }
+
+.grid--gap-lg {
+    --gap-size: var(--s4);
+}
+
 
 //////////////////////////////////////////////
 // C. Create Grid Classes

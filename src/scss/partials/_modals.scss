@@ -53,7 +53,7 @@ In this file:
   max-height: 100vh;
   background-color: inherit;
 
-  @extend .box-shadow;
+  @extend .box-shadow !optional;
 }
 
 .modal__header {
