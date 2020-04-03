@@ -19,9 +19,9 @@ In this file:
 @import "partials/spacing";
 @import "partials/typography";
 @import "partials/accessibility";
-@import "partials/globals";
+@import "partials/caret";
 @import "partials/buttons";
-@import "partials/color-system";
+@import "partials/colors";
 @import "partials/alerts";
 @import "partials/links";
 @import "partials/borders";
@@ -31,7 +31,6 @@ In this file:
 @import "partials/flex";
 @import "partials/display";
 @import "partials/navigation";
-@import "partials/tabs";
 @import "partials/collapse";
 @import "partials/backdrops";
 @import "partials/cards";
@@ -67,6 +66,11 @@ a[data-logo="brand"] {
     svg {
         display:block;
         fill: currentColor;
+    }
+
+    p{
+        @extend .h6;
+        margin: var(--s3) 0;
     }
 }
 

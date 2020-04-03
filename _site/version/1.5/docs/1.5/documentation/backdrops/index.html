@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- IE Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Backdrops • NYC Core Framework</title>
+
+    <!-- Font Awesome Kit -->
+    <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
+
+    <!-- Theme Stylesheets -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css">
+    <link rel="stylesheet" href="/nyc-core-framework/docs/2.0/css/dist/custom-nyc-core-framework.css" >
+    <link rel="stylesheet" href="/nyc-core-framework/docs/2.0/css/lib/prism.css">
+
+</head>
+
+<body class="bc-white">
+
+    <header class="bc-primary" id="global-header" role="banner">
+
+    <div class="container">
+
+        <div class="grid">
+
+            <div class="grid__col-auto">
+
+                <a href="/nyc-core-framework/docs/2.0/" title="Home" data-logo="brand">
+                    <p>NYC Core<br>Framework</p>
+                </a>
+
+            </div>
+            <!-- .grid__col -->
+
+            <div class="grid__col-auto ml-auto m-0--lg order-3--lg d-flex">
+
+                <ul class="nav--gap-xs horizontal jc-end" role="list">
+                    <li>
+                        <a class="btn-icon" href="#1" title="Language">
+                            <span class="sr-only">Language</span>
+                            <span class="fas fa-language"></span>
+                        </a>
+                    </li>
+                    <li class="d-none--lg">
+                        <a class="btn-icon" href="#1" title="Menu" data-toggle="collapse"
+                            data-target="#primary-nav">
+                            <span class="sr-only">Menu</span>
+                            <span class="fas fa-bars"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- .grid__col -->
+
+            <nav class="grid__col-auto--lg ml-auto--lg mr-3--lg order-2--lg collapse d-flex--lg" id="primary-nav" role="navigation">
+                
+                <ul class="nav horizontal--lg jc-end--lg p-3 p-0--lg mx-n3 border-t border-0--lg" role="list">
+                    <li class="h-100 d-flex--lg">
+                        <a class="as-center" href="#1" data-toggle="dropdown">v2.0</a>
+                        <ul class="fs-md box-shadow-sm--lg">
+                            <li class="fw-bold">
+                                <a href="#1">v2.0 - Battery Park</a>
+                            </li>
+                            <li>
+                                <a href="#1">v1.0 - Alphabet City</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/nyc-core-framework/docs/2.0/documentation/get-started/"  aria-current="page">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="#1">Templates</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <!-- .grid__col -->
+
+        </div>
+        <!-- .grid -->
+
+    </div>
+    <!-- .container -->
+
+</header>
+<!-- #global-header -->
+
+    <main id="skip-header-content" role="main">
+
+        <div class="d-none--lg overflow-hidden">
+            <a class="btn bc-dark d-block py-3" href="#1" data-toggle="collapse" data-target="#sidebar" role="button">Documentation</a>
+        </div>
+
+        <div class="grid">
+
+            <div class="grid__col-2--lg collapse d-block--lg bc-light" id="sidebar">
+
+                <div class="sticky-top narrow p-3">
+
+                    <ul class="nav fs-md" role="navigation">
+
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/get-started" >
+            Get Started
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/accessibility" >
+            Accessibility
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/alerts" >
+            Alerts
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/aspect-ratios" >
+            Aspect Ratios
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/backdrops" 
+            aria-current="page" >
+            Backdrops
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/borders" >
+            Borders
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/buttons" >
+            Buttons
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/cards" >
+            Cards
+        </a>
+    </li>
+    
+    
+    
+    <li>
+        <a href="/nyc-core-framework/docs/2.0/documentation/colors" >
+            Colors
+        </a>
+    </li>
+    
+    
+
+</ul>
+
+                </div>
+                <!-- .stick-top -->
+
+            </div>
+            <!-- col -->
+
+            <div class="grid__col-10--lg overflow-hidden" id="primary-content">
+
+                <div class="bc-secondary overflow-hidden">
+
+                    <div class="narrow my-5">
+
+                        <div class="grid">
+                            <div class="grid__col-10--lg">
+                                <div class="container narrow">
+                                    <h1 class="banner-headline">
+                                        Backdrops
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- .container -->
+
+                </div>
+
+                <div class="my-5">
+
+                    <div class="container narrow my-4">
+    
+    <p>
+        Our versatile Backdrops place a translucent image behind any custom content. Backdrops offer two distinct
+        variations: an image-proportional backdrop that scales and stacks responsively, and a fixed-height backdrop that
+        can, when needed, adjust to the height of its inner content.
+    </p>
+    
+</div>
+
+<div class="container narrow my-4">
+
+    <div class="alert alert--attention my-3">
+
+        <p class="alert__title">
+            <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
+            <span class="text">Image Accessibility</span>
+        </p>
+
+        <p>
+            Backdrops replace CSS background images with inline HTML images so screen readers can read the
+            image's <em>alt</em> text.
+        </p>
+
+        <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
+
+    </div>
+
+</div>
+
+<hr class="my-5" id="image-proportional">
+
+<div class="container narrow my-4">
+
+    <h2>Image-proportional</h2>
+    
+    <p>
+        The default <code>.backdrop</code> selector requires two immediate children. The first is an image with a class
+        of <code>.backdrop__image</code>. This image sets the size (proportional width and height) of our backdrop. The
+        second direct child is a block-level element with a class of <code>.backdrop__cover</code>, inside of which
+        custom content can be placed.
+    </p>
+    
+    <p>
+        Examples on this page include the <code>.backdrop__credit</code> selector which is not required and can be
+        customized in <a href="#1"><strong>/scss/base/_backdrops.scss</strong></a>.
+    </p>
+    
+    <p>Here is a practical example of an image-proportional backdrop:</p>
+
+</div>
+
+<figure class="my-5">
+
+    <div class="backdrop--md bc-dark">
+
+        <img class="backdrop__image opacity-40--md" src="/nyc-core-framework/docs/2.0/images/examples/backdrop-example-01.jpg" alt="Placeholder">
+
+        <div class="backdrop__cover">
+
+            <div class="container medium my-4">
+
+                <h1 class="banner-headline t-center text-shadow mb-4">
+                    Lorem ipsum dolor sit amet consectetur
+                </h1>
+
+                <div class="narrow">
+
+                    <div class="grid--gap-lg cols--sm justify-center">
+
+                        <div class="grid__col">
+                            <a class="btn bc-primary d-block bc-white box-shadow" href="#1">Link</a>
+                        </div>
+                        <!-- .grid__col -->
+
+                        <div class="grid__col">
+                            <a class="btn bc-secondary d-block bc-white box-shadow" href="#1">Link</a>
+                        </div>
+                        <!-- .grid__col -->
+
+                    </div>
+                    <!-- .grid -->
+
+                </div>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+
+        <div class="backdrop__credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
+    </div>
+    <!-- .backdrop -->
+</figure>
+
+<div class="container narrow my-4">
+    <p>Let's review the code used to create the example above:</p>
+</div>
+
+<figure class="container medium my-4">
+
+    <pre data-line="1">
+        <code class="language-html">
+            &lt;div class="backdrop--md bc-dark"&gt;
+
+                &lt;img class="backdrop__image opacity-40--md" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+
+                    &lt;div class="container medium my-4"&gt;
+
+                        &lt;h1 class="banner-headline t-center text-shadow mb-4"&gt;
+                            Lorem ipsum dolor sit amet consectetur
+                        &lt;/h1&gt;
+
+                        &lt;div class="narrow"&gt;
+
+                            &lt;div class="grid--gutters cols--sm justify-center"&gt;
+
+                                &lt;div class="grid__col"&gt;
+                                    &lt;a class="btn bc-primary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;!-- .grid__col --&gt;
+
+                                &lt;div class="grid__col"&gt;
+                                    &lt;a class="btn bc-secondary d-block bc-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;!-- .grid__col --&gt;
+
+                            &lt;/div&gt;
+                            &lt;!-- .grid --&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .container --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- .backdrop__cover --&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        On the first line, notice the <code>--lg</code> appended to <code>.backdrop</code>. This breakpoint modifier
+        tells the backdrop when <code>.cover</code> should overlay <code>.image</code>. Until this breakpoint,
+        <code>.image</code> and <code>.cover</code> appear stacked (one over the other vertically), for smaller
+        viewports. Make your browser smaller to see it in action.
+    </p>
+</div>
+
+<div class="container narrow my-4">
+    <h3>Background-color and Image Opacity Classes</h3>
+    <p>
+        Backdrops utilize two other Natura11y Inclusive Framework features: <a href="#1">Background-color</a> and <a
+            href="#1">Opacity</a> classes. The opacity class (<code>.opacity-40--lg</code>) applies a CSS opacity to the
+        image, allowing the background color (set with <code>.bc-dark</code>) to show through.
+    </p>
+    <p>
+        Did you see that opacity classes have their own breakpoint modifiers? If present, the opacity will be set only at
+        the given breakpoint.
+    </p>
+    <p>In the example above, we're telling <code>.backdrop</code> to position the <code>.cover</code> absolute over the
+        <code>.image</code> at the large breakpoint. Also at the large breakpoint, a 40% opacity is applied to the
+        image.
+    </p>
+    <p>
+        All of this together makes it easy to create responsive backdrops with different types of content. Consider the
+        example below. Two backdrops are placed inside our <a href="#1">grid</a> columns, with no
+        breakpoints specified for the backdrop or image opacity.
+    </p>
+</div>
+
+<figure class="container medium my-5">
+
+    <div class="grid--gap cols--md t-center">
+
+        <div class="grid__col">
+
+            <div class="backdrop bc-primary rounded">
+
+                <img class="backdrop__image opacity-30" src="/nyc-core-framework/docs/2.0/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover">
+
+                    <div class="container my-4">
+
+                        <a href="#1" class="h3">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- col -->
+
+        <div class="grid__col">
+
+            <div class="backdrop bc-secondary rounded">
+
+                <img class="backdrop__image opacity-30" src="/nyc-core-framework/docs/2.0/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover align-center">
+
+                    <div class="container my-4">
+
+                        <a href="#1" class="h3">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- grid__col -->
+
+    </div>
+    <!-- grid -->
+
+    <figcaption>
+        <p>
+            Photos by <a href="#1">Zdeněk Macháček</a> on <a href="#1">Unsplash</a>
+        </p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>The HTML for the above example:</p>
+</div>
+
+<figure class="container medium my-4">
+
+    <pre>
+        <code class="language-html">
+            &lt;div class="grid--gutters cols--md t-center"&gt;
+
+                &lt;div class="grid__col"&gt;
+
+                    &lt;div class="backdrop bc-primary rounded"&gt;
+
+                        &lt;img class="backdrop__image opacity-30" src="https://via.placeholder.com/750x375" alt="Placeholder"&gt;
+
+                        &lt;div class="backdrop__cover"&gt;
+
+                            &lt;div class="container my-4"&gt;
+
+                                &lt;a href="#1" class="h3"&gt;Title Link&lt;/a&gt;
+
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- cover --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .backdrop-feature --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- col --&gt;
+
+                &lt;div class="grid__col"&gt;
+
+                    &lt;div class="backdrop bc-secondary rounded"&gt;
+
+                        &lt;img class="backdrop__image opacity-30" src="https://via.placeholder.com/750x375" alt="Placeholder"&gt;
+
+                        &lt;div class="backdrop__cover align-center"&gt;
+
+                            &lt;div class="container my-4"&gt;
+
+                                &lt;a href="#1" class="h3"&gt;Title Link&lt;/a&gt;
+
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- cover --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .backdrop-feature --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- grid__col --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- grid --&gt;
+        </code>
+    </pre>
+
+</figure>
+
+<hr class="my-5">
+
+<div class="container narrow my-4">
+    <h2>Fixed Height Backdrops</h2>
+    <p>
+        Another way to use backdrops is to append the <code>--fixed</code> modifier to <code>.backdrop</code> resulting
+        in <code>.backdrop--fixed</code>. Now the backdrop has a fixed height. The height value is set in <em>section
+            B</em>. of the <a href="#1">/scss/base/_backdrops.scss</a> partial.
+    </p>
+</div>
+
+<figure class="my-5">
+
+    <div class="backdrop--fixed bc-dark">
+
+        <img class="backdrop__image opacity-40" src="/nyc-core-framework/docs/2.0/images/examples/backdrop-example-04.jpg" alt="Placeholder">
+
+        <div class="backdrop__cover">
+
+            <div class="container wide my-4">
+
+                <h1 class="banner-headline text-shadow mb-4">
+                    Lorem ipsum dolor
+                </h1>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+
+        <div class="backdrop__credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
+    </div>
+    <!-- .backdrop -->
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>The HTML for the above example:</p>
+</div>
+
+<figure class="container medium my-4">
+
+    <div class="code-toolbar">
+        <pre>
+            <code class="language-html">
+                &lt;div class="backdrop--fixed bc-dark"&gt;
+
+                    &lt;img class="backdrop__image opacity-40" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+
+                    &lt;div class="backdrop__cover"&gt;
+
+                        &lt;div class="container wide my-4"&gt;
+
+                            &lt;h1 class="banner-headline text-shadow mb-4"&gt;
+                                Lorem ipsum dolor
+                            &lt;/h1&gt;
+
+                        &lt;/div&gt;
+                        &lt;!-- .container --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .backdrop__cover --&gt;
+
+                    &lt;div class="backdrop__credit"&gt;
+                        &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+                &lt;!-- .backdrop --&gt;
+            </code>
+        </pre>
+    </div>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        The <code>.backdrop--fixed</code> selector stretches to fit the content within <code>.backdrop__cover</code>.
+        Consider the following layout:
+    </p>
+</div>
+
+ <figure class="my-5">
+
+     <div class="backdrop--fixed bc-dark">
+
+         <img class="backdrop__image opacity-20" src="/nyc-core-framework/docs/2.0/images/examples/backdrop-example-05.jpg" alt="Placeholder">
+
+         <div class="backdrop__cover t-center">
+
+             <div class="container medium my-5">
+
+                 <h1 class="banner-headline text-shadow mb-4">
+                     Lorem ipsum dolor sit amet consectetur
+                 </h1>
+
+                 <div class="my-4">
+
+                     <div class="grid--gap cols--md jc-center t-left">
+
+                         <div class="grid__col">
+
+                             <div class="card bc-white box-shadow">
+
+                                 <div class="card__header border-b">
+                                     <p>Card Header</p>
+                                 </div>
+
+                                 <div class="card__body">
+                                     <h2 class="h4">Card Title</h2>
+                                     <p>
+                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+                                         obcaecati autem, ex facilis labore reiciendis.
+                                     </p>
+                                 </div>
+
+                                 <div class="card__footer border-t fs-md">
+                                     <a class="btn bc-secondary d-block" href="#1">Action</a>
+                                 </div>
+                             </div>
+                             <!-- .card -->
+
+                         </div>
+                         <!-- .grid__col -->
+
+                         <div class="grid__col">
+
+                             <div class="card bc-white box-shadow">
+
+                                 <div class="card__header border-b">
+                                     <p>Card Header</p>
+                                 </div>
+
+                                 <div class="card__body">
+                                     <h2 class="h4">Card Title</h2>
+                                     <p>
+                                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+                                         obcaecati autem, ex
+                                         facilis labore reiciendis.
+                                     </p>
+                                 </div>
+
+                                 <div class="card__footer border-t fs-md">
+                                     <a class="btn bc-secondary d-block" href="#1">Action</a>
+                                 </div>
+                             </div>
+                             <!-- .card -->
+
+                         </div>
+                         <!-- .grid__col -->
+
+                     </div>
+                     <!-- .grid -->
+
+                 </div>
+
+                 <div class="my-3">
+
+                     <p>Follow Us</p>
+
+                     <ul class="nav--gap-sm horizontal jc-center" role="list">
+                         <li>
+                             <a class="btn-icon bc-secondary" href="#1" title="Facebook">
+                                 <span class="sr-only">Facebook</span>
+                                 <span class="fab fa-facebook-f" aria-hidden="true"></span>
+                             </a>
+                         </li>
+                         <li>
+                             <a class="btn-icon bc-secondary" href="#1" title="Facebook">
+                                 <span class="sr-only">Facebook</span>
+                                 <span class="fab fa-twitter" aria-hidden="true"></span>
+                             </a>
+                         </li>
+                         <li>
+                             <a class="btn-icon bc-secondary" href="#1" title="Facebook">
+                                 <span class="sr-only">Facebook</span>
+                                 <span class="fab fa-youtube" aria-hidden="true"></span>
+                             </a>
+                         </li>
+                         <li>
+                             <a class="btn-icon bc-secondary" href="#1" title="Facebook">
+                                 <span class="sr-only">Facebook</span>
+                                 <span class="fas fa-share" aria-hidden="true"></span>
+                             </a>
+                         </li>
+                     </ul>
+                 </div>
+
+
+             </div>
+             <!-- .container -->
+
+         </div>
+         <!-- .backdrop__cover -->
+
+         <div class="backdrop__credit">
+             <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+         </div>
+
+     </div>
+     <!-- backdrop -->
+
+ </figure>
+
+ <div class="container narrow my-4">
+    <p>
+        In this example, the content inside <code>.backdrop__cover</code> is taller than the default height (375px), and
+        <code>.backdrop--fixed</code> adjusts its height accordingly.
+    </p>
+ </div>
+
+                </div>
+                <!-- .my-5 -->
+
+            </div>
+            <!-- col -->
+
+        </div>
+        <!-- .grid -->
+
+    </main>
+
+    <footer class="container bc-dark t-center py-4">
+    <a href="#" data-scroll="top">To Top</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
+
+<!-- IE Custom Properties Polyfill -->
+<script>
+    window.MSInputMethodContext && document.documentMode && document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
+    );
+</script>
+
+
+
+
+<script src="/nyc-core-framework/docs/2.0/js/lib/prism.js"></script>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const iframeList = document.getElementsByTagName("iframe");
+
+        for (const iframe of iframeList) {
+
+            const iframeWindow = iframe.contentWindow;
+
+            getIframeDocHeight = () => {
+
+                let iframeWindowHeight = iframeWindow.document.body.scrollHeight;
+
+                console.log(iframeWindowHeight);
+
+                iframe.style.height = iframeWindowHeight + 'px';
+
+            }
+
+            iframe.addEventListener('load', getIframeDocHeight);
+            window.addEventListener('resize', getIframeDocHeight);
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>
