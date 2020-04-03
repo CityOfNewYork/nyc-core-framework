@@ -3,9 +3,9 @@
 In this file:
 
 // A. Variables
-// B. Responsive Box Shadows
-// C. Box Shadow Modifiers
-// D. Text Shadows
+// B. Box Shadows
+// C. Text Shadows
+// D. I.E. 11 Support
 
 */
 
@@ -23,44 +23,52 @@ In this file:
 //////////////////////////////////////////////
 
 [class*="box-shadow"] {
-    --shadow-opacity: 0;
+    --base-shadow-opacity: 0;
 
     box-shadow:
-        0 calc(var(--base-shadow-unit) * 0.5) calc(var(--base-shadow-unit) * 1) rgba(0, 0, 0, calc(var(--shadow-opacity) * 1)),
-        0 calc(var(--base-shadow-unit) * 1) calc(var(--base-shadow-unit) * 2) rgba(0, 0, 0, calc(var(--shadow-opacity) * 0.5)),
-        0 calc(var(--base-shadow-unit) * 1.5) calc(var(--base-shadow-unit) * 3) rgba(0, 0, 0, calc(var(--shadow-opacity) * 0.25));
+        0 calc(var(--base-shadow-unit) * 0.5) calc(var(--base-shadow-unit) * 1) rgba(0, 0, 0, calc(var(--base-shadow-opacity) * 1)),
+        0 calc(var(--base-shadow-unit) * 1) calc(var(--base-shadow-unit) * 2) rgba(0, 0, 0, calc(var(--base-shadow-opacity) * 0.5)),
+        0 calc(var(--base-shadow-unit) * 1.5) calc(var(--base-shadow-unit) * 3) rgba(0, 0, 0, calc(var(--base-shadow-opacity) * 0.25));
 }
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
         
-        .box-shadow#{$mod} {
+        .box-shadow-1#{$mod} {
+            --base-shadow-unit: 0.5rem;
+            --shadow-opacity: var(--base-shadow-opacity);
+        }
+
+        .box-shadow-2#{$mod} {
+            --base-shadow-unit: 1.75rem;
+            --shadow-opacity: var(--base-shadow-opacity);
+        }
+
+        .box-shadow-3#{$mod} {
+            --base-shadow-unit: 2.5rem;
             --shadow-opacity: var(--base-shadow-opacity);
         }
     }
 }
 
-//////////////////////////////////////////////
-// c. Shadow Modifier
-//////////////////////////////////////////////
-
-.shadow-size--sm {
-    --base-shadow-unit: 0.5rem;
-}
-
-.shadow-size--lg {
-    --base-shadow-unit: 2rem;
-}
-
-// .shadow-size--3 {
-//     --box-shadow-size: 2.5rem;
-// }
 
 //////////////////////////////////////////////
-// c. Text Shadows
+// C. Text Shadows
 //////////////////////////////////////////////
 
 .text-shadow {
     text-shadow: 0 0 6px rgba(black, 0.5);
+}
+
+//////////////////////////////////////////////
+// D. I.E. 11 Support
+//////////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+    [class*="box-shadow"] {
+        --base-shadow-opacity: 0.25;
+       box-shadow:0 0 1.5rem hsla(0, 0%, 0%, var(--base-shadow-opacity));
+    }
 }

@@ -20,7 +20,7 @@
   		"liveSassCompile.settings.autoprefix": [
   			"last 1 version",
   			"> 1%",
-  			"IE 10"
+  			"IE 11"
   		],
   	},
 
