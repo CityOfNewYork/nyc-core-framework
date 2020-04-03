@@ -2,9 +2,10 @@
 layout: default
 ---
 
-<div class="container narrow mt-3 d-none--lg">
-    <button class="btn d-block bc-dark rounded-t" data-toggle="collapse" data-target="#sidebar">
-        Documentation
+<div class="container narrow mt-2 d-none--lg">
+    <button class="btn btn--has-icon--disperse bc-dark rounded-t" data-toggle="collapse" data-target="#sidebar">
+        <span class="btn__text">Documentation</span>
+        <span class="fas fa-arrow-down btn__icon"></span>
     </button>
 </div>
 
@@ -12,7 +13,7 @@ layout: default
 
     <div class="grid__col-2--lg d-block--lg bc-light collapse" id="sidebar">
 
-        <div class="sticky-top narrow p-3">
+        <div class="sticky-top narrow p-2">
 
             {% include sidebar.html %}
 

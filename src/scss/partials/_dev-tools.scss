@@ -25,7 +25,7 @@ $floating-breakpoints-bar: true;
         &::before {
             @extend .sticky-top;
             @extend .box-shadow-sm;
-            font-family: $base-font;
+            font-family: var(--base-font-family);
             display: block;
             color: white;
             text-align: center;
@@ -87,39 +87,39 @@ $table-column-background-opacity: 0.5;
 
     th,
     td {
-        &.col-a {
+        &:nth-child(1) {
             background-color: rgba(red, $table-column-background-opacity) !important;
         }
 
-        &.col-b {
+        &:nth-child(2) {
             background-color: rgba(orange, $table-column-background-opacity) !important;
         }
 
-        &.col-c {
+        &:nth-child(3) {
             background-color: rgba(yellow, $table-column-background-opacity) !important;
         }
 
-        &.col-d {
+        &:nth-child(4) {
             background-color: rgba(green, $table-column-background-opacity) !important;
         }
 
-        &.col-e {
+        &:nth-child(5) {
             background-color: rgba(blue, $table-column-background-opacity) !important;
         }
 
-        &.col-f {
+        &:nth-child(6) {
             background-color: rgba(purple, $table-column-background-opacity) !important;
         }
 
-        &.col-g {
+        &:nth-child(7) {
             background-color: rgba(pink, $table-column-background-opacity) !important;
         }
 
-        &.col-h {
+        &:nth-child(8) {
             background-color: rgba(gray, $table-column-background-opacity) !important;
         }
 
-        &.col-i {
+        &:nth-child(9) {
             background-color: rgba(tan, $table-column-background-opacity) !important;
         }
     }

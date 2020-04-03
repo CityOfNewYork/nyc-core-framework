@@ -4,8 +4,8 @@ In this file:
 
 // A. Variables
 // B. Spacer Map
-// C. Padding and Margin Spacer Classes
-// D. Padding and Margin Static Classes
+// C. Responsive Spacing Classes
+// D. Static Spacing Classes
 
 */
 
@@ -14,10 +14,10 @@ In this file:
 //////////////////////////////////////////////
 
 :root {    
-    --s1: 0.25rem;
-    --s2: 0.75rem;
-    --s3: 1rem;
-    --s4: 2.5rem;
+    --s1: 0.5rem;
+    --s2: 1rem;
+    --s3: 2rem;
+    --s4: 3rem;
     --s5: 5rem;
 }
 
@@ -108,10 +108,6 @@ $spacers: (
             }
 
             // Negative Margin
-
-            .m-n#{$key}#{$mod} {
-                margin: calc(#{$value} * -1);
-            }
 
             .mx-n#{$key}#{$mod} {
                 margin-left: calc(#{$value} * -1);

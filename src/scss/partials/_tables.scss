@@ -1,31 +1,65 @@
-table {
+/*
+
+In this file:
+
+// A. Variables
+// B. Tables
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root{
+
+    --table-cell-padding-x: 1.5em;
+    --table-cell-padding-y: 0.75em;
+
+    --default-table-size: var(--font-size-md);
+}
+
+//////////////////////////////////////////////
+// A. Table Class
+//////////////////////////////////////////////
+
+.table {
     width: 100%;
-    table-layout: fixed;
-    line-height: 1.2;
+    line-height: inherit;
+
+    &:not([class="fs-"]){
+        font-size: var(--default-table-size);
+    }
 
     tr{
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
-        border-color: inherit;
-        color: inherit;
     }
 
-    th,
-    td {
-        width: auto;
-        text-align: inherit;
-        padding: var(--s2) var(--s3);
+    th, 
+    td{
+        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
         vertical-align: top;
+        text-align: inherit;
     }
 
     thead th {
         vertical-align: bottom;
-        width: auto;
+
+        &:not([class*="w-"]):not([class*="action"]) {
+            width: auto;
+        }
+
+        &.w-fit{
+            width: 2%;
+            white-space: nowrap;
+        }
     } 
     
     thead tr {
         border-top-style: unset;
     }
+
 }
 
 .scroll-x{
@@ -37,15 +71,25 @@ table {
     }
 }
 
-.table--striped {
+.table--bordered{
+    th,
+    td {
 
+        &:not(:first-child){
+            border-left-width: var(--default-border-width);
+            border-left-style: var(--default-border-style);
+        }
+    }
+}
+
+.table--striped {
     tbody tr:nth-of-type(odd) td {
         @extend .subtle-fill;
         --subtle-fill-opacity: 0.0375;
     }
 }
 
-.va-middle{
+.table--va-middle{
     td{
         vertical-align: middle;
     }

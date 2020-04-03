@@ -12,8 +12,10 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-$accordion-padding-x: var(--s3);
-$accordion-padding-y: var(--s3);
+:root{
+    --accordion-padding-x: var(--s2);
+    --accordion-padding-y: var(--s2);
+}
 
 $accordion-transition: 0.2s ease-out;
 
@@ -31,7 +33,7 @@ $accordion-transition: 0.2s ease-out;
     cursor: pointer;
 
     margin-bottom: 0;
-    padding: $accordion-padding-y $accordion-padding-x;
+    padding: var(--accordion-padding-y) var(--accordion-padding-x);
     
     &:not(:first-child){
         border-top-width: var(--default-border-width);
@@ -77,6 +79,6 @@ $accordion-transition: 0.2s ease-out;
     }
     
     > [data-accordion="content"] {
-        padding: $accordion-padding-y $accordion-padding-x;
+        padding: var(--accordion-padding-y) var(--accordion-padding-x);
     }
 }

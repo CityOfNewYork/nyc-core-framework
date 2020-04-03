@@ -42,6 +42,20 @@ In this file:
 // C. Theme Styles
 //////////////////////////////////////////////
 
+a[data-logo="brand"] {
+    color: inherit;
+
+    svg {
+        display: block;
+        fill: currentColor;
+    }
+    p {
+        font-weight: bold;
+        line-height: 1.2;
+        margin: var(--s2) 0;
+    }
+}
+
 .callout {
     overflow: hidden;
 
@@ -90,7 +104,7 @@ td > p{
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 
-    box-shadow: 0 0.25rem  0.5rem rgba(black, 0.125);
+    // box-shadow: 0 0.25rem  0.5rem rgba(black, 0.125);
 
     iframe {
         border: none;

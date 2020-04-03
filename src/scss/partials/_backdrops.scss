@@ -98,7 +98,6 @@ In this file:
 
     .backdrop__cover {
         position: relative;
-        display: initial;
         width: 100%;
         margin-top: auto;
         margin-bottom: auto;
@@ -115,10 +114,13 @@ In this file:
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-
     .backdrop--fixed {
         overflow: hidden;
-        height: 1em;
+        min-height: auto;
+
+        .backdrop__cover {
+            min-height: var(--backdrop-fixed-height);
+        }
 
         .backdrop__image {
             height: auto;

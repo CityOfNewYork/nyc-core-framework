@@ -20,7 +20,7 @@ $columns: 12;
 // B. Grid Configuration
 //////////////////////////////////////////////
 
-[class^="grid"]:not([class*="__col"]) {
+.grid:not([class*="__col"]) {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -36,7 +36,7 @@ $columns: 12;
 //////////////////////////////////////////////
 
 [class*="grid--gap"] {
-    --gap-size: var(--s3);
+    --gap-size: var(0);
 
     margin-top: calc(-1 * var(--gap-size));
     margin-right: calc(-0.5 * var(--gap-size));
@@ -49,16 +49,10 @@ $columns: 12;
     }
 }
 
-.grid--gap-lg {
-    --gap-size: var(--s4);
-}
-
-.grid--gap-sm {
-    --gap-size: var(--s2);
-}
-
-.grid--gap-xs {
-    --gap-size: var(--s1);
+@each $key, $value in $spacers {
+    .grid--gap-#{$key} {
+        --gap-size: #{$value};
+    }
 }
 
 .grid--gap-border {
@@ -121,8 +115,8 @@ $columns: 12;
         }
 
         .grid__col-auto#{$mod} {
-                flex: none;
-                width: auto;
+            flex: none;
+            width: auto;
         }
     }
 }

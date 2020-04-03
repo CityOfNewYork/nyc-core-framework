@@ -12,14 +12,13 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
+    --alert-padding: var(--s2);
+    --alert-light-bg-opacity: .075;
 
     // Alert and Form Feedback Colors
-
     --confirm: #008230;
     --attention: #3953B1;
     --warn: #dc3545;
-
-    --alert-light-bg-opacity: .075;
 }
 
 //////////////////////////////////////////////
@@ -40,7 +39,7 @@ $alert-colors: (
     position: relative;
     overflow: hidden;
 
-    padding: var(--s3);
+    padding: var(--alert-padding);
 
     a{
         color: inherit !important;
@@ -79,8 +78,8 @@ $alert-colors: (
     }
 
     @at-root .alert__body {
-        p {
-            margin-bottom: var(--s2);
+        p:not(:last-child) {
+            margin-bottom: var(--s1);
         }
     }
 }
