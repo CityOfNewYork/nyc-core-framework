@@ -94,3 +94,15 @@ In this file:
         vertical-align: middle;
     }
 }
+
+.table--edge {
+    th,
+    td {
+        &:first-child {
+            padding-left:0;
+        }
+        &:last-child {
+            padding-right:0;
+        }
+    }
+}
