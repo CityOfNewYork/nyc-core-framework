@@ -40,6 +40,11 @@ button {
     &[aria-selected=true] {
         font-weight: bold;
     }
+
+    // Ensure Block Full-width
+    &[class*="d-block"] {
+        width: 100%;
+    }
 }
 
 button, 
