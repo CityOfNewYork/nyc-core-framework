@@ -205,7 +205,7 @@ div.code-toolbar {
 div.code-toolbar > .toolbar {
 	display: flex;
 	justify-content: space-between;
-	padding: var(--s2) var(--s3);
+	padding: var(--s2);
 
 	position: absolute;
 	top: 0;
