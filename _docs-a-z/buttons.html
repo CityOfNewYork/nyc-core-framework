@@ -5,7 +5,7 @@ title: "Buttons"
 
 <div class="container narrow my-4">
     <p>
-        The NYC Core Framework offers predefined button classes that provide a variety of distinct styles.
+        Our predefined text and icon button classes offer a variety of distinct, actionable styles.
     </p>
 </div>
 <!-- .container -->
@@ -35,15 +35,16 @@ title: "Buttons"
 
     <h2>The Basic Button</h2>
 
-    <p>To create a basic button, add the class <code>.btn</code> to a <code>&lt;a&gt;</code> or
+    <p>
+        All buttons on in the NYC Core Framework require the class <code>.btn</code> on a <code>&lt;a&gt;</code> or
         <code>&lt;button&gt;</code> selector. By default, <code>.btn</code> selectors inherit text color and font size
-        from their parent. The example below is a generic button with no color or style applied. </p>
+        from their parent. The example below is a generic button with no color or style applied.
+    </p>
 
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
-
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__element flex-row ai-center">
             <div class="w-100 t-center">
@@ -53,20 +54,490 @@ title: "Buttons"
             </div>
         </div>
     </div>
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;a class="btn" href="#1"&gt;Button&lt;/a&gt;
+
+            &lt;button class="btn"&gt;Button&lt;/button&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 1 - The basic button class.</p>
+    </figcaption>
+</figure>
+
+<hr class="my-5" id="addColor">
+
+<div class="container narrow my-4">
+
+    <h2>Adding Color</h2>
+
+    <p>
+        To add color to a <code>.btn</code> selector, use our predefined <a
+            href="{{ site.baseurl }}/documentation/color-system/#backgroundColorClasses">background-color classes</a>.
+        These classes automatically apply the button's appropriate text color.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100">
+                <ul class="nav nav--horizontal--md jc-center t-center">
+                    <li>
+                        <a class="btn bc-primary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn bc-secondary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn bc-dark" href="#1">
+                            Button
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </figure>
 
 <figure class="container narrow my-4">
-
     <pre>
         <code class="language-html">
-            &lt;a class="btn" href="#1"&gt;Button&lt;/a&gt;
+            &lt;a class="btn bc-primary" href="#1">Button&lt;/a&gt;
+
+            &lt;a class="btn bc-secondary" href="#1"&gt;Button&lt;/a&gt;
+            
+            &lt;a class="btn bc-dark" href="#1"&gt;Button&lt;/a&gt;
+            
+            &lt;a class="btn bc-light" href="#1"&gt;Button&lt;/a&gt;
+            
+            &lt;a class="btn bc-white" href="#1"&gt;Button&lt;/a&gt;
         </code>
     </pre>
-
     <figcaption>
-        <p>Figure 2 - Lorem ipsum dolor sit amet consectetur</p>
+        <p>Figure 2 - Colored buttons using our theme colors.</p>
     </figcaption>
+</figure>
+
+<hr class="my-5" id="fullWidthButtons">
+
+<div class="container narrow my-4">
+
+    <h2>Full With Buttons</h2>
+
+    <p>
+        For block-level buttons, add the predefined <a href="#1">display</a> class <code>.d-block</code>.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4">
+
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row jc-center ai-center">
+            <div class="w-100">
+                <a class="btn bc-secondary d-block" href="#1" data-toggle="collapse">
+                    Button
+                </a>
+            </div>
+        </div>
+    </div>
 
 </figure>
 
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;a class="btn bc-primary d-block" href="#1"&gt;Button&lt;/a&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 3 - Example of a full width button.</p>
+    </figcaption>
+</figure>
+
+<hr class="my-5" id="outlinedButtons">
+
+<div class="container narrow my-4">
+
+    <h2>Outlined Buttons</h2>
+
+    <p>
+        In some cases, you may want a button with an outline instead of a fill. Add the outline modifier class <code>.btn--outline</code>
+        to a <code>.btn</code> selector. The outline color inherits the button's text color, which can be modified using
+        our <a href="#1">text color</a> classes.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row jc-center ai-center">
+            <div class="w-100 px-4">
+                <div class="grid grid--gap-2 cols-6--md jc-center">
+                    <div class="grid__col">
+                        <a class="btn btn--outline d-block" href="#1">
+                            Button
+                        </a>
+                    </div>
+                    <!-- .grid__col -->
+                    <div class="grid__col">
+                        <a class="btn btn--outline d-block tc-secondary" href="#1">
+                            Button
+                        </a>
+                    </div>
+                    <!-- .grid__col -->
+                </div>
+                <!-- .grid -->
+            </div>
+        </div>
+    </div>
+
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;a class="btn btn--outline" href="#1"&gt;
+            
+            &lt;a class="btn btn--outline tc-secondary" href="#1"&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 4 - Example of outlined buttons.</p>
+    </figcaption>
+</figure>
+
+<hr class="my-5" id="borderRadius">
+
+<div class="container narrow my-4">
+
+    <h2>Border Radius</h2>
+
+    <p>Use our prebuilt <a href="#1">border-radius</a> classes to add rounded edges to any <code>.btn</code> selector.</p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row jc-center ai-center">
+            <div class="w-100 px-4">
+                <div class="grid grid--gap-2 cols-6--md">
+                    <div class="grid__col">
+                        <a class="btn bc-primary d-block rounded" href="#1">
+                            Button
+                        </a>
+                    </div>
+                    <!-- .grid__col -->
+                    <div class="grid__col">
+                        <a class="btn bc-secondary d-block rounded-pill" href="#1">
+                            Button
+                        </a>
+                    </div>
+                    <!-- .grid__col -->
+                </div>
+                <!-- .grid -->
+            </div>
+        </div>
+    </div>
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;a class="bc-primary rounded" href="#1"&gt;
+            
+            &lt;a class="btn bc-primary rounded-pill" href="#1"&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 5 - Framework buttons with rounded edges.</p>
+    </figcaption>
+</figure>
+
+<hr class="my-5" id="buttonSizes">
+
+<div class="container narrow my-4">
+
+    <h2>Button Sizes</h2>
+
+    <p>
+        Instead of providing predetermined button sizes, Framework buttons inherit their font size and use relative
+        (em) sizes for padding. This means you can make whatever size button you wish, using our prebuilt <a
+            href="#1">font size</a> classes.
+    </p>
+    <p>
+        Whn you have multiple buttons within the same selector, you won't need to specify a size for each button. In the example below, the predefined small font size (class
+        <code>.fs-sm</code>) is applied to a list of buttons, making all buttons smaller with a single class.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100">
+                <ul class="nav nav--horizontal--md jc-center fs-sm">
+                    <li>
+                        <a class="btn bc-primary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn bc-primary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn bc-primary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</figure>
+
+<hr class="my-5" id="buttonsWithTextAndIcon">
+
+<div class="container narrow my-4">
+    <h2>Buttons With Text and Icon</h2>
+    <p>
+        Add an icon to a <code>.btn</code> selector with the <code>.btn--has-icon</code> modifier class. Buttons with
+        icons require two child selectors. The icon itself is a <code>&lt;span&gt;</code> with the combination <a href="#1">Font Awesome</a>
+        classes, with an additional class of <code>.btn__icon</code>.
+    </p>
+    <p>
+        A second <code>&lt;span&gt;</code> with a <code>.btn__text</code> class is needed for the button's text. This
+        selector is our target for underlining the text on <code>:hover</code> and <code>:focus</code> states. It also provides a small margin from the icon.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row jc-center ai-center">
+            <div class="w-100 t-center">
+                <a class="btn btn--has-icon bc-primary" href="#1">
+                    <span class="fas fa-pen fa-sm btn__icon"></span>
+                    <span class="btn__text">Button</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;a class="btn btn--has-icon bc-primary" href="#1"&gt;
+                &lt;span class="fas fa-pen fa-sm btn__icon"&gt;&lt;/span&gt;
+                &lt;span class="btn__text"&gt;Button &lt;/span&gt;
+            &lt;/a&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 6 - A button with text and and icon.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        If you wish for a button's text and icon to be opposite of one another, add the chain modifier
+        class <code>--disperse</code> to <code>.btn--has-icon</code> class (resulting in <code>.btn--has-icon--disperse</code>).
+        This class automatically makes the button full-width of its parent.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row jc-center ai-center">
+            <div class="w-100 px-4">
+                <a class="btn btn--has-icon--disperse bc-primary" href="#1">
+                    <span class="btn__text">Button</span>
+                    <span class="fas fa-arrow-right btn__icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;a class="btn btn--has-icon--disperse bc-primary" href="#1"&gt;
+                &lt;span class="fas fa-pen fa-sm btn__icon"&gt;&lt;/span&gt;
+                &lt;span class="btn__text"&gt;Button &lt;/span&gt;
+            &lt;/a&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 6 - A button with text and and icon.</p>
+    </figcaption>
+</figure>
+
+<hr class="my-5" id="icon-onlyButtons">
+
+<div class="container narrow my-4">
+    <h2>Icon-only Buttons</h2>
+    <p>
+        To create an accessible icon-only button, add the <code>.btn--icon-only</code> modifier class to a
+        <code>.btn</code> selector. Include the <code>title</code> attribute to describe the button on
+        its hover state (for sighted users).
+    </p>
+    <p>
+        Like our buttons with text and icon (above), icon-only buttons also require two child selectors. A
+        <code>&lt;span&gt;</code> with an <code>.sr-only</code> class that includes descriptive text for screan readers, and another
+        <code>&lt;span&gt;</code> selector with the combination <a href="#1">Font Awesome</a> classes.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100">
+                <ul class="nav nav--horizontal jc-center">
+                    <li>
+                        <a class="btn btn--icon-only" href="#1" title="My Account">
+                            <span class="sr-only">My Account</span>
+                            <span class="fas fa-user" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn btn--icon-only" href="#1" title="Edit">
+                            <span class="sr-only">Edit</span>
+                            <span class="fas fa-pen" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn btn--icon-only" href="#1" title="Sign Out">
+                            <span class="sr-only">Sign Out</span>
+                            <span class="fas fa-sign-out-alt" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- Button example--&gt;
+            &lt;button class="btn btn--icon-only" title="My Account"&gt;
+                &lt;span class="sr-only"&gt;My Account&lt;/span&gt;
+                &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;!-- Link as button example --&gt;
+            &lt;a class="btn btn--icon-only" href="#1" title="My Account"&gt;
+                &lt;span class="sr-only"&gt;My Account&lt;/span&gt;
+                &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 7 - Example of an icon-only <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> selectors.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        Icon Buttons are transparent by default. Just like regular buttons, they work well with our <a
+            href="{{ site.baseurl }}/documentation/color-system/#backgroundColorClasses">background-color classes</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio--3by2 border">
+        <div class="aspect-ratio__element flex-row ai-center">
+            <div class="w-100">
+                <ul class="nav nav nav--horizontal jc-center">
+                    <li>
+                        <a class="btn--icon-only bc-primary" href="#1" title="My Account">
+                            <span class="sr-only">My Account</span>
+                            <span class="fas fa-user" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn--icon-only bc-secondary" href="#1" title="Edit">
+                            <span class="sr-only">Edit</span>
+                            <span class="fas fa-pen" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn--icon-only bc-dark" href="#1" title="Sign Out">
+                            <span class="sr-only">Sign Out</span>
+                            <span class="fas fa-sign-out-alt" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</figure>
+
+<div class="container narrow my-4">
+    <p>
+        You may also use our <a href="#1">text color</a> classes for even more color combinations.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio--3by2 bc-primary">
+        <div class="aspect-ratio__element flex-row jc-center ai-center">
+            <div class="w-100">
+                <ul class="nav nav nav--horizontal jc-center">
+                    <li>
+                        <a class="btn btn--icon-only bc-white tc-secondary" href="#1" title="My Account">
+                            <span class="sr-only">My Account</span>
+                            <span class="fas fa-user" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn btn--icon-only bc-white tc-secondary" href="#1" title="Edit">
+                            <span class="sr-only">Edit</span>
+                            <span class="fas fa-pen" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn btn--icon-only bc-white tc-secondary" href="#1" title="Sign Out">
+                            <span class="sr-only">Sign Out</span>
+                            <span class="fas fa-sign-out-alt" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</figure>
