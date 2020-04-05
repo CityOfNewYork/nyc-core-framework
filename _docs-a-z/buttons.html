@@ -84,8 +84,7 @@ title: "Buttons"
     <h2>Adding Color</h2>
 
     <p>
-        To add color to a <code>.btn</code> selector, use our predefined <a
-            href="{{ site.baseurl }}/documentation/color-system/#backgroundColorClasses">background-color classes</a>.
+        Add color to a <code>.btn</code> selector with our predefined <a href="{{ site.baseurl }}/documentation/color-system/#backgroundColorClasses">background-color classes</a>.
         These classes automatically apply the button's appropriate text color.
     </p>
 
@@ -121,7 +120,7 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow my-4">
-    <pre>
+    <pre class="hide-toolbar">
         <code class="language-html">
             &lt;a class="btn bc-primary" href="#1">Button&lt;/a&gt;
 
@@ -135,18 +134,18 @@ title: "Buttons"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Colored buttons using our theme colors.</p>
+        <p>Figure 3 - Coloring link buttons with the background-color utility classes.</p>
     </figcaption>
 </figure>
 
-<hr class="my-5" id="fullWidthButtons">
+<hr class="my-5" id="full-widthButtons">
 
 <div class="container narrow my-4">
 
-    <h2>Full With Buttons</h2>
+    <h2>Full-width Buttons</h2>
 
     <p>
-        For block-level buttons, add the predefined <a href="#1">display</a> class <code>.d-block</code>.
+        For full-width buttons, add the <a href="#1">display</a> utility class <code>.d-block</code>.
     </p>
 
 </div>
@@ -167,13 +166,13 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow my-4">
-    <pre>
+   <pre class="hide-toolbar">
         <code class="language-html">
             &lt;a class="btn bc-primary d-block" href="#1"&gt;Button&lt;/a&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 3 - Example of a full width button.</p>
+        <p>Figure 4 - Example of a full-width link button.</p>
     </figcaption>
 </figure>
 
@@ -184,9 +183,10 @@ title: "Buttons"
     <h2>Outlined Buttons</h2>
 
     <p>
-        In some cases, you may want a button with an outline instead of a fill. Add the outline modifier class <code>.btn--outline</code>
-        to a <code>.btn</code> selector. The outline color inherits the button's text color, which can be modified using
-        our <a href="#1">text color</a> classes.
+        For a button with an outline instead of a fill, add the outline modifier class <code>.btn--outline</code>
+        to the <code>.btn</code> selector. The outline width  matches your theme's default <a href="#1">border width</a>. The
+        outline color inherits the button's text color, which can be changed using
+        our <a href="#1">text color</a> utility classes.
     </p>
 
 </div>
@@ -222,12 +222,25 @@ title: "Buttons"
     <pre>
         <code class="language-html">
             &lt;a class="btn btn--outline" href="#1"&gt;
-            
-            &lt;a class="btn btn--outline tc-secondary" href="#1"&gt;
+                Button
+            &lt;/a&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 4 - Example of outlined buttons.</p>
+        <p>Figure 5 - The button outline modifier class applied to an <code>&lt;a&gt;</code> tag.</p>
+    </figcaption>
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;button class="btn btn--outline tc-secondary"&gt;
+                Button
+            &lt;/button&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 6 - The button outline modifier class applied to an <code>&lt;button&gt;</code> tag, and colored with the text color utility class.</p>
     </figcaption>
 </figure>
 
@@ -237,7 +250,7 @@ title: "Buttons"
 
     <h2>Border Radius</h2>
 
-    <p>Use our prebuilt <a href="#1">border-radius</a> classes to add rounded edges to any <code>.btn</code> selector.</p>
+    <p>Use our prebuilt <a href="#1">border-radius</a> utility classes to add rounded edges to a <code>.btn</code> selector.</p>
 
 </div>
 <!-- .container -->
