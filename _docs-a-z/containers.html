@@ -5,9 +5,67 @@ title: "Containers"
 
 <div class="container narrow my-4">
     <p>
-        Containers automatically center content and provide consistent padding on the left and right side of elements.
+        Containers provide consistent padding on the left and right side of elements, while our width classes automatically center content and come in three sizes: narrow, medium, and wide.
     </p>
 </div>
 <!-- .container -->
 
 <hr class="my-5">
+
+<figure class="container my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="container border border-secondary tc-secondary py-1 my-3 fs-md">
+        <p>
+            Full
+        </p>
+    </div>
+    <!-- .container -->
+
+    <div class="container narrow border border-secondary tc-secondary py-1 my-3 fs-md">
+        <p>
+            Narrow
+        </p>
+    </div>
+    <!-- .container -->
+
+    <div class="container medium border border-secondary tc-secondary py-1 my-3 fs-md">
+        <p>
+            Medium
+        </p>
+    </div>
+    <!-- .container -->
+
+    <div class="container wide border border-secondary tc-secondary py-1 my-3 fs-md">
+        <p>
+            Wide
+        </p>
+    </div>
+    <!-- .container -->
+
+</figure>
+
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="container"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="container narrow"&gt;
+               ...
+            &lt;/div&gt;
+
+            &lt;div class="container medium"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="container wide"&gt;
+                ...
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </figcaption>
+</figure>
+
