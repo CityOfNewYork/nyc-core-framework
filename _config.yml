@@ -35,7 +35,7 @@ collections:
 
   docs-introduction:
     output: true
-    permalink: /documentation/:path/
+    permalink: /docs/:path/
     order: 
       - get-started.html
       - customization.html
@@ -43,7 +43,7 @@ collections:
 
   docs-a-z:
     output: true
-    permalink: /documentation/:path/
+    permalink: /docs/:path/
 
 # Custom Global Vars
 style_default_theme_colors: 
