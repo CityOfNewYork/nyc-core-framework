@@ -3,20 +3,19 @@ layout: templates
 title: "Templates"
 ---
 
-<div class="overflow-hidden">
+<div class="overflow-hidden" id="nyc-official-templates">
 
-    <div class="py-4 box-shadow-1">
+    <div class="py-4">
 
         <div class="container medium mb-3">
-
-            <ul class="nav nav--divider nav--horizontal--md border rounded fs-sm t-center" role="navigation">
+   
+            <ul class="nav nav--divider nav--horizontal--md border rounded fs-md t-center" role="navigation">
                 <li>
                     <a href="#1" aria-current="page">Landing Pages</a>
                 </li>
                 <li>
                     <a href="#1">Articles</a>
                 </li>
-
                 <li>
                     <a href="#1">Web Applications</a>
                 </li>
@@ -30,40 +29,92 @@ title: "Templates"
         </div>
         <!-- .container -->
 
-        <div class="container narrow t-center">
+        <div class="container narrow t-center mb-2">
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, saepe molestiae. Vitae sequi quia maiores quam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, saepe molestiae. Vitae sequi quia
+                maiores quam!
             </p>
 
         </div>
+
+        <ul class="nav nav--gap-1 nav--horizontal tc-primary fs-md jc-center d-none" role="navigation">
+            <li>
+                <button class="btn btn--icon-only" title="Previous">
+                    <span class="sr-only">Previous</span>
+                    <span class="fas fa-arrow-left" aria-hidden="true"></span>
+                </button>
+            </li>
+            <li>
+                <a href="#1" aria-current="page">1</a>
+            </li>
+            <li>
+                <a href="#1">2</a>
+            </li>
+            <li>
+                <a href="#1">3</a>
+            </li>
+            <li class="opacity-50">
+                <button class="btn btn--icon-only" title="Next">
+                    <span class="sr-only">Next</span>
+                    <span class="fas fa-arrow-right" aria-hidden="true"></span>
+                </button>
+            </li>
+        </ul>
 
     </div>
 
     <section class="overflow-hidden bc-light">
 
-        <div class="my-5">
-            
+        <div class="my-5">    
 
-        <div class="container wide">
-            <div class="grid cols-auto jc-between ai-center">
-                <div class="grid__col">
-                    <h2 class="h5">Landing Page Nav Right</h2>
-                </div>
-                <div class="grid__col">
-                    <a class="btn btn--has-icon bc-primary fs-md rounded box-shadow-1" href="#1">
-                        <span class="fab fa-github btn__icon"></span>
-                        <span class="btn__text">GitHub </span>
-                    </a>
+            <div class="container wide">
+                <div class="grid cols-auto jc-between ai-center">
+                    <div class="grid__col">
+                        <h2 class="h5 fw-normal">Landing Page Nav Right</h2>
+                    </div>
+                    <div class="grid__col">
+                        <a class="btn btn--has-icon bc-primary fs-md rounded" href="#1">
+                            <span class="fab fa-github btn__icon"></span>
+                            <span class="btn__text">GitHub </span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- .container -->
+            <!-- .container -->
 
-
-        {% include browser-iframe.html iframe_width="wide" iframe_url="/examples/templates/landing-page.html" %}
+            {% include browser-iframe.html iframe_width="wide" iframe_url="/examples/templates/landing-page.html" %}
 
         </div>
+
     </section>
+
+    <hr>
+
+    <section class="overflow-hidden bc-light">
+
+        <div class="my-5">
+
+            <div class="container wide">
+                <div class="grid cols-auto jc-between ai-center">
+                    <div class="grid__col">
+                        <h2 class="h5 fw-normal">Landing Page Nav Right</h2>
+                    </div>
+                    <div class="grid__col">
+                        <a class="btn btn--has-icon bc-primary fs-md rounded box-shadow-1" href="#1">
+                            <span class="fab fa-github btn__icon"></span>
+                            <span class="btn__text">GitHub </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- .container -->
+
+            {% include browser-iframe.html iframe_width="wide" iframe_url="/examples/templates/landing-page.html" %}
+
+        </div>
+
+    </section>
+
 </div>
-<!-- .container -->
+<!-- .overflow-hidden -->
