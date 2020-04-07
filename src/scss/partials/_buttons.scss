@@ -26,11 +26,14 @@ In this file:
     --btn--icon-only-size: 2em;
 }
 
+$btn-opacity-hover: 0.75;
+
 //////////////////////////////////////////////
 // B. Default Button
 //////////////////////////////////////////////
 
 button {
+
     cursor: pointer;
     
     &:not([class]){
@@ -50,6 +53,11 @@ button {
 button, 
 .btn{
     @extend .hover-focus;
+
+    &[aria-disabled="true"] {
+        cursor: not-allowed;
+        opacity: $btn-opacity-hover;
+    }
 }
 
 .btn {
@@ -67,7 +75,7 @@ button,
     &:hover, 
     &:focus, 
     &:active {
-        opacity: 0.85;
+        opacity: $btn-opacity-hover;
     }
 
     &:not([class*="--icon-only"]) {
