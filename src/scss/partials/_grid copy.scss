@@ -21,14 +21,14 @@ $columns: 12;
 //////////////////////////////////////////////
 
 .grid:not([class*="__col"]) {
-    position: relative;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
 }
 
 [class*="grid__col"]{
     flex: 1 1 100%;
+    max-width: 100%;
 }
 
 //////////////////////////////////////////////
