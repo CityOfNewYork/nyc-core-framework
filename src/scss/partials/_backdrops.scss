@@ -82,7 +82,8 @@ In this file:
 
 .backdrop--fixed {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    
     min-height: var(--backdrop-fixed-height);
 
     > *:not(.backdrop__credit) {
@@ -99,9 +100,6 @@ In this file:
 
     .backdrop__cover {
         position: relative;
-        width: 100%;
-        margin-top: auto;
-        margin-bottom: auto;
     }
     
     @include breakpoint-down(md) {
@@ -121,6 +119,11 @@ screen and (-ms-high-contrast: none) {
 
         .backdrop__cover {
             min-height: var(--backdrop-fixed-height);
+            display: flex;
+
+            > * {
+                align-self: center;
+            }
         }
 
         .backdrop__image {
