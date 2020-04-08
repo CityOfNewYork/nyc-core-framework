@@ -14,7 +14,9 @@ In this file:
 // A. Flex Column and Flex Row
 //////////////////////////////////////////////
 
-[class*="flex-"] {
+[class*="flex-"],
+[class*="column-"],
+[class*="row-"] {
     display: flex;
     flex-wrap: wrap;
 }
@@ -33,13 +35,14 @@ In this file:
             flex-direction: column;
         }
 
+        .row-reverse#{$mod} {
+            flex-direction: row-reverse;
+        }
+        
         .column-reverse#{$mod} {
             flex-direction: column-reverse;
         }
 
-        .row-reverse#{$mod} {
-            flex-direction: row-reverse;
-        }
     }
 }
 
