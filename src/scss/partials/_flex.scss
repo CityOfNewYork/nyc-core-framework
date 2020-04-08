@@ -19,19 +19,19 @@ In this file:
     flex-wrap: wrap;
 }
 
-.flex-row {
-    flex-direction: row;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
 // Breakpoint classes for 'flex-direction: row-reverse;'
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .flex-row#{$mod} {
+            flex-direction: row;
+        }
+
+        .flex-column#{$mod} {
+            flex-direction: column;
+        }
 
         .column-reverse#{$mod} {
             flex-direction: column-reverse;

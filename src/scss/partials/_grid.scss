@@ -25,10 +25,11 @@ $columns: 12;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    min-width: 100%;
 }
 
 [class*="grid__col"]{
-    flex: 1 1 100%;
+    flex: 0 0 100%;
     max-width: 100%;
 }
 
@@ -43,7 +44,7 @@ $columns: 12;
     margin-right: calc(-0.5 * var(--gap-size));
     margin-left: calc(-0.5 * var(--gap-size));
 
-    > * {
+    >[class*="grid__col"] {
         margin-top: var(--gap-size);
         padding-left: calc(0.5 * var(--gap-size));
         padding-right: calc(0.5 * var(--gap-size));
@@ -69,14 +70,14 @@ $columns: 12;
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .grid--cols#{$mod} > [class*="grid__col"] {
-            flex-grow: 1;
-            flex-basis: 0;
+            flex: 1;
+            width: auto;
         }
         
         @for $i from 2 through 6 {
             .grid--cols-#{$i}#{$mod} > [class*="grid__col"] {
-                flex: 0 0 (100% / $columns * $i);
-                max-width: (100% / $columns * $i);
+                flex: 0 0 100% / $columns * $i;
+                max-width: 100% / $columns * $i;
             }
         }
 
@@ -103,8 +104,8 @@ $columns: 12;
 
         @for $i from 1 through $columns {
             .grid > .grid__col-#{$i}#{$mod} {
-                flex: 0 0 (100% / $columns * $i);
-                max-width: (100% / $columns * $i);
+                flex: 0 0 100% / $columns * $i;
+                max-width: 100% / $columns * $i;
             }
         }
 
