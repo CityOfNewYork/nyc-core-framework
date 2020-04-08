@@ -75,7 +75,7 @@ $columns: 12;
         }
         
         @for $i from 2 through 6 {
-            .cols-#{$i}#{$mod} {
+            .grid--cols-#{$i}#{$mod} {
                 [class*="grid__col"]:not([class*="col-"]) {
                     flex: 0 0 100% / $columns * $i;
                     max-width: 100% / $columns * $i;
@@ -83,7 +83,7 @@ $columns: 12;
             }
         }
 
-        .cols-auto#{$mod} {
+        .grid--cols-auto#{$mod} {
             [class*="grid__col"] {
                 flex: none;
                 width: auto;
