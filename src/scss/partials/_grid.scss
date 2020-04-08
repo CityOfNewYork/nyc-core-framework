@@ -20,7 +20,7 @@ $columns: 12;
 // B. Grid Configuration
 //////////////////////////////////////////////
 
-.grid:not([class*="__col"]) {
+.grid {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -66,28 +66,23 @@ $columns: 12;
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
-    $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .grid--cols#{$mod} {
-            [class*="grid__col"]:not([class*="col-"]) {
-                flex-grow: 1;
-                flex-basis: 0;
-            }
+        .grid--cols#{$mod} > [class*="grid__col"] {
+            flex-grow: 1;
+            flex-basis: 0;
         }
         
-        .grid--cols-auto#{$mod} {
-            [class*="grid__col"] {
-                flex: none;
-                width: auto;
+        @for $i from 2 through 6 {
+            .grid--cols-#{$i}#{$mod} > [class*="grid__col"] {
+                flex: 0 0 (100% / $columns * $i);
+                max-width: (100% / $columns * $i);
             }
         }
 
-        @for $i from 2 through 6 {
-            .grid--cols-#{$i}#{$mod} {
-                [class*="grid__col"]:not([class*="col-"]) {
-                    flex: 0 0 (100% / $columns * $i);
-                }
-            }
+        .grid--cols-auto#{$mod} > [class*="grid__col"]{
+                flex: none;
+                width: auto;
         }
 
         @for $i from 1 through $columns {
@@ -95,7 +90,6 @@ $columns: 12;
                 order: $i;
             }
         }
-
     }
 }
 
@@ -108,13 +102,13 @@ $columns: 12;
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         @for $i from 1 through $columns {
-            .grid__col-#{$i}#{$mod} {
-                flex: 0 0 100% / $columns * $i;
-                max-width: 100% / $columns * $i;
+            .grid > .grid__col-#{$i}#{$mod} {
+                flex: 0 0 (100% / $columns * $i);
+                max-width: (100% / $columns * $i);
             }
         }
 
-        .grid__col-auto#{$mod} {
+        .grid > .grid__col-auto#{$mod} {
             flex: none;
             width: auto;
         }
