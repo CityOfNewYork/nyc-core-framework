@@ -37,15 +37,20 @@ In this file:
     @at-root .backdrop__cover {
         overflow: hidden;
         display: flex;
-        align-items: center;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
 
+        align-items: center;
+
         > * {
             width: 100%;
         }
+    }
+
+    @at-root .backdrop__cover {
+        border: 12px solid red;
     }
 
     @at-root .backdrop__credit {
