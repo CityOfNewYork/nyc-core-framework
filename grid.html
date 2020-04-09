@@ -282,11 +282,11 @@
 
                 <figure class="container wide my-4">
 
-                    <div class="grid grid--gap-border">
+                    <div class="grid grid--gap-2">
 
                         <div class="grid__col-9--xl">
 
-                            <div class="backdrop backdrop--fixed bc-dark" id="introduction">
+                            <div class="backdrop backdrop--fixed bc-dark h-100" id="introduction">
 
                                 <img class="backdrop__image opacity-30" src="./images/backdrop-example-01.jpg" alt="Placeholder">
 
@@ -323,7 +323,7 @@
                                 </div>
                                 <!-- .backdrop__cover -->
 
-                                <div class="backdrop__credit">
+                                <div class="backdrop__credit d-none">
                                     <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
                                 </div>
 
@@ -336,28 +336,17 @@
                         <div class="grid__col-3--xl d-flex--xl">
                             
                             <!-- Nested Grid -->
-                            <div class="grid grid--gap-border grid--cols--md grid--cols-12--xl">
+                            <div class="grid grid--gap-2 grid--cols--md grid--cols-12--xl">
 
                                 <div class="grid__col">
                                     <div class="card bc-dark">
-                                        <div class="card__body fs-md">
-                                            <h2 class="h6">Card Title</h2>
-                                            <p>
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                            </p>
-                                            <a class="btn bc-secondary" href="#1">Link</a>
+                                        <div class="card__header border-b">
+                                            Card Header 
                                         </div>
-                                    </div>
-                                    <!-- .card -->
-                                </div>
-                                <!-- col -->
-
-                                <div class="grid__col">
-                                    <div class="card bc-dark">
                                         <div class="card__body">
                                             <h2 class="h6">Card Title</h2>
                                             <p>
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Lorem ipsum dolor sit amet consectetur adipisicing.
                                             </p>
                                         </div>
                                         <div class="card__footer fs-md">
@@ -368,16 +357,37 @@
                                 </div>
                                 <!-- col -->
 
+                                <div class="grid__col">
+                                    <div class="card bc-dark">
+                                        <div class="card__header border-b">
+                                            Card Header 
+                                        </div>
+                                        <div class="card__body">
+                                            <h2 class="h6">Card Title</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </p>
+                                        </div>
+                                        <div class="card__footer fs-md">
+                                            <a class="btn bc-secondary d-block" href="#1">Link</a>
+                                        </div>
+                                    </div>
+                                    <!-- .card -->
+                                </div>
+                                <!-- col -->
 
                                 <div class="grid__col">
                                     <div class="card bc-dark">
-                                        <div class="card__body fs-md">
+                                        <div class="card__header border-b">
+                                            Card Header 
+                                        </div>
+                                        <div class="card__body">
                                             <h2 class="h6">Card Title</h2>
                                             <p>
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Lorem ipsum dolor sit amet consectetur adipisicing.
                                             </p>
                                         </div>
-                                        <div class="card__footer">
+                                        <div class="card__footer fs-md">
                                             <a class="btn bc-secondary d-block" href="#1">Link</a>
                                         </div>
                                     </div>
