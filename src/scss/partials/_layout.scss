@@ -12,13 +12,17 @@ In this file:
 //////////////////////////////////////////////
 
 //////////////////////////////////////////////
-// B. Variables
+// B. HTML and Body
 //////////////////////////////////////////////
+
+html,
+body {
+    min-height: 100vh;
+}
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     
     > header, 
     > main,
@@ -29,6 +33,7 @@ body {
 
     > main {
         flex-grow: 1;
+        flex-shrink: 0;
     }
 }
 
