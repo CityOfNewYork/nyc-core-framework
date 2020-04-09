@@ -1,0 +1,70 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Alert Classes
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    > header, 
+    > main,
+    > footer {
+        width: 100%;
+        display: block;
+    }
+
+    > main {
+        flex-grow: 1;
+    }
+}
+
+// [data-grid="container"] {
+//     display: grid;
+    
+//     // Columns
+//     grid-template-columns: 1fr 5fr; // Widths
+
+
+//     // Rows
+//     grid-template-rows: auto minmax(50vh, auto); // Heights
+
+//     // gap: var(--s2);
+    
+//     // Cells
+//     // > header, 
+//     // > footer{
+//     // }
+
+//     header {
+//         grid-column: 2 / 4;
+//         grid-row: 1;
+//     }
+ 
+//     article {
+//         grid-row: 2 / 4;
+//     }
+
+//     aside {
+//         grid-column: 1 / 2;
+//         grid-row: 3;
+//     }
+
+//     article {
+//         grid-column: 2 / 4;
+//     }
+
+// }
