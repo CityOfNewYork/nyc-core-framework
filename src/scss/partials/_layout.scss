@@ -37,11 +37,22 @@ body {
     }
 }
 
+//////////////////////////////////////////////
+// B. Main
+//////////////////////////////////////////////
+
+[data-grid="article-two-column"]{
+    display: grid;
+    
+    grid-template-columns: 1fr 4fr;
+
+    grid-template-rows: auto auto auto;
+}
+
 // [data-grid="container"] {
 //     display: grid;
     
 //     // Columns
-//     grid-template-columns: 1fr 5fr; // Widths
 
 
 //     // Rows

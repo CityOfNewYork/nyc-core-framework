@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- IE Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- IE Custom Properties Polyfill -->
+    <script>
+        window.MSInputMethodContext && document.documentMode && document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
+        );
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Layouts • NYC Core Framework</title>
+
+    <!-- Font Awesome Kit -->
+    <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
+
+    <!-- Theme Stylesheets -->
+    <link rel="stylesheet" href="./dist/css/nyc_core.css">
+
+</head>
+
+<body>
+
+    <header class="container py-2 bc-primary" id="global-header" role="banner" data-grid="cell">
+
+        <h1 class="h4">Page Header Carl</h1>
+
+    </header>
+    <!-- #global-header -->
+
+    <main class="container py-2 bc-light" id="skip-header-content" role="main" data-grid="article-two-column">
+        
+        <h2 class="h4 sr-only">
+            Page Main
+        </h2>
+
+        <header class="container py-2 bc-dark">
+            <h2 class="h6">
+                Header
+            </h2>
+        </header>
+
+        <article class="container py-2 bc-white">
+            <h2 class="h6">
+                Article
+            </h2>
+        </article>
+
+        <aside class="container py-2 bc-secondary">
+            <h2 class="h6">
+                Aside
+            </h2>
+        </aside>
+
+    </main>
+
+    <footer class="container py-2 bc-dark" data-grid="cell">
+
+        <h2 class="h4">
+            Page Footer
+        </h2>
+        
+    </footer>
+
+    <script src="./dist/js/nyc_core.js"></script>
+    
+</body>
+
+</html>
