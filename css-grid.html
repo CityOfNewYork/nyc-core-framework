@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- IE Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- IE Custom Properties Polyfill -->
+    <script>
+        window.MSInputMethodContext && document.documentMode && document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>',
+            '<script defer src="./dist/js/nyc_core_ie.js"><\x2fscript>'                
+        );
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>CSS Grid • NYC Core Framework</title>
+
+    <!-- Font Awesome Kit -->
+    <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
+
+    <!-- Theme Stylesheets -->
+    <link rel="stylesheet" href="./dist/css/nyc_core.css">
+
+</head>
+
+<body>
+
+    <main id="skip-header-content" role="main">
+
+        <div class="overflow-hidden">
+
+            <div class="my-5">
+
+                <div class="container t-center">
+                    <h1>CSS Grid</h1>
+                </div>
+
+                <figure class="container medium my-4 d-none">
+
+                    <div class="grid-container-01">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
+                    </div>
+
+                </figure>
+
+                <figure class="container medium my-4">
+
+                    <div class="grid-container-01">
+                        <div class="item bc-primary">1</div>
+                        <div class="item bc-secondary">2</div>
+                        <div class="item rounded">
+                            <div class="backdrop backdrop--fixed bc-secondary" style="--backdrop-fixed-height: 100%; height: 100%;">
+                                <img class="backdrop__image opacity-40" src="./images/backdrop-example-01.jpg"
+                                    alt="Placeholder">
+                                <div class="backdrop__cover">
+                                    <div class="container my-3 t-center">
+                                        <a href="#1" class="h3">Title Link</a>
+                                    </div>
+                                </div>
+                                <!-- cover -->
+                            </div>
+                            <!-- .backdrop-fixed -->
+                        </div>
+                        <div class="item bc-primary">
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="backdrop backdrop--fixed bc-dark" style="--backdrop-fixed-height: 100%; height: 100%;">
+                                <img class="backdrop__image opacity-40" src="./images/backdrop-example-03.jpg" alt="Placeholder">
+                                <div class="backdrop__cover">
+                                    <div class="container my-3 t-center">
+                                        <a href="#1" class="h3">Title Link</a>
+                                    </div>
+                                </div>
+                                <!-- cover -->
+                            </div>
+                            <!-- .backdrop-fixed -->
+                        </div>
+                        <div class="item bc-secondary">9</div>
+                        <div class="item bc-dark">10</div>
+                    </div>
+
+                </figure>
+
+                
+
+
+            </div>
+            <!-- .my-4 -->
+
+        </div>
+        <!-- .container -->
+        
+    </main>
+
+    <script src="./dist/js/nyc_core.js"></script>
+
+</body>
+
+</html>

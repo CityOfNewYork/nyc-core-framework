@@ -116,9 +116,10 @@ screen and (-ms-high-contrast: none) {
     .backdrop--fixed {
         overflow: hidden;
         min-height: auto;
+        height: 100%;
 
         .backdrop__cover {
-            min-height: var(--backdrop-fixed-height);
+            // min-height: var(--backdrop-fixed-height);
             display: flex;
 
             > * {
