@@ -36,14 +36,15 @@
     </header>
     <!-- #global-header -->
 
-    <main class="bc-light" id="skip-header-content" role="main" data-grid="article-two-column">
+    <main class="bc-light css-grid-col-6 css-grid-row-6" id="skip-header-content" role="main">
         
         <h2 class="h4 sr-only">
             Page Main
         </h2>
 
-        <header>
-            <div class="backdrop backdrop--fixed bc-dark">
+        <header class="bc-dark" style="grid-row: 1 / 3; grid-column: 1 / 13">
+
+            <div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 100%;">
 
                 <img class="backdrop__image opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
 
@@ -69,7 +70,7 @@
             <!-- .backdrop -->
         </header>
 
-        <aside class="bc-secondary" style="position: relative;">
+        <aside class="bc-secondary" style="position: relative; grid-column: 1 / 3; grid-row: 2">
 
             <div class="sticky-top">
                 <ul class="nav nav--divider" role="navigation jc-center">
@@ -87,6 +88,7 @@
 
         </aside>
 
+        <!-- .backdrop
         <article class="container py-2 bc-white">
             <h2 class="h6 sr-only">
                 Article
@@ -184,7 +186,7 @@
             </section>
 
         </article>
-
+ -->
     </main>
 
     <footer class="container py-2 bc-dark" data-grid="cell">

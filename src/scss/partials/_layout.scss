@@ -11,6 +11,14 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
+:root {
+    --grid-col-a-width: 1fr;
+    --grid-col-b-width: 5fr;
+    --grid-col-c-width: 1fr;
+
+    --desktop-bp: 'lg';
+}
+
 //////////////////////////////////////////////
 // B. HTML and Body
 //////////////////////////////////////////////
@@ -49,9 +57,9 @@ body {
 
     [data-grid*="article-two-column"]{
 
-        grid-template-columns: 1fr 6fr; // 2 columns
+        grid-template-columns: var(--grid-col-a-width) var(--grid-col-b-width); // 2 columns
 
-        grid-template-rows: auto minmax(100%, auto) auto; // rows
+        grid-template-rows: auto minmax(100%, auto) auto; // rows possibly remove
 
         header {
             grid-column: 1 / 3;
@@ -69,19 +77,38 @@ body {
     }
 
     [data-grid*="-alternate"] {
+        
+        grid-template-columns: var(--grid-col-b-width) var(--grid-col-a-width);
 
         header {
-            grid-column: 2 / 3;
+            grid-column: 1 / 2;
         }
 
         aside {
-            grid-column: 1 / 2;
+            grid-column: 2 / 3;
             grid-row: 1 / 3;
         }
 
         article {
-            grid-column: 2 / 3;
+            grid-column: 1 / 2;
             grid-row: 2;
         }
     }
+}
+
+//////////////////////////////////////////////
+// C. Grid Classes
+//////////////////////////////////////////////
+
+[class*="css-grid-"] {
+    display: grid;
+    border:12px solid red;
+    grid-template-rows: auto; // 6 rows
+    grid-template-columns: repeat(12, 1fr); // 6 col
+}
+
+.css-grid-row-6{
+}
+
+.css-grid-col-6{
 }
