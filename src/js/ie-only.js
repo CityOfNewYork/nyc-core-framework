@@ -42,17 +42,18 @@ window.onload = () => {
         // // Create Image Placeholder
         const backdropImagePlaceholder = document.createElement('div');
 
-        backdrop.insertBefore(backdropContent, backdropImagePlaceholder);
+        backdrop.insertBefore(backdropImagePlaceholder, backdropImage);
 
-        // for (const myClass of backdropImageClassList) {
-
-        // }
-        // backdropImagePlaceholder.classList.add(backdropImageClasses);
+        for (const myClass of backdropImageClassList) {
+                backdropImagePlaceholder.classList.add(myClass);
+            if (myClass != 'backdrop__image'){
+            }
+        }
 
         // console.log(backdropImageClassList);
-        backdrop.style.backgroundImage = "url(" + backdropImageSrc + ")";
+        backdropImagePlaceholder.style.backgroundImage = "url(" + backdropImageSrc + ")";
 
-        // backdropImage.style.display = "none";
+        backdropImage.style.display = "none";
 
 
         if ( backdrop.parentNode.classList.contains('h-100') ) {
