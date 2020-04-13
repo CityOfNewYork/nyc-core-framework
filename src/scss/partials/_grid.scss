@@ -44,7 +44,7 @@ $columns: 12;
     margin-right: calc(-0.5 * var(--gap-size));
     margin-left: calc(-0.5 * var(--gap-size));
 
-    >[class*="grid__col"] {
+    > [class*="grid__col"] {
         margin-top: var(--gap-size);
         padding-left: calc(0.5 * var(--gap-size));
         padding-right: calc(0.5 * var(--gap-size));
@@ -114,4 +114,186 @@ $columns: 12;
             width: auto;
         }
     }
+}
+
+
+//////////////////////////////////////////////
+// E. Create Column Classes
+//////////////////////////////////////////////
+
+.css-grid {
+    background-color: rgba(yellow, 0.25);
+    display: grid;
+}
+
+// Grid Column Start
+
+.col-s-1 {
+    grid-column-start: 1;
+}
+
+.col-s-2 {
+    grid-column-start: 2;
+}
+
+.col-s-3 {
+    grid-column-start: 3;
+}
+
+.col-s-4 {
+    grid-column-start: 4;
+}
+
+.col-s-5 {
+    grid-column-start: 5;
+}
+
+.col-s-6 {
+    grid-column-start: 6;
+}
+
+.col-s-7 {
+    grid-column-start: 7;
+}
+
+// Grid Column End
+
+.col-e-1 {
+    grid-column-end: 1;
+}
+
+.col-e-2 {
+    grid-column-end: 2;
+}
+
+.col-e-3 {
+    grid-column-end: 3;
+}
+
+.col-e-4 {
+    grid-column-end: 4;
+}
+
+.col-e-5 {
+    grid-column-end: 5;
+}
+
+.col-e-6 {
+    grid-column-end: 6;
+}
+
+.col-e-7 {
+    grid-column-end: 7;
+}
+
+// Template Columns
+
+.css-grid--cols-2 {
+    grid-template-columns: 1fr 1fr;
+
+    &:nth-child(1) {
+        grid-column: 1 / 2;
+    }
+
+    &:nth-child(2) {
+        grid-column: 2 / 2;
+    }
+}
+
+.css-grid--cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.css-grid--cols-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.css-grid--cols-5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.css-grid--cols-6 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+// Template Rows
+
+.css-grid--rows-2 {
+    grid-template-rows: 1fr 1fr;
+}
+
+.css-grid--rows-3 {
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.css-grid--rows-4 {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.css-grid--rows-5 {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.css-grid--rows-6 {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+// Grid Column Start
+
+.row-s-1 {
+    grid-row-start: 1;
+}
+
+.row-s-2 {
+    grid-row-start: 2;
+}
+
+.row-s-3 {
+    grid-row-start: 3;
+}
+
+.row-s-4 {
+    grid-row-start: 4;
+}
+
+.row-s-5 {
+    grid-row-start: 5;
+}
+
+.row-s-6 {
+    grid-row-start: 6;
+}
+
+.row-s-7 {
+    grid-row-start: 7;
+}
+
+// Grid Column End
+
+.row-e-1 {
+    grid-row-end: 1;
+}
+
+.row-e-2 {
+    grid-row-end: 2;
+}
+
+.row-e-3 {
+    grid-row-end: 3;
+}
+
+.row-e-4 {
+    grid-row-end: 4;
+}
+
+.row-e-5 {
+    grid-row-end: 5;
+}
+
+.row-e-6 {
+    grid-row-end: 6;
+}
+
+.row-e-7 {
+    grid-row-end: 7;
 }
