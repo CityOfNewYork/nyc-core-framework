@@ -5,10 +5,10 @@ window.onload = () => {
     // A. CSS Grid
     //////////////////////////////////////////////
 
-    // element that will be wrapped
     var itemList = document.querySelectorAll('.item');
 
     for (const item of itemList) {
+
         item.classList.remove('item');
         item.classList.add('h-100');
 
@@ -21,6 +21,47 @@ window.onload = () => {
 
         // move el into grid_cell_wrapper
         grid_cell_wrapper.appendChild(item);
+    }
+
+
+    //////////////////////////////////////////////
+    // B. Backdrops
+    //////////////////////////////////////////////
+
+    var backdropFixedList = document.querySelectorAll('.backdrop--fixed');
+
+    for (const backdrop of backdropFixedList) {
+
+        let backdropContent = backdrop.querySelector('.backdrop__cover');
+        let backdropContentHeight = backdropContent.scrollHeight + "px";
+
+        let backdropImage = backdrop.querySelector('.backdrop__image');
+        let backdropImageSrc = backdropImage.src;
+        let backdropImageClassList = backdropImage.classList;
+
+        // // Create Image Placeholder
+        const backdropImagePlaceholder = document.createElement('div');
+
+        backdrop.insertBefore(backdropContent, backdropImagePlaceholder);
+
+        // for (const myClass of backdropImageClassList) {
+
+        // }
+        // backdropImagePlaceholder.classList.add(backdropImageClasses);
+
+        // console.log(backdropImageClassList);
+        backdrop.style.backgroundImage = "url(" + backdropImageSrc + ")";
+
+        // backdropImage.style.display = "none";
+
+
+        if ( backdrop.parentNode.classList.contains('h-100') ) {
+            backdrop.style.height = "100%";
+        } else {
+            backdrop.style.height = backdropContentHeight;
+        }
+            
+
     }
 
 };
