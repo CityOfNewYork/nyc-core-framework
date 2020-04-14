@@ -116,14 +116,13 @@ $columns: 12;
     }
 }
 
-
 //////////////////////////////////////////////
 // E. Create Column Classes
 //////////////////////////////////////////////
 
 .css-grid-layout {
     --col-1-w: 1fr;
-    --col-2-w: 3fr;
+    --col-2-w: 600px;
     --col-3-w: 1fr;
 
     display: grid;
@@ -133,16 +132,31 @@ $columns: 12;
         border:2px solid blue !important;
         padding: var(--s2);
     }
-    
-    grid-template-columns: 
-        var(--col-1-w) 
-        var(--col-2-w) 
+
+    grid-template-columns:
+        var(--col-1-w)
+        var(--col-2-w)
         var(--col-3-w);
-    
+
     grid-template-areas: 
         "header header header"
         "sidebar-01 main sidebar-02"
         "footer footer footer";
+
+    @supports ( display: grid ) {
+        @include breakpoint-down(lg) {
+            
+            grid-template-columns: auto;
+
+            grid-template-areas: 
+                "header"
+                "sidebar-02"
+                "main"
+                "sidebar-01"
+                "footer";
+        }
+    }
+
 }
 
 .header{
