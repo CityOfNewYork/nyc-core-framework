@@ -5,23 +5,31 @@ window.onload = () => {
     // A. CSS Grid
     //////////////////////////////////////////////
 
-    var itemList = document.querySelectorAll('.item');
+    // var gridCellList = document.querySelectorAll('main[data-grid] > *');
 
-    for (const item of itemList) {
+    // for (const gridCell of gridCellList) {
 
-        item.classList.remove('item');
-        item.classList.add('h-100');
+    //     // cell.classList.remove('cell');
+    //     // cell.classList.add('h-100');
 
-        // create wrapper container
-        const grid_cell_wrapper = document.createElement('div');
-        grid_cell_wrapper.classList.add('item');
+    //     // cell.data-grid__cell
 
-        // insert grid_cell_wrapper before el in the DOM tree
-        item.parentNode.insertBefore(grid_cell_wrapper, item);
+    //     let dataGridAttribute = gridCell.getAttribute("data-grid");
 
-        // move el into grid_cell_wrapper
-        grid_cell_wrapper.appendChild(item);
-    }
+    //     gridCell.removeAttribute("data-grid");
+
+    //     // create wrapper container
+    //     const grid_cell_wrapper = document.createElement('div');
+    //     grid_cell_wrapper.classList.add('data-grid__cell');
+
+    //     grid_cell_wrapper.setAttribute("data-grid", dataGridAttribute);
+
+    //     // insert grid_cell_wrapper before el in the DOM tree
+    //     gridCell.parentNode.insertBefore(grid_cell_wrapper, gridCell);
+
+    //     // move el into grid_cell_wrapper
+    //     grid_cell_wrapper.appendChild(gridCell);
+    // }
 
 
     //////////////////////////////////////////////
