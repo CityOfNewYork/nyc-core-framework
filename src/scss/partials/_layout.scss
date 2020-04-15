@@ -42,8 +42,8 @@ body {
 //////////////////////////////////////////////
 
 [data-grid="article-two-column"] {
-    --col-1-w: 1fr;
-    --col-2-w: 5fr;
+    --col-1-w: 280px;
+    --col-2-w: 1fr;
 
     display: grid;
     grid-template-columns: var(--col-1-w) var(--col-2-w);
