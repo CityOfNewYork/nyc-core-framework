@@ -33,21 +33,85 @@ body {
     > main {
         flex-grow: 1;
         flex-shrink: 1;
-        overflow: hidden;
     }
+}
+
+//////////////////////////////////////////////
+// B. Nav Bar Right
+//////////////////////////////////////////////
+
+[data-grid="nav-bar"]{
+    display: grid;
+    grid-template-columns: auto fit-content(1em) fit-content(1em);
+    align-items: center;
+
+    grid-template-areas:
+        "logo nav actions";
+
+    > [data-grid="brand"] {
+        grid-area: logo;
+    }
+
+    > [data-grid="nav"] {
+        grid-area: nav;
+    }
+
+    > [data-grid="actions"] {
+        grid-area: actions;
+    }
+
+    @include breakpoint-up(lg) {
+
+        > [data-grid="nav"] {
+            display: flex;
+            height: 100%;
+
+            .nav > li {
+                display: flex;
+                height: 100%;
+            }
+
+            .nav > li > a {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            margin-right: var(--s2);
+        }
+    }
+
+    // Mobile 
+
+    @supports (display: grid) {
+        @include breakpoint-down(lg) {
+
+            grid-template-columns: auto fit-content(1em);
+
+            grid-template-areas:
+                "logo actions"
+                "nav nav";
+        }
+    }
+
 }
 
 //////////////////////////////////////////////
 // B. Article Two Column
 //////////////////////////////////////////////
 
+//////////////////////////////////////////////
+// B. Article Two Column
+//////////////////////////////////////////////
+
+[data-grid="article-two-column"],
+[data-grid="article-two-column"] > [data-grid="header"] {
+    display: grid; 
+    grid-template-columns: var(--aside-w) var(--main-w);
+}
 
 [data-grid="article-two-column"] {
-    --col-1-w: 280px;
-    --col-2-w: 1fr;
-
-    display: grid;
-    grid-template-columns: var(--col-1-w) var(--col-2-w);
+    --aside-w: 280px;
+    --main-w: 1fr;
 
     grid-template-areas:
         "header header"
@@ -56,10 +120,6 @@ body {
 
     > [data-grid="header"] {
         grid-area: header;
-
-        // match column widths
-        display: grid;
-        grid-template-columns: var(--col-1-w) var(--col-2-w);
         
         .backdrop__image{
             grid-column: 1 / 3;
@@ -78,7 +138,7 @@ body {
         grid-area: main;
     }
 
-    // Mobile
+    // Mobile 
 
     @supports (display: grid) {
         @include breakpoint-down(lg) {

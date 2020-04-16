@@ -31,56 +31,44 @@
      
     <header class="bc-white mb-3" id="global-header" role="banner">
 
-        <div class="bc-dark container py-2 fs-md" id="nyc-head">
-            <div class="grid jc-between">
-                <div class="grid__col-auto">
-                    <ul class="nav--gap-xs horizontal">
-                        <li class="d-none">
-                            <a href="#1">
-                            <strong>
-                                NYC.gov
-                            </strong> 
-                            </a>
-                        </li>
-                        <li class="d-none" aria-hidden="true">
-                            |
-                        </li>
-                        <li>
-                            Name of Office
-                        </li>
-                    </ul>
+        <div class="bc-dark container py-1 fs-md" id="nyc-head">
+
+            <div class="grid grid--cols-auto jc-between">
+
+                <div class="grid__col">
+                    Name of Office
                 </div>
                 <!-- .grid__col -->
 
-                <div class="grid__col-auto">
+                <div class="grid__col">
 
-                <ul class="nav--gap-sm horizontal">
-                    <li>
-                        <a href="#1">
-                            <strong>
-                                311
-                            </strong> 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#1">
-                            <strong>
-                                Search all NYC.gov
-                            </strong>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#1" data-logo="brand">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="15" viewBox="0 0 45 15">
-                                <title>nyc-bubble-logo-sm</title>
-                                <g>
-                                    <polygon points="44.063 6.551 45 5.625 45 2.813 42.188 0 32.813 0 30 2.813 30 0.938 29.063 0 25.313 0 24.375 0.938 24.375 2.813 22.5 4.688 20.625 2.813 20.625 0.938 19.688 0 15.938 0 15 0.938 14.063 0 10.312 0 9.375 0.938 9.375 4.688 4.687 0 0.937 0 0 0.938 0 14.062 0.937 15 4.687 15 5.625 14.062 5.625 10.312 10.312 15 14.063 15 15 14.062 15 6.563 19.688 11.25 19.688 14.062 20.625 15 24.375 15 25.313 14.062 25.313 11.25 30 6.563 30 12.187 32.813 15 42.188 15 45 12.187 45 9.375 44.063 8.437 39.375 8.437 39.375 9.375 35.625 9.375 35.625 5.625 39.375 5.625 39.375 6.551 44.063 6.551"/>
-                                    <path d="M44.3325.6338c.09,0,.165,0,.165-.1125S44.415.4238,44.3438.4238H44.205v.21Zm-.1275.4012h-.12V.3263h.27c.1725,0,.2588.06.2588.2025A.18.18,0,0,1,44.45.7234l-.0047,0h0l.1988.3112h-.1426L44.3137.75H44.205Zm.1238-.8962a.5023.5023,0,0,0-.495.5025V.6675a.4927.4927,0,1,0,.9825.075.2548.2548,0,0,0,0-.075.495.495,0,0,0-.4575-.5287h-.03m0,1.17a.6189.6189,0,0,1-.63-.6V.6675a.63.63,0,1,1,1.26-.0225V.6675a.6224.6224,0,0,1-.6031.6412h-.0269"/>
-                                </g>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                    <ul class="nav nav--gap-1 nav--horizontal">
+                        <li>
+                            <a href="#1">
+                                <strong>
+                                    311
+                                </strong> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#1">
+                                <strong>
+                                    Search all NYC.gov
+                                </strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#1" data-logo="brand">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="15" viewBox="0 0 45 15">
+                                    <title>nyc-bubble-logo-sm</title>
+                                    <g>
+                                        <polygon points="44.063 6.551 45 5.625 45 2.813 42.188 0 32.813 0 30 2.813 30 0.938 29.063 0 25.313 0 24.375 0.938 24.375 2.813 22.5 4.688 20.625 2.813 20.625 0.938 19.688 0 15.938 0 15 0.938 14.063 0 10.312 0 9.375 0.938 9.375 4.688 4.687 0 0.937 0 0 0.938 0 14.062 0.937 15 4.687 15 5.625 14.062 5.625 10.312 10.312 15 14.063 15 15 14.062 15 6.563 19.688 11.25 19.688 14.062 20.625 15 24.375 15 25.313 14.062 25.313 11.25 30 6.563 30 12.187 32.813 15 42.188 15 45 12.187 45 9.375 44.063 8.437 39.375 8.437 39.375 9.375 35.625 9.375 35.625 5.625 39.375 5.625 39.375 6.551 44.063 6.551"/>
+                                        <path d="M44.3325.6338c.09,0,.165,0,.165-.1125S44.415.4238,44.3438.4238H44.205v.21Zm-.1275.4012h-.12V.3263h.27c.1725,0,.2588.06.2588.2025A.18.18,0,0,1,44.45.7234l-.0047,0h0l.1988.3112h-.1426L44.3137.75H44.205Zm.1238-.8962a.5023.5023,0,0,0-.495.5025V.6675a.4927.4927,0,1,0,.9825.075.2548.2548,0,0,0,0-.075.495.495,0,0,0-.4575-.5287h-.03m0,1.17a.6189.6189,0,0,1-.63-.6V.6675a.63.63,0,1,1,1.26-.0225V.6675a.6224.6224,0,0,1-.6031.6412h-.0269"/>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
 
                 </div>
                 <!-- .grid__col -->
@@ -88,12 +76,13 @@
             </div>
             <!-- .grid -->
         </div>
+        <!-- #nyc-head -->
 
         <div class="container">
 
             <div class="grid">
 
-                <div class="grid__col-auto py-3">
+                <div class="grid__col-auto py-2">
 
                     <a href="#1" title="Home" data-logo="brand">
 
@@ -119,7 +108,7 @@
 
                 <div class="grid__col-auto ml-auto m-0--lg order-3--lg d-flex">
 
-                    <ul class="nav--gap-xs fs-md horizontal jc-end" role="list">
+                    <ul class="nav nav--gap-1 nav--horizontal jc-end" role="list">
                         <li>
                             <a class="btn--icon-only" href="#1" title="Language">
                                 <span class="sr-only">Language</span>
@@ -145,11 +134,10 @@
 
                 <nav class="grid__col-auto--lg ml-auto--lg mr-3--lg order-2--lg collapse d-flex--lg" id="primary-nav-01" role="navigation">
 
-                    <ul class="nav horizontal--lg jc-end--lg p-3 mx-n3 p-0--lg mx-0--lg border-t border-0--lg"
-                        role="list">
+                    <ul class="nav nav--horizontal--lg jc-end--lg p-3 p-0--lg mx-n3 mx-0--lg border-t border-0--lg" role="list">
                         <li class="h-100 d-flex--lg">
                             <a class="my-auto" href="#1" data-toggle="dropdown">Dropdown</a>
-                            <ul class="box-shadow-sm--lg fs-md">
+                            <ul class="box-shadow-1--lg">
                                 <li>
                                     <a href="#1">Link</a>
                                 </li>
@@ -163,7 +151,7 @@
                         </li>
                         <li class="h-100 d-flex--lg">
                             <a class="my-auto" href="#1" data-toggle="dropdown">Dropdown</a>
-                            <ul class="box-shadow-sm--lg fs-md">
+                            <ul class="box-shadow-1--lg">
                                 <li>
                                     <a href="#1">Link</a>
                                 </li>
@@ -177,7 +165,7 @@
                         </li>
                         <li class="h-100 d-flex--lg">
                             <a class="my-auto" href="#1" data-toggle="dropdown">Dropdown</a>
-                            <ul class="box-shadow-sm--lg fs-md">
+                            <ul class="box-shadow-1--lg">
                                 <li>
                                     <a href="#1">Link</a>
                                 </li>
