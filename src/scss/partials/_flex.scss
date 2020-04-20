@@ -15,8 +15,8 @@ In this file:
 //////////////////////////////////////////////
 
 [class*="flex-"],
-[class*="column-"],
-[class*="row-"] {
+[class*="-column"],
+[class*="-row"] {
     display: flex;
     flex-wrap: wrap;
 }

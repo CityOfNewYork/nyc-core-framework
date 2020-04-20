@@ -98,7 +98,6 @@ button,
 //////////////////////////////////////////////
 
 [class*="btn--has-icon"] {
-
     &:hover,
     &:focus{
         .btn__text {
@@ -114,9 +113,9 @@ button,
 
 .btn--has-icon--disperse {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 //////////////////////////////////////////////
