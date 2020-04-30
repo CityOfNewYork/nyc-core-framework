@@ -82,8 +82,7 @@ $columns: 12;
         }
 
         .grid--cols-auto#{$mod} > [class*="grid__cell"]{
-                flex: none;
-                // width: auto;
+            flex: none;
         }
 
         @for $i from 1 through $columns {
