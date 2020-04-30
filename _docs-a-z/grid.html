@@ -5,65 +5,316 @@ title: "Grid"
 
 <div class="container narrow my-4">
     <p>
-        A familiar twelve column grid that works consistently across browsers. Lorem ipsum dolor, sit amet consectetur adipisicing.
+        A traditional 12 column flexbox grid that works consistently across browsers, including Internet Explorer 11.
     </p>
 </div>
 <!-- .container -->
+
+<figure class="container medium my-4">
+
+    <div class="grid grid--gap-border fs-md t-center">
+
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    1
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    2
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    3
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    4
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    5
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    6
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    7
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+        
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    8
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+        
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    9
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+        
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    10
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+        
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    11
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+        <div class="grid__col-1">
+            <div class="bc-light px-1 py-2">
+                <p>
+                    12
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-1">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    1
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-11">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    11
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-2">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    2
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-10">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    10
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-3">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    3
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-9">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    9
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-4">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    4
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-8">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    8
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-5">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    5
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-7">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    7
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-6">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    6
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+        <div class="grid__col-6">
+            <div class="bc-secondary px-1 py-2">
+                <p>
+                    6
+                </p>
+            </div>
+        </div>
+        <!-- col -->
+
+    </div>
+    <!-- .grid -->
+
+</figure>
 
 <hr class="my-5">
 
 <div class="container narrow my-4">
 
-    <h2>Responsive Columns</h2>
+    <h2>Grid Selector Classes</h2>
 
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, fugit doloribus. Quis minus vitae enim
-        eligendi modi impedit reiciendis molestiae.
+        Grids require a parent selector with a class of <code>.grid</code>, and a child (or children) with a class of
+        <code>.grid__col</code>.
+
+        <!-- Columns are 100% wide until otherwise specified. -->
     </p>
 
 </div>
 <!-- .container -->
 
-<figure class="container medium my-4" {{ site.style_default_theme_colors }}>
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="grid"&gt;
+                
+                &lt;div class="grid__col"&gt;
+                    &lt;!-- ... --&gt;
+                &lt;/div&gt;
 
-    <div class="grid grid--cols--md fs-md t-center tc-secondary">
+                &lt;div class="grid__col"&gt;
+                    &lt;!-- ... --&gt;
+                &lt;/div&gt;
 
-        <div class="grid__cell">
-            <div class="aspect-ratio--3by2 border border-secondary">
-                <div class="aspect-ratio__element d-flex">
-                    <div class="p-2 w-100 as-center">
-                        <p>Column</p>
-                    </div>
-                </div>
+                &lt;div class="grid__col"&gt;
+                    &lt;!-- ... --&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 1 - Example HTML for a grid with three columns.</p>
+    </figcaption>
+</figure>
+
+<hr class="my-5">
+
+<div class="container narrow my-4">
+
+    <h2>Column Width</h2>
+
+    <p>
+        Grid columns occupy 100% of the available width (stacked one above another) until otherwise specified. For
+        equal-width columns, add the <code>.grid--cols</code> modifier to the <code>.grid</code> selector. This class distributes its child columns
+        evenly based on the number of columns present. With three columns present in the example below, columns are
+        divided into thirds.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
+
+    <div class="grid grid--gap-1 grid--cols fs-md t-center tc-secondary">
+
+        <div class="grid__col">
+            <div class="bc-primary px-1 py-2">
+                <p>Auto</p>
             </div>
         </div>
-        <!-- .grid__cell -->
+        <!-- .grid__col -->
 
-        <div class="grid__cell">
-            <div class="aspect-ratio--3by2 border border-secondary">
-                <div class="aspect-ratio__element">
-                    <div class="aspect-ratio__element d-flex">
-                        <div class="p-2 w-100 as-center">
-                            <p>Column</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="grid__col">
+            <div class="bc-primary px-1 py-2">
+                <p>Auto</p>
             </div>
         </div>
-        <!-- .grid__cell -->
+        <!-- .grid__col -->
 
-        <div class="grid__cell">
-            <div class="aspect-ratio--3by2 border border-secondary">
-                <div class="aspect-ratio__element">
-                    <div class="aspect-ratio__element d-flex">
-                        <div class="p-2 w-100 as-center">
-                            <p>Column</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="grid__col">
+            <div class="bc-primary px-1 py-2">
+                <p>Auto</p>
             </div>
         </div>
-        <!-- .grid__cell -->
+        <!-- .grid__col -->
 
     </div>
     <!-- .grid -->
@@ -71,11 +322,49 @@ title: "Grid"
 </figure>
 <!-- .container -->
 
+<figure class="container narrow my-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="grid grid--cols"&gt;
+                
+                &lt;div class="grid__col"&gt;
+                    &lt;!-- ... --&gt;
+                &lt;/div&gt;
+
+                &lt;div class="grid__col"&gt;
+                    &lt;!-- ... --&gt;
+                &lt;/div&gt;
+
+                &lt;div class="grid__col"&gt;
+                    &lt;!-- ... --&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 1 - Example HTML for a simple grid with three columns.</p>
+    </figcaption>
+</figure>
+
 <div class="container narrow my-4">
 
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, fugit doloribus. Quis minus vitae enim
-        eligendi modi impedit reiciendis molestiae.
+        Specific widths can be applied to individual columns. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolor quam maiores distinctio blanditiis quas architecto dolore explicabo ratione numquam. 
+    </p>
+
+</div>
+<!-- .container -->
+
+<hr class="my-5">
+
+<div class="container narrow my-4">
+
+    <h2>Grid Gaps</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Autem dolor quam maiores distinctio blanditiis quas architecto dolore explicabo ratione numquam.
     </p>
 
 </div>
@@ -85,23 +374,23 @@ title: "Grid"
 
     <div class="t-center">
 
-        <div class="my-2">
+        <div class="overflow-hidden my-2 bc-light">
 
             <div class="grid grid--cols grid--gap-border fs-md">
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-border</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-border</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
             </div>
             <!-- .grid -->
@@ -109,23 +398,23 @@ title: "Grid"
         </div>
         <!-- .my-2 -->
 
-        <div class="my-2">
+        <div class="overflow-hidden my-2 bc-light">
 
             <div class="grid grid--cols grid--gap-1 fs-md t-center tc-secondary">
 
-               <div class="grid__cell">
-                   <div class="p-2 bc-secondary">
+               <div class="grid__col">
+                   <div class="bc-primary px-1 py-2">
                        <p>.grid--gap-1</p>
                    </div>
                </div>
-               <!-- .grid__cell -->
+               <!-- .grid__col -->
 
-               <div class="grid__cell">
-                   <div class="p-2 bc-secondary">
+               <div class="grid__col">
+                   <div class="bc-primary px-1 py-2">
                        <p>.grid--gap-1</p>
                    </div>
                </div>
-               <!-- .grid__cell -->
+               <!-- .grid__col -->
 
             </div>
             <!-- .grid -->
@@ -133,23 +422,23 @@ title: "Grid"
         </div>
         <!-- .my-2 -->
 
-        <div class="my-2">
+        <div class="overflow-hidden my-2 bc-light">
 
             <div class="grid grid--cols grid--gap-2 fs-md t-center tc-secondary">
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-2</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-2</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
             </div>
             <!-- .grid -->
@@ -157,23 +446,23 @@ title: "Grid"
         </div>
         <!-- .my-2 -->
 
-        <div class="my-2">
+        <div class="overflow-hidden my-2 bc-light">
 
             <div class="grid grid--cols grid--gap-3 fs-md t-center tc-secondary">
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-3</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-3</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
             </div>
             <!-- .grid -->
@@ -181,23 +470,23 @@ title: "Grid"
         </div>
         <!-- .my-2 -->
 
-        <div class="my-2">
+        <div class="overflow-hidden my-2 bc-light">
 
             <div class="grid grid--cols grid--gap-4 fs-md t-center tc-secondary">
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-4</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-4</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
             </div>
             <!-- .grid -->
@@ -205,24 +494,23 @@ title: "Grid"
         </div>
         <!-- .my-2 -->
 
-
-        <div class="my-2">
+        <div class="overflow-hidden my-2 bc-light">
 
             <div class="grid grid--cols grid--gap-5 fs-md t-center tc-secondary">
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-5</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
-                <div class="grid__cell">
-                    <div class="p-2 bc-secondary">
+                <div class="grid__col">
+                    <div class="bc-primary px-1 py-2">
                         <p>.grid--gap-5</p>
                     </div>
                 </div>
-                <!-- .grid__cell -->
+                <!-- .grid__col -->
 
             </div>
             <!-- .grid -->
@@ -244,53 +532,6 @@ title: "Grid"
     </p>
 
 </div>
-<!-- .container -->
-
-<figure class="container medium my-4" {{ site.style_default_theme_colors }}>
-
-    <div class="grid grid--cols--md fs-md t-center tc-secondary">
-
-        <div class="grid__cell">
-            <div class="aspect-ratio--3by2 border border-secondary">
-                <div class="aspect-ratio__element d-flex">
-                    <div class="p-2 w-100 as-center">
-                        <p>Column</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- .grid__cell -->
-
-        <div class="grid__cell">
-            <div class="aspect-ratio--3by2 border border-secondary">
-                <div class="aspect-ratio__element">
-                    <div class="aspect-ratio__element d-flex">
-                        <div class="p-2 w-100 as-center">
-                            <p>Column</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- .grid__cell -->
-
-        <div class="grid__cell">
-            <div class="aspect-ratio--3by2 border border-secondary">
-                <div class="aspect-ratio__element">
-                    <div class="aspect-ratio__element d-flex">
-                        <div class="p-2 w-100 as-center">
-                            <p>Column</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- .grid__cell -->
-
-    </div>
-    <!-- .grid -->
-
-</figure>
 <!-- .container -->
 
 
