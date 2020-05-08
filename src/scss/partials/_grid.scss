@@ -39,11 +39,13 @@ $columns: 12;
 
 [class*="grid__cell"] {
 
-    > .grid:not([class*="cols"]) {
+    > .grid:not([class*="cols-"]) {
+        flex-direction: column;
+        width: 100%;
         height: calc(100% + var(--gap-size));
 
         > [class*="grid__cell"]{
-            flex-grow: 1;
+            flex: 1;
         }
     }
 }
