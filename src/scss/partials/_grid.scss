@@ -16,10 +16,6 @@ In this file:
 
 $columns: 12;
 
-:root{
-    --column-min-width: 200px;
-}
-
 //////////////////////////////////////////////
 // B. Grid Configuration
 //////////////////////////////////////////////
@@ -41,11 +37,11 @@ $columns: 12;
 
     > .grid:not([class*="cols-"]) {
         flex-direction: column;
-        width: 100%;
         height: calc(100% + var(--gap-size));
 
-        > [class*="grid__cell"]{
+        > [class*="grid__cell"]:not([class*="grid__cell-"]) {
             flex: 1;
+            width: 100%;
         }
     }
 }
@@ -86,16 +82,16 @@ $columns: 12;
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .grid--cols-auto#{$mod} > [class*="grid__cell"] {
-            flex: 1 var(--column-min-width);
+        .grid--cells-fill#{$mod} > [class*="grid__cell"] {
+            flex: 1;
         }
 
-        .grid--cols-fit#{$mod} > [class*="grid__cell"]{
+        .grid--cells-fit#{$mod} > [class*="grid__cell"]{
             flex: none;
         }
         
         @for $i from 1 through $columns {
-            .grid--cols-#{$i}#{$mod} > [class*="grid__cell"] {
+            .grid--cells-#{$i}#{$mod} > [class*="grid__cell"] {
                 flex: 0 0 100% / $columns * $i;
                 max-width: 100% / $columns * $i;
             }
