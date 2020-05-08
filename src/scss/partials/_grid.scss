@@ -20,10 +20,11 @@ $columns: 12;
 // B. Grid Configuration
 //////////////////////////////////////////////
 
-.grid:not([class*="__col"]) {
+.grid {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    position: relative;
+    min-width: 100%;
 }
 
 [class*="grid__cell"]{
@@ -31,18 +32,29 @@ $columns: 12;
     max-width: 100%;
 }
 
+[class*="grid__cell"] {
+
+    > .grid:not([class*="cols-"]) {
+        height: calc(100% + var(--gap-size));
+
+        > [class*="grid__cell"]:not([class*="grid__cell-"]) {
+            width: 100%;
+        }
+    }
+}
+
 //////////////////////////////////////////////
 // B. Grid gap
 //////////////////////////////////////////////
 
 [class*="grid--gap"] {
-    --gap-size: var(0);
+    --gap-size: 0;
 
     margin-top: calc(-1 * var(--gap-size));
     margin-right: calc(-0.5 * var(--gap-size));
     margin-left: calc(-0.5 * var(--gap-size));
 
-    > * {
+    > [class*="grid__cell"] {
         margin-top: var(--gap-size);
         padding-left: calc(0.5 * var(--gap-size));
         padding-right: calc(0.5 * var(--gap-size));
@@ -65,28 +77,20 @@ $columns: 12;
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
-    $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .cols#{$mod} {
-            [class*="grid__cell"]:not([class*="col-"]) {
-                flex: 1;
-                width: auto;
-            }
+        .grid--cells-fill#{$mod} > [class*="grid__cell"] {
+            flex: 1;
+        }
+
+        .grid--cells-fit#{$mod} > [class*="grid__cell"]{
+            flex: none;
         }
         
-        @for $i from 2 through 6 {
-            .grid--cells-#{$i}#{$mod} {
-                [class*="grid__cell"]:not([class*="col-"]) {
-                    flex: 0 0 100% / $columns * $i;
-                    max-width: 100% / $columns * $i;
-                }
-            }
-        }
-
-        .grid--cells-auto#{$mod} {
-            [class*="grid__cell"] {
-                flex: none;
-                width: auto;
+        @for $i from 1 through $columns {
+            .grid--cells-#{$i}#{$mod} > [class*="grid__cell"] {
+                flex: 0 0 100% / $columns * $i;
+                max-width: 100% / $columns * $i;
             }
         }
 
@@ -95,7 +99,6 @@ $columns: 12;
                 order: $i;
             }
         }
-
     }
 }
 
@@ -108,13 +111,13 @@ $columns: 12;
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         @for $i from 1 through $columns {
-            .grid__cell-#{$i}#{$mod} {
+            .grid > .grid__cell-#{$i}#{$mod} {
                 flex: 0 0 100% / $columns * $i;
                 max-width: 100% / $columns * $i;
             }
         }
 
-        .grid__cell-auto#{$mod} {
+        .grid > .grid__cell-auto#{$mod} {
             flex: none;
             width: auto;
         }

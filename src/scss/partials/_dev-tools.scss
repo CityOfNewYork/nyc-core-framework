@@ -24,7 +24,7 @@ $floating-breakpoints-bar: true;
 
         &::before {
             @extend .sticky-top;
-            @extend .box-shadow-sm;
+            @extend .box-shadow-1;
             font-family: var(--base-font-family);
             display: block;
             color: white;

@@ -37,11 +37,12 @@ In this file:
     @at-root .backdrop__cover {
         overflow: hidden;
         display: flex;
-        align-items: center;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+
+        align-items: center;
 
         > * {
             width: 100%;
@@ -81,7 +82,8 @@ In this file:
 
 .backdrop--fixed {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    
     min-height: var(--backdrop-fixed-height);
 
     > *:not(.backdrop__credit) {
@@ -98,9 +100,6 @@ In this file:
 
     .backdrop__cover {
         position: relative;
-        width: 100%;
-        margin-top: auto;
-        margin-bottom: auto;
     }
     
     @include breakpoint-down(md) {
@@ -114,6 +113,7 @@ In this file:
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
+    
     .backdrop--fixed {
         overflow: hidden;
         min-height: auto;

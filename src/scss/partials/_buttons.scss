@@ -26,11 +26,14 @@ In this file:
     --btn--icon-only-size: 2em;
 }
 
+$btn-opacity-hover: 0.75;
+
 //////////////////////////////////////////////
 // B. Default Button
 //////////////////////////////////////////////
 
 button {
+
     cursor: pointer;
     
     &:not([class]){
@@ -40,11 +43,21 @@ button {
     &[aria-selected=true] {
         font-weight: bold;
     }
+
+    // Ensure Block Full-width
+    &[class*="d-block"] {
+        width: 100%;
+    }
 }
 
 button, 
 .btn{
     @extend .hover-focus;
+
+    &[aria-disabled="true"] {
+        cursor: not-allowed;
+        opacity: $btn-opacity-hover;
+    }
 }
 
 .btn {
@@ -62,7 +75,7 @@ button,
     &:hover, 
     &:focus, 
     &:active {
-        opacity: 0.85;
+        opacity: $btn-opacity-hover;
     }
 
     &:not([class*="--icon-only"]) {
@@ -85,7 +98,6 @@ button,
 //////////////////////////////////////////////
 
 [class*="btn--has-icon"] {
-
     &:hover,
     &:focus{
         .btn__text {
@@ -101,9 +113,9 @@ button,
 
 .btn--has-icon--disperse {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 //////////////////////////////////////////////

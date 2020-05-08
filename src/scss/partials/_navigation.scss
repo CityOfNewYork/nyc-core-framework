@@ -96,6 +96,10 @@ In this file:
 
 }
 
+.nav--gap-0 {
+    --gap-size: 0;
+}
+
 @each $key, $value in $spacers {
     @if ($key != 2) {
         .nav--gap-#{$key} {

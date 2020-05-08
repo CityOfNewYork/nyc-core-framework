@@ -59,7 +59,7 @@ In this file:
             z-index: 5000;
         }
 
-        &:not([class*="-icon"]) {
+        &:not([class*="-icon"]):not([aria-disabled="true"]) {
             text-decoration: underline;
         }
     }

@@ -13,9 +13,11 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
+    --container-padding-x: var(--s2);
+
     --narrow-width: 40rem; // Approximately 55 characters wide
     --medium-width: calc( var(--narrow-width) * 1.5);
-    --wide-width: calc( var(--narrow-width) * 2);
+    --wide-width: calc( var(--narrow-width) * 2.25);
 }
 
 //////////////////////////////////////////////
@@ -23,8 +25,8 @@ In this file:
 //////////////////////////////////////////////
 
 .container {
-    padding-left: var(--s2);
-    padding-right: var(--s2);
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
 }
 
 //////////////////////////////////////////////

@@ -2,11 +2,12 @@
 
 In this file:
 
-// A. Flex Column and Flex Row
-// B. Justify Content
-// C. Align Content
-// D. Align Items
-// E. Align Self
+// A. Flex Direction
+// B. Flex Grow, Shrink, and Fill
+// C. Justify Content
+// D. Align Content
+// E. Align Items
+// F. Align Self
 
 */
 
@@ -14,33 +15,60 @@ In this file:
 // A. Flex Column and Flex Row
 //////////////////////////////////////////////
 
-[class*="flex-"] {
+[class*="flex-"],
+[class*="-column"],
+[class*="-row"] {
     display: flex;
     flex-wrap: wrap;
 }
 
-.flex-row {
-    flex-direction: row;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-// Breakpoint classes for 'flex-direction: row-reverse;'
+// Breakpoint classes for 'flex-direction'
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .column-reverse#{$mod} {
-            flex-direction: column-reverse;
+        .flex-row#{$mod} {
+            flex-direction: row;
+        }
+
+        .flex-column#{$mod} {
+            flex-direction: column;
         }
 
         .row-reverse#{$mod} {
             flex-direction: row-reverse;
         }
+        
+        .column-reverse#{$mod} {
+            flex-direction: column-reverse;
+        }
+
     }
+}
+
+//////////////////////////////////////////////
+// B. Flex Grow, Shrink, and Fill
+//////////////////////////////////////////////
+
+.flex-grow-0 {
+    flex-grow: 0;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+.flex-fill {
+    flex: 1 1 auto;
 }
 
 //////////////////////////////////////////////
@@ -51,23 +79,23 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .jc-start#{$mod} {
+        .justify-content-start#{$mod} {
             justify-content: flex-start;
         }
 
-        .jc-end#{$mod} {
+        .justify-content-end#{$mod} {
             justify-content: flex-end;
         }
 
-        .jc-center#{$mod} {
+        .justify-content-center#{$mod} {
             justify-content: center;
         }
 
-        .jc-between#{$mod} {
+        .justify-content-between#{$mod} {
             justify-content: space-between;
         }
 
-        .jc-around#{$mod} {
+        .justify-content-around#{$mod} {
             justify-content: space-around;
         }
     }
@@ -81,30 +109,30 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .ac-start {
+        .align-content-start {
             align-content: flex-start;
         }
 
-        .ac-end {
+        .align-content-end {
             align-content: flex-end;
         }
 
-        .ac-center {
+        .align-content-center {
             align-content: center;
         }
 
-        .ac-between {
+        .align-content-between {
             align-content: space-between;
         }
 
-        .ac-around {
+        .align-content-around {
             align-content: space-around;
         }
 
-        .ac-stretch {
+        .align-content-stretch {
             align-content: stretch;
         }
-
+        
     }
 }
 
@@ -116,11 +144,11 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .ai-start#{$mod} {
+        .align-items-start#{$mod} {
             align-items: flex-start;
         }
 
-        .ai-end#{$mod} {
+        .align-items-end#{$mod} {
             align-items: flex-end;
         }
 
@@ -128,11 +156,11 @@ In this file:
             align-items: center;
         }
 
-        .ai-baseline#{$mod} {
+        .align-items-baseline#{$mod} {
             align-items: baseline;
         }
 
-        .ai-stretch#{$mod} {
+        .align-items-stretch#{$mod} {
             align-items: stretch !important;
         }
 
@@ -147,27 +175,27 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .as-auto#{$mod} {
+        .align-self-auto#{$mod} {
             align-self: auto;
         }
 
-        .as-start#{$mod} {
+        .align-self-start#{$mod} {
             align-self: flex-start;
         }
 
-        .as-end#{$mod} {
+        .align-self-end#{$mod} {
             align-self: flex-end;
         }
 
-        .as-center#{$mod} {
+        .align-self-center#{$mod} {
             align-self: center;
         }
 
-        .as-baseline#{$mod} {
+        .align-self-baseline#{$mod} {
             align-self: baseline;
         }
 
-        .as-stretch#{$mod} {
+        .align-self-stretch#{$mod} {
             align-self: stretch;
         }
 

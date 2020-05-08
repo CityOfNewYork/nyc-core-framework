@@ -3,7 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Tables
+// B. Table Class
+// C. Right to Left
 
 */
 
@@ -20,7 +21,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// A. Table Class
+// B. Table Class
 //////////////////////////////////////////////
 
 .table {
@@ -92,5 +93,33 @@ In this file:
 .table--va-middle{
     td{
         vertical-align: middle;
+    }
+}
+
+[dir="ltr"] .table--edge {
+    th,
+    td {
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// C. Right to Left
+//////////////////////////////////////////////
+
+[dir="rtl"] .table--edge{
+    th,
+    td {
+        &:first-child {
+            padding-right: 0;
+        }
+        &:last-child {
+            padding-left: 0;
+        }
     }
 }

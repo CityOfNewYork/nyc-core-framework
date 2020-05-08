@@ -22,11 +22,13 @@ In this file:
 // B. Box Shadows
 //////////////////////////////////////////////
 
-[class*="box-shadow"] {
+.box-shadow-1, 
+.box-shadow-2,
+.box-shadow-3 {
     --shadow-opacity: 0;
 
     box-shadow:
-        0 calc(var(--base-shadow-unit) * 0.5) calc(var(--base-shadow-unit) * 1) rgba(0, 0, 0, calc(var(--shadow-opacity) * 1)),
+        0 calc(var(--base-shadow-unit) * 0.25) calc(var(--base-shadow-unit) * 1) rgba(0, 0, 0, calc(var(--shadow-opacity) * 1)),
         0 calc(var(--base-shadow-unit) * 1) calc(var(--base-shadow-unit) * 2) rgba(0, 0, 0, calc(var(--shadow-opacity) * 0.5)),
         0 calc(var(--base-shadow-unit) * 1.5) calc(var(--base-shadow-unit) * 3) rgba(0, 0, 0, calc(var(--shadow-opacity) * 0.25));
 }
@@ -36,17 +38,17 @@ In this file:
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
         
         .box-shadow-1#{$mod} {
-            --base-shadow-unit: 0.5rem;
+            --base-shadow-unit: 0.25rem;
             --shadow-opacity: var(--base-shadow-opacity);
         }
 
         .box-shadow-2#{$mod} {
-            --base-shadow-unit: 1.75rem;
+            --base-shadow-unit: 1rem;
             --shadow-opacity: var(--base-shadow-opacity);
         }
 
         .box-shadow-3#{$mod} {
-            --base-shadow-unit: 2.5rem;
+            --base-shadow-unit: 2rem;
             --shadow-opacity: var(--base-shadow-opacity);
         }
     }
