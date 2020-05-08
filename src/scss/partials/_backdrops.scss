@@ -113,20 +113,20 @@ In this file:
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-
+    
     .backdrop--fixed {
         overflow: hidden;
+        min-height: auto;
 
-        // min-height: auto;
-        // height: auto;
+        .backdrop__cover {
+            min-height: var(--backdrop-fixed-height);
+        }
 
-        div.backdrop__image {
+        .backdrop__image {
             height: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-size: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
