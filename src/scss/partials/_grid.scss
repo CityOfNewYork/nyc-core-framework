@@ -34,6 +34,18 @@ $columns: 12;
 [class*="grid__cell"]{
     flex: 1 1 100%;
     max-width: 100%;
+
+}
+
+[class*="grid__cell"] {
+
+    > .grid:not([class*="cols"]) {
+        height: calc(100% + var(--gap-size));
+
+        > [class*="grid__cell"]{
+            flex-grow: 1;
+        }
+    }
 }
 
 //////////////////////////////////////////////
@@ -41,7 +53,7 @@ $columns: 12;
 //////////////////////////////////////////////
 
 [class*="grid--gap"] {
-    --gap-size: var(0);
+    --gap-size: 0;
 
     margin-top: calc(-1 * var(--gap-size));
     margin-right: calc(-0.5 * var(--gap-size));
