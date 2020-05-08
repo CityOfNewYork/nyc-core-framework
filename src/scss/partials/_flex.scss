@@ -79,23 +79,23 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .jc-start#{$mod} {
+        .justify-content-start#{$mod} {
             justify-content: flex-start;
         }
 
-        .jc-end#{$mod} {
+        .justify-content-end#{$mod} {
             justify-content: flex-end;
         }
 
-        .jc-center#{$mod} {
+        .justify-content-center#{$mod} {
             justify-content: center;
         }
 
-        .jc-between#{$mod} {
+        .justify-content-between#{$mod} {
             justify-content: space-between;
         }
 
-        .jc-around#{$mod} {
+        .justify-content-around#{$mod} {
             justify-content: space-around;
         }
     }
@@ -109,27 +109,27 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .ac-start {
+        .align-content-start {
             align-content: flex-start;
         }
 
-        .ac-end {
+        .align-content-end {
             align-content: flex-end;
         }
 
-        .ac-center {
+        .align-content-center {
             align-content: center;
         }
 
-        .ac-between {
+        .align-content-between {
             align-content: space-between;
         }
 
-        .ac-around {
+        .align-content-around {
             align-content: space-around;
         }
 
-        .ac-stretch {
+        .align-content-stretch {
             align-content: stretch;
         }
 
@@ -144,23 +144,23 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .ai-start#{$mod} {
+        .items-start#{$mod} {
             align-items: flex-start;
         }
 
-        .ai-end#{$mod} {
+        .items-end#{$mod} {
             align-items: flex-end;
         }
 
-        .ai-center#{$mod} {
+        .items-center#{$mod} {
             align-items: center;
         }
 
-        .ai-baseline#{$mod} {
+        .items-baseline#{$mod} {
             align-items: baseline;
         }
 
-        .ai-stretch#{$mod} {
+        .items-stretch#{$mod} {
             align-items: stretch !important;
         }
 
@@ -175,27 +175,27 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .as-auto#{$mod} {
+        .self-auto#{$mod} {
             align-self: auto;
         }
 
-        .as-start#{$mod} {
+        .self-start#{$mod} {
             align-self: flex-start;
         }
 
-        .as-end#{$mod} {
+        .self-end#{$mod} {
             align-self: flex-end;
         }
 
-        .as-center#{$mod} {
+        .self-center#{$mod} {
             align-self: center;
         }
 
-        .as-baseline#{$mod} {
+        .self-baseline#{$mod} {
             align-self: baseline;
         }
 
-        .as-stretch#{$mod} {
+        .self-stretch#{$mod} {
             align-self: stretch;
         }
 
