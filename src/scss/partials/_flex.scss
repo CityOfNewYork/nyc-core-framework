@@ -144,23 +144,23 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .items-start#{$mod} {
+        .align-items-start#{$mod} {
             align-items: flex-start;
         }
 
-        .items-end#{$mod} {
+        .align-items-end#{$mod} {
             align-items: flex-end;
         }
 
-        .items-center#{$mod} {
+        .align-items-center#{$mod} {
             align-items: center;
         }
 
-        .items-baseline#{$mod} {
+        .align-items-baseline#{$mod} {
             align-items: baseline;
         }
 
-        .items-stretch#{$mod} {
+        .align-items-stretch#{$mod} {
             align-items: stretch !important;
         }
 
@@ -175,27 +175,27 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .self-auto#{$mod} {
+        .align-self-auto#{$mod} {
             align-self: auto;
         }
 
-        .self-start#{$mod} {
+        .align-self-start#{$mod} {
             align-self: flex-start;
         }
 
-        .self-end#{$mod} {
+        .align-self-end#{$mod} {
             align-self: flex-end;
         }
 
-        .self-center#{$mod} {
+        .align-self-center#{$mod} {
             align-self: center;
         }
 
-        .self-baseline#{$mod} {
+        .align-self-baseline#{$mod} {
             align-self: baseline;
         }
 
-        .self-stretch#{$mod} {
+        .align-self-stretch#{$mod} {
             align-self: stretch;
         }
 
