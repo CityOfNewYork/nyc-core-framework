@@ -30,17 +30,14 @@ $columns: 12;
 [class*="grid__cell"]{
     flex: 1 1 100%;
     max-width: 100%;
-
 }
 
 [class*="grid__cell"] {
 
     > .grid:not([class*="cols-"]) {
-        flex-direction: column;
         height: calc(100% + var(--gap-size));
 
         > [class*="grid__cell"]:not([class*="grid__cell-"]) {
-            flex: 1;
             width: 100%;
         }
     }

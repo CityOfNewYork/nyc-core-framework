@@ -2,11 +2,12 @@
 
 In this file:
 
-// A. Flex Column and Flex Row
-// B. Justify Content
-// C. Align Content
-// D. Align Items
-// E. Align Self
+// A. Flex Direction
+// B. Flex Grow, Shrink, and Fill
+// C. Justify Content
+// D. Align Content
+// E. Align Items
+// F. Align Self
 
 */
 
@@ -21,7 +22,7 @@ In this file:
     flex-wrap: wrap;
 }
 
-// Breakpoint classes for 'flex-direction: row-reverse;'
+// Breakpoint classes for 'flex-direction'
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-up($breakpoint) {
@@ -44,6 +45,30 @@ In this file:
         }
 
     }
+}
+
+//////////////////////////////////////////////
+// B. Flex Grow, Shrink, and Fill
+//////////////////////////////////////////////
+
+.flex-grow-0 {
+    flex-grow: 0;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+.flex-fill {
+    flex: 1 1 auto;
 }
 
 //////////////////////////////////////////////
