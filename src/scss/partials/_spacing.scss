@@ -46,93 +46,93 @@ $spacers: (
             // Padding
 
             .p-#{$key}#{$mod} {
-                padding: #{$value};
+                padding: #{$value} !important;
             }
 
             .px-#{$key}#{$mod} {
-                padding-left: #{$value};
-                padding-right: #{$value};
+                padding-left: #{$value} !important;
+                padding-right: #{$value} !important;
             }
 
             .py-#{$key}#{$mod} {
-                padding-top: #{$value};
-                padding-bottom: #{$value};
+                padding-top: #{$value} !important;
+                padding-bottom: #{$value} !important;
             }
 
             .pt-#{$key}#{$mod} {
-                padding-top: #{$value};
+                padding-top: #{$value} !important;
             }
 
             .pr-#{$key}#{$mod} {
-                padding-right: #{$value};
+                padding-right: #{$value} !important;
             }
 
             .pb-#{$key}#{$mod} {
-                padding-bottom: #{$value};
+                padding-bottom: #{$value} !important;
             }
 
             .pl-#{$key}#{$mod} {
-                padding-left: #{$value};
+                padding-left: #{$value} !important;
             }
 
             // Margin
 
             .m-#{$key}#{$mod} {
-                margin: #{$value};
+                margin: #{$value} !important;
             }
 
             .mx-#{$key}#{$mod} {
-                margin-left: #{$value};
-                margin-right: #{$value};
+                margin-left: #{$value} !important;
+                margin-right: #{$value} !important;
             }
 
             .my-#{$key}#{$mod} {
-                margin-top: #{$value};
-                margin-bottom: #{$value};
+                margin-top: #{$value} !important;
+                margin-bottom: #{$value} !important;
             }
 
             .mt-#{$key}#{$mod} {
-                margin-top: #{$value};
+                margin-top: #{$value} !important;
             }
 
             .mr-#{$key}#{$mod} {
-                margin-right: #{$value};
+                margin-right: #{$value} !important;
             }
 
             .mb-#{$key}#{$mod} {
-                margin-bottom: #{$value};
+                margin-bottom: #{$value} !important;
             }
 
             .ml-#{$key}#{$mod} {
-                margin-left: #{$value};
+                margin-left: #{$value} !important;
             }
 
             // Negative Margin
 
             .mx-n#{$key}#{$mod} {
-                margin-left: calc(#{$value} * -1);
-                margin-right: calc(#{$value} * -1);
+                margin-left: calc(#{$value} * -1) !important;
+                margin-right: calc(#{$value} * -1) !important;
             }
 
             .my-n#{$key}#{$mod} {
-                margin-top: calc(#{$value} * -1);
-                margin-bottom: calc(#{$value} * -1);
+                margin-top: calc(#{$value} * -1) !important;
+                margin-bottom: calc(#{$value} * -1) !important;
             }
 
             .mt-n#{$key}#{$mod} {
-                margin-top: calc(#{$value} * -1);
+                margin-top: calc(#{$value} * -1) !important;
             }
 
             .mr-n#{$key}#{$mod} {
-                margin-right: calc(#{$value} * -1);
+                margin-right: calc(#{$value} * -1) !important;
             }
 
             .mb-n#{$key}#{$mod} {
-                margin-bottom: calc(#{$value} * -1);
+                margin-bottom: calc(#{$value} * -1) !important;
             }
 
             .ml-n#{$key}#{$mod} {
-                margin-left: calc(#{$value} * -1);
+                margin-left: calc(#{$value} * -1) !important;
             }
 
         }
@@ -148,45 +148,53 @@ $spacers: (
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .p-0#{$mod} {
-            padding: 0;
+            padding: 0 !important;
         }
 
         .m-0#{$mod} {
-            margin: 0;
+            margin: 0 !important;
         }
 
         .mt-0#{$mod} {
-            margin-top: 0;
+            margin-top: 0 !important;
+        }
+
+        .mr-0#{$mod} {
+            margin-right: 0 !important;
         }
 
         .mb-0#{$mod} {
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
+        }
+
+        .ml-0#{$mod} {
+            margin-left: 0 !important;
         }
 
         .mx-auto#{$mod} {
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
 
         .my-auto#{$mod} {
-            margin-top: auto;
-            margin-bottom: auto;
+            margin-top: auto !important;
+            margin-bottom: auto !important;
         }
 
         .mt-auto#{$mod} {
-            margin-top: auto;
+            margin-top: auto !important;
         }
 
         .mr-auto#{$mod} {
-            margin-right: auto;
+            margin-right: auto !important;
         }
 
         .mb-auto#{$mod} {
-            margin-bottom: auto;
+            margin-bottom: auto !important;
         }
 
         .ml-auto#{$mod} {
-            margin-left: auto;
+            margin-left: auto !important;
         }
     }
 }
