@@ -171,7 +171,8 @@ body {
     }
 }
 
-p, p + ul:not([class]),
+p, 
+p ~ ul:not([class]),
 blockquote {
     margin-bottom: 1.5rem;
 }
