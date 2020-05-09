@@ -3,10 +3,9 @@
 In this file:
 
 // A. Variables
-// A. Base Font Settings
 // B. Font Weight Classes
-// B. Font Size Classes
-// C. Headings
+// C. Font Size Classes
+// D. Headings
 
 */
 
@@ -18,11 +17,9 @@ In this file:
 
 $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
-// Import Fonts
+// Import Open Source Fonts
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&display=swap');
-
-// Set Custom vars
 
 :root {
 
@@ -31,7 +28,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
     --base-font-weight-bold: 700;
 
     --base-font-size: 20px;
-    --base-line-height: 1.45;
+    --base-line-height: 1.4;
 
     --font-size-sm: calc(var(--base-font-size) * 0.7);  // 14px
     --font-size-md: calc(var(--base-font-size) * 0.8);  // 16px
@@ -54,7 +51,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 }
 
 //////////////////////////////////////////////
-// A. Font Weight Classes
+// B. Font Weight Classes
 //////////////////////////////////////////////
 
 $font-weights: (
@@ -70,7 +67,7 @@ $font-weights: (
 }
 
 //////////////////////////////////////////////
-// A. Font Size Classes
+// C. Font Size Classes
 //////////////////////////////////////////////
 
 $font-sizes: (
@@ -107,7 +104,7 @@ $font-sizes: (
 }
 
 //////////////////////////////////////////////
-// B. Headings
+// D. Headings
 //////////////////////////////////////////////
 
 h1, .h1,
@@ -157,7 +154,6 @@ h6, .h6 {
 // B. Body
 //////////////////////////////////////////////
 
-
 html{
     font-size: 1rem;
 }
@@ -180,13 +176,12 @@ blockquote {
     margin-bottom: 1.5rem;
 }
 
-p + ul:not([class]) {
-    list-style-position: inside;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+p ~ ul:not([class]) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
     li {
-        margin-bottom: var(--s3);
+        margin-bottom: var(--s2);
     }
 }
 
