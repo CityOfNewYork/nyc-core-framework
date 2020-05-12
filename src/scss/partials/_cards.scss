@@ -19,7 +19,7 @@ In this file:
     flex-direction: column;
 
     @at-root .card__header {
-        // font-size: var(--font-size-md);
+        font-size: var(--font-size-md);
         padding: var(--s1) var(--s2);
     }
 
