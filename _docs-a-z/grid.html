@@ -5,12 +5,34 @@ title: "Grid"
 
 <div class="container narrow my-4">
     <p>
-        A traditional 12 column flexbox grid that works consistently across browsers, including Internet Explorer 11.
+        Quickly prototype and build responsive layouts with a simple (and familiar) 12 column flexbox grid system.
     </p>
+    <!-- , including Internet Explorer 11 -->
 </div>
 <!-- .container -->
 
-<figure class="container medium my-4">
+<div class="container narrow my-4">
+    <div class="alert alert--attention my-3">
+        <div class="alert__header">
+            <p>
+                
+                <span class="fas fa-exclamation fa-lg" aria-hidden="true"></span>
+                <span class="alert__title">Flexbox vs. CSS Grid Layout</span>
+            </p>
+        </div>
+        <div class="alert__body">
+            <p>
+                In the spirit of inclusivity we must consider Internet Explorer 11 users. For this reason, our grid system continues to use Flexbox instead of CSS Grid Layout.
+            </p>
+            <p>
+                Future versions of our grid will likely use CSS Grid Layout, as soon as Internet Explorer 11 is discontinued (in 2025).
+            </p>
+        </div>
+    </div>
+</div>
+<!-- .container -->
+
+<figure class="container medium my-4 d-none">
 
     <div class="grid grid--gap-border fs-md text-align-center">
 
@@ -122,7 +144,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-1">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     1
                 </p>
@@ -131,7 +153,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-11">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     11
                 </p>
@@ -140,7 +162,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-2">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     2
                 </p>
@@ -149,7 +171,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-10">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     10
                 </p>
@@ -158,7 +180,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-3">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     3
                 </p>
@@ -167,7 +189,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-9">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     9
                 </p>
@@ -176,7 +198,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-4">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     4
                 </p>
@@ -185,7 +207,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-8">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     8
                 </p>
@@ -194,7 +216,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-5">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     5
                 </p>
@@ -203,7 +225,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-7">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     7
                 </p>
@@ -212,7 +234,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-6">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     6
                 </p>
@@ -221,7 +243,7 @@ title: "Grid"
         <!-- col -->
 
         <div class="grid__cell-6">
-            <div class="bc-secondary px-1 py-2">
+            <div class="bc-primary px-1 py-2">
                 <p>
                     6
                 </p>
@@ -238,11 +260,11 @@ title: "Grid"
 
 <div class="container narrow my-4">
 
-    <h2>Grid Selector Classes</h2>
+    <h2>Grid Selectors</h2>
 
     <p>
-        Grids require a parent selector with a class of <code>.grid</code>, and a child (or children) with a class of
-        <code>.grid__cell</code>.
+        Grids require a parent selector with a class of <code>.grid</code>. Each child selector (or grid cell)
+        requires a <code>.grid__cell</code> class (see Figure 1).
 
         <!-- Columns are 100% wide until otherwise specified. -->
     </p>
@@ -275,17 +297,31 @@ title: "Grid"
     </figcaption>
 </figure>
 
+<div class="container narrow my-4 d-none">
+
+    <p>
+        Padding and marging classes should not be added to <code>.grid</code> or <code>.grid__cell</code> selectors. 
+    </p>
+
+</div>
+<!-- .container -->
+
 <hr class="my-5">
 
 <div class="container narrow my-4">
 
-    <h2>Column Width</h2>
+    <h2>Grid Cell Widths</h2>
+
+    <p class="d-none">
+        All <code>.grid__cell</code> selectors occupy 100% of the available width (stacked one above another) until otherwise
+        specified⁠. 
+    </p>
 
     <p>
-        Grid columns occupy 100% of the available width (stacked one above another) until otherwise specified. For
-        equal-width columns, add the <code>.grid--cells</code> modifier to the <code>.grid</code> selector. This class distributes its child columns
-        evenly based on the number of columns present. With three columns present in the example below, columns are
-        divided into thirds.
+        There are several ways to apply widths to grid cells. For equal width cells, apply the <code>.grid--cells-{x}</code> modifier class to the <code>.grid</code> selector, where <em>x</em> equals the desired width.
+    </p>
+    <p>
+       For example, to make a three-column grid using the 12 column system, apply <code>.grid--cells-4</code> to <code>.grid</code> (<em>12</em> total columns divided by <em>3</em> columns equals <em>4</em>).
     </p>
 
 </div>
@@ -293,7 +329,28 @@ title: "Grid"
 
 <figure class="container narrow my-4" {{ site.style_default_theme_colors }}>
 
-    <div class="grid grid--gap-1 grid--cells fs-md text-align-center tc-secondary">
+    <div class="grid grid--gap-1 grid--cells-4 fs-md text-align-center tc-secondary">
+
+        <div class="grid__cell">
+            <div class="bc-primary px-1 py-2">
+                <p>Auto</p>
+            </div>
+        </div>
+        <!-- .grid__cell -->
+
+        <div class="grid__cell">
+            <div class="bc-primary px-1 py-2">
+                <p>Auto</p>
+            </div>
+        </div>
+        <!-- .grid__cell -->
+
+        <div class="grid__cell">
+            <div class="bc-primary px-1 py-2">
+                <p>Auto</p>
+            </div>
+        </div>
+        <!-- .grid__cell -->
 
         <div class="grid__cell">
             <div class="bc-primary px-1 py-2">
@@ -325,7 +382,7 @@ title: "Grid"
 <figure class="container narrow my-4">
     <pre>
         <code class="language-html">
-            &lt;div class="grid grid--cells"&gt;
+            &lt;div class="grid grid--cells-4"&gt;
                 
                 &lt;div class="grid__cell"&gt;
                     &lt;!-- ... --&gt;
