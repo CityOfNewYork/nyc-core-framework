@@ -11,7 +11,14 @@ In this file:
 // A. Modal Styles
 //////////////////////////////////////////////
 
+// .modal, 
+// .modal__overlay{
+//   overflow: hidden;
+//   height: 100vh;
+// }
+
 .modal {
+  position: relative;
   display: none;
 
   &[aria-hidden="false"] {
@@ -27,6 +34,7 @@ In this file:
     right: 0;
     bottom: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 10000;
@@ -43,16 +51,25 @@ In this file:
         left: 0;
         opacity: 0.9;
     }
+    
 }
 
 .modal__container {
   @extend .box-shadow-3 !optional;
   position: relative;
-  overflow-y: auto;
   z-index: auto;
   width: 100%;
-  max-height: 100vh;
+  max-height: calc(100vh - (var(--s2) * 2));
   background-color: inherit;
+  
+  display: flex;
+  flex-direction: column;
+
+  margin-left: auto;
+  margin-right: auto;
+  
+  margin-top: var(--s3);
+  margin-bottom: var(--s3);
 
 }
 
@@ -69,13 +86,21 @@ In this file:
   }
 }
 
+.modal__body{
+  // background-color: tan;
+  flex-shrink: 1; 
+  overflow-y: auto;
+}
+
 .modal__body, 
 .modal__footer{
-    padding: var(--s2);
+  // width: 100%;
+  padding: var(--s2);
 }
 
 .modal__footer {
   // Put styles here
+  // align-self: flex-end;
 }
 
 //////////////////////////////////////////////

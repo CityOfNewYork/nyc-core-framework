@@ -18,6 +18,10 @@ In this file:
     --base-shadow-opacity: 0.125;
 }
 
+[class*="bc-dark"]{
+    --base-shadow-opacity: 0.175;
+}
+
 //////////////////////////////////////////////
 // B. Box Shadows
 //////////////////////////////////////////////
