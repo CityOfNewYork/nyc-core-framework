@@ -101,7 +101,7 @@ title: "Get Started"
     <p>
         These CSS and Javascript files are the <strong>only two dependencies</strong> generated from
         the NYC Core Framework, and they are available to be used via CDN (Content Delivery Network). 
-        Follow our <em>Quick Start Guide</em> below to get started with these core files.
+        Follow the <em>Quick Start Guide</em> below to get started with our core files.
     </p>
 </div>
 <!-- .container -->
@@ -117,7 +117,7 @@ title: "Get Started"
 <!-- .container -->
 
 <figure class="container medium my-4">
-    <pre data-line="9,11,15,21">
+    <pre data-line="3,11,15,21">
         <code class="language-html">
             &lt;!DOCTYPE html&gt;
 
@@ -127,7 +127,7 @@ title: "Get Started"
 
                 &lt;/head&gt;
 
-                &lt;body class="bc-white"&gt;
+                &lt;body&gt;
 
                     &lt;header id="global-header" role="banner"&gt;
 
@@ -154,7 +154,7 @@ title: "Get Started"
 </figure>
 
 <figure class="container narrow my-4">
-    <table class="table fs-md">
+    <table class="table table--edge fs-md">
         <thead>
             <tr>
                 <th class="w-30">Line #</th>
@@ -164,12 +164,10 @@ title: "Get Started"
         <tbody>
 
             <tr>
-                <td>9</td>
+                <td>3</td>
                 <td>
                     <p>
-                        Assigns the "white" theme color to the <code>&lt;body&gt;</code> tag. Learn how our <a
-                            href="{{ site.baseurl }}/docs/color-system/">color system</a>
-                        makes it easy to apply accessible colors to your layouts.
+                        On the HTML tag, the <code>lang="en"</code> attrribute sets the default language (English). The <code>dir="ltr"</code> attribute sets the default text direction (left to right).
                     </p>
                 </td>
             </tr>
@@ -189,7 +187,7 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        Place the following scripts in the <code>&lt;head&gt;</code> tag of your HTML file:
+        Next, place the following scripts within the <code>&lt;head&gt;</code> tag of the HTML file you just created.
     </p>
 </div>
 <!-- .container -->
@@ -227,14 +225,14 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        Highlighted in Figure 3, line 2, and 5 through 7 are required for Internet Explorer 11 support. Lines 17 and 20 are required for the Framework. Learn what these scripts do in the table below.
+        Highlighted in Figure 3, line 2, and 5 through 9 are required for Internet Explorer 11 support. Lines 17 and 20 are required for the Framework. Learn what these scripts do in the table below.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow my-4">
 
-    <table class="table fs-md">
+    <table class="table table--edge fs-md">
         <thead>
             <tr>
                 <th class="w-30">Line #</th>
@@ -247,7 +245,7 @@ title: "Get Started"
                 <td>2</td>
                 <td>
                     <p>
-                        Meta tag for correcting Internet Explorer 11 page rendering issues with compatibility mode. This tag must be first within the <code>&lt;head&gt;</code> in order for it to work.
+                        Meta tag for correcting Internet Explorer 11 page rendering issues with compatibility mode. For whatever reason, this tag must to be first within the <code>&lt;head&gt;</code> in order for it to work.
                     </p>
                 </td>
             </tr>
@@ -309,15 +307,15 @@ title: "Get Started"
 
 <div class="container narrow my-4">
     <p>
-        With the all of the required scripts in place, you're ready to add content to your layouts and begin customizing its look and feel.
+        That's it! With the all of the required scripts in place, you are ready to start building with the NYC Core Framework. Next, learn how to customize your layouts look and feel.
     </p>
 </div>
 <!-- .container -->
 
 <div class="container narrow my-4">
     <a class="btn btn--has-icon bc-secondary" href="{{ site.baseurl }}/docs/customization/">
-        <span class="fas fa-long-arrow-alt-right btn__icon"></span>
         <span class="btn__text">Customization</span>
+        <span class="fas fa-long-arrow-alt-right btn__icon"></span>
     </a>
 </div>
 <!-- .container -->
