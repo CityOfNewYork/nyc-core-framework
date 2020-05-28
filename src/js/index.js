@@ -68,12 +68,12 @@ window.onload = () => {
                 currentAccordionPanel.setAttribute("aria-hidden", true);
             }
 
-            const initAccordion = () => {
+            const initAccordion = (event) => {
 
                 event.stopPropagation();
                 event.preventDefault();
 
-                let elementName = Element.tagName = event.target.tagName;
+                // let elementName = Element.tagName = event.target.tagName;
 
                 for (const otherAccordionPanel of accPanelList) {
 
@@ -90,6 +90,8 @@ window.onload = () => {
                 currentAccordionPanel.classList.toggle('shown');
 
                 let expanded = accordionButton.getAttribute("aria-expanded");
+                
+                let open = new Event('open');
 
                 if (expanded === "true") {
                     accordionButton.setAttribute("aria-expanded", false);
@@ -104,7 +106,15 @@ window.onload = () => {
                 } else {
                     currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
                     currentAccordionPanel.setAttribute("aria-hidden", false);
+
+                    currentAccordionPanel.addEventListener('open', function () {
+                        console.log('Cool, Johnnie Open!!');
+                    }, false)
+
+                    currentAccordionPanel.dispatchEvent(open);
                 }
+
+                // callback();
 
             }
 
