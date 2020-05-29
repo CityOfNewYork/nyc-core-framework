@@ -256,7 +256,7 @@ title: "Customization"
 
         <div class="accordion__panel show" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-colors" role="region">
             <div data-accordion="content">
-                <table class="table">
+                <table class="table table--edge">
                     <thead>
                         <tr>
                             <th>Custom Property</th>
@@ -412,7 +412,7 @@ title: "Customization"
 
         <div class="accordion__panel" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-typography" role="region">
              <div data-accordion="content">
-                 <table class="table">
+                 <table class="table table--edge">
                     <thead>
                         <tr>
                             <th>Custom Property</th>
@@ -426,10 +426,10 @@ title: "Customization"
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
+                           <td data-prop>
                                 --base-font-weight-normal
                             </td>
-                            <td>
+                            <td data-val>
                                 "Source Sans Pro"
                             </td>
                             <td>
@@ -439,10 +439,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --base-font-weight-normal
                             </td>
-                            <td>
+                            <td data-val>
                                 400
                             </td>
                             <td>
@@ -452,10 +452,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --base-font-weight-bold
                             </td>
-                            <td>
+                            <td data-val>
                                 700
                             </td>
                             <td>
@@ -465,10 +465,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --base-font-size
                             </td>
-                            <td>
+                            <td data-val>
                                 20px
                             </td>
                             <td>
@@ -478,10 +478,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --base-line-height:
                             </td>
-                            <td>
+                            <td data-val>
                                 1.45
                             </td>
                             <td>
@@ -491,10 +491,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --font-size-sm
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 0.7 )
                             </td>
                             <td>
@@ -504,10 +504,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --font-size-md
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 0.8 )
                             </td>
                             <td>
@@ -517,10 +517,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --font-size-rg: 
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 1 )
                             </td>
                             <td>
@@ -530,10 +530,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --font-size-xl
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 1.4 )
                             </td>
                             <td>
@@ -543,10 +543,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --banner-headline-font-size
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 3.8 )
                             </td>
                             <td>
@@ -556,10 +556,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --h1-font-size
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 3 )
                             </td>
                             <td>
@@ -569,10 +569,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --h2-font-size
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 2.2 )
                             </td>
                             <td>
@@ -582,10 +582,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --h3-font-size
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 1.8 )
                             </td>
                             <td>
@@ -595,23 +595,23 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --h4-font-size
                             </td>
                             <td>
                                 calc( var(--base-font-size) * 1.6 )
                             </td>
-                            <td>
+                            <td data-val>
                                 <button data-clipboard>
                                     Copy
                                 </button>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --h5-font-size
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 1.4 )
                             </td>
                             <td>
@@ -621,10 +621,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --h6-font-size
                             </td>
-                            <td>
+                            <td data-val>
                                 calc( var(--base-font-size) * 1.1 )
                             </td>
                             <td>
@@ -634,10 +634,10 @@ title: "Customization"
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td data-prop>
                                 --h6-font-size
                             </td>
-                            <td>
+                            <td data-va>
                                 calc( var(--base-font-size) * 1.1 )
                             </td>
                             <td>
