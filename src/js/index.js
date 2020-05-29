@@ -301,7 +301,7 @@ window.onload = () => {
         modalTarget.setAttribute("aria-hidden", false);
 
 
-        document.querySelector("body").classList.add("blur-part");
+        document.querySelector("body").classList.add("blur-parent");
 
         // element that was focused before modal opened
         let focusedElementBeforeModal = document.activeElement;
@@ -332,7 +332,7 @@ window.onload = () => {
         function closeModal() {
             modalTarget.setAttribute("aria-hidden", true);
 
-            document.querySelector("body").classList.remove("blur-part");
+            document.querySelector("body").classList.remove("blur-parent");
             focusedElementBeforeModal.focus();
         }
 

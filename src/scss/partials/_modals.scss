@@ -108,7 +108,7 @@ In this file:
 //////////////////////////////////////////////
 
 
-.blur-part > *:not(.modal){
+.blur-parent > *:not(.modal) {
     filter: blur(0.75rem);
 }
 
