@@ -83,7 +83,11 @@
 
 {% if page.title == 'Customization' %}
 
-<script>
+<script defer>
+
+    document.addEventListener("accTrigger", function (e) { 
+        console.warn('Whoa, Johnnie!!!!')
+    }, false);
 
     const customPropButtonList = document.querySelectorAll('[data-clipboard]');
 
