@@ -89,7 +89,6 @@ window.onload = () => {
 
                 let expanded = accordionButton.getAttribute("aria-expanded");
                 
-
                 if (expanded === "true") {
                     accordionButton.setAttribute("aria-expanded", false);
                     currentAccordionPanel.setAttribute("aria-hidden", true);
@@ -104,6 +103,9 @@ window.onload = () => {
                     currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
                     currentAccordionPanel.setAttribute("aria-hidden", false);
                 }
+
+                let accTrigger = new Event("accTrigger",{ bubbles: true });
+                document.dispatchEvent(accTrigger);
 
             }
 
