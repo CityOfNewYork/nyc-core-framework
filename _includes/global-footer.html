@@ -91,6 +91,14 @@
 
         let myButtonText = customPropButton.innerHTML.trim().replace(/&nbsp;/g, '');
 
+        const resetButton = () => {
+        
+            for (otherButtons of customPropButtonList){
+                otherButtons.innerHTML = myButtonText;
+            }
+        
+        }
+
         customPropButton.addEventListener('click', function (event) {
 
             event.preventDefault();
@@ -101,10 +109,8 @@
             let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
 
             let myClipboardText = myCustomPropertyName + ':' + ' ' + myCustomPropertyValue + ';';
-
-            for (otherButtons of customPropButtonList){
-                otherButtons.innerHTML = myButtonText;
-            }
+            
+            resetButton();
 
             if( myClipboardText ){
                 event.target.innerHTML = 'Copied!';
@@ -129,6 +135,11 @@
             document.body.removeChild(aux);
 
         });
+    
+        document.addEventListener("accTrigger", function (e) {
+            resetButton();
+        }, false);
+    
     }
 
 </script>
