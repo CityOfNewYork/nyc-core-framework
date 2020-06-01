@@ -107,11 +107,6 @@ In this file:
 // A. Modal Animation
 //////////////////////////////////////////////
 
-
-.blur-parent > *:not(.modal) {
-    filter: blur(0.75rem);
-}
-
 @keyframes mmfadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
