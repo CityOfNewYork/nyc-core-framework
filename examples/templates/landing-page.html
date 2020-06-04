@@ -35,12 +35,12 @@
 
             <div class="grid justify-content-between">
 
-                <div class="grid__cell-auto">
+                <div class="grid__cell--fit bc-secondary">
                     <p>Name of Office</p>
                 </div>
                 <!-- .grid__cell -->
 
-                <div class="grid__cell-auto">
+                <div class="grid__cell-fit">
                     <ul class="nav nav--gap-1 nav--horizontal">
                         <li>
                             <a href="#1">
@@ -104,11 +104,18 @@
                 <div class="grid__cell-auto ml-auto m-0--md order-3--md d-flex">
 
                     <ul class="nav nav--gap-1 nav--horizontal justify-content-end" role="list">
+
                         <li>
-                            <a class="btn btn--icon-only" href="#1" title="Search">
+                            <button class="btn btn--icon-only" title="Search"  data-toggle="collapse" data-target="#language">
+                                <span class="sr-only">Language</span>
+                                <span class="fas fa-language"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn--icon-only" title="Search"  data-toggle="collapse" data-target="#global-search">
                                 <span class="sr-only">Search</span>
                                 <span class="fas fa-search"></span>
-                            </a>
+                            </button>
                         </li>
                         <li class="d-none--md">
                             <a class="btn btn--icon-only" href="#1" title="Menu" data-toggle="collapse" data-target="#primary-nav-01">
@@ -153,6 +160,38 @@
 
         </div>
         <!-- .container -->
+
+        <div class="collapse py-2 box-shadow-1" id="global-search">
+            <div class="container narrow">
+                <p>Search Placeholder</p>
+            </div>
+        </div>
+
+        <div class="collapse bc-light overflow-hidden" id="language">
+            
+            <div class="container narrow">
+
+                <form class="needs-validation my-0" novalidate>
+
+                    <div class="form-group my-0">
+            
+                        <label class="form-group__field has-action my-0">
+
+                            <input class="field__input" type="text" name="email_address">
+                            <p class="field__label">Enter Search Phrase</p>
+                            
+                            <button href="#1" title="Search">
+                                <span class="sr-only">Search</span>
+                                <span class="fas fa-search"></span>
+                            </button>
+                        </label>
+
+                    </div>
+                    <!-- .form-group -->
+                </form>
+
+            </div>
+        </div>
 
     </header>
     <!-- #global-header -->
