@@ -26,9 +26,7 @@ In this file:
 // B. Box Shadows
 //////////////////////////////////////////////
 
-.box-shadow-1, 
-.box-shadow-2,
-.box-shadow-3 {
+[class*="box-shadow-"] {
     --shadow-opacity: 0;
 
     box-shadow:

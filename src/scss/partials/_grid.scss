@@ -117,7 +117,7 @@ $columns: 12;
             }
         }
 
-        .grid > .grid__cell-auto#{$mod} {
+        .grid > .grid__cell-fit#{$mod} {
             flex: none;
             width: auto;
         }
