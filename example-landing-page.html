@@ -29,7 +29,7 @@
 
 <body class="bc-white">
 
-    <header class="box-shadow-sm z-index-900" id="global-header" role="banner">
+    <header id="global-header" role="banner">
 
         <div class="bc-dark container py-1 fs-md" id="nyc-head">
 
@@ -162,35 +162,31 @@
         <!-- .container -->
 
         <div class="collapse py-2 box-shadow-1" id="global-search">
-            <div class="container narrow">
-                <p>Search Placeholder</p>
-            </div>
+            <form class="needs-validation my-0" novalidate>
+
+                <div class="form-group my-0">
+
+                    <label class="form-group__field has-action my-0">
+
+                        <input class="field__input" type="text" name="email_address">
+                        <p class="field__label">Enter Search Phrase</p>
+
+                        <button href="#1" title="Search">
+                            <span class="sr-only">Search</span>
+                            <span class="fas fa-search"></span>
+                        </button>
+                    </label>
+
+                </div>
+                <!-- .form-group -->
+            </form>
         </div>
 
         <div class="collapse bc-light overflow-hidden" id="language">
             
-            <div class="container narrow">
-
-                <form class="needs-validation my-0" novalidate>
-
-                    <div class="form-group my-0">
-            
-                        <label class="form-group__field has-action my-0">
-
-                            <input class="field__input" type="text" name="email_address">
-                            <p class="field__label">Enter Search Phrase</p>
-                            
-                            <button href="#1" title="Search">
-                                <span class="sr-only">Search</span>
-                                <span class="fas fa-search"></span>
-                            </button>
-                        </label>
-
-                    </div>
-                    <!-- .form-group -->
-                </form>
-
-            </div>
+             <div class="container narrow py-2" aria-label="Language">
+                 <div id="google_translate_element"></div>
+             </div>
         </div>
 
     </header>
@@ -576,6 +572,17 @@
         <!-- #nyc-foot -->
 
     </footer>
+
+    <!-- Google Translate -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- NYC Core Javascript -->
     <script src="./dist/js/nyc_core.js"></script>
