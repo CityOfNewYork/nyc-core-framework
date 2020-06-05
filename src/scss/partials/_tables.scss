@@ -25,11 +25,17 @@ In this file:
 //////////////////////////////////////////////
 
 .table {
+
     width: 100%;
     line-height: inherit;
 
     &:not([class="fs-"]){
         font-size: var(--default-table-size);
+    }
+
+    caption{
+        caption-side: bottom;
+        text-align: left;
     }
 
     tr{
@@ -62,6 +68,12 @@ In this file:
     }
 
 }
+
+
+.table-scroll {
+    overflow-x: auto;
+}
+
 
 .scroll-x{
     overflow-x: scroll;
