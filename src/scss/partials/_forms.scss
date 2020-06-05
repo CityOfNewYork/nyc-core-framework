@@ -39,19 +39,19 @@ input[type="password"] {
     border-bottom-color: var(--input-border-color);
     background-color: transparent;
     color: inherit;
-    font-size: var(--font-size-rg) !important;
+    font-size: var(--font-size-rg);
 }
 
 button,
 fieldset{
-    border: 0;
+    border: unset;
 }
 
 // Form Group
 
-.form-group + .form-group{
-    margin-bottom: var(--s4);
+.form-group + .form-group {
     margin-top: var(--s4);
+    margin-bottom: var(--s4);
 }
 
 // Form Field
@@ -61,7 +61,7 @@ fieldset{
     --action-btn-width: 3rem;
     
     @extend .subtle-fill;
-     --subtle-fill-opacity: 0.075;
+     --subtle-fill-opacity: 0.05;
 }
 
 .field__input,
@@ -125,6 +125,15 @@ fieldset{
     right: calc(var(--field-padding) * 0.5);
     top: calc(var(--field-padding) * 0.5);
     bottom: calc(var(--field-padding) * 0.5);
+}
+
+
+// Cool 
+
+.form-group__description {
+    margin-top: 0.5rem;
+    display: inline-block;
+    font-size: var(--font-size-sm);
 }
 
 //////////////////////////////////////////////
