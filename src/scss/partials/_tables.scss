@@ -84,6 +84,59 @@ In this file:
     }
 }
 
+
+
+@include breakpoint-down(md) {
+
+    table, thead, tbody, tfoot, tr, th, td{
+        display: block;
+        width: 100%;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr{
+        border: unset;
+    }
+
+    td {
+        width: 100%;
+        border-top-width: var(--default-border-width);
+        border-top-style: var(--default-border-style);
+        display: flex;
+        flex-direction: row;
+        
+        > * {
+            margin-left: auto;
+        }
+    }
+
+    td::before{
+        white-space: nowrap;
+        font-weight: bold;
+
+    }
+
+    td::before{
+        content: "Title: ";
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 .table--bordered{
     th,
     td {
