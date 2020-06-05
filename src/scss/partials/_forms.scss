@@ -54,6 +54,15 @@ fieldset{
     margin-bottom: var(--s4);
 }
 
+.form-group__feedback {
+    margin-bottom: var(--s2);
+
+    strong {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+
 // Form Field
 
 .form-group__field {
@@ -130,10 +139,25 @@ fieldset{
 
 // Cool 
 
-.form-group__description {
+.form-group__assistance {
     margin-top: 0.5rem;
-    display: inline-block;
-    font-size: var(--font-size-sm);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    > [class*="assist__"]{
+
+    }
+    
+    > .assist__description {
+        // background-color: pink;
+    }
+    > .assist__required:not(+ small) {
+        font-style: italic;
+        margin-left: auto;
+
+    }
+
 }
 
 //////////////////////////////////////////////

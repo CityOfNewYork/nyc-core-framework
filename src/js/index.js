@@ -403,7 +403,7 @@ window.onload = () => {
     // F. Forms
     //////////////////////////////////////////////
 
-    const inputFieldList = document.querySelectorAll('input[type="text"], textarea, select');
+    const inputFieldList = document.querySelectorAll('input[type], textarea, select');
 
     for (const inputField of inputFieldList) {
 

@@ -224,13 +224,9 @@ blockquote {
 
 small,
 .small {
-  font-size: var(--font-size-md);
-}
-
-mark,
-.mark {
-  padding: .125rem;
-  background-color: rgba(yellow, .75);
+    font-size: var(--font-size-md);
+    line-height: normal;
+    display: block;
 }
 
 //////////////////////////////////////////////

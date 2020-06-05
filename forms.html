@@ -43,11 +43,27 @@
 
                     <form class="needs-validation my-3" novalidate>
 
-                        <div class="form-group">
+                        <div class="form-group alert--warn">
+
+                            <small class="form-group__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
                             <label class="form-group__field">
                                 <input class="field__input" type="text" name="user_name">
                                 <p class="field__label">First Name</p>
                             </label>
+
+                            <p class="form-group__assistance">
+                                <small class="assist__description">
+                                    Description text
+                                </small>
+                                <small class="assist__required">
+                                    Required
+                                </small>
+                            </p>
                         </div>
                         <!-- .form-group -->
                         
@@ -110,14 +126,13 @@
                                 <p class="field__label">Message</p>
                             </label>
 
-                            <small class="form-group__description">
-                                Description text
-                            </small>
-
-                            <p class="invalid-feedback">
-                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                <span class="invalid-description">Error message description</span>
-                                <span class="invalid-instruction">How to fix instructions</span>
+                            <p class="form-group__assistance">
+                                <small class="assist__description">
+                                    Description text
+                                </small>
+                                <small class="assist__required">
+                                    Required
+                                </small>
                             </p>
 
                         </div>
