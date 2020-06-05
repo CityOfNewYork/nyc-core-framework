@@ -2,6 +2,33 @@ import 'element-closest-polyfill';
 
 window.onload = () => {
 
+    ////////////////////////////////////////
+    // Mutation observer - watch for RTL
+    ////////////////////////////////////////
+
+    var target = document.querySelector("html");
+
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function () {
+            
+            var classes = target.getAttribute("class");
+            var single_class = "translated-rtl";
+
+            if (classes.includes(single_class)) {
+                target.setAttribute("dir", "rtl");
+            } else {
+                target.setAttribute("dir", "ltr");
+            }
+        });
+    });
+
+    var config = {
+        attributes: true,
+        attributeFilter: ["class"]
+    }
+
+    observer.observe(target, config);
+
     //////////////////////////////////////////////
     // A. Dropdowns
     //////////////////////////////////////////////
@@ -391,6 +418,11 @@ window.onload = () => {
         });
 
     }
+
+    // const googleTranslateSelect = document.querySelector(".goog-te-combo");
+
+    // googleTranslateSelect.classList.add("field__input");
+    // googleTranslateSelect.closest("div").classList.add("field__input-wrap");
 
     //////////////////////////////////////////////
     // G. External Links

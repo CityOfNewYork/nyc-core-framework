@@ -15,7 +15,6 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-
     --input-border-width: calc(var(--default-border-width) * 2);
     --input-border-width: var(--default-border-width);
     --input-border-color: currentColor;
@@ -41,7 +40,7 @@ input[type="password"] {
     border-bottom-color: var(--input-border-color);
     background-color: transparent;
     color: inherit;
-    font-size: var(--font-size-rg);
+    font-size: var(--font-size-rg) !important;
 }
 
 button,
@@ -51,7 +50,7 @@ fieldset{
 
 // Form Group
 
-.form-group{
+.form-group + .form-group{
     margin-bottom: var(--s4);
     margin-top: var(--s4);
 }
@@ -101,7 +100,9 @@ fieldset{
 }
 
 .field__input-wrap {
+    position: relative;
     width: 100%;
+
     @include add-caret("after");
 
     &::after{

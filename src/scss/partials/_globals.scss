@@ -35,6 +35,7 @@ $default-caret-margin: 0.375em;
         margin-left: $default-caret-margin;
         margin-right: $default-caret-margin;
         color: inherit;
+        
     } 
     
     @if $location == "prepend" {
