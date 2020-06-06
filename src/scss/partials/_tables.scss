@@ -17,7 +17,7 @@ In this file:
     --table-cell-padding-x: 1.5em;
     --table-cell-padding-y: 0.75em;
 
-    --default-table-size: var(--font-size-md);
+    --default-table-font-size: var(--font-size-md);
 }
 
 //////////////////////////////////////////////
@@ -25,23 +25,16 @@ In this file:
 //////////////////////////////////////////////
 
 .table {
-
     width: 100%;
-    line-height: inherit;
 
     &:not([class="fs-"]){
-        font-size: var(--default-table-size);
+        font-size: var(--default-table-font-size);
     }
 
     caption{
         caption-side: bottom;
-        text-align: left;
     }
 
-    td{
-        border-top-width: var(--default-border-width);
-        border-top-style: var(--default-border-style);
-    }
 
     th, 
     td{
@@ -50,6 +43,11 @@ In this file:
         text-align: inherit;
     }
 
+    td{
+        border-top-width: var(--default-border-width);
+        border-top-style: var(--default-border-style);
+    }
+    
     thead th {
         vertical-align: bottom;
 
@@ -90,6 +88,17 @@ In this file:
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
         
         .table--stack#{$mod} {
+
+            &.table--edge{
+                td{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            &.table--divider{
+                border-collapse: collapse;
+            }
             
             thead {
                 position: absolute;
@@ -97,18 +106,27 @@ In this file:
                 left: -9999px;
             }
 
+            tr{
+                border-top-width: calc(var(--default-border-width) * 2);
+                border-top-style: var(--default-border-style);
+            }
+
             td {
+
+                &:first-child{
+                    border: unset;
+                }
+                
                 display: flex;
-                flex-direction: row;
+                flex-direction: row-reverse;
                 justify-content: space-between;
             }
 
-            td::before {
+            td::after {
                 content: attr(data-before);
                 font-weight: bold;
             }
         }
-
     }
 }
 
@@ -120,7 +138,9 @@ In this file:
 
 
 
-.table--bordered{
+.table--divider{
+    border-collapse: separate;
+    
     th,
     td {
 
