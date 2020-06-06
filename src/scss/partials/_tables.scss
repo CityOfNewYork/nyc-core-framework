@@ -38,7 +38,7 @@ In this file:
         text-align: left;
     }
 
-    tr{
+    td{
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
     }
@@ -85,49 +85,32 @@ In this file:
 }
 
 
-
-@include breakpoint-down(md) {
-
-    table, thead, tbody, tfoot, tr, th, td{
-        display: block;
-        width: 100%;
-    }
-
-    thead tr{
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    tr{
-        border: unset;
-    }
-
-    td {
-        width: 100%;
-        border-top-width: var(--default-border-width);
-        border-top-style: var(--default-border-style);
-        display: flex;
-        flex-direction: row;
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-down($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
         
-        > * {
-            margin-left: auto;
+        .table--stack#{$mod} {
+            
+            thead {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            td {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            td::before {
+                content: attr(data-before);
+                font-weight: bold;
+            }
         }
-    }
-
-    td::before{
-        white-space: nowrap;
-        font-weight: bold;
 
     }
-
-    td::before{
-        content: "Title: ";
-    }
-
 }
-
-
 
 
 

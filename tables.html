@@ -41,9 +41,9 @@
 
                 <figure class="container wide my-4">
 
-                    <div class="table-scroll" aria-labelledby="table-caption-01" role="region" tabindex="0">
+                    <div class="scroll-x" aria-labelledby="table-caption-01" role="region" tabindex="0">
 
-                        <table class="table box-shadow box-shadow--sm">
+                        <table class="table">
 
                             <caption class="sr-only" id="table-caption-01">
                                 Here is a table caption
@@ -68,7 +68,7 @@
                             <tbody>
 
                                 <tr>
-                                    <td>99</td>
+                                    <td>80</td>
                                     <td>
                                         <p>
                                             Lorem ipsum dolor
@@ -203,17 +203,17 @@
 
                 <figure class="container medium my-4">
 
-                    <table class="table table--striped">
+                    <table class="table table--stack--md">
 
                         <thead>
 
                             <tr>
-                                <th>Title</th>
-                                <th>Title</th>
-                                <th>Title</th>
-                                <th>Title</th>
-                                <th>Title</th>
-                                <th>Title</th>
+                                <th>Apples</th>
+                                <th>Oranges</th>
+                                <th>Pears</th>
+                                <th>Kiwi</th>
+                                <th>Grapes</th>
+                                <th>Melon</th>
                                 <th class="w-fit">
                                     <span class="sr-only">Action</span>
                                 </th>
@@ -223,14 +223,14 @@
                         <tbody>
 
                             <tr>
-                                <td>99</td>
+                                <td>80</td>
                                 <td>
                                     <p>
                                         January 1, 2020
                                     </p>
                                 </td>
                                 <td>99</td>
-                                <td>99</td>
+                                <td>101</td>
                                 <td>99</td>
                                 <td>
                                     <a href="#1">View</a>
@@ -349,7 +349,7 @@
 
                 </figure>
 
-                <figure class="container wide my-4">
+                <figure class="container wide my-4 d-none">
 
                     <table class="table table--edge box-shadow box-shadow--sm">
 
@@ -510,6 +510,63 @@
     </footer>
 
     <script src="./dist/js/nyc_core.js"></script>
+
+    <script>
+
+        const tableTarget = document.querySelector("[class*='table--stack']");
+        const tableHeaderList = tableTarget.querySelectorAll("thead th");
+        const tableRowList = tableTarget.querySelectorAll("tbody tr");
+
+        let myHeaders = [];
+
+        for (const tableHeader of tableHeaderList){
+
+            if (tableHeader.hasChildNodes()) {
+                
+                let children = tableHeader.childNodes;
+                let myTitle = "cool";
+
+                for(child of children){
+
+                    if(child.nodeType === 3){
+                        myTitle = child.textContent;
+                    }
+                }
+
+                console.log(myTitle)
+                myHeaders.push(myTitle);
+
+           }
+
+            
+            
+        }
+
+        for (const tableRow of tableRowList){
+
+            let i = 0;
+
+            const tableDataList = tableRow.querySelectorAll("td");
+
+            for (const tableData of tableDataList) {
+
+                let childNodeList = tableData.childNodes;
+                
+                if( childNodeList.length === 1 ){
+                    let span = document.createElement("span");
+                    let node = tableData.firstChild;
+
+                    node.parentNode.insertBefore(span, node);
+                    span.appendChild(node);                      
+                }
+
+                tableData.setAttribute('data-before', myHeaders[i]);
+                i++;
+            }
+
+        }
+
+    </script>
 
 </body>
 
