@@ -41,22 +41,22 @@
 
                 <figure class="container medium my-4">
 
+                    <style>
+
+                        #nyc-population-demographics td:nth-child(6){
+                            width: 2%;
+                            white-space: nowrap;
+                        }
+
+                        #nyc-population-demographics caption{
+                            text-align: left;
+                        }
+
+                    </style>
+
                     <div class="table-scroll" aria-labelledby="table-caption-01" role="region" tabindex="0">
 
                         <div class="table-scroll__container">
-
-                            <style>
-
-                                #nyc-population-demographics td:nth-child(6){
-                                    width: 2%;
-                                    white-space: nowrap;
-                                }
-
-                                #nyc-population-demographics caption{
-                                    text-align: left;
-                                }
-
-                            </style>
 
                             <table class="table table--edge" id="nyc-population-demographics" role="table">
 
@@ -483,7 +483,7 @@
             if (tableHeader.hasChildNodes()) {
                 
                 let children = tableHeader.childNodes;
-                let myTitle = "cool";
+                let myTitle = "Title";
 
                 for(child of children){
 
@@ -492,9 +492,7 @@
                     }
                 }
 
-                console.log(myTitle)
                 myHeaders.push(myTitle);
-
            }
             
         }
@@ -522,6 +520,34 @@
             }
 
         }
+
+        //////////////////////////////////////////////
+        // Scroll Table
+        //////////////////////////////////////////////
+
+        function initTableScroll (){
+
+            const scrollElementList = document.querySelectorAll(".table-scroll");
+
+            for (const scrollElement of scrollElementList) {
+                
+                let scrollTarget = scrollElement.querySelector(".table-scroll__container");
+                
+                let maxWidth = scrollElement.offsetWidth;
+                let scrollWidth = scrollTarget.scrollWidth;
+
+                if( scrollWidth > maxWidth ){
+                    scrollElement.classList.add("cool");
+                } else{
+                    scrollElement.classList.remove("cool");
+                }
+
+            }
+
+        }
+
+        initTableScroll();
+        window.addEventListener('resize', initTableScroll);
 
     </script>
 

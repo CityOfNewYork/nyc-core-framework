@@ -60,7 +60,7 @@ In this file:
     position: relative;
 
     caption{
-        // text-align: left;
+        text-align: left;
     }
 
     .table-scroll__container{
@@ -78,7 +78,7 @@ In this file:
             right: 0;
             top: 0;
             bottom: 0;
-            width: 50%;
+            width: 25%;
             z-index: 12000;
             background: linear-gradient(to right,rgba(255, 255, 255, 0), rgb(255, 255, 255) 100%);
             pointer-events: none;
@@ -95,6 +95,15 @@ In this file:
 
     table{
         min-width: 800px;
+    }
+
+    &.cool .table-scroll__container {
+
+        &::before,
+        &::after {
+            display: block; //////////
+        }
+
     }
 }
 
