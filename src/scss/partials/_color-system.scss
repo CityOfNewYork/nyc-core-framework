@@ -128,10 +128,11 @@ html,
     .tabs [role="tabpanel"],
     [data-toggle="dropdown"] ~ ul, 
     .modal__overlay::before,
-    .modal__container {
+    .modal__container,
+    .table-scroll__container::after {
         background-color: var(--background-color);
     }
-
+    
     [data-toggle="dropdown"][class*="-icon"] ~ ul::before{
         color: var(--border-color);
     }

@@ -41,26 +41,17 @@
 
                 <figure class="container medium my-4">
 
-                    <style>
+                    <div class="table-scroll" aria-labelledby="table-caption-01" role="region">
 
-                        #nyc-population-demographics td:nth-child(6){
-                            width: 2%;
-                            white-space: nowrap;
-                        }
-
-                        #nyc-population-demographics caption{
-                            text-align: left;
-                        }
-
-                    </style>
-
-                    <div class="table-scroll" aria-labelledby="table-caption-01" role="region" tabindex="0">
+                        <small class="table-scroll__assist">
+                            Scroll left or right to see entire table
+                        </small>
 
                         <div class="table-scroll__container">
 
                             <table class="table table--edge" id="nyc-population-demographics" role="table">
 
-                                <caption id="table-caption-01" class="h4 mb-2">
+                                <caption id="table-caption-01" class="sr-only">
                                     New York City Population Demographics
                                 </caption>
 
@@ -70,14 +61,12 @@
                                     <col>
                                     <col>
                                     <col>
-                                    <col>
                                 </colgroup>
                             
-                                <thead class="border-t">
+                                <thead>
                             
                                     <tr>
                                         <th scope="col">Borough</th>
-                                        <th scope="col">County</th>
                                         <th scope="col">Population</th>
                                         <th scope="col">Land Area</th>
                                         <th scope="col">Density</th>
@@ -91,53 +80,48 @@
                                 <tbody>
 
                                     <tr>
-                                        <td>The Bronx</td>
-                                        <td>Bronx</td>
-                                        <td>1,418,207</td>
-                                        <td>42.10</td>
-                                        <td>33,867</td>
-                                        <td>
+                                        <td>Brooklyn</td>
+                                        <td>2,559,903</td>
+                                        <td>70.82</td>
+                                        <td>36,147</td>
+                                        <td class="text-align-right">
                                             <a href="#1">View Map</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Brooklyn</td>
-                                        <td>Kings</td>
-                                        <td>2,559,903</td>
-                                        <td>70.82</td>
-                                        <td>36,147</td>
-                                        <td>
+                                        <td>Bronx</td>
+                                        <td>1,418,207</td>
+                                        <td>42.10</td>
+                                        <td>33,867</td>
+                                       <td class="text-align-right">
                                             <a href="#1">View Map</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Manhattan</td>
-                                        <td>New York</td>
                                         <td>1,628,706</td>
                                         <td>22.83</td>
                                         <td>71,341</td>
-                                        <td>
+                                        <td class="text-align-right">
                                             <a href="#1">View Map</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Queens</td>
-                                        <td>Queens</td>
                                         <td>2,253,858</td>
                                         <td>108.53</td>
                                         <td>20,767</td>
-                                        <td>
+                                        <td class="text-align-right">
                                             <a href="#1">View Map</a>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td>Staten Island</td>
-                                        <td>Richmond</td>
                                         <td>476,143</td>
                                         <td>58.37</td>
                                         <td>8,157</td>
-                                        <td>
+                                        <td class="text-align-right">
                                             <a href="#1">View Map</a>
                                         </td>
                                     </tr>
@@ -165,13 +149,11 @@
                         <thead>
 
                             <tr>
-                                <th>Apples</th>
-                                <th>Oranges</th>
-                                <th>Pears</th>
-                                <th>Kiwi</th>
-                                <th>Grapes</th>
-                                <th>Melon</th>
-                                <th class="w-fit">
+                                <th scope="col">Borough</th>
+                                <th scope="col">Population</th>
+                                <th scope="col">Land Area</th>
+                                <th scope="col">Density</th>
+                                <th>
                                     <span class="sr-only">Action</span>
                                 </th>
                             </tr>
@@ -180,126 +162,51 @@
                         <tbody>
 
                             <tr>
-                                <td>80</td>
-                                <td>
-                                    <p>
-                                        January 1, 2020
-                                    </p>
-                                </td>
-                                <td>99</td>
-                                <td>101</td>
-                                <td>99</td>
-                                <td>
-                                    <a href="#1">View</a>
-                                </td>
-                                <td class="text-align-right fs-sm">
-                                    <button class="btn btn--icon-only" href="#1" title="Edit">
-                                        <span class="sr-only">Edit</span>
-                                        <span class="fas fa-pen" aria-hidden="true"></span>
-                                    </button>
+                                <td>Brooklyn</td>
+                                <td>2,559,903</td>
+                                <td>70.82</td>
+                                <td>36,147</td>
+                                <td class="text-align-right">
+                                    <a href="#1">View Map</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>99</td>
-                                <td>
-                                    <p>
-                                        January 1, 2020
-                                    </p>
-                                </td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>
-                                    <a href="#1">View</a>
-                                </td>
-                                <td class="text-align-right fs-sm">
-                                    <button class="btn btn--icon-only" href="#1" title="Edit">
-                                        <span class="sr-only">Edit</span>
-                                        <span class="fas fa-pen" aria-hidden="true"></span>
-                                    </button>
+                                <td>Bronx</td>
+                                <td>1,418,207</td>
+                                <td>42.10</td>
+                                <td>33,867</td>
+                                <td class="text-align-right">
+                                    <a href="#1">View Map</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>99</td>
-                                <td>
-                                    <p>
-                                        January 1, 2020
-                                    </p>
-                                </td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>
-                                    <a href="#1">View</a>
-                                </td>
-                                <td class="text-align-right fs-sm">
-                                    <button class="btn btn--icon-only" href="#1" title="Edit">
-                                        <span class="sr-only">Edit</span>
-                                        <span class="fas fa-pen" aria-hidden="true"></span>
-                                    </button>
+                                <td>Manhattan</td>
+                                <td>1,628,706</td>
+                                <td>22.83</td>
+                                <td>71,341</td>
+                                <td class="text-align-right">
+                                    <a href="#1">View Map</a>
                                 </td>
                             </tr>
                             <tr>
-                                <td>99</td>
-                                <td>
-                                    <p>
-                                        January 1, 2020
-                                    </p>
-                                </td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>
-                                    <a href="#1">View</a>
-                                </td>
-                                <td class="text-align-right fs-sm">
-                                    <button class="btn btn--icon-only" href="#1" title="Edit">
-                                        <span class="sr-only">Edit</span>
-                                        <span class="fas fa-pen" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>99</td>
-                                <td>
-                                    <p>
-                                        January 1, 2020
-                                    </p>
-                                </td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>
-                                    <a href="#1">View</a>
-                                </td>
-                                <td class="text-align-right fs-sm">
-                                    <button class="btn btn--icon-only" href="#1" title="Edit">
-                                        <span class="sr-only">Edit</span>
-                                        <span class="fas fa-pen" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>99</td>
-                                <td>
-                                    <p>
-                                        January 1, 2020
-                                    </p>
-                                </td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>99</td>
-                                <td>
-                                    <a href="#1">View</a>
-                                </td>
-                                <td class="text-align-right fs-sm">
-                                    <button class="btn btn--icon-only" href="#1" title="Edit">
-                                        <span class="sr-only">Edit</span>
-                                        <span class="fas fa-pen" aria-hidden="true"></span>
-                                    </button>
+                                <td>Queens</td>
+                                <td>2,253,858</td>
+                                <td>108.53</td>
+                                <td>20,767</td>
+                                <td class="text-align-right">
+                                    <a href="#1">View Map</a>
                                 </td>
                             </tr>
 
+                            <tr>
+                                <td>Staten Island</td>
+                                <td>476,143</td>
+                                <td>58.37</td>
+                                <td>8,157</td>
+                                <td class="text-align-right">
+                                    <a href="#1">View Map</a>
+                                </td>
+                            </tr>
                         </tbody>
 
                     </table>
@@ -532,15 +439,32 @@
             for (const scrollElement of scrollElementList) {
                 
                 let scrollTarget = scrollElement.querySelector(".table-scroll__container");
-                
+
                 let maxWidth = scrollElement.offsetWidth;
                 let scrollWidth = scrollTarget.scrollWidth;
 
                 if( scrollWidth > maxWidth ){
-                    scrollElement.classList.add("cool");
+                    scrollElement.setAttribute("data-scroll", true);
                 } else{
-                    scrollElement.classList.remove("cool");
+                    scrollElement.setAttribute("data-scroll", false);
                 }
+
+                function removeGradient(){
+
+                    let scrollPos = scrollTarget.scrollLeft;
+
+                    console.log(scrollTarget.scrollLeft);
+
+                    if( scrollPos > 1 ){
+                        scrollTarget.setAttribute("data-scrolling", true);
+                    } else{
+                        scrollTarget.setAttribute("data-scrolling", false);
+                        return;
+                    }
+
+                }
+
+                scrollTarget.addEventListener('scroll', removeGradient);
 
             }
 

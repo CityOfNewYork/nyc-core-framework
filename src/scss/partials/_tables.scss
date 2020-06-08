@@ -61,50 +61,54 @@ In this file:
 
     caption{
         text-align: left;
+        caption-side: bottom;
+    }
+
+    .table-scroll__assist {
+        position: relative;
+        z-index: 12010;
+        margin-bottom: .5rem;
+        opacity: .75;
+        display: none;
+
     }
 
     .table-scroll__container{
         overflow-x: auto;
         max-width: 100%;
 
-        &::before, 
-        &::after{
-            display: none; //////////
+        table{
+            min-width: 900px;
         }
 
-        &::before{
+        &::after{
             content: "";
             position: absolute;
-            right: 0;
             top: 0;
+            right: 0;
             bottom: 0;
-            width: 25%;
+            left: 0;
             z-index: 12000;
-            background: linear-gradient(to right,rgba(255, 255, 255, 0), rgb(255, 255, 255) 100%);
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
+            transition: opacity 0.3s;
             pointer-events: none;
-
+            display: none;
         }
 
-        &::after{
-            font-size: var(--font-size-sm);
-            content: "Scroll right to view full table";
-            opacity: 0.75;
-        }
-
-    }
-
-    table{
-        min-width: 800px;
-    }
-
-    &.cool .table-scroll__container {
-
-        &::before,
-        &::after {
-            display: block; //////////
+        &[data-scrolling=true]::after{
+            opacity: 0;
         }
 
     }
+
+    &[data-scroll=true] {
+        .table-scroll__container::after,
+        .table-scroll__assist{
+            display: block;
+        }
+    }
+
+    
 }
 
 @each $breakpoint in map-keys($breakpoints) {
