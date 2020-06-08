@@ -41,7 +41,7 @@ In this file:
     thead th {
         vertical-align: bottom;
 
-        &:not([class*="w-"]):not([class*="action"]) {
+        &:not([class*="w-"]) {
             width: auto;
         }
 
@@ -54,24 +54,25 @@ In this file:
     thead tr {
         border-top-style: unset;
     }
-
 }
 
 .table-scroll {
     position: relative;
 
     caption{
-        text-align: left;
+        // text-align: left;
     }
 
     .table-scroll__container{
         overflow-x: auto;
         max-width: 100%;
 
-        padding-bottom: 1em;
-        border-bottom: 1px solid red !important;
-
+        &::before, 
         &::after{
+            display: none; //////////
+        }
+
+        &::before{
             content: "";
             position: absolute;
             right: 0;
@@ -81,7 +82,13 @@ In this file:
             z-index: 12000;
             background: linear-gradient(to right,rgba(255, 255, 255, 0), rgb(255, 255, 255) 100%);
             pointer-events: none;
-        display: none;
+
+        }
+
+        &::after{
+            font-size: var(--font-size-sm);
+            content: "Scroll right to view full table";
+            opacity: 0.75;
         }
 
     }

@@ -45,13 +45,35 @@
 
                         <div class="table-scroll__container">
 
-                            <table class="table table--edge">
+                            <style>
 
-                                <caption id="table-caption-01" class="mb-2">
-                                    <h2 class="h4">New York City Population Demographics</h2> 
+                                #nyc-population-demographics td:nth-child(6){
+                                    width: 2%;
+                                    white-space: nowrap;
+                                }
+
+                                #nyc-population-demographics caption{
+                                    text-align: left;
+                                }
+
+                            </style>
+
+                            <table class="table table--edge" id="nyc-population-demographics" role="table">
+
+                                <caption id="table-caption-01" class="h4 mb-2">
+                                    New York City Population Demographics
                                 </caption>
+
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="20%">
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
                             
-                                <thead class="border-t border-secondary">
+                                <thead class="border-t">
                             
                                     <tr>
                                         <th scope="col">Borough</th>
@@ -59,7 +81,7 @@
                                         <th scope="col">Population</th>
                                         <th scope="col">Land Area</th>
                                         <th scope="col">Density</th>
-                                        <th scope="col" class="w-fit">
+                                        <th scope="col">
                                             <span class="sr-only">Action</span>
                                         </th>
                                     </tr>
@@ -474,8 +496,6 @@
                 myHeaders.push(myTitle);
 
            }
-
-            
             
         }
 
