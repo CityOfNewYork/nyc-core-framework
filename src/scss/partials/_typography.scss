@@ -95,7 +95,7 @@ $font-sizes: (
 
 @each $name, $font-size-map in $font-sizes {
     .fs-#{$name} {
-        font-size: map-get($font-size-map, "size") !important;
+        font-size: map-get($font-size-map, "size");
 
         @if map-has-key($font-size-map, "line-height") {
             line-height: map-get($font-size-map, "line-height");

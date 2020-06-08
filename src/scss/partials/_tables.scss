@@ -17,7 +17,6 @@ In this file:
     --table-cell-padding-x: 1.5em;
     --table-cell-padding-y: 0.75em;
 
-    --default-table-font-size: var(--font-size-md);
 }
 
 //////////////////////////////////////////////
@@ -26,15 +25,6 @@ In this file:
 
 .table {
     width: 100%;
-
-    &:not([class="fs-"]){
-        font-size: var(--default-table-font-size);
-    }
-
-    caption{
-        caption-side: bottom;
-    }
-
 
     th, 
     td{
@@ -47,7 +37,7 @@ In this file:
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
     }
-    
+
     thead th {
         vertical-align: bottom;
 
@@ -67,21 +57,38 @@ In this file:
 
 }
 
-
 .table-scroll {
-    overflow-x: auto;
-}
+    position: relative;
 
+    caption{
+        text-align: left;
+    }
 
-.scroll-x{
-    overflow-x: scroll;
-    max-width: 100%;
+    .table-scroll__container{
+        overflow-x: auto;
+        max-width: 100%;
+
+        padding-bottom: 1em;
+        border-bottom: 1px solid red !important;
+
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            z-index: 12000;
+            background: linear-gradient(to right,rgba(255, 255, 255, 0), rgb(255, 255, 255) 100%);
+            pointer-events: none;
+        }
+
+    }
 
     table{
-        min-width: 600px;
+        min-width: 800px;
     }
 }
-
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoint-down($breakpoint) {
@@ -106,7 +113,7 @@ In this file:
                 left: -9999px;
             }
 
-            tr{
+            tr:not(:first-child){
                 border-top-width: calc(var(--default-border-width) * 2);
                 border-top-style: var(--default-border-style);
             }
@@ -125,6 +132,7 @@ In this file:
             td::after {
                 content: attr(data-before);
                 font-weight: bold;
+                margin-right: 1rem;
             }
         }
     }
