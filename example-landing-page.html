@@ -31,7 +31,7 @@
 
     <header id="global-header" role="banner">
 
-        <div class="bc-dark container py-1 fs-md" id="nyc-head">
+        <div class="container fs-md py-1 bc-dark" id="nyc-head">
 
             <div class="grid grid--cells-fit justify-content-between">
 
@@ -139,7 +139,7 @@
                             </button>
                         </li>
                         <li>
-                            <button class="btn btn--icon-only" title="Search"  data-toggle="collapse" data-target="#global-search">
+                            <button class="btn btn--icon-only" title="Search" data-modal-open="modal-2">
                                 <span class="sr-only">Search</span>
                                 <span class="fas fa-search"></span>
                             </button>
@@ -404,6 +404,44 @@
         <!-- .bc-light -->
 
     </main>
+
+    <div class="modal modal--slide" id="modal-2">
+
+        <div class="modal__overlay">
+
+            <div class="modal__container medium rounded" aria-labelledby="modal-1-title">
+
+                <header class="modal__header border-b">
+                    <h2 class="h5" id="modal-1-title">
+                        Modal Title Two
+                    </h2>
+                    <button class="btn btn--icon-only" data-modal-close>
+                        <span class="sr-only">Close Modal</span>
+                        <span class="fas fa-times"></span>
+                    </button>
+                </header>
+
+                <main class="modal__body" id="modal-1-content">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eveniet, deleniti perspiciatis
+                        tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est
+                        perspiciatis
+                        architecto at quasi adipisci.
+                    </p>
+                </main>
+
+                <footer class="modal__footer border-t">
+                    <button class="btn bc-secondary d-block" data-modal-close>Close</button>
+                </footer>
+
+            </div>
+            <!-- .modal__container -->
+
+        </div>
+        <!-- .modal__overlay -->
+
+    </div>
+    <!-- #modal-1 -->
 
     <footer class="container bc-dark fs-md py-4">
 
