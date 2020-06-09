@@ -399,6 +399,108 @@ window.onload = () => {
 
     }
 
+
+    //////////////////////////////////////////////
+    // Table Breakpoints
+    //////////////////////////////////////////////
+
+    const tableTarget = document.querySelector("[class*='table--stack']");
+    const tableHeaderList = tableTarget.querySelectorAll("thead th");
+    const tableRowList = tableTarget.querySelectorAll("tbody tr");
+
+    let myHeaders = [];
+
+    for (const tableHeader of tableHeaderList) {
+
+        if (tableHeader.hasChildNodes()) {
+
+            let children = tableHeader.childNodes;
+            let myTitle = "Title";
+
+            for (const child of children) {
+
+                if (child.nodeType === 3) {
+                    myTitle = child.textContent;
+                }
+            }
+
+            myHeaders.push(myTitle);
+        }
+
+    }
+
+    for (const tableRow of tableRowList) {
+
+        let i = 0;
+
+        const tableDataList = tableRow.querySelectorAll("td");
+
+        for (const tableData of tableDataList) {
+
+            let childNodeList = tableData.childNodes;
+
+            if (childNodeList.length === 1) {
+                let span = document.createElement("span");
+                let node = tableData.firstChild;
+
+                node.parentNode.insertBefore(span, node);
+                span.appendChild(node);
+            }
+
+            tableData.setAttribute('data-before', myHeaders[i]);
+
+            i++;
+        }
+
+    }
+
+    //////////////////////////////////////////////
+    // Table Scrolling
+    //////////////////////////////////////////////
+
+    const initTableScroll = () => {
+
+        const scrollElementList = document.querySelectorAll(".table-scroll");
+
+        for (const scrollElement of scrollElementList) {
+
+            let scrollTarget = scrollElement.querySelector(".table-scroll__container");
+
+            let maxWidth = scrollElement.offsetWidth;
+            let scrollWidth = scrollTarget.scrollWidth;
+
+            if (scrollWidth > maxWidth) {
+                scrollElement.setAttribute("data-scroll", true);
+            } else {
+                scrollElement.setAttribute("data-scroll", false);
+            }
+
+            function removeGradient() {
+
+                let scrollPos = scrollTarget.scrollLeft;
+
+                console.log(scrollTarget.scrollLeft);
+
+                if (scrollPos > 1) {
+                    scrollTarget.setAttribute("data-scrolling", true);
+                } else {
+                    scrollTarget.setAttribute("data-scrolling", false);
+                    return;
+                }
+
+            }
+
+            scrollTarget.addEventListener('scroll', removeGradient), {
+                passive: true
+            };
+
+        }
+
+    }
+
+    initTableScroll();
+    window.addEventListener('resize', initTableScroll);
+
     //////////////////////////////////////////////
     // F. Forms
     //////////////////////////////////////////////
