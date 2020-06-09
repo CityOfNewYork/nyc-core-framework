@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body class="bc-light">
 
     <main id="skip-header-content" role="main">
 
@@ -43,7 +43,7 @@
 
                     <div class="table-scroll" aria-labelledby="table-caption-01" role="region">
 
-                        <small class="table-scroll__assist">
+                        <small class="table-scroll__assist" aria-hidden="true">
                             Scroll left or right to see entire table
                         </small>
 
@@ -423,6 +423,7 @@
                 }
 
                 tableData.setAttribute('data-before', myHeaders[i]);
+
                 i++;
             }
 
@@ -432,7 +433,7 @@
         // Scroll Table
         //////////////////////////////////////////////
 
-        function initTableScroll (){
+         const initTableScroll = () => {
 
             const scrollElementList = document.querySelectorAll(".table-scroll");
 
@@ -464,13 +465,13 @@
 
                 }
 
-                scrollTarget.addEventListener('scroll', removeGradient);
+                scrollTarget.addEventListener('scroll', removeGradient), { passive: true };
 
             }
 
         }
 
-        initTableScroll();
+        window.addEventListener('load', initTableScroll);
         window.addEventListener('resize', initTableScroll);
 
     </script>

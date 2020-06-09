@@ -54,7 +54,7 @@ In this file:
     &:hover,
     &:focus {
         
-        &:not(.sr-only-focusable):not(.expanded-link):not(.coool) {
+        &:not(.sr-only-focusable):not(.expanded-link) {
             position: relative;
             z-index: 5000;
         }

@@ -127,10 +127,10 @@ fieldset{
 }
 
 .form-group__field.has-action > button {
+    position: absolute !important; // Carl, fix this
     padding: 0;
     background: transparent;
     width: var(--action-btn-width);
-    position: absolute;
     right: calc(var(--field-padding) * 0.5);
     top: calc(var(--field-padding) * 0.5);
     bottom: calc(var(--field-padding) * 0.5);
