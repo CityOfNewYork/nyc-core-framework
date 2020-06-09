@@ -73,3 +73,41 @@ a[data-logo="brand"] {
 .overflow-hidden {
     overflow: hidden;
 }
+
+.nav-bar{
+
+    display: grid;
+    justify-content: space-between;
+
+    > * {
+        border: 2px solid green !important;
+    }
+
+    grid-template-columns: fit-content(40%) fit-content(40%);
+    grid-template-areas: 
+        "logo icons"
+        "navigation navigation";
+
+    > .logo {
+        grid-area: logo;
+    }
+
+    > .navigation {
+        grid-area: navigation;
+    }
+
+    > .icons {
+        grid-area: icons;
+    }
+
+    @include breakpoint-up(md) {
+
+        justify-content: unset;
+        gap: var(--s2);
+        
+        grid-template-columns: 1fr auto auto;
+        grid-template-areas:
+            "logo navigation icons";
+    }
+
+}
