@@ -3,22 +3,23 @@ import 'element-closest-polyfill';
 window.onload = () => {
 
     ////////////////////////////////////////
-    // Mutation observer - watch for RTL
+    // RTL Mutation Observer
     ////////////////////////////////////////
 
-    var target = document.querySelector("html");
+    const rtlTarget = document.querySelector("html");
 
-    var observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function () {
-            
-            var classes = target.getAttribute("class");
-            var single_class = "translated-rtl";
+    const rtlObserver = new MutationObserver((mutations) => {
 
-            if (classes.includes(single_class)) {
-                target.setAttribute("dir", "rtl");
+        mutations.forEach(() => {
+
+            let single_class = "translated-rtl";
+
+            if ( rtlTarget.classList.contains(single_class) ) {
+                rtlTarget.setAttribute("dir", "rtl");
             } else {
-                target.setAttribute("dir", "ltr");
+                rtlTarget.setAttribute("dir", "ltr");
             }
+            
         });
     });
 
@@ -27,7 +28,7 @@ window.onload = () => {
         attributeFilter: ["class"]
     }
 
-    observer.observe(target, config);
+    rtlObserver.observe(rtlTarget, config);
 
     //////////////////////////////////////////////
     // A. Dropdowns
@@ -74,7 +75,7 @@ window.onload = () => {
     // B. Accordion
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll('.accordion')).forEach(function (accordion) {
+    Array.prototype.slice.call(document.querySelectorAll('.accordion')).forEach((accordion) => {
 
         const accButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
         const accPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
@@ -155,7 +156,7 @@ window.onload = () => {
     // C. Tabs
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll('[data-tab-group]')).forEach(function (tab) {
+    Array.prototype.slice.call(document.querySelectorAll('[data-tab-group]')).forEach((tab) => {
 
         const tabButtonList = tab.querySelectorAll('[role="tab"]');
         const tabPanelList = tab.querySelectorAll('[role="tabpanel"]');
@@ -399,60 +400,62 @@ window.onload = () => {
 
     }
 
-
     //////////////////////////////////////////////
     // Table Breakpoints
     //////////////////////////////////////////////
 
-    const tableTarget = document.querySelector("[class*='table--stack']");
-    const tableHeaderList = tableTarget.querySelectorAll("thead th");
-    const tableRowList = tableTarget.querySelectorAll("tbody tr");
+    Array.prototype.slice.call(document.querySelectorAll("[class*='table--stack']")).forEach((table) => {
+        
+        const tableHeaderList = table.querySelectorAll("thead th");
+        const tableRowList = table.querySelectorAll("tbody tr");
 
-    let myHeaders = [];
+        let myHeaders = [];
 
-    for (const tableHeader of tableHeaderList) {
+        for (const tableHeader of tableHeaderList) {
 
-        if (tableHeader.hasChildNodes()) {
+            if (tableHeader.hasChildNodes()) {
 
-            let children = tableHeader.childNodes;
-            let myTitle = "Title";
+                let children = tableHeader.childNodes;
+                let myTitle = "Title";
 
-            for (const child of children) {
+                for (const child of children) {
 
-                if (child.nodeType === 3) {
-                    myTitle = child.textContent;
+                    if (child.nodeType === 3) {
+                        myTitle = child.textContent;
+                    }
                 }
+
+                myHeaders.push(myTitle);
             }
 
-            myHeaders.push(myTitle);
         }
 
-    }
+        for (const tableRow of tableRowList) {
 
-    for (const tableRow of tableRowList) {
+            let i = 0;
 
-        let i = 0;
+            const tableDataList = tableRow.querySelectorAll("td");
 
-        const tableDataList = tableRow.querySelectorAll("td");
+            for (const tableData of tableDataList) {
 
-        for (const tableData of tableDataList) {
+                let childNodeList = tableData.childNodes;
 
-            let childNodeList = tableData.childNodes;
+                if (childNodeList.length === 1) {
+                    let span = document.createElement("span");
+                    let node = tableData.firstChild;
 
-            if (childNodeList.length === 1) {
-                let span = document.createElement("span");
-                let node = tableData.firstChild;
+                    node.parentNode.insertBefore(span, node);
+                    span.appendChild(node);
+                }
 
-                node.parentNode.insertBefore(span, node);
-                span.appendChild(node);
+                tableData.setAttribute('data-before', myHeaders[i]);
+
+                i++;
             }
 
-            tableData.setAttribute('data-before', myHeaders[i]);
-
-            i++;
         }
 
-    }
+    }); // end for
 
     //////////////////////////////////////////////
     // Table Scrolling
