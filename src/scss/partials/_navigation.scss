@@ -55,6 +55,10 @@ In this file:
             margin-right: calc(var(--s2) * 0.25);
         }
     }
+
+    > * {
+        border:2px solid green !important;
+    }
 }
 
 [class*="head-nav-right--"] {
