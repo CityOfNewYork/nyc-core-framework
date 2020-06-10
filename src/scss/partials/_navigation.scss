@@ -3,7 +3,7 @@
 In this file:
 
 // A. Variables
-// B. Nav
+// B. Nav & Head Nav Components 
 // D. Nav Divider
 // E. Dropdown
 
@@ -19,25 +19,96 @@ In this file:
     --dropdown-z-index: 6000;
 }
 
+//////////////////////////////////////////////
+// B. Head Nav Components
+//////////////////////////////////////////////
+
+[class*="head-nav-right--"],
+[class*="head-nav-across--"] {
+    display: grid;
+
+    ul {
+        @extend %list-nav-style;
+    }
+
+    > [class*="__logo"] {
+        grid-area: logo;
+        padding: var(--s2);
+    }
+
+    > [class*="__menu"] {
+        grid-area: menu;
+        @extend .collapse !optional;
+    }
+
+    > [class*="__buttons"] {
+        grid-area: buttons;
+        padding: var(--s1);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        > .btn,
+        > button {
+            margin-left: calc(var(--s2) * 0.25);
+            margin-right: calc(var(--s2) * 0.25);
+        }
+    }
+}
+
+[class*="head-nav-right--"] {
+    justify-content: space-between;
+
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        "logo buttons"
+        "menu menu";
+
+        > [class*="__menu"] {
+            padding: var(--s2);
+        }
+}
+
+[class*="head-nav-across--"] {
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "logo"
+        "buttons"
+        "menu";
+
+    > [class*="__buttons"] {
+        padding-top: var(--nav--divider-padding-y);
+        padding-bottom: var(--nav--divider-padding-y);
+    }
+
+    > [class*="__buttons"],
+    > [class*="__menu"]{
+        border-top-width: var(--default-border-width);
+        border-top-style: var(--default-border-style);
+        border-top-color: inherit;
+    }
+}
+
+.head-nav-across__logo {
+    display: flex;
+    justify-content: center;
+}
+
 ////////////////////////////////////////
 // B. Nav
 ////////////////////////////////////////
 
+[class*="head-nav-right--"] > [class*="__menu"] > ul,
 .nav {
     --gap-size: var(--s2);
-    
-    @extend %list-no-style;
-
-    > li {
-        position: relative;
-    }
-
-    > li a[aria-current] {
-        font-weight: var(--base-font-weight-bold);
-        text-decoration: underline;
-    }
 }
 
+.nav{
+    @extend %list-nav-style;
+}
+
+[class*="head-nav-right--"] > [class*="__menu"] > ul,
 .nav:not([class*="nav--divider"]) {
 
     > li:not(:last-child) {
@@ -49,6 +120,13 @@ In this file:
         margin-left: calc(var(--gap-size) * -1);
         margin-right: calc(var(--gap-size) * -1);
         width: calc(100% + (var(--gap-size) * 2));
+        left: 0;
+
+        [dir="rtl"] & {
+            left: unset;
+            right: 0;
+            text-align: right;
+        }
     }
 
     > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
@@ -57,48 +135,6 @@ In this file:
         margin-top: 1rem;
         width: 240px;
     }
-
-    @each $breakpoint in map-keys($breakpoints) {
-        @include breakpoint-up($breakpoint) {
-            $mod: breakpoint-modifier($breakpoint, $breakpoints);
-
-            &.nav--horizontal#{$mod} {
-
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                margin-left: calc(-1 * var(--gap-size));
-                margin-right: calc(-1 * var(--gap-size));
-
-                > li {
-                    margin-left: var(--gap-size);
-                    margin-right: var(--gap-size);
-                    margin-bottom: 0 !important;
-                }
-
-                > li > [data-toggle="dropdown"] ~ ul {
-                    min-width: 200px;
-                    position: absolute;
-                    left: 0;
-                }
-
-                > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin-left: 0;
-                    
-                    &::after{
-                        left: 50%;
-                    }
-                }
-            }
-
-            
-        }
-    }
-
-
 }
 
 .nav--gap-0 {
@@ -113,10 +149,48 @@ In this file:
     }
 }
 
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .head-nav-right#{$mod} > [class*="__menu"] > ul,
+        .nav.nav--horizontal#{$mod} {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            margin-left: calc(-1 * var(--gap-size));
+            margin-right: calc(-1 * var(--gap-size));
+
+            > li {
+                margin-left: var(--gap-size);
+                margin-right: var(--gap-size);
+                margin-bottom: 0 !important;
+            }
+
+            > li > [data-toggle="dropdown"] ~ ul {
+                min-width: 200px;
+                position: absolute;
+            }
+
+            > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
+                left: 50%;
+                transform: translateX(-50%);
+                margin-left: 0;
+
+                &::after {
+                    left: 50%;
+                }
+            }
+        }
+    }
+}
+
 ////////////////////////////////////////
 // D. Nav Divider
 ////////////////////////////////////////
 
+[class*="head-nav-across--"] > [class*="__menu"] > ul,
 .nav--divider {
 
     &:not([class*="bc-"]) {
@@ -135,8 +209,12 @@ In this file:
 
     > li > a, 
     > li > button {
-        display: block;
         width: 100%;
+    }
+
+    > li > a:not([data-toggle="dropdown"]), 
+    > li > button:not([data-toggle="dropdown"]) {
+        display: block;
     }
 
     > li > a, 
@@ -152,47 +230,102 @@ In this file:
     [data-toggle="dropdown"] {
         justify-content: space-between;
     }
+}
 
-    @each $breakpoint in map-keys($breakpoints) {
-        @include breakpoint-up($breakpoint) {
-            $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.nav--horizontal#{$mod} {
+        .head-nav-right#{$mod},
+        .head-nav-across#{$mod} {
+
+            [class*="__logo"] {
                 display: flex;
-                flex-direction: row;
-                align-items: baseline;
+                justify-content: start;
+            }
 
-                > li {
-                    flex: 1;
-                    text-align: center;
-                    border-bottom-style: none !important; // Thanks, IE.
+            [class*="__menu"] {
+                display: block !important;
+            }
 
-                    &:not(:last-child) {
-                        border-right-width: var(--default-border-width);
-                        border-right-style: var(--default-border-style);
-                        border-color: inherit;
+            [class*="__buttons"] > button[title="Menu"] {
+                display: none;
+            }
+
+        }
+
+        .head-nav-right#{$mod} {
+            grid-template-columns: 1fr auto auto;
+            grid-template-areas:
+                "logo menu buttons";
+
+            [class*="__menu"] {
+                padding-top: unset;
+                padding-bottom: unset;
+
+                > ul {
+                    height: 100%;
+                    align-items: stretch;
+
+                    > li {
+                        display: flex;
+                    }
+
+                    > li > a {
+                        margin-top: auto;
+                        margin-bottom: auto;
                     }
                 }
+            }
+        }
 
-                [data-toggle="dropdown"] {
-                    justify-content: center;
-                }
+        .head-nav-across#{$mod} {
+            grid-template-columns: 1fr auto;
+            grid-template-areas:
+                "logo buttons"
+                "menu menu";
 
-                &[class*="border"] {
-                    > li > [data-toggle="dropdown"] ~ ul {
-                        border-width: var(--default-border-width);
-                        border-style: var(--default-border-style);
-                        border-top-width: 0;
-                        border-color: inherit;
-                        width: calc(100% + (var(--default-border-width) * 2));
-                    }
+                > [class*="__buttons"] {
+                    border-top-style: none !important; // Thanks, IE.
                 }
+        }
 
-                [data-toggle="dropdown"] ~ ul {
-                    position: absolute;
-                    width: 100%;
-                    left: calc(var(--default-border-width) * -1);
+        .head-nav-across#{$mod} > [class*="__menu"] > ul,
+        .nav--divider.nav--horizontal#{$mod} {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+
+            > li {
+                flex: 1;
+                text-align: center;
+                border-bottom-style: none !important; // Thanks, IE.
+
+                &:not(:last-child) {
+                    border-right-width: var(--default-border-width);
+                    border-right-style: var(--default-border-style);
+                    border-color: inherit;
                 }
+            }
+
+            [data-toggle="dropdown"] {
+                justify-content: center;
+            }
+
+            &[class*="border"] {
+                > li > [data-toggle="dropdown"] ~ ul {
+                    border-width: var(--default-border-width);
+                    border-style: var(--default-border-style);
+                    border-top-width: 0;
+                    border-color: inherit;
+                    width: calc(100% + (var(--default-border-width) * 2));
+                }
+            }
+
+            [data-toggle="dropdown"] ~ ul {
+                position: absolute;
+                width: 100%;
+                left: calc(var(--default-border-width) * -1);
             }
         }
     }
@@ -240,7 +373,7 @@ In this file:
 [data-toggle="dropdown"] ~ ul {
     --dropdown-link-margin: 0.5em;
 
-    @extend %list-no-style;
+    @extend %list-nav-style;
 
     &:not([class*="fs-"]) {
         font-size: inherit;
