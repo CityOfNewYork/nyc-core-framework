@@ -115,10 +115,15 @@ a[data-logo="brand"] {
 
         > li {
             position: relative;
+
             padding-top: calc(var(--menu-padding) * 0.5);
             padding-bottom: calc(var(--menu-padding) * 0.5);
             padding-left: var(--menu-padding);
             padding-right: var(--menu-padding);
+
+            border-top-width: var(--default-border-width);
+            border-top-style: var(--default-border-style);
+            border-top-color: inherit;
         }
 
         > li > a {
@@ -178,10 +183,12 @@ a[data-logo="brand"] {
 
                     > li {
                         display: flex;
+                        border-top-style: none !important; // Thanks, IE.
                     }
 
                     > li > [data-toggle="dropdown"] ~ ul {
                         position: absolute;
+                         margin-left: calc(var(--menu-padding) * -1) ;
                     }
                 }
             }
