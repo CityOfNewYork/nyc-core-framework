@@ -13,7 +13,7 @@ In this file:
 
 // Floating bar with visible breakpoints
 
-$floating-breakpoints-bar: false;
+$floating-breakpoints-bar: true;
 
 @if $floating-breakpoints-bar {
 

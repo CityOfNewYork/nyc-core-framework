@@ -62,6 +62,7 @@ In this file:
 // Logo
 
 a[data-logo="brand"] {
+    display: block;
     color: inherit;
 
     svg {
@@ -74,40 +75,160 @@ a[data-logo="brand"] {
     overflow: hidden;
 }
 
-.nav-bar{
+//////////////////////////////////////////////
+// C. Layouts !!
+//////////////////////////////////////////////
 
-    display: grid;
-    justify-content: space-between;
+.menu-right {
+    --menu-padding: var(--s2);
 
     > * {
-        border: 2px solid green !important;
+        border:2px solid green !important;
     }
 
-    grid-template-columns: fit-content(40%) fit-content(40%);
-    grid-template-areas: 
-        "logo icons"
-        "navigation navigation";
-
-    > .logo {
-        grid-area: logo;
+    ul {
+        @extend %list-no-style;
     }
 
-    > .navigation {
-        grid-area: navigation;
-    }
-
-    > .icons {
-        grid-area: icons;
-    }
-
-    @include breakpoint-up(md) {
-
-        justify-content: unset;
-        gap: var(--s2);
+    > .menu-right__buttons {
+        display: flex;
+        align-items: center;
         
+        margin-left: calc(-1 * var(--s1));
+        margin-right: calc(-1 * var(--s1));
+
+        > li {
+            margin-left: var(--s1);
+            margin-right: var(--s1);
+        }
+    }
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "logo buttons"
+        "menu menu";
+
+    justify-content: space-between;
+
+    > .menu-right__logo {
+        grid-area: logo;
+        padding: var(--menu-padding);
+    }
+
+    > .menu-right__navigation {
+        grid-area: menu;
+
+        @extend .collapse !optional;
+
+
+        > ul {
+            @extend .nav;
+        }
+
+
+    }
+
+    > .menu-right__buttons {
+        grid-area: buttons;
+    }
+
+    @include breakpoint-up(md){
+
         grid-template-columns: 1fr auto auto;
+
         grid-template-areas:
-            "logo navigation icons";
+            "logo menu buttons";
+
+        > .menu-right__navigation,
+        > .menu-right__navigation > ul {
+            display: flex !important;
+        }
+
+         > .menu-right__navigation > ul {
+            margin-left: calc(-1 * var(--s1));
+            margin-right: calc(-1 * var(--s1));
+
+             > li {
+                display: flex;flex-direction: column;
+                height: 100%;
+                margin-left: var(--s1);
+                margin-right: var(--s1);
+            }
+
+            > li > [data-toggle="dropdown"] ~ ul {
+                min-width: 200px;
+                position: absolute;
+                left: 0;
+            }
+                
+            > li > a {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+         }
+    }
+
+} // end layout
+
+// @each $breakpoint in map-keys($breakpoints) {
+
+//     @include breakpoint-up($breakpoint) {
+//         $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+       
+
+//         @if ($breakpoint != xs){
+            
+//             [data-grid*="menu-right#{$mod}"] {
+//                 justify-content: unset;
+//                 gap: var(--s2);
+
+//                 grid-template-columns: 1fr auto auto;
+
+//                 grid-template-areas:
+//                     "logo menu buttons";
+
+//                 [data-cell="menu"] > ul > li,
+//                 [data-cell="menu"] > ul {
+//                     display: flex;
+//                     height: 100%;
+//                 }
+
+//             }
+
+//         }
+
+//     }
+// }
+
+
+//////////////////////////////////////////////
+// D. I.E. 11 Support
+//////////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+    .nav-bar {
+
+        > .logo {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+
+        > .navigation {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            margin-left: var(--s2);
+            margin-right: var(--s2);
+        }
+
+        > .icons {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
     }
 
 }

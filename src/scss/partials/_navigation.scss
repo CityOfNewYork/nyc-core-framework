@@ -66,6 +66,7 @@ In this file:
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+
                 margin-left: calc(-1 * var(--gap-size));
                 margin-right: calc(-1 * var(--gap-size));
 
@@ -81,15 +82,18 @@ In this file:
                     left: 0;
                 }
 
-                > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin-left: 0;
-                    &::after{
-                        left: 50%;
-                    }
-                }
+                // > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
+                //     left: 50%;
+                //     transform: translateX(-50%);
+                //     margin-left: 0;
+                    
+                //     &::after{
+                //         left: 50%;
+                //     }
+                // }
             }
+
+            
         }
     }
 
