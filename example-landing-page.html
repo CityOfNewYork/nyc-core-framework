@@ -78,9 +78,9 @@
         </div>
         <!-- #nyc-head -->
 
-        <div class="head-nav-right--md">
+        <div class="primary-nav--right--md d-none">
 
-            <div class="head-nav-right__logo">
+            <div class="primary-nav__logo">
                 <a href="#1" title="Home" data-logo="brand">
 
                     <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
@@ -96,7 +96,7 @@
                 </a>
             </div>
 
-            <nav class="head-nav-right__menu" id="primary-menu" role="navigation">
+            <nav class="primary-nav__menu" id="primary-menu" role="navigation">
 
                 <ul role="list">
                     <li>
@@ -123,16 +123,16 @@
 
             </nav>
 
-            <div class="head-nav-right__buttons">
+            <div class="primary-nav__buttons">
                 <button class="btn btn--icon-only" title="Menu" data-toggle="collapse" data-target="#primary-menu">
                     <span class="sr-only">Menu</span>
                     <span class="fas fa-bars"></span>
                 </button>
-                <button class="btn btn--icon-only" title="Search" data-toggle="collapse" data-target="#language">
+                <button class="btn btn--icon-only" title="Search" data-modal-open="global-language">
                     <span class="sr-only">Language</span>
                     <span class="fas fa-language"></span>
                 </button>
-                <button class="btn btn--icon-only" title="Search" data-modal-open="modal-2">
+                <button class="btn btn--icon-only" title="Search" data-modal-open="global-language">
                     <span class="sr-only">Search</span>
                     <span class="fas fa-search"></span>
                 </button>
@@ -142,11 +142,11 @@
             </div>
 
         </div>
-        <!-- .head-nav-right -->
+        <!-- .primary-nav -->
 
-        <div class="head-nav-across--md">
+        <div class="primary-nav--across--md">
 
-            <div class="head-nav-across__logo">
+            <div class="primary-nav__logo">
                 <a href="#1" title="Home" data-logo="brand">
 
                     <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
@@ -162,7 +162,7 @@
                 </a>
             </div>
 
-            <nav class="head-nav-across__menu" id="primary-menu-02" role="navigation">
+            <nav class="primary-nav__menu" id="primary-menu-02" role="navigation">
 
                 <ul role="list">
                     <li>
@@ -189,23 +189,23 @@
 
             </nav>
 
-            <div class="head-nav-across__buttons">
+            <div class="primary-nav__buttons">
                 <button class="btn btn--icon-only" title="Menu" data-toggle="collapse" data-target="#primary-menu-02">
                     <span class="sr-only">Menu</span>
                     <span class="fas fa-bars"></span>
                 </button>
-                <button class="btn btn--icon-only" title="Search" data-toggle="collapse" data-target="#language">
+                <button class="btn btn--icon-only" title="Search" data-modal-open="global-language">
                     <span class="sr-only">Language</span>
                     <span class="fas fa-language"></span>
                 </button>
-                <button class="btn btn--icon-only" title="Search" data-modal-open="modal-2">
+                <button class="btn btn--icon-only" title="Search" data-modal-open="global-search">
                     <span class="sr-only">Search</span>
                     <span class="fas fa-search"></span>
                 </button>
             </div>
 
         </div>
-        <!-- .head-nav-right -->
+        <!-- .primary-nav -->
 
         <div class="collapse bc-light overflow-hidden d-none" id="language">
             
@@ -429,16 +429,33 @@
 
     </main>
 
-    <div class="modal modal--slide" id="modal-2">
+    <div class="modal modal--slide bc-dark" id="global-search">
 
         <div class="modal__overlay">
 
-            <div class="modal__container medium rounded" aria-labelledby="modal-1-title">
+            <div class="modal__container medium box-shadow-2" aria-labelledby="modal-1-title">
 
                 <header class="modal__header border-b">
-                    <h2 class="h5" id="modal-1-title">
-                        Modal Title Two
-                    </h2>
+                    <ul class="nav nav--horizontal--md fs-md" role="list">
+                        <li>
+                            <label class="form-group__radio">
+                                <input type="radio" name="radio-group-example" checked required>
+                                <span class="radio__label">
+                                    Search this website
+                                </span>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="form-group__radio">
+                                <input type="radio" name="radio-group-example" required>
+                                <span class="radio__label">
+                                    Search all NYC.gov
+                                </span>
+                            </label>
+                        </li>
+
+                    </ul>
                     <button class="btn btn--icon-only" data-modal-close>
                         <span class="sr-only">Close Modal</span>
                         <span class="fas fa-times"></span>
@@ -446,17 +463,23 @@
                 </header>
 
                 <main class="modal__body" id="modal-1-content">
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eveniet, deleniti perspiciatis
-                        tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est
-                        perspiciatis
-                        architecto at quasi adipisci.
-                    </p>
-                </main>
+                    <div class="form-group">
 
-                <footer class="modal__footer border-t">
-                    <button class="btn bc-secondary d-block" data-modal-close>Close</button>
-                </footer>
+                        <label class="form-group__field has-action">
+
+                            <input class="field__input" type="text" name="global_search">
+                            <p class="field__label">Enter Search Phrase</p>
+
+                            <button href="#1" title="Search">
+                                <span class="sr-only">Search</span>
+                                <span class="fas fa-search"></span>
+                            </button>
+
+                        </label>
+
+                    </div>
+                    <!-- .form-group -->
+                </main>
 
             </div>
             <!-- .modal__container -->
@@ -465,7 +488,52 @@
         <!-- .modal__overlay -->
 
     </div>
-    <!-- #modal-1 -->
+    <!-- #global-search -->
+
+    <div class="modal modal--slide bc-dark" id="global-language">
+
+        <div class="modal__overlay">
+
+            <div class="modal__container medium box-shadow-2" aria-labelledby="modal-1-title">
+
+                <header class="modal__header border-b">
+                    <h2 class="h5">Select Preferred Language</h2>
+                    <button class="btn btn--icon-only" data-modal-close>
+                        <span class="sr-only">Close Modal</span>
+                        <span class="fas fa-times"></span>
+                    </button>
+                </header>
+
+                <main class="modal__body" id="modal-1-content">
+                    <div id="google_translate_element"></div>
+                    <div class="form-group">
+
+                        <label class="form-group__field">
+                            <div class="field__input-wrap">
+                                <select class="field__input" name="Boroughs" required>
+                                    <option value=""></option>
+                                    <option value="Bronx">Bronx</option>
+                                    <option value="Brooklyn">Brooklyn</option>
+                                    <option value="Manhattan">Manhattan</option>
+                                    <option value="Staten Island">Staten Island</option>
+                                    <option value="Queens">Queens</option>
+                                </select>
+                            </div>
+                            <p class="field__label">English</p>
+
+                        </label>
+                    </div>
+                    <!-- .form-group -->
+                </main>
+
+            </div>
+            <!-- .modal__container -->
+
+        </div>
+        <!-- .modal__overlay -->
+
+    </div>
+    <!-- #global-language -->
 
     <footer class="container bc-dark fs-md py-4">
 

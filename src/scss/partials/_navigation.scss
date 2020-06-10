@@ -23,8 +23,9 @@ In this file:
 // B. Head Nav Components
 //////////////////////////////////////////////
 
-[class*="head-nav-right--"],
-[class*="head-nav-across--"] {
+[class*="primary-nav--"] {
+    --primary-nav-padding: var(--s2);
+
     display: grid;
 
     ul {
@@ -33,7 +34,7 @@ In this file:
 
     > [class*="__logo"] {
         grid-area: logo;
-        padding: var(--s2);
+        padding: var(--primary-nav-padding);
     }
 
     > [class*="__menu"] {
@@ -43,7 +44,7 @@ In this file:
 
     > [class*="__buttons"] {
         grid-area: buttons;
-        padding: var(--s1);
+        padding: calc(var(--primary-nav-padding) * 0.5);
 
         display: flex;
         justify-content: space-between;
@@ -51,17 +52,17 @@ In this file:
         
         > .btn,
         > button {
-            margin-left: calc(var(--s2) * 0.25);
-            margin-right: calc(var(--s2) * 0.25);
+            margin-left: calc(var(--primary-nav-padding) * 0.25);
+            margin-right: calc(var(--primary-nav-padding) * 0.25);
         }
     }
 
-    > * {
-        border:2px solid green !important;
-    }
+    // > * {
+    //     border:2px solid green !important;
+    // }
 }
 
-[class*="head-nav-right--"] {
+[class*="primary-nav--right--"] {
     justify-content: space-between;
 
     grid-template-columns: auto auto;
@@ -74,13 +75,18 @@ In this file:
         }
 }
 
-[class*="head-nav-across--"] {
+[class*="primary-nav--across--"] {
     grid-template-columns: 100%;
     grid-template-areas:
         "logo"
         "buttons"
         "menu";
 
+    > [class*="__logo"] {
+        display: flex;
+        justify-content: center;
+    }
+    
     > [class*="__buttons"] {
         padding-top: var(--nav--divider-padding-y);
         padding-bottom: var(--nav--divider-padding-y);
@@ -94,16 +100,11 @@ In this file:
     }
 }
 
-.head-nav-across__logo {
-    display: flex;
-    justify-content: center;
-}
-
 ////////////////////////////////////////
 // B. Nav
 ////////////////////////////////////////
 
-[class*="head-nav-right--"] > [class*="__menu"] > ul,
+[class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav {
     --gap-size: var(--s2);
 }
@@ -112,7 +113,7 @@ In this file:
     @extend %list-nav-style;
 }
 
-[class*="head-nav-right--"] > [class*="__menu"] > ul,
+[class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav:not([class*="nav--divider"]) {
 
     > li:not(:last-child) {
@@ -157,7 +158,7 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .head-nav-right#{$mod} > [class*="__menu"] > ul,
+        .primary-nav--right#{$mod} > [class*="__menu"] > ul,
         .nav.nav--horizontal#{$mod} {
             display: flex;
             flex-direction: row;
@@ -194,7 +195,7 @@ In this file:
 // D. Nav Divider
 ////////////////////////////////////////
 
-[class*="head-nav-across--"] > [class*="__menu"] > ul,
+[class*="primary-nav--across--"] > [class*="__menu"] > ul,
 .nav--divider {
 
     &:not([class*="bc-"]) {
@@ -240,8 +241,8 @@ In this file:
     @include breakpoint-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .head-nav-right#{$mod},
-        .head-nav-across#{$mod} {
+        .primary-nav--right#{$mod},
+        .primary-nav--across#{$mod} {
 
             [class*="__logo"] {
                 display: flex;
@@ -258,7 +259,7 @@ In this file:
 
         }
 
-        .head-nav-right#{$mod} {
+        .primary-nav--right#{$mod} {
             grid-template-columns: 1fr auto auto;
             grid-template-areas:
                 "logo menu buttons";
@@ -283,7 +284,7 @@ In this file:
             }
         }
 
-        .head-nav-across#{$mod} {
+        .primary-nav--across#{$mod} {
             grid-template-columns: 1fr auto;
             grid-template-areas:
                 "logo buttons"
@@ -294,7 +295,7 @@ In this file:
                 }
         }
 
-        .head-nav-across#{$mod} > [class*="__menu"] > ul,
+        .primary-nav--across#{$mod} > [class*="__menu"] > ul,
         .nav--divider.nav--horizontal#{$mod} {
             display: flex;
             flex-direction: row;
