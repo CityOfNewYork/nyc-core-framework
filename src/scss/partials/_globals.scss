@@ -1,5 +1,5 @@
 %list-nav-style {
-    
+
     list-style: none;
     line-height: normal;
 
@@ -7,10 +7,11 @@
         position: relative;
     }
 
-    > a[aria-current] {
+    a[aria-current] {
         font-weight: var(--base-font-weight-bold);
         text-decoration: underline;
     }
+
 }
 
 ////////////////////////////////////////

@@ -79,92 +79,121 @@ a[data-logo="brand"] {
 // C. Layouts !!
 //////////////////////////////////////////////
 
-.head-nav-right {
-    --menu-padding: var(--s2);
+// [class*="head-nav-right--"] > * {
+//     border:2px solid green !important;
+// }
 
-    > * {
-        border:2px solid green !important;
-    }
+[class*="head-nav-right"] {
+    --menu-padding: var(--s2);
 
     ul {
         @extend %list-nav-style;
     }
 
-    > .head-nav-right__menu {
-        background-color: red;
-        
-    }
-
     display: grid;
+    justify-content: space-between;
+
     grid-template-columns: auto auto;
     grid-template-areas: 
         "logo buttons"
         "menu menu";
-
-    justify-content: space-between;
-
-    > .menu-right__logo {
-        grid-area: logo;
-        padding: var(--menu-padding);
-    }
-
-    > .head-nav-right__menu {
-        grid-area: menu;
-
+    
+    > .head-nav-right__menu{
         @extend .collapse !optional;
+    }
+}
 
+.head-nav-right__menu {
+    grid-area: menu;
 
-        > ul {
+    > ul {
+        display: flex;
+        flex-direction: row;
+        flex-direction: column;
+        height: 100%;
+        align-items: stretch;
+
+        > li {
+            position: relative;
+            padding-top: calc(var(--menu-padding) * 0.5);
+            padding-bottom: calc(var(--menu-padding) * 0.5);
+            padding-left: var(--menu-padding);
+            padding-right: var(--menu-padding);
         }
 
+        > li > a {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
 
+        > li > [data-toggle="dropdown"] ~ ul {
+            padding: var(--menu-padding);
+        }
+    }
+}
+
+.head-nav-right__logo {
+    grid-area: logo;
+
+    padding: var(--menu-padding);
+}
+
+.head-nav-right__buttons {
+    grid-area: buttons;
+
+    display: flex;
+    align-items: center;
+
+    > button {
+        margin-left: calc(var(--menu-padding) * 0.25);
+        margin-right: calc(var(--menu-padding) * 0.25);
     }
 
-    > .menu-right__buttons {
-        grid-area: buttons;
+    > button[title="Menu"] {
+        order: 10;
     }
+}
 
-    @include breakpoint-up(md){
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        grid-template-columns: 1fr auto auto;
+        .head-nav-right#{$mod} {
+            grid-template-columns: 1fr auto auto;
+            grid-template-areas:
+                "logo menu buttons";
 
-        grid-template-areas:
-            "logo menu buttons";
+            .head-nav-right__logo {
+                display: flex;
+                justify-content: start;
+            }
+
+            .head-nav-right__menu {
+                display: block;
+
+                > ul {
+                    flex-direction: row;
+                    height: 100%;
+                    align-items: stretch;
+
+                    > li {
+                        display: flex;
+                    }
+
+                    > li > [data-toggle="dropdown"] ~ ul {
+                        position: absolute;
+                    }
+                }
+            }
+
+            .head-nav-right__buttons {
+                button[title="Menu"] {
+                    display: none;
+                }
+            }
+        }
     }
-
-} // end layout
-
-// @each $breakpoint in map-keys($breakpoints) {
-
-//     @include breakpoint-up($breakpoint) {
-//         $mod: breakpoint-modifier($breakpoint, $breakpoints);
-
-       
-
-//         @if ($breakpoint != xs){
-            
-//             [data-grid*="menu-right#{$mod}"] {
-//                 justify-content: unset;
-//                 gap: var(--s2);
-
-//                 grid-template-columns: 1fr auto auto;
-
-//                 grid-template-areas:
-//                     "logo menu buttons";
-
-//                 [data-cell="menu"] > ul > li,
-//                 [data-cell="menu"] > ul {
-//                     display: flex;
-//                     height: 100%;
-//                 }
-
-//             }
-
-//         }
-
-//     }
-// }
-
+}
 
 //////////////////////////////////////////////
 // D. I.E. 11 Support
@@ -173,14 +202,14 @@ a[data-logo="brand"] {
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
 
-    .nav-bar {
+    [class*="head-nav-right"] {
 
-        > .logo {
+        .head-nav-right__logo {
             grid-row: 1 / 2;
             grid-column: 1 / 2;
         }
 
-        > .navigation {
+        .head-nav-right__menu {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
 
@@ -188,7 +217,7 @@ screen and (-ms-high-contrast: none) {
             margin-right: var(--s2);
         }
 
-        > .icons {
+        .head-nav-right__buttons  {
             grid-column: 3 / 4;
             grid-row: 1 / 2;
         }
