@@ -76,9 +76,8 @@ a[data-logo="brand"] {
 }
 
 //////////////////////////////////////////////
-// C. Layouts !!
+// C. Prebuilt Layouts !!
 //////////////////////////////////////////////
-
 
 [class*="head-nav-right--"],
 [class*="head-nav-across--"] { 
@@ -90,10 +89,6 @@ a[data-logo="brand"] {
         @extend %list-nav-style;
     }
 
-    > * {
-        border:2px solid green !important;
-    }
-
     > [class*="__logo"]{
         grid-area: logo;
         padding: var(--menu-padding);
@@ -102,16 +97,50 @@ a[data-logo="brand"] {
     > [class*="__menu"] {
         grid-area: menu;
         @extend .collapse !optional;
+        
+        > ul {
+            display: flex;
+            flex-direction: column;
+
+            > li {
+                position: relative;
+
+                padding-top: var(--nav--divider-padding-y);
+                padding-bottom: var(--nav--divider-padding-y);
+                padding-left: var(--nav--divider-padding-x);
+                padding-right: var(--nav--divider-padding-x);
+
+                border-top-width: var(--default-border-width);
+                border-top-style: var(--default-border-style);
+                border-top-color: inherit;
+            }
+
+            > li > a {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            > li > [data-toggle="dropdown"] ~ ul {
+                padding: var(--menu-padding);
+            }
+        }
     }
 
     > [class*="__buttons"] {
         grid-area: buttons;
+
+        display: flex;
+        align-items: center;
+
+        > button {
+            margin-left: calc(var(--menu-padding) * 0.25);
+            margin-right: calc(var(--menu-padding) * 0.25);
+        }
     }
   
 }
 
 [class*="head-nav-right--"]{
-    background-color: red;
     justify-content: space-between;
 
     grid-template-columns: auto auto;
@@ -120,79 +149,29 @@ a[data-logo="brand"] {
         "menu menu";
 }
 
-.head-nav-right__menu {
-
-    > ul {
-        display: flex;
-        flex-direction: row;
-        flex-direction: column;
-        height: 100%;
-        align-items: stretch;
-
-        > li {
-            position: relative;
-
-            padding-top: calc(var(--menu-padding) * 0.5);
-            padding-bottom: calc(var(--menu-padding) * 0.5);
-            padding-left: var(--menu-padding);
-            padding-right: var(--menu-padding);
-
-            border-top-width: var(--default-border-width);
-            border-top-style: var(--default-border-style);
-            border-top-color: inherit;
-        }
-
-        > li > a {
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        > li > [data-toggle="dropdown"] ~ ul {
-            padding: var(--menu-padding);
-        }
-    }
-}
-
-
-.head-nav-across__logo {
-    display: flex;
-    justify-content: center;
-}
-
-.head-nav-across__buttons{
-    display: flex;
-    justify-content: space-between;
-}
-
-.head-nav-right__buttons {
-    grid-area: buttons;
-
-    display: flex;
-    align-items: center;
-
-    > button {
-        margin-left: calc(var(--menu-padding) * 0.25);
-        margin-right: calc(var(--menu-padding) * 0.25);
-    }
-
-    > button[title="Menu"] {
-        order: 10;
-    }
-}
-
 [class*="head-nav-across--"] {
-    background-color: blue;
-    justify-content: space-between;
+    background-color: yellow;
 
     grid-template-columns: 1fr;
     grid-template-areas:
         "logo"
         "buttons"
         "menu";
+}
 
-    > .head-nav-right__menu {
-        @extend .collapse !optional;
-    }
+.head-nav-across__logo {
+    display: flex;
+    justify-content: center;
+}
+
+.head-nav-across__menu {
+   > ul{
+         
+   }
+}
+
+.head-nav-across__buttons{
+    justify-content: space-between;
 }
 
 @each $breakpoint in map-keys($breakpoints) {
@@ -210,6 +189,10 @@ a[data-logo="brand"] {
 
             [class*="__menu"] {
                 display: block;
+
+                > li {
+                    border-top-style: none !important;
+                }
             }
             
             [class*="__buttons"] > button[title="Menu"] {
@@ -233,7 +216,6 @@ a[data-logo="brand"] {
 
                     > li {
                         display: flex;
-                        border-top-style: none !important; // Thanks, IE.
                     }
 
                     > li > [data-toggle="dropdown"] ~ ul {
@@ -245,13 +227,37 @@ a[data-logo="brand"] {
         }
 
         .head-nav-across#{$mod} {
-            background-color: purple !important;
-            grid-template-columns: 1fr auto !important;
+            grid-template-columns: 1fr auto;
             grid-template-areas:
                 "logo buttons"
                 "menu menu";
 
             // jkhgfhikjljkhgf
+
+            .head-nav-across__menu {
+
+                > ul {
+                    display: flex;
+                    flex-direction: row;
+
+                    > li {
+                        text-align: center;
+                    }
+
+                    > li > [data-toggle="dropdown"] ~ ul {
+                        position: absolute;
+                    }
+
+                    > li {
+                        flex: 1;
+                        &:not(:last-child) {
+                            border-right-width: var(--default-border-width);
+                            border-right-style: var(--default-border-style);
+                            border-color: inherit;
+                        }
+                    }
+                }
+            }
         }
     }
 }
