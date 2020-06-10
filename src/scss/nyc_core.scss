@@ -79,7 +79,7 @@ a[data-logo="brand"] {
 // C. Layouts !!
 //////////////////////////////////////////////
 
-.menu-right {
+.head-nav-right {
     --menu-padding: var(--s2);
 
     > * {
@@ -87,20 +87,12 @@ a[data-logo="brand"] {
     }
 
     ul {
-        @extend %list-no-style;
+        @extend %list-nav-style;
     }
 
-    > .menu-right__buttons {
-        display: flex;
-        align-items: center;
+    > .head-nav-right__menu {
+        background-color: red;
         
-        margin-left: calc(-1 * var(--s1));
-        margin-right: calc(-1 * var(--s1));
-
-        > li {
-            margin-left: var(--s1);
-            margin-right: var(--s1);
-        }
     }
 
     display: grid;
@@ -116,14 +108,13 @@ a[data-logo="brand"] {
         padding: var(--menu-padding);
     }
 
-    > .menu-right__navigation {
+    > .head-nav-right__menu {
         grid-area: menu;
 
         @extend .collapse !optional;
 
 
         > ul {
-            @extend .nav;
         }
 
 
@@ -139,34 +130,6 @@ a[data-logo="brand"] {
 
         grid-template-areas:
             "logo menu buttons";
-
-        > .menu-right__navigation,
-        > .menu-right__navigation > ul {
-            display: flex !important;
-        }
-
-         > .menu-right__navigation > ul {
-            margin-left: calc(-1 * var(--s1));
-            margin-right: calc(-1 * var(--s1));
-
-             > li {
-                display: flex;flex-direction: column;
-                height: 100%;
-                margin-left: var(--s1);
-                margin-right: var(--s1);
-            }
-
-            > li > [data-toggle="dropdown"] ~ ul {
-                min-width: 200px;
-                position: absolute;
-                left: 0;
-            }
-                
-            > li > a {
-                margin-top: auto;
-                margin-bottom: auto;
-            }
-         }
     }
 
 } // end layout

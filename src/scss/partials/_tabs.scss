@@ -27,7 +27,7 @@ In this file:
 ////////////////////////////////////////
 
 .tabs {
-    @extend %list-no-style;
+    list-style: none;
     position: relative;
 
     > li > a,

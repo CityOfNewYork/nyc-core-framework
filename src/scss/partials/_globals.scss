@@ -1,6 +1,16 @@
-%list-no-style {
+%list-nav-style {
+    
     list-style: none;
     line-height: normal;
+
+    > li {
+        position: relative;
+    }
+
+    > a[aria-current] {
+        font-weight: var(--base-font-weight-bold);
+        text-decoration: underline;
+    }
 }
 
 ////////////////////////////////////////

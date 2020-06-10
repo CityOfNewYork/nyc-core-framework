@@ -26,19 +26,10 @@ In this file:
 .nav {
     --gap-size: var(--s2);
     
-    @extend %list-no-style;
-
-    > li {
-        position: relative;
-    }
-
-    > li a[aria-current] {
-        font-weight: var(--base-font-weight-bold);
-        text-decoration: underline;
-    }
+    @extend %list-nav-style;
 }
 
-.nav:not([class*="nav--divider"]) {
+.nav:not(.nav--divider) {
 
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * .75);
@@ -57,48 +48,50 @@ In this file:
         margin-top: 1rem;
         width: 240px;
     }
+}
 
-    @each $breakpoint in map-keys($breakpoints) {
-        @include breakpoint-up($breakpoint) {
-            $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.nav--horizontal#{$mod} {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-                margin-left: calc(-1 * var(--gap-size));
-                margin-right: calc(-1 * var(--gap-size));
+        .nav.nav--horizontal#{$mod} {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
 
-                > li {
-                    margin-left: var(--gap-size);
-                    margin-right: var(--gap-size);
-                    margin-bottom: 0 !important;
-                }
+            margin-left: calc(-1 * var(--gap-size));
+            margin-right: calc(-1 * var(--gap-size));
 
-                > li > [data-toggle="dropdown"] ~ ul {
-                    min-width: 200px;
-                    position: absolute;
-                    left: 0;
-                }
-
-                // > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
-                //     left: 50%;
-                //     transform: translateX(-50%);
-                //     margin-left: 0;
-                    
-                //     &::after{
-                //         left: 50%;
-                //     }
-                // }
+            > li {
+                margin-left: var(--gap-size);
+                margin-right: var(--gap-size);
+                margin-bottom: 0 !important;
             }
 
-            
+            > li > [data-toggle="dropdown"] ~ ul {
+                min-width: 200px;
+                position: absolute;
+                left: 0;
+            }
+
+            // > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
+            //     left: 50%;
+            //     transform: translateX(-50%);
+            //     margin-left: 0;
+
+            //     &::after{
+            //         left: 50%;
+            //     }
+            // }
         }
+
+
     }
-
-
 }
+
+
+
 
 .nav--gap-0 {
     --gap-size: 0;
@@ -239,7 +232,7 @@ In this file:
 [data-toggle="dropdown"] ~ ul {
     --dropdown-link-margin: 0.5em;
 
-    @extend %list-no-style;
+    list-style: none;
 
     &:not([class*="fs-"]) {
         font-size: inherit;
