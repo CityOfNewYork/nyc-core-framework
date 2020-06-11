@@ -20,7 +20,7 @@ In this file:
 
     --form-field-padding: 1rem;
 
-    --checkbox-radio-size: 1.25em;
+    --checkbox-radio-size: 1em;
     --checkbox-radio-color: var(--secondary);
 }
 
@@ -141,6 +141,11 @@ fieldset{
     right: calc(var(--form-field-padding) * 0.5);
     top: calc(var(--form-field-padding) * 0.5);
     bottom: calc(var(--form-field-padding) * 0.5);
+
+    [dir="rtl"] & {
+        right: unset;
+        left: calc(var(--form-field-padding) * 0.5);
+    }
 }
 
 

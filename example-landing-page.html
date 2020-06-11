@@ -24,6 +24,12 @@
 
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
+
+    <style>
+        :root{
+            --base-font-size: 22px;
+        }
+    </style>
     
 </head>
 
@@ -144,7 +150,7 @@
     </header>
     <!-- #global-header -->
 
-    <main class="overflow-hidden" id="skip-header-content" role="main">
+    <main id="skip-header-content" role="main">
 
         <div class="backdrop backdrop--stack--md bc-dark">
 
@@ -190,7 +196,7 @@
         </div>
         <!-- .backdrop -->
 
-        <div class="container medium my-4">
+        <div class="container medium my-5">
 
             <div class="grid grid--gap-2 grid--cells-6--lg">
 
@@ -199,44 +205,50 @@
                     <div class="card medium bc-primary">
 
                         <div class="card__body">
-                            <h2 class="h5">Card Title</h2>
+                            <h2 class="h3">Card Title</h2>
                             <p>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
                                 facilis labore reiciendis.
                             </p>
                         </div>
 
-                        <div class="card__footer fs-md">
-                            <a class="btn bc-white" href="#1">Primary Action</a>
+                        <div class="card__footer">
+                            <a class="btn btn--has-icon--disperse bc-white" href="#1">
+                                <span class="btn__text">Button Link</span>
+                                <span class="fas fa-arrow-right btn__icon"></span>
+                            </a>
                         </div>
 
                     </div>
                     <!-- .card -->
 
                 </div>
-                <!-- col -->
+                <!-- .grid__cell -->
 
                 <div class="grid__cell">
 
                     <div class="card medium bc-primary">
 
                         <div class="card__body">
-                            <h2 class="h5">Card Title</h2>
+                            <h2 class="h3">Card Title</h2>
                             <p>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
                                 facilis labore reiciendis.
                             </p>
                         </div>
 
-                        <div class="card__footer fs-md">
-                            <a class="btn bc-white" href="#1">Primary Action</a>
+                        <div class="card__footer">
+                            <a class="btn btn--has-icon--disperse bc-white" href="#1">
+                                <span class="btn__text">Button Link</span>
+                                <span class="fas fa-arrow-right btn__icon"></span>
+                            </a>
                         </div>
 
                     </div>
                     <!-- .card -->
 
                 </div>
-                <!-- col -->
+                <!-- .grid__cell -->
 
             </div>
             <!-- .grid -->
@@ -258,7 +270,7 @@
             </div>
             <!-- .container -->
             
-            <div class="container medium">
+            <div class="container">
 
                 <div class="grid grid--gap-2 grid--cells-6--md grid--cells-4--lg fs-md">
 
