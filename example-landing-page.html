@@ -27,7 +27,7 @@
 
     <style>
         :root{
-            --base-font-size: 22px;
+            /* --base-font-size: 22px; */
         }
     </style>
     
@@ -84,7 +84,7 @@
         </div>
         <!-- #nyc-head -->
 
-        <div class="primary-nav--right--lg">
+        <div class="primary-nav--across--lg">
 
             <div class="primary-nav__logo">
                 <a href="#1" title="Home" data-logo="brand">
@@ -125,6 +125,22 @@
                     <li>
                         <a href="#1">Link</a>
                     </li>
+                    <li class="form-group text-align-left" style="--form-field-padding: var(--nav--divider-padding-y);">
+
+                            <label class="form-group__field has-action">
+
+                                <input class="field__input" type="text" name="global_search" style="border: none; line-height: inherit;">
+                                <p class="field__label">Enter Search Phrase</p>
+
+                                <button href="#1" title="Search">
+                                    <span class="sr-only">Search</span>
+                                    <span class="fas fa-search"></span>
+                                </button>
+
+                            </label>
+
+                    </li>
+                    <!-- .form-group -->
                 </ul>
 
             </nav>
