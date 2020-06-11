@@ -16,7 +16,7 @@ In this file:
     --container-padding-x: var(--s2);
 
     --narrow-width: 40rem; // Approximately 55 characters wide
-    --medium-width: calc( var(--narrow-width) * 1.75);
+    --medium-width: calc( var(--narrow-width) * 1.5);
     --wide-width: calc( var(--narrow-width) * 2.25);
 }
 
@@ -33,21 +33,29 @@ In this file:
 // C. Width Variants
 //////////////////////////////////////////////
 
-.narrow, 
-.medium,
-.wide{
+[class*="narrow"], 
+[class*="medium"],
+[class*="wide"] {
     margin-left: auto;
     margin-right: auto;
 }
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoint-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .narrow#{$mod} {
+            max-width: var(--narrow-width);
+        }
+
+        .medium#{$mod} {
+            max-width: var(--medium-width);
+        }
+
+        .wide#{$mod} {
+            max-width: var(--wide-width);
+        }
+
+    }
+}
  
-.narrow {
-    max-width: var(--narrow-width);
-}
-
-.medium {
-    max-width: var(--medium-width);
-}
-
-.wide {
-    max-width: var(--wide-width);
-}

@@ -253,7 +253,7 @@ In this file:
                 display: block !important;
             }
 
-            [class*="__buttons"] > button[title="Menu"] {
+            [class*="__buttons"] > button.menu-toggle {
                 display: none;
             }
 
