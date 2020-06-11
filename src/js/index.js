@@ -514,11 +514,15 @@ window.onload = () => {
 
         inputField.addEventListener('change', (event) => {
 
+            console.log(inputField.nodeType);
+
             if (inputField.value.length != 0) {
                 inputField.closest('label').classList.add('has-value');
             } else {
                 inputField.closest('label').classList.remove('has-value');
             }
+
+            console.log(inputField.value);
 
         });
 
