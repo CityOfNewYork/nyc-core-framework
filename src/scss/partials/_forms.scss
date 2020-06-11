@@ -18,7 +18,7 @@ In this file:
     --input-border-width: var(--default-border-width);
     --input-border-color: currentColor;
 
-    --checkbox-radio-size: 1.25rem;
+    --checkbox-radio-size: 1.25em;
     --checkbox-radio-color: var(--secondary);
 }
 
@@ -32,14 +32,14 @@ select,
 textarea,
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="search"] {
     border: none;
     border-bottom-width: var(--input-border-width);
     border-bottom-style: var(--default-border-style);
     border-bottom-color: var(--input-border-color);
     background-color: transparent;
     color: inherit;
-    font-size: var(--font-size-rg);
 }
 
 button,
@@ -66,23 +66,33 @@ fieldset{
 // Form Field
 
 .form-group__field {
-    --field-padding: 1rem;
+    --field-padding: 0.75em;
     --action-btn-width: 3rem;
+
+    display: flex;
     
     @extend .subtle-fill;
-     --subtle-fill-opacity: 0.05;
+    --subtle-fill-opacity: 0.05;
 }
 
 .field__input,
 .field__label {
-    line-height: inherit;
+    font-size: 20px;
 }
 
 .field__label {
-    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
+
+    pointer-events: none;
+}
+
+option{
+    background-color: red;
+    display: inline;
 }
 
 .field__label,
@@ -91,6 +101,7 @@ fieldset{
     padding-right: var(--field-padding);
     padding-bottom: var(--field-padding);
     padding-left: var(--field-padding);
+    line-height: 1.25;
 }
 
 .field__input:focus, 

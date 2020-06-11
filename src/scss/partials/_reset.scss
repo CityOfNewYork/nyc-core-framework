@@ -146,12 +146,13 @@ label,
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="search"],
 select,
 textarea {
-    font-size: inherit;
     display: block;
     width: 100%;
     max-width: 100%;
+    font-size: inherit;
 }
 
 select{
@@ -159,6 +160,7 @@ select{
     -moz-appearance: unset;
     -webkit-appearance: unset;
     appearance: unset;
+    
     // Hide Select default icon on IE
     &::-ms-expand {
         display: none;
