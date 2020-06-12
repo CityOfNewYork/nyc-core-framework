@@ -75,9 +75,11 @@ fieldset{
     
     @extend .subtle-fill;
     --subtle-fill-opacity: 0.05;
-}
 
-.field__input{
+    // &:focus,
+    // &:active{
+    //     outline: 0;
+    // }
 }
 
 .field__label {
@@ -102,7 +104,6 @@ fieldset{
 .has-value .field__input,
 .field__input:focus, 
 .field__input:active {
-    font-size: 99.9999%;
     padding-top: calc(var(--form-field-padding) * 1.5);
     padding-bottom: calc(var(--form-field-padding) * 0.5);
 }
@@ -127,6 +128,10 @@ fieldset{
         top: 50%;
         transform: translateY(-50%);
     }
+}
+
+.has-value select.field__input {
+    font-size: 99.99%;
 }
 
 .form-group__field.has-action > .field__input {
