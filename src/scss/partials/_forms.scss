@@ -173,13 +173,12 @@ fieldset{
     }
 }
 
-
-// Cool 
+// Field Assistance 
 
 .form-group__assistance {
+    margin-top: 0.5rem;
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
-    margin-top: 0.5rem;
     opacity: 0.75;
 }
 
@@ -203,7 +202,6 @@ fieldset{
     opacity: .01;
     z-index: -10;
     background-color: transparent;
-
 }
 
 //
