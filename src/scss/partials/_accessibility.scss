@@ -40,9 +40,8 @@ In this file:
         overflow: visible;
         clip: auto;
         white-space: normal;
-        padding: var(--s2) var(--s3);
+        padding: var(--btn-padding-y) var(--s2);
         font-size: var(--font-size-rg);
-        @extend .bc-primary;
     }
 }
 
