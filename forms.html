@@ -45,49 +45,35 @@
 
                         <div class="form-group">
 
-                            <small class="form-group__feedback">
+                            <small class="form-group__feedback d-none">
                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
                                 <strong>Error message description</strong>
                                 <span>How to fix instructions</span>
                             </small>
 
                             <label class="form-group__field">
-                                <input class="field__input" type="text" name="user_name">
+                                <input class="field__input" type="text" name="user_name" required>
                                 <p class="field__label">First Name</p>
                             </label>
 
-                            <p class="form-group__assistance">
-                                <small class="assist__description">
-                                    Description text
-                                </small>
-                                <small class="assist__required">
-                                    Required
-                                </small>
-                            </p>
                         </div>
                         <!-- .form-group -->
                         
                         <div class="form-group">
                             <label class="form-group__field">
-                                <input class="field__input" type="text" name="user_name">
+                                <input class="field__input" type="text" name="user_name" required>
                                 <p class="field__label">Last Name</p>
                             </label>
                         </div>
                         <!-- .form-group -->
                         
                         <div class="form-group">
+
                             <label class="form-group__field">
-                                <input class="field__input" type="email" name="email_address">
+                                <input class="field__input" type="email" name="email_address" required>
                                 <p class="field__label">Email Address</p>
                             </label>
-                            <p class="form-group__assistance">
-                                <small class="assist__description">
-                                    Description text
-                                </small>
-                                <small class="assist__required">
-                                    Optional
-                                </small>
-                            </p>
+                        
                         </div>
                         <!-- .form-group -->
 
@@ -120,8 +106,8 @@
                                         <option value="Staten Island">Staten Island</option>
                                         <option value="Queens">Queens</option>
                                     </select>
+                                    <p class="field__label">Borough</p>
                                 </div>
-                                <p class="field__label">Borough</p>
 
                             </label>
                         </div>
@@ -130,18 +116,13 @@
                         <div class="form-group validate-parent">
 
                             <label class="form-group__field">
-                                <textarea class="field__input" id="message" rows="4"></textarea>
+                                <textarea class="field__input" id="message" rows="4" required></textarea>
                                 <p class="field__label">Message</p>
                             </label>
 
-                            <p class="form-group__assistance">
-                                <small class="assist__description">
-                                    Description text
-                                </small>
-                                <small class="assist__required">
-                                    Required
-                                </small>
-                            </p>
+                            <small class="form-group__assistance">
+                                Description text
+                            </small>
 
                         </div>
                         <!-- .form-group -->

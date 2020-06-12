@@ -18,7 +18,8 @@ In this file:
     --input-border-width: var(--default-border-width);
     --input-border-color: currentColor;
 
-    --form-field-padding: 1rem;
+    --form-field-padding-x: 1rem;
+    --form-field-padding-y: 1rem;
 
     --checkbox-radio-size: 1em;
     --checkbox-radio-color: var(--secondary);
@@ -32,10 +33,7 @@ In this file:
 
 select,
 textarea,
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"] {
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
     border: none;
     background-color: transparent;
     color: inherit;
@@ -69,50 +67,60 @@ fieldset{
 // Form Field
 
 .form-group__field {
-    --action-btn-width: 3rem;
+    --action-btn-size: 2.5rem;
 
     display: flex;
     
     @extend .subtle-fill;
     --subtle-fill-opacity: 0.05;
-
-    // &:focus,
-    // &:active{
-    //     outline: 0;
-    // }
 }
 
+// Form Field Label
+
 .field__label {
+    pointer-events: none;
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     bottom: 0;
     right: 0;
 
-    pointer-events: none;
+    &::after{
+        content: "*";
+        margin: auto 0.25rem;
+        display: none;
+    }
+
+    transition: all .1s ease-in-out;
+}
+
+:required ~ .field__label::after {
+    display: inline;
 }
 
 .field__label,
 .field__input {
-    padding-top: var(--form-field-padding);
-    padding-right: var(--form-field-padding);
-    padding-bottom: var(--form-field-padding);
-    padding-left: var(--form-field-padding);
+    padding-top: var(--form-field-padding-y);
+    padding-bottom: var(--form-field-padding-y);
+    padding-right: var(--form-field-padding-x);
+    padding-left: var(--form-field-padding-x);
+    
     line-height: 1.5;
 }
  
-.has-value .field__input,
 .field__input:focus, 
-.field__input:active {
-    padding-top: calc(var(--form-field-padding) * 1.5);
-    padding-bottom: calc(var(--form-field-padding) * 0.5);
+.field__input:active,
+.has-value .field__input {
+    padding-top: calc(var(--form-field-padding-y) * 1.5);
+    padding-bottom: calc(var(--form-field-padding-y) * 0.5);
 }
 
 .field__input:focus + .field__label,
 .field__input:active + .field__label,
 .has-value .field__label{
     font-size: var(--font-size-sm);
-    padding-top: calc(var(--form-field-padding) * 0.25);
+    padding-top: calc( var(--form-field-padding-y) * 0.25 );
+    padding-bottom: calc( var(--form-field-padding-y) * 0.25 );
 }
 
 .field__input-wrap {
@@ -124,9 +132,16 @@ fieldset{
     &::after{
         pointer-events: none;
         position: absolute;
-        right: var(--s2);
+        right: 0;
         top: 50%;
         transform: translateY(-50%);
+        margin-left: var(--s2);
+        margin-right: var(--s2);
+
+        [dir="rtl"] & {
+            right: unset;
+            left: 0;
+        }
     }
 }
 
@@ -135,21 +150,26 @@ fieldset{
 }
 
 .form-group__field.has-action > .field__input {
-    padding-right: calc(var(--form-field-padding) + var(--action-btn-width));
+    padding-right: calc(var(--form-field-padding) + var(--action-btn-size));
 }
 
 .form-group__field.has-action > button {
-    position: absolute !important; // Carl, fix this
+    position: absolute !important;
+    top: 50%;
+    right: 0;
+    transform: translatey(-50%);
+
     padding: 0;
     background: transparent;
-    width: var(--action-btn-width);
-    right: calc(var(--form-field-padding) * 0.5);
-    top: calc(var(--form-field-padding) * 0.5);
-    bottom: calc(var(--form-field-padding) * 0.5);
+    width: var(--action-btn-size);
+    height: var(--action-btn-size);
+    margin-left: calc(var(--form-field-padding-x) * 0.5);
+    margin-right: calc(var(--form-field-padding-x) * 0.5);
+
 
     [dir="rtl"] & {
         right: unset;
-        left: calc(var(--form-field-padding) * 0.5);
+        left: 0;
     }
 }
 
@@ -157,24 +177,10 @@ fieldset{
 // Cool 
 
 .form-group__assistance {
+    padding-left: var(--form-field-padding-x);
+    padding-right: var(--form-field-padding-x);
     margin-top: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    > [class*="assist__"]{
-
-    }
-    
-    > .assist__description {
-        // background-color: pink;
-    }
-    > .assist__required:not(+ small) {
-        font-style: italic;
-        margin-left: auto;
-
-    }
-
+    opacity: 0.75;
 }
 
 //////////////////////////////////////////////
@@ -310,18 +316,6 @@ input:checked ~ [class*="__label"]::before {
     border: none;
     box-shadow: 0 0 0 var(--input-border-width) currentColor;
     background-color: currentColor;
-}
-
-// :checked styles
-
-/* For Windows high contrast mode. */
-
-input:not(:checked) ~ [class*="__label"]::after {
-    opacity: 0;
-}
-
-input:checked ~ [class*="__label"]::after {
-    opacity: 1;
 }
 
 //////////////////////////////////////////////
