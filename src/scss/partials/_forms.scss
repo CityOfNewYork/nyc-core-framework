@@ -118,14 +118,19 @@ fieldset{
 .field__input:active + .field__label,
 .has-value .field__label{
     display: block;
-    transform-origin: top left;
-    transform: scale(0.65);
     padding-top: calc( var(--form-field-padding-y) * 0.25 );
     padding-bottom: calc( var(--form-field-padding-y) * 0.25 );
     padding-left: 0;
     padding-right: 0;
     margin-left: var(--form-field-padding-x);
     margin-right: var(--form-field-padding-x);
+    transform-origin: top left;
+    transform: scale(0.65);
+
+    [dir="rtl"] & {
+        transform-origin: top right;
+
+    }
 }
 
 .field__input-wrap {
@@ -171,7 +176,6 @@ fieldset{
     margin-left: calc(var(--form-field-padding-x) * 0.5);
     margin-right: calc(var(--form-field-padding-x) * 0.5);
 
-
     [dir="rtl"] & {
         right: unset;
         left: 0;
@@ -197,7 +201,6 @@ fieldset{
     padding-left: calc(var(--checkbox-radio-size) * 1.75);
     padding-right: calc(var(--checkbox-radio-size) * 1.75);
     color: inherit;
-    // border: 1px solid red !important;
 }
 
 .form-group__radio > input[type="radio"],
@@ -206,7 +209,6 @@ fieldset{
     appearance: none;
     opacity: .01;
     z-index: -10;
-
 }
 
 //
@@ -304,8 +306,8 @@ fieldset{
     width: calc(var(--checkbox-radio-size) * .5);
     left: calc(var(--checkbox-radio-size) * .25);
 
-    border-right: 0.25rem solid currentColor;
-    border-bottom: 0.25rem solid currentColor;
+    border-right: 0.25em solid currentColor;
+    border-bottom: 0.25em solid currentColor;
 
     transform: rotate(45deg);
 
