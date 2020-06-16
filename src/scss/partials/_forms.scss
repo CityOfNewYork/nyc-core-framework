@@ -201,6 +201,7 @@ fieldset{
     padding-left: calc(var(--checkbox-radio-size) * 1.75);
     padding-right: calc(var(--checkbox-radio-size) * 1.75);
     color: inherit;
+    // border: 1px solid red !important;
 }
 
 .form-group__radio > input[type="radio"],
@@ -209,6 +210,7 @@ fieldset{
     appearance: none;
     opacity: .01;
     z-index: -10;
+
 }
 
 //
@@ -271,7 +273,7 @@ fieldset{
 
 .form-group__radio > .radio__label::before,
 .form-group__checkbox > .checkbox__label::before {
-    box-shadow: 0 0 0 var(--input-border-width) var(--input-border-color);
+    border: var(--default-border-width) var(--default-border-style) var(--input-border-color);
     height: var(--checkbox-radio-size);
     width: var(--checkbox-radio-size);
 }
@@ -294,6 +296,7 @@ fieldset{
     border-color: transparent;
     // outline: 2px solid currentColor;
     // outline-offset: 3px;
+    box-shadow:0 0 4px var(--input-border-width) var(--input-border-color);
 }
 
 //
@@ -306,8 +309,8 @@ fieldset{
     width: calc(var(--checkbox-radio-size) * .5);
     left: calc(var(--checkbox-radio-size) * .25);
 
-    border-right: 0.25em solid currentColor;
-    border-bottom: 0.25em solid currentColor;
+    border-right: 0.175em solid currentColor;
+    border-bottom: 0.175em solid currentColor;
 
     transform: rotate(45deg);
 
