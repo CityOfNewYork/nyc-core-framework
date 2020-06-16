@@ -32,16 +32,18 @@ In this file:
     &:active,
     &:focus {
         position: absolute;
-        top: var(--s2);
-        left: var(--s2);
+        top: var(--s1);
+        left: var(--s1);
         z-index: 10000;
-        width: auto;
-        height: auto;
         overflow: visible;
         clip: auto;
         white-space: normal;
-        padding: var(--btn-padding-y) var(--s2);
-        font-size: var(--font-size-rg);
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        background-color: rgba( #ffffff, 0.95);
+        color: var(--dark);
+        border-radius: var(--border-radius);
+        box-shadow: 0 0 0.5rem currentColor;
+        font-size: var(--font-size-md);
     }
 }
 
