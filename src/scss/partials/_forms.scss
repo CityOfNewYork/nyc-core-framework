@@ -191,17 +191,17 @@ fieldset{
     position: relative;
     padding-left: calc(var(--checkbox-radio-size) * 1.75);
     padding-right: calc(var(--checkbox-radio-size) * 1.75);
-    flex: 0 0 100%;
     color: inherit;
+    // border: 1px solid red !important;
 }
 
 .form-group__radio > input[type="radio"],
 .form-group__checkbox > input[type="checkbox"] {
-    margin: 0;
+    background-color: transparent;
     appearance: none;
     opacity: .01;
     z-index: -10;
-    background-color: transparent;
+
 }
 
 //
@@ -224,11 +224,11 @@ fieldset{
 // position of the native checkbox element.
 //
 
-.form-group__checkbox > input[type="checkbox"]{
-    background-color: red;
-    width: 300px;
-    height: 300px;
-}
+// .form-group__checkbox > input[type="checkbox"]{
+//     background-color: red;
+//     width: 300px;
+//     height: 300px;
+// }
 
 .form-group__radio > input[type="radio"],
 .form-group__radio > .radio__label::before,
@@ -243,6 +243,7 @@ fieldset{
     width: var(--checkbox-radio-size);
 }
 
+
 // 
 // Base styles for use on both
 // pseudo elements.
@@ -253,8 +254,8 @@ fieldset{
 
 .form-group__checkbox > .checkbox__label::before,
 .form-group__checkbox > .checkbox__label::after {
-    content: "";
     position: absolute;
+    content: "";
 }
 
 //
@@ -268,19 +269,23 @@ fieldset{
     width: var(--checkbox-radio-size);
 }
 
-.form-group__radio>.radio__label::before,
-.form-group__radio>.radio__label::after{
-    border-radius: 50%;
+.form-group__radio > .radio__label::before,
+.form-group__radio > .radio__label::after{
+    border-radius: 100%;
 }
 
 //
 // Defining States
 //
 
+[class*="form-group__"] > input:focus ~ [class*="__label"] {
+    text-decoration: underline;
+}
+
 .form-group__checkbox > input:focus ~ .checkbox__label::before {
     border-color: transparent;
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+    // outline: 2px solid currentColor;
+    // outline-offset: 3px;
 }
 
 //
@@ -297,6 +302,11 @@ fieldset{
     border-bottom: 0.25rem solid currentColor;
 
     transform: rotate(45deg);
+
+    [dir="rtl"] &{
+        left: unset;
+        right: calc(var(--checkbox-radio-size) * .25);
+    }
 }
 
 .form-group__radio > .radio__label::after {
@@ -307,6 +317,11 @@ fieldset{
     width: calc(var(--checkbox-radio-size) * .5);
     left: calc(var(--checkbox-radio-size) * .25);
     top: calc(var(--checkbox-radio-size) * .25);
+
+    [dir="rtl"] & {
+        left: unset;
+        right: calc(var(--checkbox-radio-size) * .25);
+    }
 }
 
 
