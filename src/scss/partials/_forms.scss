@@ -192,7 +192,7 @@ fieldset{
     padding-left: calc(var(--checkbox-radio-size) * 1.75);
     padding-right: calc(var(--checkbox-radio-size) * 1.75);
     flex: 0 0 100%;
-    color: inherit !important;
+    color: inherit;
 }
 
 .form-group__radio > input[type="radio"],
