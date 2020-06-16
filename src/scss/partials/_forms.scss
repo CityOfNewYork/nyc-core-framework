@@ -18,8 +18,8 @@ In this file:
     --input-border-width: var(--default-border-width);
     --input-border-color: currentColor;
 
-    --form-field-padding-x: 1rem;
-    --form-field-padding-y: 1rem;
+    --form-field-padding-x: 1em;
+    --form-field-padding-y: .75em;
 
     --checkbox-radio-size: 1em;
     --checkbox-radio-color: var(--secondary);
@@ -73,6 +73,7 @@ fieldset{
     
     @extend .subtle-fill;
     --subtle-fill-opacity: 0.05;
+
 }
 
 // Form Field Label
@@ -90,8 +91,6 @@ fieldset{
         margin: auto 0.25rem;
         display: none;
     }
-
-    transition: all .1s ease-in-out;
 }
 
 :required ~ .field__label::after {
@@ -118,9 +117,15 @@ fieldset{
 .field__input:focus + .field__label,
 .field__input:active + .field__label,
 .has-value .field__label{
-    font-size: var(--font-size-sm);
+    display: block;
+    transform-origin: top left;
+    transform: scale(0.65);
     padding-top: calc( var(--form-field-padding-y) * 0.25 );
     padding-bottom: calc( var(--form-field-padding-y) * 0.25 );
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: var(--form-field-padding-x);
+    margin-right: var(--form-field-padding-x);
 }
 
 .field__input-wrap {
@@ -278,7 +283,8 @@ fieldset{
 // Defining States
 //
 
-[class*="form-group__"] > input:focus ~ [class*="__label"] {
+.form-group__radio > input:focus ~ .radio__label,
+.form-group__checkbox > input:focus ~ .checkbox__label {
     text-decoration: underline;
 }
 
