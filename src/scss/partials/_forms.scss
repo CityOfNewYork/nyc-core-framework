@@ -201,8 +201,12 @@ fieldset{
     color: inherit;
     display: flex;
     align-items: baseline;
-    padding-left: 1.375em;
-    padding-right: 1.375em;
+    padding-left: 1.5em;
+
+    [dir="rtl"] & {
+        padding-left: unset;
+        padding-right: 1.5em;
+    }
 }
 
 .form-group__radio > input[type="radio"],
@@ -236,7 +240,6 @@ fieldset{
         
         opacity: 0.25;
     }
-
 }
 
 .form-group__checkbox > .checkbox__label::before{
@@ -246,60 +249,6 @@ fieldset{
 .form-group__radio > .radio__label::before{
     content: "\f111";
 }
-
-//
-// Note, the :before pseudo-element is the new
-// "bounds" or "box" of the checkbox.
-// It must be the same height, width and
-// position of the native checkbox element.
-//
-
-// .form-group__checkbox > input[type="checkbox"]{
-//     background-color: red;
-//     width: 300px;
-//     height: 300px;
-// }
-
-// .form-group__radio > input[type="radio"],
-// .form-group__radio > .radio__label::before,
-
-// .form-group__checkbox > input[type="checkbox"],
-// .form-group__checkbox > .checkbox__label::before,
-// .form-group__checkbox > .checkbox__label::after {
-//     height: var(--checkbox-radio-size);
-//     width: var(--checkbox-radio-size);
-// }
-
-
-// 
-// Base styles for use on both
-// pseudo elements.
-//
-
-// .form-group__radio > .radio__label::before,
-// .form-group__radio > .radio__label::after,
-
-// .form-group__checkbox > .checkbox__label::before,
-// .form-group__checkbox > .checkbox__label::after {
-//     position: absolute;
-//     content: "";
-// }
-
-//
-// Styles for the custom box boundary.
-//
-
-// .form-group__radio > .radio__label::before,
-// .form-group__checkbox > .checkbox__label::before {
-//     border: var(--default-border-width) var(--default-border-style) var(--input-border-color);
-//     height: var(--checkbox-radio-size);
-//     width: var(--checkbox-radio-size);
-// }
-
-// .form-group__radio > .radio__label::before,
-// .form-group__radio > .radio__label::after{
-//     border-radius: 100%;
-// }
 
 //
 // Defining States
@@ -313,51 +262,8 @@ fieldset{
     }
 }
 
-// .form-group__checkbox > input:focus ~ .checkbox__label::before {
-    // border-color: transparent;
-    // outline: 2px solid currentColor;
-    // outline-offset: 3px;
-    // box-shadow:0 0 4px var(--input-border-width) var(--input-border-color);
-// }
-
-//
-// This recreates the "check" mark.
-//
-
-// .form-group__checkbox > .checkbox__label::after {
-
-//     height: calc(var(--checkbox-radio-size) * .75);
-//     width: calc(var(--checkbox-radio-size) * .5);
-//     left: calc(var(--checkbox-radio-size) * .25);
-
-//     border-right: 0.175em solid currentColor;
-//     border-bottom: 0.175em solid currentColor;
-
-//     transform: rotate(45deg);
-
-//     [dir="rtl"] &{
-//         left: unset;
-//         right: calc(var(--checkbox-radio-size) * .25);
-//     }
-// }
-
-// .form-group__radio > .radio__label::after {
-
-//     background-color: currentColor;
-    
-//     height: calc(var(--checkbox-radio-size) * .5);
-//     width: calc(var(--checkbox-radio-size) * .5);
-//     left: calc(var(--checkbox-radio-size) * .25);
-//     top: calc(var(--checkbox-radio-size) * .25);
-
-//     [dir="rtl"] & {
-//         left: unset;
-//         right: calc(var(--checkbox-radio-size) * .25);
-//     }
-// }
-
 .form-group__options {
-    --gap-size: 0.75em;
+    --gap-size: 1em;
     @extend %list-nav-style;
 
     > li:not(:last-child) {
@@ -385,7 +291,6 @@ fieldset{
         }
     }
 }
-
 
 .form-group__radio > input:checked ~ .radio__label,
 .form-group__checkbox > input:checked ~ .checkbox__label {

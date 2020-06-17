@@ -229,6 +229,10 @@ In this file:
         padding: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
     }
 
+    > li > label[class*="form-group__"] {
+        margin: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
+    }
+
     > li > [data-toggle="dropdown"] ~ ul {
         border-top-width: 0 !important;
     }
