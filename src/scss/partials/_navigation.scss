@@ -16,6 +16,7 @@ In this file:
 :root {
     --nav--divider-padding-x: 1em;
     --nav--divider-padding-y: 0.5em;
+    
     --dropdown-z-index: 6000;
 }
 
@@ -56,10 +57,6 @@ In this file:
             margin-right: calc(var(--primary-nav-padding) * 0.25);
         }
     }
-
-    // > * {
-    //     border:2px solid green !important;
-    // }
 }
 
 [class*="primary-nav--right--"] {
@@ -229,7 +226,7 @@ In this file:
         padding: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
     }
 
-    > li > label[class*="form-group__"] {
+    > li > label[class*="form-group__radio"] {
         margin: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
     }
 

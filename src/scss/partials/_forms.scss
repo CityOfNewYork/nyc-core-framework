@@ -230,15 +230,9 @@ fieldset{
         position: absolute;
         top: 0;
         left: 0;
-        display: block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        
-        opacity: 0.25;
+
+        @extend .fontAwesome !optional;
+        opacity: 0.5;
     }
 }
 
@@ -294,8 +288,9 @@ fieldset{
 
 .form-group__radio > input:checked ~ .radio__label,
 .form-group__checkbox > input:checked ~ .checkbox__label {
-    text-decoration: underline;
     &::before{
+        font-weight: 900; 
+        color: var(--checkbox-radio-color);
         opacity: 1;
     }
 }
