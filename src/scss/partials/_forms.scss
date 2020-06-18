@@ -21,7 +21,6 @@ In this file:
     --form-field-padding-x: 1em;
     --form-field-padding-y: .75em;
 
-    --checkbox-radio-size: 1em;
     --checkbox-radio-color: var(--secondary);
 }
 
@@ -73,7 +72,6 @@ fieldset{
     
     @extend .subtle-fill;
     --subtle-fill-opacity: 0.05;
-
 }
 
 // Form Field Label
@@ -195,34 +193,35 @@ fieldset{
 // C. Checkboxes and Radios
 //////////////////////////////////////////////
 
+// Checkbox, Radio Shared Styles
+
 .form-group__radio,
 .form-group__checkbox {
     position: relative;
     color: inherit;
     display: flex;
     align-items: baseline;
-    padding-left: 1.5em;
+    padding-left: 1.25em;
 
     [dir="rtl"] & {
         padding-left: unset;
-        padding-right: 1.5em;
+        padding-right: 1.25em;
     }
 }
 
 .form-group__radio > input[type="radio"],
 .form-group__checkbox > input[type="checkbox"] {
     background-color: transparent;
-    appearance: none;
     opacity: 0;
-}
+} 
 
 //
 // Make sure the label is only as wide as the
 // inner text requires it to be.
 //
 
-.form-group__radio > .radio__label,
-.form-group__checkbox > .checkbox__label {
+.form-group__radio > input ~ .radio__label,
+.form-group__checkbox > input ~ .checkbox__label {
     display: inline-block;
     line-height: var(--base-line-height);
 
@@ -230,18 +229,32 @@ fieldset{
         position: absolute;
         top: 0;
         left: 0;
+        opacity: 0.5;
 
         @extend .fontAwesome !optional;
-        opacity: 0.5;
     }
 }
 
-.form-group__checkbox > .checkbox__label::before{
+// Unchecked
+
+.form-group__checkbox > input ~ .checkbox__label::before{
+    font-weight: 400;
     content: "\f0c8";
 }
 
-.form-group__radio > .radio__label::before{
+.form-group__radio > input ~ .radio__label::before{
+    font-weight:  400;
     content: "\f111";
+}
+
+.form-group__checkbox > input:checked ~ .checkbox__label::before{
+    font-weight: 900;
+    content: "\f14a";
+}
+
+.form-group__radio > input:checked ~ .radio__label::before{
+    font-weight: 900;
+    content: "\f192";
 }
 
 //
@@ -256,51 +269,12 @@ fieldset{
     }
 }
 
-.form-group__options {
-    --gap-size: 1em;
-    @extend %list-nav-style;
-
-    > li:not(:last-child) {
-        margin-bottom: calc(var(--gap-size) * .75);
-    }
-}
-
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
-
-        .form-group__options.form-group__options--horizontal#{$mod} {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            margin-left: calc(-1 * var(--gap-size));
-            margin-right: calc(-1 * var(--gap-size));
-
-            > li {
-                margin-left: var(--gap-size);
-                margin-right: var(--gap-size);
-                margin-bottom: 0 !important;
-            }
-        }
-    }
-}
-
 .form-group__radio > input:checked ~ .radio__label,
 .form-group__checkbox > input:checked ~ .checkbox__label {
     &::before{
-        font-weight: 900; 
         color: var(--checkbox-radio-color);
         opacity: 1;
     }
-}
-
-.form-group__radio > input:checked ~ .radio__label::before {
-    content: "\f192";
-}
-
-.form-group__checkbox > input:checked ~ .checkbox__label::before {
-    content: "\f14a";
 }
 
 //////////////////////////////////////////////
@@ -309,4 +283,14 @@ fieldset{
 
 .invalid-feedback {
     display: none;
+}
+
+
+//////////////////////////////////////////////
+// D. I.E. 11 Support
+//////////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+    
 }

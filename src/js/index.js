@@ -522,6 +522,12 @@ window.onload = () => {
                 inputField.closest('label').classList.remove('has-value');
             }
 
+            if(inputField.checked){ 
+                inputField.classList.add("checked");
+            } else if (!inputField.checked){
+                inputField.classList.remove("checked");
+            }
+
             console.log(inputField.value);
 
         });
