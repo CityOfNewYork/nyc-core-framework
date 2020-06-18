@@ -508,36 +508,84 @@ window.onload = () => {
     // F. Forms
     //////////////////////////////////////////////
 
-    const inputFieldList = document.querySelectorAll('input[type], textarea, select');
+    Array.prototype.slice.call(document.querySelectorAll('form.validate')).forEach((form) => {
 
-    for (const inputField of inputFieldList) {
+        const inputFieldList = form.querySelectorAll('input[type], textarea, select');
+        const firstNameInput = form.querySelector("#firstName");
 
-        inputField.addEventListener('change', (event) => {
+        let wasValidated = false;
 
-            console.log(inputField.nodeType);
+        for (const inputField of inputFieldList) {
 
-            if (inputField.value.length != 0) {
-                inputField.closest('label').classList.add('has-value');
-            } else {
-                inputField.closest('label').classList.remove('has-value');
-            }
+            inputField.addEventListener('change', () => {
 
-            if(inputField.checked){ 
-                inputField.classList.add("checked");
-            } else if (!inputField.checked){
-                inputField.classList.remove("checked");
-            }
+                if (inputField.value.length != 0) {
+                    inputField.closest('label').classList.add('has-value');
+                } else {
+                    inputField.closest('label').classList.remove('has-value');
+                }
 
-            console.log(inputField.value);
+                if(inputField.checked){ 
+                    inputField.classList.add("checked");
+                } else if (!inputField.checked){
+                    inputField.classList.remove("checked");
+                }
 
+                if(wasValidated === true){
+                    checkIfEmpty(inputField);
+                } 
+
+            });
+
+        }
+
+        // Handle form
+        form.addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+            wasValidated = true;
+
+            checkIfEmpty(firstNameInput);
+
+            let firstError = form.querySelector(".form-group.invalid");
+
+            let myScroll = firstError.offsetTop - 10;
+
+            window.scrollTo({
+                top: myScroll,
+                behavior: 'smooth'
+            });
         });
 
-    }
+        function checkIfEmpty(field) {
+            if (isEmpty(field.value.trim())) {
+                // set field invalid
+                setInvalid(field, `${field.name} must not be empty`);
+                return true;
+            } else {
+                // set field valid
+                setValid(field);
+                return false;
+            }
+        }
 
-    // const googleTranslateSelect = document.querySelector(".goog-te-combo");
+        function isEmpty(value) {
+            if (value === '') return true;
+            return false;
+        }
 
-    // googleTranslateSelect.classList.add("field__input");
-    // googleTranslateSelect.closest("div").classList.add("field__input-wrap");
+        function setInvalid(field, message) {
+            let myEl = field.closest(".form-group");
+            myEl.classList.add("invalid", "alert--warn");
+        }
+
+        function setValid(field) {
+            let myEl = field.closest(".form-group");
+            myEl.classList.remove("invalid", "alert--warn");
+        }
+        
+    });
 
     //////////////////////////////////////////////
     // G. External Links

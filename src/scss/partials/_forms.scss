@@ -201,11 +201,11 @@ fieldset{
     color: inherit;
     display: flex;
     align-items: baseline;
-    padding-left: 1.25em;
+    padding-left: 1em;
 
     [dir="rtl"] & {
         padding-left: unset;
-        padding-right: 1.25em;
+        padding-right: 1em;
     }
 }
 
@@ -280,8 +280,12 @@ fieldset{
 // E. Form Feedback and Alerts
 //////////////////////////////////////////////
 
-.invalid-feedback {
+.form-group__feedback {
     display: none;
+}
+
+.invalid > .form-group__feedback{
+    display: block;
 }
 
 //////////////////////////////////////////////
@@ -293,14 +297,14 @@ screen and (-ms-high-contrast: none) {
     
 }
 
-input:invalid {
-  border: 2px dashed red;
-}
+// input:invalid {
+//   border: 2px dashed red;
+// }
 
-input:invalid:required {
-  background-image: linear-gradient(to right, pink, lightgreen);
-}
+// input:invalid:required {
+//   background-image: linear-gradient(to right, pink, lightgreen);
+// }
 
-input:valid {
-  border: 2px solid green;
-}
+// input:valid {
+//   border: 2px solid green;
+// }

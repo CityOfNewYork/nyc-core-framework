@@ -41,18 +41,18 @@
 
                 <div class="container medium my-4">
 
-                    <form class="needs-validation" novalidate>
+                    <form class="validate" novalidate>
 
                         <div class="form-group">
 
-                            <small class="form-group__feedback d-none">
+                            <small class="form-group__feedback">
                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
                                 <strong>Error message description</strong>
                                 <span>How to fix instructions</span>
                             </small>
 
                             <label class="form-group__field">
-                                <input class="field__input" type="text" name="user_name" required>
+                                <input class="field__input" type="text" id="firstName" name="first_name" required>
                                 <p class="field__label">First Name</p>
                             </label>
 
@@ -61,7 +61,7 @@
                         
                         <div class="form-group">
                             <label class="form-group__field">
-                                <input class="field__input" type="text" name="user_name" required>
+                                <input class="field__input" type="text" name="user_name">
                                 <p class="field__label">Last Name</p>
                             </label>
                         </div>
@@ -70,7 +70,7 @@
                         <div class="form-group">
 
                             <label class="form-group__field">
-                                <input class="field__input" type="email" name="email_address" required>
+                                <input class="field__input" type="email" name="email_address">
                                 <p class="field__label">Email Address</p>
                             </label>
                         
@@ -98,7 +98,7 @@
 
                             <label class="form-group__field">
                                 <div class="field__input-wrap">
-                                    <select class="field__input" name="Boroughs" required>
+                                    <select class="field__input" name="Boroughs">
                                         <option value=""></option>
                                         <option value="Bronx">Bronx</option>
                                         <option value="Brooklyn">Brooklyn</option>
@@ -116,7 +116,7 @@
                         <div class="form-group validate-parent">
 
                             <label class="form-group__field">
-                                <textarea class="field__input" id="message" rows="4" required></textarea>
+                                <textarea class="field__input" id="message" rows="4"></textarea>
                                 <p class="field__label">Message</p>
                             </label>
 
@@ -133,11 +133,11 @@
                                 Select multiple options
                             </p>
 
-                            <p class="invalid-feedback">
-                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                <span class="invalid-description">Error message description</span>
-                                <span class="invalid-instruction">How to fix instructions</span>
-                            </p>
+                             <small class="form-group__feedback">
+                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                 <strong>Error message description</strong>
+                                 <span>How to fix instructions</span>
+                             </small>
 
                             <ul class="nav" role="list">
                                 <li>
@@ -175,11 +175,11 @@
                                 Select a single option
                             </p>
 
-                            <p class="invalid-feedback">
+                            <small class="form-group__feedback">
                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                <span class="invalid-description">Error message description</span>
-                                <span class="invalid-instruction">How to fix instructions</span>
-                            </p>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
 
                             <ul class="nav nav--horizontal--md" role="list">
                                 <li>
