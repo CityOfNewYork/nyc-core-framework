@@ -141,10 +141,10 @@ html,
         color: var(--background-color);
     }
 
-    .form-group__radio > input ~ [class*="__label"]::after,
-    .form-group__checkbox > input ~ [class*="__label"]::after {
-        color: var(--background-color);
-    }
+    // .form-group__radio > input ~ [class*="__label"]::before,
+    // .form-group__checkbox > input ~ [class*="__label"]::before {
+    //     color: var(--link-color);
+    // }
 }
 
 @each $name, $color-map in $theme-colors {

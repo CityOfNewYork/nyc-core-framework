@@ -272,7 +272,6 @@ fieldset{
 .form-group__radio > input:checked ~ .radio__label,
 .form-group__checkbox > input:checked ~ .checkbox__label {
     &::before{
-        color: var(--checkbox-radio-color);
         opacity: 1;
     }
 }
@@ -285,7 +284,6 @@ fieldset{
     display: none;
 }
 
-
 //////////////////////////////////////////////
 // D. I.E. 11 Support
 //////////////////////////////////////////////
@@ -293,4 +291,16 @@ fieldset{
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
     
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+input:valid {
+  border: 2px solid green;
 }
