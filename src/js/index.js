@@ -34,20 +34,20 @@ window.onload = () => {
     // A. Dropdowns
     //////////////////////////////////////////////
 
-    const dropdownButtonList = document.querySelectorAll('[data-toggle="dropdown"]');
+    const dropdownButtonList = document.querySelectorAll("[data-toggle='dropdown']");
 
     for (const dropdownButton of dropdownButtonList) {
 
-        let dropdownButtonParent = dropdownButton.closest('li');
+        let dropdownButtonParent = dropdownButton.closest("li");
         let dropdownMenu = dropdownButton.nextElementSibling;
 
         dropdownButton.setAttribute("aria-expanded", false);
 
-        dropdownButton.addEventListener('click', function (event) {
+        dropdownButton.addEventListener("click", function (event) {
 
             event.preventDefault();
 
-            dropdownMenu.classList.toggle('shown');
+            dropdownMenu.classList.toggle("shown");
 
             let expanded = dropdownButton.getAttribute("aria-expanded");
 
@@ -511,7 +511,6 @@ window.onload = () => {
     Array.prototype.slice.call(document.querySelectorAll("form.validate")).forEach((form) => {
 
         const fieldInputList = form.querySelectorAll(".field__input");
-        const firstNameInput = form.querySelector("#firstName");
 
         let wasValidated = false;
 
@@ -534,7 +533,6 @@ window.onload = () => {
                 if(wasValidated === true){
                     if (fieldInput.hasAttribute("required")){
                         checkIfEmpty(fieldInput);
-                        console.log("error does not compute!");
                     }
                 } 
 
@@ -542,7 +540,8 @@ window.onload = () => {
 
         }
 
-        // Handle form
+        // Handle Form Submission
+
         form.addEventListener('submit', function (event) {
 
             event.preventDefault();
@@ -555,7 +554,7 @@ window.onload = () => {
                 checkIfEmpty(formError);
             }
 
-            let firstError = form.querySelector(".form-group.invalid");
+            let firstError = document.querySelector("[class*='alert']");
 
             let myScroll = firstError.offsetTop - 10;
 
@@ -568,7 +567,7 @@ window.onload = () => {
         function checkIfEmpty(field) {
             if (isEmpty(field.value.trim())) {
                 // set field invalid
-                setInvalid(field, `${field.name} must not be empty`);
+                setInvalid(field);
                 return true;
             } else {
                 // set field valid
@@ -582,14 +581,16 @@ window.onload = () => {
             return false;
         }
 
-        function setInvalid(field, message) {
+        const invalidClasses = ["invalid", "alert--warn--dark", "p-2", "mx-n2", "rounded", "box-shadow-2"];
+
+        function setInvalid(field) {
             let myEl = field.closest(".form-group");
-            myEl.classList.add("invalid", "alert--warn");
+            myEl.classList.add(...invalidClasses);
         }
 
         function setValid(field) {
             let myEl = field.closest(".form-group");
-            myEl.classList.remove("invalid", "alert--warn");
+            myEl.classList.remove(...invalidClasses);
         }
         
     });
