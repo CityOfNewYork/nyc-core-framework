@@ -508,31 +508,34 @@ window.onload = () => {
     // F. Forms
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll('form.validate')).forEach((form) => {
+    Array.prototype.slice.call(document.querySelectorAll("form.validate")).forEach((form) => {
 
-        const inputFieldList = form.querySelectorAll('input[type], textarea, select');
+        const fieldInputList = form.querySelectorAll(".field__input");
         const firstNameInput = form.querySelector("#firstName");
 
         let wasValidated = false;
 
-        for (const inputField of inputFieldList) {
+        for (const fieldInput of fieldInputList) {
 
-            inputField.addEventListener('change', () => {
+            fieldInput.addEventListener("change", () => {
 
-                if (inputField.value.length != 0) {
-                    inputField.closest('label').classList.add('has-value');
+                if (fieldInput.value.length != 0) {
+                    fieldInput.closest("label").classList.add("has-value");
                 } else {
-                    inputField.closest('label').classList.remove('has-value');
+                    fieldInput.closest("label").classList.remove("has-value");
                 }
 
-                if(inputField.checked){ 
-                    inputField.classList.add("checked");
-                } else if (!inputField.checked){
-                    inputField.classList.remove("checked");
+                if(fieldInput.checked){ 
+                    fieldInput.classList.add("checked");
+                } else if (!fieldInput.checked){
+                    fieldInput.classList.remove("checked");
                 }
 
                 if(wasValidated === true){
-                    checkIfEmpty(inputField);
+                    if (fieldInput.hasAttribute("required")){
+                        checkIfEmpty(fieldInput);
+                        console.log("error does not compute!");
+                    }
                 } 
 
             });
@@ -546,7 +549,11 @@ window.onload = () => {
 
             wasValidated = true;
 
-            checkIfEmpty(firstNameInput);
+            let formErrorsList = form.querySelectorAll(":invalid");
+
+            for (const formError of formErrorsList) {
+                checkIfEmpty(formError);
+            }
 
             let firstError = form.querySelector(".form-group.invalid");
 
