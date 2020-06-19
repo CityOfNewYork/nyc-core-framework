@@ -556,7 +556,11 @@ window.onload = () => {
 
             let firstError = document.querySelector("[class*='alert']");
 
-            let myScroll = firstError.offsetTop - 10;
+            if (firstError.hasAttribute("data-alert")) {
+                firstError.style.display = "block";
+            }
+
+            let myScroll = firstError.offsetTop - 16;
 
             window.scrollTo({
                 top: myScroll,
@@ -581,7 +585,7 @@ window.onload = () => {
             return false;
         }
 
-        const invalidClasses = ["invalid", "alert--warn--dark", "p-2", "mx-n2", "rounded", "box-shadow-2"];
+        const invalidClasses = ["invalid", "alert--warn"];
 
         function setInvalid(field) {
             let myEl = field.closest(".form-group");

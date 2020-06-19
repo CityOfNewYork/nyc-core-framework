@@ -72,6 +72,7 @@ fieldset{
     
     @extend .subtle-fill;
     --subtle-fill-opacity: 0.05;
+    color: inherit;
 }
 
 // Form Field Label
@@ -187,6 +188,7 @@ fieldset{
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
     opacity: 0.75;
+    font-size: 75%;
 }
 
 //////////////////////////////////////////////
@@ -280,6 +282,7 @@ fieldset{
 // E. Form Feedback and Alerts
 //////////////////////////////////////////////
 
+[data-alert="form-errors"],
 .form-group__feedback {
     display: none;
 }
