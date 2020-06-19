@@ -60,12 +60,12 @@ window.onload = () => {
             }
         });
 
-        window.addEventListener('click', function (event) {
+        window.addEventListener("click", function (event) {
 
             let dropdownButtonClick = dropdownButtonParent.contains(event.target);
 
             if (!dropdownButtonClick) {
-                dropdownMenu.classList.remove('shown');
+                dropdownMenu.classList.remove("shown");
                 dropdownButton.setAttribute("aria-expanded", false);
             }
         });
@@ -75,10 +75,10 @@ window.onload = () => {
     // B. Accordion
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll('.accordion')).forEach((accordion) => {
+    Array.prototype.slice.call(document.querySelectorAll(".accordion")).forEach((accordion) => {
 
-        const accButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
-        const accPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
+        const accButtonList = accordion.querySelectorAll("[data-toggle='accordion']");
+        const accPanelList = accordion.querySelectorAll("[data-accordion='panel']");
 
         for (const accordionButton of accButtonList) {
 
@@ -89,7 +89,7 @@ window.onload = () => {
 
             if (expanded === "true") {
                 currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
-                currentAccordionPanel.classList.add('show');
+                currentAccordionPanel.classList.add("show");
             } else {
                 accordionButton.setAttribute("aria-expanded", false);
                 currentAccordionPanel.style.maxHeight = null;
@@ -103,17 +103,17 @@ window.onload = () => {
                 
                 for (const otherAccordionPanel of accPanelList) {
 
-                    otherAccordionPanel.classList.remove('show');
+                    otherAccordionPanel.classList.remove("show");
 
                     if (otherAccordionPanel !== currentAccordionPanel) {
-                        otherAccordionPanel.classList.remove('shown');
+                        otherAccordionPanel.classList.remove("shown");
                         otherAccordionPanel.style.maxHeight = null;
                         otherAccordionPanel.previousElementSibling.setAttribute("aria-expanded", false);
                         otherAccordionPanel.setAttribute("aria-hidden", true);
                     }
                 }
 
-                currentAccordionPanel.classList.toggle('shown');
+                currentAccordionPanel.classList.toggle("shown");
 
                 let expanded = accordionButton.getAttribute("aria-expanded");
                 
@@ -137,12 +137,12 @@ window.onload = () => {
 
             }
 
-            accordionButton.addEventListener('click', (event) => {
+            accordionButton.addEventListener("click", (event) => {
                 initAccordion(event);
             });
 
-            accordionButton.addEventListener('keyup', (event) => {
-                if (event.keyCode === 13 && event.target.tagName !== 'BUTTON') {
+            accordionButton.addEventListener("keyup", (event) => {
+                if (event.keyCode === 13 && event.target.tagName !== "BUTTON") {
                     initAccordion(event);
                 } else {
                     return;
@@ -156,10 +156,10 @@ window.onload = () => {
     // C. Tabs
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll('[data-tab-group]')).forEach((tab) => {
+    Array.prototype.slice.call(document.querySelectorAll("[data-tab-group]")).forEach((tab) => {
 
-        const tabButtonList = tab.querySelectorAll('[role="tab"]');
-        const tabPanelList = tab.querySelectorAll('[role="tabpanel"]');
+        const tabButtonList = tab.querySelectorAll("[role='tab']");
+        const tabPanelList = tab.querySelectorAll("[role='tabpanel']");
 
         // For easy reference
         const keys = {
@@ -178,9 +178,9 @@ window.onload = () => {
         };
 
         function addListeners(index) {
-            tabButtonList[index].addEventListener('click', clickEventListener);
-            tabButtonList[index].addEventListener('keydown', keydownEventListener);
-            tabButtonList[index].addEventListener('keyup', keyupEventListener);
+            tabButtonList[index].addEventListener("click", clickEventListener);
+            tabButtonList[index].addEventListener("keydown", keydownEventListener);
+            tabButtonList[index].addEventListener("keyup", keyupEventListener);
 
             // Build an array with all tabs (<button>s) in it
             tabButtonList[index].index = index;
@@ -259,15 +259,15 @@ window.onload = () => {
             deactivateTabs();
 
             // Set the tab as selected
-            tab.setAttribute('aria-selected', 'true');
+            tab.setAttribute("aria-selected", "true");
 
             // Get the value of aria-controls (which is an ID)
-            let controls = tab.getAttribute('aria-controls');
+            let controls = tab.getAttribute("aria-controls");
 
             let currentTabPanel = document.getElementById(controls);
 
-            currentTabPanel.classList.add('shown');
-            currentTabPanel.removeAttribute('hidden');
+            currentTabPanel.classList.add("shown");
+            currentTabPanel.removeAttribute("hidden");
 
         };
 
@@ -275,12 +275,12 @@ window.onload = () => {
         function deactivateTabs() {
 
             for (const tab of tabButtonList) {
-                tab.setAttribute('aria-selected', 'false');
+                tab.setAttribute("aria-selected", "false");
             }
 
             for (const panel of tabPanelList) {
-                panel.classList.remove('shown');
-                panel.setAttribute('hidden', '');
+                panel.classList.remove("shown");
+                panel.setAttribute("hidden", "");
             }
             
         };
@@ -301,19 +301,19 @@ window.onload = () => {
     // D. Toggle
     //////////////////////////////////////////////
 
-    const collapseButtonList = document.querySelectorAll('[data-toggle="collapse"]');
+    const collapseButtonList = document.querySelectorAll("[data-toggle='collapse']");
 
     for (const collapseButton of collapseButtonList) {
 
         collapseButton.setAttribute("aria-expanded", false);
 
-        collapseButton.addEventListener('click', (event) => {
+        collapseButton.addEventListener("click", (event) => {
 
-            const collapseTargetID = event.target.getAttribute('data-target').replace(/#/, '');
+            const collapseTargetID = event.target.getAttribute("data-target").replace(/#/, "");
 
             const collapseTarget = document.getElementById(collapseTargetID);
 
-            collapseTarget.classList.toggle('shown');
+            collapseTarget.classList.toggle("shown");
         })
     }
 
@@ -321,8 +321,8 @@ window.onload = () => {
     // E. Modal
     //////////////////////////////////////////////
 
-    const modalList = document.querySelectorAll('.modal');
-    const modalButtonList = document.querySelectorAll('[data-modal-open]');
+    const modalList = document.querySelectorAll(".modal");
+    const modalButtonList = document.querySelectorAll("[data-modal-open]");
 
     const initModal = (modalTarget) => {
 
@@ -332,17 +332,17 @@ window.onload = () => {
         let focusedElementBeforeModal = document.activeElement;
 
         // add the key listener  
-        modalTarget.addEventListener('keydown', processEscapeTabKeys);
+        modalTarget.addEventListener("keydown", processEscapeTabKeys);
 
-        const modalCloseList = modalTarget.querySelectorAll('[data-modal-close]');
+        const modalCloseList = modalTarget.querySelectorAll("[data-modal-close]");
 
         for (const modalClose of modalCloseList) {
-            modalClose.addEventListener('click', closeModal);
+            modalClose.addEventListener("click", closeModal);
             modalClose.setAttribute("aria-label", "Close Modal Window");
         }
 
         // Find all focusable modal elements
-        const modalElements = 'input:not([disabled]), button:not([disabled]), a:not([disabled]';
+        const modalElements = "input:not([disabled]), button:not([disabled]), a:not([disabled]";
         let focusableElements = modalTarget.querySelectorAll(modalElements);
 
         // Convert NodeList to Array only for IE 11
@@ -377,22 +377,22 @@ window.onload = () => {
     }
 
     for (const modal of modalList) {
-        const modalOverlay = modal.querySelector('.modal__overlay');
-        const modalContainer = modal.querySelector('.modal__container');
+        const modalOverlay = modal.querySelector(".modal__overlay");
+        const modalContainer = modal.querySelector(".modal__container");
 
-        modalOverlay.setAttribute('tabindex',  '-1');
+        modalOverlay.setAttribute("tabindex",  "-1");
 
-        modalContainer.setAttribute('role', 'dialog');
-        modalContainer.setAttribute('aria-modal', 'true');
+        modalContainer.setAttribute("role", "dialog");
+        modalContainer.setAttribute("aria-modal", "true");
 
         modal.setAttribute("aria-hidden", true);
     }
 
     for (const modalButton of modalButtonList) {
 
-        modalButton.addEventListener('click', (event) => {
+        modalButton.addEventListener("click", (event) => {
 
-            const modalTargetID = event.target.getAttribute('data-modal-open').replace(/#/, '');
+            const modalTargetID = event.target.getAttribute("data-modal-open").replace(/#/, "");
             const modalTarget = document.getElementById(modalTargetID);
 
             initModal(modalTarget);
@@ -448,7 +448,7 @@ window.onload = () => {
                     span.appendChild(node);
                 }
 
-                tableData.setAttribute('data-before', myHeaders[i]);
+                tableData.setAttribute("data-before", myHeaders[i]);
 
                 i++;
             }
@@ -493,7 +493,7 @@ window.onload = () => {
 
             }
 
-            scrollTarget.addEventListener('scroll', removeGradient), {
+            scrollTarget.addEventListener("scroll", removeGradient), {
                 passive: true
             };
 
@@ -502,7 +502,7 @@ window.onload = () => {
     }
 
     initTableScroll();
-    window.addEventListener('resize', initTableScroll);
+    window.addEventListener("resize", initTableScroll);
 
     //////////////////////////////////////////////
     // F. Forms
@@ -542,7 +542,7 @@ window.onload = () => {
 
         // Handle Form Submission
 
-        form.addEventListener('submit', function (event) {
+        form.addEventListener("submit", function (event) {
 
             event.preventDefault();
 
@@ -560,24 +560,24 @@ window.onload = () => {
 
             window.scrollTo({
                 top: myScroll,
-                behavior: 'smooth'
+                behavior: "smooth"
             });
         });
 
         function checkIfEmpty(field) {
             if (isEmpty(field.value.trim())) {
-                // set field invalid
+                // Set field invalid
                 setInvalid(field);
                 return true;
             } else {
-                // set field valid
+                // Set field valid
                 setValid(field);
                 return false;
             }
         }
 
         function isEmpty(value) {
-            if (value === '') return true;
+            if (value === "") return true;
             return false;
         }
 
@@ -599,31 +599,31 @@ window.onload = () => {
     // G. External Links
     //////////////////////////////////////////////
 
-    const externalLinks = document.querySelectorAll('[data-link="external"]');
+    const externalLinks = document.querySelectorAll("[data-link='external']");
 
     for (const link of externalLinks) {
-        link.insertAdjacentHTML('beforeend', '<span class="sr-only">Opens a new window</span>');
+        link.insertAdjacentHTML("beforeend", "<span class='sr-only'>Opens a new window</span>");
     }
 
     //////////////////////////////////////////////
     // G. Focusable Buttons
     //////////////////////////////////////////////
 
-    const focusableButtonList = document.querySelectorAll('[role="tab"], .btn, [data-toggle="accordion"]');
+    const focusableButtonList = document.querySelectorAll("[role='tab'], .btn, [data-toggle='accordion']");
 
     for (const button of focusableButtonList) {
 
         let mouseDown = false;
 
-        button.addEventListener('mousedown', () => {
+        button.addEventListener("mousedown", () => {
             mouseDown = true;
         });
 
-        button.addEventListener('mouseup', () => {
+        button.addEventListener("mouseup", () => {
             mouseDown = false;
         });
 
-        button.addEventListener('focus', (event) => {
+        button.addEventListener("focus", (event) => {
             if (mouseDown) {
                 event.target.blur();
             }
