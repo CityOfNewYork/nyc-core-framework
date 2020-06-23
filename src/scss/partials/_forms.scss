@@ -24,6 +24,8 @@ In this file:
     --checkbox-radio-color: var(--secondary);
 }
 
+
+
 //////////////////////////////////////////////
 // B. Basic Form Styles
 //////////////////////////////////////////////
@@ -73,9 +75,9 @@ form{
 
 // Form Field
 
-.form-group__field {
+[class*="form-group__field"] {
     --action-btn-size: 2.5rem;
-
+    
     display: flex;
     
     @extend .subtle-fill;
@@ -161,8 +163,6 @@ form{
     .has-value .field__input {
         padding-top: var(--form-field-padding-y);
         padding-bottom: var(--form-field-padding-y);
-        padding-left: var(--form-field-padding-x);
-        padding-right: var(--form-field-padding-x);
     }
 
     .field__input + .field__label{
@@ -173,14 +173,10 @@ form{
 
     .field__input:focus + .field__label, 
     .field__input:active + .field__label, 
-    
     .has-value .field__label{
         display: none;
     }
-
 }
-
-
 
 /////////////////////////////
 
@@ -210,17 +206,16 @@ form{
     font-size: 99.99%;
 }
 
-.form-group__field.has-action > .field__input {
-    padding-right: calc(var(--form-field-padding) + var(--action-btn-size));
+.form-group__field--has-action > .field__input {
+    width: 100%;
+    padding-right: calc( var(--form-field-padding-x) + var(--action-btn-size));
 }
 
-.form-group__field.has-action > button {
+.form-group__field--has-action > button {
     position: absolute !important;
     top: 50%;
     right: 0;
     transform: translatey(-50%);
-
-    border:2px solid green !important;
 
     padding: 0;
     background: transparent;
