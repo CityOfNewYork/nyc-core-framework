@@ -101,7 +101,6 @@ In this file:
 // B. Nav
 ////////////////////////////////////////
 
-
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav {
     --gap-size: var(--s2);
@@ -305,14 +304,14 @@ In this file:
 
             > li {
                 flex: 1;
-                text-align: center;
                 border-bottom-style: none !important; // Thanks, IE.
+                text-align: center;
+            }
 
-                &:not(:last-child) {
-                    border-right-width: var(--default-border-width);
-                    border-right-style: var(--default-border-style);
-                    border-color: inherit;
-                }
+            > li:not(:last-child){
+                border-color: inherit;
+                border-left-width: var(--default-border-width);
+                border-left-style: var(--default-border-style);
             }
 
             [data-toggle="dropdown"] {

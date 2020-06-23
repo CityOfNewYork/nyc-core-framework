@@ -28,7 +28,7 @@ In this file:
 // B. Basic Form Styles
 //////////////////////////////////////////////
 
-// Shared Styles
+// General Selectors
 
 select,
 textarea,
@@ -45,6 +45,14 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="r
 button,
 fieldset{
     border: none;
+}
+
+form{
+    text-align: left;
+
+    [dir="rtl"] & {
+        text-align: right;
+    }
 }
 
 // Form Group
@@ -96,6 +104,8 @@ fieldset{
     display: inline;
 }
 
+// Label and Input
+
 .field__label,
 .field__input {
     padding-top: var(--form-field-padding-y);
@@ -131,6 +141,49 @@ fieldset{
 
     }
 }
+
+// Form Group within Navigation
+
+[class*="nav"] > li > form,
+.primary-nav__menu > ul > li > form {
+    
+    .form-group {
+        --form-field-padding-y: var(--nav--divider-padding-y);
+        --form-field-padding-x: var(--nav--divider-padding-x);
+    }
+
+    .field__input{
+        border: none;
+    }
+
+    .field__input:focus,
+    .field__input:active,
+    .field__input + .field__label,
+    .has-value .field__input {
+        padding-top: var(--form-field-padding-y);
+        padding-bottom: var(--form-field-padding-y);
+        padding-left: var(--form-field-padding-x);
+        padding-right: var(--form-field-padding-x);
+    }
+
+    .field__input + .field__label{
+        line-height: inherit;
+        margin: unset;
+        transform: unset;
+    }
+
+    .field__input:focus + .field__label, 
+    .field__input:active + .field__label, 
+    
+    .has-value .field__label{
+        display: none;
+    }
+
+}
+
+
+
+/////////////////////////////
 
 .field__input-wrap {
     position: relative;

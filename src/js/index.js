@@ -508,7 +508,9 @@ window.onload = () => {
     // F. Forms
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll("form.validate")).forEach((form) => {
+
+
+    Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
 
         const fieldInputList = form.querySelectorAll(".field__input");
 
