@@ -24,8 +24,6 @@ In this file:
     --checkbox-radio-color: var(--secondary);
 }
 
-
-
 //////////////////////////////////////////////
 // B. Basic Form Styles
 //////////////////////////////////////////////
@@ -72,8 +70,6 @@ form{
         margin-right: 0.25rem;
     }
 }
-
-// Form Field
 
 [class*="form-group__field"] {
     --action-btn-size: 2.5rem;
@@ -180,6 +176,35 @@ form{
 
 /////////////////////////////
 
+// Form Field
+.goog-te-gadget{
+    font-size: var(--font-size-md);
+    color: inherit !important;
+
+    > div,
+    > span > a{
+        color: currentColor !important;
+    }
+
+    > div {
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.05;
+        margin-bottom: var(--s1);
+        font-size: var(--font-size-rg);
+
+
+        border-bottom-width: var(--input-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: var(--input-border-color);
+    }
+
+    > div > select {
+        border-bottom-style: none
+    }
+
+}
+
+.goog-te-gadget > div,
 .field__input-wrap {
     position: relative;
     width: 100%;
@@ -238,6 +263,12 @@ form{
     padding-right: var(--form-field-padding-x);
     opacity: 0.75;
     font-size: 75%;
+}
+
+select.goog-te-combo {
+    font-size: var(--font-size-rg);
+    padding: var(--form-field-padding-y) var(--form-field-padding-x);
+
 }
 
 //////////////////////////////////////////////
