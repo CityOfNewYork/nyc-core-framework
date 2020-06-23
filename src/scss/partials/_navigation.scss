@@ -113,10 +113,6 @@ In this file:
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav:not([class*="nav--divider"]) {
 
-    > li > form {
-        align-self: center;
-    }
-
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * .75);
     }
@@ -140,6 +136,10 @@ In this file:
         margin-right: 0;
         margin-top: 1rem;
         width: 240px;
+    }
+    
+    > li > form {
+        align-self: center;
     }
 }
 
@@ -168,10 +168,6 @@ In this file:
             margin-left: calc(-1 * var(--gap-size));
             margin-right: calc(-1 * var(--gap-size));
 
-            > li > form{
-                width: 200px;
-            }
-
             > li {
                 margin-left: var(--gap-size);
                 margin-right: var(--gap-size);
@@ -191,6 +187,10 @@ In this file:
                 &::after {
                     left: 50%;
                 }
+            }
+
+            > li > form{
+                width: 200px;
             }
         }
     }
