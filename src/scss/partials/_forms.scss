@@ -138,7 +138,6 @@ form{
 
     [dir="rtl"] & {
         transform-origin: top right;
-
     }
 }
 
@@ -220,6 +219,8 @@ form{
     top: 50%;
     right: 0;
     transform: translatey(-50%);
+
+    border:2px solid green !important;
 
     padding: 0;
     background: transparent;
