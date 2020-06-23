@@ -160,7 +160,7 @@ In this file:
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .primary-nav--right#{$mod} > [class*="__menu"] > ul,
-        .nav.nav--horizontal#{$mod} {
+        .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
             display: flex;
             flex-direction: row;
             align-items: center;
