@@ -115,6 +115,10 @@ In this file:
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav:not([class*="nav--divider"]) {
 
+    li{
+      text-align: right;  
+    }
+
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * .75);
     }
@@ -401,7 +405,14 @@ In this file:
     width: 100%;
 
     z-index: var(--dropdown-z-index);
+    
+    
     text-align: left;
+
+    [dir="rtl"] & {
+        text-align: right;
+    }
+
 
     > li {
         margin-left: 0;
