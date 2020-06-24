@@ -322,10 +322,17 @@ In this file:
                 text-align: center;
             }
 
-            > li:not(:first-child){
-                border-color: inherit;
-                border-left-width: var(--default-border-width);
-                border-left-style: var(--default-border-style);
+            // make rtl alternate
+
+            > li:not(:last-child){
+                border-right-width: var(--default-border-width);
+                border-right-style: var(--default-border-style);
+
+                [dir="rtl"] & {
+                    border-right-width: 0;
+                    border-left-width: var(--default-border-width);
+                    border-left-style: var(--default-border-style);
+                }
             }
 
             [data-toggle="dropdown"] {
@@ -334,10 +341,9 @@ In this file:
 
             &[class*="border"] {
                 > li > [data-toggle="dropdown"] ~ ul {
+                    border-top-width: 0;
                     border-width: var(--default-border-width);
                     border-style: var(--default-border-style);
-                    border-top-width: 0;
-                    border-color: inherit;
                     width: calc(100% + (var(--default-border-width) * 2));
                 }
             }
@@ -346,6 +352,11 @@ In this file:
                 position: absolute;
                 width: 100%;
                 left: calc(var(--default-border-width) * -1);
+
+                [dir="rtl"] &{
+                left: unset;
+                right: calc(var(--default-border-width) * -1);
+                }
             }
         }
     }
@@ -405,14 +416,12 @@ In this file:
     width: 100%;
 
     z-index: var(--dropdown-z-index);
-    
-    
+
     text-align: left;
 
     [dir="rtl"] & {
         text-align: right;
     }
-
 
     > li {
         margin-left: 0;
@@ -429,8 +438,6 @@ In this file:
         display: block;
     }
 }
-
-
 
 //////////////////////////////////////////////
 // D. I.E. 11 Support
@@ -465,7 +472,6 @@ screen and (-ms-high-contrast: none) {
         .primary-nav__logo {
             grid-row: 1 / 2;
             grid-column: 1 / 2;
-            background:red
         }
         
         .primary-nav__menu {
