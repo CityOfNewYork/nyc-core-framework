@@ -32,14 +32,14 @@
 
     <main>
 
-        <figure class="narrow">
+        <figure class="container">
 
-            <div class="form-group">
+            <div class="form-group p-2 bc-dark">
 
-                <ul class="nav nav--divider nav--horizontal--md border bc-light fs-lg" role="list">
+                <ul class="nav nav--horizontal--md rounded fs-rg justify-content-between" role="list">
                     <li>
                         <label class="form-group__radio">
-                            <input type="radio" name="radio-group-example" required>
+                            <input type="radio" name="radio-group-example" checked required>
                             <span class="radio__label">
                                 Option One
                             </span>
@@ -62,6 +62,26 @@
                                 Option One
                             </span>
                         </label>
+                    </li>
+
+                    <li>
+                        <form>
+                            <div class="form-group">
+                                <label class="form-group__field--has-action">
+
+                                    <input class="field__input" type="text" name="global_search"
+                                        style="border: none; line-height: inherit;">
+
+                                    <p class="field__label">Search</p>
+
+                                    <button href="#1" title="Search">
+                                        <span class="sr-only">Search</span>
+                                        <span class="fas fa-search"></span>
+                                    </button>
+
+                                </label>
+                            </div>
+                        </form>
                     </li>
 
                 </ul>
