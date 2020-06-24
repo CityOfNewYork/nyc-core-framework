@@ -468,6 +468,9 @@ screen and (-ms-high-contrast: none) {
         .primary-nav__logo {
             grid-row: 1 / 2;
             grid-column: 1 / 2;
+            
+            display: flex;
+            justify-content: flex-start;
         }
         
         .primary-nav__menu {
