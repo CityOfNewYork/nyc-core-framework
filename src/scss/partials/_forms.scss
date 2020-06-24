@@ -40,6 +40,10 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="r
     border-bottom-color: currentColor;
 }
 
+select option {
+    color: currentColor;
+}
+
 button,
 fieldset{
     border: none;
@@ -384,5 +388,14 @@ form{
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
+
+    div.goog-te-gadget {
+        display: block !important;
+    }
+
+    // select option{
+    //     background-color: white !important;
+    //     color: var(--dark) !important;
+    // }
     
 }

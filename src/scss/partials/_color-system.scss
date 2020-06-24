@@ -123,7 +123,7 @@ html,
     p > a:not([class*="bc-"]){
         color: var(--link-color);
     }
-
+    select option,
     .tabs [role="tab"],
     .tabs [role="tabpanel"],
     [data-toggle="dropdown"] ~ ul, 
