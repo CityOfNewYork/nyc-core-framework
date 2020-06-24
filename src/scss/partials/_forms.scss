@@ -15,8 +15,6 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --input-border-width: var(--default-border-width);
-    --input-border-color: currentColor;
 
     --form-field-padding-x: 1em;
     --form-field-padding-y: .75em;
@@ -37,9 +35,9 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="r
     background-color: transparent;
     color: inherit;
 
-    border-bottom-width: var(--input-border-width);
+    border-bottom-width: var(--default-border-width);
     border-bottom-style: var(--default-border-style);
-    border-bottom-color: var(--input-border-color);
+    border-bottom-color: currentColor;
 }
 
 button,
@@ -50,9 +48,9 @@ fieldset{
 form{
     text-align: left;
 
-    [dir="rtl"] & {
-        text-align: right;
-    }
+    // [dir="rtl"] & {
+    //     text-align: right;
+    // }
 }
 
 // Form Group
@@ -177,29 +175,42 @@ form{
 /////////////////////////////
 
 // Form Field
-.goog-te-gadget{
-    font-size: var(--font-size-md);
-    color: inherit !important;
 
-    > div,
-    > span > a{
+.goog-te-gadget, 
+.goog-te-combo{
+    font-family: inherit !important;
+}
+
+.goog-te-gadget{
+    color: inherit !important;
+    font-size: var(--font-size-md) !important;
+    text-align: center;
+    
+    > div, 
+    > div > .goog-te-combo,
+    > span > a {
         color: currentColor !important;
     }
 
-    > div {
+    > div{
+        margin-bottom: var(--s1);
+
         @extend .subtle-fill;
         --subtle-fill-opacity: 0.05;
-        margin-bottom: var(--s1);
-        font-size: var(--font-size-rg);
-
-
-        border-bottom-width: var(--input-border-width);
-        border-bottom-style: var(--default-border-style);
-        border-bottom-color: var(--input-border-color);
     }
 
-    > div > select {
-        border-bottom-style: none
+    > div, 
+    > div > .goog-te-combo{
+        font-size: var(--font-size-rg) !important;
+    }
+
+    > div > .goog-te-combo {
+        margin: 0 !important;
+        padding: var(--form-field-padding-y) var(--form-field-padding-x);
+
+        border-bottom-width: var(--default-border-width) !important;
+        border-bottom-style: var(--default-border-style) !important;
+        border-bottom-color: currentColor !important;
     }
 
 }
@@ -219,11 +230,13 @@ form{
         transform: translateY(-50%);
         margin-left: var(--s2);
         margin-right: var(--s2);
+    }
+}
 
-        [dir="rtl"] & {
-            right: unset;
-            left: 0;
-        }
+.field__input-wrap::after {
+    [dir="rtl"] & {
+        right: unset;
+        left: 0;
     }
 }
 
@@ -263,12 +276,6 @@ form{
     padding-right: var(--form-field-padding-x);
     opacity: 0.75;
     font-size: 75%;
-}
-
-select.goog-te-combo {
-    font-size: var(--font-size-rg);
-    padding: var(--form-field-padding-y) var(--form-field-padding-x);
-
 }
 
 //////////////////////////////////////////////
@@ -379,15 +386,3 @@ select.goog-te-combo {
 screen and (-ms-high-contrast: none) {
     
 }
-
-// input:invalid {
-//   border: 2px dashed red;
-// }
-
-// input:invalid:required {
-//   background-image: linear-gradient(to right, pink, lightgreen);
-// }
-
-// input:valid {
-//   border: 2px solid green;
-// }
