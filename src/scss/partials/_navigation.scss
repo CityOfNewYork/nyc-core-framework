@@ -115,19 +115,15 @@ In this file:
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav:not([class*="nav--divider"]) {
 
-    li{
-      text-align: right;  
-    }
-
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * .75);
     }
 
     > li > [data-toggle="dropdown"] ~ ul {
+        width: calc(100% + (var(--gap-size) * 2));
         padding: var(--gap-size);
         margin-left: calc(var(--gap-size) * -1);
         margin-right: calc(var(--gap-size) * -1);
-        width: calc(100% + (var(--gap-size) * 2));
         left: 0;
 
         [dir="rtl"] & {

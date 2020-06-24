@@ -560,7 +560,7 @@ window.onload = () => {
                 firstError.style.display = "block";
             }
 
-            let myScroll = firstError.offsetTop - 16;
+            let myScroll = firstError.offsetTop - 16 + "px";
 
             window.scrollTo({
                 top: myScroll,
