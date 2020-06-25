@@ -35,9 +35,11 @@ window.onload = () => {
     //////////////////////////////////////////////
 
     const copyrightYear = document.querySelector(".copyright-year");
-    let currentYear = new Date().getFullYear();
 
-    copyrightYear.innerHTML = currentYear;
+    if (copyrightYear){
+        let currentYear = new Date().getFullYear();
+        copyrightYear.innerHTML = currentYear;
+    }
 
     //////////////////////////////////////////////
     // Dropdowns
