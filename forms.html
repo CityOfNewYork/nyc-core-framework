@@ -29,7 +29,7 @@
 
 <body>
 
-    <main id="skip-header-content" role="main">
+    <main id="skip-header-content">
 
         <div class="overflow-hidden">
 
@@ -71,7 +71,7 @@
 
                             <label class="form-group__field">
                                 <input class="field__input" type="text" id="firstName" name="first_name" required>
-                                <p class="field__label">First Name</p>
+                                <span class="field__label">First Name</span>
                             </label>
 
                         </div>
@@ -87,7 +87,7 @@
 
                             <label class="form-group__field">
                                 <input class="field__input" type="text" name="user_name" required>
-                                <p class="field__label">Last Name</p>
+                                <span class="field__label">Last Name</span>
                             </label>
                         </div>
                         <!-- .form-group -->
@@ -96,7 +96,7 @@
 
                             <label class="form-group__field">
                                 <input class="field__input" type="email" name="email_address">
-                                <p class="field__label">Email Address</p>
+                                <span class="field__label">Email Address</span>
                             </label>
                         
                         </div>
@@ -104,17 +104,17 @@
 
                         <div class="form-group">
                         
-                            <label class="form-group__field--has-action">
+                            <div class="form-group__field--has-action">
 
                                 <input class="field__input" type="text" name="global_search">
-                                <p class="field__label">Enter Search Phrase</p>
+                                <label class="field__label">Enter Search Phrase 2</label>
                                 
-                                <button href="#1" title="Search">
-                                    <span class="sr-only">Search</span>
+                                <button title="Search">
+                                    <span class="screan-reader">Search</span>
                                     <span class="fas fa-search"></span>
                                 </button>
                                 
-                            </label>
+                            </div>
 
                         </div>
                         <!-- .form-group -->
@@ -127,20 +127,19 @@
                                 <span>How to fix instructions</span>
                             </small>
 
-                            <label class="form-group__field">
+                            <div class="form-group__field">
                                 <div class="field__input-wrap">
                                     <select class="field__input" name="Boroughs" required>
-                                        <option></option>
+                                        <option label="Borough"></option>
                                         <option value="Bronx">Bronx</option>
                                         <option value="Brooklyn">Brooklyn</option>
                                         <option value="Manhattan">Manhattan</option>
                                         <option value="Staten Island">Staten Island</option>
                                         <option value="Queens">Queens</option>
                                     </select>
-                                    <p class="field__label">Borough</p>
+                                    <label class="field__label">Borough</label>
                                 </div>
-
-                            </label>
+                            </div>
                         </div>
                         <!-- .form-group -->
 
@@ -148,7 +147,7 @@
 
                             <label class="form-group__field">
                                 <textarea class="field__input" id="message" rows="4"></textarea>
-                                <p class="field__label">Message</p>
+                                <span class="field__label">Message</span>
                             </label>
 
                             <small class="form-group__assistance">
@@ -170,7 +169,7 @@
                                  <span>How to fix instructions</span>
                              </small>
 
-                            <ul class="nav" role="list">
+                            <ul class="nav">
                                 <li>
                                     <label class="form-group__checkbox">
                                         <input type="checkbox" name="checkbox-group-example" required>
@@ -202,7 +201,7 @@
 
                         <div class="form-group validate-parent" role="group" aria-labelledby="checkbox-group-label">
 
-                            <p class="label" id="checkbox-group-label">
+                            <p class="label" id="radio-group-label">
                                 Select a single option
                             </p>
 
@@ -212,7 +211,7 @@
                                 <span>How to fix instructions</span>
                             </small>
 
-                            <ul class="nav nav--horizontal--md" role="list">
+                            <ul class="nav nav--horizontal--md">
                                 <li>
                                     <label class="form-group__radio">
                                         <input type="radio" name="radio-group-example" required>

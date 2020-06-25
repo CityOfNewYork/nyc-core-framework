@@ -13,7 +13,7 @@ In this file:
 
 // Only display content to screen readers
 
-.sr-only {
+.screan-reader {
     overflow: hidden;
     position: absolute;
     width: 1px;
@@ -24,11 +24,11 @@ In this file:
     padding: unset;
 }
 
-// Use in conjunction with .sr-only to only display content when it's focused.
+// Use in conjunction with .screan-reader to only display content when it's focused.
 // Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
 // Credit: HTML5 Boilerplate
 
-.sr-only-focusable {
+.screan-reader-focusable {
     &:active,
     &:focus {
         position: absolute;
@@ -55,7 +55,7 @@ In this file:
     &:hover,
     &:focus {
         
-        &:not(.sr-only-focusable):not(.expanded-link) {
+        &:not(.screan-reader-focusable):not(.expanded-link) {
             position: relative;
             z-index: 5000;
         }

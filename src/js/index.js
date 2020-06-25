@@ -31,7 +31,16 @@ window.onload = () => {
     rtlObserver.observe(rtlTarget, config);
 
     //////////////////////////////////////////////
-    // A. Dropdowns
+    // Copyright Year (Footer)
+    //////////////////////////////////////////////
+
+    const copyrightYear = document.querySelector(".copyright-year");
+    let currentYear = new Date().getFullYear();
+
+    copyrightYear.innerHTML = currentYear;
+
+    //////////////////////////////////////////////
+    // Dropdowns
     //////////////////////////////////////////////
 
     const dropdownButtonList = document.querySelectorAll("[data-toggle='dropdown']");
@@ -72,7 +81,7 @@ window.onload = () => {
     }
 
     //////////////////////////////////////////////
-    // B. Accordion
+    // Accordion
     //////////////////////////////////////////////
 
     Array.prototype.slice.call(document.querySelectorAll(".accordion")).forEach((accordion) => {
@@ -153,7 +162,7 @@ window.onload = () => {
     }); // end for
 
     //////////////////////////////////////////////
-    // C. Tabs
+    // Tabs
     //////////////////////////////////////////////
 
     Array.prototype.slice.call(document.querySelectorAll("[data-tab-group]")).forEach((tab) => {
@@ -298,7 +307,7 @@ window.onload = () => {
     }); // end for
 
     //////////////////////////////////////////////
-    // D. Toggle
+    // Toggle
     //////////////////////////////////////////////
 
     const collapseButtonList = document.querySelectorAll("[data-toggle='collapse']");
@@ -318,7 +327,7 @@ window.onload = () => {
     }
 
     //////////////////////////////////////////////
-    // E. Modal
+    // Modal
     //////////////////////////////////////////////
 
     const modalList = document.querySelectorAll(".modal");
@@ -505,7 +514,7 @@ window.onload = () => {
     window.addEventListener("resize", initTableScroll);
 
     //////////////////////////////////////////////
-    // F. Forms
+    // Forms
     //////////////////////////////////////////////
 
     Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
@@ -600,17 +609,17 @@ window.onload = () => {
     });
 
     //////////////////////////////////////////////
-    // G. External Links
+    // External Links
     //////////////////////////////////////////////
 
     const externalLinks = document.querySelectorAll("[data-link='external']");
 
     for (const link of externalLinks) {
-        link.insertAdjacentHTML("beforeend", "<span class='sr-only'>Opens a new window</span>");
+        link.insertAdjacentHTML("beforeend", "<span class='screan-reader'>Opens a new window</span>");
     }
 
     //////////////////////////////////////////////
-    // G. Focusable Buttons
+    // Focusable Buttons
     //////////////////////////////////////////////
 
     const focusableButtonList = document.querySelectorAll("[role='tab'], .btn, [data-toggle='accordion']");

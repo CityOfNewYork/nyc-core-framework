@@ -30,7 +30,7 @@
 <body>
 
     <!-- For keyboard users -->
-    <a class="sr-only sr-only-focusable" href="#skip-header-target">Skip Header</a>
+    <a class="screan-reader screan-reader-focusable" href="#skip-header-target">Skip Header</a>
 
     <header id="global-header" role="banner">
 
@@ -130,15 +130,15 @@
 
             <div class="primary-nav__buttons">
                 <button class="btn btn--icon-only menu-toggle" title="Menu" data-toggle="collapse" data-target="#primary-menu">
-                    <span class="sr-only">Menu</span>
+                    <span class="screan-reader">Menu</span>
                     <span class="fas fa-bars"></span>
                 </button>
                 <button class="btn btn--icon-only" title="Search" data-modal-open="global-language">
-                    <span class="sr-only">Language</span>
+                    <span class="screan-reader">Language</span>
                     <span class="fas fa-language"></span>
                 </button>
                 <button class="btn btn--icon-only" title="Search" data-modal-open="global-search">
-                    <span class="sr-only">Search</span>
+                    <span class="screan-reader">Search</span>
                     <span class="fas fa-search"></span>
                 </button>
             </div>
@@ -445,7 +445,7 @@
 
         <div class="modal__overlay">
 
-            <div class="modal__container medium box-shadow-2" aria-labelledby="modal-1-title">
+            <div class="modal__container medium box-shadow-2">
 
                 <header class="modal__header border-b">
                     <ul class="nav nav--horizontal--md fs-md" role="list">
@@ -469,29 +469,29 @@
 
                     </ul>
                     <button class="btn btn--icon-only" data-modal-close>
-                        <span class="sr-only">Close Modal</span>
+                        <span class="screan-reader">Close Modal</span>
                         <span class="fas fa-times"></span>
                     </button>
                 </header>
 
-                <main class="modal__body" id="modal-1-content">
+                <div class="modal__body" id="modal-1-content">
                     <div class="form-group">
 
-                        <label class="form-group__field--has-action">
+                        <div class="form-group__field--has-action">
 
                             <input class="field__input" type="text" name="global_search">
-                            <p class="field__label">Enter Search Phrase</p>
+                            <span class="field__label">Enter Search Phrase</span>
 
-                            <button href="#1" title="Search">
-                                <span class="sr-only">Search</span>
+                            <button title="Search">
+                                <span class="screan-reader">Search</span>
                                 <span class="fas fa-search"></span>
                             </button>
 
-                        </label>
+                        </div>
 
                     </div>
                     <!-- .form-group -->
-                </main>
+                </div>
 
             </div>
             <!-- .modal__container -->
@@ -506,21 +506,19 @@
 
         <div class="modal__overlay">
 
-            <div class="modal__container medium box-shadow-2" aria-labelledby="modal-1-title">
+            <div class="modal__container medium box-shadow-2" aria-labelledby="modal-language-title">
 
                 <header class="modal__header border-b">
-                    <h2 class="h5">Website Translation</h2>
+                    <h2 class="h5" id="modal-language-title">Website Translation</h2>
                     <button class="btn btn--icon-only" data-modal-close>
-                        <span class="sr-only">Close Modal</span>
+                        <span class="screan-reader">Close Modal</span>
                         <span class="fas fa-times"></span>
                     </button>
                 </header>
 
-                <main class="modal__body" id="modal-1-content">
-                    
+                <div class="modal__body" id="modal-language-content">
                     <div id="google_translate_element"></div>
-
-                </main>
+                </div>
 
             </div>
             <!-- .modal__container -->
@@ -563,13 +561,13 @@
 
     <footer class="bc-dark fs-md py-4">
 
-        <h2 class="sr-only">
+        <h2 class="screan-reader">
             Page Footer
         </h2>
 
-        <div class="container medium" id="nyc-foot">
+        <div class="container narrow medium--lg overflow-hidden" id="nyc-foot">
 
-            <div class="grid grid--gap-2 grid--cells-6--md grid--cells-3--lg">
+            <div class="grid grid--gap-3 grid--cells-6--sm grid--cells-3--lg">
 
                 <div class="grid__cell">
 
@@ -670,7 +668,7 @@
 
                     <h2 class="h6 mb-2">
                         <a href="https://www1.nyc.gov/">
-                            <span class="sr-only">Visit</span>
+                            <span class="screan-reader">Visit</span>
                             <strong>NYC.gov</strong>
                         </a>
                     </h2>
@@ -690,7 +688,7 @@
 
                     <a class="text-reset my-2 d-inline-block" href="https://www1.nyc.gov/site/mopd/index.page"
                         title="Mayor's Office for People with Disabilities">
-                        <span class="sr-only">Mayor's Office for People with Disabilities</span>
+                        <span class="screan-reader">Mayor's Office for People with Disabilities</span>
                         <span class="fab fa-accessible-icon"></span>
                     </a>
 
@@ -709,8 +707,7 @@
                     </a>
 
                     <p>
-                        &#169; City of New York - 2019. All Rights Reserved.
-                        NYC is a trademark and service mark of the City of New York.
+                        &#169; City of New York - <span class="copyright-year"></span>. All Rights Reserved. NYC is a trademark and service mark of the City of New York.
                     </p>
 
                     <a href="#" data-scroll="top">
@@ -721,7 +718,7 @@
                 <!-- .col -->
 
             </div>
-            <!-- .row -->
+            <!-- .grid -->
 
         </div>
         <!-- #nyc-foot -->
@@ -731,7 +728,7 @@
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- Google Translate Js -->
-    <script defer>
+    <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en'
