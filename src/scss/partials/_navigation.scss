@@ -66,10 +66,6 @@ In this file:
     grid-template-areas:
         "logo buttons"
         "menu menu";
-
-        > [class*="__menu"] {
-            padding: var(--s2);
-        }
 }
 
 [class*="primary-nav--across--"] {
@@ -105,7 +101,7 @@ In this file:
 
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav {
-    --gap-size: var(--s2);
+    --gap-size: var(--s2, 2em);
 }
 
 .nav{
@@ -455,6 +451,15 @@ screen and (-ms-high-contrast: none) {
 
             margin-left: var(--s2);
             margin-right: var(--s2);
+
+            ul > li {
+                display: flex;
+                align-self: stretch;
+            }
+
+            ul > li > a {
+                align-self: center;
+            }
         }
 
         .primary-nav__buttons  {
