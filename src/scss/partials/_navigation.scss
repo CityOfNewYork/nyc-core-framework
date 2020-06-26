@@ -66,6 +66,10 @@ In this file:
     grid-template-areas:
         "logo buttons"
         "menu menu";
+
+    > [class*="__menu"] {
+        padding: var(--primary-nav-padding) var(--primary-nav-padding);
+    }
 }
 
 [class*="primary-nav--across--"] {
@@ -191,7 +195,11 @@ In this file:
                 width: 200px;
             }
         }
-    }
+
+        .primary-nav--right#{$mod} > [class*="__menu"] {
+            padding: 0 var(--primary-nav-padding);
+            background-color: red;
+        }
 }
 
 ////////////////////////////////////////

@@ -53,15 +53,6 @@ fieldset{
     margin-bottom: var(--s4);
 }
 
-.form-group__feedback {
-    margin-bottom: var(--s2);
-
-    strong {
-        margin-left: 0.25rem;
-        margin-right: 0.25rem;
-    }
-}
-
 [class*="form-group__field"] {
     --action-btn-size: 2.5rem;
     
@@ -383,6 +374,16 @@ fieldset{
 .invalid > .form-group__feedback{
     display: block;
 }
+
+.form-group__feedback {
+    margin-bottom: var(--s2);
+
+    strong {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+
 
 //////////////////////////////////////////////
 // D. I.E. 11 Support
