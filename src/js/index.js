@@ -530,9 +530,9 @@ window.onload = () => {
             fieldInput.addEventListener("change", () => {
 
                 if (fieldInput.value.length != 0) {
-                    fieldInput.closest("label").classList.add("has-value");
+                    fieldInput.closest("[class*='form-group__field']").classList.add("has-value");
                 } else {
-                    fieldInput.closest("label").classList.remove("has-value");
+                    fieldInput.closest("[class*='form-group__field']").classList.remove("has-value");
                 }
 
                 if(fieldInput.checked){ 

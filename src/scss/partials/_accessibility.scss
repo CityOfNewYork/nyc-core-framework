@@ -55,12 +55,12 @@ In this file:
     &:hover,
     &:focus {
         
-        &:not(.screan-reader-focusable):not(.expanded-link) {
+        &:not(.screan-reader-focusable):not(.expanded-link):not([class*="field__btn"]) {
             position: relative;
             z-index: 5000;
         }
 
-        &:not([class*="-icon"]):not([aria-disabled="true"]) {
+        &:not([class*="-icon"]):not([class*="field__btn"]):not([aria-disabled="true"]) {
             text-decoration: underline;
         }
     }

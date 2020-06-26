@@ -15,11 +15,8 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-
     --form-field-padding-x: 1em;
     --form-field-padding-y: .75em;
-
-    --checkbox-radio-color: var(--secondary);
 }
 
 //////////////////////////////////////////////
@@ -47,14 +44,6 @@ select option {
 button,
 fieldset{
     border: none;
-}
-
-form{
-    text-align: left;
-
-    // [dir="rtl"] & {
-    //     text-align: right;
-    // }
 }
 
 // Form Group
@@ -248,28 +237,41 @@ form{
     font-size: 99.99%;
 }
 
-.form-group__field--has-action > .field__input {
-    width: 100%;
-    padding-right: calc( var(--form-field-padding-x) + var(--action-btn-size));
-}
+// Has Bitton
 
-.form-group__field--has-action > button {
-    position: absolute !important;
-    top: 50%;
-    right: 0;
-    transform: translatey(-50%);
 
-    padding: 0;
-    background: transparent;
-    width: var(--action-btn-size);
-    height: var(--action-btn-size);
-    margin-left: calc(var(--form-field-padding-x) * 0.5);
-    margin-right: calc(var(--form-field-padding-x) * 0.5);
+.form-group__field--has-btn {
+
+    > .field__input {
+        padding-right: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
+    }
+
+    > .field__btn {
+
+        @extend .btn !optional;
+        @extend .btn--icon-only !optional;
+        
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translatey(-50%);
+
+        margin-left: calc(var(--form-field-padding-x) * 0.5);
+        margin-right: calc(var(--form-field-padding-x) * 0.5);
+
+    }
 
     [dir="rtl"] & {
-        right: unset;
-        left: 0;
+        > .field__btn {
+            right: unset;
+            left: 0;
+        }
+         > .field__input {
+            padding-right: var(--form-field-padding-x);
+            padding-left: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
+        }
     }
+
 }
 
 // Field Assistance 
@@ -392,10 +394,5 @@ screen and (-ms-high-contrast: none) {
     div.goog-te-gadget {
         display: block !important;
     }
-
-    // select option{
-    //     background-color: white !important;
-    //     color: var(--dark) !important;
-    // }
     
 }
