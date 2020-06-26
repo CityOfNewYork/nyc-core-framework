@@ -160,6 +160,10 @@ fieldset{
 
 // Form Field
 
+.goog-gt-tt{
+    display: none !important;
+}
+
 .goog-te-gadget, 
 .goog-te-combo{
     font-family: inherit !important;
@@ -396,4 +400,10 @@ screen and (-ms-high-contrast: none) {
         display: block !important;
     }
     
+}
+
+
+input:-webkit-autofill {
+// -webkit-box-shadow: 0 0 0px 1000px white inset;
+color: red !important
 }
