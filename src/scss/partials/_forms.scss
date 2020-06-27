@@ -203,6 +203,8 @@ fieldset{
 
 }
 
+/// Field Input Wrap
+
 .goog-te-gadget > div,
 .field__input-wrap {
     position: relative;
@@ -232,8 +234,7 @@ fieldset{
     font-size: 99.99%;
 }
 
-// Has Bitton
-
+// Has Button
 
 .form-group__field--has-btn {
 
@@ -257,11 +258,13 @@ fieldset{
     }
 
     [dir="rtl"] & {
+
         > .field__btn {
             right: unset;
             left: 0;
         }
-         > .field__input {
+        
+        > .field__input {
             padding-right: var(--form-field-padding-x);
             padding-left: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
         }
@@ -292,6 +295,8 @@ fieldset{
     display: flex;
     align-items: baseline;
     padding-left: 1em;
+    width: auto;
+    cursor: pointer;
 
     [dir="rtl"] & {
         padding-left: unset;
@@ -312,7 +317,6 @@ fieldset{
 
 .form-group__radio > input ~ .radio__label,
 .form-group__checkbox > input ~ .checkbox__label {
-    display: inline-block;
     line-height: var(--base-line-height);
 
     &::before {
@@ -400,10 +404,4 @@ screen and (-ms-high-contrast: none) {
         display: block !important;
     }
     
-}
-
-
-input:-webkit-autofill {
-// -webkit-box-shadow: 0 0 0px 1000px white inset;
-color: red !important
 }

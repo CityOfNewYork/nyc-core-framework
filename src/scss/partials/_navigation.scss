@@ -198,8 +198,8 @@ In this file:
 
         .primary-nav--right#{$mod} > [class*="__menu"] {
             padding: 0 var(--primary-nav-padding);
-            background-color: red;
         }
+    }
 }
 
 ////////////////////////////////////////
@@ -233,14 +233,18 @@ In this file:
         display: block;
     }
 
+    > li > [class*="form-group__"]{
+        margin: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
+        @extend %expanded-link !optional;
+        &::before {
+            margin: calc(var(--nav--divider-padding-y) * -1) calc(var(--nav--divider-padding-x) * -1);
+        }
+    }
+
     > li > a, 
     > li > button,
     > li > [data-toggle="dropdown"] ~ ul {
         padding: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
-    }
-
-    > li > label[class*="form-group__radio"] {
-        margin: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
     }
 
     > li > [data-toggle="dropdown"] ~ ul {
@@ -314,7 +318,7 @@ In this file:
         .nav--divider.nav--horizontal#{$mod} {
             display: flex;
             flex-direction: row;
-            align-items: baseline;
+            align-items: center;
 
             > li {
                 flex: 1;
@@ -495,7 +499,5 @@ screen and (-ms-high-contrast: none) {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
         }
-
     }
-
 }
