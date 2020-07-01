@@ -48,16 +48,10 @@ In this file:
 
 a[data-logo="brand"] {
     color: inherit;
-
-    svg {
-        display: block;
-        fill: currentColor;
-    }
     
     p {
         font-weight: bold;
         line-height: 1.2;
-        margin: var(--s2) 0;
     }
 }
 
