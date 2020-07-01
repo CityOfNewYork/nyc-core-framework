@@ -272,6 +272,32 @@ fieldset{
 
 }
 
+
+// File Input
+
+.form-group__field--upload {
+    flex-direction: column;
+
+    > .field__btn, 
+    > .field__uploads{
+        line-height: inherit;
+        padding: var(--form-field-padding-y) var(--form-field-padding-x) !important;
+    }
+
+    > .field__btn{
+        @extend .btn !optional;
+        @extend .btn--has--icon !optional;
+
+        background-color: var(--dark);
+        color: var(--dark-text);
+    }
+
+    > .field__uploads{
+        flex-grow: 1;
+    }
+
+}
+
 // Field Assistance 
 
 .form-group__assistance {
@@ -281,6 +307,7 @@ fieldset{
     opacity: 0.75;
     font-size: 75%;
 }
+
 
 //////////////////////////////////////////////
 // C. Checkboxes and Radios

@@ -25,6 +25,19 @@
     <!-- Theme Stylesheets -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
 
+    <style>
+
+        body {
+        background: linear-gradient(to top, #fff 0%, #fff 100% ) no-repeat center center / 100% 3px, 
+        linear-gradient( to top, #fff
+        0%, #fff 100% ) no-repeat center center / 3px 100%
+        }
+
+    </style>
+
+
+
+
 </head>
 
 <body>
@@ -41,7 +54,7 @@
 
                 <div class="container medium my-4">
 
-                    <form class="validate" novalidate>
+                    <form class="validate" method="post" novalidate>
 
                         <div class="alert alert--warn my-4" data-alert="form-errors">
 
@@ -109,11 +122,27 @@
                                 <input class="field__input" type="text" name="global_search">
                                 <label class="field__label">Enter Search Phrase</label>
                                 
-                                <button class="field__btn" title="Search">
+                                <button class="field__btn" title="Search" type="button">
                                     <span class="screan-reader">Search</span>
                                     <span class="fas fa-search"></span>
                                 </button>
                                 
+                            </div>
+
+                        </div>
+                        <!-- .form-group ///////// -->
+                        
+                        <div class="form-group">
+                            
+                            <div class="form-group__field--upload">
+                                <label class="screan-reader" hidden>
+                                    <input type="file" accept="image/png, image/jpeg">
+                                </label>
+                                <button class="field__btn cool-btn" type="button">
+                                    <span class="fas fa-file-upload btn__icon"></span>
+                                    <span class="btn__text">Upload File</span>
+                                </button>
+                                <span class="field__uploads cool-uploads">No file chosen, yet.</span>
                             </div>
 
                         </div>
@@ -265,6 +294,26 @@
     </footer>
 
     <script src="./dist/js/nyc_core.js"></script>
+
+    <script>
+        const realFileBtn = document.querySelector("[type='file']");
+        const customBtn = document.querySelector(".cool-btn");
+        const customTxt = document.querySelector(".cool-uploads");
+
+        customBtn.addEventListener("click", function() {
+        realFileBtn.click();
+        });
+
+        realFileBtn.addEventListener("change", function() {
+        if (realFileBtn.value) {
+        customTxt.innerHTML = realFileBtn.value.match(
+        /[\/\\]([\w\d\s\.\-\(\)]+)$/
+        )[1];
+        } else {
+        customTxt.innerHTML = "No file chosen, yet.";
+        }
+        });
+    </script>
 
 </body>
 
