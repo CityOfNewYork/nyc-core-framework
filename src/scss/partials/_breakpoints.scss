@@ -42,7 +42,7 @@ $breakpoints: (
 
 // Breakpoint up
 
-@mixin breakpoint-up($breakpoint) {
+@mixin breakpoints-up($breakpoint) {
   @if ($breakpoint != xs) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
@@ -55,7 +55,7 @@ $breakpoints: (
 
 // Breakpoint down
 
-@mixin breakpoint-down($breakpoint) {
+@mixin breakpoints-down($breakpoint) {
   @if ($breakpoint !=xs) {
     @media (max-width: map-get($breakpoints, $breakpoint)) {
       @content;

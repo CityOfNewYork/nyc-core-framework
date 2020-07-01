@@ -1,0 +1,118 @@
+// in an effort to make this more user friendly ( and im assuming easier to document )
+// omitting any breakpoints here that have 0px or 999999px values seems like a good idea.
+// And so long as these variables are defined and match up with the following map,
+// adding / removing / renaming of breakpoints should work fine. Since the mixins aren't
+// looking for a specific value they know to be the smallest or largest they'll work
+// no matter what breakpoints are set.
+// these variables could just be values in the map that follows, but having these variables
+// available to use in the SASS when we want (for random one off things) is handy.
+
+$breakpoint-sm: 325px; 
+$breakpoint-md: 600px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+// we could also always process this map so users aren't required to include the dashes.
+$breakpoints: (
+    'sm': $breakpoint-sm,
+    'md': $breakpoint-md,
+    'lg': $breakpoint-lg,
+    'xl': $breakpoint-xl
+);
+
+$breakpoints-up: map-merge((null : 0px), $breakpoints);
+$breakpoints-down: (null : 9999999px);
+
+@for $i from 1 through length($breakpoints) {
+    // appending key/value pairs from $breakpoints to $breakpoints down, one at a time, in reverse order
+    $breakpoints-down: map-merge($breakpoints-down,( nth(nth($breakpoints, ((length($breakpoints) +1 ) - $i ) ),1) : nth(nth($breakpoints,((length($breakpoints) +1 ) - $i ) ),2)));
+}
+
+@mixin breakpoints-up($breakpoint) {
+
+    @if map-has-key($breakpoints-up, $breakpoint) {
+    
+        $breakpoint-value: map-get($breakpoints-up, $breakpoint);
+
+        @media(min-width: $breakpoint-value) {
+
+            @content;
+
+        }
+    }
+
+    @else {
+
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+        
+    }
+}
+
+@mixin breakpoints-down($breakpoint) {
+
+    @if map-has-key($breakpoints-down, $breakpoint) {
+        
+        $breakpoint-value: map-get($breakpoints-down, $breakpoint);
+
+        @media(max-width: $breakpoint-value) {
+
+            @content;
+
+        }
+    }
+
+    @else {
+
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+        
+    }
+}
+
+// might be useful for making components and pre-made bits...
+// but is it faster or any better than writing @media (... etc. by hand?
+@mixin breakpoint-between($bp-1,$bp-2){
+
+    @media(min-width:$bp-1) and (max-width:$bp-2) {
+        
+        @content;
+
+    }
+
+}
+
+
+// TEST
+@include breakpoint-between($breakpoint-md,$breakpoint-lg) {
+    .turkey {
+        color: brown;
+    }
+}
+
+
+@each $breakpoint,$breakpoint-value in $breakpoints-down {
+    @include breakpoints-down($breakpoint) {
+
+        .sean#{$breakpoint} {
+
+            content: 'chyea!';
+            height: 200px;
+
+        }
+
+    }
+}
+
+
+
+
+// breakpoints-down mixin 
+
+// sg - my idea for breakpoints ( i looked at a lot of different devices & have notes if youre interested )
+// sm 325 
+// md 600 
+// lg 1024 
+// xl 1200
+
+
+// @warn $breakpoints-down;
+// @warn $breakpoints-up;

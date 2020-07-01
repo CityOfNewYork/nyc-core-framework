@@ -38,7 +38,7 @@ $spacers: (
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         @each $key, $value in $spacers {
@@ -144,7 +144,7 @@ $spacers: (
 ////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .p-0#{$mod} {

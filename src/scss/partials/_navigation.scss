@@ -158,7 +158,7 @@ In this file:
 }
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .primary-nav--right#{$mod} > [class*="__menu"] > ul,
@@ -257,7 +257,7 @@ In this file:
 }
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .primary-nav--right#{$mod},

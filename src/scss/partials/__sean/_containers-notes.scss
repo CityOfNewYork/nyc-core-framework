@@ -27,12 +27,15 @@ In this file:
 .container {
     padding-left: var(--container-padding-x);
     padding-right: var(--container-padding-x);
+    // sg - is there no more 'site max width' var? could be optional
 }
 
 //////////////////////////////////////////////
 // C. Width Variants
 //////////////////////////////////////////////
 
+// sg - does it make more sense for this to be on .container? if .narrow alone
+// was just a max-width it would be more reusable right?
 [class*="narrow"], 
 [class*="medium"],
 [class*="wide"] {

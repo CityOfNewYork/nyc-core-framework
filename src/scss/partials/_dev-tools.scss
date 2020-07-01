@@ -36,7 +36,7 @@ $floating-breakpoints-bar: true;
 
         @each $breakpoint in map-keys($breakpoints) {
             &::before {
-                @include breakpoint-up($breakpoint) {
+                @include breakpoints-up($breakpoint) {
                     content: 'Breakpoint: '+ $breakpoint;
                 }
             }
