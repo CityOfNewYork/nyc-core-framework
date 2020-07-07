@@ -17,7 +17,6 @@ $bp-sm: 400px;
 $bp-md: 760px;
 $bp-lg: 1000px;
 $bp-xl: 1340px;
-// $bp-xxl: 1440px;
 
 $breakpoints: (
   // xs: $bp-xs,
@@ -25,7 +24,6 @@ $breakpoints: (
   md: $bp-md,
   lg: $bp-lg,
   xl: $bp-xl,
-  // xxl: $bp-xxl
 );
 
 $breakpoints: map-merge((null : 0), $breakpoints);
