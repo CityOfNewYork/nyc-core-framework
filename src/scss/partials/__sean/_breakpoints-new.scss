@@ -20,12 +20,12 @@ $breakpoints: (
     'xl': $breakpoint-xl
 );
 
-$breakpoints-up: map-merge((null : 0px), $breakpoints);
+$breakpoints-up: map-merge( (null : 0px), $breakpoints);
 $breakpoints-down: (null : 9999999px);
 
 @for $i from 1 through length($breakpoints) {
     // appending key/value pairs from $breakpoints to $breakpoints down, one at a time, in reverse order
-    $breakpoints-down: map-merge($breakpoints-down,( nth(nth($breakpoints, ((length($breakpoints) +1 ) - $i ) ),1) : nth(nth($breakpoints,((length($breakpoints) +1 ) - $i ) ),2)));
+    $breakpoints-down: map-merge($breakpoints-down,(nth(nth($breakpoints, ((length($breakpoints) +1 ) - $i ) ),1) : nth(nth($breakpoints,((length($breakpoints) +1 ) - $i ) ),2)));
 }
 
 @mixin breakpoints-up($breakpoint) {
