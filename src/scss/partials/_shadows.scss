@@ -25,6 +25,8 @@ In this file:
 //////////////////////////////////////////////
 // B. Box Shadows
 //////////////////////////////////////////////
+
+body:not([class*="box-shadow-"]),
 [class*="box-shadow-"] {
     --shadow-opacity: 0;
 
@@ -53,6 +55,10 @@ In this file:
             --shadow-opacity: var(--base-shadow-opacity);
         }
     }
+}
+
+body:not([class*="box-shadow-"]){
+    @extend .box-shadow-3;
 }
 
 

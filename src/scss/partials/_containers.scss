@@ -18,6 +18,13 @@ In this file:
     --narrow-width: 40rem; // Approximately 55 characters wide
     --medium-width: calc( var(--narrow-width) * 1.5);
     --wide-width: calc( var(--narrow-width) * 2.5);
+
+    --body-max-width: 2000px;
+}
+
+body{
+    @extend %center-x !optional;
+    max-width: var(--body-max-width);
 }
 
 //////////////////////////////////////////////
@@ -36,8 +43,7 @@ In this file:
 [class*="narrow"], 
 [class*="medium"],
 [class*="wide"] {
-    margin-left: auto;
-    margin-right: auto;
+    @extend %center-x !optional;
 }
 
 @each $breakpoint in map-keys($breakpoints) {
