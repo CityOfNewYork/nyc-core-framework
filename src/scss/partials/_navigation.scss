@@ -97,8 +97,6 @@ In this file:
     }
 }
 
-
-
 ////////////////////////////////////////
 // B. Nav
 ////////////////////////////////////////
@@ -235,7 +233,9 @@ In this file:
 
     > li > [class*="form-group__"]{
         margin: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
+        
         @extend %expanded-link !optional;
+        
         &::before {
             margin: calc(var(--nav--divider-padding-y) * -1) calc(var(--nav--divider-padding-x) * -1);
         }
@@ -326,8 +326,6 @@ In this file:
                 text-align: center;
             }
 
-            // make rtl alternate
-
             > li:not(:last-child){
                 border-right-width: var(--default-border-width);
                 border-right-style: var(--default-border-style);
@@ -355,11 +353,22 @@ In this file:
             [data-toggle="dropdown"] ~ ul {
                 position: absolute;
                 width: 100%;
-                left: calc(var(--default-border-width) * -1);
+                left: 0;
 
-                [dir="rtl"] &{
-                left: unset;
-                right: calc(var(--default-border-width) * -1);
+                [dir="rtl"] & {
+                    left: unset;
+                    right: 0;
+                }
+            }
+
+            // Fix for <ul> tags with borders applied
+
+            &[class*="border"] [data-toggle="dropdown"] ~ ul {
+                margin-left: calc(var(--default-border-width) * -1);
+
+                [dir="rtl"] & {
+                    margin-left: unset;
+                    margin-right: calc(var(--default-border-width) * -1);
                 }
             }
         }
