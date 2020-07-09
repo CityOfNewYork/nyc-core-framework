@@ -191,21 +191,23 @@ td > p{
         }
     }
 
-    table tr{
-        display: flex;
-    }
-
     th, 
     td{
         &:nth-child(1) {
-            flex-basis: 35%;
-            width: 35%;
-            flex-shrink: 0;
+            // background-color: red;
         }
 
         &:nth-child(2) {
-            flex-basis: 65%;
-            width: 65%;
+            // background-color: yellow;
+        }
+
+        &:nth-child(3) {
+            text-align: right;
+            // background-color: blue;
+        }
+
+        &:nth-child(4) {
+            // background-color: purple;
         }
     }
     
@@ -215,10 +217,6 @@ td > p{
 
     td:nth-child(2){
         color: #ccc;
-    }
-
-    td:nth-child(3){
-        background-color: red;
     }
 }
 
