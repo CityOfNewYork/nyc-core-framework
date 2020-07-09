@@ -46,7 +46,7 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 6 - Basic example of Sass variable usage.</p>
+        <p>Figure 1 - Basic example of Sass variable usage.</p>
     </figcaption>
 
 </figure>
@@ -64,7 +64,7 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 7 - Basic example of custom property usage.</p>
+        <p>Figure 2 - Basic example of custom property usage.</p>
     </figcaption>
 
 </figure>
@@ -92,70 +92,69 @@ title: "Customization"
 <figure class="container medium my-4">
     <pre>
         <code class="language-html">
+            &lt;!DOCTYPE html&gt;
 
-           &lt;!DOCTYPE html&gt;
+                &lt;html lang="en" dir="ltr"&gt;
 
-            &lt;html lang="en" dir="ltr"&gt;
+                    &lt;head&gt;
 
-                &lt;head&gt;
+                        &lt;!-- I.E. Compatibility Mode --&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
 
-                    &lt;!-- IE Compatibility Mode --&gt;
-                    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+                        &lt;!-- I.E. Custom Properties Polyfill --&gt;
+                        &lt;script&gt;
+                            window.MSInputMethodContext && document.documentMode && document.write(
+                                '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
+                            );
+                        &lt;/script&gt;
 
-                    &lt;meta charset="utf-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 
-                    &lt;title&gt;Theme Color • NYC Core Framework&lt;/title&gt;
+                        &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
 
-                    &lt;!-- Font Awesome Kit --&gt;
-                    &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+                        &lt;!-- Font Awesome Kit --&gt;
+                        &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
 
-                    &lt;!-- NYC Core Stylesheet --&gt;
-                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
-                    
-                &lt;/head&gt;
+                        &lt;!-- NYC Core Stylesheet --&gt;
+                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
 
-                &lt;body class="bc-white"&gt;
+                    &lt;/head&gt;
 
-                    &lt;main id="skip-header-content" role="main"&gt;
+                    &lt;body&gt;
 
-                        &lt;div class="container narrow my-5"&gt;
+                        &lt;main id="skip-header-content" role="main"&gt;
 
-                            &lt;div class="bc-primary p-3 my-2"&gt;
-                                &lt;p&gt;Primary&lt;/p&gt;
+                            &lt;div class="container narrow my-5"&gt;
+
+                                &lt;div class="bc-primary p-3 my-2"&gt;
+                                    &lt;p&gt;Primary&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class="bc-secondary p-3 my-2"&gt;
+                                    &lt;p&gt;Secondary&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class="bc-dark p-3 my-2"&gt;
+                                    &lt;p&gt;Dark&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class="bc-light p-3 my-2"&gt;
+                                    &lt;p&gt;Light&lt;/p&gt;
+                                &lt;/div&gt;
+
                             &lt;/div&gt;
-                            &lt;div class="bc-secondary p-3 my-2"&gt;
-                                &lt;p&gt;Secondary&lt;/p&gt;
-                            &lt;/div&gt;
-                            &lt;div class="bc-dark p-3 my-2"&gt;
-                                &lt;p&gt;Dark&lt;/p&gt;
-                            &lt;/div&gt;
-                            &lt;div class="bc-light p-3 my-2"&gt;
-                                &lt;p&gt;Light&lt;/p&gt;
-                            &lt;/div&gt;
+                            &lt;!-- .container --&gt;        
 
-                        &lt;/div&gt;
-                        &lt;!-- .container --&gt;        
+                        &lt;/main&gt;
 
-                    &lt;/main&gt;
+                        &lt;!-- NYC Core Javascript --&gt;
+                        &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js">&lt;/script&gt;
 
-                    &lt;!-- NYC Core Javascript --&gt;
-                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"&gt;&lt;/script&gt;
+                    &lt;/body&gt;
 
-                    &lt;!-- IE Custom Properties Polyfill --&gt;
-                    &lt;script&gt;
-                        window.MSInputMethodContext && document.documentMode && document.write(
-                            '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
-                        );
-                    &lt;/script&gt;
-
-                &lt;/body&gt;
-
-            &lt;/html&gt;
+                &lt;/html&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 11 - HTML for color exercise.</p>
+        <p>Figure 3 - HTML for color exercise.</p>
     </figcaption>
 </figure>
 
@@ -240,8 +239,7 @@ title: "Customization"
 <div class="container narrow my-4">
     <h2>Root Custom Properties</h2>
     <p>
-        The table below provides a bird's eye-view of the custom properties declared on the root, which we can change with our
-        <em>theme-properties.css</em> stylesheet.
+        The table below provides a bird's-eye view of the custom properties available to be overridden within your <em>theme-properties.css</em> stylesheet.
     </p>
 </div>
 <!-- .container -->
