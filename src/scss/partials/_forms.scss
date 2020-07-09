@@ -15,269 +15,420 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-
-    --input-border-width: calc(var(--default-border-width) * 2);
-    --input-border-width: var(--default-border-width);
-    --input-border-color: currentColor;
-
-    --checkbox-radio-size: 1.25rem;
-    --checkbox-radio-color: var(--secondary);
+    --form-field-padding-x: 1em;
+    --form-field-padding-y: .75em;
 }
 
 //////////////////////////////////////////////
 // B. Basic Form Styles
 //////////////////////////////////////////////
 
-// Shared Styles
+// General Selectors
 
 select,
 textarea,
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
     border: none;
-    border-bottom-width: var(--input-border-width);
-    border-bottom-style: var(--default-border-style);
-    border-bottom-color: var(--input-border-color);
     background-color: transparent;
     color: inherit;
-    font-size: var(--font-size-rg);
+
+    border-bottom-width: var(--default-border-width);
+    border-bottom-style: var(--default-border-style);
+    border-bottom-color: currentColor;
+}
+
+select option {
+    color: currentColor;
 }
 
 button,
 fieldset{
-    border: 0;
+    border: none;
 }
 
 // Form Group
 
-.form-group{
-    margin-bottom: var(--s4);
+.form-group + .form-group {
     margin-top: var(--s4);
+    margin-bottom: var(--s4);
 }
 
-// Form Field
-
-.form-group__field {
-    --field-padding: 1rem;
-    --action-btn-width: 3rem;
+[class*="form-group__field"] {
+    --action-btn-size: 2.5rem;
+    
+    display: flex;
     
     @extend .subtle-fill;
-     --subtle-fill-opacity: 0.075;
+    --subtle-fill-opacity: 0.05;
+    color: inherit;
 }
 
-.field__input,
-.field__label {
-    line-height: inherit;
-}
+// Form Field Label
 
 .field__label {
     pointer-events: none;
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    &::after{
+        content: "*";
+        margin: auto 0.25rem;
+        display: none;
+    }
 }
+
+:required ~ .field__label::after {
+    display: inline;
+}
+
+// Label and Input
 
 .field__label,
 .field__input {
-    padding-top: var(--field-padding);
-    padding-right: var(--field-padding);
-    padding-bottom: var(--field-padding);
-    padding-left: var(--field-padding);
+    padding-top: var(--form-field-padding-y);
+    padding-bottom: var(--form-field-padding-y);
+    padding-right: var(--form-field-padding-x);
+    padding-left: var(--form-field-padding-x);
+    
+    line-height: 1.5;
 }
-
+ 
 .field__input:focus, 
-.field__input:active, 
+.field__input:active,
 .has-value .field__input {
-    padding-top: calc(var(--field-padding) * 1.5);
-    padding-bottom: calc(var(--field-padding) * 0.5);
+    padding-top: calc(var(--form-field-padding-y) * 1.5);
+    padding-bottom: calc(var(--form-field-padding-y) * 0.5);
 }
 
 .field__input:focus + .field__label,
 .field__input:active + .field__label,
 .has-value .field__label{
-    font-size: var(--font-size-sm);
-    padding-top: calc(var(--field-padding) * 0.25);
+    display: block;
+    padding-top: calc( var(--form-field-padding-y) * 0.25 );
+    padding-bottom: calc( var(--form-field-padding-y) * 0.25 );
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: var(--form-field-padding-x);
+    margin-right: var(--form-field-padding-x);
+    transform-origin: top left;
+    transform: scale(0.65);
+
+    [dir="rtl"] & {
+        transform-origin: top right;
+    }
 }
 
+// Form Group within Navigation
+
+[class*="nav"] > li > form,
+.primary-nav__menu > ul > li > form {
+    
+    .form-group {
+        --form-field-padding-y: var(--nav--divider-padding-y);
+        --form-field-padding-x: var(--nav--divider-padding-x);
+    }
+
+    .field__input{
+        border: none;
+    }
+
+    .field__input:focus,
+    .field__input:active,
+    .field__input + .field__label,
+    .has-value .field__input {
+        padding-top: var(--form-field-padding-y);
+        padding-bottom: var(--form-field-padding-y);
+    }
+
+    .field__input + .field__label{
+        line-height: inherit;
+        margin: unset;
+        transform: unset;
+    }
+
+    .field__input:focus + .field__label, 
+    .field__input:active + .field__label, 
+    .has-value .field__label{
+        display: none;
+    }
+}
+
+/////////////////////////////
+
+// Form Field
+
+.goog-gt-tt{
+    display: none !important;
+}
+
+.goog-te-gadget, 
+.goog-te-combo{
+    font-family: inherit !important;
+}
+
+.goog-te-gadget{
+    color: inherit !important;
+    font-size: var(--font-size-md) !important;
+    text-align: center;
+    
+    > div, 
+    > div > .goog-te-combo,
+    > span > a {
+        color: currentColor !important;
+    }
+
+    > div{
+        margin-bottom: var(--s1);
+
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.05;
+    }
+
+    > div, 
+    > div > .goog-te-combo{
+        font-size: var(--font-size-rg) !important;
+    }
+
+    > div > .goog-te-combo {
+        margin: 0 !important;
+        padding: var(--form-field-padding-y) var(--form-field-padding-x);
+
+        border-bottom-width: var(--default-border-width) !important;
+        border-bottom-style: var(--default-border-style) !important;
+        border-bottom-color: currentColor !important;
+    }
+
+}
+
+/// Field Input Wrap
+
+.goog-te-gadget > div,
 .field__input-wrap {
+    position: relative;
     width: 100%;
+
     @include add-caret("after");
 
     &::after{
         pointer-events: none;
         position: absolute;
-        right: var(--s2);
+        right: 0;
         top: 50%;
         transform: translateY(-50%);
+        margin-left: var(--s2);
+        margin-right: var(--s2);
     }
 }
 
-.form-group__field.has-action > .field__input {
-    padding-right: calc(var(--field-padding) + var(--action-btn-width));
+.field__input-wrap::after {
+    [dir="rtl"] & {
+        right: unset;
+        left: 0;
+    }
 }
 
-.form-group__field.has-action > button {
-    padding: 0;
-    background: transparent;
-    width: var(--action-btn-width);
-    position: absolute;
-    right: calc(var(--field-padding) * 0.5);
-    top: calc(var(--field-padding) * 0.5);
-    bottom: calc(var(--field-padding) * 0.5);
+.has-value select.field__input {
+    font-size: 99.99%;
 }
+
+// Has Button
+
+.form-group__field--has-btn {
+
+    > .field__input {
+        padding-right: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
+    }
+
+    > .field__btn {
+
+        @extend .btn !optional;
+        @extend .btn--icon-only !optional;
+        
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translatey(-50%);
+
+        margin-left: calc(var(--form-field-padding-x) * 0.5);
+        margin-right: calc(var(--form-field-padding-x) * 0.5);
+
+    }
+
+    [dir="rtl"] & {
+
+        > .field__btn {
+            right: unset;
+            left: 0;
+        }
+        
+        > .field__input {
+            padding-right: var(--form-field-padding-x);
+            padding-left: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
+        }
+    }
+
+}
+
+
+// File Input
+
+.form-group__field--upload {
+    flex-direction: column;
+
+    > .field__btn, 
+    > .field__uploads{
+        line-height: inherit;
+        padding: var(--form-field-padding-y) var(--form-field-padding-x) !important;
+    }
+
+    > .field__btn{
+        @extend .btn !optional;
+        @extend .btn--has--icon !optional;
+
+        background-color: var(--dark);
+        color: var(--dark-text);
+    }
+
+    > .field__uploads{
+        flex-grow: 1;
+    }
+
+}
+
+// Field Assistance 
+
+.form-group__assistance {
+    margin-top: 0.5rem;
+    padding-left: var(--form-field-padding-x);
+    padding-right: var(--form-field-padding-x);
+    opacity: 0.75;
+    font-size: 75%;
+}
+
 
 //////////////////////////////////////////////
 // C. Checkboxes and Radios
 //////////////////////////////////////////////
 
+// Checkbox, Radio Shared Styles
+
 .form-group__radio,
 .form-group__checkbox {
     position: relative;
-    padding-left: calc(var(--checkbox-radio-size) * 1.75);
-    padding-right: calc(var(--checkbox-radio-size) * 1.75);
-    flex: 0 0 100%;
-    color: inherit !important;
+    color: inherit;
+    display: flex;
+    align-items: baseline;
+    padding-left: 1em;
+    width: auto;
+    cursor: pointer;
+
+    [dir="rtl"] & {
+        padding-left: unset;
+        padding-right: 1em;
+    }
 }
 
 .form-group__radio > input[type="radio"],
 .form-group__checkbox > input[type="checkbox"] {
-    margin: 0;
-    appearance: none;
-    opacity: .01;
-    z-index: -10;
     background-color: transparent;
-
-}
+    opacity: 0;
+} 
 
 //
 // Make sure the label is only as wide as the
 // inner text requires it to be.
 //
 
-.form-group__radio > .radio__label,
-.form-group__checkbox > .checkbox__label {
-    display: inline-block;
-    width: auto;
+.form-group__radio > input ~ .radio__label,
+.form-group__checkbox > input ~ .checkbox__label {
     line-height: var(--base-line-height);
-    margin-top: -0.375rem;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+
+        @extend .fontAwesome !optional;
+    }
 }
 
-//
-// Note, the :before pseudo-element is the new
-// "bounds" or "box" of the checkbox.
-// It must be the same height, width and
-// position of the native checkbox element.
-//
+// Unchecked
 
-.form-group__checkbox > input[type="checkbox"]{
-    background-color: red;
-    width: 300px;
-    height: 300px;
+.form-group__checkbox > input ~ .checkbox__label::before{
+    font-weight: 400;
+    content: "\f0c8";
 }
 
-.form-group__radio > input[type="radio"],
-.form-group__radio > .radio__label::before,
-
-.form-group__checkbox > input[type="checkbox"],
-.form-group__checkbox > .checkbox__label::before,
-.form-group__checkbox > .checkbox__label::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: var(--checkbox-radio-size);
-    width: var(--checkbox-radio-size);
+.form-group__radio > input ~ .radio__label::before{
+    font-weight:  400;
+    content: "\f111";
 }
 
-// 
-// Base styles for use on both
-// pseudo elements.
-//
-
-.form-group__radio > .radio__label::before,
-.form-group__radio > .radio__label::after,
-
-.form-group__checkbox > .checkbox__label::before,
-.form-group__checkbox > .checkbox__label::after {
-    content: "";
-    position: absolute;
+.form-group__checkbox > input:checked ~ .checkbox__label::before{
+    font-weight: 900;
+    content: "\f14a";
 }
 
-//
-// Styles for the custom box boundary.
-//
-
-.form-group__radio > .radio__label::before,
-.form-group__checkbox > .checkbox__label::before {
-    box-shadow: 0 0 0 var(--input-border-width) var(--input-border-color);
-    height: var(--checkbox-radio-size);
-    width: var(--checkbox-radio-size);
-}
-
-.form-group__radio>.radio__label::before,
-.form-group__radio>.radio__label::after{
-    border-radius: 50%;
+.form-group__radio > input:checked ~ .radio__label::before{
+    font-weight: 900;
+    content: "\f192";
 }
 
 //
 // Defining States
 //
 
-.form-group__checkbox > input:focus ~ .checkbox__label::before {
-    border-color: transparent;
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+.form-group__radio > input:focus ~ .radio__label,
+.form-group__checkbox > input:focus ~ .checkbox__label {
+    text-decoration: underline;
+    &::before{
+        opacity: 0.75;
+    }
 }
 
-//
-// This recreates the "check" mark.
-//
-
-.form-group__checkbox > .checkbox__label::after {
-
-    height: calc(var(--checkbox-radio-size) * .75);
-    width: calc(var(--checkbox-radio-size) * .5);
-    left: calc(var(--checkbox-radio-size) * .25);
-
-    border-right: 0.25rem solid currentColor;
-    border-bottom: 0.25rem solid currentColor;
-
-    transform: rotate(45deg);
-}
-
-.form-group__radio > .radio__label::after {
-
-    background-color: currentColor;
-    
-    height: calc(var(--checkbox-radio-size) * .5);
-    width: calc(var(--checkbox-radio-size) * .5);
-    left: calc(var(--checkbox-radio-size) * .25);
-    top: calc(var(--checkbox-radio-size) * .25);
-}
-
-
-input:checked ~ [class*="__label"]::before {
-    border: none;
-    box-shadow: 0 0 0 var(--input-border-width) currentColor;
-    background-color: currentColor;
-}
-
-// :checked styles
-
-/* For Windows high contrast mode. */
-
-input:not(:checked) ~ [class*="__label"]::after {
-    opacity: 0;
-}
-
-input:checked ~ [class*="__label"]::after {
-    opacity: 1;
+.form-group__radio > input:checked ~ .radio__label,
+.form-group__checkbox > input:checked ~ .checkbox__label {
+    &::before{
+        opacity: 1;
+    }
 }
 
 //////////////////////////////////////////////
 // E. Form Feedback and Alerts
 //////////////////////////////////////////////
 
-.invalid-feedback {
+[data-alert="form-errors"],
+.form-group__feedback {
     display: none;
+}
+
+.invalid > .form-group__feedback{
+    display: block;
+}
+
+.form-group__feedback {
+    margin-bottom: var(--s2);
+
+    strong {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+
+
+//////////////////////////////////////////////
+// D. I.E. 11 Support
+//////////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+    div.goog-te-gadget {
+        display: block !important;
+    }
+    
 }

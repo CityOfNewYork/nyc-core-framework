@@ -13,7 +13,7 @@ In this file:
 
 // Only display content to screen readers
 
-.sr-only {
+.screan-reader {
     overflow: hidden;
     position: absolute;
     width: 1px;
@@ -24,25 +24,26 @@ In this file:
     padding: unset;
 }
 
-// Use in conjunction with .sr-only to only display content when it's focused.
+// Use in conjunction with .screan-reader to only display content when it's focused.
 // Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
 // Credit: HTML5 Boilerplate
 
-.sr-only-focusable {
+.screan-reader-focusable {
     &:active,
     &:focus {
         position: absolute;
-        top: var(--s2);
-        left: var(--s2);
+        top: var(--s1);
+        left: var(--s1);
         z-index: 10000;
-        width: auto;
-        height: auto;
         overflow: visible;
         clip: auto;
         white-space: normal;
-        padding: var(--s2) var(--s3);
-        font-size: var(--font-size-rg);
-        @extend .bc-primary;
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        background-color: rgba( #ffffff, 0.95);
+        color: var(--dark);
+        border-radius: var(--border-radius);
+        box-shadow: 0 0 0.5rem currentColor;
+        font-size: var(--font-size-md);
     }
 }
 
@@ -54,12 +55,12 @@ In this file:
     &:hover,
     &:focus {
         
-        &:not(.sr-only-focusable):not(.expanded-link) {
+        &:not(.screan-reader-focusable):not(.expanded-link):not([class*="field__btn"]) {
             position: relative;
             z-index: 5000;
         }
 
-        &:not([class*="-icon"]):not([aria-disabled="true"]) {
+        &:not([class*="-icon"]):not([class*="field__btn"]):not([aria-disabled="true"]) {
             text-decoration: underline;
         }
     }

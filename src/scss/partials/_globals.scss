@@ -1,10 +1,45 @@
-%list-no-style {
-    list-style: none;
-    line-height: normal;
+/*
+
+In this file:
+
+// A. Center X
+// B. List Nav Style
+// C. Caret
+// D. Subtle Fill
+
+*/
+
+////////////////////////////////////////
+// A. Center X
+////////////////////////////////////////
+
+%center-x{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ////////////////////////////////////////
-// A. Caret
+// B. List Nav Style
+////////////////////////////////////////
+
+%list-nav-style {
+
+    list-style: none;
+    line-height: normal;
+
+    > li {
+        position: relative;
+    }
+
+    a[aria-current] {
+        font-weight: var(--base-font-weight-bold);
+        text-decoration: underline;
+    }
+
+}
+
+////////////////////////////////////////
+// C. Caret
 ////////////////////////////////////////
 
 $default-caret-size: 0.25em;
@@ -35,6 +70,7 @@ $default-caret-margin: 0.375em;
         margin-left: $default-caret-margin;
         margin-right: $default-caret-margin;
         color: inherit;
+        
     } 
     
     @if $location == "prepend" {
@@ -43,7 +79,7 @@ $default-caret-margin: 0.375em;
 }
 
 ////////////////////////////////////////
-// B. Subtle Fill
+// D. Subtle Fill
 ////////////////////////////////////////
 
 .subtle-fill {
@@ -65,64 +101,3 @@ $default-caret-margin: 0.375em;
         opacity: var(--subtle-fill-opacity);
     }
 }
-
-////////////////////////////////////////
-// C. Bar
-////////////////////////////////////////
-
-// :root{
-// }
-
-// %accent-bar{
-//     position: relative;
-
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         height: var(--accent-bar-size);
-//         opacity: var(--accent-bar-opacity);
-//         background-color: currentColor;
-//         top: 0;
-//         right: 0;
-//         left: 0;
-//     }
-// }
-
-// .accent-bar-top{
-//     @extend %accent-bar;
-
-//     &::after {
-//     }
-// }
-
-// .accent-bar-right {
-//     @extend %accent-bar;
-//     &::after {
-//         height: unset;
-//         top: 0;
-//         right: 0;
-//         bottom: 0;
-//         width: var(--accent-bar-size); 
-//     }
-// }
-
-// .accent-bar-bottom {
-//     @extend %accent-bar;
-//     &::after {
-//         top: calc(100% - var(--accent-bar-size));
-//         right: 0;
-//         left: 0;
-//     }
-// }
-
-// .accent-bar-left {
-//     @extend %accent-bar;
-//     &::after {
-//         height: unset;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         width: var(--accent-bar-size); 
-//     }
-// }
-

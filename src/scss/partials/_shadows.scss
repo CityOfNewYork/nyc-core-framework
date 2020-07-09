@@ -26,9 +26,8 @@ In this file:
 // B. Box Shadows
 //////////////////////////////////////////////
 
-.box-shadow-1, 
-.box-shadow-2,
-.box-shadow-3 {
+body:not([class*="box-shadow-"]),
+[class*="box-shadow-"] {
     --shadow-opacity: 0;
 
     box-shadow:
@@ -38,7 +37,7 @@ In this file:
 }
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
         
         .box-shadow-1#{$mod} {
@@ -56,6 +55,10 @@ In this file:
             --shadow-opacity: var(--base-shadow-opacity);
         }
     }
+}
+
+body:not([class*="box-shadow-"]){
+    @extend .box-shadow-3;
 }
 
 

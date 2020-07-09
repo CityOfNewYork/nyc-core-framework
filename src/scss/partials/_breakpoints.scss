@@ -12,14 +12,21 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
+// $bp-xs: 325px;
+$bp-sm: 400px; 
+$bp-md: 760px;
+$bp-lg: 1000px;
+$bp-xl: 1340px;
+
 $breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 720px,
-  lg: 960px,
-  xl: 1200px,
-  xxl: 1440px
+  // xs: $bp-xs,
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg,
+  xl: $bp-xl,
 );
+
+$breakpoints: map-merge((null : 0), $breakpoints);
 
 //////////////////////////////////////////////
 // B. Functions
@@ -29,11 +36,11 @@ $breakpoints: (
 
 @function breakpoint-value($name, $breakpoints) {
   $value: map-get($breakpoints, $name);
-  @return if($value !=0, $value, null);
+  @return if($value != 0, $value, null);
 }
 
 @function breakpoint-modifier($name, $breakpoints) {
-  @return if(breakpoint-value($name, $breakpoints)==null, "", "--#{$name}");
+  @return if(breakpoint-value($name, $breakpoints) == null, "", "--#{$name}");
 }
 
 //////////////////////////////////////////////
@@ -42,8 +49,8 @@ $breakpoints: (
 
 // Breakpoint up
 
-@mixin breakpoint-up($breakpoint) {
-  @if ($breakpoint != xs) {
+@mixin breakpoints-up($breakpoint) {
+  @if ($breakpoint != null) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
@@ -55,8 +62,8 @@ $breakpoints: (
 
 // Breakpoint down
 
-@mixin breakpoint-down($breakpoint) {
-  @if ($breakpoint !=xs) {
+@mixin breakpoints-down($breakpoint) {
+  @if ($breakpoint != null) {
     @media (max-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }

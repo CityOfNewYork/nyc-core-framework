@@ -145,9 +145,18 @@ h6, .h6 {
 
 .banner-headline {
     @extend .fw-normal;
-    @include breakpoint-up(lg){
+    @include breakpoints-up(lg){
         font-size: var(--banner-headline-font-size);
     }
+}
+
+.fontAwesome{
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    
+    font-weight: 400;
 }
 
 //////////////////////////////////////////////
@@ -165,7 +174,7 @@ body {
     font-weight: var(--base-font-weight-normal);
 }
 
-@include breakpoint-down(md){
+@include breakpoints-down(md){
     :root{
         --base-font-size: 18px;
     }
@@ -199,7 +208,7 @@ figure {
 
 hr {
     height: unset;
-    @extend .border-t;
+    @extend .border-t !optional;
 }
 
 blockquote {
@@ -224,13 +233,9 @@ blockquote {
 
 small,
 .small {
-  font-size: var(--font-size-md);
-}
-
-mark,
-.mark {
-  padding: .125rem;
-  background-color: rgba(yellow, .75);
+    // font-size: var(--font-size-md);
+    line-height: normal;
+    display: block;
 }
 
 //////////////////////////////////////////////
@@ -238,19 +243,19 @@ mark,
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .text-align-center{
-        text-align: center;
+        text-align: center !important;
         }
 
         .text-align-left {
-            text-align: left;
+            text-align: left !important;
         }
 
         .text-align-right {
-            text-align: right;
+            text-align: right !important;
         }
 
     }

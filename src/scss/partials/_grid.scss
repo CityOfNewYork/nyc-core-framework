@@ -76,7 +76,7 @@ $columns: 12;
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .grid--cells-fill#{$mod} > [class*="grid__cell"] {
@@ -107,7 +107,7 @@ $columns: 12;
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         @for $i from 1 through $columns {
@@ -117,7 +117,7 @@ $columns: 12;
             }
         }
 
-        .grid > .grid__cell-auto#{$mod} {
+        .grid > .grid__cell-fit#{$mod} {
             flex: none;
             width: auto;
         }

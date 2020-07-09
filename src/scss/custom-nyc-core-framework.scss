@@ -36,6 +36,8 @@ In this file:
     --base-font-family: "neue-haas-grotesk-text";
 
     --btn-font-weight: normal;
+
+    --body-max-width: null;
 }
 
 #nyc-official-templates{
@@ -45,6 +47,17 @@ In this file:
 //////////////////////////////////////////////
 // C. Theme Styles
 //////////////////////////////////////////////
+
+// Whoops!
+
+html{
+    
+    --default-background-color: var(--white);
+}
+
+html::before{
+    display: none;
+}
 
 a[data-logo="brand"] {
     color: inherit;
@@ -62,7 +75,7 @@ a[data-logo="brand"] {
         position: relative;
     }
 
-    @include breakpoint-down(md) {
+    @include breakpoints-down(md) {
         text-align: center;
 
         .grid {

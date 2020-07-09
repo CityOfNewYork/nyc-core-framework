@@ -23,8 +23,8 @@ $floating-breakpoints-bar: true;
         height: auto !important;
 
         &::before {
-            @extend .sticky-top;
-            @extend .box-shadow-1;
+            @extend .sticky-top !optional;
+
             font-family: var(--base-font-family);
             display: block;
             color: white;
@@ -35,9 +35,11 @@ $floating-breakpoints-bar: true;
         }
 
         @each $breakpoint in map-keys($breakpoints) {
-            &::before {
-                @include breakpoint-up($breakpoint) {
-                    content: 'Breakpoint: '+ $breakpoint;
+            @if ($breakpoint != null) {
+                &::before {
+                    @include breakpoints-up($breakpoint) {
+                        content: 'Breakpoint: ' + $breakpoint;
+                    }
                 }
             }
         }
@@ -80,7 +82,7 @@ $container-background-opacity: 0.5;
 
 // Add background color to containers
 
-$table-column-background-color: true;
+$table-column-background-color: false;
 $table-column-background-opacity: 0.5;
 
 @if $table-column-background-color {

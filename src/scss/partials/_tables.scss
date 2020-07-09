@@ -17,7 +17,6 @@ In this file:
     --table-cell-padding-x: 1.5em;
     --table-cell-padding-y: 0.75em;
 
-    --default-table-size: var(--font-size-md);
 }
 
 //////////////////////////////////////////////
@@ -26,16 +25,6 @@ In this file:
 
 .table {
     width: 100%;
-    line-height: inherit;
-
-    &:not([class="fs-"]){
-        font-size: var(--default-table-size);
-    }
-
-    tr{
-        border-top-width: var(--default-border-width);
-        border-top-style: var(--default-border-style);
-    }
 
     th, 
     td{
@@ -44,10 +33,15 @@ In this file:
         text-align: inherit;
     }
 
+    td{
+        border-top-width: var(--default-border-width);
+        border-top-style: var(--default-border-style);
+    }
+
     thead th {
         vertical-align: bottom;
 
-        &:not([class*="w-"]):not([class*="action"]) {
+        &:not([class*="w-"]) {
             width: auto;
         }
 
@@ -60,19 +54,122 @@ In this file:
     thead tr {
         border-top-style: unset;
     }
-
 }
 
-.scroll-x{
-    overflow-x: scroll;
-    max-width: 100%;
+.table-scroll {
+    position: relative;
 
-    table{
-        min-width: 600px;
+    caption{
+        text-align: left;
+        caption-side: bottom;
+    }
+
+    .table-scroll__assist {
+        position: relative;
+        z-index: 12010;
+        margin-bottom: .5rem;
+        opacity: .75;
+        display: none;
+
+    }
+
+    .table-scroll__container{
+        overflow: auto;
+        max-width: 100%;
+
+        table{
+            min-width: 900px;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 12000;
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
+            transition: opacity 0.3s;
+            pointer-events: none;
+            display: none;
+        }
+
+        &[data-scrolling=true]::after{
+            opacity: 0;
+        }
+
+    }
+
+    &[data-scroll=true] {
+        .table-scroll__container::after,
+        .table-scroll__assist{
+            display: block;
+        }
+    }
+
+    
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-down($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        
+        .table--stack#{$mod} {
+
+            &.table--edge{
+                td{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            &.table--divider{
+                border-collapse: collapse;
+            }
+            
+            thead {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr:not(:first-child){
+                border-top-width: calc(var(--default-border-width) * 2);
+                border-top-style: var(--default-border-style);
+            }
+
+            td {
+
+                &:first-child{
+                    border: unset;
+                }
+                
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+
+            td::after {
+                content: attr(data-before);
+                font-weight: bold;
+                margin-right: 1rem;
+            }
+        }
     }
 }
 
-.table--bordered{
+
+
+
+
+
+
+
+
+.table--divider{
+    border-collapse: separate;
+    
     th,
     td {
 

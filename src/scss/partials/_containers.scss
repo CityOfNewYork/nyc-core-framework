@@ -12,12 +12,21 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-:root{
+:root {
     --container-padding-x: var(--s2);
 
     --narrow-width: 40rem; // Approximately 55 characters wide
     --medium-width: calc( var(--narrow-width) * 1.5);
-    --wide-width: calc( var(--narrow-width) * 2.25);
+    --wide-width: calc( var(--narrow-width) * 2.5);
+
+    --body-min-width: 325px;
+    --body-max-width: 2000px;
+}
+
+body {
+    min-width: var(--body-min-width);
+    max-width: var(--body-max-width);
+    @extend %center-x !optional;
 }
 
 //////////////////////////////////////////////
@@ -33,21 +42,28 @@ In this file:
 // C. Width Variants
 //////////////////////////////////////////////
 
-.narrow, 
-.medium,
-.wide{
-    margin-left: auto;
-    margin-right: auto;
+[class*="narrow"], 
+[class*="medium"],
+[class*="wide"] {
+    @extend %center-x !optional;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+
+        .narrow#{$mod} {
+            max-width: var(--narrow-width);
+        }
+
+        .medium#{$mod} {
+            max-width: var(--medium-width);
+        }
+
+        .wide#{$mod} {
+            max-width: var(--wide-width);
+        }
+
+    }
 }
  
-.narrow {
-    max-width: var(--narrow-width);
-}
-
-.medium {
-    max-width: var(--medium-width);
-}
-
-.wide {
-    max-width: var(--wide-width);
-}

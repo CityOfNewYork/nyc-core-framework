@@ -91,7 +91,7 @@ $alert-colors: (
 @each $name, $value in $alert-colors {
 
     .alert--#{$name} {
-        color: $value;
+        color: $value !important;
     }
 
     .alert--#{$name}--dark {

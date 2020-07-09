@@ -25,7 +25,7 @@ In this file:
 // Breakpoint classes for 'flex-direction'
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .flex-row#{$mod} {
@@ -76,7 +76,7 @@ In this file:
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .justify-content-start#{$mod} {
@@ -106,7 +106,7 @@ In this file:
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .align-content-start {
@@ -141,7 +141,7 @@ In this file:
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .align-items-start#{$mod} {
@@ -172,7 +172,7 @@ In this file:
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
-    @include breakpoint-up($breakpoint) {
+    @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .align-self-auto#{$mod} {

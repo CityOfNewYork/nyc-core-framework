@@ -102,7 +102,7 @@ $theme-colors: (
 // D. Background Color Classes 
 //////////////////////////////////////////////
 
-html,
+body:not([class*="bc-"]),
 [class*="bc-"] {
     --background-color: white;
     --text-color: black;
@@ -123,25 +123,21 @@ html,
     p > a:not([class*="bc-"]){
         color: var(--link-color);
     }
-
+    select option,
     .tabs [role="tab"],
     .tabs [role="tabpanel"],
     [data-toggle="dropdown"] ~ ul, 
     .modal__overlay::before,
-    .modal__container {
+    .modal__container,
+    .table-scroll__container::after {
         background-color: var(--background-color);
     }
-
+    
     [data-toggle="dropdown"][class*="-icon"] ~ ul::before{
         color: var(--border-color);
     }
 
     [data-toggle="dropdown"][class*="-icon"] ~ ul::after {
-        color: var(--background-color);
-    }
-
-    .form-group__radio > input ~ [class*="__label"]::after,
-    .form-group__checkbox > input ~ [class*="__label"]::after {
         color: var(--background-color);
     }
 }
@@ -160,8 +156,15 @@ html,
     }
 }
 
-html:not([class="bc-"]){
-    @extend .bc-white;
+html:not([class*="bc-"]){
+    --default-background-color: var(--dark);
+    background-color: var(--default-background-color);
+}
+
+body:not([class*="bc-"]){
+    @extend .bc-white !optional;
+    @extend .box-shadow-2 !optional;
+    overflow-x: hidden;
 }
 
 //////////////////////////////////////////////
