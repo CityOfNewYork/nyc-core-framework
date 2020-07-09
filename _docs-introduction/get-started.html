@@ -19,11 +19,10 @@ title: "Get Started"
         <li>
             <a class="btn btn--outline btn--has-icon" href="#quickStartGuide">
                 <span class="far fa-arrow-alt-circle-down fa-sm btn__icon"></span>
-                <span class="btn__text">Quick Start Guide</span>
+                <span class="btn__text">Quick Start CDN</span>
             </a>
         </li>
         <li>
-
             <a class="btn btn--outline btn--has-icon" href="#1">
                 <span class="fab fa-github fa-sm btn__icon"></span>
                 <span class="btn__text">GitHub</span>
@@ -110,7 +109,7 @@ title: "Get Started"
     </p>
     <p>
         You don't need to set up a complicated development environment to use the NYC Core Framework. Follow the
-        <em>Quick Start Guide</em> below to get started with our core files.
+        <em>Quick Start CDN</em> intructions below to get started with our core files.
     </p>
 </div>
 <!-- .container -->
@@ -118,7 +117,7 @@ title: "Get Started"
 <hr class="my-5" id="quickStartGuide">
 
 <div class="container narrow my-4">
-    <h2>Quick Start Guide</h2>
+    <h2>Quick Start CDN</h2>
     <p>
         Get up and running in a New York minute. Create a plain HTML document and add the code from Figure 2 (below).
     </p>
@@ -126,13 +125,34 @@ title: "Get Started"
 <!-- .container -->
 
 <figure class="container medium my-4">
-    <pre data-line="3,11,15,21">
+    <pre data-line="3,8,11,12,13,14,15,23,26,32,36,42,47">
         <code class="language-html">
             &lt;!DOCTYPE html&gt;
 
             &lt;html lang="en" dir="ltr"&gt;
 
                 &lt;head&gt;
+
+                    &lt;!-- I.E. Compatibility Mode --&gt;
+                    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+
+                    &lt;!-- I.E. Custom Properties Polyfill --&gt;
+                    &lt;script&gt;
+                        window.MSInputMethodContext && document.documentMode && document.write(
+                            '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
+                        );
+                    &lt;/script&gt;
+
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+                    &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
+
+                    &lt;!-- Font Awesome Kit --&gt;
+                    &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+                    &lt;!-- NYC Core Stylesheet --&gt;
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
 
                 &lt;/head&gt;
 
@@ -152,15 +172,26 @@ title: "Get Started"
 
                     &lt;/footer&gt;
 
+                    &lt;!-- NYC Core Javascript --&gt;
+                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js">&lt;/script&gt;
+
                 &lt;/body&gt;
 
             &lt;/html&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Example of code for a basic HTML file.</p>
+        <p>Figure 2 - HTML Boilerplate required for using the NYC Core Framework.</p>
     </figcaption>
 </figure>
+
+<div class="container narrow my-4">
+    <p>
+        Highlighted in Figure 3, line 8, and 11 through 15 are required for Internet Explorer 11 support. Lines 26 and 47
+        are required for the Framework. Learn what these scripts do with the table below.
+    </p>
+</div>
+<!-- .container -->
 
 <figure class="container narrow my-4">
     <table class="table table--edge fs-md">
@@ -181,7 +212,41 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>11, 15, 21</td>
+                <td>8</td>
+                <td>
+                    <p>
+                        Meta tag for correcting Internet Explorer 11 page rendering issues with compatibility mode. For whatever reason, this tag must to be first within the <code>&lt;head&gt;</code> in order for it to work.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>11-15</td>
+                <td>
+                    <p>
+                        This Custom Properties polyfill for IE 11 needs to placed before any stylesheet or style reference. All other browsers will not load this script. Thanks to
+                        Tobias Buschor | <a href="#1">https://git.io/fjXMN</a>.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>
+                    <p>
+                        Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
+                        an open-source icon library, used for iconography accross the framework.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>
+                    <p>
+                        Our Framework's latest stable version of the core stylesheet (available via CDN).
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>32, 36, 42</td>
                 <td>
                     <p>
                         Accessible landmarks (regions and roles) are present for assistive technology.
@@ -192,126 +257,6 @@ title: "Get Started"
         </tbody>
 
     </table>
-</figure>
-
-<div class="container narrow my-4">
-    <p>
-        Next, place the following scripts within the <code>&lt;head&gt;</code> tag of the HTML file you just created.
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container medium my-4">
-    <pre data-line="2,5,6,7,8,9,17,20">
-        <code class="language-html">
-            &lt;!-- IE Compatibility Mode --&gt;
-            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-
-            &lt;!-- IE Custom Properties Polyfill --&gt;
-            &lt;script&gt;
-                window.MSInputMethodContext && document.documentMode && document.write(
-                    '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
-                );
-            &lt;/script&gt;
-
-            &lt;meta charset="utf-8"&gt;
-            &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-
-            &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
-
-            &lt;!-- Font Awesome Kit --&gt;
-            &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
-
-            &lt;!-- NYC Core Stylesheet --&gt;
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
-        </code>
-    </pre>
-
-    <figcaption>
-      <p>Figure 3 - Required <code>&lt;head&gt;</code> tag scripts.</p>  
-    </figcaption>
-</figure>
-
-<div class="container narrow my-4">
-    <p>
-        Highlighted in Figure 3, line 2, and 5 through 9 are required for Internet Explorer 11 support. Lines 17 and 20 are required for the Framework. Learn what these scripts do in the table below.
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container narrow my-4">
-
-    <table class="table table--edge fs-md">
-        <thead>
-            <tr>
-                <th class="w-30">Line #</th>
-                <th class="w-70">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            <tr>
-                <td>2</td>
-                <td>
-                    <p>
-                        Meta tag for correcting Internet Explorer 11 page rendering issues with compatibility mode. For whatever reason, this tag must to be first within the <code>&lt;head&gt;</code> in order for it to work.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>5-9</td>
-                <td>
-                    <p>
-                        This Custom Properties polyfill for IE 11 needs to placed before any stylesheet or style reference. All other browsers will not load this script. Thanks to
-                        Tobias Buschor | <a href="#1">https://git.io/fjXMN</a>.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td>
-                    <p>
-                        Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
-                        an open-source icon library, used for iconography accross the framework.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td>
-                    <p>
-                        Our Framework's latest stable version of the core stylesheet (available via CDN.
-                    </p>
-                </td>
-            </tr>
-            
-        </tbody>
-
-    </table>
-
-</figure>
-
-<div class="container narrow my-4">
-    <p>
-        Next, include the following script after the closing <code>&lt;/footer&gt;</code> tag and before the closing
-        <code>&lt;/body&gt;</code> tag. The <code>src</code> attribute (in Figure 4) references the Framework's latest core Javascript file.
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container medium my-4">
-
-    <pre data-line="2">
-        <code class="language-html">
-            &lt;!-- NYC Core Javascript --&gt;
-            &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js">&lt;/script&gt;
-        </code>
-    </pre>
-
-    <figcaption>
-        <p>Figure 4 - A link to the NYC Core Framework's core Javascript file.</p>
-    </figcaption>
-
 </figure>
 
 <div class="container narrow my-4">
