@@ -12,7 +12,7 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-:root{
+:root {
     --container-padding-x: var(--s2);
 
     --narrow-width: 40rem; // Approximately 55 characters wide
@@ -23,7 +23,7 @@ In this file:
     --body-max-width: 2000px;
 }
 
-body{
+body {
     min-width: var(--body-min-width);
     max-width: var(--body-max-width);
     @extend %center-x !optional;
