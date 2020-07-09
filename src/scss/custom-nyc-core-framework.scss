@@ -48,17 +48,6 @@ In this file:
 // C. Theme Styles
 //////////////////////////////////////////////
 
-// Whoops!
-
-html{
-    
-    --default-background-color: var(--white);
-}
-
-html::before{
-    display: none;
-}
-
 a[data-logo="brand"] {
     color: inherit;
     
