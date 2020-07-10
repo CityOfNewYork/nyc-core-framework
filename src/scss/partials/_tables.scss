@@ -4,7 +4,7 @@ In this file:
 
 // A. Variables
 // B. Table Class
-// C. Right to Left
+// C. Table Style Modifiers
 
 */
 
@@ -13,10 +13,10 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
-
     --table-cell-padding-x: 1.5em;
     --table-cell-padding-y: 0.75em;
-
+ 
+    --table-scroll-min-width: 800px;
 }
 
 //////////////////////////////////////////////
@@ -24,16 +24,18 @@ In this file:
 //////////////////////////////////////////////
 
 .table {
+    table-layout: fixed;
     width: 100%;
 
     th, 
-    td{
-        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
-        vertical-align: top;
+    td {
         text-align: inherit;
+        vertical-align: top;
+        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+        width: auto;
     }
 
-    td{
+    td {
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
     }
@@ -56,116 +58,9 @@ In this file:
     }
 }
 
-.table-scroll {
-    position: relative;
-
-    caption{
-        text-align: left;
-        caption-side: bottom;
-    }
-
-    .table-scroll__assist {
-        position: relative;
-        z-index: 12010;
-        margin-bottom: .5rem;
-        opacity: .75;
-        display: none;
-
-    }
-
-    .table-scroll__container{
-        overflow: auto;
-        max-width: 100%;
-
-        table{
-            min-width: 900px;
-        }
-
-        &::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 12000;
-            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
-            transition: opacity 0.3s;
-            pointer-events: none;
-            display: none;
-        }
-
-        &[data-scrolling=true]::after{
-            opacity: 0;
-        }
-
-    }
-
-    &[data-scroll=true] {
-        .table-scroll__container::after,
-        .table-scroll__assist{
-            display: block;
-        }
-    }
-
-    
-}
-
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-down($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
-        
-        .table--stack#{$mod} {
-
-            &.table--edge{
-                td{
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-
-            &.table--divider{
-                border-collapse: collapse;
-            }
-            
-            thead {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-
-            tr:not(:first-child){
-                border-top-width: calc(var(--default-border-width) * 2);
-                border-top-style: var(--default-border-style);
-            }
-
-            td {
-
-                &:first-child{
-                    border: unset;
-                }
-                
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: space-between;
-            }
-
-            td::after {
-                content: attr(data-before);
-                font-weight: bold;
-                margin-right: 1rem;
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////
+// C. Table Style Modifiers
+//////////////////////////////////////////////
 
 .table--divider{
     border-collapse: separate;
@@ -180,10 +75,29 @@ In this file:
     }
 }
 
-.table--striped {
-    tbody tr:nth-of-type(odd) td {
-        @extend .subtle-fill;
-        --subtle-fill-opacity: 0.0375;
+[dir="ltr"] .table--edge {
+    th,
+    td {
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+[dir="rtl"] .table--edge {
+    th,
+    td {
+        &:first-child {
+            padding-right: 0;
+        }
+
+        &:last-child {
+            padding-left: 0;
+        }
     }
 }
 
@@ -193,30 +107,121 @@ In this file:
     }
 }
 
-[dir="ltr"] .table--edge {
-    th,
-    td {
-        &:first-child {
-            padding-left: 0;
-        }
-        &:last-child {
-            padding-right: 0;
-        }
+.table--striped {
+    tbody tr:nth-of-type(odd) td {
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.0375;
     }
 }
 
 //////////////////////////////////////////////
-// C. Right to Left
+// C. Table Scroll
 //////////////////////////////////////////////
 
-[dir="rtl"] .table--edge{
-    th,
-    td {
-        &:first-child {
-            padding-right: 0;
+.table-scroll {
+    position: relative;
+
+    caption {
+        caption-side: bottom;
+        text-align: left;
+    }
+
+    .table-scroll__assist {
+        position: relative;
+        z-index: 15000;
+        margin-bottom: 0.5rem;
+        opacity: 0.75;
+
+        display: none;
+    }
+
+    .table-scroll__container{
+        max-width: 100%;
+        overflow: auto;
+
+        table{
+            overflow: hidden;
+            min-width: var(--table-scroll-min-width);
         }
-        &:last-child {
-            padding-left: 0;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            z-index: 12000;
+            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
+            transition: opacity 0.2s;
+            pointer-events: none;
+
+            display: none;
+        }
+
+        &[data-scrolling=true]::after{
+            opacity: 0;
+        }
+
+    }
+
+    &[data-scroll=true] {
+        .table-scroll__container::after,
+        .table-scroll__assist{
+            display: block;
+        }
+    }   
+}
+
+//////////////////////////////////////////////
+// B. Table Stack
+//////////////////////////////////////////////
+
+@each $breakpoint in map-keys($breakpoints) {
+
+    @include breakpoints-down($breakpoint) {
+    
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        
+        .table--stack#{$mod} {
+
+            thead {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr:not(:first-child){
+                border-top-width: calc(var(--default-border-width) * 2);
+                border-top-style: var(--default-border-style);
+            }
+
+            td {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                &:first-child{
+                    border: unset;
+                }
+            }
+
+            td::after {
+                content: attr(data-before);
+                font-weight: bold;
+                margin-right: 1rem;
+            }
+
+            &.table--edge{
+                td{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            &.table--divider{
+                border-collapse: collapse;
+            }  
         }
     }
 }
