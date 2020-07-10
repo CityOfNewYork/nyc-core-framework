@@ -645,7 +645,7 @@ window.onload = () => {
     const externalLinks = document.querySelectorAll("[data-link='external']");
 
     for (const link of externalLinks) {
-        link.insertAdjacentHTML("beforeend", "<span class='screan-reader'>Opens a new window</span>");
+        link.insertAdjacentHTML("beforeend", "<span class='screen-reader'>Opens a new window</span>");
     }
 
     //////////////////////////////////////////////
