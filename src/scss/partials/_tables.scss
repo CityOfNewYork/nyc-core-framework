@@ -16,7 +16,7 @@ In this file:
     --table-cell-padding-x: 1.5em;
     --table-cell-padding-y: 0.75em;
  
-    --table-scroll-max-width: 800px;
+    --table-scroll-min-width: 800px;
 }
 
 //////////////////////////////////////////////
@@ -29,10 +29,11 @@ In this file:
 
     th, 
     td {
-        overflow: hidden;
         text-align: inherit;
         vertical-align: top;
         padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+        // display: block;
+        width: auto;
     }
 
     td {
@@ -75,7 +76,7 @@ In this file:
     }
 }
 
-.table--edge {
+[dir="ltr"] .table--edge {
     th,
     td {
         &:first-child {
@@ -86,19 +87,17 @@ In this file:
             padding-right: 0;
         }
     }
+}
 
-    [dir="rtl"] & {
-        th,
-        td {
-            &:first-child {
-                padding-right: initial;
-                padding-right: 0;
-            }
+[dir="rtl"] .table--edge {
+    th,
+    td {
+        &:first-child {
+            padding-right: 0;
+        }
 
-            &:last-child {
-                padding-left: initial;
-                padding-left: 0;
-            }
+        &:last-child {
+            padding-left: 0;
         }
     }
 }
@@ -142,7 +141,8 @@ In this file:
         overflow: auto;
 
         table{
-            min-width: var(--table-scroll-max-width);
+            overflow: hidden;
+            min-width: var(--table-scroll-min-width);
         }
 
         &::after{
@@ -173,7 +173,6 @@ In this file:
         }
     }   
 }
-
 
 //////////////////////////////////////////////
 // B. Table Stack

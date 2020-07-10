@@ -652,7 +652,7 @@ window.onload = () => {
     // Focusable Buttons
     //////////////////////////////////////////////
 
-    const focusableButtonList = document.querySelectorAll("[role='tab'], .btn, [data-toggle='accordion']");
+    const focusableButtonList = document.querySelectorAll("[role='tab'], [data-toggle='accordion'], a[href], button");
 
     for (const button of focusableButtonList) {
 
@@ -671,7 +671,6 @@ window.onload = () => {
                 event.target.blur();
             }
         });
-
     }
 
 }; /* window.load */
