@@ -82,7 +82,7 @@ $container-background-opacity: 0.5;
 
 // Add background color to containers
 
-$table-column-background-color: false;
+$table-column-background-color: true;
 $table-column-background-opacity: 0.5;
 
 @if $table-column-background-color {
