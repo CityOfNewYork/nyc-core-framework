@@ -32,7 +32,6 @@ In this file:
         text-align: inherit;
         vertical-align: top;
         padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
-        // display: block;
         width: auto;
     }
 
@@ -198,14 +197,13 @@ In this file:
             }
 
             td {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
 
                 &:first-child{
                     border: unset;
                 }
-                
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: space-between;
             }
 
             td::after {
@@ -223,12 +221,7 @@ In this file:
 
             &.table--divider{
                 border-collapse: collapse;
-            }
-            
+            }  
         }
     }
 }
-
-//////////////////////////////////////////////
-// IE
-//////////////////////////////////////////////

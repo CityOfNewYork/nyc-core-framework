@@ -52,7 +52,7 @@ In this file:
 //////////////////////////////////////////////
 
 .hover-focus {
-    
+
     &:hover,
     &:focus {
         &:not([class*="-icon"]):not([class*="field__btn"]):not([aria-disabled="true"]) {
@@ -64,6 +64,6 @@ In this file:
         outline-style: dotted;
         outline-color: currentColor;
         outline-width: calc(var(--default-border-width) * 2);
-        outline-offset: calc(var(--default-border-width) * -1);
+        outline-offset: calc(var(--default-border-width) * -2);
     }
 }
