@@ -71,7 +71,7 @@ title: "Customization"
 
 <div class="container narrow my-4">
     <p>
-        Because custom properties can update at runtime, we can modify values from our CDN stylesheet by declaring new
+        Because custom properties update at runtime, we can modify values from our CDN stylesheet by declaring new
         values in a second stylesheet. In the next exercise, you'll learn how to customize your theme colors using this
         methodology.
     </p>
@@ -262,12 +262,10 @@ title: "Customization"
              role="region">
             
             <div class="panel__content">
-            
+
                 <div class="table-scroll fs-md" aria-labelledby="table-caption-01" role="region">
             
-                    <small class="table-scroll__assist" aria-hidden="true">
-                        Scroll left or right to see entire table
-                    </small>
+                    {% include table-scroll-help.html %}
             
                     <div class="table-scroll__container">
             
@@ -771,11 +769,13 @@ title: "Customization"
             
                     </div>
                     <!-- .table-scroll__container -->
+
                 </div>
                 <!-- .table-scroll -->
             
             </div>
             <!-- panel__content -->
+
         </div>
         <!-- .accordion__panel -->
 
@@ -1013,7 +1013,7 @@ title: "Customization"
                     Your theme's <em>primary</em> color. Learn about our <a href="{{ site.baseurl }}/docs/color-system">color system</a>.
                 </p>
             </div>
-            
+
         </div>
         <!-- .modal__container -->
 
