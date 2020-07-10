@@ -91,6 +91,22 @@ window.onload = () => {
         const accButtonList = accordion.querySelectorAll("[data-toggle='accordion']");
         const accPanelList = accordion.querySelectorAll("[data-accordion='panel']");
 
+        function setKeyboardFocusableElements(element = document, focusable = false) {
+
+            const focusElList = element.querySelectorAll("a, button, input, textarea, select, details, [tabindex]:not([tabindex=' - 1 '])");
+
+            for (const focusEl of focusElList) {
+
+                if (focusable === true) {
+                    // focusEl.style.background = "blue";
+                    focusEl.setAttribute("tabindex", 0);
+                } else if (focusable === false) {
+                    // focusEl.style.background = "red";
+                    focusEl.setAttribute("tabindex", -1);
+                }
+            }
+        }
+
         for (const accordionButton of accButtonList) {
 
             accordionButton.setAttribute("tabindex", 0);
@@ -101,10 +117,15 @@ window.onload = () => {
             if (expanded === "true") {
                 currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
                 currentAccordionPanel.classList.add("show");
+
+                setKeyboardFocusableElements(currentAccordionPanel, true);
+
             } else {
                 accordionButton.setAttribute("aria-expanded", false);
                 currentAccordionPanel.style.maxHeight = null;
                 currentAccordionPanel.setAttribute("aria-hidden", true);
+
+                setKeyboardFocusableElements(currentAccordionPanel, false);
             }
 
             const initAccordion = (event) => {
@@ -115,12 +136,14 @@ window.onload = () => {
                 for (const otherAccordionPanel of accPanelList) {
 
                     otherAccordionPanel.classList.remove("show");
-
+                    
                     if (otherAccordionPanel !== currentAccordionPanel) {
                         otherAccordionPanel.classList.remove("shown");
                         otherAccordionPanel.style.maxHeight = null;
                         otherAccordionPanel.previousElementSibling.setAttribute("aria-expanded", false);
                         otherAccordionPanel.setAttribute("aria-hidden", true);
+
+                        setKeyboardFocusableElements(otherAccordionPanel, false);
                     }
                 }
 
@@ -131,9 +154,14 @@ window.onload = () => {
                 if (expanded === "true") {
                     accordionButton.setAttribute("aria-expanded", false);
                     currentAccordionPanel.setAttribute("aria-hidden", true);
+                    
+                    setKeyboardFocusableElements(currentAccordionPanel, false);
+
                 } else if (expanded === "false") {
                     accordionButton.setAttribute("aria-expanded", true);
                     currentAccordionPanel.setAttribute("aria-hidden", false);
+
+                    setKeyboardFocusableElements(currentAccordionPanel, true);
                 }
 
                 if (currentAccordionPanel.style.maxHeight) {

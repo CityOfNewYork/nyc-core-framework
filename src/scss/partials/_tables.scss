@@ -4,7 +4,7 @@ In this file:
 
 // A. Variables
 // B. Table Class
-// C. Right to Left
+// C. Table Style Modifiers
 
 */
 
@@ -13,10 +13,10 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
-
     --table-cell-padding-x: 1.5em;
     --table-cell-padding-y: 0.75em;
-
+ 
+    --table-scroll-max-width: 800px;
 }
 
 //////////////////////////////////////////////
@@ -28,14 +28,14 @@ In this file:
     width: 100%;
 
     th, 
-    td{
-        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
-        vertical-align: top;
-        text-align: inherit;
+    td {
         overflow: hidden;
+        text-align: inherit;
+        vertical-align: top;
+        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
     }
 
-    td{
+    td {
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
     }
@@ -58,30 +58,91 @@ In this file:
     }
 }
 
+//////////////////////////////////////////////
+// C. Table Style Modifiers
+//////////////////////////////////////////////
+
+.table--divider{
+    border-collapse: separate;
+    
+    th,
+    td {
+
+        &:not(:first-child){
+            border-left-width: var(--default-border-width);
+            border-left-style: var(--default-border-style);
+        }
+    }
+}
+
+.table--edge {
+    th,
+    td {
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    [dir="rtl"] & {
+        th,
+        td {
+            &:first-child {
+                padding-right: initial;
+                padding-right: 0;
+            }
+
+            &:last-child {
+                padding-left: initial;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.table--va-middle{
+    td{
+        vertical-align: middle;
+    }
+}
+
+.table--striped {
+    tbody tr:nth-of-type(odd) td {
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.0375;
+    }
+}
+
+//////////////////////////////////////////////
+// C. Table Scroll
+//////////////////////////////////////////////
+
 .table-scroll {
-    --table-max-width: 800px;
     position: relative;
 
-    caption{
-        text-align: left;
+    caption {
         caption-side: bottom;
+        text-align: left;
     }
 
     .table-scroll__assist {
         position: relative;
-        z-index: 12010;
-        margin-bottom: .5rem;
-        opacity: .75;
-        display: none;
+        z-index: 15000;
+        margin-bottom: 0.5rem;
+        opacity: 0.75;
 
+        display: none;
     }
 
     .table-scroll__container{
-        overflow: auto;
         max-width: 100%;
+        overflow: auto;
 
         table{
-            min-width: var(--table-max-width);
+            min-width: var(--table-scroll-max-width);
         }
 
         &::after{
@@ -90,11 +151,12 @@ In this file:
             top: 0;
             right: 0;
             bottom: 0;
-            left: 0;
+            left: 50%;
             z-index: 12000;
             mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
-            transition: opacity 0.3s;
+            transition: opacity 0.2s;
             pointer-events: none;
+
             display: none;
         }
 
@@ -109,28 +171,22 @@ In this file:
         .table-scroll__assist{
             display: block;
         }
-    }
-
-    
+    }   
 }
 
+
+//////////////////////////////////////////////
+// B. Table Stack
+//////////////////////////////////////////////
+
 @each $breakpoint in map-keys($breakpoints) {
+
     @include breakpoints-down($breakpoint) {
+    
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
         
         .table--stack#{$mod} {
 
-            &.table--edge{
-                td{
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-
-            &.table--divider{
-                border-collapse: collapse;
-            }
-            
             thead {
                 position: absolute;
                 top: -9999px;
@@ -158,68 +214,22 @@ In this file:
                 font-weight: bold;
                 margin-right: 1rem;
             }
-        }
-    }
-}
 
+            &.table--edge{
+                td{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
 
-
-
-
-
-
-
-
-.table--divider{
-    border-collapse: separate;
-    
-    th,
-    td {
-
-        &:not(:first-child){
-            border-left-width: var(--default-border-width);
-            border-left-style: var(--default-border-style);
-        }
-    }
-}
-
-.table--striped {
-    tbody tr:nth-of-type(odd) td {
-        @extend .subtle-fill;
-        --subtle-fill-opacity: 0.0375;
-    }
-}
-
-.table--va-middle{
-    td{
-        vertical-align: middle;
-    }
-}
-
-[dir="ltr"] .table--edge {
-    th,
-    td {
-        &:first-child {
-            padding-left: 0;
-        }
-        &:last-child {
-            padding-right: 0;
+            &.table--divider{
+                border-collapse: collapse;
+            }
+            
         }
     }
 }
 
 //////////////////////////////////////////////
-// C. Right to Left
+// IE
 //////////////////////////////////////////////
-
-[dir="rtl"] .table--edge{
-    th,
-    td {
-        &:first-child {
-            padding-right: 0;
-        }
-        &:last-child {
-            padding-left: 0;
-        }
-    }
-}
