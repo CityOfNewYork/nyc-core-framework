@@ -193,21 +193,8 @@ td > p{
 
     th, 
     td{
-        &:nth-child(1) {
-            // background-color: red;
-        }
-
-        &:nth-child(2) {
-            // background-color: yellow;
-        }
-
         &:nth-child(3) {
             text-align: right;
-            // background-color: blue;
-        }
-
-        &:nth-child(4) {
-            // background-color: purple;
         }
     }
     

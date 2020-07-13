@@ -25,7 +25,7 @@
             </header>
 
             <div class="modal__body" id="modal-1-content">
-                <p>
+                <p class="mb-0">
                     {% if include.modal_description %}
                         {{ include.modal_description }}
                     {% else %}
@@ -37,16 +37,16 @@
                 </p>
             </div>
 
-            <div class="modal__footer border-t">
+            <div class="modal__footer border-t d-none">
                 <ul class="nav nav--horizontal justify-content-between">
                     <li>
-                        <button class="btn btn--icon-only" data-modal-close>
+                        <button class="btn btn--icon-only" data-modal-previuos>
                             <span class="screen-reader">Previous Modal</span>
                             <span class="fas fa-arrow-left"></span>
                         </button>
                     </li>
                     <li>
-                        <button class="btn btn--icon-only" data-modal-close>
+                        <button class="btn btn--icon-only" data-modal-next>
                             <span class="screen-reader">Previous Modal</span>
                             <span class="fas fa-arrow-right"></span>
                         </button>
