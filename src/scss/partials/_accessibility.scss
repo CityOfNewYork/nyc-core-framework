@@ -51,7 +51,6 @@ In this file:
 //////////////////////////////////////////////
 
 .hover-focus {
-
     &:hover,
     &:focus {
         &:not([class*="-icon"]):not([class*="field__btn"]):not([aria-disabled="true"]) {
