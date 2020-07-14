@@ -77,7 +77,7 @@ $accordion-transition: 0.2s ease-out;
         max-height: 0;
     }
     
-    > .panel__content {
+    > .accordion__panel__content {
         padding: var(--accordion-padding-y) var(--accordion-padding-x);
     }
 }
