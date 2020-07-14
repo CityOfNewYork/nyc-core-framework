@@ -16,9 +16,9 @@ In this file:
 
     // Theme Color Palette
 
-    --primary: #25caa4;
-    --secondary: #6500d6;
-    --dark: #262345;
+    --primary: #3a0ca3;
+    --secondary: #7209b7;
+    --dark: #191b35;
     --light: #f1f4f6;
 
     // Accessible Link Color
@@ -27,33 +27,43 @@ In this file:
 
     // Associated Primary Colors
 
-    --primary-text: var(--dark);
+    --primary-text: white;
     --primary-border: hsla(0, 0%, 0%, 0.125);
     --primary-link: currentColor;
+    --primary-confirm: #16db93;
+    --primary-warn: #ff73aa;
 
     // Associated Secondary Colors
 
     --secondary-text: white;
     --secondary-border: hsla(0, 0%, 0%, 0.25);
     --secondary-link: currentColor;
+    --secondary-confirm: #41e0f2;
+    --secondary-warn: #ffa3a4;
 
     // Associated Dark Colors
 
     --dark-text: white;
     --dark-border: hsla(0, 0%, 100%, 0.125);
     --dark-link: currentColor;
+    --dark-confirm: #00a242;
+    --dark-warn: #fe3c3e;
 
     // Associated Light Colors
 
     --light-text: var(--dark);
     --light-border: hsla(0, 0%, 50%, 0.25);
     --light-link: var(--a11y-link-color);
+    --light-confirm: #007e35;
+    --light-warn: #ce1736;
 
     // Associated Light Colors
 
     --white-text: var(--dark);
     --white-border: hsla(0, 0%, 50%, 0.25);
     --white-link: var(--a11y-link-color);
+    --white-confirm: #008237;
+    --white-warn: #e4193c;
 }
 
 //////////////////////////////////////////////
@@ -66,35 +76,45 @@ $theme-colors: (
         swatch: white,
         text: var(--white-text),
         border: var(--white-border),
-        link: var(--white-link)
+        link: var(--white-link),
+        confirm: var(--white-confirm),
+        warn: var(--white-warn)
     ), 
         
     "primary": (
         swatch: var(--primary),
         text: var(--primary-text),
         border: var(--primary-border),
-        link: var(--primary-link)
+        link: var(--primary-link),
+        confirm: var(--primary-confirm),
+        warn: var(--primary-warn)
     ), 
     
     "secondary": (
         swatch: var(--secondary),
         text: var(--secondary-text),
         border: var(--secondary-border),
-        link: var(--secondary-link)
+        link: var(--secondary-link),
+        confirm: var(--secondary-confirm),
+        warn: var(--secondary-warn)
     ), 
     
     "dark": (
         swatch: var(--dark),
         text: var(--dark-text),
         border: var(--dark-border),
-        link: var(--dark-link)
+        link: var(--dark-link),
+        confirm: var(--dark-confirm),
+        warn: var(--dark-warn)
     ), 
     
     "light": (
         swatch: var(--light),
         text: var(--light-text),
         border: var(--light-border),
-        link: var(--light-link)
+        link: var(--light-link),
+        confirm: var(--light-confirm),
+        warn: var(--light-warn)
     )
 );
 
@@ -108,6 +128,7 @@ body:not([class*="bc-"]),
     --text-color: black;
     --border-color: gray;
     --link-color: currentColor;
+    --confirm-color: green;
 
     background-color: var(--background-color);
     color: var(--text-color);
@@ -123,6 +144,7 @@ body:not([class*="bc-"]),
     p > a:not([class*="bc-"]){
         color: var(--link-color);
     }
+
     select option,
     .tabs [role="tab"],
     .tabs [role="tabpanel"],
@@ -140,6 +162,26 @@ body:not([class*="bc-"]),
     [data-toggle="dropdown"][class*="-icon"] ~ ul::after {
         color: var(--background-color);
     }
+
+    // Alerts
+
+    [class*="alert--confirm"]:not([class*="--inverse"]){
+        color: var(--confirm-color);
+    }
+
+    [class*="alert--confirm--inverse"]{
+        color: var(--background-color);
+        background-color: var(--confirm-color);
+    }
+
+    [class*="alert--warn"]:not([class*="--inverse"]){
+        color: var(--warn-color);
+    }
+
+    [class*="alert--warn--inverse"]{
+        color: var(--background-color);
+        background-color: var(--warn-color);
+    }
 }
 
 @each $name, $color-map in $theme-colors {
@@ -148,11 +190,16 @@ body:not([class*="bc-"]),
     $border: map-get($color-map, "border");
     $link: map-get($color-map, "link");
 
+    $confirm: map-get($color-map, "confirm");
+    $warn: map-get($color-map, "warn");
+
     .bc-#{$name} {
         --background-color: #{$background};
         --text-color: #{$text};
         --border-color: #{$border};
         --link-color: #{$link};
+        --confirm-color: #{$confirm};
+        --warn-color: #{$warn};
     }
 }
 

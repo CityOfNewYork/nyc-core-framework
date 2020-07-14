@@ -19,8 +19,8 @@ In this file:
     --alert-light-bg-opacity: .075;
 
     // Alert and Form Feedback Colors
-    --confirm: #008230;
     --attention: #3953B1;
+    --confirm: #008230;
     --warn: #dc3545;
 }
 
@@ -28,11 +28,11 @@ In this file:
 // B. Alert Color Map
 //////////////////////////////////////////////
 
-$alert-colors: (
-    confirm: var(--confirm),
-    attention: var(--attention),
-    warn: var(--warn)
-);
+// $alert-colors: (
+//     confirm: var(--confirm),
+//     attention: var(--attention),
+//     warn: var(--warn)
+// );
 
 //////////////////////////////////////////////
 // C. Alert Block
@@ -52,7 +52,7 @@ $alert-colors: (
         border-color: currentColor !important;
     }
 
-    &:not([class*="--dark"]):not([class*="bc-"]) {
+    &:not([class*="bc-"]) {
 
         &::before {
             content: "";
@@ -62,18 +62,25 @@ $alert-colors: (
             bottom: 0;
             left: 0;
             pointer-events: none;
-
             background-color: currentColor;
             opacity: var(--alert-light-bg-opacity);
+            z-index: auto;
         }
-
-        background-color: white;
     }
+
+    
 }
 
 //////////////////////////////////////////////
 // C. Alert Elements
 //////////////////////////////////////////////
+
+.alert__head, 
+.alert__body {
+    position: relative;
+    z-index: auto;
+
+}
 
 .alert__head {
     margin-bottom: var(--s2);
@@ -95,14 +102,14 @@ $alert-colors: (
 // F. Alert Color Modifiers 
 //////////////////////////////////////////////
 
-@each $name, $value in $alert-colors {
+// @each $name, $value in $alert-colors {
 
-    .alert--#{$name} {
-        color: $value !important;
-    }
+//     .alert--#{$name} {
+//         color: $value !important;
+//     }
 
-    .alert--#{$name}--dark {
-        color: white;
-        background-color: $value;
-    }
-}
+//     .alert--#{$name}--dark {
+//         color: white;
+//         background-color: $value;
+//     }
+// }
