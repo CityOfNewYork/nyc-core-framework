@@ -73,7 +73,7 @@ In this file:
 
         &:not([class*="-icon"]):not([aria-disabled="true"]) {
             text-decoration: underline;
-            // sg - maybe we want to change this to just [disabled] ? [aria-disabled] is something aimed at screen-readers
+            // sg - maybe we want to change this to just [disabled] ? [aria-disabled] is something aimed at screen-reader-onlys
             // while text decoration relates to keybaord / visual users
         }
     }

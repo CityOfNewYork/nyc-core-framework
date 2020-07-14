@@ -3,7 +3,8 @@
 In this file:
 
 // A. Screen Reader Only
-// B. Accessible Hover Focus
+// B. Focusable Only
+// B. Hover Focus
 
 */
 
@@ -11,9 +12,7 @@ In this file:
 // A. Screen Reader Only
 //////////////////////////////////////////////
 
-// Only display content to screen readers
-
-.screen-reader {
+.screen-reader-only {
     overflow: hidden;
     position: absolute;
     width: 1px;
@@ -24,11 +23,11 @@ In this file:
     padding: unset;
 }
 
-// Use in conjunction with .screen-reader to only display content when it's focused.
-// Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
-// Credit: HTML5 Boilerplate
+//////////////////////////////////////////////
+// B. Focusable Only
+//////////////////////////////////////////////
 
-.screen-reader-focusable {
+.focusable-only {
     &:active,
     &:focus {
         position: absolute;
@@ -41,14 +40,14 @@ In this file:
         padding: var(--btn-padding-y) var(--btn-padding-x);
         background-color: rgba( #ffffff, 0.95);
         color: var(--dark);
-        border-radius: var(--border-radius);
-        box-shadow: 0 0 0.5rem currentColor;
         font-size: var(--font-size-md);
+        box-shadow: 0 0 0.5rem currentColor;
+        border-radius: var(--border-radius);
     }
 }
 
 //////////////////////////////////////////////
-// B. Accessible Hover Focus
+// C. Hover Focus
 //////////////////////////////////////////////
 
 .hover-focus {
@@ -60,9 +59,9 @@ In this file:
         }
     }
 
-    &:focus{
-        outline-style: dotted;
+    &:focus {
         outline-color: currentColor;
+        outline-style: dotted;
         outline-width: calc(var(--default-border-width) * 2);
         outline-offset: calc(var(--default-border-width) * -2);
     }
