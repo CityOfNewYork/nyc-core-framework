@@ -3,8 +3,9 @@
 In this file:
 
 // A. Variables
-// B. Accordion Button
-// C. Accordion Panel
+// B. Accordion Block
+// C. Accordion Elements
+// D. Accordion Panel
 
 */
 
@@ -20,7 +21,16 @@ In this file:
 $accordion-transition: 0.2s ease-out;
 
 //////////////////////////////////////////////
-// B. Accordion Button
+// B. Accordion
+//////////////////////////////////////////////
+
+.accordion {
+    --accordion-font-size: var(--font-size-rg);
+    font-size: var(--accordion-font-size);
+}
+
+//////////////////////////////////////////////
+// C. Accordion Elements
 //////////////////////////////////////////////
 
 .accordion__button {
@@ -65,10 +75,6 @@ $accordion-transition: 0.2s ease-out;
     }
 }
 
-//////////////////////////////////////////////
-// C. Accordion Panel
-//////////////////////////////////////////////
-
 .accordion__panel {
     overflow: hidden;
     transition: max-height $accordion-transition;
@@ -76,8 +82,8 @@ $accordion-transition: 0.2s ease-out;
     &:not(.show){
         max-height: 0;
     }
-    
-    > .accordion__panel__content {
-        padding: var(--accordion-padding-y) var(--accordion-padding-x);
-    }
+}
+
+.accordion__panel__content {
+    padding: var(--accordion-padding-y) var(--accordion-padding-x);
 }

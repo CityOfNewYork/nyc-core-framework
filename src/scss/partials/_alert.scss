@@ -3,12 +3,15 @@
 In this file:
 
 // A. Variables
-// B. Alert Classes
+// B. Alert Color Map
+// C. Alert Block
+// D. Alert Elements
+// E. Alert Modifiers 
 
 */
 
 //////////////////////////////////////////////
-// B. Variables
+// A. Variables
 //////////////////////////////////////////////
 
 :root{
@@ -22,7 +25,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Alert Color Map
+// B. Alert Color Map
 //////////////////////////////////////////////
 
 $alert-colors: (
@@ -32,7 +35,7 @@ $alert-colors: (
 );
 
 //////////////////////////////////////////////
-// B. Alert Styles
+// C. Alert Block
 //////////////////////////////////////////////
 
 .alert {
@@ -66,26 +69,30 @@ $alert-colors: (
 
         background-color: white;
     }
+}
 
-    @at-root .alert__header {
-        margin-bottom: var(--s2);
-    }
+//////////////////////////////////////////////
+// C. Alert Elements
+//////////////////////////////////////////////
 
-    @at-root .alert__title {
-        font-weight: var(--base-font-weight-bold);
-        margin-left: var(--s1);
-        margin-right: var(--s1);
-    }
+.alert__head {
+    margin-bottom: var(--s2);
+}
 
-    @at-root .alert__body {
-        p:not(:last-child) {
-            margin-bottom: var(--s1);
-        }
+.alert__head__title {
+    font-weight: var(--base-font-weight-bold);
+    margin-left: var(--s1);
+    margin-right: var(--s1);
+}
+
+.alert__body {
+    p:not(:last-child) {
+        margin-bottom: var(--s1);
     }
 }
 
 //////////////////////////////////////////////
-// F. Alert Color Classes 
+// F. Alert Color Modifiers 
 //////////////////////////////////////////////
 
 @each $name, $value in $alert-colors {

@@ -12,8 +12,8 @@ In this file:
 //////////////////////////////////////////////
 
 .screen-reader-only {
-    overflow: hidden;
     position: absolute;
+    overflow: hidden;
     width: 1px;
     height: 1px;
     clip: rect(0, 0, 0, 0);

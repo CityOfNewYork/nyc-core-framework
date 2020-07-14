@@ -22,7 +22,6 @@ In this file:
 @import "partials/globals";
 @import "partials/buttons";
 @import "partials/color-system";
-@import "partials/alerts";
 @import "partials/links";
 @import "partials/borders";
 @import "partials/containers";
@@ -42,12 +41,13 @@ In this file:
 
 // Optional
 
+@import "partials/accordion";
+@import "partials/alert";
 @import "partials/shadows";
 @import "partials/gradients";
-@import "partials/accordions";
 @import "partials/modals";
 @import "partials/forms";
-@import "partials/aspect-ratios";
+@import "partials/aspect-ratio";
 @import "partials/opacities";
 
 // @import "partials/dev-tools";
