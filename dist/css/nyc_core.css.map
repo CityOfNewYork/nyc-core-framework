@@ -23,7 +23,7 @@
         "../../src/scss/partials/_tabs.scss",
         "../../src/scss/partials/_tables.scss",
         "../../src/scss/partials/_collapse.scss",
-        "../../src/scss/partials/_backdrops.scss",
+        "../../src/scss/partials/_backdrop.scss",
         "../../src/scss/partials/_cards.scss",
         "../../src/scss/partials/_z-index.scss",
         "../../src/scss/partials/_position.scss",
