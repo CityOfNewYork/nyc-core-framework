@@ -3,9 +3,11 @@
 In this file:
 
 // A. Variables
-// B. Nav & Head Nav Components 
+// B. Head Nav Components 
+// C. Nav
 // D. Nav Divider
 // E. Dropdown
+// F. I.E. 11 Support
 
 */
 
@@ -98,7 +100,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Nav
+// C. Nav
 ////////////////////////////////////////
 
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
@@ -453,7 +455,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. I.E. 11 Support
+// F. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),

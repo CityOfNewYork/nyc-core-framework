@@ -4,7 +4,6 @@ In this file:
 
 // A. Screen Reader Only
 // B. Focusable Only
-// B. Hover Focus
 
 */
 
@@ -43,25 +42,5 @@ In this file:
         font-size: var(--font-size-md);
         box-shadow: 0 0 0.5rem currentColor;
         border-radius: var(--border-radius);
-    }
-}
-
-//////////////////////////////////////////////
-// C. Hover Focus
-//////////////////////////////////////////////
-
-.hover-focus {
-    &:hover,
-    &:focus {
-        &:not([class*="-icon"]):not([class*="field__btn"]):not([aria-disabled="true"]) {
-            text-decoration: underline;
-        }
-    }
-
-    &:focus {
-        outline-color: currentColor;
-        outline-style: dotted;
-        outline-width: calc(var(--default-border-width) * 2);
-        outline-offset: calc(var(--default-border-width) * -2);
     }
 }

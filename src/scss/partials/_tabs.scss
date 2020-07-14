@@ -35,7 +35,7 @@ In this file:
         position: relative;
         padding: var(--tab-padding-y) var(--tab-padding-x);
 
-        @extend .subtle-fill;
+        @extend %subtle-fill !optional;
         --subtle-fill-opacity: 0.05;
 
         display: block;

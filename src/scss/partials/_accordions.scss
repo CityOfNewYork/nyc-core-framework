@@ -41,8 +41,8 @@ $accordion-transition: 0.2s ease-out;
         border-top-color: inherit;
     }
 
-    @extend .hover-focus;
-    @extend .subtle-fill;
+    @extend %hover-focus;
+    @extend %subtle-fill !optional;
 
     @include add-caret("after");
 

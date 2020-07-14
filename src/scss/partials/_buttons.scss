@@ -52,7 +52,7 @@ button {
 
 button, 
 .btn{
-    @extend .hover-focus;
+    @extend %hover-focus;
 
     &[aria-disabled="true"] {
         cursor: not-allowed;
@@ -141,7 +141,7 @@ button,
         font-size: calc(var(--btn--icon-only-size) * 0.5);
     }
 
-    @extend .subtle-fill;
+    @extend %subtle-fill !optional;
 
     ::before{
         transition: opacity 0.5s;

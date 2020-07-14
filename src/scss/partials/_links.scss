@@ -29,7 +29,7 @@ In this file:
 //////////////////////////////////////////////
 
 a{
-    @extend .hover-focus;
+    @extend %hover-focus;
 
     color: inherit;
 

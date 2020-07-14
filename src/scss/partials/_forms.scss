@@ -58,7 +58,7 @@ fieldset{
     
     display: flex;
     
-    @extend .subtle-fill;
+    @extend %subtle-fill !optional;
     --subtle-fill-opacity: 0.05;
     color: inherit;
 }
@@ -183,7 +183,7 @@ fieldset{
     > div{
         margin-bottom: var(--s1);
 
-        @extend .subtle-fill;
+        @extend %subtle-fill !optional;
         --subtle-fill-opacity: 0.05;
     }
 

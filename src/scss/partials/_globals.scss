@@ -23,7 +23,6 @@ In this file:
 ////////////////////////////////////////
 
 %list-nav-style {
-
     list-style: none;
     line-height: normal;
 
@@ -35,11 +34,31 @@ In this file:
         font-weight: var(--base-font-weight-bold);
         text-decoration: underline;
     }
+}
 
+
+//////////////////////////////////////////////
+// C. Hover Focus
+//////////////////////////////////////////////
+
+%hover-focus {
+    &:hover,
+    &:focus {
+        &:not([class*="-icon"]):not([class*="field__btn"]):not([aria-disabled="true"]) {
+            text-decoration: underline;
+        }
+    }
+
+    &:focus {
+        outline-color: currentColor;
+        outline-style: dotted;
+        outline-width: calc(var(--default-border-width) * 2);
+        outline-offset: calc(var(--default-border-width) * -2);
+    }
 }
 
 ////////////////////////////////////////
-// C. Caret
+// D. Caret
 ////////////////////////////////////////
 
 $default-caret-size: 0.25em;
@@ -82,8 +101,9 @@ $default-caret-margin: 0.375em;
 // D. Subtle Fill
 ////////////////////////////////////////
 
-.subtle-fill {
-    --subtle-fill-opacity: 0; // hide until otherwise specified
+%subtle-fill {
+    // hide until otherwise specified
+    --subtle-fill-opacity: 0;
     position: relative;
 
     &::before {
