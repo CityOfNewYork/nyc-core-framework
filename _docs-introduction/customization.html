@@ -21,8 +21,8 @@ title: "Customization"
     <h2>CDN and Custom Properties</h2>
         <p>
             Our <a href="{{ site.baseurl }}/docs/get-started/#quickStartGuide">Quick Start
-                Guide</a> shows you how to include the Framework's core stylesheet via CDN. The Framework, many of our
-            style values are declared using custom properties (also known as CSS variables).
+                Guide</a> shows you how to include the Framework's core stylesheet via CDN. Within he Framework, a handful of our
+            styles are declared using custom properties (also known as CSS variables).
         </p>
         <p>
         If you're unfamiliar with custom properties, <a href="#1">read the MDN web docs</a>. They are similar to <a
@@ -245,20 +245,21 @@ title: "Customization"
 <!-- .container -->
 
 <div class="container medium my-4">
+
     <div class="accordion bc-dark rounded" id="custom-property-list">
 
         <button class="accordion__button h6"
-                id="acc-colors"
+                id="acc-color-system"
                 data-toggle="accordion"
-                aria-controls="acc-panel-group-a-01"
+                aria-controls="acc-panel-color-system"
                 aria-expanded="true">
-                Colors
+                    Color System
         </button>
 
         <div class="accordion__panel show"
-             id="acc-panel-group-a-01"
+             id="acc-panel-color-system"
              data-accordion="panel"
-             aria-labelledby="acc-colors"
+             aria-labelledby="acc-color-system"
              role="region">
             
             <div class="panel__content">
@@ -269,8 +270,11 @@ title: "Customization"
             
                     <div class="table-scroll__container">
 
+                        <table class="table table--va-middle table--edge" aria-labelledby="table-caption-color-system">
 
-                        <table class="table table--va-middle table--edge">
+                            <caption class=" screen-reader" id="table-caption-color-system">
+                              Color System Custom Properties 
+                            </caption>
 
                             <thead>
                                 <tr>
@@ -394,8 +398,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-a11y-link-color">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -418,8 +421,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-primary-text">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -442,8 +444,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-primary-border">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -466,8 +467,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-primary-link">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -490,8 +490,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-secondary-text">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -514,8 +513,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-secondary-border">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -538,8 +536,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-secondary-link">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -563,8 +560,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-dark-text">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -587,8 +583,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-dark-border">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -611,8 +606,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-dark-link">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -635,8 +629,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-light-text">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -707,8 +700,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-white-text">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -731,8 +723,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info"  data-modal-open="cp-white-border">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -755,8 +746,7 @@ title: "Customization"
                                                 </button>
                                             </li>
                                             <li>
-                                                <button class="btn btn--icon-only tc-secondary" title="Info"
-                                                    data-modal-open="example-modal">
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-white-link">
                                                     <span class="sr-only">Info</span>
                                                     <span class="fas fa-info" aria-hidden="true"></span>
                                                 </button>
@@ -775,13 +765,220 @@ title: "Customization"
                 <!-- .table-scroll -->
             
             </div>
-            <!-- panel__content -->
+            <!-- .panel__content -->
+
+        </div>
+        <!-- .accordion__panel -->
+
+        <button class="accordion__button h6"
+                id="acc-accordion"
+                data-toggle="accordion"
+                aria-controls="acc-panel-accordion"
+                aria-expanded="false">
+                    Accordion
+        </button>
+
+        <div class="accordion__panel"
+             id="acc-panel-accordion"
+             data-accordion="panel"
+             aria-labelledby="acc-accordion"
+             role="region">
+            
+            <div class="panel__content">
+
+                <div class="table-scroll fs-md" role="region">
+            
+                    {% include table-scroll-help.html %}
+            
+                    <div class="table-scroll__container">
+
+                        <table class="table table--va-middle table--edge" aria-labelledby="table-caption-color-system">
+
+                            <caption class=" screen-reader" id="table-caption-color-system">
+                              Accordion Custom Properties 
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Custom Property</th>
+                                    <th scope="col">Default Value</th>
+                                    <th scope="col">
+                                        <span class="screen-reader">
+                                            Actions
+                                        </span>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td data-prop>
+                                        --accordion-padding-x
+                                    </td>
+                                    <td data-val>
+                                        var(--s2)
+                                    </td>
+                                    <td>
+                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                            <li>
+                                                <button data-clipboard>
+                                                    Copy
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-x">
+                                                    <span class="sr-only">Info</span>
+                                                    <span class="fas fa-info" aria-hidden="true"></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-prop>
+                                        --accordion-padding-y
+                                    </td>
+                                    <td data-val>
+                                        var(--s2)
+                                    </td>
+                                    <td>
+                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                            <li>
+                                                <button data-clipboard>
+                                                    Copy
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-y">
+                                                    <span class="sr-only">Info</span>
+                                                    <span class="fas fa-info" aria-hidden="true"></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+            
+                        </table>
+            
+                    </div>
+                    <!-- .table-scroll__container -->
+
+                </div>
+                <!-- .table-scroll -->
+            
+            </div>
+            <!-- .panel__content -->
+
+        </div>
+        <!-- .accordion__panel -->
+
+        <button class="accordion__button h6"
+                id="acc-alerts"
+                data-toggle="accordion"
+                aria-controls="acc-panel-alerts"
+                aria-expanded="false">
+                    Alerts
+        </button>
+
+        <div class="accordion__panel"
+             id="acc-panel-accordion"
+             data-accordion="panel"
+             aria-labelledby="acc-accordion"
+             role="region">
+            
+            <div class="panel__content">
+
+                <div class="table-scroll fs-md" role="region">
+            
+                    {% include table-scroll-help.html %}
+            
+                    <div class="table-scroll__container">
+
+                        <table class="table table--va-middle table--edge" aria-labelledby="table-caption-color-system">
+
+                            <caption class=" screen-reader" id="table-caption-color-system">
+                              Accordion Custom Properties 
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Custom Property</th>
+                                    <th scope="col">Default Value</th>
+                                    <th scope="col">
+                                        <span class="screen-reader">
+                                            Actions
+                                        </span>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td data-prop>
+                                        --accordion-padding-x
+                                    </td>
+                                    <td data-val>
+                                        var(--s2)
+                                    </td>
+                                    <td>
+                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                            <li>
+                                                <button data-clipboard>
+                                                    Copy
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-x">
+                                                    <span class="sr-only">Info</span>
+                                                    <span class="fas fa-info" aria-hidden="true"></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-prop>
+                                        --accordion-padding-y
+                                    </td>
+                                    <td data-val>
+                                        var(--s2)
+                                    </td>
+                                    <td>
+                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                            <li>
+                                                <button data-clipboard>
+                                                    Copy
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="btn btn--icon-only tc-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-y">
+                                                    <span class="sr-only">Info</span>
+                                                    <span class="fas fa-info" aria-hidden="true"></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+            
+                        </table>
+            
+                    </div>
+                    <!-- .table-scroll__container -->
+
+                </div>
+                <!-- .table-scroll -->
+            
+            </div>
+            <!-- .panel__content -->
 
         </div>
         <!-- .accordion__panel -->
 
     </div>
     <!-- .accordion -->
+
 </div>
 <!-- .container -->
 
@@ -792,11 +989,13 @@ title: "Customization"
     </a>
 </div>
 
+<!-- Modals - Color System -->
+
 {% include
     custom-property-modal.html
     modal_id="cp-modal-primary"
     modal_title="--primary"
-    modal_description="Your theme's primary color."
+    modal_description="Your theme's global primary color."
     modal_link_text="Color System"
     modal_link_url="/docs/color-system"
 %}
@@ -805,7 +1004,7 @@ title: "Customization"
     custom-property-modal.html
     modal_id="cp-modal-secondary"
     modal_title="--secondary"
-    modal_description="Your theme's secondary color."
+    modal_description="Your theme's global secondary color."
     modal_link_text="Color System"
     modal_link_url="/docs/color-system"
 %}
@@ -814,7 +1013,7 @@ title: "Customization"
     custom-property-modal.html
     modal_id="cp-modal-dark"
     modal_title="--dark"
-    modal_description="Your theme's dark color."
+    modal_description="Your theme's global dark color."
     modal_link_text="Color System"
     modal_link_url="/docs/color-system"
 %}
@@ -823,7 +1022,144 @@ title: "Customization"
     custom-property-modal.html
     modal_id="cp-modal-light"
     modal_title="--light"
-    modal_description="Your theme's light color."
+    modal_description="Your theme's global light color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-a11y-link-color"
+    modal_title="--a11y-link-color"
+    modal_description="Link color used within your <em>white</em> and <em>light</em> theme colors."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-primary-text"
+    modal_title="--primary-text"
+    modal_description="Text color used within your <em>primary</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-primary-border"
+    modal_title="--primary-border"
+    modal_description="Border color used within your <em>primary</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-primary-link"
+    modal_title="--primary-link"
+    modal_description="Link color used within your <em>primary</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-secondary-text"
+    modal_title="--secondary-text"
+    modal_description="Text color used within your <em>secondary</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-secondary-border"
+    modal_title="--secondary-border"
+    modal_description="Border color used within your <em>secondary</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-secondary-link"
+    modal_title="--secondary-link"
+    modal_description="Link color used within your <em>secondary</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-dark-text"
+    modal_title="--dark-text"
+    modal_description="Text color used within your <em>dark</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-dark-border"
+    modal_title="--dark-border"
+    modal_description="Border color used within your <em>dark</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-dark-link"
+    modal_title="--dark-link"
+    modal_description="Link color used within your <em>dark</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-white-text"
+    modal_title="--white-text"
+    modal_description="Text color used within your <em>white</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-white-border"
+    modal_title="--white-border"
+    modal_description="Border color used within your <em>white</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-white-link"
+    modal_title="--white-link"
+    modal_description="Link color used within your <em>white</em> theme color."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+<!-- Modals - Accordion -->
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-modal-accordion-padding-x"
+    modal_title="--accordion-padding-x"
+    modal_description="Left and right padding amount for accordion button and content."
+    modal_link_text="Color System"
+    modal_link_url="/docs/color-system"
+%}
+
+{% include
+    custom-property-modal.html
+    modal_id="cp-modal-accordion-padding-y"
+    modal_title="--accordion-padding-y"
+    modal_description="Top and bottom padding amount for accordion button and content."
     modal_link_text="Color System"
     modal_link_url="/docs/color-system"
 %}

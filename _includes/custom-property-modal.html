@@ -6,7 +6,7 @@
 
 <div class="modal modal--slide bc-dark" id="{{ modal_id }}">
 
-    <div class="modal__overlay">
+    <div class="modal__overlay" data-modal-close>
 
         <div class="modal__container narrow rounded box-shadow-2">
 
@@ -31,9 +31,6 @@
                     {% else %}
                         Modal Description here.
                     {% endif %}
-                </p>
-                <p>
-                    Usage: <a href="{{ site.baseurl }}{{ include.modal_link_url }}">{{ include.modal_link_text }}</a>.
                 </p>
             </div>
 
