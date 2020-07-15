@@ -3,8 +3,9 @@
 In this file:
 
 // A. Variables
-// B. Functions
-// C. Mixins
+// B. Breakpoints Map
+// C. Breakpoints Functions
+// D. Breakpoints Mixins
 
 */
 
@@ -17,6 +18,10 @@ $bp-md: 760px;
 $bp-lg: 1000px;
 $bp-xl: 1340px;
 
+//////////////////////////////////////////////
+// B. Breakpoints Map
+//////////////////////////////////////////////
+
 $breakpoints: (
   sm: $bp-sm,
   md: $bp-md,
@@ -27,7 +32,7 @@ $breakpoints: (
 $breakpoints: map-merge((null : 0), $breakpoints);
 
 //////////////////////////////////////////////
-// B. Functions
+// C. Breakpoints Functions
 //////////////////////////////////////////////
 
 // Name of the next breakpoint, or null for the last breakpoint.
@@ -42,10 +47,8 @@ $breakpoints: map-merge((null : 0), $breakpoints);
 }
 
 //////////////////////////////////////////////
-// C. Mixins
+// D. Breakpoints Mixins
 //////////////////////////////////////////////
-
-// Breakpoint up
 
 @mixin breakpoints-up($breakpoint) {
   @if ($breakpoint != null) {
@@ -57,8 +60,6 @@ $breakpoints: map-merge((null : 0), $breakpoints);
     @content;
   }
 }
-
-// Breakpoint down
 
 @mixin breakpoints-down($breakpoint) {
   @if ($breakpoint != null) {
