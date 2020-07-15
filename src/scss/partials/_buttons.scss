@@ -28,10 +28,9 @@ In this file:
 //////////////////////////////////////////////
 
 button {
-
     cursor: pointer;
     
-    &:not([class="bc-"]){
+    &:not([class*="bc-"]){
         background-color: transparent;
     }
 
