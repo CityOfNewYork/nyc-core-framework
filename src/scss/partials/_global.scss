@@ -6,6 +6,7 @@ In this file:
 // B. List Nav Style
 // C. Caret
 // D. Subtle Fill
+// E. Body Width
 
 */
 
@@ -131,6 +132,9 @@ $default-caret-margin: 0.375em;
     }
 }
 
+////////////////////////////////////////
+// E. Body Width
+////////////////////////////////////////
 
 body {
     min-width: var(--body-min-width);
