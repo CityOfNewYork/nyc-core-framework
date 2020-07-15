@@ -59,23 +59,23 @@ In this file:
             border-left-style: var(--default-border-style);
         }
 
-        .border-none#{$mod} {
+        .border--0#{$mod} {
             border: none;
         }
 
-        .border-top-none#{$mod} {
+        .border-top--0#{$mod} {
             border-top: none;
         }
 
-        .border-right-none#{$mod} {
+        .border-right--0#{$mod} {
             border-right: none;
         }
 
-        .border-bottom-none#{$mod} {
+        .border-bottom--0#{$mod} {
             border-bottom: none;
         }
 
-        .border-left-none#{$mod} {
+        .border-left--0#{$mod} {
             border-left: none;
         }
     }
@@ -87,29 +87,25 @@ In this file:
 
 @each $name, $color-map in $theme-colors {
     
-    .border-#{$name} {
+    .border--#{$name} {
         border-color: map-get( $color-map, "swatch") !important;
     }
 
-    .border-top-#{$name} {
+    .border-top--#{$name} {
         border-top-color: map-get($color-map, "swatch") !important;
     }
 
-    .border-right-#{$name} {
+    .border-right--#{$name} {
         border-right-color: map-get($color-map, "swatch") !important;
     }
 
-    .border-bottom-#{$name} {
+    .border-bottom--#{$name} {
         border-bottom-color: map-get($color-map, "swatch") !important;
     }
 
-    .border-left-#{$name} {
+    .border-left--#{$name} {
         border-left-color: map-get($color-map, "swatch") !important;
     }
-}
-
-.border-input{
-    border-color: var(--input-border-color);
 }
 
 //////////////////////////////////////////////

@@ -12,14 +12,12 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-// $bp-xs: 325px;
 $bp-sm: 400px; 
 $bp-md: 760px;
 $bp-lg: 1000px;
 $bp-xl: 1340px;
 
 $breakpoints: (
-  // xs: $bp-xs,
   sm: $bp-sm,
   md: $bp-md,
   lg: $bp-lg,
