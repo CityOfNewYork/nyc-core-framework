@@ -2,13 +2,21 @@
 
 In this file:
 
-// A. Card
+// A. Variables
 // B. I.E. 11 Support
 
 */
 
 //////////////////////////////////////////////
-// A. Card
+// A. Variables
+//////////////////////////////////////////////
+
+:root{
+    --card-padding: var(--s2);
+}
+
+//////////////////////////////////////////////
+// B. Card Block
 //////////////////////////////////////////////
 
 .card {
@@ -17,25 +25,28 @@ In this file:
     
     display: flex;
     flex-direction: column;
-
-    @at-root .card__header {
-        font-size: var(--font-size-md);
-        padding: var(--s1) var(--s2);
-    }
-
-    @at-root 
-    .card__body,
-    .card__footer {
-        padding: var(--s2);
-    }
-
-    @at-root .card__footer {
-        margin-top: auto;
-    }
 }
 
 //////////////////////////////////////////////
-// B. I.E. 11 Support
+// C. Card Elements
+//////////////////////////////////////////////
+
+.card__head {
+    font-size: var(--font-size-md);
+    padding: calc(var(--card-padding) * 0.5) var(--card-padding);
+}
+
+.card__body,
+.card__foot {
+    padding: var(--card-padding);
+}
+
+.card__foot {
+    margin-top: auto;
+}
+
+//////////////////////////////////////////////
+// D. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),

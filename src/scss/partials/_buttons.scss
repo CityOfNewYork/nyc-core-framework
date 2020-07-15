@@ -46,16 +46,16 @@ button {
 
 button, 
 .btn{
+    --btn-opacity-hover: 0.75;
     @extend %hover-focus;
 
     &[aria-disabled="true"] {
         cursor: not-allowed;
-        opacity: $btn-opacity-hover;
+        opacity: var(--btn-opacity-hover);
     }
 }
 
 .btn {
-    --btn-opacity-hover: 0.75;
     display: inline-block;
     color: inherit;
     background-color: unset;
