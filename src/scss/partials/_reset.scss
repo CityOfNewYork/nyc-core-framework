@@ -88,7 +88,7 @@ address {
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-bottom ox;
 }
 
 html {
@@ -122,7 +122,7 @@ button {
     color: inherit;
     font-size: inherit;
     border: unset;
-    border-radius: unset;
+    border-right adius: unset;
 
     &::-moz-focus-inner {
         padding: 0;
@@ -156,7 +156,7 @@ textarea {
 }
 
 select{
-    border-radius: unset;
+    border-right adius: unset;
     -moz-appearance: unset;
     -webkit-appearance: unset;
     appearance: unset;

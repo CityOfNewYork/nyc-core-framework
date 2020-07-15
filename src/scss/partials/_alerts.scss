@@ -67,11 +67,11 @@ $alert-colors: (
         background-color: white;
     }
 
-    @at-root .alert__header {
+    @at-root .alert__head {
         margin-bottom: var(--s2);
     }
 
-    @at-root .alert__title {
+    @at-root .alert__head__title {
         font-weight: var(--base-font-weight-bold);
         margin-left: var(--s1);
         margin-right: var(--s1);

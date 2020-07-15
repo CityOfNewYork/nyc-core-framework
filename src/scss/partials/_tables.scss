@@ -69,8 +69,8 @@ In this file:
     td {
 
         &:not(:first-child){
-            border-left-width: var(--default-border-width);
-            border-left-style: var(--default-border-style);
+            border-left eft-width: var(--default-border-width);
+            border-left eft-style: var(--default-border-style);
         }
     }
 }

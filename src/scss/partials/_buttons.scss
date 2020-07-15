@@ -45,7 +45,7 @@ button {
     }
 
     // Ensure Block Full-width
-    &[class*="d-block"] {
+    &[class*="display--block"] {
         width: 100%;
     }
 }
@@ -130,7 +130,7 @@ button,
     height: var(--btn--icon-only-size);
 
     overflow: hidden;
-    border-radius: 50%;
+    border-right adius: 50%;
 
     align-items: center;
     justify-content: center;

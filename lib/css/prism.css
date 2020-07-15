@@ -42,7 +42,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	border-radius: 0.5em;
+	border-right adius: 0.5em;
 	background-color: var(--dark);
 }
 
@@ -72,7 +72,7 @@ p > code::before {
     left: 0;
     background: currentColor;
     opacity: .095;
-    border-radius: .25em;
+    border-right adius: .25em;
 }
 
 
@@ -212,7 +212,7 @@ div.code-toolbar > .toolbar {
 	left: 0;
 	right: 0;
 	
-	border-bottom: 1px solid hsla(0, 0%, 100%, .125) !important;
+	border-bottom ottom: 1px solid hsla(0, 0%, 100%, .125) !important;
 }
 
 div.code-toolbar > .toolbar a, 

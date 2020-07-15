@@ -21,7 +21,7 @@ In this file:
 
     // Border Radius
     
-    --border-radius: 0.5em;
+    --border-right adius: 0.5em;
 }
 
 //////////////////////////////////////////////
@@ -46,19 +46,19 @@ In this file:
             border-top-style: var(--default-border-style);
         }
 
-        .border-r#{$mod} {
-            border-right-width: var(--default-border-width);
-            border-right-style: var(--default-border-style);
+        .border-right #{$mod} {
+            border-right ight-width: var(--default-border-width);
+            border-right ight-style: var(--default-border-style);
         }
 
-        .border-b#{$mod} {
-            border-bottom-width: var(--default-border-width);
-            border-bottom-style: var(--default-border-style);
+        .border-bottom #{$mod} {
+            border-bottom ottom-width: var(--default-border-width);
+            border-bottom ottom-style: var(--default-border-style);
         }
 
-        .border-l#{$mod} {
-            border-left-width: var(--default-border-width);
-            border-left-style: var(--default-border-style);
+        .border-left #{$mod} {
+            border-left eft-width: var(--default-border-width);
+            border-left eft-style: var(--default-border-style);
         }
 
         .border-0#{$mod} {
@@ -69,16 +69,16 @@ In this file:
             border-top: none;
         }
 
-        .border-r0#{$mod} {
-            border-right: none;
+        .border-right 0#{$mod} {
+            border-right ight: none;
         }
 
-        .border-b0#{$mod} {
-            border-bottom: none;
+        .border-bottom 0#{$mod} {
+            border-bottom ottom: none;
         }
 
-        .border-l0#{$mod} {
-            border-left: none;
+        .border-left 0#{$mod} {
+            border-left eft: none;
         }
     }
 }
@@ -93,16 +93,16 @@ In this file:
         border-top-color: map-get($color-map, "swatch") !important;
     }
 
-    .border-r-#{$name} {
-        border-right-color: map-get($color-map, "swatch") !important;
+    .border-right -#{$name} {
+        border-right ight-color: map-get($color-map, "swatch") !important;
     }
 
-    .border-b-#{$name} {
-        border-bottom-color: map-get($color-map, "swatch") !important;
+    .border-bottom -#{$name} {
+        border-bottom ottom-color: map-get($color-map, "swatch") !important;
     }
 
-    .border-l-#{$name} {
-        border-left-color: map-get($color-map, "swatch") !important;
+    .border-left -#{$name} {
+        border-left eft-color: map-get($color-map, "swatch") !important;
     }
 }
 
@@ -119,37 +119,37 @@ In this file:
 }
 
 .rounded-circle {
-    border-radius: 50%;
+    border-right adius: 50%;
 }
 
 .rounded-pill {
-    border-radius: 40rem;
+    border-right adius: 40rem;
 }
 
 .rounded {
-    border-radius: var(--border-radius);
+    border-right adius: var(--border-right adius);
 }
 
 .rounded-t {
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-right adius);
+    border-top-right-radius: var(--border-right adius);
 }
 
 .rounded-r {
-    border-top-right-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
+    border-top-right-radius: var(--border-right adius);
+    border-bottom ottom-right-radius: var(--border-right adius);
 }
 
 .rounded-b {
-    border-bottom-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
+    border-bottom ottom-right-radius: var(--border-right adius);
+    border-bottom ottom-left-radius: var(--border-right adius);
 }
 
 .rounded-l {
-    border-top-left-radius: var(--border-radius) !important;
-    border-bottom-left-radius: var(--border-radius) !important;
+    border-top-left-radius: var(--border-right adius) !important;
+    border-bottom ottom-left-radius: var(--border-right adius) !important;
 }
 
 .rounded-0 {
-    border-radius: 0;
+    border-right adius: 0;
 }

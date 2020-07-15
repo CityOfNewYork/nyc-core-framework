@@ -32,9 +32,9 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="r
     background-color: transparent;
     color: inherit;
 
-    border-bottom-width: var(--default-border-width);
-    border-bottom-style: var(--default-border-style);
-    border-bottom-color: currentColor;
+    border-bottom ottom-width: var(--default-border-width);
+    border-bottom ottom-style: var(--default-border-style);
+    border-bottom ottom-color: currentColor;
 }
 
 select option {
@@ -196,9 +196,9 @@ fieldset{
         margin: 0 !important;
         padding: var(--form-field-padding-y) var(--form-field-padding-x);
 
-        border-bottom-width: var(--default-border-width) !important;
-        border-bottom-style: var(--default-border-style) !important;
-        border-bottom-color: currentColor !important;
+        border-bottom ottom-width: var(--default-border-width) !important;
+        border-bottom ottom-style: var(--default-border-style) !important;
+        border-bottom ottom-color: currentColor !important;
     }
 
 }

@@ -18,18 +18,18 @@ In this file:
     display: flex;
     flex-direction: column;
 
-    @at-root .card__header {
+    @at-root .card__head {
         font-size: var(--font-size-md);
         padding: var(--s1) var(--s2);
     }
 
     @at-root 
     .card__body,
-    .card__footer {
+    .card__foot {
         padding: var(--s2);
     }
 
-    @at-root .card__footer {
+    @at-root .card__foot {
         margin-top: auto;
     }
 }

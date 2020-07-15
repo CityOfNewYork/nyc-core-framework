@@ -208,7 +208,7 @@ figure {
 
 hr {
     height: unset;
-    @extend .border-t !optional;
+    @extend .border-top !optional;
 }
 
 blockquote {

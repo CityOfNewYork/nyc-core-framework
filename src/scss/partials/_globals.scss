@@ -49,9 +49,9 @@ $default-caret-margin: 0.375em;
 
 @mixin caret-icon( $size: $default-caret-size ) {
     border-top: $size solid;
-    border-right: $size solid transparent;
-    border-bottom: 0;
-    border-left: $size solid transparent;
+    border-right ight: $size solid transparent;
+    border-bottom ottom: 0;
+    border-left eft: $size solid transparent;
 }
 
 // Add Caret ::aftter
@@ -94,7 +94,7 @@ $default-caret-margin: 0.375em;
         bottom: 0;
         left: 0;
 
-        border-radius: inherit;
+        border-right adius: inherit;
         background-color: currentColor;
         pointer-events: none;
 

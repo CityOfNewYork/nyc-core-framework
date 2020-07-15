@@ -29,7 +29,7 @@ In this file:
     --primary-border: hsla(0, 0%, 0%, 0.25);
     --secondary-text: var(--dark);
 
-    --attention: var(--primary);
+    --white-confirm: var(--primary);
 
     --base-font-size: 20px;
     --base-line-height: 1.5;
@@ -141,7 +141,7 @@ td > p{
         margin-right: 0.25rem;
         
         display: inline-block;
-        border-radius: 50%;
+        border-right adius: 50%;
 
         background-color: hsla(0, 0%, 0%, 0.5);
         opacity: 0.5;
@@ -170,7 +170,7 @@ td > p{
             margin-left: 0.5rem;
             margin-right: 0.5rem;
 
-            border-radius: 0;
+            border-right adius: 0;
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
         }

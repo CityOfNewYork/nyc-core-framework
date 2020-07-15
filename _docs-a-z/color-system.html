@@ -12,11 +12,11 @@ title: "Color System"
 <!-- .container -->
 
 <div class="container narrow my-4">
-    <div class="alert alert--attention my-3">
-        <div class="alert__header">
+    <div class="alert alert--confirm my-3">
+        <div class="alert__head">
             <p>
                 <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-                <span class="alert__title">Color Accessibility</span>
+                <span class="alert__head__title">Color Accessibility</span>
             </p>
         </div>
         <div class="alert__body">
@@ -43,13 +43,13 @@ title: "Color System"
     <div class="grid grid--gap-2 grid--cells-fill--md fs-md" {{ site.style_default_theme_colors }}>
 
         <div class="grid__cell">
-            <div class="p-2 bc-primary d-none--lg">
+            <div class="p-2 bc-primary display--none--lg">
                 <p class="mb-0"><strong>Primary</strong></p>
                 <p class="mb-0">#25caa4</p>
             </div>
             <!-- px-2 -->
-                <div class="aspect-ratio--1by1 d-none d-block--lg">
-                    <div class="aspect-ratio__element bc-primary">
+                <div class="aspect-ratio--1by1 display--none display--block--lg">
+                    <div class="aspect-ratio__content bc-primary">
                         <div class="m-2">
                             <p class="mb-0"><strong>Primary</strong></p>
                             <p class="mb-0">#25caa4</p>
@@ -61,13 +61,13 @@ title: "Color System"
         <!-- col -->
 
         <div class="grid__cell">
-            <div class="p-2 bc-secondary d-none--lg">
+            <div class="p-2 bc-secondary display--none--lg">
                 <p class="mb-0"><strong>Secondary</strong></p>
                 <p class="mb-0">#6500d6</p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio--1by1 d-none d-block--lg">
-                <div class="aspect-ratio__element bc-secondary">
+            <div class="aspect-ratio--1by1 display--none display--block--lg">
+                <div class="aspect-ratio__content bc-secondary">
                     <div class="m-2">
                         <p class="mb-0"><strong>Secondary</strong></p>
                         <p class="mb-0">#6500d6</p>
@@ -79,13 +79,13 @@ title: "Color System"
         <!-- col -->
 
         <div class="grid__cell">
-            <div class="p-2 bc-dark d-none--lg">
+            <div class="p-2 bc-dark display--none--lg">
                 <p class="mb-0"><strong>Dark</strong></p>
                 <p class="mb-0">#262345</p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio--1by1 d-none d-block--lg">
-                <div class="aspect-ratio__element bc-dark">
+            <div class="aspect-ratio--1by1 display--none display--block--lg">
+                <div class="aspect-ratio__content bc-dark">
                     <div class="m-2">
                         <p class="mb-0"><strong>Dark</strong></p>
                         <p class="mb-0">#262345</p>
@@ -97,13 +97,13 @@ title: "Color System"
         <!-- col -->
 
         <div class="grid__cell">
-            <div class="p-2 bc-light d-none--lg">
+            <div class="p-2 bc-light display--none--lg">
                 <p class="mb-0"><strong>Light</strong></p>
                 <p class="mb-0">#f1f4f6</p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio--1by1 d-none d-block--lg">
-                <div class="aspect-ratio__element bc-light">
+            <div class="aspect-ratio--1by1 display--none display--block--lg">
+                <div class="aspect-ratio__content bc-light">
                     <div class="m-2">
                         <p class="mb-0"><strong>Light</strong></p>
                         <p class="mb-0">#f1f4f6</p>
@@ -115,13 +115,13 @@ title: "Color System"
         <!-- col -->
 
         <div class="grid__cell">
-            <div class="p-2 bc-white border d-none--lg">
+            <div class="p-2 bc-white border display--none--lg">
                 <p class="mb-0"><strong>White</strong></p>
                 <p class="mb-0">#ffffff</p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio--1by1 d-none d-block--lg">
-                <div class="aspect-ratio__element bc-white border">
+            <div class="aspect-ratio--1by1 display--none display--block--lg">
+                <div class="aspect-ratio__content bc-white border">
                     <div class="m-2">
                         <p class="mb-0"><strong>White</strong></p>
                         <p class="mb-0">#ffffff</p>
@@ -308,7 +308,7 @@ title: "Color System"
 
         <div class="card bc-primary rounded border my-3">
 
-            <div class="card__header border-b">
+            <div class="card__head border-bottom ">
                 <p>Walt Whitman</p>
             </div>
 
@@ -328,7 +328,7 @@ title: "Color System"
 
         <div class="card bc-secondary rounded border my-3">
 
-            <div class="card__header border-b">
+            <div class="card__head border-bottom ">
                 <p>Walt Whitman</p>
             </div>
 
@@ -348,7 +348,7 @@ title: "Color System"
 
         <div class="card bc-dark rounded border my-3">
 
-            <div class="card__header border-b">
+            <div class="card__head border-bottom ">
                 <p>Walt Whitman</p>
             </div>
 
@@ -368,7 +368,7 @@ title: "Color System"
 
         <div class="card bc-light rounded border my-3">
 
-            <div class="card__header border-b">
+            <div class="card__head border-bottom ">
                 <p>Walt Whitman</p>
             </div>
 
@@ -388,7 +388,7 @@ title: "Color System"
 
         <div class="card bc-white rounded border my-3">
 
-            <div class="card__header border-b">
+            <div class="card__head border-bottom ">
                 <p>Walt Whitman</p>
             </div>
 
@@ -425,7 +425,7 @@ title: "Color System"
         <code class="language-html">
             &lt;div class="card bc-primary rounded border my-3">
 
-                &lt;div class="card__header border-b"&gt;
+                &lt;div class="card__head border-bottom "&gt;
                     &lt;p&gt;Walt Whitman&lt;/p&gt;
                 &lt;/div&gt;
 
