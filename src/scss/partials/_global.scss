@@ -137,6 +137,7 @@ $default-caret-margin: 0.375em;
 ////////////////////////////////////////
 
 body {
+    overflow-x: hidden;
     min-width: var(--body-min-width);
     max-width: var(--body-max-width);
     

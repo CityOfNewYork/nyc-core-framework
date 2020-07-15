@@ -213,7 +213,6 @@ html:not([class*="bc-"]){
 body {
     @extend .bc-white !optional;
     @extend .box-shadow-2 !optional;
-    overflow-x: hidden;
 }
 
 //////////////////////////////////////////////
