@@ -18,20 +18,10 @@ In this file:
     --narrow-width: 40rem; // Approximately 55 characters wide for readability
     --medium-width: calc( var(--narrow-width) * 1.5);
     --wide-width: calc( var(--narrow-width) * 2.5);
-
-    --body-min-width: 325px;
-    --body-max-width: 2000px;
-}
-
-body {
-    min-width: var(--body-min-width);
-    max-width: var(--body-max-width);
-    
-    @extend %center-x !optional;
 }
 
 //////////////////////////////////////////////
-// B. Container Class
+// B. Container Utility
 //////////////////////////////////////////////
 
 .container {
@@ -40,7 +30,7 @@ body {
 }
 
 //////////////////////////////////////////////
-// C. Width Variants
+// C. Narrow, Medium, and Wide Utilities
 //////////////////////////////////////////////
 
 [class*="narrow"], 

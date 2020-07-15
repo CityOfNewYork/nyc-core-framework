@@ -10,6 +10,15 @@ In this file:
 */
 
 ////////////////////////////////////////
+// A. Variable
+////////////////////////////////////////
+
+:root {
+    --body-min-width: 325px;
+    --body-max-width: 2000px;
+}
+
+////////////////////////////////////////
 // A. Center X
 ////////////////////////////////////////
 
@@ -120,4 +129,12 @@ $default-caret-margin: 0.375em;
 
         opacity: var(--subtle-fill-opacity);
     }
+}
+
+
+body {
+    min-width: var(--body-min-width);
+    max-width: var(--body-max-width);
+    
+    @extend %center-x !optional;
 }
