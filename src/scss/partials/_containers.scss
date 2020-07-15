@@ -26,6 +26,7 @@ In this file:
 body {
     min-width: var(--body-min-width);
     max-width: var(--body-max-width);
+    
     @extend %center-x !optional;
 }
 
