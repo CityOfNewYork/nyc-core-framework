@@ -28,7 +28,7 @@ In this file:
     // Associated Primary Colors
 
     --primary-text: white;
-    --primary-border: hsla(0, 0%, 0%, 0.125);
+    --primary-border: hsla(0, 0%, 0%, 0.25);
     --primary-link: currentColor;
     --primary-confirm: #16db93;
     --primary-warn: #ff73aa;
@@ -124,12 +124,6 @@ $theme-colors: (
 
 body:not([class*="bc-"]),
 [class*="bc-"] {
-    --background-color: white;
-    --text-color: black;
-    --border-color: gray;
-    --link-color: currentColor;
-    --confirm-color: green;
-
     background-color: var(--background-color);
     color: var(--text-color);
     border-color: var(--border-color);
@@ -184,22 +178,30 @@ body:not([class*="bc-"]),
     }
 }
 
-@each $name, $color-map in $theme-colors {
-    $background: map-get($color-map, "swatch");
-    $text: map-get($color-map, "text");
-    $border: map-get($color-map, "border");
-    $link: map-get($color-map, "link");
 
-    $confirm: map-get($color-map, "confirm");
-    $warn: map-get($color-map, "warn");
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-    .bc-#{$name} {
-        --background-color: #{$background};
-        --text-color: #{$text};
-        --border-color: #{$border};
-        --link-color: #{$link};
-        --confirm-color: #{$confirm};
-        --warn-color: #{$warn};
+        @each $name, $color-map in $theme-colors {
+            $background: map-get($color-map, "swatch");
+            $text: map-get($color-map, "text");
+            $border: map-get($color-map, "border");
+            $link: map-get($color-map, "link");
+
+            $confirm: map-get($color-map, "confirm");
+            $warn: map-get($color-map, "warn");
+
+            .bc-#{$name}#{$mod} {
+                --background-color: #{$background};
+                --text-color: #{$text};
+                --border-color: #{$border};
+                --link-color: #{$link};
+                --confirm-color: #{$confirm};
+                --warn-color: #{$warn};
+            }
+        }
+
     }
 }
 
@@ -208,7 +210,7 @@ html:not([class*="bc-"]){
     background-color: var(--default-background-color);
 }
 
-body:not([class*="bc-"]){
+body {
     @extend .bc-white !optional;
     @extend .box-shadow-2 !optional;
     overflow-x: hidden;

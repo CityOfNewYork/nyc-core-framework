@@ -31,7 +31,7 @@ button {
 
     cursor: pointer;
     
-    &:not([class]){
+    &:not([class="bc-"]){
         background-color: transparent;
     }
 
@@ -47,7 +47,8 @@ button {
 button, 
 .btn{
     --btn-opacity-hover: 0.75;
-    @extend %hover-focus;
+
+    @extend %hover-focus !optional;
 
     &[aria-disabled="true"] {
         cursor: not-allowed;
