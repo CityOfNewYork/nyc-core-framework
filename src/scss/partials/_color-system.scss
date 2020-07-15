@@ -17,7 +17,7 @@ In this file:
     // Theme Color Palette
 
     --primary: #3a0ca3;
-    --secondary: #7209b7;
+    --secondary: #64cc7e;
     --dark: #191b35;
     --light: #f1f4f6;
 
@@ -35,7 +35,7 @@ In this file:
 
     // Associated Secondary Colors
 
-    --secondary-text: white;
+    --secondary-text: var(--dark);
     --secondary-border: hsla(0, 0%, 0%, 0.25);
     --secondary-link: currentColor;
     --secondary-confirm: #41e0f2;
