@@ -1,16 +1,29 @@
+/*
 
-$display-types: none, inline, inline-block, block, flex;
+In this file:
+
+// A. Variables
+// B. Display Utilities
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+$display-types: block, flex, none, inline, inline-block;
+
+//////////////////////////////////////////////
+// B. Display Utilities
+//////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         @each $value in $display-types {
-            .d-#{$value}#{$mod} {
+            .display--#{$value}#{$mod} {
                 display: $value !important;
-                &[class*=collapse] {
-                    display: block;
-                }
             }
         }
     }
