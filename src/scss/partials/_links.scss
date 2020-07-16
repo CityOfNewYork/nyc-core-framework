@@ -45,33 +45,3 @@ a{
 p > a {
     text-decoration: underline;
 }
-
-//////////////////////////////////////////////
-// C. Ancor Links
-//////////////////////////////////////////////
-
-html {
-    scroll-behavior: smooth;
-}
-
-a[data-link="external"]::after {
-
-    display: none;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f35d";
-
-
-}
-
-[data-fa-pseudo-element=":after"]{
-    font-size: 0.6em;
-    color: currentColor;
-    margin-left: var(--s1);
-    vertical-align: baseline;
-}

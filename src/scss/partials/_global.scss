@@ -9,6 +9,7 @@ In this file:
 // E. Caret
 // F. Subtle Fill
 // G. Body Width
+// H. HTML Scroll Behavior
 
 */
 
@@ -143,4 +144,12 @@ body {
     max-width: var(--body-max-width);
     
     @extend %center-horizontal !optional;
+}
+
+////////////////////////////////////////
+// H. HTML Scroll Behavior
+////////////////////////////////////////
+
+html {
+    scroll-behavior: smooth;
 }

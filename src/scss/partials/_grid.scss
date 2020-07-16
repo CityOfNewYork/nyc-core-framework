@@ -3,10 +3,10 @@
 In this file:
 
 // A. Variables
-// B. Grid Configuration
-// C. gap
-// C. Colums
-// D. Column Classes
+// B. Grid Block
+// C. Grid Gap Modifier
+// D. Grid Size Utilities and Modifiers
+// E. Grid Cell Size Utilities and Modifiers
 
 */
 
@@ -17,7 +17,7 @@ In this file:
 $columns: 12;
 
 //////////////////////////////////////////////
-// B. Grid Configuration
+// B. Grid Block
 //////////////////////////////////////////////
 
 .grid {
@@ -44,7 +44,7 @@ $columns: 12;
 }
 
 //////////////////////////////////////////////
-// B. Grid gap
+// C. Grid Gap Modifier
 //////////////////////////////////////////////
 
 [class*="grid--gap"] {
@@ -72,7 +72,7 @@ $columns: 12;
 }
 
 //////////////////////////////////////////////
-// C. Create Grid Classes
+// D. Grid Size Utilities and Modifiers
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
@@ -103,7 +103,7 @@ $columns: 12;
 }
 
 //////////////////////////////////////////////
-// D. Create Column Classes
+// E. Grid Cell Size Utilities and Modifiers
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
