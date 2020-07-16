@@ -34,10 +34,6 @@ button {
         background-color: transparent;
     }
 
-    &[aria-selected=true] {
-        font-weight: bold;
-    }
-
     &[class*="display--block"] {
         width: 100%;
     }

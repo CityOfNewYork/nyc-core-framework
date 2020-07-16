@@ -11,7 +11,7 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-$display-types: block, flex, none, inline, inline-block;
+$display-types: block, inline, inline-block, flex, none;
 
 //////////////////////////////////////////////
 // B. Display Utilities
@@ -23,7 +23,7 @@ $display-types: block, flex, none, inline, inline-block;
 
         @each $value in $display-types {
             .display--#{$value}#{$mod} {
-                display: $value !important;
+                display: $value;
             }
         }
     }
