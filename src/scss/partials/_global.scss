@@ -2,16 +2,18 @@
 
 In this file:
 
-// A. Center X
-// B. List Nav Style
-// C. Caret
-// D. Subtle Fill
-// E. Body Width
+// A. Variables
+// B. Center Horizontal
+// C. List Nav Style
+// D. Hover Focus
+// E. Caret
+// F. Subtle Fill
+// G. Body Width
 
 */
 
 ////////////////////////////////////////
-// A. Variable
+// A. Variables
 ////////////////////////////////////////
 
 :root {
@@ -20,16 +22,16 @@ In this file:
 }
 
 ////////////////////////////////////////
-// A. Center X
+// B. Horizontal Center
 ////////////////////////////////////////
 
-%center-x{
+%center-horizontal{
     margin-left: auto;
     margin-right: auto;
 }
 
 ////////////////////////////////////////
-// B. List Nav Style
+// C. List Nav Style
 ////////////////////////////////////////
 
 %list-nav-style {
@@ -46,9 +48,8 @@ In this file:
     }
 }
 
-
 //////////////////////////////////////////////
-// C. Hover Focus
+// D. Hover Focus
 //////////////////////////////////////////////
 
 %hover-focus {
@@ -68,7 +69,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// D. Caret
+// E. Caret
 ////////////////////////////////////////
 
 $default-caret-size: 0.25em;
@@ -108,7 +109,7 @@ $default-caret-margin: 0.375em;
 }
 
 ////////////////////////////////////////
-// D. Subtle Fill
+// F. Subtle Fill
 ////////////////////////////////////////
 
 %subtle-fill {
@@ -133,7 +134,7 @@ $default-caret-margin: 0.375em;
 }
 
 ////////////////////////////////////////
-// E. Body Width
+// G. Body Width
 ////////////////////////////////////////
 
 body {
@@ -141,5 +142,5 @@ body {
     min-width: var(--body-min-width);
     max-width: var(--body-max-width);
     
-    @extend %center-x !optional;
+    @extend %center-horizontal !optional;
 }

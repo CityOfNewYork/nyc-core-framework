@@ -36,7 +36,7 @@ In this file:
 [class*="narrow"], 
 [class*="medium"],
 [class*="wide"] {
-    @extend %center-x !optional;
+    @extend %center-horizontal !optional;
 }
 
 @each $breakpoint in map-keys($breakpoints) {
