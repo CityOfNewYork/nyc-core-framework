@@ -1,10 +1,19 @@
+/*
+
+In this file:
+
+// A. Gradient Veneer Utility
+// B. Gradient Veneer Modifiers
+
+*/
+
 ////////////////////////////////////////
-// E. Gradient Utility
+// A. Gradient Veneer Utility
 ////////////////////////////////////////
 
 [class*="gradient-veneer"]{
     --gradient-direction: to bottom;
-    --gradient-start: 0;
+    --gradient-start: 25%;
     --gradient-opacity: 1;
 
     position: relative;
@@ -41,6 +50,26 @@
     }
 }
 
+////////////////////////////////////////
+// B. Gradient Veneer Modifiers
+////////////////////////////////////////
+
+.gradient-veneer--top {
+    --gradient-direction: to top;
+}
+
+.gradient-veneer--right {
+    --gradient-direction: to right;
+}
+
+.gradient-veneer--bottom {
+    --gradient-direction: to bottom;
+}
+
+.gradient-veneer--left {
+    --gradient-direction: to left;
+}
+
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
@@ -53,5 +82,6 @@
                 display: block !important;
             }
         }
+        
     }
 }
