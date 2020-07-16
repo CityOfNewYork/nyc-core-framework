@@ -2,7 +2,7 @@
 // E. Gradient Utility
 ////////////////////////////////////////
 
-[class*="gradient-overlay"]{
+[class*="gradient-veneer"]{
     --gradient-direction: to bottom;
     --gradient-start: 50%;
     --gradient-opacity: 1;
@@ -23,13 +23,32 @@
         opacity: var(--gradient-opacity);
         display: none;
     }
+
+    &[class*="-veneer--top"]{
+        --gradient-direction: to top;
+    }
+
+    &[class*="-veneer--right"]{
+        --gradient-direction: to right;
+    }
+
+    &[class*="-veneer--bottom"]{
+        --gradient-direction: to bottom;
+    }
+
+    &[class*="-veneer--left"]{
+        --gradient-direction: to left;
+    }
 }
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .gradient-overlay#{$mod} {
+        .gradient-veneer--top#{$mod},
+        .gradient-veneer--right#{$mod},
+        .gradient-veneer--bottom#{$mod},
+        .gradient-veneer--left#{$mod} {
             &::after{
                 display: block !important;
             }

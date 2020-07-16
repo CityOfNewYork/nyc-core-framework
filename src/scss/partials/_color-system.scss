@@ -179,7 +179,7 @@ body:not([class*="bc-"]),
 
     // Gradient Overlays
 
-    [class*="gradient-overlay"]{
+    [class*="gradient-veneer"]{
         --gradient-color: var(--background-color);
     }
 }
