@@ -1,11 +1,10 @@
 ////////////////////////////////////////
-// E. Gradients
+// E. Gradient Utility
 ////////////////////////////////////////
 
-[class*="gradient-overlay--"]{
+[class*="gradient-overlay"]{
     --gradient-direction: to bottom;
-    --gradient-start: 25%;
-    --gradient-color: currentColor;
+    --gradient-start: 0;
     --gradient-opacity: 1;
 
     position: relative;
@@ -22,53 +21,21 @@
         background-clip: border-box;
 
         opacity: var(--gradient-opacity);
+        display: none;
     }
 }
 
-// @mixin linear-gradient(
-
-//     $direction: to bottom,
-    
-//     $first-color: black,
-//     $first-color-opacity: 0,
-//     $first-color-position: 0%,
-
-//     $second-color: black,
-//     $second-color-opacity: 0.9,
-
-//     $second-color-position: 100%
-    
-//     ) {
-//         background-image: linear-gradient(
-//             $direction, rgba($first-color, $first-color-opacity) $first-color-position,
-//         rgba($second-color, $second-color-opacity) $second-color-position
-//         );
-//     }
-
-// [class*="gradient-"] {
-//     position: relative;
-//     overflow: hidden;
-
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         top: -1px;
-//         left: -1px;
-//         right: -1px;
-//         bottom: -1px;
-//     }
-// }
-
 // // Gradient Overlays
 
-// .gradient-y-black::before {
-//     @include linear-gradient;
-// }
 
-// .gradient-x-white::before {
-//     @include linear-gradient($direction: to bottom, $first-color: white, $second-color: white, $first-color-opacity: 0, $second-color-opacity: 1, $first-color-position: 0%, $second-color-position: 100%);
-// }
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-// .gradient-x-primary::before {
-//     @include linear-gradient( to right, var(--primary), var(--primary), 1, 0, 0%, 100% );
-// }
+        .gradient-overlay#{$mod} {
+            &::after{
+                display: block !important;
+            }
+        }
+    }
+}

@@ -176,6 +176,12 @@ body:not([class*="bc-"]),
         color: var(--background-color);
         background-color: var(--warn-color);
     }
+
+    // Gradient Overlays
+
+    [class*="gradient-overlay"]{
+        --gradient-color: var(--background-color);
+    }
 }
 
 
