@@ -36,17 +36,20 @@ In this file:
 }
 
 .backdrop__image {
-    min-width: 100%;
+    img{
+        min-width: 100%;
+        min-height: 100%;
+    }
 }
 
 .backdrop__cover {
     overflow: hidden;
-    display: flex;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 
+    display: flex;
     align-items: center;
 
     > * {
@@ -90,10 +93,11 @@ In this file:
 
 .backdrop--fixed {
     display: flex;
-    align-items: center;
-    
-    min-height: var(--backdrop-fixed-height);
+    flex-wrap: wrap;
+    align-content: center;
 
+    min-height: var(--backdrop-fixed-height);
+    
     > *:not(.backdrop__credit) {
         position: relative;
         z-index: auto;
@@ -101,6 +105,7 @@ In this file:
     }
 
     .backdrop__image {
+        overflow: hidden;
         position: absolute;
         height: 100%;
         object-fit: cover;
@@ -108,6 +113,7 @@ In this file:
 
     .backdrop__cover {
         position: relative;
+        margin-top: 0;
     }
     
     @include breakpoints-down(md) {
@@ -129,12 +135,6 @@ screen and (-ms-high-contrast: none) {
         .backdrop__cover {
             min-height: var(--backdrop-fixed-height);
         }
-
-        .backdrop__image {
-            height: auto;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
     }
+    
 }
