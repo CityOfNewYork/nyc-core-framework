@@ -11,12 +11,6 @@ In this file:
 // A. Modal Styles
 //////////////////////////////////////////////
 
-// .modal, 
-// .modal__overlay{
-//   overflow: hidden;
-//   height: 100vh;
-// }
-
 .modal {
   position: relative;
   display: none;
@@ -93,13 +87,11 @@ In this file:
 
 .modal__body, 
 .modal__footer{
-  // width: 100%;
   padding: var(--s2);
 }
 
 .modal__footer {
   // Put styles here
-  // align-self: flex-end;
 }
 
 //////////////////////////////////////////////
