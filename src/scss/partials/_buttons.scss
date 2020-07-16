@@ -38,8 +38,8 @@ button {
         font-weight: bold;
     }
 
-    &[class="display--block"] {
-        width: 100% !important;
+    &[class*="display--block"] {
+        width: 100%;
     }
 }
 
