@@ -13,6 +13,7 @@ In this file:
 
 :root{
   --modal-padding: var(--s2);
+si  --modal-overlay-opacity: 0.85;
 }
 
 //////////////////////////////////////////////
@@ -20,12 +21,41 @@ In this file:
 //////////////////////////////////////////////
 
 .modal {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  justify-content: center;
+
+  z-index: 10000;
+  padding: var(--modal-padding);
+
+  // Use psuedo element for background
+
+  &[class*="theme-"]{
+    background-color: transparent !important;
+  }
+  
+  &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: var(--modal-overlay-opacity);
+  }
 
   display: none;
 
   &[aria-hidden="false"] {
-    display: block;
+    display: flex;
   }
 
 }
@@ -33,36 +63,6 @@ In this file:
 //////////////////////////////////////////////
 // A. Modal Elements
 //////////////////////////////////////////////
-
-.modal__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    align-items: center;
-    
-    z-index: 10000;
-    padding: var(--modal-padding);
-    
-    // Use psuedo element for background
-    
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0.85;
-    }
-    
-}
 
 .modal__content {
   @extend %center-horizontal !optional;
@@ -76,8 +76,8 @@ In this file:
   display: flex;
   flex-direction: column;
   
-  margin-top: var(--s2);
-  margin-bottom: var(--s2);
+  margin-top: var(--modal-padding);
+  margin-bottom: var(--modal-padding);
 
 }
 
@@ -94,13 +94,13 @@ In this file:
   }
 }
 
-.modal__body{
+.modal__body {
   flex-shrink: 1; 
   overflow-y: auto;
 }
 
 .modal__body, 
-.modal__foot{
+.modal__foot {
   padding: var(--modal-padding);
 }
 
@@ -108,43 +108,26 @@ In this file:
 // A. Modal Animation
 //////////////////////////////////////////////
 
-@keyframes mmfadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
+// @keyframes mmfadeIn {
+//     from { opacity: 0; }
+//       to { opacity: 1; }
+// }
 
-@keyframes mmfadeOut {
-    from { opacity: 1; }
-      to { opacity: 0; }
-}
+// @keyframes mmslideIn {
+//   from { transform: translateY(5%); }
+//     to { transform: translateY(0); }
+// }
 
-@keyframes mmslideIn {
-  from { transform: translateY(15%); }
-    to { transform: translateY(0); }
-}
+// // .modal--slide[aria-hidden="false"]::before {
+// //   animation: mmfadeIn .3s;
+// // }
 
-@keyframes mmslideOut {
-    from { transform: translateY(0); }
-    to { transform: translateY(-10%); }
-}
+// .modal--slide[aria-hidden="false"] .modal__content {
+//   animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+//   animation: mmfadeIn .3s cubic-bezier(0, 0, .2, 1);
+// }
 
-.modal--slide[aria-hidden="false"] .modal__overlay {
-  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-
-.modal--slide[aria-hidden="false"] .modal__content {
-  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
-}
-
-.modal--slide[aria-hidden="true"] .modal__overlay {
-  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-
-.modal--slide[aria-hidden="true"] .modal__content {
-  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
-}
-
-.modal--slide .modal__content,
-.modal--slide .modal__overlay {
-  will-change: transform;
-}
+// .modal--slide .modal__content,
+// .modal--slide::before {
+//   will-change: transform;
+// }

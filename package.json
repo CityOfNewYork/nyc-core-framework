@@ -22,12 +22,13 @@
     "@babel/plugin-transform-shorthand-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "babel-loader": "^8.0.6",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "core-js": "^3.6.4",
     "element-closest-polyfill": "^1.0.0",
     "npm-install-missing": "^0.1.4"
-  }
+  },
+  "main": "webpack.config.js"
 }

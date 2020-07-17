@@ -416,10 +416,10 @@ window.onload = () => {
     }
 
     for (const modal of modalList) {
-        const modalOverlay = modal.querySelector(".modal__overlay");
+        // const modalOverlay = modal.querySelector(".modal__overlay");
         const modalContainer = modal.querySelector(".modal__content");
 
-        modalOverlay.setAttribute("tabindex",  "-1");
+        // modalOverlay.setAttribute("tabindex",  "-1");
 
         modalContainer.setAttribute("role", "dialog");
         modalContainer.setAttribute("aria-modal", "true");
