@@ -150,12 +150,12 @@ In this file:
             border-bottom-left-radius: var(--border-radius) !important;
         }
 
-        .rounded-circle#{$mod} {
-            border-radius: 100%;
-        }
-
         .rounded-pill#{$mod} {
             border-radius: 40em;
+        }
+
+        .rounded-circle#{$mod} {
+            border-radius: 100%;
         }
 
     }
