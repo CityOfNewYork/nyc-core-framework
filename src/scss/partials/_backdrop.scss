@@ -43,7 +43,7 @@ In this file:
 }
 
 .backdrop__cover {
-    overflow: hidden;
+    position: static;
     top: 0;
     right: 0;
     bottom: 0;
@@ -93,8 +93,8 @@ In this file:
 
 .backdrop--fixed {
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
 
     min-height: var(--backdrop-fixed-height);
     
@@ -107,13 +107,20 @@ In this file:
     .backdrop__image {
         overflow: hidden;
         position: absolute;
-        height: 100%;
-        object-fit: cover;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        img{
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
     }
 
     .backdrop__cover {
         position: relative;
-        margin-top: 0;
+        // align-self: flex-start;
     }
     
     @include breakpoints-down(md) {
