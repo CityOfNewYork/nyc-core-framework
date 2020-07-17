@@ -117,37 +117,33 @@ In this file:
 }
 
 .rounded-circle {
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .rounded-pill {
-    border-radius: 40rem;
+    border-radius: 40em;
 }
 
 .rounded {
     border-radius: var(--border-radius);
 }
 
-.rounded-t {
+.rounded-top {
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
 }
 
-.rounded-r {
+.rounded-right {
     border-top-right-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
 }
 
-.rounded-b {
+.rounded-bottom {
     border-bottom-right-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
 }
 
-.rounded-l {
+.rounded-left {
     border-top-left-radius: var(--border-radius) !important;
     border-bottom-left-radius: var(--border-radius) !important;
-}
-
-.rounded-0 {
-    border-radius: 0;
 }
