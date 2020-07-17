@@ -19,11 +19,11 @@ In this file:
     --default-border-style: solid;
 
     // Border Radius
-    --border-radius: 0.5em;
+    --border-radius: 0.75em;
 }
 
 //////////////////////////////////////////////
-// B. Responsive Border Utilies
+// B. Border Utilies
 //////////////////////////////////////////////
 
 [class*="border"]:not([class*="theme-"]){
@@ -85,26 +85,32 @@ In this file:
 // C. Color Border Utilities
 //////////////////////////////////////////////
 
-@each $name, $color-map in $theme-colors {
-    
-    .border-#{$name} {
-        border-color: map-get( $color-map, "swatch") !important;
-    }
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-    .border-top-#{$name} {
-        border-top-color: map-get($color-map, "swatch") !important;
-    }
+        @each $name, $color-map in $theme-colors {
+            .border-#{$name}#{$mod} {
+                border-color: map-get( $color-map, "swatch") !important;
+            }
 
-    .border-right-#{$name} {
-        border-right-color: map-get($color-map, "swatch") !important;
-    }
+            .border-top-#{$name}#{$mod} {
+                border-top-color: map-get($color-map, "swatch") !important;
+            }
 
-    .border-bottom-#{$name} {
-        border-bottom-color: map-get($color-map, "swatch") !important;
-    }
+            .border-right-#{$name}#{$mod} {
+                border-right-color: map-get($color-map, "swatch") !important;
+            }
 
-    .border-left-#{$name} {
-        border-left-color: map-get($color-map, "swatch") !important;
+            .border-bottom-#{$name}#{$mod} {
+                border-bottom-color: map-get($color-map, "swatch") !important;
+            }
+
+            .border-left-#{$name}#{$mod} {
+                border-left-color: map-get($color-map, "swatch") !important;
+            }
+        }
+
     }
 }
 
@@ -116,34 +122,41 @@ In this file:
     overflow: hidden;
 }
 
-.rounded-circle {
-    border-radius: 100%;
-}
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-.rounded-pill {
-    border-radius: 40em;
-}
+        .rounded#{$mod} {
+            border-radius: var(--border-radius);
+        }
 
-.rounded {
-    border-radius: var(--border-radius);
-}
+        .rounded-top#{$mod} {
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+        }
 
-.rounded-top {
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-}
+        .rounded-right#{$mod} {
+            border-top-right-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+        }
 
-.rounded-right {
-    border-top-right-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-}
+        .rounded-bottom#{$mod} {
+            border-bottom-right-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+        }
 
-.rounded-bottom {
-    border-bottom-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-}
+        .rounded-left#{$mod} {
+            border-top-left-radius: var(--border-radius) !important;
+            border-bottom-left-radius: var(--border-radius) !important;
+        }
 
-.rounded-left {
-    border-top-left-radius: var(--border-radius) !important;
-    border-bottom-left-radius: var(--border-radius) !important;
+        .rounded-circle#{$mod} {
+            border-radius: 100%;
+        }
+
+        .rounded-pill#{$mod} {
+            border-radius: 40em;
+        }
+
+    }
 }
