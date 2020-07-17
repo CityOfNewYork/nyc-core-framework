@@ -2,13 +2,21 @@
 
 In this file:
 
-// A. Modal Styles
+// A. Variables
 // B. Modal Animation
 
 */
 
 //////////////////////////////////////////////
-// A. Modal Styles
+// A. Variables
+//////////////////////////////////////////////
+
+:root{
+  --modal-padding: var(--s2);
+}
+
+//////////////////////////////////////////////
+// A. Modal Block
 //////////////////////////////////////////////
 
 .modal {
@@ -21,20 +29,27 @@ In this file:
 
 }
 
+//////////////////////////////////////////////
+// A. Modal Elements
+//////////////////////////////////////////////
+
 .modal__overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     align-items: center;
-    z-index: 10000;
-    padding: var(--s2);
     
-    // Use Psuedo element for background
+    z-index: 10000;
+    padding: var(--modal-padding);
+    
+    // Use psuedo element for background
     
     &::before {
         content: "";
@@ -49,21 +64,19 @@ In this file:
 }
 
 .modal__container {
-  @extend .box-shadow-3 !optional;
+  @extend %center-horizontal !optional;
+
   position: relative;
   z-index: auto;
   width: 100%;
-  max-height: calc(100vh - (var(--s2) * 2));
+  max-height: calc(100vh - (var(--modal-padding) * 2));
   background-color: inherit;
   
   display: flex;
   flex-direction: column;
-
-  margin-left: auto;
-  margin-right: auto;
   
-  margin-top: var(--s3);
-  margin-bottom: var(--s3);
+  margin-top: var(--s2);
+  margin-bottom: var(--s2);
 
 }
 
@@ -71,7 +84,7 @@ In this file:
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: var(--s1) var(--s2);
+  padding: calc(var(--modal-padding) * 0.5) var(--modal-padding);
 
   h1, h2, h3, h4, h5, h6 { margin-bottom: 0; }
 
@@ -87,11 +100,7 @@ In this file:
 
 .modal__body, 
 .modal__footer{
-  padding: var(--s2);
-}
-
-.modal__footer {
-  // Put styles here
+  padding: var(--modal-padding);
 }
 
 //////////////////////////////////////////////

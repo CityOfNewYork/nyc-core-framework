@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body class="h-100vh">
 
     <main id="skip-header-content" role="main">
 
@@ -41,9 +41,9 @@
 
                 <figure class="container narrow my-4">
 
-                    <button class="btn btn--outline tc-secondary display-block my-3" data-modal-open="modal-1">Open Modal 1</button>
+                    <button class="btn theme-primary display-block rounded-pill my-3" data-modal-open="modal-1">Open Modal 1</button>
 
-                    <button class="btn btn--outline tc-secondary display-block my-3" data-modal-open="modal-2">Open Modal 2</button>
+                    <button class="btn theme-secondary display-block my-3" data-modal-open="modal-2">Open Modal 2</button>
 
                 </figure>
 
@@ -55,15 +55,15 @@
         
     </main>
 
-   <div class="modal modal--slide alert--warn-dark" id="modal-1" role="dialog">
+   <div class="modal modal--slide" id="modal-1" role="dialog">
 
        <div class="modal__overlay">
 
-           <div class="modal__container narrow rounded" aria-labelledby="modal-1-title">
+           <div class="modal__container narrow medium--md box-shadow-3 rounded" aria-labelledby="modal-1-title">
 
-               <header class="modal__header border-bottom">
-                   <h2 class="h5" id="modal-1-title">
-                       Modal Title One
+               <header class="modal__header theme-light">
+                   <h2 class="h4" id="modal-1-title">
+                       Modal Title
                    </h2>
                    <button class="btn btn--icon-only" data-modal-close>
                        <span class="screen-reader-only">Close Modal</span>
