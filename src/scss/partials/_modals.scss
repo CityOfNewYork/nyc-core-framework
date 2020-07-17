@@ -36,8 +36,6 @@ In this file:
   z-index: 10000;
   padding: var(--modal-padding);
 
-  // Use psuedo element for background
-
   &[class*="theme-"]{
     background-color: transparent !important;
   }
@@ -81,7 +79,7 @@ In this file:
 
 }
 
-.modal__head {
+.modal__content__head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -94,13 +92,13 @@ In this file:
   }
 }
 
-.modal__body {
+.modal__content__body {
   flex-shrink: 1; 
   overflow-y: auto;
 }
 
-.modal__body, 
-.modal__foot {
+.modal__content__body, 
+.modal__content__foot {
   padding: var(--modal-padding);
 }
 
@@ -108,26 +106,37 @@ In this file:
 // A. Modal Animation
 //////////////////////////////////////////////
 
-// @keyframes mmfadeIn {
-//     from { opacity: 0; }
-//       to { opacity: 1; }
-// }
+@keyframes fadeIn {
+  
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: var(--modal-overlay-opacity);
+  }
+}
 
-// @keyframes mmslideIn {
-//   from { transform: translateY(5%); }
-//     to { transform: translateY(0); }
-// }
+@keyframes slideIn {
 
-// // .modal--slide[aria-hidden="false"]::before {
-// //   animation: mmfadeIn .3s;
-// // }
+  from {
+    transform: translateY(15%);
+  }
+  
+  to {
+    transform: translateY(0);
+  }
+}
 
-// .modal--slide[aria-hidden="false"] .modal__content {
-//   animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
-//   animation: mmfadeIn .3s cubic-bezier(0, 0, .2, 1);
-// }
+@supports ( display: grid ) {
 
-// .modal--slide .modal__content,
-// .modal--slide::before {
-//   will-change: transform;
-// }
+  .modal[aria-hidden="false"] .modal__content {
+    animation-name: slideIn;
+    animation-duration: 0.2s;
+  }
+
+  .modal[aria-hidden="false"]::before{
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+  }
+}
