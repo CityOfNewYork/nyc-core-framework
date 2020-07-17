@@ -35,7 +35,7 @@ In this file:
         border-color: currentColor !important;
     }
 
-    &:not([class*="bc-"]):not([class*="--inverse"]) {
+    &:not([class*="theme-"]):not([class*="--inverse"]) {
 
         &::before {
             content: "";

@@ -26,7 +26,7 @@ In this file:
 // B. Responsive Border Utilies
 //////////////////////////////////////////////
 
-[class*="border"]:not([class*="bc-"]){
+[class*="border"]:not([class*="theme-"]){
     border-color: inherit;
 }
 

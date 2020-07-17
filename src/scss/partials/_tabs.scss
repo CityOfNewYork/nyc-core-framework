@@ -6,7 +6,7 @@ In this file:
 // B. Tabs 
 // C. Tabs Span
 // D. Tab Panel
-// E. Tabs With 'bc-*' Class
+// E. Tabs With 'theme-*' Class
 
 */
 
@@ -174,12 +174,12 @@ In this file:
 }
 
 ////////////////////////////////////////
-// E. With 'bc-*' Class
+// E. With 'theme-*' Class
 ////////////////////////////////////////
 
 .tabs,
 [data-tab-group] {
-    &[class*="bc-"] {
+    &[class*="theme-"] {
         ::after {
             display: none;
         }

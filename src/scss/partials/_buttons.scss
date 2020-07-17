@@ -30,7 +30,7 @@ In this file:
 button {
     cursor: pointer;
     
-    &:not([class*="bc-"]){
+    &:not([class*="theme-"]){
         background-color: transparent;
     }
 
