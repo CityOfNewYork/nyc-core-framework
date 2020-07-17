@@ -54,19 +54,19 @@ In this file:
 // B. Gradient Veneer Modifiers
 ////////////////////////////////////////
 
-.gradient-veneer--top {
+.gradient-veneer-top {
     --gradient-direction: to top;
 }
 
-.gradient-veneer--right {
+.gradient-veneer-right {
     --gradient-direction: to right;
 }
 
-.gradient-veneer--bottom {
+.gradient-veneer-bottom {
     --gradient-direction: to bottom;
 }
 
-.gradient-veneer--left {
+.gradient-veneer-left {
     --gradient-direction: to left;
 }
 
@@ -74,10 +74,10 @@ In this file:
     @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .gradient-veneer--top#{$mod},
-        .gradient-veneer--right#{$mod},
-        .gradient-veneer--bottom#{$mod},
-        .gradient-veneer--left#{$mod} {
+        .gradient-veneer-top#{$mod},
+        .gradient-veneer-right#{$mod},
+        .gradient-veneer-bottom#{$mod},
+        .gradient-veneer-left#{$mod} {
             &::after{
                 display: block !important;
             }
