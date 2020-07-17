@@ -144,7 +144,7 @@ body:not([class*="theme-"]),
     .tabs [role="tabpanel"],
     [data-toggle="dropdown"] ~ ul, 
     .modal__overlay::before,
-    .modal__container,
+    .modal__content,
     .table-scroll__container::after {
         background-color: var(--background-color);
     }

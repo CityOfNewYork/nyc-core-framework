@@ -21,7 +21,7 @@ In this file:
 
 .modal {
   position: relative;
-  
+
   display: none;
 
   &[aria-hidden="false"] {
@@ -64,7 +64,7 @@ In this file:
     
 }
 
-.modal__container {
+.modal__content {
   @extend %center-horizontal !optional;
 
   position: relative;
@@ -81,7 +81,7 @@ In this file:
 
 }
 
-.modal__header {
+.modal__head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -100,7 +100,7 @@ In this file:
 }
 
 .modal__body, 
-.modal__footer{
+.modal__foot{
   padding: var(--modal-padding);
 }
 
@@ -132,7 +132,7 @@ In this file:
   animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.modal--slide[aria-hidden="false"] .modal__container {
+.modal--slide[aria-hidden="false"] .modal__content {
   animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
 }
 
@@ -140,11 +140,11 @@ In this file:
   animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.modal--slide[aria-hidden="true"] .modal__container {
+.modal--slide[aria-hidden="true"] .modal__content {
   animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
 }
 
-.modal--slide .modal__container,
+.modal--slide .modal__content,
 .modal--slide .modal__overlay {
   will-change: transform;
 }

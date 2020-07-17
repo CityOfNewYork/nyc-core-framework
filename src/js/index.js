@@ -417,7 +417,7 @@ window.onload = () => {
 
     for (const modal of modalList) {
         const modalOverlay = modal.querySelector(".modal__overlay");
-        const modalContainer = modal.querySelector(".modal__container");
+        const modalContainer = modal.querySelector(".modal__content");
 
         modalOverlay.setAttribute("tabindex",  "-1");
 
