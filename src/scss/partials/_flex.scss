@@ -78,23 +78,23 @@ In this file:
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .justify-content-start#{$mod} {
-            justify-content: flex-start;
+            justify-content: flex-start !important;
         }
 
         .justify-content-end#{$mod} {
-            justify-content: flex-end;
+            justify-content: flex-end !important;
         }
 
         .justify-content-center#{$mod} {
-            justify-content: center;
+            justify-content: center !important;
         }
 
         .justify-content-between#{$mod} {
-            justify-content: space-between;
+            justify-content: space-between !important;
         }
 
         .justify-content-around#{$mod} {
-            justify-content: space-around;
+            justify-content: space-around !important;
         }
     }
 }
@@ -108,27 +108,27 @@ In this file:
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .align-content-start {
-            align-content: flex-start;
+            align-content: flex-start !important;
         }
 
         .align-content-end {
-            align-content: flex-end;
+            align-content: flex-end !important;
         }
 
         .align-content-center {
-            align-content: center;
+            align-content: center !important;
         }
 
         .align-content-between {
-            align-content: space-between;
+            align-content: space-between !important;
         }
 
         .align-content-around {
-            align-content: space-around;
+            align-content: space-around !important;
         }
 
         .align-content-stretch {
-            align-content: stretch;
+            align-content: stretch !important;
         }
         
     }
@@ -143,19 +143,19 @@ In this file:
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .align-items-start#{$mod} {
-            align-items: flex-start;
+            align-items: flex-start !important;
         }
 
         .align-items-end#{$mod} {
-            align-items: flex-end;
+            align-items: flex-end !important;
         }
 
         .align-items-center#{$mod} {
-            align-items: center;
+            align-items: center !important;
         }
 
         .align-items-baseline#{$mod} {
-            align-items: baseline;
+            align-items: baseline !important;
         }
 
         .align-items-stretch#{$mod} {
@@ -174,15 +174,15 @@ In this file:
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         .align-self-auto#{$mod} {
-            align-self: auto;
+            align-self: auto !important;
         }
 
         .align-self-start#{$mod} {
-            align-self: flex-end;
+            align-self: flex-start !important;
         }
 
         .align-self-center#{$mod} {
-            align-self: center;
+            align-self: center !important;
         }
 
         .align-self-end#{$mod} {
@@ -190,11 +190,11 @@ In this file:
         }
 
         .align-self-baseline#{$mod} {
-            align-self: baseline;
+            align-self: baseline !important;
         }
 
         .align-self-stretch#{$mod} {
-            align-self: stretch;
+            align-self: stretch !important;
         }
         
     }
