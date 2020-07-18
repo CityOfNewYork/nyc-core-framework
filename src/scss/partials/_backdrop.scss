@@ -14,7 +14,7 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
-    --backdrop-fixed-height: 500px;
+    --backdrop-fixed-height: 400px;
 }
 
 //////////////////////////////////////////////
@@ -43,14 +43,14 @@ In this file:
 }
 
 .backdrop__cover {
-    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-
-    display: flex;
-    align-items: center;
 
     > * {
         width: 100%;
@@ -94,7 +94,7 @@ In this file:
 .backdrop--fixed {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 
     min-height: var(--backdrop-fixed-height);
     
@@ -112,7 +112,7 @@ In this file:
         bottom: 0;
         right: 0;
 
-        img{
+        img {
             object-fit: cover;
             object-position: 50% 50%;
         }
@@ -120,7 +120,6 @@ In this file:
 
     .backdrop__cover {
         position: relative;
-        // align-self: flex-start;
     }
     
     @include breakpoints-down(md) {
@@ -132,16 +131,12 @@ In this file:
 // D. I.E. 11 Support
 //////////////////////////////////////////////
 
-@media screen and (-ms-high-contrast: active),
-screen and (-ms-high-contrast: none) {
+// @media screen and (-ms-high-contrast: active),
+// screen and (-ms-high-contrast: none) {
     
-    .backdrop--fixed {
-        overflow: hidden;
-        min-height: auto;
+//    .backdrop--fixed {
+//      .backdrop__cover {
+//        }
+//    }
 
-        .backdrop__cover {
-            min-height: var(--backdrop-fixed-height);
-        }
-    }
-    
-}
+// }
