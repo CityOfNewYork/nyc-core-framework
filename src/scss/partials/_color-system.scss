@@ -190,7 +190,7 @@ body:not([class*="theme-"]),
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
         @each $name, $color-map in $theme-colors {
-            $background: map-get($color-map, "swatch");
+            $swatch: map-get($color-map, "swatch");
             $text: map-get($color-map, "text");
             $border: map-get($color-map, "border");
             $link: map-get($color-map, "link");
@@ -199,7 +199,7 @@ body:not([class*="theme-"]),
             $warn: map-get($color-map, "warn");
 
             .theme-#{$name}#{$mod} {
-                --background-color: #{$background};
+                --background-color: #{$swatch};
                 --text-color: #{$text};
                 --border-color: #{$border};
                 --link-color: #{$link};
@@ -208,12 +208,12 @@ body:not([class*="theme-"]),
             }
 
             .background-#{$name}#{$mod}{
-                --background-color: #{$background};
+                --background-color: #{$swatch};
                 background-color: var(--background-color);
             }
 
             .text-#{$name}#{$mod}{
-                --text-color: #{$text};
+                --text-color: #{$swatch};
                 color: var(--text-color);
             }
         }

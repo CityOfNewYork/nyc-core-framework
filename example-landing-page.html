@@ -34,7 +34,7 @@
 
     <header id="global-header">
 
-        <div class="container fs-md py-1 theme-dark" id="nyc-head">
+        <div class="container fs-md padding-y-1 theme-dark" id="nyc-head">
 
             <div class="grid grid--cells-fit justify-content-between">
 
@@ -151,7 +151,7 @@
 
     <main id="skip-header-target">
 
-        <div class="backdrop backdrop--stack--md theme-primary theme-dark--md">
+        <section class="backdrop backdrop--stack--md theme-primary theme-dark--md">
 
             <div class="backdrop__image gradient-veneer-bottom">
                 <img class="opacity-50" src="./images/backdrop-example-01.jpg" alt="Placeholder">
@@ -159,7 +159,7 @@
 
             <div class="backdrop__cover">
 
-                <div class="container narrow medium--md py-4">
+                <div class="container narrow medium--md padding-y-4">
 
                     <h1 class="banner-headline text-align-center text-shadow--md mb-4">
                         Lorem ipsum dolor sit amet consectetur
@@ -194,10 +194,10 @@
                 <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
             </div>
 
-        </div>
+        </section>
         <!-- .backdrop -->
 
-        <div class="container narrow medium--lg my-5">
+        <section class="container narrow medium--lg margin-y-5">
 
             <div class="grid grid--gap-2 grid--cells-6--lg">
 
@@ -254,12 +254,12 @@
             </div>
             <!-- .grid -->
 
-        </div>
+        </section>
         <!-- .container -->
 
-        <div class="theme-light py-5">
+        <section class="theme-light padding-y-5">
 
-            <div class="container narrow medium--lg mb-3">
+            <div class="container narrow medium--lg margin-bottom-3">
                 <div class="grid grid--cells-fit--md justify-content-between align-items-baseline">
                     <div class="grid__cell">
                         <h2>Programs and Initiatives</h2>
@@ -434,104 +434,13 @@
                 </div>
                 <!-- .grid -->
 
-
             </div>
             <!-- .container -->
 
-        </div>
+        </section>
         <!-- .theme-light -->
 
-    </main>
-
-    <div class="modal modal--slide theme-dark" id="global-search">
-
-        <div class="modal__overlay">
-
-            <div class="modal__content medium box-shadow-2">
-
-                <header class="modal__content__head border-bottom">
-                    <ul class="nav nav--horizontal--md fs-md" role="list">
-                        <li>
-                            <label class="form-group__radio">
-                                <input type="radio" name="radio-group-example" checked required>
-                                <span class="radio__label">
-                                    Search this website
-                                </span>
-                            </label>
-                        </li>
-
-                        <li>
-                            <label class="form-group__radio">
-                                <input type="radio" name="radio-group-example" required>
-                                <span class="radio__label">
-                                    Search all NYC.gov
-                                </span>
-                            </label>
-                        </li>
-
-                    </ul>
-                    <button class="btn btn--icon-only" data-modal-close>
-                        <span class="screen-reader-only">Close Modal</span>
-                        <span class="fas fa-times"></span>
-                    </button>
-                </header>
-
-                <div class="modal__content__body" id="modal-1-content">
-                    <div class="form-group">
-
-                        <div class="form-group__field--has-btn">
-
-                            <input class="field__input" type="text" name="global_search">
-                            <span class="field__label">Enter Search Phrase</span>
-
-                            <button class="field__btn" title="Search">
-                                <span class="screen-reader-only">Search</span>
-                                <span class="fas fa-search"></span>
-                            </button>
-
-                        </div>
-
-                    </div>
-                    <!-- .form-group -->
-                </div>
-
-            </div>
-            <!-- .modal__content -->
-
-        </div>
-        <!-- .modal__overlay -->
-
-    </div>
-    <!-- #global-search -->
-
-    <div class="modal modal--slide theme-dark" id="global-language">
-
-        <div class="modal__overlay">
-
-            <div class="modal__content medium box-shadow-2" aria-labelledby="modal-language-title">
-
-                <header class="modal__content__head border-bottom">
-                    <h2 class="h5" id="modal-language-title">Website Translation</h2>
-                    <button class="btn btn--icon-only" data-modal-close>
-                        <span class="screen-reader-only">Close Modal</span>
-                        <span class="fas fa-times"></span>
-                    </button>
-                </header>
-
-                <div class="modal__content__body" id="modal-language-content">
-                    <div id="google_translate_element"></div>
-                </div>
-
-            </div>
-            <!-- .modal__content -->
-
-        </div>
-        <!-- .modal__overlay -->
-
-    </div>
-    <!-- #global-language -->
-
-    <div class="py-4">
+    <section class="padding-y-4">
 
         <div class="container narrow medium--lg">
 
@@ -559,9 +468,89 @@
 
         </div>
 
-    </div>
+    </section>
 
-    <footer class="theme-dark fs-md py-4">
+    </main>
+
+    <div class="modal theme-dark" id="global-search">
+
+        <div class="modal__content medium box-shadow-2">
+
+            <header class="modal__content__head border-bottom">
+                <ul class="nav nav--horizontal--md fs-md" role="list">
+                    <li>
+                        <label class="form-group__radio">
+                            <input type="radio" name="radio-group-example" checked required>
+                            <span class="radio__label">
+                                Search this website
+                            </span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label class="form-group__radio">
+                            <input type="radio" name="radio-group-example" required>
+                            <span class="radio__label">
+                                Search all NYC.gov
+                            </span>
+                        </label>
+                    </li>
+
+                </ul>
+                <button class="btn btn--icon-only" data-modal-close>
+                    <span class="screen-reader-only">Close Modal</span>
+                    <span class="fas fa-times"></span>
+                </button>
+            </header>
+
+            <div class="modal__content__body" id="modal-1-content">
+                <div class="form-group">
+
+                    <div class="form-group__field--has-btn">
+
+                        <input class="field__input" type="text" name="global_search">
+                        <span class="field__label">Enter Search Phrase</span>
+
+                        <button class="field__btn" title="Search">
+                            <span class="screen-reader-only">Search</span>
+                            <span class="fas fa-search"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+                <!-- .form-group -->
+            </div>
+
+        </div>
+        <!-- .modal__content -->
+
+    </div>
+    <!-- #global-search -->
+
+    <div class="modal theme-dark" id="global-language">
+
+        <div class="modal__content medium box-shadow-2" aria-labelledby="modal-language-title">
+
+            <header class="modal__content__head border-bottom">
+                <h2 class="h5" id="modal-language-title">Website Translation</h2>
+                <button class="btn btn--icon-only" data-modal-close>
+                    <span class="screen-reader-only">Close Modal</span>
+                    <span class="fas fa-times"></span>
+                </button>
+            </header>
+
+            <div class="modal__content__body" id="modal-language-content">
+                <div id="google_translate_element"></div>
+            </div>
+
+        </div>
+        <!-- .modal__content -->
+
+    </div>
+    <!-- #global-language -->
+
+    <footer class="theme-dark fs-md padding-y-4">
 
         <h2 class="screen-reader-only">
             Page Footer
@@ -668,7 +657,7 @@
 
                 <div class="grid__cell">
 
-                    <h2 class="h6 mb-2">
+                    <h2 class="h6 margin-bottom-2">
                         <a href="https://www1.nyc.gov/">
                             <span class="screen-reader-only">Visit</span>
                             <strong>NYC.gov</strong>
@@ -699,7 +688,7 @@
 
                 <div class="grid__cell">
 
-                    <a class="display-block mb-2" href="https://www1.nyc.gov" title="Go to nyc.gov" data-logo="brand">
+                    <a class="display-block margin-bottom-2" href="https://www1.nyc.gov" title="Go to nyc.gov" data-logo="brand">
                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="40"
                             viewBox="0 0 120 40">
                             <title>nyc-bubble-logo-footer</title>
