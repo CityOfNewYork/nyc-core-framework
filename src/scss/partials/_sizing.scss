@@ -16,7 +16,7 @@ $widths: (
 );
 
 @each $key, $value in $widths {
-    .w-#{$key} {
+    .width-#{$key} {
         width: $value;
     }
 }
@@ -27,7 +27,7 @@ $heights: (
 );
 
 @each $key, $value in $heights {
-    .h-#{$key} {
+    .height-#{$key} {
         height: $value;
     }
 }
