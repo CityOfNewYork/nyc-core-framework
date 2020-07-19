@@ -419,6 +419,19 @@ fieldset{
     }
 }
 
+[dir="rtl"] {
+
+    .form-group__radio>.radio__label::before,
+    .form-group__radio>input[type="radio"],
+
+    .form-group__checkbox>.checkbox__label::before,
+    .form-group__checkbox>.checkbox__label::after,
+    .form-group__checkbox>input[type="checkbox"] {
+        left: unset;
+        right: 0;
+    }
+
+}
 
 //////////////////////////////////////////////
 // D. I.E. 11 Support
