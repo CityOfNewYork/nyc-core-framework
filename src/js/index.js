@@ -558,9 +558,9 @@ window.onload = () => {
             fieldInput.addEventListener("change", () => {
 
                 if (fieldInput.value.length != 0) {
-                    fieldInput.closest(".form-entry__field").classList.add("has-value");
+                    fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.add("has-value");
                 } else {
-                    fieldInput.closest(".form-entry__field").classList.remove("has-value");
+                    fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.remove("has-value");
                 }
 
                 if(fieldInput.checked){ 
