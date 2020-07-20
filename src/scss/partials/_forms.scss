@@ -25,6 +25,7 @@ In this file:
 //////////////////////////////////////////////
 
 .form-entry{
+    text-align: left;
     select,
     textarea,
     input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
@@ -32,10 +33,6 @@ In this file:
         border: none;
         background-color: transparent;
         color: inherit;
-
-        border-bottom-width: var(--default-border-width);
-        border-bottom-style: var(--default-border-style);
-        border-bottom-color: currentColor;
     }
 
     select option {
@@ -67,7 +64,12 @@ In this file:
     
     @extend %subtle-fill !optional;
     --subtle-fill-opacity: 0.05;
+
     color: inherit;
+
+    border-bottom-width: var(--default-border-width);
+    border-bottom-style: var(--default-border-style);
+    border-bottom-color: currentColor !important;
 }
 
 // Label
@@ -88,9 +90,11 @@ In this file:
     }
 }
 
-:required ~ .form-entry__field__label::after {
+:required ~ .form-entry__field__label::after{
     display: inline;
 }
+
+
 
 // Label and Input (Default)
 
@@ -113,8 +117,8 @@ In this file:
     padding-bottom: calc(var(--form-field-padding-y) * 0.5);
 }
 
-.form-entry__field__input:focus + .form-entry__field__label,
-.form-entry__field__input:active + .form-entry__field__label,
+.form-entry__field__input:focus ~ .form-entry__field__label,
+.form-entry__field__input:active ~ .form-entry__field__label,
 .has-value .form-entry__field__label{
     display: block;
     padding-top: calc( var(--form-field-padding-y) * 0.25 );
@@ -150,26 +154,27 @@ In this file:
         line-height: inherit !important;
     }
 
-    .form-entry__field__input{
+    .form-entry__field, 
+    .form-entry__field--has-btn {
         border: none;
     }
 
     .form-entry__field__input:focus,
     .form-entry__field__input:active,
-    .form-entry__field__input + .form-entry__field__label,
+    .form-entry__field__input ~ .form-entry__field__label,
     .has-value .form-entry__field__input {
         padding-top: var(--form-field-padding-y);
         padding-bottom: var(--form-field-padding-y);
     }
 
-    .form-entry__field__input + .form-entry__field__label{
+    .form-entry__field__input ~ .form-entry__field__label{
         line-height: inherit;
         margin: unset;
         transform: unset;
     }
 
-    .form-entry__field__input:focus + .form-entry__field__label, 
-    .form-entry__field__input:active + .form-entry__field__label, 
+    .form-entry__field__input:focus ~ .form-entry__field__label, 
+    .form-entry__field__input:active ~ .form-entry__field__label, 
     .has-value .form-entry__field__label{
         display: none;
     }
@@ -220,7 +225,7 @@ In this file:
 
 }
 
-// Google Translate and Field Input Wrap
+// Google Translate and Field Input Wrap (Select)
 
 .goog-te-gadget > div,
 .form-entry__field__input-wrap {
@@ -238,6 +243,13 @@ In this file:
         margin-left: var(--s2);
         margin-right: var(--s2);
     }
+
+}
+
+.form-entry__field__input-wrap{
+    .form-entry__field__input {
+        text-indent: -9999px;
+    }
 }
 
 .form-entry__field__input-wrap::after {
@@ -247,7 +259,8 @@ In this file:
     }
 }
 
-.has-value select.form-entry__field__input {
+.has-value .form-entry__field__input {
+    text-indent: 0;
     font-size: 99.99%;
 }
 
@@ -438,12 +451,12 @@ In this file:
 
 [dir="rtl"] {
 
-    .form-entry__radio>.radio__label::before,
-    .form-entry__radio>input[type="radio"],
+    .form-entry__radio > .radio__label::before,
+    .form-entry__radio > input[type="radio"],
 
-    .form-entry__checkbox>.checkbox__label::before,
-    .form-entry__checkbox>.checkbox__label::after,
-    .form-entry__checkbox>input[type="checkbox"] {
+    .form-entry__checkbox > .checkbox__label::before,
+    .form-entry__checkbox > .checkbox__label::after,
+    .form-entry__checkbox > input[type="checkbox"] {
         left: unset;
         right: 0;
     }
