@@ -52,6 +52,8 @@ In this file:
 
   display: none;
 
+  backdrop-filter: blur(0.25rem) brightness(60%);
+
   &[aria-hidden="false"] {
     display: flex;
   }
@@ -130,13 +132,13 @@ In this file:
 
 @supports ( display: grid ) {
 
-  .modal[aria-hidden="false"] .modal__content {
-    animation-name: slideIn;
-    animation-duration: 0.2s;
-  }
+  // .modal[aria-hidden="false"] .modal__content {
+  //   animation-name: slideIn;
+  //   animation-duration: 0.2s;
+  // }
 
-  .modal[aria-hidden="false"]::before{
-    animation-name: fadeIn;
-    animation-duration: 0.2s;
-  }
+  // .modal[aria-hidden="false"]::before{
+  //   animation-name: fadeIn;
+  //   animation-duration: 0.2s;
+  // }
 }

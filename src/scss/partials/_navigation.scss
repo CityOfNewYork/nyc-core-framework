@@ -112,6 +112,7 @@ In this file:
     @extend %list-nav-style;
 }
 
+
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav:not([class*="nav--divider"]) {
 
@@ -233,13 +234,17 @@ In this file:
         display: block;
     }
 
-    > li > [class*="form-group__"]{
-        margin: var(--nav--divider-padding-y) var(--nav--divider-padding-x);
-        
-        @extend %expanded-link !optional;
-        
-        &::before {
-            margin: calc(var(--nav--divider-padding-y) * -1) calc(var(--nav--divider-padding-x) * -1);
+    > li [class*="form-group__"]{
+        --form-field-padding-y: var(--nav--divider-padding-y);
+        --form-field-padding-x: var(--nav--divider-padding-x);   
+
+        .field__label,
+        .field__input {
+            line-height: inherit !important;
+        }
+
+        input {
+            border: none !important;
         }
     }
 
