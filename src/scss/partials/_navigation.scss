@@ -234,20 +234,6 @@ In this file:
         display: block;
     }
 
-    > li [class*="form-entry__"]{
-        --form-field-padding-y: var(--nav--divider-padding-y);
-        --form-field-padding-x: var(--nav--divider-padding-x);   
-
-        .form-entry__field__label,
-        .form-entry__field__input {
-            line-height: inherit !important;
-        }
-
-        input {
-            border: none !important;
-        }
-    }
-
     > li > a, 
     > li > button,
     > li > [data-toggle="dropdown"] ~ ul {

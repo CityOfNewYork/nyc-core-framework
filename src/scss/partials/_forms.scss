@@ -3,8 +3,9 @@
 In this file:
 
 // A. Variables
-// B. Common Form Elements
-// C. Checkboxes and Radios
+// B. Form Entry Block
+// C. Form Entry Elements
+// D. Checkboxes and Radios
 // D. Switches
 // E. Form Feedback and Alerts
 
@@ -16,42 +17,47 @@ In this file:
 
 :root {
     --form-field-padding-x: 1em;
-    --form-field-padding-y: .75em;
+    --form-field-padding-y: 0.75em;
 }
 
 //////////////////////////////////////////////
-// B. Basic Form Styles
+// B. Form Entry Block
 //////////////////////////////////////////////
 
-// General Selectors
+.form-entry{
+    select,
+    textarea,
+    input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
 
-select,
-textarea,
-input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
-    border: none;
-    background-color: transparent;
-    color: inherit;
+        border: none;
+        background-color: transparent;
+        color: inherit;
 
-    border-bottom-width: var(--default-border-width);
-    border-bottom-style: var(--default-border-style);
-    border-bottom-color: currentColor;
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: currentColor;
+    }
+
+    select option {
+        color: currentColor;
+    }
+
+    button,
+    fieldset{
+        border: none;
+    }
 }
-
-select option {
-    color: currentColor;
-}
-
-button,
-fieldset{
-    border: none;
-}
-
-// Form Group
 
 .form-entry + .form-entry {
     margin-top: var(--s4);
     margin-bottom: var(--s4);
 }
+
+//////////////////////////////////////////////
+// C. Form Entry Elements
+//////////////////////////////////////////////
+
+// Field
 
 .form-entry__field, 
 .form-entry__field--has-btn {
@@ -64,15 +70,16 @@ fieldset{
     color: inherit;
 }
 
-// Form Field Label
+// Label
 
 .form-entry__field__label {
-    pointer-events: none;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
+
+    pointer-events: none;
 
     &::after{
         content: "*";
@@ -85,7 +92,7 @@ fieldset{
     display: inline;
 }
 
-// Label and Input
+// Label and Input (Default)
 
 .form-entry__field__label,
 .form-entry__field__input {
@@ -96,7 +103,9 @@ fieldset{
     
     line-height: 1.5;
 }
- 
+
+// Label and Input (Active)
+
 .form-entry__field__input:focus, 
 .form-entry__field__input:active,
 .has-value .form-entry__field__input {
@@ -127,9 +136,18 @@ fieldset{
 [class*="nav"] > li > form,
 .primary-nav__menu > ul > li > form {
     
+    input {
+        border: none !important;
+    }
+
     .form-entry {
         --form-field-padding-y: var(--nav--divider-padding-y);
         --form-field-padding-x: var(--nav--divider-padding-x);
+    }
+    
+    .form-entry__field__label,
+    .form-entry__field__input {
+        line-height: inherit !important;
     }
 
     .form-entry__field__input{
@@ -157,9 +175,7 @@ fieldset{
     }
 }
 
-/////////////////////////////
-
-// Form Field
+// Google Translate Dropdown
 
 .goog-gt-tt{
     display: none !important;
@@ -204,7 +220,7 @@ fieldset{
 
 }
 
-/// Field Input Wrap
+// Google Translate and Field Input Wrap
 
 .goog-te-gadget > div,
 .form-entry__field__input-wrap {
@@ -235,7 +251,7 @@ fieldset{
     font-size: 99.99%;
 }
 
-// Has Button
+// Has Button Modifier
 
 .form-entry__field--has-btn {
 
