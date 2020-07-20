@@ -234,12 +234,12 @@ In this file:
         display: block;
     }
 
-    > li [class*="form-group__"]{
+    > li [class*="form-entry__"]{
         --form-field-padding-y: var(--nav--divider-padding-y);
         --form-field-padding-x: var(--nav--divider-padding-x);   
 
-        .field__label,
-        .field__input {
+        .form-entry__field__label,
+        .form-entry__field__input {
             line-height: inherit !important;
         }
 

@@ -549,7 +549,7 @@ window.onload = () => {
 
     Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
 
-        const fieldInputList = form.querySelectorAll(".field__input");
+        const fieldInputList = form.querySelectorAll(".form-entry__field__input");
 
         let wasValidated = false;
 
@@ -558,9 +558,9 @@ window.onload = () => {
             fieldInput.addEventListener("change", () => {
 
                 if (fieldInput.value.length != 0) {
-                    fieldInput.closest("[class*='form-group__field']").classList.add("has-value");
+                    fieldInput.closest("[class*='form-entry__field']").classList.add("has-value");
                 } else {
-                    fieldInput.closest("[class*='form-group__field']").classList.remove("has-value");
+                    fieldInput.closest("[class*='form-entry__field']").classList.remove("has-value");
                 }
 
                 if(fieldInput.checked){ 
@@ -627,12 +627,12 @@ window.onload = () => {
         const invalidClasses = ["invalid", "alert--warn"];
 
         function setInvalid(field) {
-            let myEl = field.closest(".form-group");
+            let myEl = field.closest(".form-entry");
             myEl.classList.add(...invalidClasses);
         }
 
         function setValid(field) {
-            let myEl = field.closest(".form-group");
+            let myEl = field.closest(".form-entry");
             myEl.classList.remove(...invalidClasses);
         }
         
