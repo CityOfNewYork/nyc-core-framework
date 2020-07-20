@@ -56,7 +56,7 @@ In this file:
 %hover-focus {
     &:hover,
     &:focus {
-        &:not([class*="-icon"]):not([class*="field__btn"]):not([aria-disabled="true"]) {
+        &:not([class*="-icon"]):not([class*="form-entry__field__btn"]):not([aria-disabled="true"]) {
             text-decoration: underline;
         }
     }
