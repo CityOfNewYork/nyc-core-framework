@@ -619,7 +619,7 @@ window.onload = () => {
             }
         }
 
-        function isEmpty(value) {
+        function isEmpty(value = null) {
             if (value === "") return true;
             return false;
         }
