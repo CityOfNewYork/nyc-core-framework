@@ -47,6 +47,7 @@ In this file:
     [dir="rtl"] &{
         text-align: right;
     }
+
 }
 
 .form-entry + .form-entry {
@@ -106,7 +107,7 @@ In this file:
     padding-right: var(--form-field-padding-x);
     padding-left: var(--form-field-padding-x);
     
-    line-height: 1.5;
+    line-height: normal;
 }
 
 // Label and Input (Active)
@@ -121,13 +122,15 @@ In this file:
 .form-entry__field__input:focus ~ .form-entry__field__label,
 .form-entry__field__input:active ~ .form-entry__field__label,
 .has-value .form-entry__field__label{
-    display: block;
     padding-top: calc( var(--form-field-padding-y) * 0.25 );
     padding-bottom: calc( var(--form-field-padding-y) * 0.25 );
+
     padding-left: 0;
     padding-right: 0;
+
     margin-left: var(--form-field-padding-x);
     margin-right: var(--form-field-padding-x);
+
     transform-origin: top left;
     transform: scale(0.65);
 
@@ -344,10 +347,53 @@ In this file:
 // C. Checkboxes and Radios
 //////////////////////////////////////////////
 
+.form-entry {
+    legend {
+        margin-bottom: var(--s2);
+    }
+}
+
+.form-entry__options{
+    --gap-size: 0.5em;
+
+    padding-left: var(--s2);
+
+    clear: both;
+    
+    display: flex;
+    flex-direction: column;
+
+    label[class*="form-entry__"]:not(:last-child){
+        margin-bottom: var(--gap-size);
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        
+        .options--horizontal#{$mod} {
+            flex-direction: row;
+
+            margin-left: calc(-1 * var(--gap-size));
+            margin-right: calc(-1 * var(--gap-size));
+
+            label[class*="form-entry__"]{
+                margin-bottom: unset;
+                margin-left: var(--gap-size);
+                margin-right: var(--gap-size);
+            }
+
+        }
+
+    }
+}
+
+
 // Checkbox, Radio Shared Styles
 
-.form-entry__radio,
-.form-entry__checkbox {
+.form-entry__options__radio,
+.form-entry__options__check {
     position: relative;
     color: inherit;
     display: flex;
@@ -362,8 +408,8 @@ In this file:
     }
 }
 
-.form-entry__radio > input[type="radio"],
-.form-entry__checkbox > input[type="checkbox"] {
+.form-entry__options__radio > input[type="radio"],
+.form-entry__options__check > input[type="checkbox"] {
     background-color: transparent;
     opacity: 0;
 } 
@@ -373,8 +419,8 @@ In this file:
 // inner text requires it to be.
 //
 
-.form-entry__radio > input ~ .radio__label,
-.form-entry__checkbox > input ~ .checkbox__label {
+.form-entry__options__radio > input ~ .radio__label,
+.form-entry__options__check > input ~ .checkbox__label {
     line-height: var(--base-line-height);
 
     &::before {
@@ -389,22 +435,22 @@ In this file:
 
 // Unchecked
 
-.form-entry__checkbox > input ~ .checkbox__label::before{
+.form-entry__options__check > input ~ .checkbox__label::before{
     font-weight: 400;
     content: "\f0c8";
 }
 
-.form-entry__radio > input ~ .radio__label::before{
+.form-entry__options__radio > input ~ .radio__label::before{
     font-weight:  400;
     content: "\f111";
 }
 
-.form-entry__checkbox > input:checked ~ .checkbox__label::before{
+.form-entry__options__check > input:checked ~ .checkbox__label::before{
     font-weight: 900;
     content: "\f14a";
 }
 
-.form-entry__radio > input:checked ~ .radio__label::before{
+.form-entry__options__radio > input:checked ~ .radio__label::before{
     font-weight: 900;
     content: "\f192";
 }
@@ -413,16 +459,16 @@ In this file:
 // Defining States
 //
 
-.form-entry__radio > input:focus ~ .radio__label,
-.form-entry__checkbox > input:focus ~ .checkbox__label {
+.form-entry__options__radio > input:focus ~ .radio__label,
+.form-entry__options__check > input:focus ~ .checkbox__label {
     text-decoration: underline;
     &::before{
         opacity: 0.75;
     }
 }
 
-.form-entry__radio > input:checked ~ .radio__label,
-.form-entry__checkbox > input:checked ~ .checkbox__label {
+.form-entry__options__radio > input:checked ~ .radio__label,
+.form-entry__options__check > input:checked ~ .checkbox__label {
     &::before{
         opacity: 1;
     }
@@ -451,12 +497,12 @@ In this file:
 }
 
 [dir="rtl"] {
-    .form-entry__radio > .radio__label::before,
-    .form-entry__radio > input[type="radio"],
+    .form-entry__options__radio > .radio__label::before,
+    .form-entry__options__radio > input[type="radio"],
 
-    .form-entry__checkbox > .checkbox__label::before,
-    .form-entry__checkbox > .checkbox__label::after,
-    .form-entry__checkbox > input[type="checkbox"] {
+    .form-entry__options__check > .checkbox__label::before,
+    .form-entry__options__check > .checkbox__label::after,
+    .form-entry__options__check > input[type="checkbox"] {
         left: unset;
         right: 0;
     }

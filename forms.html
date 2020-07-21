@@ -41,7 +41,7 @@
 
                 <div class="container medium margin-y-4">
 
-                    <form method="post" novalidate>
+                    <form novalidate>
 
                         <div class="alert alert--warn margin-y-4 display-none" data-alert="form-errors">
 
@@ -172,11 +172,11 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry display-none" role="group" aria-labelledby="checkbox-group-label">
+                        <fieldset class="form-entry" aria-labelledby="checkbox-group-label" role="group">
 
-                            <p class="label" id="checkbox-group-label">
+                            <legend class="label" id="checkbox-group-label">
                                 Select multiple options
-                            </p>
+                            </legend>
 
                              <small class="form-entry__feedback">
                                  <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
@@ -184,41 +184,39 @@
                                  <span>How to fix instructions</span>
                              </small>
 
-                            <ul class="nav">
-                                <li>
-                                    <label class="form-entry__checkbox">
-                                        <input type="checkbox" name="checkbox-group-example" required>
-                                        <span class="checkbox__label">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita velit porro provident soluta nobis ex eligendi maxime assumenda, beatae debitis illum maiores inventore rerum dolorem nihil. Voluptatum saepe aperiam cupiditate.
-                                        </span>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="form-entry__checkbox">
-                                        <input type="checkbox" name="checkbox-group-example" required>
-                                        <span class="checkbox__label">
-                                            Option One
-                                        </span>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="form-entry__checkbox">
-                                        <input type="checkbox" name="checkbox-group-example" required>
-                                        <span class="checkbox__label">
-                                            Option One
-                                        </span>
-                                    </label>
-                                </li>
-                            </ul>
+                             <div class="form-entry__options">
 
-                        </div>
+                                <label class="form-entry__options__check">
+                                    <input type="checkbox" name="checkbox-group-example">
+                                    <span class="checkbox__label">
+                                        Option One
+                                    </span>
+                                </label>
+
+                                <label class="form-entry__options__check">
+                                    <input type="checkbox" name="checkbox-group-example">
+                                    <span class="checkbox__label">
+                                        Option Two
+                                    </span>
+                                </label>
+                                
+                                <label class="form-entry__options__check">
+                                    <input type="checkbox" name="checkbox-group-example">
+                                    <span class="checkbox__label">
+                                        Option Three
+                                    </span>
+                                </label>
+
+                             </div>
+
+                        </fieldset>
                         <!-- .form-entry -->
 
-                        <div class="form-entry display-none" role="group" aria-labelledby="checkbox-group-label">
+                        <fieldset class="form-entry" aria-labelledby="radio-group-label" role="group">
 
-                            <p class="label" id="radio-group-label">
+                            <legend class="label" id="radio-group-label">
                                 Select a single option
-                            </p>
+                            </legend>
 
                             <small class="form-entry__feedback">
                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
@@ -226,37 +224,32 @@
                                 <span>How to fix instructions</span>
                             </small>
 
-                            <ul class="nav nav--horizontal--md">
-                                <li>
-                                    <label class="form-entry__radio">
-                                        <input type="radio" name="radio-group-example" required>
-                                        <span class="radio__label">
-                                            Option One
-                                        </span>
-                                    </label>
-                                </li>
+                            <div class="form-entry__options options--horizontal--md">
 
-                                <li>
-                                    <label class="form-entry__radio">
-                                        <input type="radio" name="radio-group-example" required>
-                                        <span class="radio__label">
-                                            Option One
-                                        </span>
-                                    </label>
-                                </li>
+                                <label class="form-entry__options__radio">
+                                    <input type="radio" name="radio-group-example" required>
+                                    <span class="radio__label">
+                                        Option One
+                                    </span>
+                                </label>
 
-                                <li>
-                                    <label class="form-entry__radio">
-                                        <input type="radio" name="radio-group-example" required>
-                                        <span class="radio__label">
-                                            Option One
-                                        </span>
-                                    </label>
-                                </li>
+                                <label class="form-entry__options__radio">
+                                    <input type="radio" name="radio-group-example" required>
+                                    <span class="radio__label">
+                                        Option Two
+                                    </span>
+                                </label>
+                                
+                                <label class="form-entry__options__radio">
+                                    <input type="radio" name="radio-group-example" required>
+                                    <span class="radio__label">
+                                        Option Three
+                                    </span>
+                                </label>
 
-                            </ul>
+                            </div>
 
-                        </div>
+                        </fieldset>
                         <!-- .form-entry -->
 
                         <button class="btn display-block theme-secondary fw-bold" type="submit">Submit</button>
@@ -280,26 +273,6 @@
     </footer>
 
     <script src="./dist/js/nyc_core.js"></script>
-
-    <script>
-        const realFileBtn = document.querySelector("[type='file']");
-        const customBtn = document.querySelector(".cool-btn");
-        const customTxt = document.querySelector(".cool-uploads");
-
-        customBtn.addEventListener("click", function() {
-        realFileBtn.click();
-        });
-
-        realFileBtn.addEventListener("change", function() {
-        if (realFileBtn.value) {
-        customTxt.innerHTML = realFileBtn.value.match(
-        /[\/\\]([\w\d\s\.\-\(\)]+)$/
-        )[1];
-        } else {
-        customTxt.innerHTML = "No file chosen, yet.";
-        }
-        });
-    </script>
 
 </body>
 

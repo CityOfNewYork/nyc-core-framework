@@ -191,11 +191,29 @@ button::-moz-focus-inner {
 }
 
 legend {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    + * {
+        clear: both;
+    }
+    
     // Correct color inheritance in IE
     color: inherit;
     display: table;
+
     // Correct the text wrapping in Edge and IE
     line-height: normal;
     max-width: 100%;
     white-space: normal;
+}
+
+fieldset {
+    display: table-cell;
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0;
+    min-width: 0;
 }
