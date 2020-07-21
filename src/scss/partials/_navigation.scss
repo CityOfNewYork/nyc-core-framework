@@ -412,7 +412,7 @@ In this file:
 
     @extend %list-nav-style;
 
-    &:not([class*="fs-"]) {
+    &:not([class*="font-size-"]) {
         font-size: inherit;
     }
 
