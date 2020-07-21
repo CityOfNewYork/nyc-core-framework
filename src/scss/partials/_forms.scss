@@ -24,24 +24,28 @@ In this file:
 // B. Form Entry Block
 //////////////////////////////////////////////
 
-.form-entry{
+.form-entry {
     text-align: left;
+    
     select,
     textarea,
     input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
-
         border: none;
         background-color: transparent;
         color: inherit;
     }
 
     select option {
-        color: currentColor;
+        color: currentColor !important;
     }
 
     button,
     fieldset{
         border: none;
+    }
+
+    [dir="rtl"] &{
+        text-align: right;
     }
 }
 
@@ -61,11 +65,10 @@ In this file:
     --action-btn-size: 2.5rem;
     
     display: flex;
+    color: inherit;
     
     @extend %subtle-fill !optional;
     --subtle-fill-opacity: 0.05;
-
-    color: inherit;
 
     border-bottom-width: var(--default-border-width);
     border-bottom-style: var(--default-border-style);
@@ -93,8 +96,6 @@ In this file:
 :required ~ .form-entry__field__label::after{
     display: inline;
 }
-
-
 
 // Label and Input (Default)
 
@@ -450,7 +451,6 @@ In this file:
 }
 
 [dir="rtl"] {
-
     .form-entry__radio > .radio__label::before,
     .form-entry__radio > input[type="radio"],
 

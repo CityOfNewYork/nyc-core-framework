@@ -33,7 +33,7 @@
 
         <div class="overflow-hidden">
 
-            <div class="margin-y-5">
+            <div class="margin-y-5 fs-lg">
 
                 <div class="container text-align-center margin-y-4">
                     <h1>Forms</h1>
@@ -43,7 +43,7 @@
 
                     <form method="post" novalidate>
 
-                        <div class="alert alert--warn margin-y-3 display-none" data-alert>
+                        <div class="alert alert--warn margin-y-4 display-none" data-alert="form-errors">
 
                             <div class="alert__head h5">
                                 <p>
@@ -117,7 +117,7 @@
                             </div>
 
                         </div>
-                        <!-- .form-entry ///////// -->
+                        <!-- .form-entry -->
                         
                         <div class="form-entry">
 
@@ -129,14 +129,14 @@
 
                             <div class="form-entry__field">
                                 <div class="form-entry__field__input-wrap">
-                                    <select class="form-entry__field__input" name="Boroughs" required>
+                                    <select class="form-entry__field__input" id="select-borough" name="Boroughs" required>
                                         <option value="Bronx">Bronx</option>
                                         <option value="Brooklyn">Brooklyn</option>
                                         <option value="Manhattan">Manhattan</option>
                                         <option value="Staten Island">Staten Island</option>
                                         <option value="Queens">Queens</option>
                                     </select>
-                                    <label class="form-entry__field__label">Borough</label>
+                                    <label class="form-entry__field__label" for="select-borough">Borough</label>
                                 </div>
                             </div>
                         </div>
