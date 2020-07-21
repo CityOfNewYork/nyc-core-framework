@@ -34,6 +34,10 @@ button {
         background-color: transparent;
     }
 
+    &:not([class*="border-"]){
+        border: none;
+    }
+
     &[class*="display-block"] {
         width: 100%;
     }
@@ -99,7 +103,6 @@ button,
             text-decoration: underline;
         }
     }
-    
 }
 
 [class*="btn--has-icon"] .btn__text {
@@ -157,8 +160,12 @@ button,
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-    .btn.btn--icon-only {
+    .btn--icon-only {
         display: table-cell; 
+
+        &::before {
+            display: none;
+        }
 
         .btn__icon {
             margin-right: auto;
