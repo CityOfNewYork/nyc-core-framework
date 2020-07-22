@@ -106,6 +106,34 @@ $spacers: (
             .margin-left-#{$space}#{$mod} {
                 margin-left: #{$value} !important;
             }
+
+            // Negative Margin
+
+            .margin-x-n#{$space}#{$mod} {
+                margin-left: calc(#{$value} * -1) !important;
+                margin-right: calc(#{$value} * -1) !important;
+            }
+
+            .margin-y-n#{$space}#{$mod} {
+                margin-top: calc(#{$value} * -1) !important;
+                margin-bottom: calc(#{$value} * -1) !important;
+            }
+
+            .margin-top-n#{$space}#{$mod} {
+                margin-top: calc(#{$value} * -1) !important;
+            }
+
+            .margin-right-n#{$space}#{$mod} {
+                margin-right: calc(#{$value} * -1) !important;
+            }
+
+            .margin-bottom-n#{$space}#{$mod} {
+                margin-bottom: calc(#{$value} * -1) !important;
+            }
+
+            .margin-left-n#{$space}#{$mod} {
+                margin-left: calc(#{$value} * -1) !important;
+            }
             
         }
     }

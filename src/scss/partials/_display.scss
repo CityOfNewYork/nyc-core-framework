@@ -24,6 +24,11 @@ $display-types: block, inline, inline-block, flex, none;
         @each $value in $display-types {
             .display-#{$value}#{$mod} {
                 display: $value;
+                @if $value == none {
+                    &.collapse{
+                        display: $value !important;
+                    }
+                }
             }
         }
     }
