@@ -23,7 +23,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Tabs
+// B. Tabs Block
 ////////////////////////////////////////
 
 .tabs {
@@ -64,7 +64,7 @@ In this file:
     }
 }
 
-.tabs:not([class*="tabs--span"]) {
+.tabs:not([class*="tabs--across"]) {
 
     &::before {
         content: "";
@@ -126,10 +126,22 @@ In this file:
 }
 
 ////////////////////////////////////////
-// C. Tabs Span
+// C. Tab Panel Element
 ////////////////////////////////////////
 
-.tabs--span {
+.tab__panel {
+    display: none;
+
+    &.shown{
+        display: block;
+    }
+}
+
+////////////////////////////////////////
+// D. Tabs Span Modifier
+////////////////////////////////////////
+
+.tabs--across {
 
     > li > a,
     > li > button {
@@ -158,18 +170,6 @@ In this file:
                 }
             }
         }
-    }
-}
-
-////////////////////////////////////////
-// D. Tab Panel
-////////////////////////////////////////
-
-.tab__panel {
-    display: none;
-
-    &.shown{
-        display: block;
     }
 }
 

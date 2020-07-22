@@ -44,10 +44,9 @@ In this file:
         border: none;
     }
 
-    [dir="rtl"] &{
+    [dir="rtl"] & {
         text-align: right;
     }
-
 }
 
 .form-entry + .form-entry {
