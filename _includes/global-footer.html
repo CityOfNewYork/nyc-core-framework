@@ -139,45 +139,7 @@
         document.addEventListener("accTrigger", function (e) {
             resetButton();
         }, false);
-
-        // 
-
     }
-
-//    const modalButtonList = document.querySelectorAll("[data-modal-open]");
-
-//    for (const modalButton of modalButtonList) {
-//        console.log(modalButton.getAttribute("data-modal-open"));
-//    }
-/*
-    const modalList = document.querySelectorAll(".modal");
-
-    for (const modal of modalList) {
-        console.log(modal.getAttribute("id"));
-    }
-    */
-
-    const modalNextButtonList = document.querySelectorAll("[data-modal-next]");
-
-    for (const modalNextButton of modalNextButtonList) {
-
-        modalNextButton.addEventListener("click", (event) => {
-
-            const currentModal = modalNextButton.closest(".modal");
-            const nextModal = currentModal.nextElementSibling.getAttribute("id");
-
-//            currentModal.setAttribute("aria-hidden", true);
-
-            modalNextButton.setAttribute("data-modal-open", nextModal);
-            
-            console.log(nextModal);
-
-        });
-    }
-
-
-
-
 
 </script>
 

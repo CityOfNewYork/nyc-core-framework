@@ -4,58 +4,53 @@
     {% assign modal_id = 'example-modal' %}
 {% endif %}
 
-<div class="modal modal--slide theme-dark" id="{{ modal_id }}">
+<div class="modal theme-dark" id="{{ modal_id }}">
 
-    <div class="modal__overlay" data-modal-close>
+    <div class="modal__content narrow rounded box-shadow-2">
 
-        <div class="modal__container narrow rounded box-shadow-2">
+        <header class="modal__content__head border-bottom">
+            <h2 class="font-size-lg font-weight-normal" style="color: #f8c555;">
+                {% if include.modal_title %}
+                    {{ include.modal_title }}
+                {% else %}
+                    Modal Title
+                {% endif %}
+            </h2>
+            <button class="btn btn--icon-only" title="Close Modal" data-modal-close>
+                <span class="sr-only">My Account</span>
+                <span class="fas fa-times" aria-hidden="true"></span>
+            </button>
+        </header>
 
-            <header class="modal__header border-bottom ">
-                <h2 class="fs-lg fw-normal" style="color: #f8c555;">
-                    {% if include.modal_title %}
-                        {{ include.modal_title }}
-                    {% else %}
-                        Modal Title
-                    {% endif %}
-                </h2>
-                <button class="btn btn--icon-only" data-modal-close>
-                    <span class="screen-reader">Close Modal</span>
-                    <span class="fas fa-times"></span>
-                </button>
-            </header>
-
-            <div class="modal__body" id="modal-1-content">
-                <p class="margin-bottom-0">
-                    {% if include.modal_description %}
-                        {{ include.modal_description }}
-                    {% else %}
-                        Modal Description here.
-                    {% endif %}
-                </p>
-            </div>
-
-            <div class="modal__footer border-top display--none">
-                <ul class="nav nav--horizontal justify-content-between">
-                    <li>
-                        <button class="btn btn--icon-only" data-modal-previuos>
-                            <span class="screen-reader">Previous Modal</span>
-                            <span class="fas fa-arrow-left"></span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="btn btn--icon-only" data-modal-next>
-                            <span class="screen-reader">Previous Modal</span>
-                            <span class="fas fa-arrow-right"></span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
+        <div class="modal__content__body" id="modal-1-content">
+            <p class="margin-bottom-0">
+                {% if include.modal_description %}
+                    {{ include.modal_description }}
+                {% else %}
+                    Modal Description here.
+                {% endif %}
+            </p>
         </div>
-        <!-- .modal__container -->
+
+        <div class="modal__content__foot border-top display-none">
+            <ul class="nav nav--horizontal justify-content-between">
+                <li>
+                    <button class="btn btn--icon-only" data-modal-previuos>
+                        <span class="screen-reader">Previous Modal</span>
+                        <span class="fas fa-arrow-left"></span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn btn--icon-only" data-modal-next>
+                        <span class="screen-reader">Previous Modal</span>
+                        <span class="fas fa-arrow-right"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
 
     </div>
-    <!-- .modal__overlay -->
+    <!-- .modal__content -->
 
 </div>
 <!-- #example-modal -->
