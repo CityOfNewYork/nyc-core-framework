@@ -28,7 +28,7 @@ In this file:
 // B. Border Classes
 //////////////////////////////////////////////
 
-[class*="border"]:not([class*="bc-"]){
+[class*="border"]:not([class*="theme-"]){
     border-color: inherit;
 }
 

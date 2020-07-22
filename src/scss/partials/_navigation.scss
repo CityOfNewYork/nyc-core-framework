@@ -207,7 +207,7 @@ In this file:
 [class*="primary-nav--across--"] > [class*="__menu"] > ul,
 .nav--divider {
 
-    &:not([class*="bc-"]) {
+    &:not([class*="theme-"]) {
         border-color: inherit;
 
         a, button {

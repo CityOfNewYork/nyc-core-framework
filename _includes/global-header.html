@@ -1,8 +1,8 @@
-<header class="bc-primary" id="global-header">
+<header class="theme-primary" id="global-header">
 
     {% if site.baseurl contains '/version/' %}
 
-    <div class="bc-dark py-2 position-relative">
+    <div class="theme-dark padding-y-2">
 
         <div class="container narrow text-align-center">
 
@@ -30,8 +30,8 @@
             <ul role="list">
                 <li>
                     <a href="#1" data-toggle="dropdown">v2.0</a>
-                    <ul class="fs-md box-shadow-1--lg">
-                        <li class="fw-bold">
+                    <ul class="font-size-md box-shadow-1--lg">
+                        <li>
                             <a href="{{ site.baseurl }}/">v2.0 - Battery Park</a>
                         </li>
                         <li>
@@ -40,12 +40,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/docs/get-started/" {% if page.url contains '/docs' %}
-                        aria-current="page" {% endif %}>Documentation</a>
+                    <a href="{{ site.baseurl }}/docs/get-started/" {% if page.url contains '/docs' %} aria-current="page" {% endif %}>Documentation</a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/templates/" {% if page.url contains '/templates' %} aria-current="page"
-                        {% endif %}>Templates</a>
+                    <a href="{{ site.baseurl }}/templates/" {% if page.url contains '/templates' %} aria-current="page" {% endif %}>Templates</a>
                 </li>
             </ul>
 

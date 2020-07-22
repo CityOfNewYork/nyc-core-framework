@@ -49,7 +49,7 @@ $alert-colors: (
         border-color: currentColor !important;
     }
 
-    &:not([class*="--dark"]):not([class*="bc-"]) {
+    &:not([class*="--dark"]):not([class*="theme-"]) {
 
         &::before {
             content: "";

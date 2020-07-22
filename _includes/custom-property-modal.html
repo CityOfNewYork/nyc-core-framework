@@ -4,7 +4,7 @@
     {% assign modal_id = 'example-modal' %}
 {% endif %}
 
-<div class="modal modal--slide bc-dark" id="{{ modal_id }}">
+<div class="modal modal--slide theme-dark" id="{{ modal_id }}">
 
     <div class="modal__overlay" data-modal-close>
 
@@ -25,7 +25,7 @@
             </header>
 
             <div class="modal__body" id="modal-1-content">
-                <p class="mb-0">
+                <p class="margin-bottom-0">
                     {% if include.modal_description %}
                         {{ include.modal_description }}
                     {% else %}

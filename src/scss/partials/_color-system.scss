@@ -102,8 +102,8 @@ $theme-colors: (
 // D. Background Color Classes 
 //////////////////////////////////////////////
 
-body:not([class*="bc-"]),
-[class*="bc-"] {
+body:not([class*="theme-"]),
+[class*="theme-"] {
     --background-color: white;
     --text-color: black;
     --border-color: gray;
@@ -114,13 +114,13 @@ body:not([class*="bc-"]),
     border-color: var(--border-color);
 
     * {
-        &:not([class*="bc-"]):not(input):not(textarea):not(select) {
+        &:not([class*="theme-"]):not(input):not(textarea):not(select) {
             border-color: inherit;
         }
     }
 
-    td:not([class*="bc-"]) > a:not([class*="tc-"]),
-    p > a:not([class*="bc-"]){
+    td:not([class*="theme-"]) > a:not([class*="tc-"]),
+    p > a:not([class*="theme-"]){
         color: var(--link-color);
     }
     select option,
@@ -148,7 +148,7 @@ body:not([class*="bc-"]),
     $border: map-get($color-map, "border");
     $link: map-get($color-map, "link");
 
-    .bc-#{$name} {
+    .theme-#{$name} {
         --background-color: #{$background};
         --text-color: #{$text};
         --border-color: #{$border};
@@ -156,13 +156,13 @@ body:not([class*="bc-"]),
     }
 }
 
-html:not([class*="bc-"]){
+html:not([class*="theme-"]){
     --default-background-color: var(--dark);
     background-color: var(--default-background-color);
 }
 
-body:not([class*="bc-"]){
-    @extend .bc-white !optional;
+body:not([class*="theme-"]){
+    @extend .theme-white !optional;
     @extend .box-shadow-2 !optional;
     overflow-x: hidden;
 }

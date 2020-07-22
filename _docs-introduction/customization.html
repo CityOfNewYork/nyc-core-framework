@@ -3,7 +3,7 @@ layout: documentation
 title: "Customization"
 ---
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <h2 class="h1">
         Distinguish yourself without starting from scratch.
     </h2>
@@ -15,9 +15,9 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="cdnAndCustomProperties">
+<hr class="margin-y-5" id="cdnAndCustomProperties">
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <h2>CDN and Custom Properties</h2>
         <p>
             Our <a href="{{ site.baseurl }}/docs/get-started/#quickStartGuide">Quick Start
@@ -33,7 +33,7 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
+<figure class="container narrow margin-y-4">
 
     <pre class="hide-toolbar">
         <code class="language-scss">
@@ -51,7 +51,7 @@ title: "Customization"
 
 </figure>
 
-<figure class="container narrow my-4">
+<figure class="container narrow margin-y-4">
 
     <pre class="hide-toolbar">
         <code class="language-scss">
@@ -69,7 +69,7 @@ title: "Customization"
 
 </figure>
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         Because custom properties update at runtime, we can modify values from our CDN stylesheet by declaring new
         values in a second stylesheet. In the next exercise, you'll learn how to customize your theme colors using this
@@ -78,9 +78,9 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="customizingColors">
+<hr class="margin-y-5" id="customizingColors">
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <h2>Customizing Colors</h2>
     <p>
         Copy and paste the following HTML into a new document. Save it as <em>theming-example.html</em>
@@ -89,7 +89,7 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<figure class="container medium my-4">
+<figure class="container medium margin-y-4">
     <pre>
         <code class="language-html">
             &lt;!DOCTYPE html&gt;
@@ -125,18 +125,18 @@ title: "Customization"
 
                         &lt;main id="skip-header-content" role="main"&gt;
 
-                            &lt;div class="container narrow my-5"&gt;
+                            &lt;div class="container narrow margin-y-5"&gt;
 
-                                &lt;div class="bc-primary p-3 my-2"&gt;
+                                &lt;div class="theme-primary p-3 margin-y-2"&gt;
                                     &lt;p&gt;Primary&lt;/p&gt;
                                 &lt;/div&gt;
-                                &lt;div class="bc-secondary p-3 my-2"&gt;
+                                &lt;div class="theme-secondary p-3 margin-y-2"&gt;
                                     &lt;p&gt;Secondary&lt;/p&gt;
                                 &lt;/div&gt;
-                                &lt;div class="bc-dark p-3 my-2"&gt;
+                                &lt;div class="theme-dark p-3 margin-y-2"&gt;
                                     &lt;p&gt;Dark&lt;/p&gt;
                                 &lt;/div&gt;
-                                &lt;div class="bc-light p-3 my-2"&gt;
+                                &lt;div class="theme-light p-3 margin-y-2"&gt;
                                     &lt;p&gt;Light&lt;/p&gt;
                                 &lt;/div&gt;
 
@@ -158,14 +158,14 @@ title: "Customization"
     </figcaption>
 </figure>
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>Preview it in a browser. It should resemble the following.</p>
 </div>
 <!-- .container -->
 
 {% include browser-iframe.html iframe_url="/examples/customization/custom-properties-01.html" %}
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         These four colors (<em>primary</em>, <em>secondary</em>, <em>dark</em>, and <em>light</em>) are declared as
         custom properties within our core stylesheet which is loaded via CDN. Let's replace these values in a second
@@ -182,7 +182,7 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<figure class="container medium my-4">
+<figure class="container medium margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
             &lt;!-- NYC Core Stylesheet --&gt;
@@ -197,7 +197,7 @@ title: "Customization"
     </figcaption>
 </figure>
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         With <em>theme-properties.css</em> open, include the following css, save this file, and refresh your browser.
     </p>
@@ -205,7 +205,7 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
+<figure class="container narrow margin-y-4">
 
     <pre>
         <code class="language-css">
@@ -226,7 +226,7 @@ title: "Customization"
 
 {% include browser-iframe.html iframe_url="/examples/customization/custom-properties-02.html" %}
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         Did your colors update to the blue palette? With our new stylesheet in place, we have the ability to change more than
         just colors. You can see just how easy it is to customize the NYC Core Framework using a second stylesheet. 
@@ -234,9 +234,9 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="rootCustomProperties">
+<hr class="margin-y-5" id="rootCustomProperties">
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <h2>Root Custom Properties</h2>
     <p>
         The table below provides a bird's-eye view of the custom properties available to be overridden within your <em>theme-properties.css</em> stylesheet.
@@ -244,9 +244,9 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<div class="container medium my-4">
+<div class="container medium margin-y-4">
 
-    <div class="accordion bc-dark rounded" id="custom-property-list">
+    <div class="accordion theme-dark rounded" id="custom-property-list">
 
         <button class="accordion__button h6"
                 id="acc-color-system"
@@ -982,8 +982,8 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<div class="container narrow my-4">
-    <a class="btn btn--has-icon bc-secondary" href="{{ site.baseurl }}/docs/accessibility/">
+<div class="container narrow margin-y-4">
+    <a class="btn btn--has-icon theme-secondary" href="{{ site.baseurl }}/docs/accessibility/">
         <span class="btn__text">Accessibility</span>
         <span class="fas fa-long-arrow-alt-right btn__icon"></span>
     </a>

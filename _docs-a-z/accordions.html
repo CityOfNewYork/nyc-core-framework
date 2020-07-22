@@ -3,7 +3,7 @@ layout: documentation
 title: "Accordions"
 ---
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         Every so often the the need for accordions will arise. Hovever, accordions should be used judiciously and under special circumstances. Accordions are most practical when only
         specific content might be relevant to a visitor—like an FAQ page, or when several topics are covered on a
@@ -12,8 +12,8 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<div class="container narrow my-4">
-    <div class="alert alert--confirm my-3">
+<div class="container narrow margin-y-4">
+    <div class="alert alert--confirm margin-y-3">
         <div class="alert__head">
             <p>
                 <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
@@ -28,9 +28,9 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<hr class="my-5" id="accordionGroup">
+<hr class="margin-y-5" id="accordionGroup">
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <h2>The Accordion Selector</h2>
     <p>
         In the NYC Core Framework, accordions are treated as a group within the <code>.accordion</code> selector. This
@@ -39,7 +39,7 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
+<figure class="container narrow margin-y-4">
 
     <div class="accordion">
 
@@ -105,7 +105,7 @@ title: "Accordions"
 
 </figure>
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         Each subsequent accordion inside of <code>.accordion</code> includes a selector called
         <code>.accordion__button</code>. This is the accordion's header and triggers the accordion panel to open and close. 
@@ -116,7 +116,7 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<figure class="container medium my-4">
+<figure class="container medium margin-y-4">
     <pre data-line="1,3,4,5,7,8,9,10,11,12,13">
         <code class="language-html">
             
@@ -149,7 +149,7 @@ title: "Accordions"
     </figcaption>
 </figure>
 
-<figure class="container narrow my-4">
+<figure class="container narrow margin-y-4">
     <table class="table fs-md">
         <thead>
             <tr>
@@ -192,7 +192,7 @@ title: "Accordions"
     </table>
 </figure>
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         Be aware that custom padding directly applied to the <code>.accordion__panel</code> selector will not work.
         If you wish to apply custom padding to the accordion panel, either with CSS or one of our <a href="#1">predefined padding
@@ -202,7 +202,7 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <h3>Accordion Headers</h3>
     <p>
         Semantically, accordion headers should match the information architecture of the page. For example, if an accordion
@@ -216,7 +216,7 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
+<figure class="container narrow margin-y-4">
     <pre class="hide-toolbar" data-line="8,19">
         <code class="language-html">
             &lt;!-- Accordion Header as h2 --&gt;
@@ -249,7 +249,7 @@ title: "Accordions"
     </figcaption>
 </figure>
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         With the examples in Figure 2, notice the <code>h6</code> class. Our <a href="#1">header classes</a> are
         particularly convenient when a semantic header (e.g. <code>&lt;h2&gt;</code>)
@@ -259,7 +259,7 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <h3>Open by Default</h3>
     <p>
         You may want one of your accordions in a group to be open by default (when the page loads) like this example:
@@ -267,7 +267,7 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<figure class="container narrow my-4">
+<figure class="container narrow margin-y-4">
 
     <div class="accordion">
 
@@ -333,7 +333,7 @@ title: "Accordions"
 
 </figure>
 
-<div class="container narrow my-4">
+<div class="container narrow margin-y-4">
     <p>
         On the <code>.accordion__button</code> selector, make sure the the <code>aria-expanded</code> attribute is set
         to <code>"true"</code> (see Figure 3, line 5). Additionally, on the related <code>.accordion__panel</code>
@@ -342,7 +342,7 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-<figure class="container medium my-4">
+<figure class="container medium margin-y-4">
     <pre class="hide-toolbar" data-line="5,9">
         <code class="language-html">
                 &lt;button class="accordion__button h6"

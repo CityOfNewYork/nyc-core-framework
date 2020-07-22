@@ -86,7 +86,7 @@ $spacers: (
                 margin-right: #{$value} !important;
             }
 
-            .my-#{$key}#{$mod} {
+            .margin-y-#{$key}#{$mod} {
                 margin-top: #{$value} !important;
                 margin-bottom: #{$value} !important;
             }
@@ -99,7 +99,7 @@ $spacers: (
                 margin-right: #{$value} !important;
             }
 
-            .mb-#{$key}#{$mod} {
+            .margin-bottom-#{$key}#{$mod} {
                 margin-bottom: #{$value} !important;
             }
 
@@ -114,7 +114,7 @@ $spacers: (
                 margin-right: calc(#{$value} * -1) !important;
             }
 
-            .my-n#{$key}#{$mod} {
+            .margin-y-n#{$key}#{$mod} {
                 margin-top: calc(#{$value} * -1) !important;
                 margin-bottom: calc(#{$value} * -1) !important;
             }
@@ -127,7 +127,7 @@ $spacers: (
                 margin-right: calc(#{$value} * -1) !important;
             }
 
-            .mb-n#{$key}#{$mod} {
+            .margin-bottom-n#{$key}#{$mod} {
                 margin-bottom: calc(#{$value} * -1) !important;
             }
 
@@ -163,7 +163,7 @@ $spacers: (
             margin-right: 0 !important;
         }
 
-        .mb-0#{$mod} {
+        .margin-bottom-0#{$mod} {
             margin-bottom: 0 !important;
         }
 
@@ -176,7 +176,7 @@ $spacers: (
             margin-right: auto !important;
         }
 
-        .my-auto#{$mod} {
+        .margin-y-auto#{$mod} {
             margin-top: auto !important;
             margin-bottom: auto !important;
         }
@@ -189,7 +189,7 @@ $spacers: (
             margin-right: auto !important;
         }
 
-        .mb-auto#{$mod} {
+        .margin-bottom-auto#{$mod} {
             margin-bottom: auto !important;
         }
 
