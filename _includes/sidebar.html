@@ -1,10 +1,9 @@
-<ul class="nav fs-md" role="navigation">
+<ul class="nav font-size-md" role="navigation">
 
     {% for doc in site.docs-introduction %}
     
     <li>
-        <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %}
-            aria-current="page" {% endif %}>
+        <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
             {{ doc.title }}
         </a>
     </li>
@@ -13,15 +12,14 @@
 
 </ul>
 
-<hr class="margin-y-2 mx-n2">
+<hr class="margin-y-2">
 
-<ul class="nav fs-md" role="navigation">
+<ul class="nav font-size-md" role="navigation">
 
     {% for doc in site.docs-a-z %}
 
     <li>
-        <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %}
-            aria-current="page" {% endif %}>
+        <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
             {{ doc.title }}
         </a>
     </li>
