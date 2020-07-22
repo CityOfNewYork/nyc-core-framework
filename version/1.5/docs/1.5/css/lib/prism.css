@@ -42,7 +42,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	border-right adius: 0.5em;
+	border-radius: 0.5em;
 	background-color: var(--dark);
 }
 
@@ -72,7 +72,7 @@ p > code::before {
     left: 0;
     background: currentColor;
     opacity: .095;
-    border-right adius: .25em;
+    border-radius: .25em;
 }
 
 

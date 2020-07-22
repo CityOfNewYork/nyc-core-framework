@@ -122,7 +122,7 @@ td > p{
         margin-right: 0.25rem;
         
         display: inline-block;
-        border-right adius: 50%;
+        border-radius: 50%;
 
         background-color: hsla(0, 0%, 0%, 0.5);
         opacity: 0.5;
@@ -149,7 +149,7 @@ td > p{
             margin-left: 0.5rem;
             margin-right: 0.5rem;
 
-            border-right adius: 0;
+            border-radius: 0;
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
         }
