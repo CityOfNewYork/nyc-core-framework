@@ -44,7 +44,7 @@ In this file:
     thead th {
         vertical-align: bottom;
 
-        &:not([class*="w-"]) {
+        &:not([class*="width-"]) {
             width: auto;
         }
 
