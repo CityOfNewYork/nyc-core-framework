@@ -155,8 +155,8 @@ title: "Accordions"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <table class="table font-size-md">
-        <thead>
+    <table class="table font-size-md box-shadow-1">
+        <thead class="">
             <tr>
                 <th class="width-30">Line #</th>
                 <th class="width-70">Details</th>
@@ -180,8 +180,8 @@ title: "Accordions"
                         Each <code>.accordion__button</code> toggles its next sibling (<code>.accordion__panel</code>)
                         selector open and close. These attributes are required: <code>data-toggle="accordion"</code>,
                         and <code>aria-controls="{x}"</code> where <em>x</em> equals the <code>id</code> attribute
-                        of the associated <code>.accordion__panel</code>. Finally, <code>aria-expanded="false"</code> is
-                        present when the accordion is closed by default.
+                        of the associated <code>.accordion__panel</code>. The <code>aria-expanded="false"</code> attribute is
+                        present on the button when its associated accordion panel is closed by default.
                     </p>
                 </td>
             </tr>
