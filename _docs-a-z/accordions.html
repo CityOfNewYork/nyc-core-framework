@@ -117,21 +117,24 @@ title: "Accordions"
 <!-- .container -->
 
 <figure class="container medium margin-y-4">
-    <pre data-line="1,3,4,5,6,7,8,9,10">
+    <pre data-line="1,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21">
         <code class="language-html">
             
             &lt;div class="accordion"&gt;
 
-                &lt;button
-                    class="accordion__button h5"
-                    id="acc-button-group-a-01"
+                &lt;button class="accordion__button h5"
+                    id="acc-button-01"
                     data-toggle="accordion"
-                    aria-controls="acc-panel-group-a-01"
+                    aria-controls="acc-panel-01"
                     aria-expanded="false"&gt;
                         Accordion Title
                 &lt;/button&gt;
 
-                &lt;div class="accordion__panel" id="acc-panel-group-a-01" data-accordion="panel" aria-labelledby="acc-button-group-a-01" role="region"&gt;
+                &lt;div class="accordion__panel"
+                    id="acc-panel-01"
+                    data-accordion="panel"
+                    aria-labelledby="acc-button-01"
+                    role="region"&gt;
                     &lt;div class="accordion__panel__content"&gt;
                         &lt;p&gt;
                             ...
@@ -155,7 +158,7 @@ title: "Accordions"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <table class="table font-size-md box-shadow-1">
+    <table class="table table--edge font-size-md">
         <thead class="">
             <tr>
                 <th class="width-30">Line #</th>
