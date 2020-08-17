@@ -14,6 +14,7 @@ In this file:
 :root{
   --modal-padding: var(--s2);
   --modal-overlay-opacity: 0.85;
+  --modal-z-index: 25000;
 }
 
 //////////////////////////////////////////////
@@ -33,7 +34,7 @@ In this file:
 
   justify-content: center;
 
-  z-index: 10000;
+  z-index: var(--modal-z-index);
   padding: var(--modal-padding);
 
   &[class*="theme-"]{

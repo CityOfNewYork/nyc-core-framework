@@ -195,7 +195,7 @@ window.onload = () => {
     // Tabs
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll("[data-tab-group]")).forEach((tab) => {
+    Array.prototype.slice.call(document.querySelectorAll(".tabs")).forEach((tab) => {
 
         const tabButtonList = tab.querySelectorAll("[role='tab']");
         const tabPanelList = tab.querySelectorAll("[role='tabpanel']");
