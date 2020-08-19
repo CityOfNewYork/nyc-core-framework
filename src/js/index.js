@@ -450,49 +450,34 @@ window.onload = () => {
 
         let myHeaders = [];
 
-        for (const tableHeader of tableHeaderList) {
+        tableHeaderList.forEach((tableHeader) => {
 
-            if (tableHeader.hasChildNodes()) {
-
-                let children = tableHeader.childNodes;
-                let myTitle = "Title";
-
-                for (const child of children) {
-
-                    if (child.nodeType === 3) {
-                        myTitle = child.textContent;
-                    }
-                }
-
+            if (tableHeader.textContent !== "") {
+                let myTitle = tableHeader.textContent.trim();
                 myHeaders.push(myTitle);
             }
 
-        }
-
-        for (const tableRow of tableRowList) {
-
-            let i = 0;
+        });
+        
+        tableRowList.forEach((tableRow) => {
 
             const tableDataList = tableRow.querySelectorAll("td");
 
-            for (const tableData of tableDataList) {
+            tableDataList.forEach((tableData, index) => {
 
-                let childNodeList = tableData.childNodes;
+                let myStuff = tableData.innerHTML;
 
-                if (childNodeList.length === 1) {
-                    let span = document.createElement("span");
-                    let node = tableData.firstChild;
+                let myNewStuff =
+                   `<div class="td-content">
+                        ${myStuff}
+                    </div>`;
 
-                    node.parentNode.insertBefore(span, node);
-                    span.appendChild(node);
-                }
+                tableData.innerHTML = myNewStuff;
+                tableData.setAttribute("data-before", myHeaders[index]);
 
-                tableData.setAttribute("data-before", myHeaders[i]);
+            });
 
-                i++;
-            }
-
-        }
+        });
 
     }); // end for
 

@@ -205,11 +205,14 @@ In this file:
                     border: unset;
                 }
             }
+            
+            .td-content{
+                text-align: right;
+            }
 
             td::after {
                 content: attr(data-before);
                 font-weight: bold;
-                margin-right: 1rem;
             }
 
             &.table--edge{
