@@ -9,3 +9,9 @@ h1 a:hover {
   text-decoration: none;
   color: #000;
 }
+
+.nav-pills .nav-link.active, .nav-pills .nav-link.active:hover {
+  text-decoration: none !important;
+  background-color: #684499 !important;
+  color: white !important;
+}
