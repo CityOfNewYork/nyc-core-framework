@@ -18,3 +18,10 @@ h1 a:hover {
 table a {
   color: #181A7B;
 }
+
+ol.breadcrumb {
+  padding-left: 2px;
+}
+ol.breadcrumb li {
+  display: inline;
+}
