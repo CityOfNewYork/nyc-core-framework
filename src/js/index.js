@@ -675,8 +675,6 @@ import 'element-closest-polyfill';
 
             if (backdropCoverHeight < backdropHeight) {
                 backdrop.style.height = backdropHeight + "px";
-            } else {
-                return;
             }
 
         }
