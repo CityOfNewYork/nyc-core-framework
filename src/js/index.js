@@ -1,10 +1,12 @@
 import 'element-closest-polyfill';
 
-window.onload = () => {
+// window.onload = () => {
 
     ////////////////////////////////////////
     // RTL Mutation Observer
     ////////////////////////////////////////
+
+    console.log("::::::::::::: TESTING LOADING :::::::::::::")
 
     const rtlTarget = document.querySelector("html");
 
@@ -680,4 +682,4 @@ window.onload = () => {
         }
     }
 
-}; /* window.load */
+// }; /* window.load */
