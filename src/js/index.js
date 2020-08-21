@@ -1,6 +1,6 @@
 import 'element-closest-polyfill';
 
-window.onload = () => {
+(function () {
 
     ////////////////////////////////////////
     // RTL Mutation Observer
@@ -680,4 +680,4 @@ window.onload = () => {
         }
     }
 
-}; /* window.load */
+})();
