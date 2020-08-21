@@ -1,12 +1,12 @@
 import 'element-closest-polyfill';
 
-// window.onload = () => {
+window.onload = () => {
 
     ////////////////////////////////////////
     // RTL Mutation Observer
     ////////////////////////////////////////
 
-    console.log("::::::::::::: TESTING LOADING :::::::::::::");
+    console.log("::::::::::::: TESTING LOADING AGAIN :::::::::::::");
 
     const rtlTarget = document.querySelector("html");
 
@@ -680,4 +680,4 @@ import 'element-closest-polyfill';
         }
     }
 
-// }; /* window.load */
+}; /* window.load */
