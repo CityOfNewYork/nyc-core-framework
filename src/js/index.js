@@ -6,7 +6,7 @@ import 'element-closest-polyfill';
     // RTL Mutation Observer
     ////////////////////////////////////////
 
-    console.log("::::::::::::: TESTING LOADING AGAIN :::::::::::::");
+    console.log("::::::::::::: TESTING LOADING Cool :::::::::::::");
 
     const rtlTarget = document.querySelector("html");
 
