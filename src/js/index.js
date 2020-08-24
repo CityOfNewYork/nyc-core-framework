@@ -93,26 +93,24 @@ import 'element-closest-polyfill';
 
         function setKeyboardFocusableElements(element = document, focusable = false) {
 
-            const focusElList = element.querySelectorAll("a, button, input, textarea, select, details, [tabindex]:not([tabindex=' - 1 '])");
+            const focusElList = element.querySelectorAll("a[href], button, input, textarea, select, details, [tabindex]:not([tabindex=' - 1 '])");
 
             for (const focusEl of focusElList) {
 
                 if (focusable === true) {
-                    // focusEl.style.background = "blue";
                     focusEl.setAttribute("tabindex", 0);
                 } else if (focusable === false) {
-                    // focusEl.style.background = "red";
                     focusEl.setAttribute("tabindex", -1);
                 }
             }
         }
 
-        for (const accordionButton of accButtonList) {
+        accButtonList.forEach((accordionButton, index) => {
 
-            accordionButton.setAttribute("tabindex", 0);
-            
             let currentAccordionPanel = accordionButton.nextElementSibling;
             let expanded = accordionButton.getAttribute("aria-expanded");
+
+            accordionButton.setAttribute("tabindex", 0);
 
             if (expanded === "true") {
                 currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
@@ -130,8 +128,8 @@ import 'element-closest-polyfill';
 
             const initAccordion = (event) => {
 
-                event.stopPropagation();
                 event.preventDefault();
+                event.stopPropagation();
                 
                 for (const otherAccordionPanel of accPanelList) {
 
@@ -171,7 +169,7 @@ import 'element-closest-polyfill';
                     currentAccordionPanel.setAttribute("aria-hidden", false);
                 }
 
-                let accTrigger = new Event("accTrigger",{ bubbles: true });
+                let accTrigger = new Event("accTrigger", { bubbles: true });
                 document.dispatchEvent(accTrigger);
 
             }
@@ -180,14 +178,40 @@ import 'element-closest-polyfill';
                 initAccordion(event);
             });
 
+            // Keyboard Events
+
             accordionButton.addEventListener("keyup", (event) => {
                 if (event.keyCode === 13 && event.target.tagName !== "BUTTON") {
                     initAccordion(event);
-                } else {
-                    return;
                 }
             });
-        }
+
+            accordionButton.addEventListener("keydown", (event) => {
+
+                const directionalFocus = (dir) => {
+                    event.preventDefault();
+                    let targetFocus = index + dir;
+                    
+                    if (targetFocus >= 0 && targetFocus < accButtonList.length) {
+                        accButtonList[targetFocus].focus();
+                    }
+                }
+
+                const key = event.keyCode;
+
+                switch (key) {
+                    case 40:
+                        directionalFocus(1);
+                        break;
+                    case 38:
+                        directionalFocus(-1);
+                        break;
+                    default:
+                        return;
+                }
+
+            });
+        });
 
     }); // end for
 
