@@ -25,7 +25,7 @@ In this file:
 // B. Spacer Map
 //////////////////////////////////////////////
 
-$spacers: (
+$spacing: (
     1: var(--s1), 
     2: var(--s2), 
     3: var(--s3), 
@@ -41,7 +41,7 @@ $spacers: (
     @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        @each $space, $value in $spacers {
+        @each $space, $value in $spacing {
 
             // Padding
 

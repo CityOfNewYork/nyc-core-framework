@@ -150,7 +150,7 @@ In this file:
     --gap-size: 0;
 }
 
-@each $key, $value in $spacers {
+@each $key, $value in $spacing {
     @if ($key != 2) {
         .nav--gap-#{$key} {
             --gap-size: #{$value};
