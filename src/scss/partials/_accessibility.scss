@@ -2,45 +2,51 @@
 
 In this file:
 
-// A. Screen Reader Only
-// B. Focusable Only
+// A. Shared Styles
+// B. Screen Reader Only
+// C. Focusable Only
 
 */
 
 //////////////////////////////////////////////
-// A. Screen Reader Only
+// A. Shared Styles
 //////////////////////////////////////////////
 
-.screen-reader-only {
+.focusable-only, 
+.screen-reader-only{
     position: absolute;
+}
+
+//////////////////////////////////////////////
+// B. Screen Reader Only Utility
+//////////////////////////////////////////////
+
+
+.screen-reader-only {
     overflow: hidden;
     width: 1px;
     height: 1px;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    border: unset;
-    padding: unset;
 }
 
 //////////////////////////////////////////////
-// B. Focusable Only
+// C. Focusable Only Utility
 //////////////////////////////////////////////
 
 .focusable-only {
-    &:active,
-    &:focus {
-        position: absolute;
-        top: var(--s1);
-        left: var(--s1);
-        z-index: 10000;
-        overflow: visible;
-        clip: auto;
-        white-space: normal;
-        padding: var(--btn-padding-y) var(--btn-padding-x);
-        background-color: rgba( #ffffff, 0.95);
-        color: var(--dark);
-        font-size: var(--font-size-md);
-        box-shadow: 0 0 0.5rem currentColor;
-        border-radius: var(--border-radius);
+
+    &:not(:focus) {
+        @extend .screen-reader-only;
     }
+
+    top: var(--s1);
+    left: var(--s1);
+    z-index: 10000;
+
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    color: var(--dark);
+    background-color: rgba( #ffffff, 0.95);
+    font-size: var(--font-size-md);
+    box-shadow: 0 0 0.5rem currentColor;
 }
