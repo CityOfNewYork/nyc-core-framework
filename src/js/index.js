@@ -1,12 +1,10 @@
 import 'element-closest-polyfill';
 
-(function () {
+(function() {
 
     ////////////////////////////////////////
     // RTL Mutation Observer
     ////////////////////////////////////////
-
-    console.log("::::::::::::: TESTING LOADING Cool :::::::::::::");
 
     const rtlTarget = document.querySelector("html");
 
@@ -16,7 +14,7 @@ import 'element-closest-polyfill';
 
             let single_class = "translated-rtl";
 
-            if ( rtlTarget.classList.contains(single_class) ) {
+            if (rtlTarget.classList.contains(single_class)) {
                 rtlTarget.setAttribute("dir", "rtl");
             } else {
                 rtlTarget.setAttribute("dir", "ltr");
@@ -25,12 +23,12 @@ import 'element-closest-polyfill';
         });
     });
 
-    var config = {
+    var rtlConfig = {
         attributes: true,
         attributeFilter: ["class"]
     }
 
-    rtlObserver.observe(rtlTarget, config);
+    rtlObserver.observe(rtlTarget, rtlConfig);
 
     //////////////////////////////////////////////
     // Copyright Year (Footer)
