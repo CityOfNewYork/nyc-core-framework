@@ -4,8 +4,9 @@ In this file:
 
 // A. Variables
 // B. Backdrop Block
-// C. Banner Fixed
-// D. I.E. 11 Support
+// C. Backdrop Elements
+// D. Backdrop Breakpoint Modifiers
+// E. Backdrop Fixed Modifier
 
 */
 
@@ -75,7 +76,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Backdrop Breakpoint Modifiers
+// D. Backdrop Breakpoint Modifiers
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
@@ -91,7 +92,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Backdrop Fixed Modifier
+// E. Backdrop Fixed Modifier
 //////////////////////////////////////////////
 
 .backdrop--fixed {
@@ -136,10 +137,4 @@ In this file:
 
 // @media screen and (-ms-high-contrast: active),
 // screen and (-ms-high-contrast: none) {
-    
-//    .backdrop--fixed {
-//      .backdrop__cover {
-//        }
-//    }
-
 // }
