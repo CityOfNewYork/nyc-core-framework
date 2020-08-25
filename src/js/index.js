@@ -435,11 +435,11 @@ import 'element-closest-polyfill';
 
             tableDataList.forEach((tableData, index) => {
 
-                let myStuff = tableData.innerHTML;
+                let tableDataHTML = tableData.innerHTML;
 
                 let myNewStuff =
                    `<div class="td-content">
-                        ${myStuff}
+                        ${tableDataHTML}
                     </div>`;
 
                 tableData.innerHTML = myNewStuff;
