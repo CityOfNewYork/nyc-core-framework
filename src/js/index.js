@@ -261,6 +261,7 @@ import 'element-closest-polyfill';
 
         // Handle keydown on tabs
         function keydownEventListener(event) {
+            
             var key = event.keyCode;
 
             switch (key) {

@@ -26,7 +26,7 @@ In this file:
 // B. Tabs Block
 ////////////////////////////////////////
 
-.tab-nav {
+.tabs-nav {
     list-style: none;
     position: relative;
 
@@ -64,7 +64,7 @@ In this file:
     }
 }
 
-.tab-nav:not([class*="tab-nav--across"]) {
+.tabs-nav:not([class*="tabs-nav--across"]) {
 
     &::before {
         content: "";
@@ -108,7 +108,7 @@ In this file:
         @include breakpoints-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.tab-nav--horizontal#{$mod} {
+            &.tabs-nav--horizontal#{$mod} {
                 display: flex;
                 flex-direction: row;
                 align-items: baseline;
@@ -141,7 +141,7 @@ In this file:
 // D. Tabs Span Modifier
 ////////////////////////////////////////
 
-.tab-nav--across {
+.tabs-nav--across {
 
     > li > a,
     > li > button {
@@ -159,7 +159,7 @@ In this file:
         @include breakpoints-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            &.tab-nav--horizontal#{$mod} {
+            &.tabs-nav--horizontal#{$mod} {
                 display: flex;
                 flex-direction: row;
                 align-items: baseline;
@@ -177,7 +177,7 @@ In this file:
 // E. With 'theme-*' Class
 ////////////////////////////////////////
 
-.tab-nav,
+.tabs-nav,
 [data-tab-group] {
     &[class*="theme-"] {
         ::after {
