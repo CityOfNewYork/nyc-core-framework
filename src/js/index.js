@@ -199,12 +199,17 @@ import 'element-closest-polyfill';
 
                 const key = event.keyCode;
 
+                const keyCodes = {
+                    arrowUp: 38,
+                    arrowDown: 40
+                };
+
                 switch (key) {
-                    case 40:
-                        directionalFocus(1);
-                        break;
-                    case 38:
+                    case keyCodes.arrowUp:
                         directionalFocus(-1);
+                        break;
+                    case keyCodes.arrowDown:
+                        directionalFocus(1);
                         break;
                     default:
                         return;
