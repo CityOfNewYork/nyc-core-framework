@@ -3,9 +3,9 @@
 In this file:
 
 // A. Variables
-// B. Tabs 
-// C. Tabs Span
-// D. Tab Panel
+// B. Tabs Nav Block 
+// C. Tabs Nav Modifier
+// D. Tabs Panel Element
 // E. Tabs With 'theme-*' Class
 
 */
@@ -23,7 +23,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Tabs Block
+// B. Tabs Nav Block
 ////////////////////////////////////////
 
 .tabs-nav {
@@ -126,19 +126,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// C. Tab Panel Element
-////////////////////////////////////////
-
-.tabs__panel {
-    display: none;
-
-    &.shown{
-        display: block;
-    }
-}
-
-////////////////////////////////////////
-// D. Tabs Span Modifier
+// C. Tabs Nav Modifier
 ////////////////////////////////////////
 
 .tabs-nav--across {
@@ -174,7 +162,19 @@ In this file:
 }
 
 ////////////////////////////////////////
-// E. With 'theme-*' Class
+// D. Tabs Panel Element
+////////////////////////////////////////
+
+.tabs__panel {
+    display: none;
+
+    &.shown{
+        display: block;
+    }
+}
+
+////////////////////////////////////////
+// E. Tabs With 'theme-*' Class
 ////////////////////////////////////////
 
 .tabs-nav,

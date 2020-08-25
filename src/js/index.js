@@ -88,15 +88,14 @@ import 'element-closest-polyfill';
 
     Array.prototype.slice.call(document.querySelectorAll(".accordion")).forEach((accordion) => {
 
-        const accButtonList = accordion.querySelectorAll("[data-toggle='accordion']");
-        const accPanelList = accordion.querySelectorAll("[data-accordion='panel']");
+        const accordionButtonList = accordion.querySelectorAll("[data-toggle='accordion']");
+        const accordionPanelList = accordion.querySelectorAll("[data-accordion='panel']");
 
         function setKeyboardFocusableElements(element = document, focusable = false) {
 
             const focusElList = element.querySelectorAll("a[href], button, input, textarea, select, details, [tabindex]:not([tabindex=' - 1 '])");
 
             for (const focusEl of focusElList) {
-
                 if (focusable === true) {
                     focusEl.setAttribute("tabindex", 0);
                 } else if (focusable === false) {
@@ -105,14 +104,14 @@ import 'element-closest-polyfill';
             }
         }
 
-        accButtonList.forEach((accordionButton, index) => {
+        accordionButtonList.forEach((accordionButton, index) => {
 
-            let currentAccordionPanel = accordionButton.nextElementSibling;
-            let expanded = accordionButton.getAttribute("aria-expanded");
+            const currentAccordionPanel = accordionButton.nextElementSibling;
+            let isExpanded = accordionButton.getAttribute("aria-expanded");
 
             accordionButton.setAttribute("tabindex", 0);
 
-            if (expanded === "true") {
+            if (isExpanded === "true") {
                 currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
                 currentAccordionPanel.classList.add("show");
 
@@ -131,7 +130,7 @@ import 'element-closest-polyfill';
                 event.preventDefault();
                 event.stopPropagation();
                 
-                for (const otherAccordionPanel of accPanelList) {
+                for (const otherAccordionPanel of accordionPanelList) {
 
                     otherAccordionPanel.classList.remove("show");
                     
@@ -147,15 +146,15 @@ import 'element-closest-polyfill';
 
                 currentAccordionPanel.classList.toggle("shown");
 
-                let expanded = accordionButton.getAttribute("aria-expanded");
+                isExpanded = accordionButton.getAttribute("aria-expanded");
                 
-                if (expanded === "true") {
+                if (isExpanded === "true") {
                     accordionButton.setAttribute("aria-expanded", false);
                     currentAccordionPanel.setAttribute("aria-hidden", true);
                     
                     setKeyboardFocusableElements(currentAccordionPanel, false);
 
-                } else if (expanded === "false") {
+                } else if (isExpanded === "false") {
                     accordionButton.setAttribute("aria-expanded", true);
                     currentAccordionPanel.setAttribute("aria-hidden", false);
 
@@ -178,22 +177,19 @@ import 'element-closest-polyfill';
                 initAccordion(event);
             });
 
-            // Keyboard Events
-
-            accordionButton.addEventListener("keyup", (event) => {
-                if (event.keyCode === 13 && event.target.tagName !== "BUTTON") {
-                    initAccordion(event);
-                }
-            });
-
             accordionButton.addEventListener("keydown", (event) => {
 
                 const directionalFocus = (dir) => {
                     event.preventDefault();
+
                     let targetFocus = index + dir;
-                    
-                    if (targetFocus >= 0 && targetFocus < accButtonList.length) {
-                        accButtonList[targetFocus].focus();
+
+                    if (dir === -1 && targetFocus < 0) {
+                        accordionButtonList[accordionButtonList.length -1].focus();
+                    } else if (dir === 1 && targetFocus >= accordionButtonList.length) {
+                        accordionButtonList[0].focus();
+                    } else {
+                        accordionButtonList[targetFocus].focus();
                     }
                 }
 
@@ -211,11 +207,16 @@ import 'element-closest-polyfill';
                     case keyCodes.arrowDown:
                         directionalFocus(1);
                         break;
-                    default:
-                        return;
                 }
 
             });
+
+            accordionButton.addEventListener("keyup", (event) => {
+                if (event.keyCode === 13 && event.target.tagName !== "BUTTON") {
+                    initAccordion(event);
+                }
+            });
+
         });
 
     }); // end for
@@ -226,143 +227,82 @@ import 'element-closest-polyfill';
 
     Array.prototype.slice.call(document.querySelectorAll(".tabs")).forEach((tab) => {
 
-        const tabButtonList = tab.querySelectorAll("[role='tab']");
-        const tabPanelList = tab.querySelectorAll("[role='tabpanel']");
+        const tabsButtonList = tab.querySelectorAll("[role='tab']");
+        const tabsPanelList = tab.querySelectorAll("[role='tabpanel']");
 
-        // For easy reference
-        const keys = {
-            end: 35,
-            home: 36,
-            left: 37,
-            right: 39,
-            enter: 13,
-            space: 32
-        };
+        tabsButtonList.forEach((tabsButton, index) => {
 
-        // Add or subtract depending on key pressed
-        const direction = {
-            37: -1,
-            39: 1,
-        };
-
-        function addListeners(index) {
-            tabButtonList[index].addEventListener("click", clickEventListener);
-            tabButtonList[index].addEventListener("keydown", keydownEventListener);
-            tabButtonList[index].addEventListener("keyup", keyupEventListener);
-
-            // Build an array with all tabs (<button>s) in it
-            tabButtonList[index].index = index;
-        };
-
-        for (let i = 0; i < tabButtonList.length; ++i) {
-            addListeners(i);
-        };
-
-        // When a tab is clicked, activateTab is fired to activate it
-        function clickEventListener(event) {
-            var tab = event.target;
-            activateTab(tab);
-        };
-
-        // Handle keydown on tabs
-        function keydownEventListener(event) {
+            const activateTab = (tab) => {
             
-            var key = event.keyCode;
+                // Deactivate all other tabs
+                deactivateTabs();
 
-            switch (key) {
-                case keys.end:
-                    event.preventDefault();
-                    // Activate last tab
-                    focusLastTab();
-                    break;
-                case keys.home:
-                    event.preventDefault();
-                    // Activate first tab
-                    focusFirstTab();
-                    break;
+                // Set the tab as selected
+                tab.setAttribute("aria-selected", "true");
+
+                // Get the value of aria-controls (which is an ID)
+                let controls = tab.getAttribute("aria-controls");
+
+                let currentTabPanel = document.getElementById(controls);
+
+                currentTabPanel.classList.add("shown");
+                currentTabPanel.removeAttribute("hidden");
+
+            }
+
+            const deactivateTabs = () => {
+
+                for (const tab of tabsButtonList) {
+                    tab.setAttribute("aria-selected", "false");
+                }
+
+                for (const panel of tabsPanelList) {
+                    panel.classList.remove("shown");
+                    panel.setAttribute("hidden", "");
+                }
+                
             };
-        };
 
-        // Handle keyup on tabs
-        function keyupEventListener(event) {
-            var key = event.keyCode;
+            tabsButton.addEventListener("click", (event) => {
+                let tab = event.target;
+                activateTab(tab);
+            });
 
-            switch (key) {
-                case keys.left:
-                case keys.right:
-                    event.target.blur();
-                    switchTabOnArrowPress(event);
-                    break;
-                case keys.enter:
-                case keys.space:
-                    activateTab(event.target);
-                    break;
-            };
-        };
+            tabsButton.addEventListener("keydown", (event) => {
 
-        // Either focus the next, previous, first, or last tab
-        // depending on key pressed
-        
-        function switchTabOnArrowPress(event) {
-            var pressed = event.keyCode;
+                const directionalFocus = (dir) => {
+                    event.preventDefault();
 
-            if (direction[pressed]) {
-                let target = event.target;
+                    let targetFocus = index + dir;
 
-                if (target !== undefined) {
-                    if (tabButtonList[target.index + direction[pressed]]) {
-                        tabButtonList[target.index + direction[pressed]].focus();
-                    } else if (pressed === keys.left) {
-                        focusLastTab();
-                    } else if (pressed === keys.right) {
-                        focusFirstTab();
-                    };
+                    if (dir === -1 && targetFocus < 0) {
+                        tabsButtonList[tabsButtonList.length - 1].focus();
+                    } else if (dir === 1 && targetFocus >= tabsButtonList.length) {
+                        tabsButtonList[0].focus();
+                    } else {
+                        tabsButtonList[targetFocus].focus();
+                    }
+                }
+
+                const keyCodes = {
+                    arrowLeft: 37,
+                    arrowRight: 39
                 };
-            };
-        };
+                
+                const key = event.keyCode;
 
-        // Activates any given tab panel
-        function activateTab(tab) {
-            
-            // Deactivate all other tabs
-            deactivateTabs();
+                switch (key) {
+                    case keyCodes.arrowLeft:
+                        directionalFocus(-1);
+                        break;
+                    case keyCodes.arrowRight:
+                        directionalFocus(1);
+                        break;
+                }
 
-            // Set the tab as selected
-            tab.setAttribute("aria-selected", "true");
+            });
 
-            // Get the value of aria-controls (which is an ID)
-            let controls = tab.getAttribute("aria-controls");
-
-            let currentTabPanel = document.getElementById(controls);
-
-            currentTabPanel.classList.add("shown");
-            currentTabPanel.removeAttribute("hidden");
-
-        };
-
-        // Deactivate all tabs and tab panels
-        function deactivateTabs() {
-
-            for (const tab of tabButtonList) {
-                tab.setAttribute("aria-selected", "false");
-            }
-
-            for (const panel of tabPanelList) {
-                panel.classList.remove("shown");
-                panel.setAttribute("hidden", "");
-            }
-            
-        };
-
-        // Make a guess
-        function focusFirstTab() {
-            tabButtonList[0].focus();
-        };
-
-        // Make a guess
-        function focusLastTab() {
-            tabButtonList[tabButtonList.length - 1].focus();
-        };
+        });
 
     }); // end for
 
