@@ -37,7 +37,7 @@ In this file:
 .focusable-only {
 
     &:not(:focus) {
-        @extend .screen-reader-only;
+        @extend .screen-reader-only !optional;
     }
 
     top: var(--s1);

@@ -230,23 +230,3 @@ body {
     @extend .theme-white !optional;
     @extend .box-shadow-2 !optional;
 }
-
-//////////////////////////////////////////////
-// E. Text Color Classes 
-//////////////////////////////////////////////
-
-// @each $name, $color-map in $theme-colors {
-//     .tc-#{$name} {
-//         color: map-get($color-map, "swatch");
-//     }
-// }
-
-[class*="tc-"] {
-    a {
-        color: currentColor !important;
-    }
-}
-
-.tc-link {
-    color: var(--a11y-link-color);
-}
