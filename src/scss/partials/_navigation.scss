@@ -6,8 +6,9 @@ In this file:
 // B. Head Nav Components 
 // C. Nav
 // D. Nav Divider
-// E. Dropdown
-// F. I.E. 11 Support
+// E. Nav Breadcrumb
+// F. Dropdown
+// G. I.E. 11 Support
 
 */
 
@@ -368,7 +369,9 @@ In this file:
     }
 }
 
-// NAV Breadcrumb
+////////////////////////////////////////
+// E. Nav Breadcrumb
+////////////////////////////////////////
 
 .nav--breadcrumb {
     display: flex;
@@ -392,7 +395,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// E. Dropdown
+// F. Dropdown
 ////////////////////////////////////////
 
 [data-toggle="dropdown"]:not([class*="btn--icon-only"]) {
@@ -469,7 +472,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// F. I.E. 11 Support
+// G. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),
