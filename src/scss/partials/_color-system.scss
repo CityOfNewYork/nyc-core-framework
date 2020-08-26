@@ -135,7 +135,7 @@ body:not([class*="theme-"]),
     }
 
     p > a:not([class*="text-color-"]),
-    .nav:not([class*="nav--divider"]) a:not([aria-current]),
+    .nav a:not([aria-current]),
     td:not([class*="theme-"]) > a:not([class*="text-"]) {
         color: var(--link-color);
     }
