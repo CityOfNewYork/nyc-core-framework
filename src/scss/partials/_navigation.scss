@@ -108,12 +108,13 @@ In this file:
     --gap-size: var(--s2);
 }
 
-.nav{
+.nav, 
+.nav li > ul {
     @extend %list-nav-style;
 }
 
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
-.nav:not([class*="nav--divider"]) {
+.nav:not([class*="nav--divider"]):not([class*="nav--breadcrumb"]) {
 
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * 0.75);
@@ -363,6 +364,29 @@ In this file:
                     margin-right: calc(var(--default-border-width) * -1);
                 }
             }
+        }
+    }
+}
+
+// NAV Breadcrumb
+
+.nav--breadcrumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > li:last-child{
+        font-style: italic;
+        font-weight: bold;
+    }
+    
+    > li:not(:last-child) {
+        @include add-caret;
+        
+        &:after {
+            margin-left: var(--gap-size);
+            margin-right: var(--gap-size);
+            transform: rotate(-90deg);
         }
     }
 }

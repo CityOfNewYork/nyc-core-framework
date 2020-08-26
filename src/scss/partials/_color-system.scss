@@ -135,6 +135,7 @@ body:not([class*="theme-"]),
     }
 
     td:not([class*="theme-"]) > a:not([class*="text-"]),
+    .nav--breadcrumb > li > a,
     p > a:not([class*="theme-"]) {
         color: var(--link-color);
     }
