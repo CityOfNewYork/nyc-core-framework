@@ -71,3 +71,25 @@ a[data-logo="brand"] {
 .overflow-hidden {
     overflow: hidden;
 }
+
+
+
+#article{
+    display: grid;
+    
+
+
+    #sidebar {
+        grid-area: "sidebar";
+    }
+
+    #primary-content {
+        grid-area: "primary-content";
+    }
+
+    @include breakpoints-up(lg) {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "primary-content sidebar";
+    }
+}
