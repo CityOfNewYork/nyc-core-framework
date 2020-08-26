@@ -48,6 +48,7 @@
                         <li>
                             <a href="#1">
                                 <strong>
+                                    <span class="screen-reader-only">Visit NYC's</span>
                                     311
                                 </strong>
                             </a>
@@ -358,41 +359,22 @@
         <div class="modal__content medium box-shadow-2">
 
             <header class="modal__content__head border-bottom">
-                <ul class="nav nav--horizontal--md font-size-md" role="list">
-                    <li>
-                        <label class="form-entry__options__radio">
-                            <input type="radio" name="radio-group-example" checked required>
-                            <span class="radio__label">
-                                Search this website
-                            </span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="form-entry__options__radio">
-                            <input type="radio" name="radio-group-example" required>
-                            <span class="radio__label">
-                                Search all NYC.gov
-                            </span>
-                        </label>
-                    </li>
-
-                </ul>
+                <h2 class="h6" id="modal-search-title">Website Translation</h2>
                 <button class="btn btn--icon-only" data-modal-close>
                     <span class="screen-reader-only">Close Modal</span>
                     <span class="fas fa-times"></span>
                 </button>
             </header>
 
-            <div class="modal__content__body" id="modal-1-content">
+            <div class="modal__content__body" id="modal-1-content" aria-labelledby="modal-search-title">
                 <div class="form-entry">
 
                     <div class="form-entry__field--has-btn">
 
-                        <input class="form-entry__field__input" type="text" name="global_search">
-                        <span class="form-entry__field__label">Enter Search Phrase</span>
+                        <input class="form-entry__field__input" type="text" id="global_search">
+                        <label for="global_search" class="form-entry__field__label">Search</label>
 
-                        <button class="form-entry__field__btn" title="Search">
+                        <button class="form-entry__field__btn" title="Search" type="button">
                             <span class="screen-reader-only">Search</span>
                             <span class="fas fa-search"></span>
                         </button>
@@ -414,7 +396,7 @@
         <div class="modal__content medium box-shadow-2" aria-labelledby="modal-language-title">
 
             <header class="modal__content__head border-bottom">
-                <h2 class="h5" id="modal-language-title">Website Translation</h2>
+                <h2 class="h6" id="modal-language-title">Website Translation</h2>
                 <button class="btn btn--icon-only" data-modal-close>
                     <span class="screen-reader-only">Close Modal</span>
                     <span class="fas fa-times"></span>
@@ -559,7 +541,7 @@
                         <li>
                             <a href="https://www1.nyc.gov/site/mopd/index.page" title="Mayor's Office for People with Disabilities">
                                 <span class="screen-reader-only">Mayor's Office for People with Disabilities</span>
-                                <span class="fab fa-accessible-icon"></span>
+                                <span class="fab fa-accessible-icon fa-lg"></span>
                             </a>
                         </li>
                     </ul>
