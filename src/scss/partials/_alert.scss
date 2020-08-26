@@ -47,7 +47,6 @@ In this file:
             pointer-events: none;
             background-color: currentColor;
             opacity: var(--alert-highlight-opacity);
-            z-index: auto;
         }
     }    
 }
@@ -59,8 +58,6 @@ In this file:
 .alert__head, 
 .alert__body {
     position: relative;
-    z-index: auto;
-
 }
 
 .alert__head {
