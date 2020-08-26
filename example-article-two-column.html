@@ -33,7 +33,7 @@
     <!-- For keyboard users -->
     <a class="focusable-only" href="#skip-header-target">Skip Header</a>
 
-    <header class="theme-white box-shadow-1 z-index-300" id="global-header">
+    <header class="theme-white box-shadow-1" id="global-header">
 
         <div class="container font-size-md padding-y-1 theme-dark" id="nyc-head">
 
@@ -172,7 +172,7 @@
             </ul>
         </div>
 
-        <div class="backdrop backdrop--fixed theme-primary ">
+        <div class="backdrop backdrop--fixed theme-primary">
 
             <div class="backdrop__image">
                 <img class="opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
@@ -195,9 +195,12 @@
         </div>
         <!-- .backdrop -->
 
-        <div class="" id="article">
+        <div id="article">
 
-            <div class="padding-2 padding-0--lg theme-light" id="sidebar">
+            <div class="padding-2 padding-0--lg" id="sidebar">
+
+                <!-- For keyboard users -->
+                <a class="focusable-only" href="#primary-content" >Skip Navigation</a>
 
                 <div class="display-none--lg">
                     <button class="btn btn--has-icon--disperse theme-primary rounded-pill" data-toggle="collapse" data-target="#sidebar__menu">
@@ -228,11 +231,7 @@
 
             </div>
 
-            
-
-            <div class="overflow-hidden box-shadow-2 z-index-200" id="primary-content">
-
-                
+            <div class="overflow-hidden box-shadow-1 z-index-200" id="primary-content">
 
                 <div class="margin-y-5">
 
@@ -248,9 +247,28 @@
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                            architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint harum
-                            dignissimos accusamus reiciendis sit? Quam earum quaerat tempora fugiat. Sequi
-                            suscipit voluptas obcaecati repellendus.
+                            architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
+                            dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
+                        </p>
+
+                        <h3>Headline 3</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
+                            architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
+                            dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
+                            architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
+                            dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
+                            architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
+                            dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
                         </p>
 
                     </div>
@@ -258,120 +276,73 @@
 
                     <hr class="margin-y-5">
 
-                    <div class="container narrow">
+                    <div class="narrow margin-y-4">
 
-                        <h3>The 12 Steps</h3>
+                        <div class="accordion" role="presentation">
 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, qui earum! Fugit, eum
-                            suscipit corrupti fuga veritatis ratione exercitationem doloremque.
-                        </p>
+                            <h2 class="accordion__button h5" id="acc-button-group-a-01" data-toggle="accordion"
+                                aria-controls="acc-panel-group-a-01" aria-expanded="true">
+                                Accordion Title
+                            </h2>
 
-                        <h4 class="h6 text-primary">Step 1</h4>
+                            <div class="accordion__panel show" id="acc-panel-group-a-01" data-accordion="panel"
+                                aria-labelledby="acc-button-group-a-01" role="region">
+                                <div class="accordion__panel__content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                        ducimus quam provident repellendus eos libero error adipisci laudantium
+                                        exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                        quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                        velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                        reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- .accordion__panel -->
 
-                        <p>
-                            <em>
-                                We admitted we were powerless over alcohol—that our lives had become unmanageable.
-                            </em>
-                        </p>
+                            <h2 class="accordion__button h5" id="acc-button-group-a-02" data-toggle="accordion"
+                                aria-controls="acc-panel-group-a-02" aria-expanded="false">
+                                Accordion Title
+                            </h2>
 
-                        <h4 class="h6 text-primary">Step 2</h4>
+                            <div class="accordion__panel" id="acc-panel-group-a-02" data-accordion="panel"
+                                aria-labelledby="acc-button-group-a-02" role="region">
+                                <div class="accordion__panel__content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                        ducimus quam provident repellendus eos libero error adipisci laudantium
+                                        exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                        quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                        velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                        reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- .accordion__panel -->
 
-                        <p>
-                            <em>
-                                Came to believe that a Power greater than ourselves could restore us to sanity.
-                            </em>
-                        </p>
+                            <h2 class="accordion__button h5" id="acc-button-group-a-03" data-toggle="accordion"
+                                aria-controls="acc-panel-group-a-03" aria-expanded="false">
+                                Accordion Title
+                            </h2>
 
-                        <h4 class="h6 text-primary">Step 3</h4>
+                            <div class="accordion__panel" id="acc-panel-group-a-03" data-accordion="panel"
+                                aria-labelledby="acc-button-group-a-03" role="region">
+                                <div class="accordion__panel__content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                        ducimus quam provident repellendus eos libero error adipisci laudantium
+                                        exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                        quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                        velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                        reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- [data-accordion-group] -->
 
-                        <p>
-                            <em>
-                                Made a decision to turn our will and our lives over to the care of God as we understood
-                                Him.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 4</h4>
-
-                        <p>
-                            <em>
-                                Made a searching and fearless moral inventory of ourselves.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 5</h4>
-
-                        <p>
-                            <em>
-                                Admitted to God, to ourselves, and to another human being the exact nature of our
-                                wrongs.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 6</h4>
-
-                        <p>
-                            <em>
-                                Were entirely ready to have God remove all these defects of character.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 7</h4>
-
-                        <p>
-                            <em>
-                                Humbly asked Him to remove our shortcomings.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 8</h4>
-
-                        <p>
-                            <em>
-                                Made a list of all persons we had harmed, and became willing to make amends to them all.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 9</h4>
-
-                        <p>
-                            <em>
-                                Made direct amends to such people wherever possible, except when to do so would injure
-                                them or others.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 10</h4>
-
-                        <p>
-                            <em>
-                                Continued to take personal inventory and when we were wrong promptly admitted it.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 11</h4>
-
-                        <p>
-                            <em>
-                                Sought through prayer and meditation to improve our conscious contact with God, as we
-                                understood Him, praying only for knowledge of His will for us and the power to carry
-                                that out.
-                            </em>
-                        </p>
-
-                        <h4 class="h6 text-primary">Step 12</h4>
-
-                        <p>
-                            <em>
-                                Having had a spiritual awakening as the result of these Steps, we tried to carry this
-                                message to alcoholics, and to practice these principles in all our affairs.
-                            </em>
-                        </p>
-
+                        </div>
+                        <!-- .accordion -->
                     </div>
-                    <!-- .container -->
-
 
                 </div>
 
@@ -382,7 +353,7 @@
 
     </main>
 
-    <div class="modal theme-dark" id="global-search">
+    <div class="modal" id="global-search">
 
         <div class="modal__content medium box-shadow-2">
 
@@ -438,7 +409,7 @@
     </div>
     <!-- #global-search -->
 
-    <div class="modal theme-dark" id="global-language">
+    <div class="modal" id="global-language">
 
         <div class="modal__content medium box-shadow-2" aria-labelledby="modal-language-title">
 

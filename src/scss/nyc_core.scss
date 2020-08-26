@@ -77,6 +77,7 @@ a[data-logo="brand"] {
     display: grid;
     
     #sidebar {
+        position: relative;
         grid-area: "sidebar";
     }
 

@@ -23,7 +23,7 @@ In this file:
 
     // Accessible Link Color
 
-    --a11y-link-color: blue;
+    --a11y-link-color: var(--primary);
 
     // Associated Primary Colors
 
@@ -134,9 +134,9 @@ body:not([class*="theme-"]),
         }
     }
 
-    td:not([class*="theme-"]) > a:not([class*="text-"]),
-    .nav--breadcrumb > li > a,
-    p > a:not([class*="theme-"]) {
+    p > a:not([class*="text-color-"]),
+    .nav > li > a:not([aria-current]),
+    td:not([class*="theme-"]) > a:not([class*="text-"]) {
         color: var(--link-color);
     }
 
