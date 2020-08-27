@@ -22,8 +22,18 @@
     <!-- Font Awesome Kit -->
     <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
 
+    <!-- NYC Font from Adobe -->
+    <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
+
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
+
+    <style>
+        :root {
+            --base-font-family: "neue-haas-grotesk-text";
+            --base-line-height: 1.5;
+        }
+    </style>
 
 </head>
 
@@ -32,7 +42,7 @@
     <!-- For keyboard users -->
     <a class="focusable-only" href="#skip-header-target">Skip Header</a>
 
-    <header class="theme-white box-shadow-1" id="global-header">
+    <header class="theme-white box-shadow-1 z-index-400" id="global-header">
 
         <div class="container font-size-md padding-y-1 theme-dark" id="nyc-head">
 
@@ -80,7 +90,7 @@
         </div>
         <!-- #nyc-head -->
 
-        <div class="primary-nav--across--lg">
+        <div class="primary-nav--right--lg">
 
             <div class="primary-nav__logo">
 
@@ -146,60 +156,20 @@
 
         </div>
         <!-- .primary-nav -->
-
-        <nav class="theme-primary padding-x-2 padding-y-1" aria-label="Breadcrumb">
-            <ul class="nav nav--breadcrumb font-size-md">
-                <li>
-                    <a class="btn btn--icon-only" href="#1" title="Home">
-                        <span class="screen-reader-only">Home</span>
-                        <span class="fas fa-home" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#1">Parent Section</a>
-                </li>
-                <li>
-                    Child Page
-                </li>
-            </ul>
-        </nav>
         
     </header>
     <!-- #global-header -->
 
     <main id="skip-header-target">
 
-        <div class="backdrop backdrop--fixed theme-primary">
+        <div class="article--sidebar-content">
 
-            <div class="backdrop__image">
-                <img class="opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
-            </div>
-
-            <div class="backdrop__cover">
-
-                <div class="container wide">
-
-                    <h1 class="banner-headline text-shadow">
-                        Lorem ipsum dolor
-                    </h1>
-
-                </div>
-                <!-- .container -->
-
-            </div>
-            <!-- .backdrop__cover -->
-
-        </div>
-        <!-- .backdrop -->
-
-        <article id="article">
-
-            <div id="sidebar">
+            <div class="article__sidebar theme-light">
 
                 <!-- For keyboard users -->
                 <a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
-                <div class="sticky-top padding-2 padding-0--lg narrow">
+                <div class="sticky-top padding-2 narrow">
 
                     <div class="display-none--lg">
                         <button class="btn btn--has-icon--disperse theme-primary rounded-pill" data-toggle="collapse" data-target="#sidebar__menu">
@@ -211,7 +181,7 @@
                     <nav class="collapse display-block--lg" id="sidebar__menu">
                         <ul class="nav nav--divider">
                             <li>
-                                <a href="#1" aria-current="page">Link</a>
+                                <a class="background-color-primary text-color-white" href="#1" aria-current="page">Link</a>
                             </li>
                             <li>
                                 <a href="#1">Link</a>
@@ -232,13 +202,35 @@
 
             </div>
 
-            <div class="overflow-hidden box-shadow-1 z-index-200" id="primary-content">
+            <article class="overflow-hidden" id="primary-content">
 
-                <div class="margin-y-5">
+                <header class="container narrow margin-y-3">
+
+                        <nav class="margin-y-2" aria-label="Breadcrumb">
+                            <ul class="nav nav--breadcrumb font-size-md">
+                                <li>
+                                    <a class="btn btn--icon-only" href="#1" title="Home">
+                                        <span class="screen-reader-only">Home</span>
+                                        <span class="fas fa-home" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#1">Parent Section</a>
+                                </li>
+                                <li>
+                                    Child Page
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <h1 id="cool">Headline 1</h1>
+
+                </header>
+
+                <div class="margin-y-3">
 
                     <div class="container narrow">
 
-                        <h2>Headline 2</h2>
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
@@ -404,9 +396,9 @@
                 </div>
 
 
-            </div>
+            </article>
 
-        </article>
+        </div>
 
     </main>
 
@@ -469,7 +461,7 @@
     </div>
     <!-- #global-language -->
 
-    <footer class="theme-dark font-size-md padding-y-4" role="contentinfo">
+    <footer class="theme-dark font-size-md padding-y-4">
 
         <h2 class="screen-reader-only">
             Page Footer

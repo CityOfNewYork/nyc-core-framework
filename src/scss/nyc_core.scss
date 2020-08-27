@@ -78,7 +78,7 @@ a[data-logo="brand"] {
 
 
 :root{
-    --sidebar-width: 300px;
+    --article-sidebar-width: 300px;
 }
 
 
@@ -86,21 +86,49 @@ a[data-logo="brand"] {
 // B. Layouts
 //////////////////////////////////////////////
 
-#article {
+/*
+
+article--header-sidebar-content
+article--header-content
+article--sidebar-header-content-sidebar
+article--legal-sidebar-content
+
+*/
+
+[class*="article--"] {
+
     display: grid;
-    
-    #sidebar {
-        position: relative;
-        grid-area: "sidebar";
+
+}
+
+@include breakpoints-up(lg) {
+
+    [class*="article--"] {
+        .article__header {
+            grid-area: header;
+        }
+        
+        .article__sidebar {
+            position: relative;
+            grid-area: sidebar;
+        }
+
+        .article__content {
+            grid-area: content;
+        }
     }
 
-    #primary-content {
-        grid-area: "primary-content";
-    }
-
-    @include breakpoints-up(lg) {
-        grid-template-columns: var(--sidebar-width) 1fr;
+    .article--header-sidebar-content {
+        grid-template-columns: var(--article-sidebar-width) 1fr;
         grid-template-areas:
-            "primary-content sidebar";
+            "header header"
+            "sidebar content";
     }
+
+    .article--sidebar-content {
+        grid-template-columns: var(--article-sidebar-width) 1fr;
+        grid-template-areas:
+            "sidebar content";
+    }
+
 }

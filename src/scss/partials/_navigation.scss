@@ -214,8 +214,11 @@ In this file:
     &:not([class*="theme-"]) {
         border-color: inherit;
 
-        a, button {
+        a, button{
+            &:not([class*="text-color-"]) {
+
             color: inherit;
+            }
         }
     }
 
