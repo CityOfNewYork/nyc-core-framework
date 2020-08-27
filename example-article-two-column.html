@@ -46,24 +46,23 @@
                 <div class="grid__cell">
                     <ul class="nav nav--gap-1 nav--horizontal">
                         <li>
-                            <a href="#1">
+                            <a href="#1" target="_blank">
                                 <strong>
-                                    <span class="screen-reader-only">Visit NYC's</span>
-                                    311
+                                    <span class="screen-reader-only">Visit NYC 3 1 1</span>
+                                    <span aria-hidden="true">311</span>
                                 </strong>
                             </a>
                         </li>
                         <li class="d-none">
-                            <a href="#1">
+                            <a href="#1" target="_blank">
                                 <strong>
                                     Search all NYC.gov
                                 </strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#1" data-logo="brand">
+                            <a href="#1" data-logo="brand" title="Visit NYC.gov" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="15" viewBox="0 0 45 15">
-                                    <title>NYC Bubble Logo</title>
                                     <g>
                                         <polygon points="44.063 6.551 45 5.625 45 2.813 42.188 0 32.813 0 30 2.813 30 0.938 29.063 0 25.313 0 24.375 0.938 24.375 2.813 22.5 4.688 20.625 2.813 20.625 0.938 19.688 0 15.938 0 15 0.938 14.063 0 10.312 0 9.375 0.938 9.375 4.688 4.687 0 0.937 0 0 0.938 0 14.062 0.937 15 4.687 15 5.625 14.062 5.625 10.312 10.312 15 14.063 15 15 14.062 15 6.563 19.688 11.25 19.688 14.062 20.625 15 24.375 15 25.313 14.062 25.313 11.25 30 6.563 30 12.187 32.813 15 42.188 15 45 12.187 45 9.375 44.063 8.437 39.375 8.437 39.375 9.375 35.625 9.375 35.625 5.625 39.375 5.625 39.375 6.551 44.063 6.551" />
                                         <path d="M44.3325.6338c.09,0,.165,0,.165-.1125S44.415.4238,44.3438.4238H44.205v.21Zm-.1275.4012h-.12V.3263h.27c.1725,0,.2588.06.2588.2025A.18.18,0,0,1,44.45.7234l-.0047,0h0l.1988.3112h-.1426L44.3137.75H44.205Zm.1238-.8962a.5023.5023,0,0,0-.495.5025V.6675a.4927.4927,0,1,0,.9825.075.2548.2548,0,0,0,0-.075.495.495,0,0,0-.4575-.5287h-.03m0,1.17a.6189.6189,0,0,1-.63-.6V.6675a.63.63,0,1,1,1.26-.0225V.6675a.6224.6224,0,0,1-.6031.6412h-.0269" />
@@ -85,11 +84,10 @@
 
             <div class="primary-nav__logo">
 
-                <a href="#1" title="Home" data-logo="brand">
+                <a href="#1" title="Website Home" data-logo="brand">
 
                     <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
-                        <title>NYC Bubble Logo</title>
                         <g>
                             <polygon points="87.5 0 80 7.5 80 2.5 77.5 0 67.5 0 65 2.5 65 7.5 60 12.5 55 7.5 55 2.5 52.5 0 42.5 0 40 2.5 37.5 0 27.5 0 25 2.5 25 12.5 12.501 0 2.501 0 0 2.5 0 37.5 2.501 40 12.501 40 15 37.5 15 27.5 27.5 40 37.5 40 40 37.5 40 17.5 52.5 30 52.5 37.5 55 40 65 40 67.5 37.5 67.5 30 80 17.5 80 32.5 87.5 40 112.5 40 120 32.5 120 25 117.5 22 105 22 105 25 95 25 95 15 105 15 105 18 117.5 18 120 15 120 7.5 112.5 0 87.5 0" />
                             <path d="M117.9877,1.8787h.293l.4888.8088h.3522l-.53-.831a.4834.4834,0,0,0,.4927-.517c0-.3837-.2322-.5435-.6895-.5435h-.718V2.6875h.3105Zm0-.8182h.3758c.1867,0,.411.0278.411.2568,0,.2742-.2055.2962-.4385.2962h-.3483Z" />
@@ -101,14 +99,29 @@
 
             </div>
 
-            <nav class="primary-nav__menu" id="primary-menu">
+            <div class="primary-nav__buttons">
+                <button class="btn btn--icon-only menu-toggle" title="Menu" data-toggle="collapse" data-target="#primary-menu">
+                    <span class="screen-reader-only">Menu</span>
+                    <span class="fas fa-bars"></span>
+                </button>
+                <button class="btn btn--icon-only" title="Language" data-modal-open="global-language">
+                    <span class="screen-reader-only">Language</span>
+                    <span class="fas fa-language"></span>
+                </button>
+                <button class="btn btn--icon-only" title="Search" data-modal-open="global-search">
+                    <span class="screen-reader-only">Search</span>
+                    <span class="fas fa-search"></span>
+                </button>
+            </div>
+
+            <nav class="primary-nav__menu" id="primary-menu" aria-label="Primary">
 
                 <ul role="list">
                     <li>
                         <a href="#1" data-toggle="dropdown">Dropdown</a>
                         <ul class="box-shadow-1--lg">
                             <li>
-                                <a href="#1">Link</a>
+                                <a href="#1" aria-current="page">Link</a>
                             </li>
                             <li>
                                 <a href="#1">Link</a>
@@ -131,30 +144,10 @@
 
             </nav>
 
-            <div class="primary-nav__buttons">
-                <button class="btn btn--icon-only menu-toggle" title="Menu" data-toggle="collapse" data-target="#primary-menu">
-                    <span class="screen-reader-only">Menu</span>
-                    <span class="fas fa-bars"></span>
-                </button>
-                <button class="btn btn--icon-only" title="Language" data-modal-open="global-language">
-                    <span class="screen-reader-only">Language</span>
-                    <span class="fas fa-language"></span>
-                </button>
-                <button class="btn btn--icon-only" title="Search" data-modal-open="global-search">
-                    <span class="screen-reader-only">Search</span>
-                    <span class="fas fa-search"></span>
-                </button>
-            </div>
-
         </div>
         <!-- .primary-nav -->
 
-    </header>
-    <!-- #global-header -->
-
-    <main id="skip-header-target">
-
-        <nav class="theme-primary padding-x-2 padding-y-1">
+        <nav class="theme-primary padding-x-2 padding-y-1" aria-label="Breadcrumb">
             <ul class="nav nav--breadcrumb font-size-md">
                 <li>
                     <a class="btn btn--icon-only" href="#1" title="Home">
@@ -170,6 +163,10 @@
                 </li>
             </ul>
         </nav>
+    </header>
+    <!-- #global-header -->
+
+    <main id="skip-header-target">
 
         <div class="backdrop backdrop--fixed theme-primary">
 
@@ -199,7 +196,7 @@
             <div id="sidebar">
 
                 <!-- For keyboard users -->
-                <a class="focusable-only" href="#primary-content" >Skip Navigation</a>
+                <a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
                 <div class="sticky-top padding-2 padding-0--lg narrow">
 

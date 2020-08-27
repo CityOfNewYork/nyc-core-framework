@@ -66,6 +66,10 @@ a[data-logo="brand"] {
         display: block;
         fill: currentColor;
     }
+
+    &:focus {
+        opacity: 0.85;
+    }
 }
 
 .overflow-hidden {
