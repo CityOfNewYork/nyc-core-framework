@@ -378,9 +378,11 @@ In this file:
     flex-direction: row;
     align-items: center;
 
-    > li:last-child{
+    > li:last-child {
         font-style: italic;
         font-weight: bold;
+
+        @extend .truncate-text !optional;
     }
     
     > li:not(:last-child) {

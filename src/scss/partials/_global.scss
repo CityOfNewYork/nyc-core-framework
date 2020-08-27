@@ -10,6 +10,7 @@ In this file:
 // F. Subtle Fill
 // G. Body Width
 // H. HTML Scroll Behavior
+// I. Truncate Text
 
 */
 
@@ -152,4 +153,14 @@ body {
 
 html {
     scroll-behavior: smooth;
+}
+
+////////////////////////////////////////
+// I. Truncate Text
+////////////////////////////////////////
+
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
