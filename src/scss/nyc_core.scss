@@ -73,6 +73,15 @@ a[data-logo="brand"] {
 }
 
 
+:root{
+    --sidebar-width: 300px;
+}
+
+
+//////////////////////////////////////////////
+// B. Layouts
+//////////////////////////////////////////////
+
 #article {
     display: grid;
     
@@ -86,7 +95,7 @@ a[data-logo="brand"] {
     }
 
     @include breakpoints-up(lg) {
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: var(--sidebar-width) 1fr;
         grid-template-areas:
             "primary-content sidebar";
     }

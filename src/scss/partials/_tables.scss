@@ -28,6 +28,15 @@ In this file:
     table-layout: fixed;
     width: 100%;
 
+    caption-side: bottom;
+
+    caption{
+        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+        text-align: start;
+        opacity: 0.75;
+        font-size: var(--font-size-md);
+    }
+
     th, 
     td {
         text-align: inherit;

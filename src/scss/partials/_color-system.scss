@@ -136,7 +136,8 @@ body:not([class*="theme-"]),
 
     p > a:not([class*="text-color-"]),
     .nav a:not([aria-current]),
-    td:not([class*="theme-"]) > a:not([class*="text-"]) {
+    td:not([class*="theme-"]) > a:not([class*="text-color-"]),
+    .td-content > a:not([class*="text-color-"]) {
         color: var(--link-color);
     }
 
@@ -184,7 +185,6 @@ body:not([class*="theme-"]),
         --gradient-color: var(--background-color);
     }
 }
-
 
 @each $breakpoint in map-keys($breakpoints) {
     @include breakpoints-up($breakpoint) {
