@@ -190,9 +190,6 @@ p ~ ul:not([class]) {
 }
 
 figure {
-    margin-top: var(--s4);
-    margin-bottom: var(--s4);
-
     figcaption {
         font-size: var(--font-size-md);
         opacity: 0.85;

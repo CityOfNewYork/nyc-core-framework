@@ -13,6 +13,7 @@ In this file:
 
 :root{
     --article-sidebar-width: 300px;
+    --article-text-width: var(--narrow-width);
 }
 
 //////////////////////////////////////////////
@@ -33,32 +34,54 @@ article--legal-sidebar-content
     display: grid;
 }
 
-.article--header-sidebar-content .article__sidebar {
-    @include breakpoints-down(lg) {
-        padding: var(--s2);
-    }
-}
-
 .article__content {
     overflow: hidden;
 
+    header {
+        margin-top: var(--s3);
+        margin-bottom: var(--s3);
+        --breadcrumb-padding-x: 0;
+    }
+
     section {
-        margin-top: var(--s5);
-        margin-bottom: var(--s5);
+        margin-top: var(--s4);
+        margin-bottom: var(--s4);
         padding-left: var(--s2);
         padding-right: var(--s2);
     }
 
-    h1, h2, h3, h4, h5, h6, p, ul {
+    header > *,
+    section > *,
+    footer {
         @extend %center-horizontal !optional;
-        @extend .narrow !optional;
+    }
+    
+    footer {
+        margin-top: var(--s4);
+        margin-bottom: var(--s4);
+        padding-top: var(--s2);
+
+        border-top-width: var(--default-border-width);
+        border-top-style: var(--default-border-style);
+        border-top-color: currentColor;
+    }
+
+    h1, h2, h3, h4, h5, h6, p,
+    ul, ol,
+    header > *,
+    section > div,
+    footer {
+        max-width: var(--narrow-width);
+    }
+
+    figure,
+    section > div {
+        margin-top: var(--s4);
+        margin-bottom: var(--s4);
     }
 
     figure {
-        @extend %center-horizontal !optional;
         max-width: var(--medium-width);
-
-        @extend .box-shadow-1 !optional;
     }
 }
 
@@ -95,6 +118,7 @@ article--legal-sidebar-content
         grid-template-columns: var(--article-sidebar-width) 1fr;
         grid-template-areas:
             "sidebar content";
+
     }
 
     .article--sidebar-header-content-sidebar {
@@ -109,6 +133,9 @@ article--legal-sidebar-content
 
 
 
+.article__sidebar > div{
+    padding: var(--s2);
+}
 
 .cool-nav {
     a[aria-current="page"]{

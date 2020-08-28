@@ -18,7 +18,10 @@ In this file:
 
 :root {
     --nav--divider-padding-x: 1em;
-    --nav--divider-padding-y: 0.5em;
+    --nav--divider-padding-y: 0.625em;
+
+    --breadcrumb-padding-x: var(--s2);
+    --breadcrumb-padding-y: var(--s2);
     
     --dropdown-z-index: 1200;
 }
@@ -378,7 +381,7 @@ In this file:
 
 nav[aria-label="Breadcrumb"] {
     font-size: var(--font-size-md);
-    padding:var(--s1) var(--s2);
+    padding: var(--breadcrumb-padding-y) var(--breadcrumb-padding-x);
 }
 
 .nav--breadcrumb {

@@ -129,7 +129,7 @@ body:not([class*="theme-"]),
     border-color: var(--border-color);
 
     * {
-        &:not([class*="theme-"]):not(input):not(textarea):not(select) {
+        &:not([class*="theme-"]):not(input):not(textarea):not(select):not(footer) {
             border-color: inherit;
         }
     }
