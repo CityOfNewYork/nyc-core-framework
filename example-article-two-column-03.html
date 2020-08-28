@@ -90,7 +90,7 @@
         </div>
         <!-- #nyc-head -->
 
-        <div class="primary-nav--right--lg">
+        <div class="primary-nav--across--lg">
 
             <div class="primary-nav__logo">
 
@@ -162,14 +162,14 @@
 
     <main id="skip-header-target">
 
-        <div class="article--sidebar-content">
+        <article class="article--sidebar-header-content-sidebar">
 
-            <div class="article__sidebar theme-light">
+            <div class="article__sidebar border-right--lg theme-primary--lg">
 
                 <!-- For keyboard users -->
                 <a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
-                <div class="sticky-top padding-2 narrow">
+                <div class="sticky-top padding-2 padding-0--lg narrow">
 
                     <div class="display-none--lg">
                         <button class="btn btn--has-icon--disperse theme-primary rounded-pill" data-toggle="collapse" data-target="#sidebar__menu">
@@ -179,7 +179,7 @@
                     </div>
 
                     <nav class="collapse display-block--lg" id="sidebar__menu">
-                        <ul class="nav nav--divider box-shadow-1 rounded cool-nav background-color-white">
+                        <ul class="nav nav--divider">
                             <li>
                                 <a href="#1" aria-current="page">Link</a>
                             </li>
@@ -202,26 +202,31 @@
 
             </div>
 
-            <article class="overflow-hidden" id="primary-content">
+            <header class="backdrop backdrop--fixed theme-primary article__header" id="header">
+
+                <div class="backdrop__image">
+                    <img class="opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
+                </div>
+
+                <div class="backdrop__cover">
+
+                    <div class="container wide">
+
+                        <h1 class="banner-headline text-shadow">
+                            Lorem ipsum dolor
+                        </h1>
+
+                    </div>
+                    <!-- .container -->
+
+                </div>
+                <!-- .backdrop__cover -->
+
+            </header>
+
+            <div class="overflow-hidden" id="primary-content">
 
                 <header class="container narrow margin-y-3">
-
-                        <nav class="margin-y-2" aria-label="Breadcrumb">
-                            <ul class="nav nav--breadcrumb font-size-md">
-                                <li>
-                                    <a class="btn btn--icon-only" href="#1" title="Home">
-                                        <span class="screen-reader-only">Home</span>
-                                        <span class="fas fa-home" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#1">Parent Section</a>
-                                </li>
-                                <li>
-                                    Child Page
-                                </li>
-                            </ul>
-                        </nav>
 
                         <h1 id="cool">Headline 1</h1>
 
@@ -230,7 +235,6 @@
                 <div class="margin-y-3">
 
                     <div class="container narrow">
-
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
@@ -396,9 +400,17 @@
                 </div>
 
 
-            </article>
+            </div>
 
-        </div>
+            <div class="article__related border-left--lg">
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, repellat harum optio sapiente quod deserunt ipsam cum voluptatem perferendis tempore cumque laborum ipsum dicta explicabo dolorem libero esse at delectus.
+                </p>
+
+            </div>
+
+        </article>
 
     </main>
 
