@@ -47,6 +47,7 @@ In this file:
 @import "partials/forms";
 @import "partials/aspect-ratio";
 @import "partials/opacities";
+@import "partials/layouts";
 
 // @import "partials/dev-tools";
 
@@ -74,81 +75,4 @@ a[data-logo="brand"] {
 
 .overflow-hidden {
     overflow: hidden;
-}
-
-
-:root{
-    --article-sidebar-width: 300px;
-}
-
-
-//////////////////////////////////////////////
-// B. Layouts
-//////////////////////////////////////////////
-
-/*
-
-article--header-sidebar-content
-article--sidebar-content
-article--header-content
-article--sidebar-header-content-sidebar
-article--legal-sidebar-content
-
-*/
-
-[class*="article--"] {
-    display: grid;
-}
-
-@include breakpoints-up(lg) {
-
-    [class*="article--"] {
-
-        .article__header {
-            grid-area: header;
-        }
-        
-        .article__sidebar {
-            position: relative;
-            grid-area: sidebar;
-        }
-
-        .article__content {
-            grid-area: content;
-        }
-
-        .article__related {
-            grid-area: related;
-        }
-    }
-
-    .article--header-sidebar-content {
-        grid-template-columns: var(--article-sidebar-width) 1fr;
-        grid-template-areas:
-            "header header"
-            "sidebar content";
-    }
-
-    .article--sidebar-content {
-        grid-template-columns: var(--article-sidebar-width) 1fr;
-        grid-template-areas:
-            "sidebar content";
-    }
-
-    .article--sidebar-header-content-sidebar {
-        --article-sidebar-width: 250px;
-        grid-template-columns: var(--article-sidebar-width) 1fr  var(--article-sidebar-width);
-        grid-template-areas:
-            "header header header"
-            "sidebar content related";
-    }
-
-}
-
-.cool-nav {
-    a[aria-current="page"]{
-        background-color: var(--primary);
-        color: white !important;
-    }
-
 }

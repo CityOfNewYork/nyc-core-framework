@@ -28,13 +28,17 @@ In this file:
     table-layout: fixed;
     width: 100%;
 
+    font-size: var(--font-size-md);
+
     caption-side: bottom;
 
     caption{
         padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
         text-align: start;
         opacity: 0.75;
-        font-size: var(--font-size-md);
+        font-size: var(--font-size-sm);
+        border-top-width: var(--default-border-width);
+        border-top-style: var(--default-border-style);
     }
 
     th, 

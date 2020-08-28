@@ -376,6 +376,11 @@ In this file:
 // E. Nav Breadcrumb
 ////////////////////////////////////////
 
+nav[aria-label="Breadcrumb"] {
+    font-size: var(--font-size-md);
+    padding:var(--s1) var(--s2);
+}
+
 .nav--breadcrumb {
     display: flex;
     flex-direction: row;

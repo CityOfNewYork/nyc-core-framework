@@ -37,174 +37,174 @@ $spacing: (
 // C. Responsive Spacer Utilities
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+// @each $breakpoint in map-keys($breakpoints) {
+//     @include breakpoints-up($breakpoint) {
+//         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        @each $space, $value in $spacing {
+//         @each $space, $value in $spacing {
 
-            // Padding
+//             // Padding
 
-            .padding-#{$space}#{$mod} {
-                padding: #{$value} !important;
-            }
+//             .padding-#{$space}#{$mod} {
+//                 padding: #{$value} !important;
+//             }
 
-            .padding-x-#{$space}#{$mod} {
-                padding-left: #{$value} !important;
-                padding-right: #{$value} !important;
-            }
+//             .padding-x-#{$space}#{$mod} {
+//                 padding-left: #{$value} !important;
+//                 padding-right: #{$value} !important;
+//             }
 
-            .padding-y-#{$space}#{$mod} {
-                padding-top: #{$value} !important;
-                padding-bottom: #{$value} !important;
-            }
+//             .padding-y-#{$space}#{$mod} {
+//                 padding-top: #{$value} !important;
+//                 padding-bottom: #{$value} !important;
+//             }
 
-            .padding-top-#{$space}#{$mod} {
-                padding-top: #{$value} !important;
-            }
+//             .padding-top-#{$space}#{$mod} {
+//                 padding-top: #{$value} !important;
+//             }
 
-            .padding-right-#{$space}#{$mod} {
-                padding-right: #{$value} !important;
-            }
+//             .padding-right-#{$space}#{$mod} {
+//                 padding-right: #{$value} !important;
+//             }
 
-            .padding-bottom-#{$space}#{$mod} {
-                padding-bottom: #{$value} !important;
-            }
+//             .padding-bottom-#{$space}#{$mod} {
+//                 padding-bottom: #{$value} !important;
+//             }
 
-            .padding-left-#{$space}#{$mod} {
-                padding-left: #{$value} !important;
-            }
+//             .padding-left-#{$space}#{$mod} {
+//                 padding-left: #{$value} !important;
+//             }
 
-            // Margin
+//             // Margin
 
-            .margin-#{$space}#{$mod} {
-                margin: #{$value} !important;
-            }
+//             .margin-#{$space}#{$mod} {
+//                 margin: #{$value} !important;
+//             }
 
-            .margin-x-#{$space}#{$mod} {
-                margin-left: #{$value} !important;
-                margin-right: #{$value} !important;
-            }
+//             .margin-x-#{$space}#{$mod} {
+//                 margin-left: #{$value} !important;
+//                 margin-right: #{$value} !important;
+//             }
 
-            .margin-y-#{$space}#{$mod} {
-                margin-top: #{$value} !important;
-                margin-bottom: #{$value} !important;
-            }
+//             .margin-y-#{$space}#{$mod} {
+//                 margin-top: #{$value} !important;
+//                 margin-bottom: #{$value} !important;
+//             }
 
-            .margin-top-#{$space}#{$mod} {
-                margin-top: #{$value} !important;
-            }
+//             .margin-top-#{$space}#{$mod} {
+//                 margin-top: #{$value} !important;
+//             }
 
-            .margin-right-#{$space}#{$mod} {
-                margin-right: #{$value} !important;
-            }
+//             .margin-right-#{$space}#{$mod} {
+//                 margin-right: #{$value} !important;
+//             }
 
-            .margin-bottom-#{$space}#{$mod} {
-                margin-bottom: #{$value} !important;
-            }
+//             .margin-bottom-#{$space}#{$mod} {
+//                 margin-bottom: #{$value} !important;
+//             }
 
-            .margin-left-#{$space}#{$mod} {
-                margin-left: #{$value} !important;
-            }
+//             .margin-left-#{$space}#{$mod} {
+//                 margin-left: #{$value} !important;
+//             }
 
-            // Negative Margin
+//             // Negative Margin
 
-            .margin-x-n#{$space}#{$mod} {
-                margin-left: calc(#{$value} * -1) !important;
-                margin-right: calc(#{$value} * -1) !important;
-            }
+//             .margin-x-n#{$space}#{$mod} {
+//                 margin-left: calc(#{$value} * -1) !important;
+//                 margin-right: calc(#{$value} * -1) !important;
+//             }
 
-            .margin-y-n#{$space}#{$mod} {
-                margin-top: calc(#{$value} * -1) !important;
-                margin-bottom: calc(#{$value} * -1) !important;
-            }
+//             .margin-y-n#{$space}#{$mod} {
+//                 margin-top: calc(#{$value} * -1) !important;
+//                 margin-bottom: calc(#{$value} * -1) !important;
+//             }
 
-            .margin-top-n#{$space}#{$mod} {
-                margin-top: calc(#{$value} * -1) !important;
-            }
+//             .margin-top-n#{$space}#{$mod} {
+//                 margin-top: calc(#{$value} * -1) !important;
+//             }
 
-            .margin-right-n#{$space}#{$mod} {
-                margin-right: calc(#{$value} * -1) !important;
-            }
+//             .margin-right-n#{$space}#{$mod} {
+//                 margin-right: calc(#{$value} * -1) !important;
+//             }
 
-            .margin-bottom-n#{$space}#{$mod} {
-                margin-bottom: calc(#{$value} * -1) !important;
-            }
+//             .margin-bottom-n#{$space}#{$mod} {
+//                 margin-bottom: calc(#{$value} * -1) !important;
+//             }
 
-            .margin-left-n#{$space}#{$mod} {
-                margin-left: calc(#{$value} * -1) !important;
-            }
+//             .margin-left-n#{$space}#{$mod} {
+//                 margin-left: calc(#{$value} * -1) !important;
+//             }
             
-        }
-    }
-}
+//         }
+//     }
+// }
 
-////////////////////////////////////////////
-// D. Static Spacer Utilities
-////////////////////////////////////////////
+// ////////////////////////////////////////////
+// // D. Static Spacer Utilities
+// ////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+// @each $breakpoint in map-keys($breakpoints) {
+//     @include breakpoints-up($breakpoint) {
+//         $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-        .padding-0#{$mod} {
-            padding: 0 !important;
-        }
+//         .padding-0#{$mod} {
+//             padding: 0 !important;
+//         }
 
-        .margin-0#{$mod} {
-            margin: 0 !important;
-        }
+//         .margin-0#{$mod} {
+//             margin: 0 !important;
+//         }
 
-        .margin-top-0#{$mod} {
-            margin-top: 0 !important;
-        }
+//         .margin-top-0#{$mod} {
+//             margin-top: 0 !important;
+//         }
 
-        .margin-right-0#{$mod} {
-            margin-right: 0 !important;
-        }
+//         .margin-right-0#{$mod} {
+//             margin-right: 0 !important;
+//         }
 
-        .margin-bottom-0#{$mod} {
-            margin-bottom: 0 !important;
-        }
+//         .margin-bottom-0#{$mod} {
+//             margin-bottom: 0 !important;
+//         }
 
-        .margin-left-0#{$mod} {
-            margin-left: 0 !important;
-        }
+//         .margin-left-0#{$mod} {
+//             margin-left: 0 !important;
+//         }
 
-        .margin-y-0#{$mod} {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-        }
+//         .margin-y-0#{$mod} {
+//             margin-top: 0 !important;
+//             margin-bottom: 0 !important;
+//         }
 
-        .margin-x-0#{$mod} {
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-        }
+//         .margin-x-0#{$mod} {
+//             margin-left: 0 !important;
+//             margin-right: 0 !important;
+//         }
 
-        .margin-x-auto#{$mod} {
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
+//         .margin-x-auto#{$mod} {
+//             margin-left: auto !important;
+//             margin-right: auto !important;
+//         }
 
-        .margin-y-auto#{$mod} {
-            margin-top: auto !important;
-            margin-bottom: auto !important;
-        }
+//         .margin-y-auto#{$mod} {
+//             margin-top: auto !important;
+//             margin-bottom: auto !important;
+//         }
 
-        .margin-top-auto#{$mod} {
-            margin-top: auto !important;
-        }
+//         .margin-top-auto#{$mod} {
+//             margin-top: auto !important;
+//         }
 
-        .margin-right-auto#{$mod} {
-            margin-right: auto !important;
-        }
+//         .margin-right-auto#{$mod} {
+//             margin-right: auto !important;
+//         }
 
-        .margin-bottom-auto#{$mod} {
-            margin-bottom: auto !important;
-        }
+//         .margin-bottom-auto#{$mod} {
+//             margin-bottom: auto !important;
+//         }
 
-        .margin-left-auto#{$mod} {
-            margin-left: auto !important;
-        }
-    }
-}
+//         .margin-left-auto#{$mod} {
+//             margin-left: auto !important;
+//         }
+//     }
+// }
