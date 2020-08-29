@@ -36,6 +36,33 @@ $spacers: (
 $createSpacerUtilities: false;
 
 //////////////////////////////////////////////
+// C. Generic Padding and Margin
+//////////////////////////////////////////////
+
+body * {
+    --padding-x: var(--spacer-2);
+    --padding-y: var(--spacer-2);
+}
+
+body > footer,
+main > div,
+main > section {
+    --padding-y: var(--spacer-4);
+
+    &:not(.backdrop) {
+        padding: var(--padding-y) var(--padding-x);
+    }
+
+    @include breakpoints-up(lg){
+        --padding-y: var(--spacer-5);
+    }
+}
+
+body > footer {
+    --padding-y: var(--spacer-4);
+}
+
+//////////////////////////////////////////////
 // C. Responsive Spacer Utilities
 //////////////////////////////////////////////
 

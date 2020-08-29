@@ -33,6 +33,10 @@
             --base-font-family: "neue-haas-grotesk-text";
             --base-line-height: 1.5;
         }
+
+        .cool-banner{
+            --p-y: var(--spacer-3)
+        }
     </style>
     
 </head>
@@ -161,9 +165,9 @@
     </header>
     <!-- #global-header -->
 
-    <main id="skip-header-target">
+    <main class="landing" id="skip-header-target">
 
-        <section class="backdrop backdrop--stack--md theme-primary theme-dark--md">
+        <section class="backdrop theme-dark">
 
             <div class="backdrop__image gradient-veneer-bottom">
                 <img class="opacity-50" src="./images/backdrop-example-01.jpg" alt="View of the Manhattan Bridge from Brooklyn">
@@ -175,7 +179,7 @@
 
             <div class="backdrop__cover">
 
-                <div class="container narrow medium--md padding-y-4">
+                <div class="narrow medium--md">
 
                     <h1 class="banner-headline text-align-center text-shadow--md margin-bottom-3 text-shadow">
                         Lorem ipsum dolor sit amet consectetur
@@ -201,7 +205,6 @@
                     </div>
 
                 </div>
-                <!-- .container -->
 
             </div>
             <!-- .backdrop__cover -->
@@ -209,7 +212,7 @@
         </section>
         <!-- .backdrop -->
 
-        <section class="container narrow medium--lg margin-y-5">
+        <section class="narrow medium--lg">
 
             <div class="grid grid--gap-2 grid--cells-6--lg">
 
@@ -269,7 +272,7 @@
         </section>
         <!-- .container -->
 
-        <section class="theme-light padding-y-5">
+        <section class="theme-light">
 
             <div class="container narrow medium--lg margin-bottom-3">
                 <div class="grid grid--cells-fit--md justify-content-between align-items-baseline">
@@ -452,7 +455,7 @@
         </section>
         <!-- .theme-light -->
 
-        <section class="padding-y-4">
+        <section class="cool-banner">
 
             <div class="container narrow medium--lg">
 
