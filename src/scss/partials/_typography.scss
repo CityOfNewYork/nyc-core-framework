@@ -116,7 +116,7 @@ h6, .h6 {
     font-weight: var(--base-font-weight-bold);
     line-height: var(--header-line-height);
 
-    margin-bottom: var(--s2);
+    margin-bottom: var(--spacer-2);
 }
 
 h1, .h1{
@@ -185,7 +185,7 @@ p ~ ul:not([class]) {
     padding-right: 1.5em;
 
     li {
-        margin-bottom: var(--s2);
+        margin-bottom: var(--spacer-2);
     }
 }
 
@@ -193,7 +193,7 @@ figure {
     figcaption {
         font-size: var(--font-size-md);
         opacity: 0.85;
-        margin-top: var(--s2);
+        margin-top: var(--spacer-2);
     }
 }
 
@@ -205,12 +205,12 @@ hr {
 blockquote {
     position: relative;
     font-size: var(font-size-lg);
-    padding-left: var(--s3);
+    padding-left: var(--spacer-3);
     
     .left-quote {
         position: absolute;
         margin-top: var(--spacer-1);
-        margin-left: -var(--s3);
+        margin-left: -var(--spacer-3);
     }
 
     p{

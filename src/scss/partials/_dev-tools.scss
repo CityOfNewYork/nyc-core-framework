@@ -29,7 +29,7 @@ $floating-breakpoints-bar: true;
             display: block;
             color: white;
             text-align: center;
-            padding: var(--s3);
+            padding: var(--spacer-3);
             z-index: 1600;
             background-color: rgba(purple, 0.9);
         }

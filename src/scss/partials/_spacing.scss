@@ -14,128 +14,128 @@ In this file:
 //////////////////////////////////////////////
 
 :root {    
-    --s1: 0.5rem;
-    --s2: 1rem;
-    --s3: 2rem;
-    --s4: 3.5rem;
-    --s5: 5rem;
+    --spacer-1: 0.5rem;
+    --spacer-2: 1rem;
+    --spacer-3: 2rem;
+    --spacer-4: 3.5rem;
+    --spacer-5: 5rem;
 }
 
 //////////////////////////////////////////////
 // B. Spacer Map
 //////////////////////////////////////////////
 
-$spacing: (
-    1: var(--s1), 
-    2: var(--s2), 
-    3: var(--s3), 
-    4: var(--s4), 
-    5: var(--s5)
+$spacers: (
+    1: var(--spacer-1), 
+    2: var(--spacer-2), 
+    3: var(--spacer-3), 
+    4: var(--spacer-4), 
+    5: var(--spacer-5)
 );
 
-$createSpacingUtilities: false;
+$createSpacerUtilities: false;
 
 //////////////////////////////////////////////
 // C. Responsive Spacer Utilities
 //////////////////////////////////////////////
 
-@if $createSpacingUtilities == true {
+@if $createSpacerUtilities == true {
   
     @each $breakpoint in map-keys($breakpoints) {
         @include breakpoints-up($breakpoint) {
             $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-            @each $space, $value in $spacing {
+            @each $spacer, $value in $spacers {
 
                 // Padding
 
-                .padding-#{$space}#{$mod} {
+                .padding-#{$spacer}#{$mod} {
                     padding: #{$value} !important;
                 }
 
-                .padding-x-#{$space}#{$mod} {
+                .padding-x-#{$spacer}#{$mod} {
                     padding-left: #{$value} !important;
                     padding-right: #{$value} !important;
                 }
 
-                .padding-y-#{$space}#{$mod} {
+                .padding-y-#{$spacer}#{$mod} {
                     padding-top: #{$value} !important;
                     padding-bottom: #{$value} !important;
                 }
 
-                .padding-top-#{$space}#{$mod} {
+                .padding-top-#{$spacer}#{$mod} {
                     padding-top: #{$value} !important;
                 }
 
-                .padding-right-#{$space}#{$mod} {
+                .padding-right-#{$spacer}#{$mod} {
                     padding-right: #{$value} !important;
                 }
 
-                .padding-bottom-#{$space}#{$mod} {
+                .padding-bottom-#{$spacer}#{$mod} {
                     padding-bottom: #{$value} !important;
                 }
 
-                .padding-left-#{$space}#{$mod} {
+                .padding-left-#{$spacer}#{$mod} {
                     padding-left: #{$value} !important;
                 }
 
                 // Margin
 
-                .margin-#{$space}#{$mod} {
+                .margin-#{$spacer}#{$mod} {
                     margin: #{$value} !important;
                 }
 
-                .margin-x-#{$space}#{$mod} {
+                .margin-x-#{$spacer}#{$mod} {
                     margin-left: #{$value} !important;
                     margin-right: #{$value} !important;
                 }
 
-                .margin-y-#{$space}#{$mod} {
+                .margin-y-#{$spacer}#{$mod} {
                     margin-top: #{$value} !important;
                     margin-bottom: #{$value} !important;
                 }
 
-                .margin-top-#{$space}#{$mod} {
+                .margin-top-#{$spacer}#{$mod} {
                     margin-top: #{$value} !important;
                 }
 
-                .margin-right-#{$space}#{$mod} {
+                .margin-right-#{$spacer}#{$mod} {
                     margin-right: #{$value} !important;
                 }
 
-                .margin-bottom-#{$space}#{$mod} {
+                .margin-bottom-#{$spacer}#{$mod} {
                     margin-bottom: #{$value} !important;
                 }
 
-                .margin-left-#{$space}#{$mod} {
+                .margin-left-#{$spacer}#{$mod} {
                     margin-left: #{$value} !important;
                 }
 
                 // Negative Margin
 
-                .margin-x-n#{$space}#{$mod} {
+                .margin-x-n#{$spacer}#{$mod} {
                     margin-left: calc(#{$value} * -1) !important;
                     margin-right: calc(#{$value} * -1) !important;
                 }
 
-                .margin-y-n#{$space}#{$mod} {
+                .margin-y-n#{$spacer}#{$mod} {
                     margin-top: calc(#{$value} * -1) !important;
                     margin-bottom: calc(#{$value} * -1) !important;
                 }
 
-                .margin-top-n#{$space}#{$mod} {
+                .margin-top-n#{$spacer}#{$mod} {
                     margin-top: calc(#{$value} * -1) !important;
                 }
 
-                .margin-right-n#{$space}#{$mod} {
+                .margin-right-n#{$spacer}#{$mod} {
                     margin-right: calc(#{$value} * -1) !important;
                 }
 
-                .margin-bottom-n#{$space}#{$mod} {
+                .margin-bottom-n#{$spacer}#{$mod} {
                     margin-bottom: calc(#{$value} * -1) !important;
                 }
 
-                .margin-left-n#{$space}#{$mod} {
+                .margin-left-n#{$spacer}#{$mod} {
                     margin-left: calc(#{$value} * -1) !important;
                 }
                 
@@ -149,7 +149,7 @@ $createSpacingUtilities: false;
 // D. Static Spacer Utilities
 ////////////////////////////////////////////
 
-@if $createSpacingUtilities == true {
+@if $createSpacerUtilities == true {
 
     @each $breakpoint in map-keys($breakpoints) {
         @include breakpoints-up($breakpoint) {

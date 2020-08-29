@@ -20,8 +20,8 @@ In this file:
     --nav--divider-padding-x: 1em;
     --nav--divider-padding-y: 0.625em;
 
-    --breadcrumb-padding-x: var(--s2);
-    --breadcrumb-padding-y: var(--s2);
+    --breadcrumb-padding-x: var(--spacer-2);
+    --breadcrumb-padding-y: var(--spacer-2);
     
     --dropdown-z-index: 1200;
 }
@@ -31,7 +31,7 @@ In this file:
 //////////////////////////////////////////////
 
 [class*="primary-nav--"] {
-    --primary-nav-padding: var(--s2);
+    --primary-nav-padding: var(--spacer-2);
 
     display: grid;
 
@@ -109,7 +109,7 @@ In this file:
 
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
 .nav {
-    --gap-size: var(--s2);
+    --gap-size: var(--spacer-2);
 }
 
 .nav, 
@@ -154,9 +154,9 @@ In this file:
     --gap-size: 0;
 }
 
-@each $key, $value in $spacing {
-    @if ($key != 2) {
-        .nav--gap-#{$key} {
+@each $spacer, $value in $spacers {
+    @if ($spacer != 2) {
+        .nav--gap-#{$spacer} {
             --gap-size: #{$value};
         }
     }
@@ -501,8 +501,8 @@ screen and (-ms-high-contrast: none) {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
 
-            margin-left: var(--s2);
-            margin-right: var(--s2);
+            margin-left: var(--spacer-2);
+            margin-right: var(--spacer-2);
 
             ul > li {
                 display: flex;

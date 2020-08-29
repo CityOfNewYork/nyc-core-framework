@@ -13,7 +13,7 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --container-padding-x: var(--s2);
+    --container-padding-x: var(--spacer-2);
 
     --narrow-width: 40rem; // Approximately 55 characters wide for readability
     --medium-width: calc( var(--narrow-width) * 1.5);

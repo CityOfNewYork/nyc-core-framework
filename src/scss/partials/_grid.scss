@@ -61,8 +61,8 @@ $columns: 12;
     }
 }
 
-@each $key, $value in $spacing {
-    .grid--gap-#{$key} {
+@each $spacer, $value in $spacers {
+    .grid--gap-#{$spacer} {
         --gap-size: #{$value};
     }
 }

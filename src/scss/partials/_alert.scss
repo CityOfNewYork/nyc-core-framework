@@ -13,7 +13,7 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
-    --alert-padding: var(--s2);
+    --alert-padding: var(--spacer-2);
     --alert-highlight-opacity: .075;
 }
 
@@ -61,17 +61,17 @@ In this file:
 }
 
 .alert__head {
-    margin-bottom: var(--s2);
+    margin-bottom: var(--spacer-2);
 }
 
 .alert__head__title {
     font-weight: var(--base-font-weight-bold);
-    margin-left: var(--s1);
-    margin-right: var(--s1);
+    margin-left: var(--spacer-1);
+    margin-right: var(--spacer-1);
 }
 
 .alert__body {
     p:not(:last-child) {
-        margin-bottom: var(--s1);
+        margin-bottom: var(--spacer-1);
     }
 }

@@ -40,15 +40,15 @@ article--legal-sidebar-content
     @at-root .article__content__inner {
 
         @include breakpoints-up(lg){
-            margin-top: var(--s5);
-            margin-bottom: var(--s5);
+            margin-top: var(--spacer-5);
+            margin-bottom: var(--spacer-5);
         }
     }
 
     header,
     section {
-        margin-top: var(--s4);
-        margin-bottom: var(--s4);
+        margin-top: var(--spacer-4);
+        margin-bottom: var(--spacer-4);
     }
 
     header > *,
@@ -58,9 +58,9 @@ article--legal-sidebar-content
     }
     
     footer {
-        margin-top: var(--s4);
-        margin-bottom: var(--s4);
-        padding-top: var(--s2);
+        margin-top: var(--spacer-4);
+        margin-bottom: var(--spacer-4);
+        padding-top: var(--spacer-2);
 
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
@@ -78,8 +78,8 @@ article--legal-sidebar-content
 
     figure,
     section > div {
-        margin-top: var(--s4);
-        margin-bottom: var(--s4);
+        margin-top: var(--spacer-4);
+        margin-bottom: var(--spacer-4);
     }
 
     figure {
@@ -136,7 +136,7 @@ article--legal-sidebar-content
 
 
 .article__sidebar > div{
-    padding: var(--s2);
+    padding: var(--spacer-2);
 }
 
 .cool-nav {

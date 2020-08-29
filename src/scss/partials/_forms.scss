@@ -50,8 +50,8 @@ In this file:
 }
 
 .form-entry + .form-entry {
-    margin-top: var(--s4);
-    margin-bottom: var(--s4);
+    margin-top: var(--spacer-4);
+    margin-bottom: var(--spacer-4);
 }
 
 //////////////////////////////////////////////
@@ -207,7 +207,7 @@ In this file:
     }
 
     > div{
-        margin-bottom: var(--s1);
+        margin-bottom: var(--spacer-1);
 
         @extend %subtle-fill !optional;
         --subtle-fill-opacity: 0.05;
@@ -244,8 +244,8 @@ In this file:
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: var(--s2);
-        margin-right: var(--s2);
+        margin-left: var(--spacer-2);
+        margin-right: var(--spacer-2);
     }
 
 }
@@ -349,14 +349,14 @@ In this file:
 
 .form-entry {
     legend {
-        margin-bottom: var(--s2);
+        margin-bottom: var(--spacer-2);
     }
 }
 
 .form-entry__options{
     --gap-size: 0.5em;
 
-    padding-left: var(--s2);
+    padding-left: var(--spacer-2);
 
     clear: both;
     
@@ -488,7 +488,7 @@ In this file:
 }
 
 .form-entry__feedback {
-    margin-bottom: var(--s2);
+    margin-bottom: var(--spacer-2);
 
     strong {
         margin-left: 0.25rem;
