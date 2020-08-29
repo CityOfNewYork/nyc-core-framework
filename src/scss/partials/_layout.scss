@@ -11,8 +11,8 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-:root{
-    --article-sidebar-width: 300px;
+:root {
+    --article-sidebar-width: 340px;
     --article-text-width: var(--narrow-width);
 }
 
@@ -37,17 +37,18 @@ article--legal-sidebar-content
 .article__content {
     overflow: hidden;
 
-    header {
-        margin-top: var(--s3);
-        margin-bottom: var(--s3);
-        --breadcrumb-padding-x: 0;
+    @at-root .article__content__inner {
+
+        @include breakpoints-up(lg){
+            margin-top: var(--s5);
+            margin-bottom: var(--s5);
+        }
     }
 
+    header,
     section {
         margin-top: var(--s4);
         margin-bottom: var(--s4);
-        padding-left: var(--s2);
-        padding-right: var(--s2);
     }
 
     header > *,
@@ -67,10 +68,11 @@ article--legal-sidebar-content
     }
 
     h1, h2, h3, h4, h5, h6, p,
-    ul, ol,
+    ul:not([class]), ol,
     header > *,
     section > div,
     footer {
+        @extend .container !optional;
         max-width: var(--narrow-width);
     }
 
