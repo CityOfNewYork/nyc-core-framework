@@ -16,7 +16,7 @@ In this file:
     --container-padding-x: var(--s2);
 
     --narrow-width: 40rem; // Approximately 55 characters wide for readability
-    --medium-width: calc( var(--narrow-width) * 1.25);
+    --medium-width: calc( var(--narrow-width) * 1.5);
     --wide-width: calc( var(--narrow-width) * 2.5);
 }
 
