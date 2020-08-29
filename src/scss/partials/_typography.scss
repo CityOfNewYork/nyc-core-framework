@@ -226,29 +226,29 @@ blockquote {
 // C. Text Utilities
 //////////////////////////////////////////////
 
-// @each $breakpoint in map-keys($breakpoints) {
-//     @include breakpoints-up($breakpoint) {
-//         $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
 
-//         .text-align-center{
-//         text-align: center !important;
-//         }
+        .text-align-center{
+        text-align: center !important;
+        }
 
-//         .text-align-left {
-//             text-align: left !important;
-//         }
+        .text-align-left {
+            text-align: left !important;
+        }
 
-//         .text-align-right {
-//             text-align: right !important;
-//         }
+        .text-align-right {
+            text-align: right !important;
+        }
 
-//     }
-// }
+    }
+}
 
-// .nowrap {
-//     white-space: nowrap;
-// }
+.nowrap {
+    white-space: nowrap;
+}
 
-// .break-word {
-//     word-wrap: break-word;
-// }
+.break-word {
+    word-wrap: break-word;
+}
