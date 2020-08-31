@@ -29,49 +29,6 @@ In this file:
     --dropdown-z-index: 1200;
 }
 
-////////////////////////////////////////
-// B. Leader Bar Component
-////////////////////////////////////////
-
-.leader-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    font-size: var(--font-size-md);
-
-    --btn-padding-x: var(--spacer-2);
-
-    .leader-bar__title {
-        max-width: 40%;
-        padding-left: var(--leader-bar-padding-x);
-        padding-right: var(--leader-bar-padding-x);
-
-       p { 
-           @extend .truncate-text !optional;
-        }
-    }
-
-    .leader-bar__links {
-        display: flex;
-        align-items: stretch;
-
-        a {
-            @extend .btn !optional;
-
-            display: flex;
-            align-items: center;
-        }
-
-    }
-}
-
-@include breakpoints-down(md) {
-    .leader-bar__title p {
-        display: none;
-    }
-}
-
 //////////////////////////////////////////////
 // C. Head Nav Components
 //////////////////////////////////////////////
