@@ -3,13 +3,12 @@
 In this file:
 
 // A. Variables
-// B. Leader Bar Component
-// C. Head Nav Components 
-// D. Nav
-// E. Nav Divider
-// F. Nav Breadcrumb
-// G. Dropdown
-// H. I.E. 11 Support
+// B. Head Nav Components 
+// C. Nav
+// D. Nav Divider
+// E. Nav Breadcrumb
+// F. Dropdown
+// G. I.E. 11 Support
 
 */
 
@@ -30,7 +29,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Head Nav Components
+// B. Head Nav Components
 //////////////////////////////////////////////
 
 [class*="primary-nav--"] {
@@ -107,7 +106,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// D. Nav
+// C. Nav
 ////////////////////////////////////////
 
 [class*="primary-nav--right--"] > [class*="__menu"] > ul,
@@ -211,7 +210,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// E. Nav Divider
+// D. Nav Divider
 ////////////////////////////////////////
 
 [class*="primary-nav--across--"] > [class*="__menu"] > ul,
@@ -383,11 +382,11 @@ In this file:
 }
 
 ////////////////////////////////////////
-// F. Nav Breadcrumb
+// E. Nav Breadcrumb
 ////////////////////////////////////////
 
 nav[aria-label="Breadcrumb"] {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
 }
 
 .nav--breadcrumb {
@@ -414,7 +413,7 @@ nav[aria-label="Breadcrumb"] {
 }
 
 ////////////////////////////////////////
-// G. Dropdown
+// F. Dropdown
 ////////////////////////////////////////
 
 [data-toggle="dropdown"]:not([class*="btn--icon-only"]) {
@@ -491,7 +490,7 @@ nav[aria-label="Breadcrumb"] {
 }
 
 //////////////////////////////////////////////
-// H. I.E. 11 Support
+// G. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),

@@ -3,7 +3,7 @@
 In this file:
 
 // A. Variables
-// B. Articles
+// B. Article Two Column
 
 */
 
@@ -17,20 +17,8 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Articles
+// B. Article Two Column
 //////////////////////////////////////////////
-
-
-
-/*
-
-article--header-sidebar-content
-article--sidebar-content
-article--header-content
-article--sidebar-header-content-sidebar
-article--legal-sidebar-content
-
-*/
 
 [class*="article--"] {
     display: grid;
@@ -137,12 +125,4 @@ article--legal-sidebar-content
 
 .article__sidebar > div{
     padding: var(--spacer-2);
-}
-
-.cool-nav {
-    a[aria-current="page"]{
-        background-color: var(--primary);
-        color: white !important;
-    }
-
 }
