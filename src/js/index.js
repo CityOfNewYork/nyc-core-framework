@@ -628,7 +628,21 @@ import 'element-closest-polyfill';
         });
     }
 
-    // Backdrop I.E. 
+    //////////////////////////////////////////////
+    // Aria Current
+    //////////////////////////////////////////////
+
+    const currentLinkList = document.querySelectorAll("a[aria-current]");
+
+    currentLinkList.forEach((currentLink) => {
+
+        currentLink.closest("li").classList.add("active");
+
+    });
+
+    //////////////////////////////////////////////
+    // Backdrop I.E.
+    //////////////////////////////////////////////
 
     var isIE11 = !!(navigator.userAgent.match(/Trident/) && !navigator.userAgent.match(/MSIE/));
 

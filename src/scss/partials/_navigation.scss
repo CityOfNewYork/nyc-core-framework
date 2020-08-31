@@ -198,7 +198,7 @@ In this file:
                 }
             }
 
-            > li > form{
+            > li > form {
                 width: 200px;
             }
         }
@@ -227,11 +227,7 @@ In this file:
         }
     }
 
-    > li {
-
-    }
-
-    > li:not(:last-child) {
+    > li:not(:last-child):not(.active) {
         border-bottom-width: var(--default-border-width);
         border-bottom-style: var(--default-border-style);
         border-bottom-color: inherit;
@@ -386,7 +382,7 @@ In this file:
 ////////////////////////////////////////
 
 nav[aria-label="Breadcrumb"] {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-md);
 }
 
 .nav--breadcrumb {
