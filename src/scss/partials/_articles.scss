@@ -104,6 +104,18 @@ In this file:
         grid-template-areas:
             "header header"
             "sidebar content";
+
+        .backdrop__cover > * {
+            margin-left: var(--article-sidebar-width);
+        }
+
+        [dir="rtl"] & {
+
+            .backdrop__cover > * {
+                margin-left: unset;
+                margin-right: var(--article-sidebar-width);
+            }
+        }
     }
 
     .article--sidebar-content {

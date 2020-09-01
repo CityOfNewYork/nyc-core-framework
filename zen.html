@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Article • NYC Core Framework</title>
+    <title>Landing Page • NYC Core Framework</title>
 
     <!-- Font Awesome Kit -->
     <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
@@ -27,14 +27,7 @@
 
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
-
-    <style>
-        :root {
-            --base-font-family: "neue-haas-grotesk-text";
-            --base-line-height: 1.5;
-        }
-    </style>
-
+    
 </head>
 
 <body>
@@ -42,9 +35,9 @@
     <!-- For keyboard users -->
     <a class="focusable-only" href="#skip-header-target">Skip Header</a>
 
-    <header class="theme-white box-shadow-1" id="global-header">
+    <header class="box-shadow-1" id="global-header">
 
-        <div class="theme-dark font-size-sm">
+        <div class="theme-dark font-size-md">
 
             <div class="grid grid--cells-fit justify-content-between align-items-center">
 
@@ -73,10 +66,8 @@
                             <a href="#1" data-logo="brand">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="15" viewBox="0 0 45 15">
                                     <g>
-                                        <polygon
-                                            points="44.063 6.551 45 5.625 45 2.813 42.188 0 32.813 0 30 2.813 30 0.938 29.063 0 25.313 0 24.375 0.938 24.375 2.813 22.5 4.688 20.625 2.813 20.625 0.938 19.688 0 15.938 0 15 0.938 14.063 0 10.312 0 9.375 0.938 9.375 4.688 4.687 0 0.937 0 0 0.938 0 14.062 0.937 15 4.687 15 5.625 14.062 5.625 10.312 10.312 15 14.063 15 15 14.062 15 6.563 19.688 11.25 19.688 14.062 20.625 15 24.375 15 25.313 14.062 25.313 11.25 30 6.563 30 12.187 32.813 15 42.188 15 45 12.187 45 9.375 44.063 8.437 39.375 8.437 39.375 9.375 35.625 9.375 35.625 5.625 39.375 5.625 39.375 6.551 44.063 6.551" />
-                                        <path
-                                            d="M44.3325.6338c.09,0,.165,0,.165-.1125S44.415.4238,44.3438.4238H44.205v.21Zm-.1275.4012h-.12V.3263h.27c.1725,0,.2588.06.2588.2025A.18.18,0,0,1,44.45.7234l-.0047,0h0l.1988.3112h-.1426L44.3137.75H44.205Zm.1238-.8962a.5023.5023,0,0,0-.495.5025V.6675a.4927.4927,0,1,0,.9825.075.2548.2548,0,0,0,0-.075.495.495,0,0,0-.4575-.5287h-.03m0,1.17a.6189.6189,0,0,1-.63-.6V.6675a.63.63,0,1,1,1.26-.0225V.6675a.6224.6224,0,0,1-.6031.6412h-.0269" />
+                                        <polygon points="44.063 6.551 45 5.625 45 2.813 42.188 0 32.813 0 30 2.813 30 0.938 29.063 0 25.313 0 24.375 0.938 24.375 2.813 22.5 4.688 20.625 2.813 20.625 0.938 19.688 0 15.938 0 15 0.938 14.063 0 10.312 0 9.375 0.938 9.375 4.688 4.687 0 0.937 0 0 0.938 0 14.062 0.937 15 4.687 15 5.625 14.062 5.625 10.312 10.312 15 14.063 15 15 14.062 15 6.563 19.688 11.25 19.688 14.062 20.625 15 24.375 15 25.313 14.062 25.313 11.25 30 6.563 30 12.187 32.813 15 42.188 15 45 12.187 45 9.375 44.063 8.437 39.375 8.437 39.375 9.375 35.625 9.375 35.625 5.625 39.375 5.625 39.375 6.551 44.063 6.551" />
+                                        <path d="M44.3325.6338c.09,0,.165,0,.165-.1125S44.415.4238,44.3438.4238H44.205v.21Zm-.1275.4012h-.12V.3263h.27c.1725,0,.2588.06.2588.2025A.18.18,0,0,1,44.45.7234l-.0047,0h0l.1988.3112h-.1426L44.3137.75H44.205Zm.1238-.8962a.5023.5023,0,0,0-.495.5025V.6675a.4927.4927,0,1,0,.9825.075.2548.2548,0,0,0,0-.075.495.495,0,0,0-.4575-.5287h-.03m0,1.17a.6189.6189,0,0,1-.63-.6V.6675a.63.63,0,1,1,1.26-.0225V.6675a.6224.6224,0,0,1-.6031.6412h-.0269" />
                                     </g>
                                 </svg>
                             </a>
@@ -109,7 +100,8 @@
             </div>
 
             <div class="primary-nav__buttons">
-                <button class="btn btn--icon-only menu-toggle" title="Menu" data-toggle="collapse" data-target="#primary-menu">
+                <button class="btn btn--icon-only menu-toggle" title="Menu" data-toggle="collapse"
+                    data-target="#primary-menu">
                     <span class="screen-reader-only">Menu</span>
                     <span class="fas fa-bars"></span>
                 </button>
@@ -125,12 +117,12 @@
 
             <nav class="primary-nav__menu" id="primary-menu" aria-label="Primary">
 
-                <ul role="list">
+                <ul>
                     <li>
                         <a href="#1" data-toggle="dropdown">Dropdown</a>
                         <ul class="box-shadow-1--lg">
                             <li>
-                                <a href="#1" aria-current="page">Link</a>
+                                <a href="#1">Link</a>
                             </li>
                             <li>
                                 <a href="#1">Link</a>
@@ -156,329 +148,333 @@
         </div>
         <!-- .primary-nav -->
 
-        <nav class="container theme-primary padding-y-1" aria-label="Breadcrumb">
-            <ul class="nav nav--breadcrumb">
-                <li>
-                    <a class="btn btn--icon-only" href="#1" title="Home">
-                        <span class="screen-reader-only">Home</span>
-                        <span class="fas fa-home" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#1">Parent Section</a>
-                </li>
-                <li>
-                    Child Page
-                </li>
-            </ul>
-        </nav>
-        
     </header>
     <!-- #global-header -->
 
     <main id="skip-header-target">
 
-        <article class="article--header-sidebar-content">
+        <section class="backdrop backdrop--stack--md theme-dark">
 
-            <header class="backdrop backdrop--fixed theme-primary article__header" id="header">
+            <div class="backdrop__image gradient-veneer-bottom">
+                <img class="opacity-50" src="./images/backdrop-example-01.jpg" alt="View of the Manhattan Bridge from Brooklyn">
+            </div>
+            
+            <div class="backdrop__credit">
+                <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+            </div>
 
-                <div class="backdrop__image">
-                    <img class="opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
-                </div>
+            <div class="backdrop__cover">
 
-                <div class="backdrop__cover">
+                <div class="container narrow medium--md margin-y-3">
 
-                    <div class="margin-y-3">
-                        <div class="container narrow">
-                            <h1 class="banner-headline text-shadow">
-                                Page Title
-                            </h1>
+                    <h1 class="banner-headline text-align-center text-shadow--md margin-bottom-3 text-shadow">
+                        Lorem ipsum dolor sit amet consectetur
+                    </h1>
+
+                    <div class="narrow">
+
+                        <div class="grid grid--gap-2 grid--cells-fill--sm">
+
+                            <div class="grid__cell">
+                                <a class="btn theme-white display-block theme-white box-shadow--2" href="#1">Link</a>
+                            </div>
+                            <!-- .grid__cell -->
+
+                            <div class="grid__cell">
+                                <a class="btn theme-secondary display-block theme-white box-shadow" href="#1">Link</a>
+                            </div>
+                            <!-- .grid__cell -->
+
                         </div>
+                        <!-- .grid -->
+
                     </div>
-                    <!-- .container -->
-
-                </div>
-                <!-- .backdrop__cover -->
-
-            </header>
-
-            <div class="article__sidebar">
-
-                <!-- For keyboard users -->
-                <a class="focusable-only" href="#primary-content">Skip Navigation</a>
-
-                <div class="sticky-top">
-
-                    <div class="display-none--lg">
-                        <button class="btn btn--has-icon--disperse theme-primary rounded-pill" data-toggle="collapse" data-target="#sidebar__menu">
-                            <span class="btn__text">Jump To</span>
-                            <span class="fas fa-arrow-down btn__icon"></span>
-                        </button>
-                    </div>
-
-                    <nav class="collapse display-block--lg" id="sidebar__menu">
-                        <ul class="nav nav--divider">
-                            <li>
-                                <a href="#1" aria-current="page">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                        </ul>
-                    </nav>
 
                 </div>
 
             </div>
+            <!-- .backdrop__cover -->
 
-            <div class="article__content box-shadow-1" id="primary-content">
+        </section>
 
-                <section class="section">
+        <section class="container padding-y-4">
 
-                    <h2>Headline 2</h2>
+            <div class="narrow medium--lg">
 
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
+                <div class="grid grid--gap-2 grid--cells-6--lg">
 
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
-                    
-                    <figure class="box-shadow-1">
+                    <div class="grid__cell">
 
-                        <table class="table table--stack--md table--va-middle">
+                        <div class="card theme-primary">
 
-                            <caption id="table-caption-01">
-                                New York City Population Demographics
-                            </caption>
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">Borough</th>
-                                    <th scope="col">Population</th>
-                                    <th scope="col">Land Area</th>
-                                    <th scope="col">Density</th>
-                                    <th class="screen-reader-only">Action</th>
-                                </tr>
-
-                            </thead>
-                            <tbody>
-
-                                <tr>
-                                    <td>Brooklyn</td>
-                                    <td>2,559,903</td>
-                                    <td>70.82</td>
-                                    <td>36,147</td>
-                                    <td class="text-align-right">
-                                        <a href="#1">View Map</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bronx</td>
-                                    <td>1,418,207</td>
-                                    <td>42.10</td>
-                                    <td>33,867</td>
-                                    <td class="text-align-right">
-                                        <a href="#1">View Map</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Manhattan</td>
-                                    <td>1,628,706</td>
-                                    <td>22.83</td>
-                                    <td>71,341</td>
-                                    <td class="text-align-right">
-                                        <a href="#1">View Map</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Queens</td>
-                                    <td>2,253,858</td>
-                                    <td>108.53</td>
-                                    <td>20,767</td>
-                                    <td class="text-align-right">
-                                        <a href="#1">View Map</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>Staten Island</td>
-                                    <td>476,143</td>
-                                    <td>58.37</td>
-                                    <td>8,157</td>
-                                    <td class="text-align-right">
-                                        <a href="#1">View Map</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-
-                    </figure>
-
-                     <p>
-                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                         architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                         dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                     </p>
-
-                     <p>
-                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                         architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                         dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                     </p>
-
-                </section>
-
-                <hr>
-
-                <section class="section">
-
-                    <h2>Headline 2</h2>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
-
-                    <h3>Headline 3</h3>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
-
-                    <h4>Headline 4</h4>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
-
-                    <h5>Headline 5</h5>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
-
-                    <h6>Headline 6</h6>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                    </p>
-
-                </section>
-
-                <hr>
-
-                <section class="section">
-
-                    <h3 class="text-color-primary">Resources</h3>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                        architecto voluptate voluptas.
-                    </p>
-
-                    <div class="accordion">
-
-                        <button class="accordion__button h6"
-                                id="acc-button-group-b-01"
-                                data-toggle="accordion"
-                                aria-controls="acc-panel-group-b-01"
-                                aria-expanded="true">
-                                Accordion One
-                        </button>
-
-                        <div class="accordion__panel shown" id="acc-panel-group-b-01" data-accordion="panel" aria-labelledby="acc-button-group-b-01" role="region">
-                            <div class="accordion__panel__content">
+                            <div class="card__body">
+                                <h2 class="h3">Card Title</h2>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                                    architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                                    dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
+                                    facilis labore reiciendis.
                                 </p>
                             </div>
-                        </div>
-                        <!-- .accordion__panel -->
 
-                        <button class="accordion__button h6"
-                                id="acc-button-group-b-02"
-                                data-toggle="accordion"
-                                aria-controls="acc-panel-group-b-02"
-                                aria-expanded="false">
-                                Accordion Two
-                        </button>
-
-                        <div class="accordion__panel" id="acc-panel-group-b-02" data-accordion="panel" aria-labelledby="acc-button-group-b-02" role="region">
-                            <div class="accordion__panel__content">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                                    architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                                    dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                                </p>
+                            <div class="card__foot">
+                                <a class="btn btn--has-icon--disperse theme-white" href="#1">
+                                    <span class="btn__text">Button Link</span>
+                                    <span class="fas fa-arrow-right btn__icon"></span>
+                                </a>
                             </div>
-                        </div>
-                        <!-- .accordion__panel -->
 
-                        <button class="accordion__button h6"
-                                id="acc-button-group-b-03"
-                                data-toggle="accordion"
-                                aria-controls="acc-panel-group-b-03"
-                                aria-expanded="false">
-                                Accordion Three
-                        </button>
-
-                        <div class="accordion__panel" id="acc-panel-group-b-03" data-accordion="panel" aria-labelledby="acc-button-group-b-03" role="region">
-                            <div class="accordion__panel__content">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
-                                    architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                                    dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
-                                </p>
-                            </div>
                         </div>
-                        <!-- .accordion__panel -->
+                        <!-- .card -->
 
                     </div>
-                    <!-- .accordion -->
+                    <!-- .grid__cell -->
 
-                </section>
+                    <div class="grid__cell">
 
-                <footer>
-                    A Cool Footer
-                </footer>
+                        <div class="card medium theme-primary">
+
+                            <div class="card__body">
+                                <h2 class="h3">Card Title</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
+                                    facilis labore reiciendis.
+                                </p>
+                            </div>
+
+                            <div class="card__foot">
+                                <a class="btn btn--has-icon--disperse theme-white" href="#1">
+                                    <span class="btn__text">Button Link</span>
+                                    <span class="fas fa-arrow-right btn__icon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- .card -->
+
+                    </div>
+                    <!-- .grid__cell -->
+
+                </div>
+                <!-- .grid -->
 
             </div>
-            <!-- .article__content -->
 
-        </article>
+        </section>
+
+        <section class="container theme-light padding-y-4">
+
+            <div class="narrow medium--lg">
+                <div class="grid grid--cells-fit--md justify-content-between align-items-baseline">
+                    <div class="grid__cell">
+                        <h2>Programs and Initiatives</h2>
+                    </div>
+                    <div class="grid__cell">
+                        <p><a href="#1">See All</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- .container -->
+            
+            <div class="narrow medium--lg">
+
+                <div class="grid grid--gap-2 grid--cells-6--md grid--cells-4--lg">
+
+                    <div class="grid__cell">
+
+                        <div class="card medium theme-white box-shadow-1">
+
+                           <img src="./images/backdrop-example-01.jpg" alt="Placeholder"> 
+
+                            <div class="card__body">
+                                <h2 class="h5">Card Title</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit culpa obcaecati autem.
+                                </p>
+                            </div>
+
+                            <div class="card__foot font-size-md">
+                                <a class="btn btn--has-icon--disperse theme-primary" href="#1">
+                                    <span class="btn__text">Button </span>
+                                    <span class="fas fa-angle-right fa-sm btn__icon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- .card -->
+
+                    </div>
+                    <!-- .grid__cell -->
+
+                    <div class="grid__cell">
+
+                        <div class="card medium theme-white box-shadow-1">
+
+                            <img src="./images/backdrop-example-01.jpg" alt="Placeholder">
+
+                            <div class="card__body">
+                                <h2 class="h5">Card Title</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit culpa obcaecati autem.
+                                </p>
+                            </div>
+
+                            <div class="card__foot font-size-md">
+                                <a class="btn btn--has-icon--disperse theme-primary" href="#1">
+                                    <span class="btn__text">Button </span>
+                                    <span class="fas fa-angle-right fa-sm btn__icon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- .card -->
+
+                    </div>
+                    <!-- .grid__cell -->
+
+                    <div class="grid__cell">
+
+                        <div class="card medium theme-white box-shadow-1">
+
+                            <img src="./images/backdrop-example-01.jpg" alt="Placeholder">
+
+                            <div class="card__body">
+                                <h2 class="h5">Card Title</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit culpa obcaecati autem.
+                                </p>
+                            </div>
+
+                            <div class="card__foot font-size-md">
+                                <a class="btn btn--has-icon--disperse theme-primary" href="#1">
+                                    <span class="btn__text">Button </span>
+                                    <span class="fas fa-angle-right fa-sm btn__icon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- .card -->
+
+                    </div>
+                    <!-- .grid__cell -->
+
+                    <div class="grid__cell">
+
+                        <div class="card medium theme-white box-shadow-1">
+
+                            <img src="./images/backdrop-example-01.jpg" alt="Placeholder">
+
+                            <div class="card__body">
+                                <h2 class="h5">Card Title</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit culpa obcaecati autem.
+                                </p>
+                            </div>
+
+                            <div class="card__foot font-size-md">
+                                <a class="btn btn--has-icon--disperse theme-primary" href="#1">
+                                    <span class="btn__text">Button </span>
+                                    <span class="fas fa-angle-right fa-sm btn__icon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- .card -->
+
+                    </div>
+                    <!-- .grid__cell -->
+
+                    <div class="grid__cell">
+
+                        <div class="card medium theme-white box-shadow-1">
+
+                            <img src="./images/backdrop-example-01.jpg" alt="Placeholder">
+
+                            <div class="card__body">
+                                <h2 class="h5">Card Title</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit culpa obcaecati autem.
+                                </p>
+                            </div>
+
+                            <div class="card__foot font-size-md">
+                                <a class="btn btn--has-icon--disperse theme-primary" href="#1">
+                                    <span class="btn__text">Button </span>
+                                    <span class="fas fa-angle-right fa-sm btn__icon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- .card -->
+
+                    </div>
+                    <!-- .grid__cell -->
+
+                    <div class="grid__cell">
+
+                        <div class="card medium theme-white box-shadow-1">
+
+                            <img src="./images/backdrop-example-01.jpg" alt="Placeholder">
+
+                            <div class="card__body">
+                                <h2 class="h5">Card Title</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit culpa obcaecati autem.
+                                </p>
+                            </div>
+
+                            <div class="card__foot font-size-md">
+                                <a class="btn btn--has-icon--disperse theme-primary" href="#1">
+                                    <span class="btn__text">Button </span>
+                                    <span class="fas fa-angle-right fa-sm btn__icon"></span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- .card -->
+
+                    </div>
+                    <!-- .grid__cell -->
+
+                </div>
+                <!-- .grid -->
+
+            </div>
+            <!-- .container -->
+
+        </section>
+
+        <section class="container padding-y-4">
+
+            <div class="narrow medium--lg">
+
+                <h2 class="screen-reader-only">
+                    Stay Connected with NYC!
+                </h2>
+
+                <div class="grid grid--gap-2 grid--cells-4--lg">
+                    <div class="grid__cell">
+                        <a class="btn btn--outline btn--has-icon display-block" href="#1">
+                            <span class="fas fa-mobile-alt btn__icon"></span>
+                            <span class="btn__text">Mobile Apps</span>
+                        </a>
+                    </div>
+                    <div class="grid__cell">
+                        <a class="btn btn--outline btn--has-icon display-block" href="#1">
+                            <span class="fas fa-hashtag fa-sm btn__icon"></span>
+                            <span class="btn__text">Social Media</span>
+                        </a>
+                    </div>
+                    <div class="grid__cell">
+                        <a class="btn btn--outline btn--has-icon display-block" href="#1">
+                            <span class="fas fa-university fa-sm btn__icon"></span>
+                            <span class="btn__text">Contact City Hall</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- .grid -->
+
+            </div>
+
+        </section>
 
     </main>
 
@@ -487,7 +483,7 @@
         <div class="modal__content medium box-shadow-2">
 
             <header class="modal__content__head border-bottom">
-                <h3 class="h6" id="modal-search-title">Website Translation</h2>
+                <h2 class="h6" id="modal-search-title">Website Translation</h2>
                 <button class="btn btn--icon-only" data-modal-close>
                     <span class="screen-reader-only">Close Modal</span>
                     <span class="fas fa-times"></span>
@@ -541,13 +537,13 @@
     </div>
     <!-- #global-language -->
 
-    <footer class="theme-dark font-size-md padding-y-4">
+    <footer class="container padding-y-4 theme-dark font-size-md">
 
         <h2 class="screen-reader-only">
             Page Footer
         </h2>
 
-        <div class="container narrow medium--lg overflow-hidden" id="nyc-foot">
+        <div class="narrow medium--lg overflow-hidden" id="nyc-foot">
 
             <div class="grid grid--gap-3 grid--cells-6--sm grid--cells-3--lg">
 
@@ -555,7 +551,7 @@
 
                     <h2 class="h6 mb-2">Languages</h2>
 
-                    <ul class="nav" role="list">
+                    <ul class="nav">
                         <li>
                             <a class="lang-select" href="#" data-lang="ar">عربى</a>
                         </li>
@@ -595,7 +591,7 @@
 
                     <h2 class="h6 mb-2">Resources</h2>
 
-                    <ul class="nav" role="list">
+                    <ul class="nav">
                         <li>
                             <a class="text-reset" href="http://www1.nyc.gov/home/contact-us.page">
                                 Contact NYC Government
@@ -669,7 +665,7 @@
                         <li>
                             <a href="https://www1.nyc.gov/site/mopd/index.page" title="Mayor's Office for People with Disabilities">
                                 <span class="screen-reader-only">Mayor's Office for People with Disabilities</span>
-                                <span class="fab fa-accessible-icon fa-lg"></span>
+                                <span class="fab fa-accessible-icon"></span>
                             </a>
                         </li>
                     </ul>
