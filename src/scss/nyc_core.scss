@@ -49,6 +49,7 @@ In this file:
 @import "partials/opacities";
 
 @import "partials/articles";
+
 // @import "partials/dev-tools";
 
 //////////////////////////////////////////////
@@ -78,9 +79,8 @@ a[data-logo="brand"] {
 }
 
 .article__sidebar {
-
-.active {
-    background-color: var(--primary);
-    color: var(--primary-text);
-}
+    .active {
+        background-color: var(--primary);
+        color: var(--primary-text);
+    }
 }
