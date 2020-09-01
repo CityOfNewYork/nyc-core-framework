@@ -1,0 +1,103 @@
+
+/*About Us header*/
+h1 {
+  line-height: .75;
+  color: black !important;
+  font-size: 250%;
+}
+small {
+  color: black;
+}
+
+/*Who We Are header*/
+h2 {
+  color: #343a40;
+}
+
+/*admin login button*/
+.btn {
+  background-color: #e8e8e8 !important;
+  border: none;
+  border-radius: 4px !important;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+/*top navigation*/
+.active {
+  background-color: #e6ecf7 !important;
+}
+.nav-item a:link, a:visited {
+  color: black !important;
+}
+.nav-item a:hover, a:active {
+  color: black !important;
+  background-color: #e6ecf7 !important;
+}
+
+/*left navigation*/
+h4 {
+    color: #464646;
+    text-align: left;
+    padding: 15px;
+    font-size: 130%;
+}
+.col-lg-3 a {
+    color: #533577 !important;
+}
+.mt-5 a:hover, a:active {
+  background-color: #e6ecf7 !important;
+  text-decoration: underline;
+  color: #533577 !important;
+}
+.list-group-item-action {
+  width: 80%;
+  font-weight: bolder;
+  color: #533577 !important;
+}
+
+/*accordion dropdown*/
+#accordion-01 a {
+    color: #533577;
+    font-weight: 600;
+}
+
+/*bottom button descriptions*/
+h3 {
+    color: white;
+}
+/*bottom image*/
+.bg-dark {
+  background-color: #533577 !important;
+}
+
+/*?*/
+table a {
+  color: #181A7B;
+}
+
+/*bottom 3 buttons*/
+.btn1 {
+  background-color: #e6ecf7 !important;
+  border: none;
+  border-radius: 4px;
+  color: #303133 !important;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*?*/
+ol.breadcrumb {
+  padding-left: 2px;
+}
+ol.breadcrumb li {
+  display: inline;
+}
