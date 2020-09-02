@@ -31,7 +31,7 @@ In this file:
 .article__body {
     overflow: hidden;
 
-    @at-root .article__body__content{
+    @at-root .article__body__content {
 
         @include breakpoints-up(lg){
             margin-top: var(--spacer-5);
@@ -104,7 +104,6 @@ In this file:
 
     .article--three-column,
     .article--two-column {
-        // background-color: yellow;
         grid-template-columns: var(--article-sidebar-width) 1fr;
 
         grid-template-areas:
