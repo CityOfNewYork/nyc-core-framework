@@ -61,7 +61,7 @@ In this file:
     position: relative;
 }
 
-.alert__head {
+.alert__head + .alert__body{
     margin-bottom: var(--spacer-2);
 }
 
