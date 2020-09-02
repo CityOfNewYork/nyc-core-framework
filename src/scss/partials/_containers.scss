@@ -3,8 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Containers
-// C. Width Variants
+// B. Container Utility
+// C. Narrow, Medium, and Wide Utilities
 
 */
 
@@ -14,7 +14,6 @@ In this file:
 
 :root {
     --container-padding-x: var(--spacer-2);
-    // --container-padding-y: var(--spacer-4);
 
     --narrow-width: 40rem; // Approximately 55 characters wide for readability
     --medium-width: calc( var(--narrow-width) * 1.5);
@@ -22,23 +21,13 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Container Utilities
+// B. Container Utility
 //////////////////////////////////////////////
 
 .container {
-    // padding: var(--container-padding-y) var(--container-padding-x);
     padding-left: var(--container-padding-x);
     padding-right: var(--container-padding-x);
 }
-
-// .container-x {
-//     padding-left: var(--spacer-2);
-//     padding-right: var(--spacer-2);
-// }
-
-// .container-y {
-//     --padding-y: var(--container-padding-y);
-// }
 
 //////////////////////////////////////////////
 // C. Narrow, Medium, and Wide Utilities
@@ -65,7 +54,5 @@ In this file:
         .wide#{$mod} {
             max-width: var(--wide-width);
         }
-
     }
 }
- 
