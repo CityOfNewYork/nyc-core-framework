@@ -20,7 +20,8 @@ In this file:
     --btn-padding-y: 0.625em;
 
     --btn-font-weight: var(--base-font-weight-bold);
-    
+
+    --btn--outline-border-width: 2px;
     --btn--icon-only-size: 2.25em;
 }
 
@@ -90,7 +91,7 @@ button,
 
 .btn--outline {
     background-color: transparent;
-    box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+    box-shadow: inset 0 0 0 var(--btn--outline-border-width) currentColor;
 }
 
 //////////////////////////////////////////////
