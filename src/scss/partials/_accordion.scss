@@ -14,6 +14,8 @@ In this file:
 
 :root {
     --accordion-padding: var(--spacer-2);
+    --accordion-padding-x: var(--spacer-2);
+    --accordion-padding-y: 0.75em;
 }
 
 //////////////////////////////////////////////
@@ -22,13 +24,16 @@ In this file:
 
 .accordion {
     --accordion-transition: 0.2s ease-out;
-    --accordion-font-size: var(--font-size-rg);
-    font-size: var(--accordion-font-size);
 }
 
 //////////////////////////////////////////////
 // C. Accordion Elements
 //////////////////////////////////////////////
+
+.accordion__button, 
+.accordion__panel__content {
+    padding: var(--accordion-padding-y) var(--accordion-padding-x);
+}
 
 .accordion__button {
     position: relative;
@@ -39,8 +44,6 @@ In this file:
     background-color: transparent;
     cursor: pointer;
 
-    margin-bottom: 0;
-    padding: var(--accordion-padding);
     
     &:not(:first-child){
         border-top-width: var(--default-border-width);
@@ -48,13 +51,18 @@ In this file:
         border-top-color: inherit;
     }
 
+    margin-bottom: 0;
+
     @extend %hover-focus;
     @extend %subtle-fill !optional;
 
     @include add-caret("after");
 
+    &::after{
+       transition: transform var(--accordion-transition);
+    }
+
     &:not([aria-expanded="true"])::after {
-        transition: transform var(--accordion-transition);
         transform: rotate(0deg);
     }
     
@@ -66,7 +74,6 @@ In this file:
         }
 
         &::after{
-            transition: transform var(--accordion-transition);
             transform: rotate(180deg);
         }
     }
@@ -74,13 +81,11 @@ In this file:
 
 .accordion__panel {
     overflow: hidden;
+    font-size: var(--font-size-rg);
+
     transition: max-height var(--accordion-transition);
 
     &:not(.show){
         max-height: 0;
     }
-}
-
-.accordion__panel__content {
-    padding: var(--accordion-padding);
 }
