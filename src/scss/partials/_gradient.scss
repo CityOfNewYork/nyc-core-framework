@@ -18,7 +18,7 @@ In this file:
 
     position: relative;
 
-    &::after{
+    &::after {
         content: "";
         position: absolute;
         top: 0;
@@ -33,19 +33,19 @@ In this file:
         display: none;
     }
 
-    &[class*="-veneer--top"]{
+    &[class*="-veneer--top"] {
         --gradient-direction: to top;
     }
 
-    &[class*="-veneer--right"]{
+    &[class*="-veneer--right"] {
         --gradient-direction: to right;
     }
 
-    &[class*="-veneer--bottom"]{
+    &[class*="-veneer--bottom"] {
         --gradient-direction: to bottom;
     }
 
-    &[class*="-veneer--left"]{
+    &[class*="-veneer--left"] {
         --gradient-direction: to left;
     }
 }

@@ -40,6 +40,7 @@ $positions: static, relative, absolute, fixed;
 }
 
 @supports (position: sticky) {
+    
     .sticky-top {
         position: sticky;
         top: -1px;
