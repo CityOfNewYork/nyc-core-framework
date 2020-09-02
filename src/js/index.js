@@ -635,9 +635,7 @@ import 'element-closest-polyfill';
     const currentLinkList = document.querySelectorAll("a[aria-current]");
 
     currentLinkList.forEach((currentLink) => {
-
         currentLink.closest("li").classList.add("active");
-
     });
 
     //////////////////////////////////////////////
