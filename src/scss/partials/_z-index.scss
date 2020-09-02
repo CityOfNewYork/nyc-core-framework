@@ -4,7 +4,6 @@ In this file:
 
 // A. Variables
 // B. Z-index Classes
-// Component
 
 */
 
@@ -12,7 +11,7 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-$z-index-values: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000; 
+$z-indexes: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000; 
 
 //////////////////////////////////////////////
 // B. Z-index Classes
@@ -22,7 +21,7 @@ $z-index-values: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
     position: relative;
 }
 
-@each $z-index in $z-index-values {
+@each $z-index in $z-indexes {
     .z-index-#{$z-index} {
         z-index: $z-index;
     }

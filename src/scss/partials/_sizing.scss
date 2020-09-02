@@ -1,3 +1,17 @@
+/*
+
+In this file:
+
+// A. Sizing Maps
+// B. Width Utilities
+// C. Height Utilities
+
+*/
+
+//////////////////////////////////////////////
+// A. Sizing Maps
+//////////////////////////////////////////////
+
 $widths: (
     10: 10%,
     20: 10%,
@@ -15,16 +29,24 @@ $widths: (
     auto: auto
 );
 
+$heights: (
+    100: 100%,
+    100vh: 100vh
+);
+
+//////////////////////////////////////////////
+// B. Width Utilities
+//////////////////////////////////////////////
+
 @each $key, $value in $widths {
     .width-#{$key} {
         width: $value;
     }
 }
 
-$heights: (
-    100: 100%,
-    100vh: 100vh
-);
+//////////////////////////////////////////////
+// C. Height Utilities
+//////////////////////////////////////////////
 
 @each $key, $value in $heights {
     .height-#{$key} {
