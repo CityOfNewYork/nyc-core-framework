@@ -39,7 +39,6 @@ In this file:
         }
     }
 
-    header,
     section {
         margin-top: var(--spacer-4);
         margin-bottom: var(--spacer-4);
@@ -60,7 +59,8 @@ In this file:
         border-top-color: currentColor;
     }
 
-    h1, h2, h3, h4, h5, h6, p,
+    header,
+    h2, h3, h4, h5, h6, p,
     ul:not([class]), ol,
 
     section > div,
@@ -102,31 +102,38 @@ In this file:
         }
     }
 
+    .article--three-column,
     .article--two-column {
+        // background-color: yellow;
         grid-template-columns: var(--article-sidebar-width) 1fr;
 
         grid-template-areas:
             "header header"
-            "sidebar body";
+            "sidebar body"
+            "related related";
 
-        .backdrop__cover > * {
+        header .backdrop__cover > * {
             margin-left: var(--article-sidebar-width);
         }
 
         [dir="rtl"] & {
 
-            .backdrop__cover > * {
+            header .backdrop__cover > * {
                 margin-left: unset;
                 margin-right: var(--article-sidebar-width);
             }
         }
     }
+}
+
+@include breakpoints-up(xl) {
 
     .article--three-column {
+    --article-sidebar-width: 260px;
         grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
+
         grid-template-areas:
             "header header header"
             "sidebar body related";
     }
-
 }

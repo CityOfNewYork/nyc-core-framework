@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Article • NYC Core Framework</title>
+    <title>Article Three Column • NYC Core Framework</title>
 
     <!-- Font Awesome Kit -->
     <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
@@ -39,12 +39,12 @@
 
 <body>
 
-    <!-- For keyboard users -->
-    <a class="focusable-only" href="#skip-header-target">Skip Header</a>
+    <header class="box-shadow-1 z-index-900" id="global-header">
 
-    <header class="theme-white box-shadow-1" id="global-header">
+        <!-- For keyboard users -->
+        <a class="focusable-only" href="#skip-header-target">Skip Header</a>
 
-        <div class="theme-dark font-size-sm">
+        <div class="theme-dark font-size-md">
 
             <div class="grid grid--cells-fit justify-content-between align-items-center">
 
@@ -64,13 +64,12 @@
                         </li>
                         <li>
                             <a href="#1">
-                                <strong>
-                                    Search all NYC.gov
-                                </strong>
+                                <span class="screen-reader-only">Search all n y c.gov</span>
+                                <strong aria-hidden="true">Search all NYC.gov</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#1" data-logo="brand">
+                            <a href="#1" data-logo="brand" title="Go to n y c.gov">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="15" viewBox="0 0 45 15">
                                     <g>
                                         <polygon
@@ -89,7 +88,7 @@
 
         </div>
 
-        <div class="primary-nav--across--lg">
+        <div class="primary-nav--right--lg">
 
             <div class="primary-nav__logo">
 
@@ -161,16 +160,16 @@
 
     <main id="skip-header-target">
 
-        <article class="article--three-column theme-light">
+        <div class="article--three-column">
 
             <div class="article__sidebar">
 
                 <!-- For keyboard users -->
                 <a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
-                <div class="sticky-top padding-2">
+                <div class="sticky-top padding-2 padding-0--lg font-size-md">
 
-                    <div class="display-none--lg">
+                    <div class="display-none--lg margin-bottom-2">
                         <button class="btn btn--has-icon--disperse theme-primary rounded-pill" data-toggle="collapse" data-target="#sidebar__menu">
                             <span class="btn__text">Jump To</span>
                             <span class="fas fa-arrow-down btn__icon"></span>
@@ -201,13 +200,30 @@
 
             </div>
 
-            <div class="article__body theme-white" id="primary-content">
+            <div class="article__body border-left--lg border-right--xl" id="primary-content">
 
-                <div class="article__body__content">
+                <article class="article__body__content">
 
                     <header class="narrow">
 
-                       <h1>cool</h1>
+                        <nav aria-label="Breadcrumb">
+                            <ul class="nav nav--breadcrumb">
+                                <li>
+                                    <a class="btn btn--icon-only" href="#1" title="Home">
+                                        <span class="screen-reader-only">Home</span>
+                                        <span class="fas fa-home" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#1">Parent Section</a>
+                                </li>
+                                <li>
+                                    Child Page
+                                </li>
+                            </ul>
+                        </nav>
+
+                       <h1 class="banner-headline text-color-primary">Headline 1</h1>
 
                     </header>
 
@@ -382,11 +398,11 @@
                                     id="acc-button-group-b-01"
                                     data-toggle="accordion"
                                     aria-controls="acc-panel-group-b-01"
-                                    aria-expanded="true">
+                                    aria-expanded="false">
                                     Accordion One
                             </button>
 
-                            <div class="accordion__panel shown" id="acc-panel-group-b-01" data-accordion="panel" aria-labelledby="acc-button-group-b-01" role="region">
+                            <div class="accordion__panel" id="acc-panel-group-b-01" data-accordion="panel" aria-labelledby="acc-button-group-b-01" role="region">
                                 <div class="accordion__panel__content">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
@@ -444,7 +460,7 @@
                         A Cool Footer
                     </footer>
 
-                </div>
+                </article>
 
             </div>
             
@@ -474,7 +490,7 @@
 
             </div>
 
-        </article>
+        </div>
 
     </main>
 

@@ -16,14 +16,14 @@ In this file:
 
     // Theme Color Palette
 
-    --primary: #3a0ca3;
+    --primary: #1E00B3;
     --secondary: #64cc7e;
     --dark: #191b35;
     --light: #f1f4f6;
 
     // Accessible Link Color
 
-    --a11y-link-color: blue;
+    --a11y-link-color: var(--primary);
 
     // Associated Primary Colors
 
