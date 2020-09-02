@@ -13,7 +13,8 @@ In this file:
 //////////////////////////////////////////////
 
 :root{
-    --alert-padding: var(--spacer-2);
+    --alert-padding-x: var(--spacer-2);
+    --alert-padding-y: var(--spacer-2);
     --alert-highlight-opacity: .075;
 }
 
@@ -25,9 +26,9 @@ In this file:
     position: relative;
     overflow: hidden;
 
-    padding: var(--alert-padding);
+    padding: var(--alert-padding-y) var(--alert-padding-x);
 
-    a{
+    a {
         color: inherit !important;
     }
 
@@ -72,6 +73,6 @@ In this file:
 
 .alert__body {
     p:not(:last-child) {
-        margin-bottom: var(--spacer-1);
+        margin-bottom: 0.5em;
     }
 }
