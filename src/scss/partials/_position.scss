@@ -3,7 +3,7 @@
 In this file:
 
 // A. Variables
-// B. Position Classes
+// B. Position Utilities
 
 */
 
@@ -14,7 +14,7 @@ In this file:
 $positions: static, relative, absolute, fixed;
 
 //////////////////////////////////////////////
-// A. Position Classes
+// B. Position Utilities
 //////////////////////////////////////////////
 
 @each $position in $positions {
