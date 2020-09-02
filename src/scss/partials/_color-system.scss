@@ -222,7 +222,7 @@ body:not([class*="theme-"]),
 // C. HTML and Body Defaults
 //////////////////////////////////////////////
 
-html:not([class*="theme-"]){
+html:not([class*="theme-"]) {
     --default-background-color: var(--dark);
     background-color: var(--default-background-color);
 }
