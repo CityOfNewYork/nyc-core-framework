@@ -3,8 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Background Color Classes
-// C. Text Color Classes
+// B. Color Utilities
+// C. HTML and Body Defaults
 
 */
 
@@ -66,10 +66,6 @@ In this file:
     --white-warn: #e4193c;
 }
 
-//////////////////////////////////////////////
-// B. Theme Color Map
-//////////////////////////////////////////////
-
 $theme-colors: (
 
     "white": (
@@ -119,7 +115,7 @@ $theme-colors: (
 );
 
 //////////////////////////////////////////////
-// D. Background Color Classes 
+// B. Color Utilities 
 //////////////////////////////////////////////
 
 body:not([class*="theme-"]),
@@ -221,6 +217,10 @@ body:not([class*="theme-"]),
 
     }
 }
+
+//////////////////////////////////////////////
+// C. HTML and Body Defaults
+//////////////////////////////////////////////
 
 html:not([class*="theme-"]){
     --default-background-color: var(--dark);
