@@ -13,7 +13,7 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-// Sans Serif Font Fallback (credit: Bootstrap 4.x)
+// Base Font Fallback (credit: Bootstrap 4.x)
 
 $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
@@ -163,10 +163,6 @@ h6, .h6 {
 // B. Body
 //////////////////////////////////////////////
 
-html{
-    font-size: 1rem;
-}
-
 body {
     font-size: var(--base-font-size);
     line-height: var(--base-line-height);
@@ -223,7 +219,7 @@ blockquote {
 }
 
 //////////////////////////////////////////////
-// C. Text Utilities
+// C. Text Align Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
