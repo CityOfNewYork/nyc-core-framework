@@ -17,17 +17,21 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Article Two Column
+// B. Article Block
 //////////////////////////////////////////////
 
 [class*="article--"] {
     display: grid;
 }
 
-.article__content {
+//////////////////////////////////////////////
+// C. Article Elements
+//////////////////////////////////////////////
+
+.article__body {
     overflow: hidden;
 
-    @at-root .article__content__inner {
+    @at-root .article__body__content{
 
         @include breakpoints-up(lg){
             margin-top: var(--spacer-5);
@@ -41,7 +45,6 @@ In this file:
         margin-bottom: var(--spacer-4);
     }
 
-    header > *,
     section > *,
     footer {
         @extend %center-horizontal !optional;
@@ -59,7 +62,7 @@ In this file:
 
     h1, h2, h3, h4, h5, h6, p,
     ul:not([class]), ol,
-    header > *,
+
     section > div,
     footer {
         @extend .container !optional;
@@ -90,8 +93,8 @@ In this file:
             grid-area: sidebar;
         }
 
-        .article__content {
-            grid-area: content;
+        .article__body {
+            grid-area: body;
         }
 
         .article__related {
@@ -99,11 +102,12 @@ In this file:
         }
     }
 
-    .article--header-sidebar-content {
+    .article--two-column {
         grid-template-columns: var(--article-sidebar-width) 1fr;
+
         grid-template-areas:
             "header header"
-            "sidebar content";
+            "sidebar body";
 
         .backdrop__cover > * {
             margin-left: var(--article-sidebar-width);
@@ -118,23 +122,11 @@ In this file:
         }
     }
 
-    .article--sidebar-content {
-        grid-template-columns: var(--article-sidebar-width) 1fr;
-        grid-template-areas:
-            "sidebar content";
-
-    }
-
-    .article--sidebar-header-content-sidebar {
-        --article-sidebar-width: 250px;
-        grid-template-columns: var(--article-sidebar-width) 1fr  var(--article-sidebar-width);
+    .article--three-column {
+        grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
         grid-template-areas:
             "header header header"
-            "sidebar content related";
+            "sidebar body related";
     }
 
-}
-
-.article__sidebar > div{
-    padding: var(--spacer-2);
 }

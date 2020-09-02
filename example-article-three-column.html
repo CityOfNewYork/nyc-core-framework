@@ -42,9 +42,9 @@
     <!-- For keyboard users -->
     <a class="focusable-only" href="#skip-header-target">Skip Header</a>
 
-    <header class="theme-white box-shadow-1 z-index-400" id="global-header">
+    <header class="theme-white box-shadow-1" id="global-header">
 
-        <div class="theme-dark font-size-md">
+        <div class="theme-dark font-size-sm">
 
             <div class="grid grid--cells-fit justify-content-between align-items-center">
 
@@ -89,7 +89,7 @@
 
         </div>
 
-        <div class="primary-nav--right--lg">
+        <div class="primary-nav--across--lg">
 
             <div class="primary-nav__logo">
 
@@ -125,7 +125,7 @@
 
             <nav class="primary-nav__menu" id="primary-menu" aria-label="Primary">
 
-                <ul>
+                <ul role="list">
                     <li>
                         <a href="#1" data-toggle="dropdown">Dropdown</a>
                         <ul class="box-shadow-1--lg">
@@ -161,14 +161,14 @@
 
     <main id="skip-header-target">
 
-        <div class="article--sidebar-content">
+        <article class="article--three-column theme-light">
 
-            <div class="article__sidebar theme-light">
+            <div class="article__sidebar">
 
                 <!-- For keyboard users -->
                 <a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
-                <div class="sticky-top">
+                <div class="sticky-top padding-2">
 
                     <div class="display-none--lg">
                         <button class="btn btn--has-icon--disperse theme-primary rounded-pill" data-toggle="collapse" data-target="#sidebar__menu">
@@ -178,7 +178,7 @@
                     </div>
 
                     <nav class="collapse display-block--lg" id="sidebar__menu">
-                        <ul class="nav nav--divider cool-nav">
+                        <ul class="nav nav--divider">
                             <li>
                                 <a href="#1" aria-current="page">Link</a>
                             </li>
@@ -201,36 +201,19 @@
 
             </div>
 
-            <article class="article__content" id="primary-content">
+            <div class="article__body theme-white" id="primary-content">
 
-                <div class="article__content__inner">
+                <div class="article__body__content">
 
-                    <header>
+                    <header class="narrow">
 
-                            <nav aria-label="Breadcrumb">
-                                <ul class="nav nav--breadcrumb font-size-md">
-                                    <li>
-                                        <a class="btn btn--icon-only" href="#1" title="Home">
-                                            <span class="screen-reader-only">Home</span>
-                                            <span class="fas fa-home" aria-hidden="true"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#1">Parent Section</a>
-                                    </li>
-                                    <li>
-                                        Child Page
-                                    </li>
-                                </ul>
-                            </nav>
-
-                            <h1>Headline 1</h1>
+                       <h1>cool</h1>
 
                     </header>
 
                     <section class="section">
 
-                        <h2 class="screen-reader-only">Headline 2</h2>
+                        <h2>Headline 2</h2>
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
@@ -243,7 +226,7 @@
                             architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
                             dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
                         </p>
-
+                        
                         <figure class="box-shadow-1">
 
                             <table class="table table--stack--md table--va-middle">
@@ -386,7 +369,7 @@
 
                     <section class="section">
 
-                        <h3>Resources</h3>
+                        <h3 class="text-color-primary">Resources</h3>
 
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
@@ -395,55 +378,58 @@
 
                         <div class="accordion">
 
-                            <button class="accordion__button h6" id="acc-button-group-b-01" data-toggle="accordion"
-                                aria-controls="acc-panel-group-b-01" aria-expanded="true">
-                                Accordion One
+                            <button class="accordion__button h6"
+                                    id="acc-button-group-b-01"
+                                    data-toggle="accordion"
+                                    aria-controls="acc-panel-group-b-01"
+                                    aria-expanded="true">
+                                    Accordion One
                             </button>
 
-                            <div class="accordion__panel shown" id="acc-panel-group-b-01" data-accordion="panel"
-                                aria-labelledby="acc-button-group-b-01" role="region">
+                            <div class="accordion__panel shown" id="acc-panel-group-b-01" data-accordion="panel" aria-labelledby="acc-button-group-b-01" role="region">
                                 <div class="accordion__panel__content">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
                                         architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati
-                                            repellendus</a>.
+                                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
                                     </p>
                                 </div>
                             </div>
                             <!-- .accordion__panel -->
 
-                            <button class="accordion__button h6" id="acc-button-group-b-02" data-toggle="accordion"
-                                aria-controls="acc-panel-group-b-02" aria-expanded="false">
-                                Accordion Two
+                            <button class="accordion__button h6"
+                                    id="acc-button-group-b-02"
+                                    data-toggle="accordion"
+                                    aria-controls="acc-panel-group-b-02"
+                                    aria-expanded="false">
+                                    Accordion Two
                             </button>
 
-                            <div class="accordion__panel" id="acc-panel-group-b-02" data-accordion="panel"
-                                aria-labelledby="acc-button-group-b-02" role="region">
+                            <div class="accordion__panel" id="acc-panel-group-b-02" data-accordion="panel" aria-labelledby="acc-button-group-b-02" role="region">
                                 <div class="accordion__panel__content">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
                                         architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati
-                                            repellendus</a>.
+                                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
                                     </p>
                                 </div>
                             </div>
                             <!-- .accordion__panel -->
 
-                            <button class="accordion__button h6" id="acc-button-group-b-03" data-toggle="accordion"
-                                aria-controls="acc-panel-group-b-03" aria-expanded="false">
-                                Accordion Three
+                            <button class="accordion__button h6"
+                                    id="acc-button-group-b-03"
+                                    data-toggle="accordion"
+                                    aria-controls="acc-panel-group-b-03"
+                                    aria-expanded="false">
+                                    Accordion Three
                             </button>
 
-                            <div class="accordion__panel" id="acc-panel-group-b-03" data-accordion="panel"
-                                aria-labelledby="acc-button-group-b-03" role="region">
+                            <div class="accordion__panel" id="acc-panel-group-b-03" data-accordion="panel" aria-labelledby="acc-button-group-b-03" role="region">
                                 <div class="accordion__panel__content">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore, unde
                                         architecto voluptate voluptas distinctio commodi quaerat, possimus odio sint
-                                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati
-                                            repellendus</a>.
+                                        dignissimos accusamus. Sequi suscipit voluptas <a href="#1">obcaecati repellendus</a>.
                                     </p>
                                 </div>
                             </div>
@@ -459,11 +445,36 @@
                     </footer>
 
                 </div>
-                <!-- .article__content__inner -->
 
-            </article>
+            </div>
+            
+            <div class="article__related padding-2">
 
-        </div>
+                 <div class="backdrop theme-primary rounded" id="div">
+
+                     <div class="backdrop__image">
+                         <img class="opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
+                     </div>
+
+                     <div class="backdrop__cover">
+
+                         <div class="margin-y-3">
+                             <div class="container narrow">
+                                 <h2 class="h5 text-shadow">
+                                     Page Title
+                                 </h2>
+                              </div>
+                         </div>
+                         <!-- .container -->
+
+                     </div>
+                     <!-- .backdrop__cover -->
+
+                 </div>
+
+            </div>
+
+        </article>
 
     </main>
 
@@ -472,7 +483,7 @@
         <div class="modal__content medium box-shadow-2">
 
             <header class="modal__content__head border-bottom">
-                <h2 class="h6" id="modal-search-title">Website Translation</h2>
+                <h3 class="h6" id="modal-search-title">Website Translation</h2>
                 <button class="btn btn--icon-only" data-modal-close>
                     <span class="screen-reader-only">Close Modal</span>
                     <span class="fas fa-times"></span>
