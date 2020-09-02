@@ -4,8 +4,8 @@ In this file:
 
 // A. Variables
 // B. Table Block
-// C. Table Style Modifiers
-// D. Table Scroll
+// C. Table Modifiers
+// D. Table Scroll Block
 
 */
 
@@ -28,7 +28,7 @@ In this file:
     table-layout: fixed;
     width: 100%;
 
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-rg);
 
     caption-side: bottom;
 
@@ -72,10 +72,23 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Table Style Modifiers
+// C. Table Modifiers
 //////////////////////////////////////////////
 
-.table--divider{
+.table--striped {
+    tbody tr:nth-of-type(odd) td {
+        @extend %subtle-fill !optional;
+        --subtle-fill-opacity: 0.0375;
+    }
+}
+
+.table--va-middle{
+    tbody td {
+        vertical-align: middle;
+    }
+}
+
+.table--divider {
     border-collapse: separate;
     
     th,
@@ -114,21 +127,60 @@ In this file:
     }
 }
 
-.table--va-middle{
-    td{
-        vertical-align: middle;
-    }
-}
+@each $breakpoint in map-keys($breakpoints) {
 
-.table--striped {
-    tbody tr:nth-of-type(odd) td {
-        @extend %subtle-fill !optional;
-        --subtle-fill-opacity: 0.0375;
+    @include breakpoints-down($breakpoint) {
+    
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        
+        .table--stack#{$mod} {
+
+            thead {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr:not(:first-child){
+                border-top-width: calc(var(--default-border-width) * 2);
+                border-top-style: var(--default-border-style);
+            }
+
+            td {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                &:first-child{
+                    border: unset;
+                }
+            }
+            
+            .td-content{
+                text-align: right;
+            }
+
+            td::after {
+                content: attr(data-before);
+                font-weight: bold;
+            }
+
+            &.table--edge{
+                td{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            &.table--divider{
+                border-collapse: collapse;
+            }  
+        }
     }
 }
 
 //////////////////////////////////////////////
-// D. Table Scroll
+// D. Table Scroll Block
 //////////////////////////////////////////////
 
 .table-scroll {
@@ -184,60 +236,4 @@ In this file:
             display: block;
         }
     }   
-}
-
-//////////////////////////////////////////////
-// B. Table Stack
-//////////////////////////////////////////////
-
-@each $breakpoint in map-keys($breakpoints) {
-
-    @include breakpoints-down($breakpoint) {
-    
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
-        
-        .table--stack#{$mod} {
-
-            thead {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-
-            tr:not(:first-child){
-                border-top-width: calc(var(--default-border-width) * 2);
-                border-top-style: var(--default-border-style);
-            }
-
-            td {
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: space-between;
-
-                &:first-child{
-                    border: unset;
-                }
-            }
-            
-            .td-content{
-                text-align: right;
-            }
-
-            td::after {
-                content: attr(data-before);
-                font-weight: bold;
-            }
-
-            &.table--edge{
-                td{
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-
-            &.table--divider{
-                border-collapse: collapse;
-            }  
-        }
-    }
 }
