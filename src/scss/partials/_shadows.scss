@@ -3,8 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Box Shadows
-// C. Text Shadows
+// B. Box Shadow Utilities
+// C. Text Shadow Utility
 // D. I.E. 11 Support
 
 */
@@ -18,12 +18,12 @@ In this file:
     --base-shadow-opacity: 0.125;
 }
 
-[class*="theme-dark"]{
+[class*="theme-dark"] {
     --base-shadow-opacity: 0.175;
 }
 
 //////////////////////////////////////////////
-// B. Box Shadows
+// B. Box Shadow Utilities
 //////////////////////////////////////////////
 
 body:not([class*="box-shadow-"]),
@@ -61,9 +61,8 @@ body:not([class*="box-shadow-"]){
     @extend .box-shadow-3;
 }
 
-
 //////////////////////////////////////////////
-// C. Text Shadows
+// C. Text Shadow Utility
 //////////////////////////////////////////////
 
 .text-shadow {
