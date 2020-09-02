@@ -78,8 +78,6 @@ In this file:
 
 .accordion__panel {
     overflow: hidden;
-    
     transition: max-height var(--accordion-transition);
-
     max-height: 0;
 }

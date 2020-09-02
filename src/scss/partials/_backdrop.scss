@@ -37,7 +37,7 @@ In this file:
 }
 
 .backdrop__image {
-    img{
+    img {
         min-width: 100%;
         min-height: 100%;
     }
@@ -56,10 +56,10 @@ In this file:
 }
 
 .backdrop__credit {
-    width: auto;
     position: absolute;
     top: 0;
     right: 0;
+    width: auto;
 
     background-color: inherit;
 
@@ -127,11 +127,3 @@ In this file:
         min-height: calc( var(--backdrop-fixed-height) * 0.75 );
     }
 }
-
-//////////////////////////////////////////////
-// D. I.E. 11 Support
-//////////////////////////////////////////////
-
-// @media screen and (-ms-high-contrast: active),
-// screen and (-ms-high-contrast: none) {
-// }

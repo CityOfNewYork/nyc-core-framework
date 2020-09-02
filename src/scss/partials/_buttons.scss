@@ -4,7 +4,7 @@ In this file:
 
 // A. Variables
 // B. Default Button Tag
-// C. Button Class
+// C. Button Utility
 // D. Button Outline Modifier
 // E. Button Has Icon Modifier
 // F. I.E. 11 Support
@@ -16,11 +16,12 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --btn-padding-x: 1em;
-    --btn-padding-y: 0.5em;
-    --btn-font-weight: bold;
+    --btn-padding-x: var(--spacer-2);
+    --btn-padding-y: 0.625em;
+
+    --btn-font-weight: var(--base-font-weight-bold);
     
-    --btn--icon-only-size: 2em;
+    --btn--icon-only-size: 2.25em;
 }
 
 //////////////////////////////////////////////
@@ -44,11 +45,11 @@ button {
 }
 
 //////////////////////////////////////////////
-// C. Button Class
+// C. Button Utility
 //////////////////////////////////////////////
 
 button, 
-.btn{
+.btn {
     --btn-opacity-hover: 0.75;
 
     @extend %hover-focus !optional;

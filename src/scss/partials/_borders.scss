@@ -4,7 +4,7 @@ In this file:
 
 // A. Variables
 // B. Responsive Border Utilies
-// C. Color Border Utilities
+// C. Border Color Utilities
 // D. Border Radius Utilities
 
 */
@@ -14,11 +14,9 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    // Border
     --default-border-width: 1px;
     --default-border-style: solid;
 
-    // Border Radius
     --border-radius: 0.5em;
 }
 
@@ -82,7 +80,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Color Border Utilities
+// C. Border Color Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
