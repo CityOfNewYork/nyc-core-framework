@@ -51,8 +51,8 @@ In this file:
     }
 }
 
-.form-entry + .form-entry, 
-.form-entry + .grid {
+.form-entry ~ .form-entry, 
+.form-entry ~ .grid {
     margin-top: var(--spacer-3);
     margin-bottom: var(--spacer-3);
 }
