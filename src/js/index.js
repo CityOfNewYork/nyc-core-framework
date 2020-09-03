@@ -502,96 +502,105 @@ import 'element-closest-polyfill';
     // Forms
     //////////////////////////////////////////////
 
-    Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
+    const fieldInputList = document.querySelectorAll(".form-entry__field__input");
 
-        const fieldInputList = form.querySelectorAll(".form-entry__field__input");
+    const fieldInputFirst = document.querySelector(".form-entry__field__input");
+    
+    fieldInputFirst.value = "Carl";
+    fieldInputFirst.closest(".form-entry__field, .form-entry__field--has-btn").classList.add("has-value");
 
-        let wasValidated = false;
+    let wasValidated = false;
 
-        for (const fieldInput of fieldInputList) {
+    fieldInputList.forEach((fieldInput) => {
 
-            fieldInput.addEventListener("change", () => {
+        fieldInput.addEventListener("change", () => {
+            
+            console.log("Value", fieldInput.value);
 
-                if (fieldInput.value.length != 0) {
-                    fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.add("has-value");
-                } else {
-                    fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.remove("has-value");
-                }
-
-                if(fieldInput.checked){ 
-                    fieldInput.classList.add("checked");
-                } else if (!fieldInput.checked){
-                    fieldInput.classList.remove("checked");
-                }
-
-                if(wasValidated === true){
-                    if (fieldInput.hasAttribute("required")){
-                        checkIfEmpty(fieldInput);
-                    }
-                } 
-
-            });
-
-        }
-
-        // Handle Form Submission
-
-        form.addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-            wasValidated = true;
-
-            let formErrorsList = form.querySelectorAll(":invalid");
-
-            for (const formError of formErrorsList) {
-                checkIfEmpty(formError);
-            }
-
-            let firstError = document.querySelector("[class*='alert']");
-
-            if (firstError.hasAttribute("data-alert")) {
-                firstError.style.display = "block";
-            }
-
-            let myScroll = firstError.offsetTop - 16 + "px";
-
-            window.scrollTo({
-                top: myScroll,
-                behavior: "smooth"
-            });
-        });
-
-        function checkIfEmpty(field) {
-            if (isEmpty(field.value.trim())) {
-                // Set field invalid
-                setInvalid(field);
-                return true;
+            if (fieldInput.value != "") {
+                fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.add("has-value");
             } else {
-                // Set field valid
-                setValid(field);
-                return false;
+                fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.remove("has-value");
             }
-        }
 
-        function isEmpty(value = null) {
-            if (value === "") return true;
-            return false;
-        }
+            if(fieldInput.checked){ 
+                fieldInput.classList.add("checked");
+            } else if (!fieldInput.checked){
+                fieldInput.classList.remove("checked");
+            }
 
-        const invalidClasses = ["invalid", "alert--warn"];
+            if(wasValidated === true){
+                if (fieldInput.hasAttribute("required")){
+                    checkIfEmpty(fieldInput);
+                }
+            } 
 
-        function setInvalid(field) {
-            let myEl = field.closest(".form-entry");
-            myEl.classList.add(...invalidClasses);
-        }
-
-        function setValid(field) {
-            let myEl = field.closest(".form-entry");
-            myEl.classList.remove(...invalidClasses);
-        }
-        
+        });
+    
     });
+
+    // Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
+
+
+
+    //     // Handle Form Submission
+
+    //     form.addEventListener("submit", function (event) {
+
+    //         event.preventDefault();
+
+    //         wasValidated = true;
+
+    //         let formErrorsList = form.querySelectorAll(":invalid");
+
+    //         for (const formError of formErrorsList) {
+    //             checkIfEmpty(formError);
+    //         }
+
+    //         let firstError = document.querySelector("[class*='alert']");
+
+    //         if (firstError.hasAttribute("data-alert")) {
+    //             firstError.style.display = "block";
+    //         }
+
+    //         let myScroll = firstError.offsetTop - 16 + "px";
+
+    //         window.scrollTo({
+    //             top: myScroll,
+    //             behavior: "smooth"
+    //         });
+    //     });
+
+    //     function checkIfEmpty(field) {
+    //         if (isEmpty(field.value.trim())) {
+    //             // Set field invalid
+    //             setInvalid(field);
+    //             return true;
+    //         } else {
+    //             // Set field valid
+    //             setValid(field);
+    //             return false;
+    //         }
+    //     }
+
+    //     function isEmpty(value = null) {
+    //         if (value === "") return true;
+    //         return false;
+    //     }
+
+    //     const invalidClasses = ["invalid", "alert--warn"];
+
+    //     function setInvalid(field) {
+    //         let myEl = field.closest(".form-entry");
+    //         myEl.classList.add(...invalidClasses);
+    //     }
+
+    //     function setValid(field) {
+    //         let myEl = field.closest(".form-entry");
+    //         myEl.classList.remove(...invalidClasses);
+    //     }
+        
+    // });
 
     //////////////////////////////////////////////
     // External Links

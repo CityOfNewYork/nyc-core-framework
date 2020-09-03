@@ -16,7 +16,7 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --form-field-padding-x: 1em;
+ --form-field-padding-x: var(--spacer-2);
     --form-field-padding-y: 0.75em;
 }
 
@@ -50,6 +50,7 @@ In this file:
 }
 
 .form-entry + .form-entry {
+    --spacer-4: 2.25em;
     margin-top: var(--spacer-4);
     margin-bottom: var(--spacer-4);
 }
@@ -73,12 +74,15 @@ In this file:
     border-bottom-width: var(--default-border-width);
     border-bottom-style: var(--default-border-style);
     border-bottom-color: currentColor !important;
+    --border-radius: 0.375em;
+    @extend .rounded-top !optional;
 }
 
 // Label
 
 .form-entry__field__label {
     position: absolute;
+
     left: 0;
     top: 0;
     bottom: 0;
@@ -105,33 +109,63 @@ In this file:
     padding-bottom: var(--form-field-padding-y);
     padding-right: var(--form-field-padding-x);
     padding-left: var(--form-field-padding-x);
+}
+@-webkit-keyframes autofill {
+    0%,100% {
+    }
+}
+
+/* Change Autocomplete styles in Chrome */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+    // border: 1px solid green;
+    -webkit-text-fill-color: green;
     
-    line-height: normal;
+    // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 // Label and Input (Active)
 
-.form-entry__field__input:focus, 
-.form-entry__field__input:active,
-.has-value .form-entry__field__input {
-    padding-top: calc(var(--form-field-padding-y) * 1.5);
-    padding-bottom: calc(var(--form-field-padding-y) * 0.5);
-}
+// .form-entry__field__input:focus, 
+// .form-entry__field__input:active,
+// .has-value .form-entry__field__input {
+    // padding-top: calc(var(--form-field-padding-y) * 1.5);
+    // padding-bottom: calc(var(--form-field-padding-y) * 0.5);
+    // border-top-width: var(--default-border-width) !important;
+    // border-top-style: var(--default-border-style) !important;
+    // border-top-color: currentColor !important;
+// }
 
 .form-entry__field__input:focus ~ .form-entry__field__label,
 .form-entry__field__input:active ~ .form-entry__field__label,
-.has-value .form-entry__field__label{
-    padding-top: calc( var(--form-field-padding-y) * 0.25 );
-    padding-bottom: calc( var(--form-field-padding-y) * 0.25 );
+.has-value .form-entry__field__label {
+    // background-color: red;
 
-    padding-left: 0;
-    padding-right: 0;
+    // --form-field-padding-x: 0;
+    // --form-field-padding-y: 0;
+
+    padding: 0;
+
+    top: unset;
+    bottom: 100%;
+    right: unset;
+    line-height: normal;
 
     margin-left: var(--form-field-padding-x);
     margin-right: var(--form-field-padding-x);
+    margin-bottom: 0.375em;
 
-    transform-origin: top left;
-    transform: scale(0.65);
+    font-size: 75%;
 
     [dir="rtl"] & {
         transform-origin: top right;
@@ -185,17 +219,17 @@ In this file:
 
 // Google Translate Dropdown
 
-.goog-gt-tt{
+.goog-gt-tt {
     display: none !important;
 }
 
 .goog-te-gadget, 
-.goog-te-combo{
+.goog-te-combo {
     font-family: inherit !important;
     background-color: transparent !important;
 }
 
-.goog-te-gadget{
+.goog-te-gadget {
     color: inherit !important;
     font-size: var(--font-size-md) !important;
     text-align: center;
@@ -206,7 +240,7 @@ In this file:
         color: currentColor !important;
     }
 
-    > div{
+    > div {
         margin-bottom: var(--spacer-1);
 
         @extend %subtle-fill !optional;
