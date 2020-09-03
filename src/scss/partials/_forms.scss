@@ -16,8 +16,8 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
- --form-field-padding-x: var(--spacer-2);
-    --form-field-padding-y: 0.75em;
+    --form-field-padding-x: var(--spacer-2);
+    --form-field-padding-y: 1em;
 }
 
 //////////////////////////////////////////////
@@ -25,6 +25,7 @@ In this file:
 //////////////////////////////////////////////
 
 .form-entry {
+
     text-align: left;
     
     select,
@@ -33,6 +34,7 @@ In this file:
         border: none;
         background-color: transparent;
         color: inherit;
+        border-radius: inherit;
     }
 
     select option {
@@ -49,33 +51,44 @@ In this file:
     }
 }
 
-.form-entry + .form-entry {
-    --spacer-4: 2.25em;
-    margin-top: var(--spacer-4);
-    margin-bottom: var(--spacer-4);
+.form-entry + .form-entry, 
+.form-entry + .grid {
+    margin-top: var(--spacer-3);
+    margin-bottom: var(--spacer-3);
 }
 
 //////////////////////////////////////////////
 // C. Form Entry Elements
 //////////////////////////////////////////////
 
-// Field
-
 .form-entry__field, 
 .form-entry__field--has-btn {
+    position: relative;
     --action-btn-size: 2.5rem;
+    --border-radius: 0.375em;
     
     display: flex;
     color: inherit;
     
-    @extend %subtle-fill !optional;
-    --subtle-fill-opacity: 0.05;
+    // @extend %subtle-fill !optional;
+    // --subtle-fill-opacity: 0;
 
-    border-bottom-width: var(--default-border-width);
-    border-bottom-style: var(--default-border-style);
-    border-bottom-color: currentColor !important;
-    --border-radius: 0.375em;
-    @extend .rounded-top !optional;
+    @extend .rounded !optional;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        pointer-events: none;
+        box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+        opacity: 0.5;
+        border-radius: inherit;
+    }
 }
 
 // Label
@@ -109,11 +122,9 @@ In this file:
     padding-bottom: var(--form-field-padding-y);
     padding-right: var(--form-field-padding-x);
     padding-left: var(--form-field-padding-x);
+    line-height: normal;
 }
-@-webkit-keyframes autofill {
-    0%,100% {
-    }
-}
+
 
 /* Change Autocomplete styles in Chrome */
 
@@ -126,44 +137,44 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-
-    // border: 1px solid green;
-    -webkit-text-fill-color: green;
-    
-    // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-text-fill-color: inherit !important;
     transition: background-color 5000s ease-in-out 0s;
+    // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 
 // Label and Input (Active)
 
-// .form-entry__field__input:focus, 
-// .form-entry__field__input:active,
-// .has-value .form-entry__field__input {
-    // padding-top: calc(var(--form-field-padding-y) * 1.5);
-    // padding-bottom: calc(var(--form-field-padding-y) * 0.5);
-    // border-top-width: var(--default-border-width) !important;
-    // border-top-style: var(--default-border-style) !important;
-    // border-top-color: currentColor !important;
-// }
+.form-entry__field__input:focus, 
+.form-entry__field__input:active {
+    outline: 0;
+
+    box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-entry__field__input:focus, 
+.form-entry__field__input:active,
+.has-value .form-entry__field__input {
+    padding-top: calc( var(--form-field-padding-y) * 1.5);
+    padding-bottom: calc( var(--form-field-padding-y) * 0.5);
+}
 
 .form-entry__field__input:focus ~ .form-entry__field__label,
 .form-entry__field__input:active ~ .form-entry__field__label,
 .has-value .form-entry__field__label {
-    // background-color: red;
 
-    // --form-field-padding-x: 0;
-    // --form-field-padding-y: 0;
+    padding-top: calc( var(--form-field-padding-x) * 0.5);
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
 
-    padding: 0;
-
-    top: unset;
-    bottom: 100%;
     right: unset;
-    line-height: normal;
+    bottom: unset;
+    
+    //line-height: normal;
 
     margin-left: var(--form-field-padding-x);
     margin-right: var(--form-field-padding-x);
-    margin-bottom: 0.375em;
 
     font-size: 75%;
 
@@ -339,7 +350,6 @@ select:-webkit-autofill:focus {
     }
 
 }
-
 
 // File Input
 
@@ -522,7 +532,8 @@ select:-webkit-autofill:focus {
 }
 
 .form-entry__feedback {
-    margin-bottom: var(--spacer-2);
+    font-size: 75%;
+    margin-bottom: var(--spacer-1);
 
     strong {
         margin-left: 0.25rem;

@@ -503,12 +503,7 @@ import 'element-closest-polyfill';
     //////////////////////////////////////////////
 
     const fieldInputList = document.querySelectorAll(".form-entry__field__input");
-
-    const fieldInputFirst = document.querySelector(".form-entry__field__input");
     
-    fieldInputFirst.value = "Carl";
-    fieldInputFirst.closest(".form-entry__field, .form-entry__field--has-btn").classList.add("has-value");
-
     let wasValidated = false;
 
     fieldInputList.forEach((fieldInput) => {
@@ -523,84 +518,83 @@ import 'element-closest-polyfill';
                 fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.remove("has-value");
             }
 
-            if(fieldInput.checked){ 
-                fieldInput.classList.add("checked");
-            } else if (!fieldInput.checked){
-                fieldInput.classList.remove("checked");
-            }
-
-            if(wasValidated === true){
-                if (fieldInput.hasAttribute("required")){
-                    checkIfEmpty(fieldInput);
-                }
-            } 
-
         });
+
+        if (fieldInput.checked) {
+            fieldInput.classList.add("checked");
+        } else if (!fieldInput.checked) {
+            fieldInput.classList.remove("checked");
+        }
+
+        if (wasValidated === true) {
+            if (fieldInput.hasAttribute("required")) {
+                checkIfEmpty(fieldInput);
+            }
+        }
     
     });
 
-    // Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
+    Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
 
+        // Handle Form Submission
 
+        form.addEventListener("submit", function (event) {
 
-    //     // Handle Form Submission
+            event.preventDefault();
 
-    //     form.addEventListener("submit", function (event) {
+            wasValidated = true;
 
-    //         event.preventDefault();
+            let formErrorsList = form.querySelectorAll(":invalid");
 
-    //         wasValidated = true;
+            for (const formError of formErrorsList) {
+                checkIfEmpty(formError);
+            }
 
-    //         let formErrorsList = form.querySelectorAll(":invalid");
+            let firstError = document.querySelector("[class*='alert']");
 
-    //         for (const formError of formErrorsList) {
-    //             checkIfEmpty(formError);
-    //         }
+            if (firstError.hasAttribute("data-alert")) {
+                firstError.style.display = "block";
+            }
 
-    //         let firstError = document.querySelector("[class*='alert']");
+            let myScroll = firstError.offsetTop - 16 + "px";
 
-    //         if (firstError.hasAttribute("data-alert")) {
-    //             firstError.style.display = "block";
-    //         }
+            window.scrollTo({
+                top: myScroll,
+                behavior: "smooth"
+            });
 
-    //         let myScroll = firstError.offsetTop - 16 + "px";
+        });
 
-    //         window.scrollTo({
-    //             top: myScroll,
-    //             behavior: "smooth"
-    //         });
-    //     });
+        function checkIfEmpty(field) {
+            if (isEmpty(field.value.trim())) {
+                // Set field invalid
+                setInvalid(field);
+                return true;
+            } else {
+                // Set field valid
+                setValid(field);
+                return false;
+            }
+        }
 
-    //     function checkIfEmpty(field) {
-    //         if (isEmpty(field.value.trim())) {
-    //             // Set field invalid
-    //             setInvalid(field);
-    //             return true;
-    //         } else {
-    //             // Set field valid
-    //             setValid(field);
-    //             return false;
-    //         }
-    //     }
+        function isEmpty(value = null) {
+            if (value === "") return true;
+            return false;
+        }
 
-    //     function isEmpty(value = null) {
-    //         if (value === "") return true;
-    //         return false;
-    //     }
+        const invalidClasses = ["invalid", "alert--warn"];
 
-    //     const invalidClasses = ["invalid", "alert--warn"];
+        function setInvalid(field) {
+            let myEl = field.closest(".form-entry");
+            myEl.classList.add(...invalidClasses);
+        }
 
-    //     function setInvalid(field) {
-    //         let myEl = field.closest(".form-entry");
-    //         myEl.classList.add(...invalidClasses);
-    //     }
-
-    //     function setValid(field) {
-    //         let myEl = field.closest(".form-entry");
-    //         myEl.classList.remove(...invalidClasses);
-    //     }
+        function setValid(field) {
+            let myEl = field.closest(".form-entry");
+            myEl.classList.remove(...invalidClasses);
+        }
         
-    // });
+    });
 
     //////////////////////////////////////////////
     // External Links
