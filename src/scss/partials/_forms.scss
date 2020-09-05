@@ -31,19 +31,19 @@ In this file:
     select,
     textarea,
     input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
-        border: none;
         background-color: transparent;
         color: inherit;
         border-radius: inherit;
+        border: unset;
+    }
+
+    button,
+    fieldset {
+        border: unset;
     }
 
     select option {
         color: currentColor !important;
-    }
-
-    button,
-    fieldset{
-        border: none;
     }
 
     [dir="rtl"] & {
@@ -51,7 +51,7 @@ In this file:
     }
 }
 
-.form-entry + .form-entry {
+.form-entry ~ .form-entry {
     margin-top: var(--spacer-3);
     margin-bottom: var(--spacer-3);
 }
@@ -62,17 +62,16 @@ In this file:
 
 .form-entry__field, 
 .form-entry__field--has-btn {
-    position: relative;
     --action-btn-size: 2.5rem;
     --border-radius: 0.375em;
+
+    position: relative;
     
     display: flex;
     color: inherit;
     
     // @extend %subtle-fill !optional;
     // --subtle-fill-opacity: 0;
-
-    @extend .rounded !optional;
 
     &::after {
         content: "";
@@ -84,6 +83,7 @@ In this file:
         left: 0;
 
         pointer-events: none;
+        
         box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
         opacity: 0.5;
         border-radius: inherit;
@@ -94,7 +94,6 @@ In this file:
 
 .form-entry__field__label {
     position: absolute;
-
     left: 0;
     top: 0;
     bottom: 0;
@@ -127,18 +126,16 @@ In this file:
 
 /* Change Autocomplete styles in Chrome */
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-    -webkit-text-fill-color: inherit !important;
-    transition: background-color 5000s ease-in-out 0s;
-    // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+input, 
+textarea, 
+select {
+    &:-webkit-autofill, 
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        -webkit-text-fill-color: inherit !important;
+        transition: background-color 5000s ease-in-out 0s;
+        // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    }
 }
 
 // Label and Input (Active)
@@ -161,7 +158,6 @@ select:-webkit-autofill:focus {
 .form-entry__field__input:focus ~ .form-entry__field__label,
 .form-entry__field__input:active ~ .form-entry__field__label,
 .has-value .form-entry__field__label {
-
     padding-top: calc( var(--form-field-padding-x) * 0.5);
     padding-right: 0;
     padding-bottom: 0;
@@ -170,8 +166,6 @@ select:-webkit-autofill:focus {
     right: unset;
     bottom: unset;
     
-    //line-height: normal;
-
     margin-left: var(--form-field-padding-x);
     margin-right: var(--form-field-padding-x);
 
@@ -270,7 +264,6 @@ select:-webkit-autofill:focus {
         border-bottom-style: var(--default-border-style) !important;
         border-bottom-color: currentColor !important;
     }
-
 }
 
 // Google Translate and Field Input Wrap (Select)
@@ -396,9 +389,7 @@ select:-webkit-autofill:focus {
     }
 }
 
-.form-entry__options{
-    background-color: yellow;
-
+.form-entry__options {
     --gap-size: 0.5em;
 
     clear: both;
@@ -408,6 +399,38 @@ select:-webkit-autofill:focus {
 
     label[class*="form-entry__"]:not(:last-child){
         margin-bottom: var(--gap-size);
+    }
+}
+
+.options--divider {
+    // background-color: red;
+
+    > div {
+        padding: 0.75em var(--spacer-2);
+        position: relative;
+    }
+
+    > div:not(:last-child) {
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
+    }
+    // .form-entry__options__check > input:checked
+    > div > label {
+
+        // background-color: purple;
+
+        @extend %subtle-fill !optional;
+        --subtle-fill-opacity: 0;
+
+        &::before {
+            top: calc(0.75em * -1);
+            left: calc(var(--spacer-2) * -1);
+            bottom: calc(0.75em * -1);
+            right: calc(var(--spacer-2) * -1);
+
+            pointer-events: inherit;
+        }
     }
 }
 
