@@ -407,7 +407,7 @@ select {
     }
 }
 
-.options--divider {
+.form-entry__options.options--divider {
 
     > li {
         padding: 0.75em var(--spacer-2);
@@ -443,6 +443,8 @@ select {
         .form-entry__options:not([class*="--divider"]).options--horizontal#{$mod} {
             flex-direction: row;
 
+            --gap-size: 1.5em;
+
             margin-left: calc(-1 * var(--gap-size));
             margin-right: calc(-1 * var(--gap-size));
 
@@ -454,22 +456,9 @@ select {
 
         }
 
-        .form-entry__options.options--horizontal#{$mod} {
-            display: flex;
+        .options--divider.options--horizontal#{$mod}{
             flex-direction: row;
             align-items: stretch;
-
-            margin-left: calc(-1 * var(--gap-size));
-            margin-right: calc(-1 * var(--gap-size));
-
-            > li {
-                margin-left: var(--gap-size);
-                margin-right: var(--gap-size);
-                margin-bottom: 0 !important;
-            }
-        }
-
-        .form-entry__options.options--divider#{$mod}{
 
             > li {
                 flex: 1;
