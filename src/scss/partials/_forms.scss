@@ -380,7 +380,7 @@ select {
 
 
 //////////////////////////////////////////////
-// C. Checkboxes and Radios
+// C. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
 .form-entry {
@@ -392,33 +392,35 @@ select {
 .form-entry__options {
     --gap-size: 0.5em;
 
+    @extend %list-nav-style !optional;
+
     clear: both;
     
     display: flex;
     flex-direction: column;
+}
 
-    label[class*="form-entry__"]:not(:last-child){
+.form-entry__options:not([class*="--divider"]){
+
+    > li:not(:last-child) {
         margin-bottom: var(--gap-size);
     }
 }
 
 .options--divider {
-    // background-color: red;
 
-    > div {
+    > li {
         padding: 0.75em var(--spacer-2);
         position: relative;
     }
 
-    > div:not(:last-child) {
+    > li:not(:last-child) {
         border-bottom-width: var(--default-border-width);
         border-bottom-style: var(--default-border-style);
         border-bottom-color: inherit;
     }
-    // .form-entry__options__check > input:checked
-    > div > label {
 
-        // background-color: purple;
+    > li > label {
 
         @extend %subtle-fill !optional;
         --subtle-fill-opacity: 0;
@@ -438,18 +440,52 @@ select {
     @include breakpoints-up($breakpoint) {
         $mod: breakpoint-modifier($breakpoint, $breakpoints);
         
-        .options--horizontal#{$mod} {
+        .form-entry__options:not([class*="--divider"]).options--horizontal#{$mod} {
             flex-direction: row;
 
             margin-left: calc(-1 * var(--gap-size));
             margin-right: calc(-1 * var(--gap-size));
 
-            label[class*="form-entry__"]{
+            > li {
                 margin-bottom: unset;
                 margin-left: var(--gap-size);
                 margin-right: var(--gap-size);
             }
 
+        }
+
+        .form-entry__options.options--horizontal#{$mod} {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+
+            margin-left: calc(-1 * var(--gap-size));
+            margin-right: calc(-1 * var(--gap-size));
+
+            > li {
+                margin-left: var(--gap-size);
+                margin-right: var(--gap-size);
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .form-entry__options.options--divider#{$mod}{
+
+            > li {
+                flex: 1;
+                border-bottom-style: none !important; // Thanks, IE.
+            }
+
+            > li:not(:last-child){
+                border-right-width: var(--default-border-width);
+                border-right-style: var(--default-border-style);
+
+                [dir="rtl"] & {
+                    border-right-width: 0;
+                    border-left-width: var(--default-border-width);
+                    border-left-style: var(--default-border-style);
+                }
+            }
         }
 
     }

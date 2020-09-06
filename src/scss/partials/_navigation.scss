@@ -315,7 +315,7 @@ In this file:
         .nav--divider.nav--horizontal#{$mod} {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: stretch;
 
             > li {
                 flex: 1;
