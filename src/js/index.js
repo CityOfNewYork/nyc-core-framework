@@ -513,9 +513,9 @@ import 'element-closest-polyfill';
             console.log("Value", fieldInput.value);
 
             if (fieldInput.value != "") {
-                fieldInput.closest(".form__entry__field, .form__entry__field--has-btn").classList.add("has-value");
+                fieldInput.closest(".form__entry__field, .form__entry__field--has-btn, .form__entry__field--date").classList.add("has-value");
             } else {
-                fieldInput.closest(".form__entry__field, .form__entry__field--has-btn").classList.remove("has-value");
+                fieldInput.closest(".form__entry__field, , .form__entry__field--date").classList.remove("has-value");
             }
 
         });

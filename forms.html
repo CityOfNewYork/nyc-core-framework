@@ -61,7 +61,6 @@
 
                         </div>
 
-
                         <div class="form__entry">
 
                             <small class="form__entry__feedback">
@@ -114,7 +113,7 @@
                         </div>
                         <!-- .form__entry -->
 
-                        <div class="form__entry datepicker">
+                        <div class="form__entry--date">
 
                             <div class="form__entry__field--has-btn">
 
@@ -132,25 +131,42 @@
                                 mm/dd/yyyy
                             </small>
 
-                            <div class="datepickerDialog" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
-                                <div class="header">
-                                    <button class="prevYear" type="button" aria-label="previous year">
-                                        <span class="fas fa-angle-double-left fa-lg"></span>
-                                    </button>
-                                    <button class="prevMonth" type="button" aria-label="previous month">
-                                        <span class="fas fa-angle-left fa-lg"></span>
-                                    </button>
-                                    <h2 id="id-dialog-label" class="monthYear" aria-live="polite">
-                                        Month Year
-                                    </h2>
-                                    <button class="nextMonth" type="button" aria-label="next month">
-                                        <span class="fas fa-angle-right fa-lg"></span>
-                                    </button>
-                                    <button class="nextYear" type="button" aria-label="next year">
-                                        <span class="fas fa-angle-double-right fa-lg"></span>
-                                    </button>
+                            <div class="datepicker box-shadow-2 rounded" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
+                                <div class="datepicker__header">
+                                    <ul class="nav nav--horizontal">
+                                        <li>
+                                            <button class="btn btn--icon-only prevYear" type="button" aria-label="previous year">
+                                                <span class="screen-reader-only">Previous Year</span>
+                                                <span class="fas fa-angle-double-left" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only prevMonth" type="button" aria-label="previous month">
+                                                <span class="screen-reader-only">Previous Month</span>
+                                                <span class="fas fa-angle-left" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <h2 class="h6 monthYear" id="id-dialog-label" aria-live="polite">
+                                                Month Year
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only nextMonth" type="button" aria-label="next month">
+                                                <span class="screen-reader-only">Next Month</span>
+                                                <span class="fas fa-angle-right" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only nextYear" type="button" aria-label="next year">
+                                                <span class="screen-reader-only">Next Year</span>
+                                                <span class="fas fa-angle-double-right" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <table id="myDatepickerGrid" class="dates" role="grid" aria-labelledby="id-dialog-label">
+                                <table id="myDatepickerGrid" class="table dates" role="grid"
+                                    aria-labelledby="id-dialog-label">
                                     <thead>
                                         <tr>
                                             <th scope="col" abbr="Sunday">
@@ -179,228 +195,229 @@
                                     <tbody>
                                         <tr>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     25
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     26
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     27
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     28
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     29
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     30
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     1
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     2
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     3
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     4
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     5
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     6
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     7
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     8
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     9
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     10
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     11
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     12
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     13
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="0">
+                                                <button class="dateButton" role="button" tabindex="0">
                                                     14
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     15
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     16
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     17
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     18
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     19
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     20
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     21
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     22
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     23
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     24
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     25
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     26
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     27
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     28
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     29
                                                 </button>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     30
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1">
+                                                <button class="dateButton" role="button" tabindex="-1">
                                                     31
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     1
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     2
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     3
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     4
                                                 </button>
                                             </td>
                                             <td class="dateCell">
-                                                <button class="dateButton" tabindex="-1" disabled="">
+                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
                                                     5
                                                 </button>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
+
                                 <div class="dialogButtonGroup">
                                     <button class="dialogButton" value="cancel">
                                         Cancel
