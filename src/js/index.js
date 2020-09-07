@@ -502,7 +502,7 @@ import 'element-closest-polyfill';
     // Forms
     //////////////////////////////////////////////
 
-    const fieldInputList = document.querySelectorAll(".form-entry__field__input");
+    const fieldInputList = document.querySelectorAll(".form__entry__field__input");
     
     let wasValidated = false;
 
@@ -513,9 +513,9 @@ import 'element-closest-polyfill';
             console.log("Value", fieldInput.value);
 
             if (fieldInput.value != "") {
-                fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.add("has-value");
+                fieldInput.closest(".form__entry__field, .form__entry__field--has-btn").classList.add("has-value");
             } else {
-                fieldInput.closest(".form-entry__field, .form-entry__field--has-btn").classList.remove("has-value");
+                fieldInput.closest(".form__entry__field, .form__entry__field--has-btn").classList.remove("has-value");
             }
 
         });
@@ -585,12 +585,12 @@ import 'element-closest-polyfill';
         const invalidClasses = ["invalid", "alert--warn"];
 
         function setInvalid(field) {
-            let myEl = field.closest(".form-entry");
+            let myEl = field.closest(".form__entry");
             myEl.classList.add(...invalidClasses);
         }
 
         function setValid(field) {
-            let myEl = field.closest(".form-entry");
+            let myEl = field.closest(".form__entry");
             myEl.classList.remove(...invalidClasses);
         }
         
