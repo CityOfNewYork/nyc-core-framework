@@ -115,7 +115,7 @@ CalendarButtonInput.prototype.handleFocus = function () {
 
 window.addEventListener('load', function () {
 
-  var datePickers = document.querySelectorAll('.form__entry--date');
+  var datePickers = document.querySelectorAll('.date-picker');
 
   datePickers.forEach(function (dp) {
     var inputNode = dp.querySelector('input');
@@ -227,6 +227,7 @@ DatePicker.prototype.init = function () {
       cell.classList.add('dateCell');
       var cellButton = document.createElement('button');
       cellButton.classList.add('dateButton');
+      cellButton.setAttribute('role', 'button');
       cell.appendChild(cellButton);
       row.appendChild(cell);
       var dpDay = new DatePickerDay(cellButton, this, index, i, j);

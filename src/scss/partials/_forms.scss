@@ -21,7 +21,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Form Entry Block
+// B. Form Blocks
 //////////////////////////////////////////////
 
 .form {
@@ -29,9 +29,8 @@ In this file:
 }
 
 .form__entry {
+    position: relative;
 
-    text-align: left;
-    
     select,
     textarea,
     input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
@@ -51,8 +50,24 @@ In this file:
         color: currentColor !important;
     }
 
+    text-align: left;
+
     [dir="rtl"] & {
         text-align: right;
+    }
+}
+
+.form__entry.date-picker {
+
+    .form__entry__field--has-btn {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .form__entry__field__label {
+        position: static;
+        flex-shrink: 1;
+        width: auto;
     }
 }
 
@@ -65,6 +80,7 @@ In this file:
 // C. Form Entry Elements
 //////////////////////////////////////////////
 
+
 .form__entry__field, 
 .form__entry__field--has-btn {
     --action-btn-size: 2.5rem;
@@ -75,12 +91,8 @@ In this file:
     display: flex;
     color: inherit;
     
-    // @extend %subtle-fill !optional;
-    // --subtle-fill-opacity: 0;
-
     &::after {
         content: "";
-
         position: absolute;
         top: 0;
         right: 0;
@@ -128,6 +140,49 @@ In this file:
     line-height: normal;
 }
 
+// Label and Input (Active)
+
+.form__entry__field__input:focus, 
+.form__entry__field__input:active {
+    outline: 0;
+
+    box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.form__entry:not(.date-picker){
+
+    .form__entry__field__input:focus, 
+    .form__entry__field__input:active,
+    .has-value .form__entry__field__input {
+        padding-top: calc( var(--form-field-padding-y) * 1.5);
+        padding-bottom: calc( var(--form-field-padding-y) * 0.5);
+    }
+
+    .form__entry__field__input:focus ~ .form__entry__field__label,
+    .form__entry__field__input:active ~ .form__entry__field__label,
+    .has-value .form__entry__field__label {
+        padding-top: calc( var(--form-field-padding-x) * 0.5);
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+
+        right: unset;
+        bottom: unset;
+        
+        margin-left: var(--form-field-padding-x);
+        margin-right: var(--form-field-padding-x);
+
+        font-size: 75%;
+
+        [dir="rtl"] & {
+            transform-origin: top right;
+        }
+    }
+}
+
+
 
 /* Change Autocomplete styles in Chrome */
 
@@ -142,45 +197,6 @@ select {
         // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     }
 }
-
-// Label and Input (Active)
-
-.form__entry__field__input:focus, 
-.form__entry__field__input:active {
-    outline: 0;
-
-    box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.form__entry__field__input:focus, 
-.form__entry__field__input:active,
-.has-value .form__entry__field__input {
-    padding-top: calc( var(--form-field-padding-y) * 1.5);
-    padding-bottom: calc( var(--form-field-padding-y) * 0.5);
-}
-
-.form__entry__field__input:focus ~ .form__entry__field__label,
-.form__entry__field__input:active ~ .form__entry__field__label,
-.has-value .form__entry__field__label {
-    padding-top: calc( var(--form-field-padding-x) * 0.5);
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-
-    right: unset;
-    bottom: unset;
-    
-    margin-left: var(--form-field-padding-x);
-    margin-right: var(--form-field-padding-x);
-
-    font-size: 75%;
-
-    [dir="rtl"] & {
-        transform-origin: top right;
-    }
-}
-
 // Form Group within Navigation
 
 [class*="nav"] > li > form,
@@ -625,12 +641,7 @@ screen and (-ms-high-contrast: none) {
 // E. Datepicker
 //////////////////////////////////////////////
 
-
-.form__entry--date {
-  position: relative;
-}
-
-.datepicker {
+.date-picker__calendar {
   position: absolute;
   width: 100%;
   
@@ -649,7 +660,7 @@ screen and (-ms-high-contrast: none) {
   display: flex;
   justify-content: space-around;
 }
-.datepicker .dateButton {
+.date-picker__calendar .dateButton {
   padding: 0;
   margin: 0;
   line-height: inherit;
@@ -661,42 +672,42 @@ screen and (-ms-high-contrast: none) {
   background: #eee;
 }
 
-.datepicker .dateButton:focus,
-.datepicker .dateButton:hover {
-  padding: 0;
+// .date-picker__calendar .dateButton:focus,
+// .date-picker__calendar .dateButton:hover {
+//   padding: 0;
+//   background-color: hsl(216, 80%, 92%);
+// }
+
+// .date-picker__calendar .dateButton:focus {
+//   border-width: 2px;
+//   border-color: rgb(100, 100, 100);
+//   outline: 0;
+// }
+
+.date-picker__calendar .dateButton[aria-selected] {
+  border-color: rgb(100, 100, 100);
+}
+
+.date-picker__calendar .dateButton[tabindex="0"] {
   background-color: hsl(216, 80%, 92%);
 }
 
-.datepicker .dateButton:focus {
-  border-width: 2px;
-  border-color: rgb(100, 100, 100);
-  outline: 0;
-}
-
-.datepicker .dateButton[aria-selected] {
-  border-color: rgb(100, 100, 100);
-}
-
-.datepicker .dateButton[tabindex="0"] {
-  background-color: hsl(216, 80%, 92%);
-}
-
-.datepicker .disabled {
+.date-picker__calendar .disabled {
   color: #afafaf;
 }
 
-.datepicker .disabled:hover {
+.date-picker__calendar .disabled:hover {
   color: black;
 }
 
-.datepicker .dateButton:disabled {
+.date-picker__calendar .dateButton:disabled {
   color: #777;
   background-color: #fff;
   border: none;
   cursor: not-allowed;
 }
 
-.datepicker .message {
+.date-picker__calendar .message {
   padding-top: 0.25em;
   padding-left: 1em;
   height: 1.75em;

@@ -113,11 +113,11 @@
                         </div>
                         <!-- .form__entry -->
 
-                        <div class="form__entry--date">
+                        <div class="form__entry date-picker">
 
                             <div class="form__entry__field--has-btn">
 
-                                <input class="form__entry__field__input" type="text" name="date-picker">
+                                <input class="form__entry__field__input" type="text" name="date" placeholder="mm/dd/yyyy">
                                 <label class="form__entry__field__label">Date</label>
 
                                 <button class="form__entry__field__btn" title="Date" type="button" aria-label="Choose Date">
@@ -127,11 +127,7 @@
 
                             </div>
 
-                            <small class="form__entry__assistance" id="message-description">
-                                mm/dd/yyyy
-                            </small>
-
-                            <div class="datepicker box-shadow-2 rounded" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
+                            <div class="date-picker__calendar box-shadow-2 rounded" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
                                 <div class="datepicker__header">
                                     <ul class="nav nav--horizontal">
                                         <li>
@@ -165,8 +161,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <table id="myDatepickerGrid" class="table dates" role="grid"
-                                    aria-labelledby="id-dialog-label">
+                                <table id="myDatepickerGrid" class="table dates" role="grid" aria-labelledby="id-dialog-label">
                                     <thead>
                                         <tr>
                                             <th scope="col" abbr="Sunday">
@@ -193,228 +188,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    25
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    26
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    27
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    28
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    29
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    30
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    1
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    2
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    3
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    4
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    5
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    6
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    7
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    8
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    9
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    10
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    11
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    12
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    13
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="0">
-                                                    14
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    15
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    16
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    17
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    18
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    19
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    20
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    21
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    22
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    23
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    24
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    25
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    26
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    27
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    28
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    29
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    30
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1">
-                                                    31
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    1
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    2
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    3
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    4
-                                                </button>
-                                            </td>
-                                            <td class="dateCell">
-                                                <button class="dateButton" role="button" tabindex="-1" disabled="">
-                                                    5
-                                                </button>
-                                            </td>
-                                        </tr>
+                                        <!-- Calendar Generated Dynamically -->
                                     </tbody>
                                 </table>
 
@@ -689,7 +463,7 @@
     <!-- NYC Core Javascript -->
     <script src="./dist/js/nyc_core.js"></script>
 
-    <script src="./lib/js/datepicker.js"></script>
+    <script src="./dist/js/datepicker.js"></script>
 
 </body>
 
