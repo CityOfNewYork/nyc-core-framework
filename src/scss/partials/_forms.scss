@@ -25,7 +25,7 @@ In this file:
 //////////////////////////////////////////////
 
 .form {
-    // --btn-padding-y: var(--form-field-padding-y);
+    --btn-padding-y: var(--form-field-padding-y);
 }
 
 .form__entry {
@@ -57,11 +57,6 @@ In this file:
     }
 }
 
-.form__entry ~ .form__entry {
-    margin-top: var(--spacer-3);
-    margin-bottom: var(--spacer-3);
-}
-
 .form__entry.date-picker {
 
     .form__entry__field--has-btn {
@@ -73,15 +68,18 @@ In this file:
         position: static;
         flex-shrink: 1;
         width: auto;
-        border-right-color: inherit;
-        border-right-style: var(--default-border-style);
-        border-right-width:  var(--default-border-width);
     }
+}
+
+.form__entry ~ .form__entry {
+    margin-top: var(--spacer-3);
+    margin-bottom: var(--spacer-3);
 }
 
 //////////////////////////////////////////////
 // C. Form Entry Elements
 //////////////////////////////////////////////
+
 
 .form__entry__field, 
 .form__entry__field--has-btn {
@@ -110,12 +108,6 @@ In this file:
 }
 
 // Label
-
-input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
 
 .form__entry__field__label {
     position: absolute;
@@ -154,8 +146,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .form__entry__field__input:active {
     outline: 0;
 
-    // box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
-    // transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 
@@ -656,88 +648,56 @@ screen and (-ms-high-contrast: none) {
   margin-top: var(--spacer-2);
   background-color: white;
 
-  font-size: inherit;
-  text-align: center;
-  
-  z-index: 1200;
+  font-size: var(--font-size-md);
   
   display: none;
 }
 
 .datepicker__header {
-    display: grid;
-    align-items: center;
-    padding: var(--spacer-1);
-
-    align-content: center;
-
-    grid-template-columns: auto auto 1fr auto auto;
-    grid-template-areas: 
-        "prevYear prevMonth monthYear nextMonth nextYear";
-
-    .prevYear{
-        grid-area: prevYear;
-        grid-column: 1 / 2;
-    }
-
-    .prevMonth{
-        grid-area: prevMonth;
-        grid-column: 2 / 3;
-    }
-
-    .monthYear{
-        grid-area: monthYear;
-        margin-bottom: unset;
-
-        grid-column: 3 / 4;
-    }
-    
-    .nextMonth {
-        grid-area: nextMonth;
-        grid-column: 4 / 5;
-    }
-
-    .nextYear{
-        grid-area: nextYear;
-        grid-column: 5 / 6;
-    }
-
-    .prevYear, 
-    .nextYear,
-    .monthYear {
-        margin-left: var(--spacer-1);
-        margin-right: var(--spacer-1);
-    }
-
+  background-color: var(--primary);
+  padding: var(--spacer-1);
+  color: white;
+  display: flex;
+  justify-content: space-around;
 }
-
-// Calendar Table
-
-.datepicker__body {
-    @extend .table !optional;
-
-    tr {
-
-        margin-left: calc(var(--default-border-width) * -1);
-        margin-right: calc(var(--default-border-width) * -1);
-
-    }
-
-    td {
-      border-top-width: 0 !important;
-      padding: var(--default-border-width);
-  }
-}
-
 .date-picker__calendar .dateButton {
-    @extend .btn !optional;
-    --btn-font-weight: normal;
-    background-color: var(--light);
-    width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  font-size: 15px;
+  background: #eee;
+}
+
+// .date-picker__calendar .dateButton:focus,
+// .date-picker__calendar .dateButton:hover {
+//   padding: 0;
+//   background-color: hsl(216, 80%, 92%);
+// }
+
+// .date-picker__calendar .dateButton:focus {
+//   border-width: 2px;
+//   border-color: rgb(100, 100, 100);
+//   outline: 0;
+// }
+
+.date-picker__calendar .dateButton[aria-selected] {
+  border-color: rgb(100, 100, 100);
 }
 
 .date-picker__calendar .dateButton[tabindex="0"] {
-  background-color: red !important;
+  background-color: hsl(216, 80%, 92%);
+}
+
+.date-picker__calendar .disabled {
+  color: #afafaf;
+}
+
+.date-picker__calendar .disabled:hover {
+  color: black;
 }
 
 .date-picker__calendar .dateButton:disabled {
@@ -745,5 +705,13 @@ screen and (-ms-high-contrast: none) {
   background-color: #fff;
   border: none;
   cursor: not-allowed;
+}
+
+.date-picker__calendar .message {
+  padding-top: 0.25em;
+  padding-left: 1em;
+  height: 1.75em;
+  background: hsl(216, 80%, 55%);
+  color: white;
 }
 

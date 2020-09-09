@@ -41,7 +41,7 @@
 
                 <div class="container medium margin-y-4">
 
-                    <form class="form font-size-md" novalidate>
+                    <form class="form" novalidate>
 
                         <div class="alert alert--warn margin-y-3" data-alert="form-errors">
 
@@ -113,21 +113,11 @@
                         </div>
                         <!-- .form__entry -->
 
-                         <div class="form__entry">
-
-                             <label class="form__entry__field">
-                                 <input class="form__entry__field__input" type="number" name="count">
-                                 <span class="form__entry__field__label">Quantity</span>
-                             </label>
-
-                         </div>
-                         <!-- .form__entry -->
-
                         <div class="form__entry date-picker">
 
                             <div class="form__entry__field--has-btn">
 
-                                <input class="form__entry__field__input" type="text" name="date" placeholder="mm/dd/yyyy" required>
+                                <input class="form__entry__field__input" type="text" name="date" placeholder="mm/dd/yyyy">
                                 <label class="form__entry__field__label">Date</label>
 
                                 <button class="form__entry__field__btn" title="Date" type="button" aria-label="Choose Date">
@@ -138,28 +128,40 @@
                             </div>
 
                             <div class="date-picker__calendar box-shadow-2 rounded" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
-                                <div class="datepicker__header border-bottom">
-                                    <button class="btn btn--icon-only prevYear" type="button" aria-label="previous year">
-                                        <span class="screen-reader-only">Previous Year</span>
-                                        <span class="fas fa-angle-double-left" aria-hidden="true"></span>
-                                    </button>
-                                    <button class="btn btn--icon-only prevMonth" type="button" aria-label="previous month">
-                                        <span class="screen-reader-only">Previous Month</span>
-                                        <span class="fas fa-angle-left" aria-hidden="true"></span>
-                                    </button>
-                                    <h2 class="h6 monthYear" id="id-dialog-label" aria-live="polite">
-                                        Month Year
-                                    </h2>
-                                    <button class="btn btn--icon-only nextMonth" type="button" aria-label="next month">
-                                        <span class="screen-reader-only">Next Month</span>
-                                        <span class="fas fa-angle-right" aria-hidden="true"></span>
-                                    </button>
-                                    <button class="btn btn--icon-only nextYear" type="button" aria-label="next year">
-                                        <span class="screen-reader-only">Next Year</span>
-                                        <span class="fas fa-angle-double-right" aria-hidden="true"></span>
-                                    </button>
+                                <div class="datepicker__header">
+                                    <ul class="nav nav--horizontal">
+                                        <li>
+                                            <button class="btn btn--icon-only prevYear" type="button" aria-label="previous year">
+                                                <span class="screen-reader-only">Previous Year</span>
+                                                <span class="fas fa-angle-double-left" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only prevMonth" type="button" aria-label="previous month">
+                                                <span class="screen-reader-only">Previous Month</span>
+                                                <span class="fas fa-angle-left" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <h2 class="h6 monthYear" id="id-dialog-label" aria-live="polite">
+                                                Month Year
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only nextMonth" type="button" aria-label="next month">
+                                                <span class="screen-reader-only">Next Month</span>
+                                                <span class="fas fa-angle-right" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only nextYear" type="button" aria-label="next year">
+                                                <span class="screen-reader-only">Next Year</span>
+                                                <span class="fas fa-angle-double-right" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <table class="datepicker__body" role="grid" aria-labelledby="id-dialog-label">
+                                <table id="myDatepickerGrid" class="table dates" role="grid" aria-labelledby="id-dialog-label">
                                     <thead>
                                         <tr>
                                             <th scope="col" abbr="Sunday">
@@ -190,22 +192,17 @@
                                     </tbody>
                                 </table>
 
-                                 <ul class="nav nav--horizontal justify-content-center">
-                                     <li>
-                                        <button role="button" data-datepicker="cancel">
-                                            Cancel
-                                        </button>
-                                     </li>
-                                     <li>
-                                        <button role="button" class="btn btn--outline rounded-pill" data-datepicker="confirm">
-                                            Confirm
-                                        </button>
-                                     </li>
-                                 </ul>
-
-                                <div class="message screen-reader-only">
+                                <div class="dialogButtonGroup">
+                                    <button class="dialogButton" value="cancel">
+                                        Cancel
+                                    </button>
+                                    <button class="dialogButton" value="ok">
+                                        OK
+                                    </button>
                                 </div>
-                                
+                                <div class="message" aria-live="polite">
+                                    Test
+                                </div>
                             </div>
 
                         </div>
@@ -466,7 +463,7 @@
     <!-- NYC Core Javascript -->
     <script src="./dist/js/nyc_core.js"></script>
 
-    <script src="./src/js/datepicker.js"></script>
+    <script src="./dist/js/datepicker.js"></script>
 
 </body>
 
