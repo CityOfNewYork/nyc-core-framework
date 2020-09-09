@@ -21,14 +21,20 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Form Blocks
+// B. Form Block
 //////////////////////////////////////////////
 
 .form {
-    --btn-padding-y: var(--form-field-padding-y);
+    width: 100%;
+    // --btn-padding-y: var(--form-field-padding-y);
 }
 
-.form__entry {
+//////////////////////////////////////////////
+// C. Form Entry Element
+//////////////////////////////////////////////
+
+.form__entry, 
+.form__entry--date {
     position: relative;
 
     select,
@@ -57,7 +63,7 @@ In this file:
     }
 }
 
-.form__entry.date-picker {
+.form__entry--date {
 
     .form__entry__field--has-btn {
         display: flex;
@@ -68,6 +74,10 @@ In this file:
         position: static;
         flex-shrink: 1;
         width: auto;
+
+        border-right-width: var(--default-border-width);
+        border-right-style: var(--default-border-style);
+        border-color: inherit;
     }
 }
 
@@ -77,9 +87,8 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Form Entry Elements
+// C. Form Entry Field Elements
 //////////////////////////////////////////////
-
 
 .form__entry__field, 
 .form__entry__field--has-btn {
@@ -107,7 +116,9 @@ In this file:
     }
 }
 
-// Label
+//////////////////////////////////////////////
+// C. Labels and Inputs
+//////////////////////////////////////////////
 
 .form__entry__field__label {
     position: absolute;
@@ -125,11 +136,22 @@ In this file:
     }
 }
 
-:required ~ .form__entry__field__label::after{
+// Required Asterisk
+
+:required ~ .form__entry__field__label::after {
     display: inline;
 }
 
-// Label and Input (Default)
+// Label and Input (Active)
+
+.form__entry__field__input:focus, 
+.form__entry__field__input:active {
+    outline: 0;
+    // box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
+    // transition: box-shadow 0.3s ease-in-out;
+}
+
+// Floating Labels
 
 .form__entry__field__label,
 .form__entry__field__input {
@@ -140,18 +162,7 @@ In this file:
     line-height: normal;
 }
 
-// Label and Input (Active)
-
-.form__entry__field__input:focus, 
-.form__entry__field__input:active {
-    outline: 0;
-
-    box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-
-.form__entry:not(.date-picker){
+.form__entry:not([class*="__date"]) {
 
     .form__entry__field__input:focus, 
     .form__entry__field__input:active,
@@ -184,6 +195,8 @@ In this file:
 
 
 
+
+
 /* Change Autocomplete styles in Chrome */
 
 input, 
@@ -197,6 +210,13 @@ select {
         // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     }
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 // Form Group within Navigation
 
 [class*="nav"] > li > form,
@@ -398,7 +418,6 @@ select {
     opacity: 0.75;
     font-size: 75%;
 }
-
 
 //////////////////////////////////////////////
 // C. Checkbox and Radio Elements
@@ -621,27 +640,11 @@ select {
     }
 
 }
-
-//////////////////////////////////////////////
-// D. I.E. 11 Support
-//////////////////////////////////////////////
-
-@media screen and (-ms-high-contrast: active),
-screen and (-ms-high-contrast: none) {
-
-    div.goog-te-gadget {
-        display: block !important;
-    }
-    
-}
-
-
-
 //////////////////////////////////////////////
 // E. Datepicker
 //////////////////////////////////////////////
 
-.date-picker__calendar {
+.datepicker {
   position: absolute;
   width: 100%;
   
@@ -660,7 +663,7 @@ screen and (-ms-high-contrast: none) {
   display: flex;
   justify-content: space-around;
 }
-.date-picker__calendar .dateButton {
+.datepicker__calendar .dateButton {
   padding: 0;
   margin: 0;
   line-height: inherit;
@@ -672,42 +675,42 @@ screen and (-ms-high-contrast: none) {
   background: #eee;
 }
 
-// .date-picker__calendar .dateButton:focus,
-// .date-picker__calendar .dateButton:hover {
+// .datepicker__calendar .dateButton:focus,
+// .datepicker__calendar .dateButton:hover {
 //   padding: 0;
 //   background-color: hsl(216, 80%, 92%);
 // }
 
-// .date-picker__calendar .dateButton:focus {
+// .datepicker__calendar .dateButton:focus {
 //   border-width: 2px;
 //   border-color: rgb(100, 100, 100);
 //   outline: 0;
 // }
 
-.date-picker__calendar .dateButton[aria-selected] {
+.datepicker__calendar .dateButton[aria-selected] {
   border-color: rgb(100, 100, 100);
 }
 
-.date-picker__calendar .dateButton[tabindex="0"] {
+.datepicker__calendar .dateButton[tabindex="0"] {
   background-color: hsl(216, 80%, 92%);
 }
 
-.date-picker__calendar .disabled {
+.datepicker__calendar .disabled {
   color: #afafaf;
 }
 
-.date-picker__calendar .disabled:hover {
+.datepicker__calendar .disabled:hover {
   color: black;
 }
 
-.date-picker__calendar .dateButton:disabled {
+.datepicker__calendar .dateButton:disabled {
   color: #777;
   background-color: #fff;
   border: none;
   cursor: not-allowed;
 }
 
-.date-picker__calendar .message {
+.datepicker__calendar .message {
   padding-top: 0.25em;
   padding-left: 1em;
   height: 1.75em;
@@ -715,3 +718,15 @@ screen and (-ms-high-contrast: none) {
   color: white;
 }
 
+//////////////////////////////////////////////
+// D. I.E. 11 Support
+//////////////////////////////////////////////
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+
+    div.goog-te-gadget {
+        display: block !important;
+    }
+    
+}

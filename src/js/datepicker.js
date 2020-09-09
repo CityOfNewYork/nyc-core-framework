@@ -115,7 +115,7 @@ CalendarButtonInput.prototype.handleFocus = function () {
 
 window.addEventListener('load', function () {
 
-  var datePickers = document.querySelectorAll('.date-picker');
+  var datePickers = document.querySelectorAll('.form__entry--date');
 
   datePickers.forEach(function (dp) {
     var inputNode = dp.querySelector('input');

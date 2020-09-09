@@ -5,7 +5,7 @@
 <head>
 
     <!-- I.E. Compatibility Mode -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- I.E. Custom Properties Polyfill -->
     <script>
@@ -113,7 +113,17 @@
                         </div>
                         <!-- .form__entry -->
 
-                        <div class="form__entry date-picker">
+                        <div class="form__entry">
+
+                            <label class="form__entry__field">
+                                <input class="form__entry__field__input" type="number" name="quantity">
+                                <span class="form__entry__field__label">Quantity</span>
+                            </label>
+
+                        </div>
+                        <!-- .form__entry -->
+
+                        <div class="form__entry--date">
 
                             <div class="form__entry__field--has-btn">
 
@@ -127,7 +137,7 @@
 
                             </div>
 
-                            <div class="date-picker__calendar box-shadow-2 rounded" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
+                            <div class="datepicker box-shadow-2" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
                                 <div class="datepicker__header">
                                     <ul class="nav nav--horizontal">
                                         <li>
@@ -161,7 +171,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <table id="myDatepickerGrid" class="table dates" role="grid" aria-labelledby="id-dialog-label">
+                                <table class="table dates" role="grid" aria-labelledby="id-dialog-label">
                                     <thead>
                                         <tr>
                                             <th scope="col" abbr="Sunday">
@@ -455,7 +465,7 @@
         <!-- .container -->
         
     </main>
-
+    
     <footer class="container theme-dark text-align-center padding-y-4">
         <a href="#" data-scroll="top">To Top</a>
     </footer>
