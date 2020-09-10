@@ -42,7 +42,7 @@ In this file:
         background-color: transparent;
         color: inherit;
         border-radius: inherit;
-        border: unset;
+        border: 0;
         width: 100%;
     }
 
@@ -75,9 +75,9 @@ In this file:
         flex-shrink: 1;
         width: auto;
 
-        border-right-width: var(--default-border-width);
-        border-right-style: var(--default-border-style);
-        border-color: inherit;
+        // border-right-width: var(--default-border-width);
+        // border-right-style: var(--default-border-style);
+        // border-color: red;
     }
 
     .form__entry__field__input {
@@ -97,12 +97,14 @@ form > [class*="form__entry"] ~ [class*="form__entry"] {
 .form__entry__field, 
 .form__entry__field--has-btn {
     --action-btn-size: 2.5rem;
-    --border-radius: 0.375em;
+    --border-radius: 0.25em;
 
     position: relative;
     
     display: flex;
     color: inherit;
+
+    border-radius: var(--border-radius);
     
     &::after {
         content: "";
@@ -197,28 +199,21 @@ form > [class*="form__entry"] ~ [class*="form__entry"] {
     }
 }
 
-.number-spinner{
+.number-spinner {
     position: absolute;
 
-    top: 0;
-    right: 0;
-    bottom: 0;
-
-    border-left-style: var(--default-border-style);
-    border-left-width: var(--default-border-width);
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
 
     display: flex;
     flex-direction: column;
     
     button {
-        --btn--size: 2em;
-        font-size: 75%;
+        --btn--size: 1.75em;
+        // font-size: 75%;
         width: var(--btn--size);
         flex: 1 1 var(--btn--size);
-        &:first-child{
-            border-bottom-style: var(--default-border-style);
-            border-bottom-width: var(--default-border-width);
-        }
     }
 }
 
