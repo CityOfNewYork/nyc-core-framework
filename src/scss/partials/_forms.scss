@@ -6,7 +6,8 @@ In this file:
 // B. Form Entry Block
 // C. Form Entry Elements
 // D. Form Entry Modifiers
-// E. Switches
+// E. Browser Behavior Modifications
+// F. Form Entry within Nav
 // F. Form Feedback and Alerts
 
 */
@@ -90,13 +91,7 @@ form > .form-entry ~ .form-entry {
     }
 }
 
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-
-// Labels and Inputs
+// Labels
 
 .form-entry__field__label {
     position: absolute;
@@ -120,18 +115,7 @@ form > .form-entry ~ .form-entry {
     display: inline;
 }
 
-// Input Focus, Active
-
-.form-entry__field__input {
-    &:focus, 
-    &:active {
-        outline: 0;
-        // box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
-        // transition: box-shadow 0.3s ease-in-out;
-    }
-}
-
-// Floating Labels
+// Inputs and Labels
 
 .form-entry__field__label,
 .form-entry__field__input {
@@ -174,80 +158,18 @@ form > .form-entry ~ .form-entry {
     }
 }
 
+// Focus and Active States
 
-//////////////////////////////////////////////
-// D. Form Entry Modifiers
-//////////////////////////////////////////////
-
-.form-entry--number,
-.form-entry--date {
-
-    [class*="form-entry__field"] {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    .form-entry__field__label {
-        position: static;
-        width: auto;
-    }
-
-    .form-entry__field__input {
-        flex-grow: 1;
+.form-entry__field__input {
+    &:focus, 
+    &:active {
+        outline: 0;
+        // box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
+        // transition: box-shadow 0.3s ease-in-out;
     }
 }
 
-.number-spinner {
-    position: absolute;
-
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-
-    display: flex;
-    flex-direction: column;
-    
-    button {
-        --btn--size: 1.75em;
-        width: var(--btn--size);
-        flex: 1 1 var(--btn--size);
-    }
-
-    [dir="rtl"] & {
-        right: unset;
-    }
-}
-
-//////////////////////////////////////////////
-// C. Default Behavior Modifications
-//////////////////////////////////////////////
-
-/* Change Autocomplete styles in Chrome */
-
-input, 
-textarea, 
-select {
-    &:-webkit-autofill, 
-    &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus {
-        // -webkit-text-fill-color: inherit !important;
-        // transition: background-color 5000s ease-in-out 0s;
-        // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-    }
-}
-
-input[type="number"] {
-    &::-webkit-inner-spin-button, 
-    &::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    margin: unset; 
-    }
-
-    -moz-appearance: textfield;
-
-}
-
-// Form Group within Navigation
+// Form Entry within Navigation
 
 [class*="nav"] > li > form,
 .primary-nav__menu > ul > li > form {
@@ -290,6 +212,84 @@ input[type="number"] {
     .has-value .form-entry__field__label{
         display: none;
     }
+}
+
+
+//////////////////////////////////////////////
+// D. Form Entry Modifiers
+//////////////////////////////////////////////
+
+.form-entry--number,
+.form-entry--date {
+
+    [class*="form-entry__field"] {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .form-entry__field__label {
+        position: static;
+        width: auto;
+    }
+
+    .form-entry__field__input {
+        flex-grow: 1;
+    }
+}
+
+.number__spinner {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+
+    display: flex;
+    flex-direction: column;
+    
+    button {
+        --btn--size: 1.75em;
+        width: var(--btn--size);
+        flex: 1 1 var(--btn--size);
+    }
+
+    [dir="rtl"] & {
+        right: unset;
+    }
+}
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+//////////////////////////////////////////////
+// E. Browser Behavior Modifications
+//////////////////////////////////////////////
+
+/* Change Autocomplete styles in Chrome */
+
+input, 
+textarea, 
+select {
+    &:-webkit-autofill, 
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        -webkit-text-fill-color: inherit !important;
+        transition: background-color 5000s ease-in-out 0s;
+        // -webkit-box-shadow: inset 0 0 0px 1000px #fff;
+    }
+}
+
+input[type="number"] {
+
+    &::-webkit-inner-spin-button, 
+    &::-webkit-outer-spin-button { 
+        -webkit-appearance: none;
+        margin: unset; 
+    }
+
+    -moz-appearance: textfield;
 }
 
 // Google Translate Dropdown
