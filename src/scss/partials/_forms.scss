@@ -133,6 +133,7 @@ form > .form-entry ~ .form-entry {
 
 .form-entry:not([class*="--date"]):not([class*="--number"]) {
 
+
     &.active, 
     &.has-value {
 
@@ -165,7 +166,8 @@ form > .form-entry ~ .form-entry {
 
 // Focus and Active States
 
-.form-entry.active .form-entry__field{
+.form-entry.active .form-entry__field, 
+.form-entry__field:focus{
         box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 255, 0.5);
         // transition: box-shadow 0.3s ease-in-out;
 

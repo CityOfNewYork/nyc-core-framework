@@ -502,45 +502,71 @@ import 'element-closest-polyfill';
     // Forms
     //////////////////////////////////////////////
 
-    const fieldInputList = document.querySelectorAll(".form-entry__field__input");
-    
-    let wasValidated = false;
+    const formEntryFieldList = document.querySelectorAll(".form-entry__field");
 
-    fieldInputList.forEach((fieldInput) => {
+    formEntryFieldList.forEach((formEntryField) => {
 
-        fieldInput.addEventListener("change", () => {
+        formEntryField.setAttribute("tabindex", 0)
+
+        let entryInput = formEntryField.querySelector(".form-entry__field__input");
+        let entryButtonList = formEntryField.querySelectorAll("button");
+
+        entryInput.addEventListener("focus", focusIn);
+        entryInput.addEventListener("blur", focusOut);
+
+        entryButtonList.forEach((entryButton) => {
+            entryButton.addEventListener("focusin", focusIn);
+            entryButton.addEventListener("active", focusIn);
+            entryButton.addEventListener("focusout", focusOut);
+        });
+
+        // window.addEventListener("click", function (event) {
+
+        //     let coolClick = formEntryField.contains(event.target);
+
+        //     if (!coolClick) {
+        //         focusOut();
+        //     }
+        // });
+
+
+        // console.log("entryInput ===> ", entryInput);
+
+        entryInput.addEventListener("change", () => {
             
-            console.log("Value", fieldInput.value);
-
-            if (fieldInput.value != "") {
-                fieldInput.closest(".form-entry").classList.add("has-value");
+            if (entryInput.value != "") {
+                entryInput.closest(".form-entry").classList.add("has-value");
             } else {
-                fieldInput.closest(".form-entry").classList.remove("has-value");
+                entryInput.closest(".form-entry").classList.remove("has-value");
             }
 
         });
 
-        fieldInput.addEventListener("focus", () => {
-            fieldInput.closest(".form-entry").classList.add("active");
-        });
-
-        fieldInput.addEventListener("blur", () => {
-            fieldInput.closest(".form-entry").classList.remove("active");
-        });
-
-        if (fieldInput.checked) {
-            fieldInput.classList.add("checked");
-        } else if (!fieldInput.checked) {
-            fieldInput.classList.remove("checked");
+        function focusIn() {
+            this.closest(".form-entry").classList.add("active");
+            console.warn("I'm in!");
         }
 
-        if (wasValidated === true) {
-            if (fieldInput.hasAttribute("required")) {
-                checkIfEmpty(fieldInput);
-            }
+        function focusOut() {
+            this.closest(".form-entry").classList.remove("active");
+            console.warn("I'm out!");
         }
+
+        // if (fieldInput.checked) {
+        //     fieldInput.classList.add("checked");
+        // } else if (!fieldInput.checked) {
+        //     fieldInput.classList.remove("checked");
+        // }
+
+        // if (wasValidated === true) {
+        //     if (fieldInput.hasAttribute("required")) {
+        //         checkIfEmpty(fieldInput);
+        //     }
+        // }
     
     });
+
+    let wasValidated = false;
 
     Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
 
