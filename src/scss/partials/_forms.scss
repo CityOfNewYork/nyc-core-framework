@@ -29,11 +29,12 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Form Entry Element
+// C. Form Entry Elements
 //////////////////////////////////////////////
 
 .form__entry, 
-.form__entry--date {
+.form__entry--date, 
+.form__entry--number {
     position: relative;
 
     select,
@@ -72,12 +73,7 @@ In this file:
 
     .form__entry__field__label {
         position: static;
-        flex-shrink: 1;
         width: auto;
-
-        // border-right-width: var(--default-border-width);
-        // border-right-style: var(--default-border-style);
-        // border-color: red;
     }
 
     .form__entry__field__input {
@@ -195,6 +191,7 @@ form > [class*="form__entry"] ~ [class*="form__entry"] {
 
         [dir="rtl"] & {
             transform-origin: top right;
+            left: unset;
         }
     }
 }
@@ -211,9 +208,12 @@ form > [class*="form__entry"] ~ [class*="form__entry"] {
     
     button {
         --btn--size: 1.75em;
-        // font-size: 75%;
         width: var(--btn--size);
         flex: 1 1 var(--btn--size);
+    }
+
+    [dir="rtl"] & {
+        right: unset;
     }
 }
 
@@ -229,8 +229,8 @@ select {
     &:-webkit-autofill, 
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
-        -webkit-text-fill-color: inherit !important;
-        transition: background-color 5000s ease-in-out 0s;
+        // -webkit-text-fill-color: inherit !important;
+        // transition: background-color 5000s ease-in-out 0s;
         // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     }
 }
@@ -242,7 +242,7 @@ input[type="number"] {
     margin: unset; 
     }
 
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
 
 }
 
