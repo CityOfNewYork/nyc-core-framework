@@ -119,14 +119,19 @@
 
                                 <label class="form-entry__field__label">Quantity</label>
                                 <input class="form-entry__field__input" type="number" name="quantity" min="0" max="20" value="0" aria-live="assertive">
+                                
+                                <div class="form-entry__field__action">
 
-                                <div class="number__spinner">
-                                    <button data-type="add" type="button">
-                                        <span class="fas fa-caret-up"></span>
+                                    <button class="btn btn--icon-only" data-type="subtract" title="Date" type="button">
+                                        <span class="screen-reader-only">Subtract</span>
+                                        <span class="fas fa-minus"></span>
                                     </button>
-                                    <button data-type="subtract" type="button">
-                                        <span class="fas fa-caret-down"></span>
+                                    <button class="btn btn--icon-only" data-type="add" title="Date" type="button">
+                                        <span class="screen-reader-only">Add</span>
+                                        <span class="fas fa-plus"></span>
                                     </button>
+
+                                
                                 </div>
                             </div>
 

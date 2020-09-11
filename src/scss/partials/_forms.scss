@@ -96,59 +96,6 @@ form > .form-entry ~ .form-entry {
     }
 }
 
-
-
-
-
-// Has Button Modifier
-
-// .form-entry__field {
-
-//     >   .form-entry__field__btn ~ .form-entry__field__input {
-//         background-color: yellow !important;
-//         padding-right: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
-//     }
-
-//     > .form-entry__field__btn {
-
-//         @extend .btn !optional;
-//         @extend .btn--icon-only !optional;
-        
-//         position: absolute;
-//         top: 50%;
-//         right: 0;
-//         transform: translatey(-50%);
-
-//         margin-left: calc(var(--form-field-padding-x) * 0.5);
-//         margin-right: calc(var(--form-field-padding-x) * 0.5);
-
-//     }
-
-//     [dir="rtl"] & {
-
-//         > .form-entry__field__btn {
-//             right: unset;
-//             left: 0;
-//         }
-        
-//         > .form-entry__field__input {
-//             padding-right: var(--form-field-padding-x);
-//             padding-left: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
-//         }
-//     }
-
-// }
-
-
-
-
-
-
-
-
-
-
-
 // Labels
 
 .form-entry__field__label {
@@ -189,43 +136,39 @@ form > .form-entry ~ .form-entry {
     &.active, 
     &.has-value {
 
-    .form-entry__field__input {
-        padding-top: calc( var(--form-field-padding-y) * 1.5);
-        padding-bottom: calc( var(--form-field-padding-y) * 0.5);
-    }
+        .form-entry__field__input {
+            padding-top: calc( var(--form-field-padding-y) * 1.5);
+            padding-bottom: calc( var(--form-field-padding-y) * 0.5);
+        }
 
-    .form-entry__field__label {
-        padding-top: calc( var(--form-field-padding-x) * 0.5);
-        padding-right: 0;
-        padding-bottom: 0;
-        padding-left: 0;
+        .form-entry__field__label {
+            padding-top: calc( var(--form-field-padding-x) * 0.5);
+            padding-right: 0;
+            padding-bottom: 0;
+            padding-left: 0;
 
-        right: unset;
-        bottom: unset;
-        
-        margin-left: var(--form-field-padding-x);
-        margin-right: var(--form-field-padding-x);
+            right: unset;
+            bottom: unset;
+            
+            margin-left: var(--form-field-padding-x);
+            margin-right: var(--form-field-padding-x);
 
-        font-size: 75%;
+            font-size: 75%;
 
-        [dir="rtl"] & {
-            transform-origin: top right;
-            left: unset;
+            [dir="rtl"] & {
+                transform-origin: top right;
+                left: unset;
+            }
         }
     }
-    }
-
 }
 
 // Focus and Active States
 
-.form-entry__field__input {
-    &:focus, 
-    &:active {
-        outline: 0;
-        // box-shadow: 0 0 0 0.125em rgba(0, 0, 255, 0.5);
+.form-entry.active .form-entry__field{
+        box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 255, 0.5);
         // transition: box-shadow 0.3s ease-in-out;
-    }
+
 }
 
 // Form Entry within Navigation
@@ -292,26 +235,6 @@ form > .form-entry ~ .form-entry {
 
     .form-entry__field__input {
         flex-grow: 1;
-    }
-}
-
-.number__spinner {
-    position: absolute;
-    top: 0.25rem;
-    right: 0.25rem;
-    bottom: 0.25rem;
-
-    display: flex;
-    flex-direction: column;
-    
-    button {
-        --btn--size: 1.75em;
-        width: var(--btn--size);
-        flex: 1 1 var(--btn--size);
-    }
-
-    [dir="rtl"] & {
-        right: unset;
     }
 }
 
