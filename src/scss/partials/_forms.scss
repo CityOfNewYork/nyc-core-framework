@@ -63,8 +63,7 @@ form > .form-entry ~ .form-entry {
 // C. Form Entry Elements
 //////////////////////////////////////////////
 
-.form-entry__field, 
-.form-entry__field--has-btn {
+.form-entry__field {
     --action-btn-size: 2.5rem;
     --border-radius: 0.25em;
 
@@ -89,7 +88,66 @@ form > .form-entry ~ .form-entry {
         box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
         opacity: 0.5;
     }
+
+    .form-entry__field__action {
+        display: flex;
+        align-items: center;
+        padding: var(--spacer-1);
+    }
 }
+
+
+
+
+
+// Has Button Modifier
+
+// .form-entry__field {
+
+//     >   .form-entry__field__btn ~ .form-entry__field__input {
+//         background-color: yellow !important;
+//         padding-right: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
+//     }
+
+//     > .form-entry__field__btn {
+
+//         @extend .btn !optional;
+//         @extend .btn--icon-only !optional;
+        
+//         position: absolute;
+//         top: 50%;
+//         right: 0;
+//         transform: translatey(-50%);
+
+//         margin-left: calc(var(--form-field-padding-x) * 0.5);
+//         margin-right: calc(var(--form-field-padding-x) * 0.5);
+
+//     }
+
+//     [dir="rtl"] & {
+
+//         > .form-entry__field__btn {
+//             right: unset;
+//             left: 0;
+//         }
+        
+//         > .form-entry__field__input {
+//             padding-right: var(--form-field-padding-x);
+//             padding-left: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
+//         }
+//     }
+
+// }
+
+
+
+
+
+
+
+
+
+
 
 // Labels
 
@@ -128,16 +186,15 @@ form > .form-entry ~ .form-entry {
 
 .form-entry:not([class*="--date"]):not([class*="--number"]) {
 
-    .form-entry__field__input:focus, 
-    .form-entry__field__input:active,
-    .has-value .form-entry__field__input {
+    &.active, 
+    &.has-value {
+
+    .form-entry__field__input {
         padding-top: calc( var(--form-field-padding-y) * 1.5);
         padding-bottom: calc( var(--form-field-padding-y) * 0.5);
     }
 
-    .form-entry__field__input:focus ~ .form-entry__field__label,
-    .form-entry__field__input:active ~ .form-entry__field__label,
-    .has-value .form-entry__field__label {
+    .form-entry__field__label {
         padding-top: calc( var(--form-field-padding-x) * 0.5);
         padding-right: 0;
         padding-bottom: 0;
@@ -156,6 +213,8 @@ form > .form-entry ~ .form-entry {
             left: unset;
         }
     }
+    }
+
 }
 
 // Focus and Active States
@@ -214,7 +273,6 @@ form > .form-entry ~ .form-entry {
     }
 }
 
-
 //////////////////////////////////////////////
 // D. Form Entry Modifiers
 //////////////////////////////////////////////
@@ -224,7 +282,7 @@ form > .form-entry ~ .form-entry {
 
     [class*="form-entry__field"] {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 
     .form-entry__field__label {
@@ -374,44 +432,6 @@ input[type="number"] {
 .has-value .form-entry__field__input {
     text-indent: 0;
     font-size: 99.99%;
-}
-
-// Has Button Modifier
-
-.form-entry__field--has-btn {
-
-    > .form-entry__field__input {
-        padding-right: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
-    }
-
-    > .form-entry__field__btn {
-
-        @extend .btn !optional;
-        @extend .btn--icon-only !optional;
-        
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translatey(-50%);
-
-        margin-left: calc(var(--form-field-padding-x) * 0.5);
-        margin-right: calc(var(--form-field-padding-x) * 0.5);
-
-    }
-
-    [dir="rtl"] & {
-
-        > .form-entry__field__btn {
-            right: unset;
-            left: 0;
-        }
-        
-        > .form-entry__field__input {
-            padding-right: var(--form-field-padding-x);
-            padding-left: calc( var(--form-field-padding-x) + var(--btn--icon-only-size) );
-        }
-    }
-
 }
 
 // File Input

@@ -70,8 +70,8 @@
                             </small>
 
                             <label class="form-entry__field">
-                                <input class="form-entry__field__input" type="text" id="firstName" name="first_name" required>
                                 <span class="form-entry__field__label">First Name</span>
+                                <input class="form-entry__field__input" type="text" id="firstName" name="first_name" required>
                             </label>
 
                         </div>
@@ -86,8 +86,8 @@
                             </small>
 
                             <label class="form-entry__field">
-                                <input class="form-entry__field__input" type="text" name="user_name" required>
                                 <span class="form-entry__field__label">Last Name</span>
+                                <input class="form-entry__field__input" type="text" name="user_name" required>
                             </label>
                             
                         </div>
@@ -96,8 +96,8 @@
                         <div class="form-entry">
 
                             <label class="form-entry__field">
-                                <input class="form-entry__field__input" type="email" name="email_address">
                                 <span class="form-entry__field__label">Email Address</span>
+                                <input class="form-entry__field__input" type="email" name="email_address">
                             </label>
                         
                         </div>
@@ -106,8 +106,8 @@
                         <div class="form-entry">
 
                             <label class="form-entry__field">
-                                <input class="form-entry__field__input" type="password" name="password">
                                 <span class="form-entry__field__label">Password</span>
+                                <input class="form-entry__field__input" type="password" name="password">
                             </label>
 
                         </div>
@@ -115,10 +115,10 @@
 
                         <div class="form-entry form-entry--number">
 
-                            <div class="form-entry__field--has-btn">
+                            <div class="form-entry__field">
 
-                                <input class="form-entry__field__input" type="number" name="quantity" min="0" max="20" value="0" aria-live="assertive">
                                 <label class="form-entry__field__label">Quantity</label>
+                                <input class="form-entry__field__input" type="number" name="quantity" min="0" max="20" value="0" aria-live="assertive">
 
                                 <div class="number__spinner">
                                     <button data-type="add" type="button">
@@ -135,15 +135,17 @@
 
                         <div class="form-entry form-entry--date">
 
-                            <div class="form-entry__field--has-btn">
+                            <div class="form-entry__field">
 
-                                <input class="form-entry__field__input" type="text" name="date" placeholder="mm/dd/yyyy">
                                 <label class="form-entry__field__label">Date</label>
+                                <input class="form-entry__field__input" type="text" name="date" placeholder="mm/dd/yyyy">
 
-                                <button class="form-entry__field__btn" title="Date" type="button" aria-label="Choose Date">
-                                    <span class="screen-reader-only">Date</span>
-                                    <span class="fas fa-calendar-alt"></span>
-                                </button>
+                                <div class="form-entry__field__action">
+                                    <button class="btn btn--icon-only" title="Date" type="button" aria-label="Choose Date">
+                                        <span class="screen-reader-only">Date</span>
+                                        <span class="fas fa-calendar-alt"></span>
+                                    </button>
+                                </div>
 
                             </div>
 
@@ -230,15 +232,17 @@
 
                         <div class="form-entry">
                         
-                            <div class="form-entry__field--has-btn">
+                            <div class="form-entry__field">
 
-                                <input class="form-entry__field__input" type="text" name="global_search">
                                 <label class="form-entry__field__label">Search</label>
-                                
-                                <button class="form-entry__field__btn" title="Search" type="button">
-                                    <span class="screen-reader-only">Search</span>
-                                    <span class="fas fa-search"></span>
-                                </button>
+                                <input class="form-entry__field__input" type="text" name="global_search">
+
+                                <div class="form-entry__field__action">
+                                    <button class="btn btn--icon-only" title="Search" type="button">
+                                        <span class="screen-reader-only">Search</span>
+                                        <span class="fas fa-search"></span>
+                                    </button>
+                                </div>
                                 
                             </div>
 

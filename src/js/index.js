@@ -513,11 +513,19 @@ import 'element-closest-polyfill';
             console.log("Value", fieldInput.value);
 
             if (fieldInput.value != "") {
-                fieldInput.closest(".form-entry__field, .form-entry__field--has-btn, .form-entry__field--date").classList.add("has-value");
+                fieldInput.closest(".form-entry").classList.add("has-value");
             } else {
-                fieldInput.closest(".form-entry__field, , .form-entry__field--date").classList.remove("has-value");
+                fieldInput.closest(".form-entry").classList.remove("has-value");
             }
 
+        });
+
+        fieldInput.addEventListener("focus", () => {
+            fieldInput.closest(".form-entry").classList.add("active");
+        });
+
+        fieldInput.addEventListener("blur", () => {
+            fieldInput.closest(".form-entry").classList.remove("active");
         });
 
         if (fieldInput.checked) {
