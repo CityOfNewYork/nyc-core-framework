@@ -506,8 +506,6 @@ import 'element-closest-polyfill';
 
     formEntryFieldList.forEach((formEntryField) => {
 
-        formEntryField.setAttribute("tabindex", 0)
-
         let entryInput = formEntryField.querySelector(".form-entry__field__input");
         let entryButtonList = formEntryField.querySelectorAll("button");
 
@@ -529,6 +527,11 @@ import 'element-closest-polyfill';
         //     }
         // });
 
+        formEntryField.addEventListener("click", (event) => {
+
+            entryInput.focus();
+
+        });
 
         // console.log("entryInput ===> ", entryInput);
 
