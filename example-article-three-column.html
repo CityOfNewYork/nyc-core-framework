@@ -31,6 +31,7 @@
     <style>
         :root {
             --base-font-family: "neue-haas-grotesk-text";
+            --base-font-size: 19px;
             --base-line-height: 1.5;
         }
     </style>
@@ -166,7 +167,7 @@
                 <!-- For keyboard users -->
                 <a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
-                <div class="sticky-top padding-2 padding-0--lg font-size-md">
+                <div class="sticky-top padding-2 padding-0--lg">
 
                     <div class="display-none--lg margin-bottom-2">
                         <button class="btn btn--has-icon--disperse theme-primary rounded-pill" data-toggle="collapse" data-target="#sidebar__menu">
@@ -222,7 +223,7 @@
                             </ul>
                         </nav>
 
-                       <h1 class="banner-headline text-color-primary">Headline 1</h1>
+                       <h1 class="banner-headline">Headline 1</h1>
 
                     </header>
 
@@ -468,7 +469,7 @@
                  <div class="backdrop theme-primary rounded" id="div">
 
                      <div class="backdrop__image">
-                         <img class="opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
+                         <img class="opacity-50" src="./images/backdrop-example-04.jpg" alt="Placeholder">
                      </div>
 
                      <div class="backdrop__cover">
@@ -476,7 +477,7 @@
                          <div class="margin-y-3">
                              <div class="container narrow">
                                  <h2 class="h5 text-shadow">
-                                     Page Title
+                                     Link Title
                                  </h2>
                               </div>
                          </div>
@@ -498,7 +499,7 @@
         <div class="modal__content medium box-shadow-2">
 
             <header class="modal__content__head border-bottom">
-                <h3 class="h6" id="modal-search-title">Website Translation</h2>
+                <h2 class="h6" id="modal-search-title">Website Search</h2>
                 <button class="btn btn--icon-only" data-modal-close>
                     <span class="screen-reader-only">Close Modal</span>
                     <span class="fas fa-times"></span>
@@ -508,15 +509,17 @@
             <div class="modal__content__body" id="modal-1-content" aria-labelledby="modal-search-title">
                 <div class="form-entry">
 
-                    <div class="form-entry__field--has-btn">
+                    <div class="form-entry__field">
 
-                        <input class="form-entry__field__input" type="text" id="global_search">
-                        <label for="global_search" class="form-entry__field__label">Search</label>
+                        <label class="form-entry__field__label">Enter Search Phrase</label>
+                        <input class="form-entry__field__input" type="text" name="global_search">
 
-                        <button class="form-entry__field__btn" title="Search" type="button">
-                            <span class="screen-reader-only">Search</span>
-                            <span class="fas fa-search"></span>
-                        </button>
+                        <div class="form-entry__field__action">
+                            <button class="btn btn--icon-only" title="Search" type="button">
+                                <span class="screen-reader-only">Search</span>
+                                <span class="fas fa-search"></span>
+                            </button>
+                        </div>
 
                     </div>
 
