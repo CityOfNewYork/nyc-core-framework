@@ -36,10 +36,46 @@ import 'element-closest-polyfill';
 
     const copyrightYear = document.querySelector(".copyright-year");
 
-    if (copyrightYear){
+    if (copyrightYear) {
         let currentYear = new Date().getFullYear();
         copyrightYear.innerHTML = currentYear;
     }
+
+    //////////////////////////////////////////////
+    // Focusable Buttons
+    //////////////////////////////////////////////
+
+    const focusableButtonList = document.querySelectorAll("[role='tab'], [data-toggle='accordion'], a[href], button:not([data-type='subtract']):not([data-type='add'])");
+
+    focusableButtonList.forEach((focusableButton) => {
+
+        let mouseDown = false;
+
+        focusableButton.addEventListener("mousedown", () => {
+            mouseDown = true;
+        });
+
+        focusableButton.addEventListener("mouseup", () => {
+            mouseDown = false;
+        });
+
+        focusableButton.addEventListener("focus", (event) => {
+            if (mouseDown) {
+                event.target.blur();
+            }
+        });
+
+    });
+
+    //////////////////////////////////////////////
+    // Aria Current (Active)
+    //////////////////////////////////////////////
+
+    const currentLinkList = document.querySelectorAll("a[aria-current]");
+
+    currentLinkList.forEach((currentLink) => {
+        currentLink.closest("li").classList.add("active");
+    });
 
     //////////////////////////////////////////////
     // Dropdowns
@@ -459,40 +495,38 @@ import 'element-closest-polyfill';
 
         const scrollElementList = document.querySelectorAll(".table-scroll");
 
-        for (const scrollElement of scrollElementList) {
+        scrollElementList.forEach((scrollElement) => {
 
             let scrollTarget = scrollElement.querySelector(".table-scroll__container");
-
+    
             let maxWidth = scrollElement.offsetWidth;
             let scrollWidth = scrollTarget.scrollWidth;
-
+    
             if (scrollWidth > maxWidth) {
                 scrollElement.setAttribute("data-scroll", true);
             } else {
                 scrollElement.setAttribute("data-scroll", false);
             }
-
+    
             function removeGradient() {
-
+    
                 let scrollPos = scrollTarget.scrollLeft;
-
+    
                 console.log(scrollTarget.scrollLeft);
-
+    
                 if (scrollPos > 1) {
                     scrollTarget.setAttribute("data-scrolling", true);
                 } else {
                     scrollTarget.setAttribute("data-scrolling", false);
                     return;
                 }
-
+    
             }
-
+    
             scrollTarget.addEventListener("scroll", removeGradient), {
                 passive: true
             };
-
-        }
-
+        });
     }
 
     initTableScroll();
@@ -503,13 +537,6 @@ import 'element-closest-polyfill';
     //////////////////////////////////////////////
 
     const formEntryFieldList = document.querySelectorAll(".form-entry__field");
-
-    const myActiveElement = document.activeElement;
-
-    document.addEventListener('focus', function () {
-        console.log('focused: ', myActiveElement)
-    }, true);
-
 
     formEntryFieldList.forEach((formEntryField) => {
 
@@ -524,8 +551,6 @@ import 'element-closest-polyfill';
             entryButton.addEventListener("focusout", focusOut);
             entryButton.addEventListener("mousedown", focusIn);
         });
-
-        // console.log("entryInput ===> ", entryInput);
 
         entryInput.addEventListener("change", () => {
             
@@ -726,51 +751,6 @@ import 'element-closest-polyfill';
 
         init();
 
-    });
-
-    //////////////////////////////////////////////
-    // External Links
-    //////////////////////////////////////////////
-
-    const externalLinks = document.querySelectorAll("[data-link='external']");
-
-    for (const link of externalLinks) {
-        link.insertAdjacentHTML("beforeend", "<span class='screen-reader-only'>Opens a new window</span>");
-    }
-
-    //////////////////////////////////////////////
-    // Focusable Buttons
-    //////////////////////////////////////////////
-
-    const focusableButtonList = document.querySelectorAll("[role='tab'], [data-toggle='accordion'], a[href], button");
-
-    // for (const button of focusableButtonList) {
-
-    //     let mouseDown = false;
-
-    //     button.addEventListener("mousedown", () => {
-    //         mouseDown = true;
-    //     });
-
-    //     button.addEventListener("mouseup", () => {
-    //         mouseDown = false;
-    //     });
-
-    //     button.addEventListener("focus", (event) => {
-    //         if (mouseDown) {
-    //             event.target.blur();
-    //         }
-    //     });
-    // }
-
-    //////////////////////////////////////////////
-    // Aria Current
-    //////////////////////////////////////////////
-
-    const currentLinkList = document.querySelectorAll("a[aria-current]");
-
-    currentLinkList.forEach((currentLink) => {
-        currentLink.closest("li").classList.add("active");
     });
 
     //////////////////////////////////////////////
