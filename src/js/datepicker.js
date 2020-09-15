@@ -338,6 +338,8 @@ DatePicker.prototype.show = function () {
   this.updateGrid();
   this.setFocusDay();
 
+  this.closest(".form-entry").classList.add("active");
+
 };
 
 DatePicker.prototype.isOpen = function () {
@@ -349,6 +351,7 @@ DatePicker.prototype.hide = function () {
   this.setMessage('');
 
   this.dialogNode.style.display = 'none';
+  this.closest(".form-entry").classList.remove("active");
 
   this.hasFocusFlag = false;
   this.dateInput.setFocus();

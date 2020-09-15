@@ -504,33 +504,25 @@ import 'element-closest-polyfill';
 
     const formEntryFieldList = document.querySelectorAll(".form-entry__field");
 
+    const myActiveElement = document.activeElement;
+
+    document.addEventListener('focus', function () {
+        console.log('focused: ', myActiveElement)
+    }, true);
+
+
     formEntryFieldList.forEach((formEntryField) => {
 
         let entryInput = formEntryField.querySelector(".form-entry__field__input");
         let entryButtonList = formEntryField.querySelectorAll("button");
 
-        entryInput.addEventListener("focus", focusIn);
-        entryInput.addEventListener("blur", focusOut);
+        entryInput.addEventListener("focusin", focusIn);
+        entryInput.addEventListener("focusout", focusOut);
 
         entryButtonList.forEach((entryButton) => {
             entryButton.addEventListener("focusin", focusIn);
-            entryButton.addEventListener("active", focusIn);
             entryButton.addEventListener("focusout", focusOut);
-        });
-
-        // window.addEventListener("click", function (event) {
-
-        //     let coolClick = formEntryField.contains(event.target);
-
-        //     if (!coolClick) {
-        //         focusOut();
-        //     }
-        // });
-
-        formEntryField.addEventListener("click", (event) => {
-
-            entryInput.focus();
-
+            entryButton.addEventListener("mousedown", focusIn);
         });
 
         // console.log("entryInput ===> ", entryInput);
@@ -566,6 +558,7 @@ import 'element-closest-polyfill';
         //         checkIfEmpty(fieldInput);
         //     }
         // }
+
     
     });
 
@@ -751,24 +744,24 @@ import 'element-closest-polyfill';
 
     const focusableButtonList = document.querySelectorAll("[role='tab'], [data-toggle='accordion'], a[href], button");
 
-    for (const button of focusableButtonList) {
+    // for (const button of focusableButtonList) {
 
-        let mouseDown = false;
+    //     let mouseDown = false;
 
-        button.addEventListener("mousedown", () => {
-            mouseDown = true;
-        });
+    //     button.addEventListener("mousedown", () => {
+    //         mouseDown = true;
+    //     });
 
-        button.addEventListener("mouseup", () => {
-            mouseDown = false;
-        });
+    //     button.addEventListener("mouseup", () => {
+    //         mouseDown = false;
+    //     });
 
-        button.addEventListener("focus", (event) => {
-            if (mouseDown) {
-                event.target.blur();
-            }
-        });
-    }
+    //     button.addEventListener("focus", (event) => {
+    //         if (mouseDown) {
+    //             event.target.blur();
+    //         }
+    //     });
+    // }
 
     //////////////////////////////////////////////
     // Aria Current
