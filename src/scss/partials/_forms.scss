@@ -47,6 +47,11 @@ In this file:
         color: currentColor !important;
     }
 
+    ::placeholder {
+        color: currentColor;
+        opacity: 0.675;
+    }
+
     text-align: left;
 
     [dir="rtl"] & {
@@ -62,7 +67,6 @@ form > .form-entry ~ .form-entry {
 //////////////////////////////////////////////
 // C. Form Entry Elements
 //////////////////////////////////////////////
-
 
 .form-entry__field {
     --border-radius: 0.25em;
@@ -191,11 +195,6 @@ form > .form-entry ~ .form-entry {
     .form-entry__field__label,
     .form-entry__field__input {
         line-height: inherit !important;
-    }
-
-    .form-entry__field, 
-    .form-entry__field--has-btn {
-        border: none;
     }
 
     .form-entry__field__input:focus,
