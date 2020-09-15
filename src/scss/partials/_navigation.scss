@@ -222,7 +222,7 @@ In this file:
         }
     }
 
-    > li:not(:last-child):not(.active) {
+    > li:not(:last-child) {
         border-bottom-width: var(--default-border-width);
         border-bottom-style: var(--default-border-style);
         border-bottom-color: inherit;
