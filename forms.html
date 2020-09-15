@@ -103,13 +103,14 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry">
-
+                        <div class="form-entry form-entry--has-icon">
+                            <span class="form-entry__icon">
+                                <span class="fa fa-lock"></span>
+                            </span>
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Password</span>
-                                <input class="form-entry__field__input" type="password" name="password">
+                                <input class="form-entry__field__input" type="password" name="password" required>
                             </label>
-
                         </div>
                         <!-- .form-entry -->
 
@@ -121,7 +122,6 @@
                                 <input class="form-entry__field__input" type="number" name="quantity" min="0" max="20" value="0" aria-live="assertive">
                                 
                                 <div class="form-entry__field__action">
-
                                     <button class="btn btn--icon-only" data-type="subtract" title="Date" type="button">
                                         <span class="screen-reader-only">Subtract</span>
                                         <span class="fas fa-minus"></span>
@@ -130,8 +130,6 @@
                                         <span class="screen-reader-only">Add</span>
                                         <span class="fas fa-plus"></span>
                                     </button>
-
-                                
                                 </div>
                             </div>
 
@@ -240,7 +238,7 @@
                             <div class="form-entry__field">
 
                                 <label class="form-entry__field__label">Search</label>
-                                <input class="form-entry__field__input" type="text" name="global_search">
+                                <input class="form-entry__field__input" type="text">
 
                                 <div class="form-entry__field__action">
                                     <button class="btn btn--icon-only" title="Search" type="button">
@@ -281,7 +279,7 @@
                         <div class="form-entry">
 
                             <label class="form-entry__field">
-                                <textarea class="form-entry__field__input"id="message" rows="4" aria-describedby="message-description"></textarea>
+                                <textarea class="form-entry__field__input" rows="4" aria-describedby="message-description"></textarea>
                                 <span class="form-entry__field__label">Message</span>
                             </label>
 

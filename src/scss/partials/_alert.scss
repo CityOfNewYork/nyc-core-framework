@@ -61,10 +61,6 @@ In this file:
     position: relative;
 }
 
-.alert__head + .alert__body {
-    margin-bottom: var(--spacer-2);
-}
-
 .alert__head__title {
     font-weight: var(--base-font-weight-bold);
     margin-left: var(--spacer-1);

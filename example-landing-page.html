@@ -489,7 +489,7 @@
         <div class="modal__content medium box-shadow-2">
 
             <header class="modal__content__head border-bottom">
-                <h2 class="h6" id="modal-search-title">Website Translation</h2>
+                <h2 class="h6" id="modal-search-title">Website Search</h2>
                 <button class="btn btn--icon-only" data-modal-close>
                     <span class="screen-reader-only">Close Modal</span>
                     <span class="fas fa-times"></span>
@@ -499,15 +499,17 @@
             <div class="modal__content__body" id="modal-1-content" aria-labelledby="modal-search-title">
                 <div class="form-entry">
 
-                    <div class="form-entry__field--has-btn">
+                    <div class="form-entry__field">
 
-                        <input class="form-entry__field__input" type="text" id="global_search">
-                        <label for="global_search" class="form-entry__field__label">Search</label>
+                        <label class="form-entry__field__label">Enter Search Phrase</label>
+                        <input class="form-entry__field__input" type="text" name="global_search">
 
-                        <button class="form-entry__field__btn" title="Search" type="button">
-                            <span class="screen-reader-only">Search</span>
-                            <span class="fas fa-search"></span>
-                        </button>
+                        <div class="form-entry__field__action">
+                            <button class="btn btn--icon-only" title="Search" type="button">
+                                <span class="screen-reader-only">Search</span>
+                                <span class="fas fa-search"></span>
+                            </button>
+                        </div>
 
                     </div>
 

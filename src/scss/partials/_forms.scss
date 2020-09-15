@@ -63,16 +63,17 @@ form > .form-entry ~ .form-entry {
 // C. Form Entry Elements
 //////////////////////////////////////////////
 
+
 .form-entry__field {
-    --action-btn-size: 2.5rem;
     --border-radius: 0.25em;
 
     position: relative;
     
     display: flex;
+
     color: inherit;
 
-    border-radius: var(--border-radius);
+    // border-radius: var(--border-radius);
     
     &::after {
         content: "";
@@ -240,11 +241,17 @@ form > .form-entry ~ .form-entry {
     }
 }
 
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
-//////////////////////////////////////////////
+.form-entry--has-icon {
+    display: flex;
+    align-items: stretch;
+}
+
+.form-entry__icon {
+    @extend %subtle-fill !optional;
+    --subtle-fill-opacity: 0.075;
+
+    padding: var(--form-field-padding-y) var(--form-field-padding-x);
+}
 
 //////////////////////////////////////////////
 // E. Browser Behavior Modifications
@@ -387,9 +394,9 @@ input[type="number"] {
 // Field Assistance 
 
 .form-entry__assistance {
-    margin-top: 0.5rem;
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
+    margin-top: 0.5rem;
     opacity: 0.75;
     font-size: 75%;
 }
@@ -398,10 +405,8 @@ input[type="number"] {
 // C. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
-.form-entry {
-    legend {
-        margin-bottom: var(--spacer-2);
-    }
+.form-entry legend {
+    margin-bottom: var(--spacer-2);
 }
 
 .form-entry__options {
@@ -495,7 +500,6 @@ input[type="number"] {
     }
 }
 
-
 // Checkbox, Radio Shared Styles
 
 .form-entry__options__radio,
@@ -519,11 +523,6 @@ input[type="number"] {
     background-color: transparent;
     opacity: 0;
 } 
-
-//
-// Make sure the label is only as wide as the
-// inner text requires it to be.
-//
 
 .form-entry__options__radio > input ~ .radio__label,
 .form-entry__options__check > input ~ .checkbox__label {
@@ -561,9 +560,7 @@ input[type="number"] {
     content: "\f192";
 }
 
-//
-// Defining States
-//
+// Focus
 
 .form-entry__options__radio > input:focus ~ .radio__label,
 .form-entry__options__check > input:focus ~ .checkbox__label {
@@ -615,6 +612,7 @@ input[type="number"] {
     }
 
 }
+
 //////////////////////////////////////////////
 // E. Datepicker
 //////////////////////////////////////////////
@@ -638,6 +636,7 @@ input[type="number"] {
   display: flex;
   justify-content: space-around;
 }
+
 .datepicker__calendar .dateButton {
   padding: 0;
   margin: 0;
