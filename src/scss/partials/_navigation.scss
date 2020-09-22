@@ -18,7 +18,7 @@ In this file:
 
 :root {
     --nav--divider-padding-x: 1em;
-    --nav--divider-padding-y: 0.625em;
+    --nav--divider-padding-y: 0.85em;
         
     --dropdown-z-index: 1200;
 }
@@ -48,7 +48,6 @@ In this file:
 
     > [class*="__buttons"] {
         grid-area: buttons;
-        padding: calc(var(--primary-nav-padding) * 0.5);
 
         display: flex;
         justify-content: space-between;
@@ -88,8 +87,8 @@ In this file:
     }
     
     > [class*="__buttons"] {
-        padding-top: var(--nav--divider-padding-y);
-        padding-bottom: var(--nav--divider-padding-y);
+        padding-top: calc(var(--primary-nav-padding) * 0.5);
+        padding-bottom: calc(var(--primary-nav-padding) * 0.5);
     }
 
     > [class*="__buttons"],
@@ -220,6 +219,15 @@ In this file:
                 color: inherit;
             }
         }
+    }
+
+
+    > li {
+        display: flex;
+    }
+    
+    > li > a {
+        align-self: stretch;
     }
 
     > li:not(:last-child) {
