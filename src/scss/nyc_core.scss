@@ -59,15 +59,13 @@ In this file:
 
 // Logo
 
+
+a > svg {
+    fill: currentColor;
+    vertical-align: middle;
+}
+
 a[data-logo="brand"] {
-    display: block;
-    color: inherit;
-
-    svg {
-        display: block;
-        fill: currentColor;
-    }
-
     &:focus {
         opacity: 0.85;
     }

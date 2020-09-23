@@ -18,7 +18,7 @@ In this file:
 
 :root {
     --nav--divider-padding-x: 1em;
-    --nav--divider-padding-y: 0.75em;
+    --nav--divider-padding-y: 0.675em;
         
     --dropdown-z-index: 1200;
 }
@@ -96,6 +96,16 @@ In this file:
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
         border-top-color: inherit;
+    }
+}
+
+.primary-nav__menu {
+    > ul > li {
+        position: relative;
+    }
+
+    > ul > li > a {
+        @extend %expanded-link;
     }
 }
 
