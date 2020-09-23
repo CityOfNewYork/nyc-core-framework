@@ -3,9 +3,14 @@
 In this file:
 
 // A. Variables
-// B. Font Weight Classes
-// C. Font Size Classes
-// D. Headings
+// B. Font Weight Utilities
+// C. Font Size Utilities
+// D. Headers
+// F. Body
+// G. Lists
+// H. Font Awesome
+// I. Text Align Utilities
+// J. Word Wrap Utilities
 
 */
 
@@ -26,6 +31,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
     --base-font-family: "Source Sans Pro";
     
     --base-font-weight-normal: 400;
+    --base-font-weight-medium: 600;
     --base-font-weight-bold: 700;
 
     --base-font-size: 22px;
@@ -41,12 +47,12 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 
     --banner-headline-font-size: calc(var(--base-font-size) * 3.8);
 
-    --h1-font-size: calc(var(--base-font-size) * 3);    // 60px
-    --h2-font-size: calc(var(--base-font-size) * 2.2);  // 44
-    --h3-font-size: calc(var(--base-font-size) * 1.8);
-    --h4-font-size: calc(var(--base-font-size) * 1.6);
-    --h5-font-size: calc(var(--base-font-size) * 1.4); // 24px
-    --h6-font-size: calc(var(--base-font-size) * 1.1); // 22px
+    --h1-font-size: calc(var(--base-font-size) * 3);    // ~ 60px
+    --h2-font-size: calc(var(--base-font-size) * 2.2);  // ~ 48px
+    --h3-font-size: calc(var(--base-font-size) * 1.8);  // ~ 40px
+    --h4-font-size: calc(var(--base-font-size) * 1.6);  // ~ 35px
+    --h5-font-size: calc(var(--base-font-size) * 1.4);  // ~ 30px
+    --h6-font-size: calc(var(--base-font-size) * 1.2);  // ~ 26px
 
     --header-line-height: 1.125;
 }
@@ -57,6 +63,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 
 $font-weights: (
     normal: var(--base-font-weight-normal),
+    medium: var(--base-font-weight-medium),
     bold: var(--base-font-weight-bold),
 );
 
@@ -94,8 +101,8 @@ $font-sizes: (
     )
 );
 
-@each $name, $font-size-map in $font-sizes {
-    .font-size-#{$name} {
+@each $key, $font-size-map in $font-sizes {
+    .font-size-#{$key} {
         font-size: map-get($font-size-map, "size");
 
         @if map-has-key($font-size-map, "line-height") {
@@ -105,7 +112,7 @@ $font-sizes: (
 }
 
 //////////////////////////////////////////////
-// D. Headings
+// D. Headers
 //////////////////////////////////////////////
 
 h1, .h1,
@@ -145,19 +152,12 @@ h6, .h6 {
 }
 
 .banner-headline {
+
     @extend .font-weight-normal;
+    
     @include breakpoints-up(lg){
         font-size: var(--banner-headline-font-size);
     }
-}
-
-.fontAwesome {
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    
-    font-weight: 400;
 }
 
 //////////////////////////////////////////////
@@ -199,28 +199,40 @@ hr {
     @extend .border-top !optional;
 }
 
-blockquote {
-    position: relative;
-    font-size: var(font-size-lg);
-    padding-left: var(--spacer-3);
+// blockquote {
+//     position: relative;
+//     font-size: var(font-size-lg);
+//     padding-left: var(--spacer-3);
     
-    .left-quote {
-        position: absolute;
-        margin-top: var(--spacer-1);
-        margin-left: -var(--spacer-3);
-    }
+//     .left-quote {
+//         position: absolute;
+//         margin-top: var(--spacer-1);
+//         margin-left: -var(--spacer-3);
+//     }
 
-    p{
-        margin-bottom: .125em;
-    }
+//     p{
+//         margin-bottom: .125em;
+//     }
 
-    footer{
-        font-size: 0.75em;
-    }
+//     footer{
+//         font-size: 0.75em;
+//     }
+// }
+
+//////////////////////////////////////////////
+// C. Font Awesome
+//////////////////////////////////////////////
+
+.fontAwesome {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-weight: 400;
 }
 
 //////////////////////////////////////////////
-// C. Text Align Utilities
+// I. Text Align Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map-keys($breakpoints) {
@@ -241,6 +253,10 @@ blockquote {
 
     }
 }
+
+//////////////////////////////////////////////
+// J. Word Wrap Utilities
+//////////////////////////////////////////////
 
 .nowrap {
     white-space: nowrap;
