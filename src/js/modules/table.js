@@ -8,10 +8,12 @@ export default class Table {
 
         // Table Breakpoints
 
-        Array.prototype.slice.call(document.querySelectorAll("[class*='table--stack']")).forEach((table) => {
+        const tableStackList = document.querySelectorAll("[class*='table--stack']");
 
-            const tableHeaderList = table.querySelectorAll("thead th");
-            const tableRowList = table.querySelectorAll("tbody tr");
+        tableStackList.forEach((tableStack) => {
+
+            const tableHeaderList = tableStack.querySelectorAll("thead th");
+            const tableRowList = tableStack.querySelectorAll("tbody tr");
 
             let myHeaders = [];
 
@@ -32,27 +34,27 @@ export default class Table {
 
                     let tableDataHTML = tableData.innerHTML;
 
-                    let myNewStuff =
+                    let myNewContent =
                         `<div class="td-content">
                         ${tableDataHTML}
                         </div>`;
 
-                    tableData.innerHTML = myNewStuff;
+                    tableData.innerHTML = myNewContent;
                     tableData.setAttribute("data-before", myHeaders[index]);
 
                 });
 
             });
 
-        }); // end for
+        });
 
         // Table Scrolling
 
+        const tableScrollList = document.querySelectorAll(".table-scroll");
+
         const initTableScroll = () => {
 
-            const scrollElementList = document.querySelectorAll(".table-scroll");
-
-            scrollElementList.forEach((scrollElement) => {
+            tableScrollList.forEach((scrollElement) => {
 
                 let scrollTarget = scrollElement.querySelector(".table-scroll__container");
 
@@ -69,13 +71,10 @@ export default class Table {
 
                     let scrollPos = scrollTarget.scrollLeft;
 
-                    console.log(scrollTarget.scrollLeft);
-
                     if (scrollPos > 1) {
                         scrollTarget.setAttribute("data-scrolling", true);
                     } else {
                         scrollTarget.setAttribute("data-scrolling", false);
-                        return;
                     }
 
                 }
@@ -83,6 +82,7 @@ export default class Table {
                 scrollTarget.addEventListener("scroll", removeGradient, {
                     passive: true
                 });
+
             });
         }
 
