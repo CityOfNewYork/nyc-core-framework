@@ -6,9 +6,9 @@ export default class Accordion {
 
     constructor() {
 
-        const accordionEl = document.querySelectorAll(".accordion");
+        const accordionList = document.querySelectorAll(".accordion");
 
-        Array.prototype.slice.call(accordionEl).forEach((accordion) => {
+        accordionList.forEach((accordion) => {
 
             const accordionButtonList = accordion.querySelectorAll("[data-toggle='accordion']");
             const accordionPanelList = accordion.querySelectorAll("[data-accordion='panel']");
@@ -141,7 +141,7 @@ export default class Accordion {
 
             });
 
-        }); // end for
+        });
     
     }
 }
