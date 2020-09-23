@@ -2,7 +2,7 @@
 // Text Direction
 //////////////////////////////////////////////
 
-class TextDirection {
+export default class CopyrightYear {
 
     constructor() {
 
@@ -15,5 +15,3 @@ class TextDirection {
 
     }
 }
-
-export default TextDirection;

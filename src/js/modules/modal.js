@@ -2,7 +2,7 @@
 // Aria Current
 //////////////////////////////////////////////
 
-class Modal {
+export default class Modal {
 
     constructor() {
 
@@ -87,5 +87,3 @@ class Modal {
         }
     }
 }
-
-export default Modal;

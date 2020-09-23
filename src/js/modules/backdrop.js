@@ -2,7 +2,7 @@
 // Backdrop
 //////////////////////////////////////////////
 
-class Backdrop {
+export default class Backdrop {
 
     constructor() {
 
@@ -12,18 +12,17 @@ class Backdrop {
 
             const backdropList = document.querySelectorAll(".backdrop--fixed");
 
-            for (const backdrop of backdropList) {
-
+            backdropList.forEach((backdrop) => {
+            
                 let backdropHeight = backdrop.scrollHeight;
                 let backdropCoverHeight = backdrop.querySelector(".backdrop__cover").scrollHeight;
-
+    
                 if (backdropCoverHeight < backdropHeight) {
                     backdrop.style.height = backdropHeight + "px";
                 }
 
-            }
+            });
+
         }
     }
 }
-
-export default Backdrop;

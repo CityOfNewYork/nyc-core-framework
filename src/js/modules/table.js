@@ -2,7 +2,7 @@
 // Table
 //////////////////////////////////////////////
 
-class Table {
+export default class Table {
 
     constructor() {
 
@@ -80,9 +80,9 @@ class Table {
 
                 }
 
-                scrollTarget.addEventListener("scroll", removeGradient), {
+                scrollTarget.addEventListener("scroll", removeGradient, {
                     passive: true
-                };
+                });
             });
         }
 
@@ -91,5 +91,3 @@ class Table {
 
     }
 }
-
-export default Table;

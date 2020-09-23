@@ -2,7 +2,7 @@
 // Text Direction
 //////////////////////////////////////////////
 
-class TextDirection {
+export default class TextDirection {
 
     constructor() {
 
@@ -23,7 +23,7 @@ class TextDirection {
             });
         });
 
-        var rtlConfig = {
+        const rtlConfig = {
             attributes: true,
             attributeFilter: ["class"]
         }
@@ -31,5 +31,3 @@ class TextDirection {
         rtlObserver.observe(rtlTarget, rtlConfig);
     }
 }
-
-export default TextDirection;

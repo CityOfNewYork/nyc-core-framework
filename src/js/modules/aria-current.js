@@ -2,7 +2,7 @@
 // Aria Current
 //////////////////////////////////////////////
 
-class AriaCurrent {
+export default class AriaCurrent {
 
     constructor() {
 
@@ -30,5 +30,3 @@ class AriaCurrent {
 
     }
 }
-
-export default AriaCurrent;

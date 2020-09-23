@@ -17,8 +17,8 @@ new TextDirection();
 import CopyrightYear from "./modules/copyright-year.js";
 new CopyrightYear();
 
-import ButtonFocus from "./modules/button-focus.js";
-new ButtonFocus();
+import KeyBoard from "./modules/keyboard-focus.js";
+new KeyBoard();
 
 import AriaCurrent from "./modules/aria-current.js";
 new AriaCurrent();

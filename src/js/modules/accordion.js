@@ -2,7 +2,7 @@
 // Accordion
 //////////////////////////////////////////////
 
-class Accordion {
+export default class Accordion {
 
     constructor() {
 
@@ -145,5 +145,3 @@ class Accordion {
     
     }
 }
-
-export default Accordion;

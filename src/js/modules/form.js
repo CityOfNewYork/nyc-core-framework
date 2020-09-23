@@ -2,7 +2,7 @@
 // Form
 //////////////////////////////////////////////
 
-class Form {
+export default class Form {
 
     constructor() {
 
@@ -225,5 +225,3 @@ class Form {
     
     }
 }
-
-export default Form;

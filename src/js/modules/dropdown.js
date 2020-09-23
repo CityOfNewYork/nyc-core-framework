@@ -2,13 +2,13 @@
 // Dropdown
 //////////////////////////////////////////////
 
-class Dropdown {
+export default class Dropdown {
 
     constructor() {
 
         const dropdownButtonList = document.querySelectorAll("[data-toggle='dropdown']");
-
-        for (const dropdownButton of dropdownButtonList) {
+            
+        dropdownButtonList.forEach((dropdownButton) => {
 
             let dropdownButtonParent = dropdownButton.closest("li");
             let dropdownMenu = dropdownButton.nextElementSibling;
@@ -41,9 +41,8 @@ class Dropdown {
                     dropdownButton.setAttribute("aria-expanded", false);
                 }
             });
-        }
+
+        });
 
     }
 }
-
-export default Dropdown;
