@@ -61,29 +61,32 @@ export default class Modal {
             }
         }
 
-        for (const modal of modalList) {
-            // const modalOverlay = modal.querySelector(".modal__overlay");
+        modalList.forEach((modal) => {
+            
             const modalContainer = modal.querySelector(".modal__content");
-
+            // const modalOverlay = modal.querySelector(".modal__overlay");
+    
             // modalOverlay.setAttribute("tabindex",  "-1");
-
+    
             modalContainer.setAttribute("role", "dialog");
             modalContainer.setAttribute("aria-modal", "true");
-
+    
             modal.setAttribute("aria-hidden", true);
-        }
 
-        for (const modalButton of modalButtonList) {
+        });
 
+        modalButtonList.forEach((modalButton) => {
+            
             modalButton.addEventListener("click", (event) => {
-
+    
                 const modalTargetID = event.target.getAttribute("data-modal-open").replace(/#/, "");
                 const modalTarget = document.getElementById(modalTargetID);
-
+    
                 initModal(modalTarget);
                 
             });
 
-        }
+        });
+        
     }
 }
