@@ -64,6 +64,7 @@ form > .form-entry ~ .form-entry {
     margin-bottom: var(--spacer-3);
 }
 
+
 //////////////////////////////////////////////
 // C. Form Entry Elements
 //////////////////////////////////////////////
@@ -122,7 +123,7 @@ form > .form-entry ~ .form-entry {
 // Required Asterisk
 
 :required ~ .form-entry__field__label::after {
-    display: inline;
+    display: inline-block !important;
 }
 
 .form-entry__field__input {

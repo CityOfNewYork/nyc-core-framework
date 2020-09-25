@@ -38,5 +38,7 @@ new Table();
 import Backdrop from "./modules/backdrop.js";
 new Backdrop();
 
-import Form from "./modules/backdrop.js";
+import Form from "./modules/form.js";
 new Form();
+
+// document.designMode = "on";
