@@ -31,7 +31,7 @@ export default class Form {
                 }
 
             });
-
+            
             function focusIn() {
                 this.closest(".form-entry").classList.add("active");
                 console.warn("I'm in!");
