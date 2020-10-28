@@ -32,6 +32,9 @@ new Collapse();
 import Modal from "./modules/modal.js";
 new Modal();
 
+import Tabs from "./modules/tabs.js";
+new Tabs();
+
 import Table from "./modules/table.js";
 new Table();
 
