@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'nyc_core_icons';
+  src:
+    url('../../src/fonts/nyc_core_icons.ttf?s75v4u') format('truetype'),
+    url('../../src/fonts/nyc_core_icons.woff?s75v4u') format('woff'),
+    url('../../src/fonts/nyc_core_icons.svg?s75v4u#nyc_core_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="nyc-icon-"], [class*=" nyc-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'nyc_core_icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  vertical-align: baseline;
+  /* background-color: red; */
+  display: inline-block;
+  font-size: 1.25em;
+  /* line-height: 1; */
+  /* background-color: yellow; */
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nyc-icon-311:before {
+  content: "\e900";
+}
+.nyc-icon-bubble_logo:before {
+  content: "\e902";
+}
+.nyc-icon-question:before {
+  content: "\e901";
+}
+.nyc-icon-home:before {
+  content: "\e903";
+}
+.nyc-icon-language:before {
+  content: "\e904";
+}
+.nyc-icon-menu:before {
+  content: "\e905";
+}
+.nyc-icon-search:before {
+  content: "\e906";
+}
