@@ -137,10 +137,6 @@ button,
     align-items: center;
     justify-content: center;
 
-    [data-icon] {
-        font-size: calc(var(--btn--icon-only-size) * 0.5);
-    }
-
     @extend %subtle-fill !optional;
 
     ::before{

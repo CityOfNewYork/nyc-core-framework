@@ -83,7 +83,9 @@ a[data-logo="brand"] {
 //     }
 // }
 
-[class^="nyc_"], [class*=" nyc_"] {
- 
-    font-size: 1.5em !important;
+[class^="nyc_icon_"],
+[class*=" nyc_icon_"] {
+    font-size: 1.25em !important;
+    line-height: inherit !important;
+    display: inline;
 }
