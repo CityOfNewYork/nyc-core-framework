@@ -48,6 +48,7 @@ In this file:
 @import "partials/aspect-ratio";
 @import "partials/opacities";
 @import "partials/article";
+@import "partials/nyc-icons";
 
 // @import "partials/dev-tools";
 
@@ -72,78 +73,4 @@ a[data-logo="brand"] {
 
 .overflow-hidden {
     overflow: hidden;
-}
-
-// .article__sidebar {
-//     .active {
-//         background-color: var(--primary);
-//         color: var(--primary-text);
-//         overflow: hidden;
-//     }
-// }
-
-[class^="nyc_icon_"],
-[class*=" nyc_icon_"] {
-    position: relative;
-    font-size: 1.75em !important;
-    line-height: inherit !important;
-}
-
-.nyc_icon_loading.rotate {
-  display: inline-block;
-  animation: rotate-s-loader 1s linear infinite;
-}
-
-@keyframes rotate-s-loader {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-[class*="nyc_icon_subway-"] {
-  --fill-padding: .125em;
-  position: relative;
-  z-index: auto;
-    font-size: 1.5em !important;
-
-  &::before {
-    position: relative;
-    z-index: 2;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: var(--fill-padding);
-    right: var(--fill-padding);
-    bottom: var(--fill-padding);
-    left: var(--fill-padding);
-    background-color: white;
-
-    z-index: 1;
-    border-radius: 100%;
-  }
-
-}
-
-.nyc_icon_subway-a, 
-.nyc_icon_subway-c, 
-.nyc_icon_subway-e
-{
-  color: #0036a8 !important;
-}
-
-.nyc_icon_subway-n,
-.nyc_icon_subway-q,
-.nyc_icon_subway-r,
-.nyc_icon_subway-w {
-
-  &::after {
-    background-color: black;
-  }
-
-  color: #FCCD01 !important;
 }

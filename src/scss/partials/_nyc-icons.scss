@@ -1,0 +1,129 @@
+/*
+
+In this file:
+
+// A. Shared Styles
+// B. Screen Reader Only Utility
+// C. Focusable Only Utility
+
+*/
+
+//////////////////////////////////////////////
+// A. Shared Styles
+//////////////////////////////////////////////
+
+[class^="nyc_icon_"],
+[class*=" nyc_icon_"] {
+    position: relative;
+    font-size: 1.5em !important;
+    line-height: inherit !important;
+}
+
+.nyc_icon_loading.rotate {
+  display: inline-block;
+  animation: rotate-s-loader 1s linear infinite;
+}
+
+@keyframes rotate-s-loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[class*="nyc_icon_subway-"] {
+    --fill-padding: 0.125em;
+    position: relative;
+    font-size: 1.5em !important;
+
+    &::before {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: var(--fill-padding);
+        right: var(--fill-padding);
+        bottom: var(--fill-padding);
+        left: var(--fill-padding);
+        background-color: white;
+
+        z-index: 1;
+        border-radius: 100%;
+    }
+}
+
+.nyc_icon_subway-a, 
+.nyc_icon_subway-c, 
+.nyc_icon_subway-e
+{
+  color: #0036a8 !important;
+}
+
+.nyc_icon_subway-b, 
+.nyc_icon_subway-d, 
+.nyc_icon_subway-f, 
+.nyc_icon_subway-f-express
+{
+  color: #ff6319 !important;
+}
+
+.nyc_icon_subway-g {
+  color: #6cbe45 !important;
+}
+
+.nyc_icon_subway-l {
+  color: #a7a9ac !important;
+}
+
+.nyc_icon_subway-j, 
+.nyc_icon_subway-z
+{
+  color: #996633 !important;
+}
+
+.nyc_icon_subway-n,
+.nyc_icon_subway-q,
+.nyc_icon_subway-r,
+.nyc_icon_subway-w
+{
+
+  &::after {
+    background-color: black;
+  }
+
+  color: #FCCD01 !important;
+}
+
+.nyc_icon_subway-1, 
+.nyc_icon_subway-2, 
+.nyc_icon_subway-3
+{
+  color: #ee352e !important;
+}
+
+.nyc_icon_subway-4, 
+.nyc_icon_subway-5, 
+.nyc_icon_subway-6, 
+.nyc_icon_subway-6-express
+{
+  color: #00933c !important;
+}
+
+.nyc_icon_subway-7, 
+.nyc_icon_subway-7-express
+{
+  color: #b933ad !important;
+}
+
+.nyc_icon_subway-t {
+  color: #00add0 !important;
+}
+
+.nyc_icon_subway-s {
+  color: #808183 !important;
+}
