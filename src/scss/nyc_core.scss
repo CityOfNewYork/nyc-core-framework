@@ -59,7 +59,6 @@ In this file:
 
 // Logo
 
-
 a > svg {
     fill: currentColor;
     vertical-align: middle;
@@ -85,12 +84,13 @@ a[data-logo="brand"] {
 
 [class^="nyc_icon_"],
 [class*=" nyc_icon_"] {
-    font-size: 1.25em !important;
+    position: relative;
+    font-size: 1.75em !important;
     line-height: inherit !important;
-    display: inline;
 }
 
-.nyc_icon_more-horizontal {
+.nyc_icon_loading.rotate {
+  display: inline-block;
   animation: rotate-s-loader 1s linear infinite;
 }
 
@@ -101,4 +101,49 @@ a[data-logo="brand"] {
   to {
     transform: rotate(360deg);
   }
+}
+
+[class*="nyc_icon_subway-"] {
+  --fill-padding: .125em;
+  position: relative;
+  z-index: auto;
+    font-size: 1.5em !important;
+
+  &::before {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--fill-padding);
+    right: var(--fill-padding);
+    bottom: var(--fill-padding);
+    left: var(--fill-padding);
+    background-color: white;
+
+    z-index: 1;
+    border-radius: 100%;
+  }
+
+}
+
+.nyc_icon_subway-a, 
+.nyc_icon_subway-c, 
+.nyc_icon_subway-e
+{
+  color: #0036a8 !important;
+}
+
+.nyc_icon_subway-n,
+.nyc_icon_subway-q,
+.nyc_icon_subway-r,
+.nyc_icon_subway-w {
+
+  &::after {
+    background-color: black;
+  }
+
+  color: #FCCD01 !important;
 }
