@@ -230,13 +230,6 @@ In this file:
             }
         }
     }
-    > li {
-        display: flex;
-    }
-    
-    > li > a {
-        align-self: stretch;
-    }
 
     > li:not(:last-child) {
         border-bottom-width: var(--default-border-width);
