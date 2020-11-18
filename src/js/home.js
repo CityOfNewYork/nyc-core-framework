@@ -2,17 +2,16 @@
 // Homepage Banner Height
 ////////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     const headerHeight = document.getElementById('global-header').offsetHeight;
-
     const bannerTarget = document.getElementById('introduction');
 
-    setBannerHeight = () => {
+    const setBannerHeight = () => {
 
         const windowHeight = window.innerHeight;
 
-        bannerTarget.style.height = (windowHeight - headerHeight) + 'px'
+        bannerTarget.style.height = (windowHeight - headerHeight) + 'px';
 
     }
 
