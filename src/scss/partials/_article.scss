@@ -40,45 +40,45 @@ In this file:
         }
     }
 
-    section {
-        margin-top: var(--spacer-4);
-        margin-bottom: var(--spacer-4);
-    }
+    // section {
+    //     margin-top: var(--spacer-4);
+    //     margin-bottom: var(--spacer-4);
+    // }
 
-    section > *,
-    footer {
-        @extend %center-horizontal !optional;
-    }
+    // section > *,
+    // footer {
+    //     @extend %center-horizontal !optional;
+    // }
     
-    footer {
-        margin-top: var(--spacer-4);
-        margin-bottom: var(--spacer-4);
-        padding-top: var(--spacer-2);
+    // footer {
+    //     margin-top: var(--spacer-4);
+    //     margin-bottom: var(--spacer-4);
+    //     padding-top: var(--spacer-2);
 
-        border-top-width: var(--default-border-width);
-        border-top-style: var(--default-border-style);
-        border-top-color: currentColor;
-    }
+    //     border-top-width: var(--default-border-width);
+    //     border-top-style: var(--default-border-style);
+    //     border-top-color: currentColor;
+    // }
 
-    header,
-    h2, h3, h4, h5, h6, p,
-    ul:not([class]), ol,
+    // header,
+    // h2, h3, h4, h5, h6, p,
+    // ul:not([class]), ol,
 
-    section > div,
-    footer {
-        @extend .container !optional;
-        max-width: var(--narrow-width);
-    }
+    // section > div,
+    // footer {
+    //     @extend .container !optional;
+    //     max-width: var(--narrow-width);
+    // }
 
-    figure,
-    section > div {
-        margin-top: var(--spacer-4);
-        margin-bottom: var(--spacer-4);
-    }
+    // figure,
+    // section > div {
+    //     margin-top: var(--spacer-4);
+    //     margin-bottom: var(--spacer-4);
+    // }
 
-    figure {
-        max-width: var(--medium-width);
-    }
+    // figure {
+    //     max-width: var(--medium-width);
+    // }
 }
 
 @include breakpoints-up(lg) {
