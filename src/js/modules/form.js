@@ -44,17 +44,33 @@ export default class Form {
 
         });
 
+        const formList = document.querySelectorAll("form");
 
-        Array.prototype.slice.call(document.querySelectorAll("form")).forEach((form) => {
+        formList.forEach((form) => {
+
+            let coolList = form.querySelectorAll(".form-entry__field__input");
+
+            coolList.forEach((cool) => {
+
+                cool.addEventListener("change", () => {
+
+                    if (cool.value != "") {
+                        setValid(cool);
+                    } else {
+                        setInvalid(cool);
+                    }
+
+                });
+            });
 
             // Handle Form Submission
 
-        let wasValidated = false;
+            const alertMessage = document.getElementById("neat");
+
+
             form.addEventListener("submit", function (event) {
 
                 event.preventDefault();
-
-                wasValidated = true;
 
                 let formErrorsList = form.querySelectorAll(":invalid");
 
@@ -62,13 +78,13 @@ export default class Form {
                     checkIfEmpty(formError);
                 }
 
-                let firstError = document.querySelector("[class*='alert']");
+                let firstError = form.querySelector("[class*='alert']");
 
                 if (firstError.hasAttribute("data-alert")) {
                     firstError.style.display = "block";
                 }
 
-                let myScroll = firstError.offsetTop - 16 + "px";
+                let myScroll = firstError.offsetTop - 16;
 
                 window.scrollTo({
                     top: myScroll,
@@ -105,7 +121,6 @@ export default class Form {
                 let myEl = field.closest(".form-entry");
                 myEl.classList.remove(...invalidClasses);
             }
-
 
         });
     
