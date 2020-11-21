@@ -83,7 +83,7 @@ form > .form-entry ~ .form-entry {
 //////////////////////////////////////////////
 
 .form-entry__field {
-    --border-radius: 0.25em;
+    // --border-radius: 0.25em;
 
     position: relative;
     
@@ -176,7 +176,7 @@ form > .form-entry ~ .form-entry {
             margin-left: var(--form-field-padding-x);
             margin-right: var(--form-field-padding-x);
 
-            font-size: 75%;
+            font-size: 80%;
 
             [dir="rtl"] & {
                 transform-origin: top right;
