@@ -31,13 +31,6 @@ export default class Form {
                     console.log("I have changed, I'm different now", entryInput.value);
 
                     checkIfEmpty(entryInput);
-
-                    // if (entryInput.value != "") {
-                    //     entryInput.closest(".form-entry").classList.add("has-value");
-                    // } else {
-                    //     entryInput.closest(".form-entry").classList.remove("has-value");
-                    // }
-
                 });
             });
 
@@ -54,7 +47,7 @@ export default class Form {
                     checkIfEmpty(formError);
                 });
 
-                let firstError = form.querySelector("[class*='alert']");
+                let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
 
                 if (firstError.hasAttribute("data-alert")) {
                     firstError.style.display = "block";
@@ -71,11 +64,9 @@ export default class Form {
 
             function checkIfEmpty(field) {
                 if (isEmpty(field.value.trim())) {
-                    // Set field invalid
                     setInvalid(field);
                     return true;
                 } else {
-                    // Set field valid
                     setValid(field);
                     return false;
                 }
@@ -86,7 +77,7 @@ export default class Form {
                 return false;
             }
 
-            const invalidClasses = ["invalid"];
+            const invalidClasses = ["invalid", "not-cool"];
 
             function setInvalid(field) {
                 let myEl = field.closest(".form-entry");
