@@ -157,20 +157,24 @@ body:not([class*="theme-"]),
 
     // Alerts
 
-    [class*="alert--confirm"]:not([class*="--inverse"]){
+    [class*="alert--confirm"]:not([class*="--inverse"]) {
         color: var(--confirm-color);
     }
 
-    [class*="alert--confirm--inverse"]{
+    [class*="alert--confirm--inverse"] {
         color: var(--background-color);
         background-color: var(--confirm-color);
     }
-
-    [class*="alert--warn"]:not([class*="--inverse"]){
+    
+    [class*="alert--warn"]:not([class*="--inverse"]),
+    .invalid .form-entry__feedback, 
+    .invalid .form-entry__field__input::after,
+    .invalid [class*="_icon_warn"]
+    {
         color: var(--warn-color);
     }
 
-    [class*="alert--warn--inverse"]{
+    [class*="alert--warn--inverse"] {
         color: var(--background-color);
         background-color: var(--warn-color);
     }

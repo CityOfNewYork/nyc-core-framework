@@ -256,25 +256,29 @@
 
                             <div class="form-entry">
 
+                                <label class="form-entry__field">
+                                    <span class="form-entry__field__label">First Name</span>
+                                    <span class="form-entry__field__input">
+                                        <span class="nyc_icon_warn"></span>
+                                        <input type="text" id="firstName" name="first_name" required>
+                                    </span>
+                                </label>
+                                
                                 <small class="form-entry__feedback">
-                                    <span class="nyc_icon_warn" aria-hidden="true"></span>
                                     <strong>Error message description</strong>
                                     <span>How to fix instructions</span>
                                 </small>
-
-                                <label class="form-entry__field rounded">
-                                    <input class="form-entry__field__input" type="text" id="firstName" name="first_name" required>
-                                    <span class="form-entry__field__label">First Name</span>
-                                </label>
 
                             </div>
                             <!-- .form-entry -->
 
                             <div class="form-entry">
 
-                                <label class="form-entry__field rounded">
+                                <label class="form-entry__field">
                                     <span class="form-entry__field__label">Email Address</span>
-                                    <input class="form-entry__field__input" type="email" name="email_address">
+                                    <span class="form-entry__field__input">
+                                        <input type="email" name="email_address">
+                                    </span>
                                 </label>
                             
                             </div>
@@ -282,28 +286,38 @@
 
                             <div class="form-entry">
 
-                                <small class="form-entry__feedback">
-                                    <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                    <strong>Error message description</strong>
-                                    <span>How to fix instructions</span>
-                                </small>
-
-                                <div class="form-entry__field rounded">
-                                    <div class="form-entry__field__input-wrap">
-                                        <select class="form-entry__field__input" id="select-borough" name="Boroughs" required>
-                                            <option value="">Borough</option>
+                                <div class="form-entry__field">
+                                    <label class="form-entry__field__label" for="select-borough-1">Borough</label>
+                                    <span class="form-entry__field__input select">
+                                        <span class="nyc_icon_warn"></span>
+                                        <select id="select-borough-1" name="Boroughs" required>
+                                            <option value="">Select One</option>
                                             <option value="Bronx">Bronx</option>
                                             <option value="Brooklyn">Brooklyn</option>
                                             <option value="Manhattan">Manhattan</option>
                                             <option value="Staten Island">Staten Island</option>
                                             <option value="Queens">Queens</option>
                                         </select>
-                                        <label class="form-entry__field__label" for="select-borough">Borough</label>
-                                    </div>
+                                    </span>
                                 </div>
-
+                            
                             </div>
                             <!-- .form-entry -->
+
+                            
+                            <div class="form-entry">
+
+                                <label class="form-entry__field">
+                                    <span class="form-entry__field__label">Message</span>
+                                    <span class="form-entry__field__input">
+                                        <textarea rows="8"></textarea>
+                                    </span>
+                                </label>
+                            
+                            </div>
+                            <!-- .form-entry -->
+
+                            
 
                             <button class="btn theme-primary display-block rounded" type="submit">Submit</button>
 

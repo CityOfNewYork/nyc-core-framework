@@ -67,7 +67,6 @@ export default class Form {
 
             const alertMessage = document.getElementById("neat");
 
-
             form.addEventListener("submit", function (event) {
 
                 event.preventDefault();
@@ -110,7 +109,7 @@ export default class Form {
                 return false;
             }
 
-            const invalidClasses = ["invalid", "alert--warn"];
+            const invalidClasses = ["invalid"];
 
             function setInvalid(field) {
                 let myEl = field.closest(".form-entry");
