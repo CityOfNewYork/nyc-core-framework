@@ -6,66 +6,43 @@ export default class Form {
 
     constructor() {
 
-        const formEntryFieldList = document.querySelectorAll(".form-entry__field");
-
-        formEntryFieldList.forEach((formEntryField) => {
-
-            let entryInput = formEntryField.querySelector(".form-entry__field__input");
-            let entryButtonList = formEntryField.querySelectorAll("button");
-
-            entryInput.addEventListener("focusin", focusIn);
-            entryInput.addEventListener("focusout", focusOut);
-
-            entryButtonList.forEach((entryButton) => {
-                entryButton.addEventListener("focusin", focusIn);
-                entryButton.addEventListener("focusout", focusOut);
-                entryButton.addEventListener("mousedown", focusIn);
-            });
-
-            entryInput.addEventListener("change", () => {
-
-                if (entryInput.value != "") {
-                    entryInput.closest(".form-entry").classList.add("has-value");
-                } else {
-                    entryInput.closest(".form-entry").classList.remove("has-value");
-                }
-
-            });
-            
-            function focusIn() {
-                this.closest(".form-entry").classList.add("active");
-                console.warn("I'm in!");
-            }
-
-            function focusOut() {
-                this.closest(".form-entry").classList.remove("active");
-                console.warn("I'm out!");
-            }
-
-        });
-
         const formList = document.querySelectorAll("form");
 
         formList.forEach((form) => {
 
-            let coolList = form.querySelectorAll(".form-entry__field__input");
+            const formEntryList = form.querySelectorAll(".form-entry");
 
-            coolList.forEach((cool) => {
+            formEntryList.forEach((formEntry) => {
 
-                cool.addEventListener("change", () => {
+                const entryInput = formEntry.querySelector("input, select, textarea");
 
-                    if (cool.value != "") {
-                        setValid(cool);
-                    } else {
-                        setInvalid(cool);
-                    }
+                // Required
+
+                if(entryInput.hasAttribute("required")) {
+                    console.log("This entry is required!");
+                    formEntry.classList.add("is-required");
+                }
+
+                console.log("Form Entry = ", formEntry);
+                console.log("Form Entry Input = ", entryInput);
+
+                entryInput.addEventListener("change", () => {
+
+                    console.log("I have changed, I'm different now", entryInput.value);
+
+                    checkIfEmpty(entryInput);
+
+                    // if (entryInput.value != "") {
+                    //     entryInput.closest(".form-entry").classList.add("has-value");
+                    // } else {
+                    //     entryInput.closest(".form-entry").classList.remove("has-value");
+                    // }
 
                 });
             });
 
-            // Handle Form Submission
 
-            const alertMessage = document.getElementById("neat");
+            // Handle Form Submission
 
             form.addEventListener("submit", function (event) {
 
@@ -73,9 +50,9 @@ export default class Form {
 
                 let formErrorsList = form.querySelectorAll(":invalid");
 
-                for (const formError of formErrorsList) {
+                formErrorsList.forEach((formError) => {
                     checkIfEmpty(formError);
-                }
+                });
 
                 let firstError = form.querySelector("[class*='alert']");
 

@@ -90,13 +90,12 @@ form > .form-entry ~ .form-entry {
         margin: auto 0.25rem;
         display: none;
         font-size: 80%;
-        vertical-align: middle;
     }
 }
 
 // Required Asterisk
 
-:required ~ .form-entry__field__label::after {
+.is-required .form-entry__field__label::after {
     display: inline-block !important;
 }
 
