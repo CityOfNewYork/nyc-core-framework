@@ -238,7 +238,7 @@
 
                             <div class="alert alert--warn margin-y-3" data-alert="form-errors">
 
-                                <div class="alert__head h5">
+                                <div class="alert__head h6">
                                     <p>
                                         <span class="nyc_icon_warn" aria-hidden="true"></span>
                                         <span class="alert__head__title">Confirm Title</span>
@@ -291,7 +291,7 @@
                                     <span class="form-entry__field__input select">
                                         <span class="nyc_icon_warn"></span>
                                         <select id="select-borough-1" name="Boroughs" required>
-                                            <option value="">Select One</option>
+                                            <option value="">Select</option>
                                             <option value="Bronx">Bronx</option>
                                             <option value="Brooklyn">Brooklyn</option>
                                             <option value="Manhattan">Manhattan</option>
@@ -299,11 +299,16 @@
                                             <option value="Queens">Queens</option>
                                         </select>
                                     </span>
+
+                                    <small class="form-entry__feedback">
+                                        <strong>Error message description</strong>
+                                        <span>How to fix instructions</span>
+                                    </small>
+
                                 </div>
                             
                             </div>
                             <!-- .form-entry -->
-
                             
                             <div class="form-entry">
 
@@ -317,9 +322,7 @@
                             </div>
                             <!-- .form-entry -->
 
-                            
-
-                            <button class="btn theme-primary display-block" type="submit">Submit</button>
+                            <button class="btn theme-primary display-block rounded-pill" type="submit">Submit</button>
 
                         </form>
 

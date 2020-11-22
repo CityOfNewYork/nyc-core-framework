@@ -80,13 +80,13 @@ export default class Form {
             const invalidClasses = ["invalid", "not-cool"];
 
             function setInvalid(field) {
-                let myEl = field.closest(".form-entry");
-                myEl.classList.add(...invalidClasses);
+                let entryRoot = field.closest(".form-entry");
+                entryRoot.classList.add(...invalidClasses);
             }
 
             function setValid(field) {
-                let myEl = field.closest(".form-entry");
-                myEl.classList.remove(...invalidClasses);
+                let entryRoot = field.closest(".form-entry");
+                entryRoot.classList.remove(...invalidClasses);
             }
 
         });

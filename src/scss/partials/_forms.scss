@@ -18,7 +18,9 @@ In this file:
 
 :root {
     --form-field-padding-x: var(--spacer-2);
-    --form-field-padding-y: 0.75em;
+    --form-field-padding-y: var(--btn-padding-y);
+
+    --form-field-border-radius: 0.25em;
 }
 
 //////////////////////////////////////////////
@@ -104,6 +106,8 @@ form > .form-entry ~ .form-entry {
 
     display: flex;
     align-items: center;
+
+    border-radius: var(--form-field-border-radius);
 
     input,
     select, 
