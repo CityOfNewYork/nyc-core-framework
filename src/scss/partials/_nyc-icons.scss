@@ -13,7 +13,7 @@ In this file:
 //////////////////////////////////////////////
 
 [class^="nyc_icon_"],
-[class*=" nyc_icon_"] {
+[class*="nyc_icon_"] {
     position: relative;
     font-size: 1.5em !important;
     line-height: inherit !important;
@@ -22,6 +22,11 @@ In this file:
       display: inline-block;
     }
 }
+
+.nyc_icon_font{
+  font-family: 'NYC-Core-Icons';
+}
+
 
 .nyc_icon_loading.rotate {
   display: inline-block;

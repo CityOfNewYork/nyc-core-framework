@@ -189,3 +189,182 @@ form > .form-entry ~ .form-entry {
         display: block;
     }
 }
+
+//////////////////////////////////////////////
+// C. Checkbox and Radio Elements
+//////////////////////////////////////////////
+
+.form-entry legend {
+    font-weight: bold;
+    margin-bottom: var(--spacer-2);
+}
+
+.form-entry__options {
+    --gap-size: 0.5em;
+
+    @extend %list-nav-style !optional;
+
+    clear: both;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.form-entry__options:not([class*="--divider"]){
+
+    > li:not(:last-child) {
+        margin-bottom: var(--gap-size);
+    }
+}
+
+.form-entry__options.options--divider {
+
+    > li {
+        padding: 0.75em var(--spacer-2);
+        position: relative;
+    }
+
+    > li:not(:last-child) {
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
+    }
+
+    > li > label {
+
+        @extend %subtle-fill !optional;
+        --subtle-fill-opacity: 0;
+
+        &::before {
+            top: calc(0.75em * -1);
+            left: calc(var(--spacer-2) * -1);
+            bottom: calc(0.75em * -1);
+            right: calc(var(--spacer-2) * -1);
+
+            pointer-events: inherit;
+        }
+    }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+    @include breakpoints-up($breakpoint) {
+        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        
+        .form-entry__options:not([class*="--divider"]).options--horizontal#{$mod} {
+            flex-direction: row;
+
+            --gap-size: 1.5em;
+
+            margin-left: calc(-1 * var(--gap-size));
+            margin-right: calc(-1 * var(--gap-size));
+
+            > li {
+                margin-bottom: unset;
+                margin-left: var(--gap-size);
+                margin-right: var(--gap-size);
+            }
+
+        }
+
+        .options--divider.options--horizontal#{$mod}{
+            flex-direction: row;
+            align-items: stretch;
+
+            > li {
+                flex: 1;
+                border-bottom-style: none !important; // Thanks, IE.
+            }
+
+            > li:not(:last-child){
+                border-right-width: var(--default-border-width);
+                border-right-style: var(--default-border-style);
+
+                [dir="rtl"] & {
+                    border-right-width: 0;
+                    border-left-width: var(--default-border-width);
+                    border-left-style: var(--default-border-style);
+                }
+            }
+        }
+
+    }
+}
+
+// Checkbox, Radio Shared Styles
+
+.form-entry__options__radio,
+.form-entry__options__check {
+    position: relative;
+    color: inherit;
+    display: flex;
+    align-items: baseline;
+    padding-left: 1em;
+    width: auto;
+    cursor: pointer;
+
+    [dir="rtl"] & {
+        padding-left: unset;
+        padding-right: 1em;
+    }
+}
+
+.form-entry__options__radio > input[type="radio"],
+.form-entry__options__check > input[type="checkbox"] {
+    background-color: transparent;
+    opacity: 0;
+} 
+
+.form-entry__options__radio > input ~ .radio__label,
+.form-entry__options__check > input ~ .checkbox__label {
+    line-height: var(--base-line-height);
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+
+        font-size: 125%;
+        margin-top: -0.125em;
+
+        @extend .fontAwesome !optional;
+        @extend .nyc_icon_font !optional;
+    }
+}
+
+// Unchecked
+
+.form-entry__options__check > input ~ .checkbox__label::before {
+    content: "\e946";
+}
+.form-entry__options__check > input:checked ~ .checkbox__label::before {
+    content: "\e947";
+}
+
+
+.form-entry__options__radio > input ~ .radio__label::before{
+    font-weight:  400;
+    content: "\f111";
+}
+
+.form-entry__options__radio > input:checked ~ .radio__label::before{
+    font-weight: 900;
+    content: "\f192";
+}
+
+// Focus
+
+.form-entry__options__radio > input:focus ~ .radio__label,
+.form-entry__options__check > input:focus ~ .checkbox__label {
+    text-decoration: underline;
+    &::before{
+        opacity: 0.75;
+    }
+}
+
+.form-entry__options__radio > input:checked ~ .radio__label,
+.form-entry__options__check > input:checked ~ .checkbox__label {
+    &::before{
+        opacity: 1;
+    }
+}
