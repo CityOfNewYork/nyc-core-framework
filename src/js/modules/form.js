@@ -27,13 +27,35 @@ export default class Form {
                 console.log("Form Entry Input = ", entryInput);
 
                 entryInput.addEventListener("change", () => {
-
                     console.log("I have changed, I'm different now", entryInput.value);
-
                     checkIfEmpty(entryInput);
                 });
-            });
 
+                // Click Into Input
+                
+                const formEntryFieldInputList = formEntry.querySelectorAll("[class*='form-entry__field__input']");
+
+                formEntryFieldInputList.forEach((formEntryField) => {
+
+                    const myInput = formEntryField.querySelector("input, select");
+                    
+                    formEntryField.addEventListener("click", (event) => {
+
+                        let myTarget = event.target.tagName;
+                        
+                        if(myTarget === "BUTTON") {
+                            return;
+                        }
+
+                        if(myTarget === "SPAN") {
+                            myInput.focus();
+                            console.log("I have been clicked!!!!!!", myTarget);
+                        }
+
+                    });
+
+                });
+            });
 
             // Handle Form Submission
 
