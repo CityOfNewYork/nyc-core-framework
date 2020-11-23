@@ -54,7 +54,7 @@ In this file:
         opacity: 0.675;
     }
 
-    text-align: left;
+    // text-align: left;
 
     [dir="rtl"] & {
         text-align: right;
@@ -131,18 +131,17 @@ form > .btn {
     {
         padding: var(--form-field-padding-y) var(--form-field-padding-x);
         outline: none;
+        background-color: rgba(yellow, 0.125);
     }
 
     button {
-        white-space: nowrap;
-        font-size: 75%;
-        margin-left: calc(var(--form-field-padding-x) / 2);
-        margin-right: calc(var(--form-field-padding-x) / 2);
-        border-radius: inherit;
+        flex-shrink: 0;
     }
 
-    // button[class*="btn--icon-only"]:last-child {
-    // }
+    [class*="btn--icon-only"] {
+        margin-left: calc(var(--form-field-padding-x) / 2);
+        margin-right: calc(var(--form-field-padding-x) / 2);
+    }
     
     > [class*="nyc_icon"] {
         font-size: 75%;
@@ -158,9 +157,10 @@ form > .btn {
 }
 
 .form-entry__help {
-    font-size: 80%;
+    font-size: 0.8em;
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
+    margin-top: var(--spacer-1);
 }
 
 .form-entry__field__input.select{

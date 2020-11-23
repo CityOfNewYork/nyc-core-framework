@@ -116,9 +116,68 @@
                                     <textarea rows="8"></textarea>
                                 </span>
                             </label>
+
+                            <small class="form-entry__help">
+                                This is help text
+                            </small>
                         
                         </div>
                         <!-- .form-entry -->
+
+                        <fieldset class="form-entry" aria-labelledby="checkbox-group-label">
+
+                            <legend class="label" id="checkbox-group-label">
+                                Select multiple options
+                            </legend>
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <ul class="form-entry__options">
+
+                                <li>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option One
+                                        </span>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Two
+                                        </span>
+                                    </label>
+                                </li>
+                                
+                                <li>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Three
+                                        </span>
+                                    </label>
+                                </li>
+
+                            </ul>
+
+                        </fieldset>
+                        <!-- .form-entry -->
+                        
+                        <button class="btn theme-primary display-block rounded-pill" type="submit">Submit</button>
+
+                    </form>
+                    <!-- .needs-validation -->
+
+                    <hr class="margin-y-4">
+
+                    <form>
 
                         <div class="form-entry">
 
@@ -165,11 +224,8 @@
                         
                         </div>
                         <!-- .form-entry -->
-                        
-                        <button class="btn theme-primary display-block rounded-pill" type="submit">Submit</button>
 
                     </form>
-                    <!-- .needs-validation -->
 
                 </div>
                 <!-- .container -->

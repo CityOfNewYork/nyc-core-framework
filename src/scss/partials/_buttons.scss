@@ -7,7 +7,8 @@ In this file:
 // C. Button Utility
 // D. Button Outline Modifier
 // E. Button Has Icon Modifier
-// F. I.E. 11 Support
+// F. Button Icon Only Modifier
+// G. I.E. 11 Support
 
 */
 
@@ -17,7 +18,7 @@ In this file:
 
 :root {
     --btn-padding-x: var(--spacer-2);
-    --btn-padding-y: 0.625em;
+    --btn-padding-y: 0.75em;
 
     --btn-font-weight: var(--base-font-weight-bold);
 
@@ -120,7 +121,7 @@ button,
 }
 
 //////////////////////////////////////////////
-// E. Button Icon Only Modifier
+// F. Button Icon Only Modifier
 //////////////////////////////////////////////
 
 .btn--icon-only {
@@ -152,7 +153,7 @@ button,
 }
 
 //////////////////////////////////////////////
-// F. I.E. 11 Support
+// G. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),
