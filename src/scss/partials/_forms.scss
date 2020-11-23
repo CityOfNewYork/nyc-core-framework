@@ -148,7 +148,7 @@ form > .btn {
     }
 
     [dir="rtl"] & {
-        > [class*="icon_warn"] {
+        > [class*="nyc_icon"] {
             margin-left: unset;
             margin-right: var(--form-field-padding-x);
         }
@@ -162,7 +162,7 @@ form > .btn {
     margin-top: var(--spacer-1);
 }
 
-.form-entry__field__input.select{
+.form-entry__field__input.select {
     position: relative;
 
     &::before {
@@ -179,6 +179,12 @@ form > .btn {
 
 }
 
+.form-entry__field__input.select::before {
+    [dir="rtl"] & {
+        right: unset;
+        left: 0;
+    }
+}
 
 //////////////////////////////////////////////
 // E. Form Feedback and Alerts
@@ -218,7 +224,7 @@ form > .btn {
 .form-entry__options {
     --gap-size: 0.5em;
 
-    @extend %list-nav-style !optional;
+    // @extend %list-nav-style !optional;
 
     clear: both;
     
@@ -228,25 +234,25 @@ form > .btn {
 
 .form-entry__options:not([class*="--divider"]){
 
-    > li:not(:last-child) {
+    > div:not(:last-child) {
         margin-bottom: var(--gap-size);
     }
 }
 
 .form-entry__options.options--divider {
 
-    > li {
+    > div {
         padding: 0.75em var(--spacer-2);
         position: relative;
     }
 
-    > li:not(:last-child) {
+    > div:not(:last-child) {
         border-bottom-width: var(--default-border-width);
         border-bottom-style: var(--default-border-style);
         border-bottom-color: inherit;
     }
 
-    > li > label {
+    > div > label {
 
         @extend %subtle-fill !optional;
         --subtle-fill-opacity: 0;
@@ -274,7 +280,7 @@ form > .btn {
             margin-left: calc(-1 * var(--gap-size));
             margin-right: calc(-1 * var(--gap-size));
 
-            > li {
+            > div {
                 margin-bottom: unset;
                 margin-left: var(--gap-size);
                 margin-right: var(--gap-size);
@@ -286,12 +292,12 @@ form > .btn {
             flex-direction: row;
             align-items: stretch;
 
-            > li {
+            > div {
                 flex: 1;
                 border-bottom-style: none !important; // Thanks, IE.
             }
 
-            > li:not(:last-child){
+            > div:not(:last-child){
                 border-right-width: var(--default-border-width);
                 border-right-style: var(--default-border-style);
 
@@ -353,19 +359,17 @@ form > .btn {
 .form-entry__options__check > input ~ .checkbox__label::before {
     content: "\e946";
 }
+
 .form-entry__options__check > input:checked ~ .checkbox__label::before {
     content: "\e947";
 }
 
-
 .form-entry__options__radio > input ~ .radio__label::before{
-    font-weight:  400;
-    content: "\f111";
+    content: "\e948";
 }
 
 .form-entry__options__radio > input:checked ~ .radio__label::before{
-    font-weight: 900;
-    content: "\f192";
+    content: "\e949";
 }
 
 // Focus
@@ -383,4 +387,18 @@ form > .btn {
     &::before{
         opacity: 1;
     }
+}
+
+
+[dir="rtl"] {
+    .form-entry__options__radio > .radio__label::before,
+    .form-entry__options__radio > input[type="radio"],
+
+    .form-entry__options__check > .checkbox__label::before,
+    .form-entry__options__check > .checkbox__label::after,
+    .form-entry__options__check > input[type="checkbox"] {
+        left: unset;
+        right: 0;
+    }
+
 }
