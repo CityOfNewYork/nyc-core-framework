@@ -61,6 +61,12 @@ In this file:
     }
 }
 
+form > .form-entry ~ .form-entry,
+form > .grid, 
+form > .btn {
+    margin-top: var(--spacer-3);
+    margin-bottom: var(--spacer-3);
+}
 
 //////////////////////////////////////////////
 // C. Form Entry Elements
@@ -73,13 +79,6 @@ In this file:
     flex-direction: column;
 
     color: inherit;
-}
-
-form > .form-entry ~ .form-entry, 
-form > .grid, 
-form > .btn {
-    margin-top: var(--spacer-3);
-    margin-bottom: var(--spacer-3);
 }
 
 .form-entry__field__label {
@@ -105,35 +104,12 @@ form > .btn {
 
 .form-entry__field__input {
     position: relative;
-
+    
     display: flex;
     align-items: center;
 
     border-radius: var(--form-field-border-radius);
     overflow: hidden;
-
-    input,
-    select, 
-    textarea
-    {
-        padding: var(--form-field-padding-y) var(--form-field-padding-x);
-        outline: none;
-    }
-
-    button {
-        white-space: nowrap;
-    }
-
-    [class*="icon_warn"]:first-child {
-        font-size: 80%;
-        margin-left: var(--form-field-padding-x);
-    }
-
-    button[class*="btn--icon-only"]:last-child {
-        font-size: 80%;
-        margin-left: calc(var(--form-field-padding-x) / 2);
-        margin-right: calc(var(--form-field-padding-x) / 2);
-    }
     
     &::after {
         content: "";
@@ -147,6 +123,37 @@ form > .btn {
         pointer-events: none;
         
         box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+    }
+
+    input,
+    select, 
+    textarea
+    {
+        padding: var(--form-field-padding-y) var(--form-field-padding-x);
+        outline: none;
+    }
+
+    button {
+        white-space: nowrap;
+        font-size: 75%;
+        margin-left: calc(var(--form-field-padding-x) / 2);
+        margin-right: calc(var(--form-field-padding-x) / 2);
+        border-radius: inherit;
+    }
+
+    // button[class*="btn--icon-only"]:last-child {
+    // }
+    
+    > [class*="nyc_icon"] {
+        font-size: 75%;
+        margin-left: var(--form-field-padding-x);
+    }
+
+    [dir="rtl"] & {
+        > [class*="icon_warn"] {
+            margin-left: unset;
+            margin-right: var(--form-field-padding-x);
+        }
     }
 }
 

@@ -64,7 +64,6 @@
                         </div>
                         <!-- .form-entry -->
 
-
                         <div class="form-entry">
 
                             <label class="form-entry__field">
@@ -86,9 +85,63 @@
                         <div class="form-entry">
 
                             <div class="form-entry__field">
+                                <label class="form-entry__field__label" for="select-borough-1">Borough</label>
+                                <span class="form-entry__field__input select">
+                                    <span class="nyc_icon_warn"></span>
+                                    <select id="select-borough-1" name="Boroughs" required>
+                                        <option value="">Select</option>
+                                        <option value="Bronx">Bronx</option>
+                                        <option value="Brooklyn">Brooklyn</option>
+                                        <option value="Manhattan">Manhattan</option>
+                                        <option value="Staten Island">Staten Island</option>
+                                        <option value="Queens">Queens</option>
+                                    </select>
+                                </span>
+
+                                <small class="form-entry__feedback">
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
+
+                            </div>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+                                <span class="form-entry__field__label">Message</span>
+                                <span class="form-entry__field__input">
+                                    <textarea rows="8"></textarea>
+                                </span>
+                            </label>
+                        
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+
+                            <div class="form-entry__field">
                                 <label class="form-entry__field__label" for="email_address">Email Address</label>
                                 <span class="form-entry__field__input">
                                     <input type="email" name="email_address" id="email_address">
+                                    <button class="btn theme-primary" type="button">
+                                        Sign Up
+                                    </button>
+                                </span>
+                            </div>
+                        
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+
+                            <div class="form-entry__field">
+                                <label class="form-entry__field__label screen-reader-only" for="email_address-2">Email Address</label>
+                                <span class="form-entry__field__input">
+                                    <span class="nyc_icon_mail opacity-40" aria-hidden="true"></span>
+                                    <input type="email" name="email_address-2" id="email_address-2" placeholder="Email Address">
                                     <button class="btn theme-primary" type="button">
                                         Sign Up
                                     </button>
