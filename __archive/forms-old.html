@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- I.E. Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- I.E. Custom Properties Polyfill -->
+    <script>
+        window.MSInputMethodContext && document.documentMode && document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
+        );
+    </script> 
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Forms • NYC Core Framework</title>
+
+    <!-- Font Awesome Kit -->
+    <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
+
+    <!-- NYC Core Stylesheet -->
+    <link rel="stylesheet" href="./dist/css/nyc_core.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="overflow-hidden">
+
+            <div class="margin-y-5">
+
+                <div class="container text-align-center margin-y-4">
+                    <h1>Forms</h1>
+                </div> 
+
+                <div class="container medium margin-y-4">
+
+                    <form novalidate>
+
+                        <div class="alert alert--warn margin-y-3" data-alert="form-errors">
+
+                            <div class="alert__head h5">
+                                <p>
+                                    <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                    <span class="alert__head__title">Confirm Title</span>
+                                </p>
+                            </div>
+
+                            <div class="alert__body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                    <a href="#1">quos natus aliquam</a>.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="form-entry">
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <label class="form-entry__field">
+                                <input class="form-entry__field__input" type="text" id="firstName" name="first_name" required>
+                                <span class="form-entry__field__label">First Name</span>
+                            </label>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <label class="form-entry__field">
+                                <span class="form-entry__field__label">Last Name</span>
+                                <input class="form-entry__field__input" type="text" name="user_name" required>
+                            </label>
+                            
+                        </div>
+                        <!-- .form-entry -->
+                        
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+                                <span class="form-entry__field__label">Email Address</span>
+                                <input class="form-entry__field__input" type="email" name="email_address">
+                            </label>
+                        
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry form-entry--has-icon">
+                            <span class="form-entry__icon">
+                                <span class="fa fa-lock"></span>
+                            </span>
+                            <label class="form-entry__field">
+                                <span class="form-entry__field__label">Password</span>
+                                <input class="form-entry__field__input" type="password" name="password" required>
+                            </label>
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry form-entry--number">
+
+                            <div class="form-entry__field" aria-live="assertive">
+
+                                <label class="form-entry__field__label">Quantity</label>
+                                <input class="form-entry__field__input" type="number" name="quantity" min="0" max="20" value="0">
+                                
+                                <div class="form-entry__field__action">
+                                    <button class="btn btn--icon-only" data-type="subtract" title="Subtract" type="button">
+                                        <span class="screen-reader-only">Subtract</span>
+                                        <span class="fas fa-minus"></span>
+                                    </button>
+                                    <button class="btn btn--icon-only" data-type="add" title="Add" type="button">
+                                        <span class="screen-reader-only">Add</span>
+                                        <span class="fas fa-plus"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry form-entry--date">
+
+                            <div class="form-entry__field">
+
+                                <label class="form-entry__field__label">Date</label>
+                                <input class="form-entry__field__input" type="text" name="date" placeholder="mm/dd/yyyy">
+
+                                <div class="form-entry__field__action">
+                                    <button class="btn btn--icon-only" title="Date" type="button" aria-label="Choose Date">
+                                        <span class="screen-reader-only">Date</span>
+                                        <span class="fas fa-calendar-alt"></span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="datepicker box-shadow-2" aria-modal="true" aria-labelledby="id-dialog-label" role="dialog">
+                                <div class="datepicker__header">
+                                    <ul class="nav nav--horizontal">
+                                        <li>
+                                            <button class="btn btn--icon-only prevYear" type="button" aria-label="previous year">
+                                                <span class="screen-reader-only">Previous Year</span>
+                                                <span class="fas fa-angle-double-left" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only prevMonth" type="button" aria-label="previous month">
+                                                <span class="screen-reader-only">Previous Month</span>
+                                                <span class="fas fa-angle-left" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <h2 class="h6 monthYear" id="id-dialog-label" aria-live="polite">
+                                                Month Year
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only nextMonth" type="button" aria-label="next month">
+                                                <span class="screen-reader-only">Next Month</span>
+                                                <span class="fas fa-angle-right" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="btn btn--icon-only nextYear" type="button" aria-label="next year">
+                                                <span class="screen-reader-only">Next Year</span>
+                                                <span class="fas fa-angle-double-right" aria-hidden="true"></span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <table class="table dates" role="grid" aria-labelledby="id-dialog-label">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" abbr="Sunday">
+                                                Su
+                                            </th>
+                                            <th scope="col" abbr="Monday">
+                                                Mo
+                                            </th>
+                                            <th scope="col" abbr="Tuesday">
+                                                Tu
+                                            </th>
+                                            <th scope="col" abbr="Wednesday">
+                                                We
+                                            </th>
+                                            <th scope="col" abbr="Thursday">
+                                                Th
+                                            </th>
+                                            <th scope="col" abbr="Friday">
+                                                Fr
+                                            </th>
+                                            <th scope="col" abbr="Saturday">
+                                                Sa
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Calendar Generated Dynamically -->
+                                    </tbody>
+                                </table>
+
+                                <div class="dialogButtonGroup">
+                                    <button class="dialogButton" value="cancel">
+                                        Cancel
+                                    </button>
+                                    <button class="dialogButton" value="ok">
+                                        OK
+                                    </button>
+                                </div>
+                                <div class="message" aria-live="polite">
+                                    Test
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+                        
+                            <div class="form-entry__field">
+
+                                <label class="form-entry__field__label">Search</label>
+                                <input class="form-entry__field__input" type="text">
+
+                                <div class="form-entry__field__action">
+                                    <button class="btn btn--icon-only" title="Search" type="button">
+                                        <span class="screen-reader-only">Search</span>
+                                        <span class="fas fa-search"></span>
+                                    </button>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        <!-- .form-entry -->
+                        
+                        <div class="form-entry">
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <div class="form-entry__field">
+                                <div class="form-entry__field__input-wrap">
+                                    <select class="form-entry__field__input" id="select-borough" name="Boroughs" required>
+                                        <option value="">Borough</option>
+                                        <option value="Bronx">Bronx</option>
+                                        <option value="Brooklyn">Brooklyn</option>
+                                        <option value="Manhattan">Manhattan</option>
+                                        <option value="Staten Island">Staten Island</option>
+                                        <option value="Queens">Queens</option>
+                                    </select>
+                                    <label class="form-entry__field__label" for="select-borough">Borough</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+                                <textarea class="form-entry__field__input" rows="4" aria-describedby="message-description"></textarea>
+                                <span class="form-entry__field__label">Message</span>
+                            </label>
+
+                            <small class="form-entry__assistance" id="message-description">
+                                Description text
+                            </small>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry display-none">
+
+                            <div class="form-entry__field--upload">
+                                <label class="screen-reader-only" hidden>
+                                    <input type="file" accept="image/png, image/jpeg">
+                                </label>
+                                <button class="form-entry__field__btn cool-btn" type="button">
+                                    <span class="fas fa-file-upload btn__icon"></span>
+                                    <span class="btn__text">Upload File</span>
+                                </button>
+                                <span class="field__uploads cool-uploads">No file chosen, yet.</span>
+                            </div>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <fieldset class="form-entry" aria-labelledby="checkbox-single-label">
+
+                            <legend class="label" id="checkbox-single-label">
+                                Select a single option
+                            </legend>
+
+                             <small class="form-entry__feedback">
+                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                 <strong>Error message description</strong>
+                                 <span>How to fix instructions</span>
+                             </small>
+
+                            <label class="form-entry__options__check">
+                                <input type="checkbox" name="checkbox-single-example">
+                                <span class="checkbox__label">
+                                    Option One
+                                </span>
+                            </label>
+                    
+                        </fieldset>
+                        <!-- .form-entry -->
+
+                        <fieldset class="form-entry" aria-labelledby="checkbox-group-label">
+
+                            <legend class="label" id="checkbox-group-label">
+                                Select multiple options
+                            </legend>
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <ul class="form-entry__options">
+
+                                <li>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option One
+                                        </span>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Two
+                                        </span>
+                                    </label>
+                                </li>
+                                
+                                <li>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Three
+                                        </span>
+                                    </label>
+                                </li>
+
+                            </ul>
+
+                        </fieldset>
+                        <!-- .form-entry -->
+
+                        <fieldset class="form-entry" aria-labelledby="radio-group-label">
+
+                            <legend class="label" id="radio-group-label">
+                                Select a single option
+                            </legend>
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <ul class="form-entry__options">
+
+                                <li>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option One
+                                        </span>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option Two
+                                        </span>
+                                    </label> 
+                                </li>
+
+                                <li>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option Three
+                                        </span>
+                                    </label>
+                                </li>
+
+                            </ul>
+
+                        </fieldset>
+                        <!-- .form-entry -->
+
+                        <fieldset class="form-entry" aria-labelledby="radio-group-02-label">
+
+                            <legend class="label" id="radio-group-02-label">
+                                Select a single option
+                            </legend>
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <ul class="form-entry__options options--divider">
+
+                                <li>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option One
+                                        </span>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option Two
+                                        </span>
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option Three
+                                        </span>
+                                    </label>
+                                </li>
+
+                            </ul>
+
+                        </fieldset>
+                        <!-- .form-entry -->
+
+                        <button class="btn display-block rounded" type="submit">Submit</button>
+
+                    </form>
+                    <!-- .needs-validation -->
+
+                </div>
+                <!-- .container -->
+
+            </div>
+            <!-- .margin-y-4 -->
+
+        </div>
+        <!-- .container -->
+        
+    </main>
+    
+    <footer class="container theme-dark text-align-center padding-y-4">
+        <a href="#" data-scroll="top">To Top</a>
+    </footer>
+    
+    <!-- NYC Core Javascript -->
+    <script src="./dist/js/nyc_core.js"></script>
+
+</body>
+
+</html>

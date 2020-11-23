@@ -25,11 +25,11 @@
     <!-- NYC Font from Adobe -->
     <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
 
+    <!-- NYC Core Icons -->
+    <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
+
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
-
-
-    <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
 
     <style>
         :root {
@@ -254,13 +254,32 @@
 
                             </div>
 
-                            <div class="form-entry">
+                            <div class="grid grid--gap-3 grid--cells-6--md">
+
+                                <div class="grid__cell form-entry">
+
+                                    <label class="form-entry__field">
+                                        <span class="form-entry__field__label">First Name</span>
+                                        <span class="form-entry__field__input">
+                                            <span class="nyc_icon_warn"></span>
+                                            <input type="text" id="firstName" name="first_name" required>
+                                        </span>
+                                    </label>
+                                    
+                                    <small class="form-entry__feedback">
+                                        <strong>Error message description</strong>
+                                        <span>How to fix instructions</span>
+                                    </small>
+
+                                </div>
+
+                                <div class="grid__cell form-entry">
 
                                 <label class="form-entry__field">
-                                    <span class="form-entry__field__label">First Name</span>
+                                    <span class="form-entry__field__label">Last Name</span>
                                     <span class="form-entry__field__input">
                                         <span class="nyc_icon_warn"></span>
-                                        <input type="text" id="firstName" name="first_name" required>
+                                        <input type="text" id="lastName" name="last_name" required>
                                     </span>
                                 </label>
                                 
@@ -269,8 +288,9 @@
                                     <span>How to fix instructions</span>
                                 </small>
 
+                                </div>
+
                             </div>
-                            <!-- .form-entry -->
 
                             <div class="form-entry">
 
@@ -322,51 +342,51 @@
                             </div>
                             <!-- .form-entry -->
 
-                             <fieldset class="form-entry" aria-labelledby="checkbox-group-label">
+                            <fieldset class="form-entry" aria-labelledby="checkbox-group-label">
 
-                            <legend class="label" id="checkbox-group-label">
-                                Select multiple options
-                            </legend>
+                                <legend class="label" id="checkbox-group-label">
+                                    Select multiple options
+                                </legend>
 
-                            <small class="form-entry__feedback">
-                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                <strong>Error message description</strong>
-                                <span>How to fix instructions</span>
-                            </small>
+                                <small class="form-entry__feedback">
+                                    <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
 
-                            <ul class="form-entry__options">
+                                <ul class="form-entry__options">
 
-                                <li>
-                                    <label class="form-entry__options__check">
-                                        <input type="checkbox" name="checkbox-group-example">
-                                        <span class="checkbox__label">
-                                            Option One
-                                        </span>
-                                    </label>
-                                </li>
+                                    <li>
+                                        <label class="form-entry__options__check">
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="checkbox__label">
+                                                Option One
+                                            </span>
+                                        </label>
+                                    </li>
 
-                                <li>
-                                    <label class="form-entry__options__check">
-                                        <input type="checkbox" name="checkbox-group-example">
-                                        <span class="checkbox__label">
-                                            Option Two
-                                        </span>
-                                    </label>
-                                </li>
-                                
-                                <li>
-                                    <label class="form-entry__options__check">
-                                        <input type="checkbox" name="checkbox-group-example">
-                                        <span class="checkbox__label">
-                                            Option Three
-                                        </span>
-                                    </label>
-                                </li>
+                                    <li>
+                                        <label class="form-entry__options__check">
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="checkbox__label">
+                                                Option Two
+                                            </span>
+                                        </label>
+                                    </li>
+                                    
+                                    <li>
+                                        <label class="form-entry__options__check">
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="checkbox__label">
+                                                Option Three
+                                            </span>
+                                        </label>
+                                    </li>
 
-                            </ul>
+                                </ul>
 
-                        </fieldset>
-                        <!-- .form-entry -->
+                            </fieldset>
+                            <!-- .form-entry -->
 
                             <button class="btn theme-primary display-block rounded-pill" type="submit">Submit</button>
 
