@@ -216,15 +216,15 @@ form > .btn {
 // C. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
-.form-entry legend {
-    font-weight: bold;
-    margin-bottom: var(--spacer-2);
+fieldset {
+    &.form-entry > legend {
+        font-weight: bold;
+        margin-bottom: var(--spacer-2);
+    }
 }
 
 .form-entry__options {
     --gap-size: 0.5em;
-
-    // @extend %list-nav-style !optional;
 
     clear: both;
     
@@ -312,7 +312,7 @@ form > .btn {
     }
 }
 
-// Checkbox, Radio Shared Styles
+// Shared Styles
 
 .form-entry__options__radio,
 .form-entry__options__check {
@@ -349,12 +349,11 @@ form > .btn {
         font-size: 125%;
         margin-top: -0.125em;
 
-        @extend .fontAwesome !optional;
         @extend .nyc_icon_font !optional;
     }
 }
 
-// Unchecked
+// Unchecked and Checked States
 
 .form-entry__options__check > input ~ .checkbox__label::before {
     content: "\e946";
@@ -372,7 +371,7 @@ form > .btn {
     content: "\e949";
 }
 
-// Focus
+// Focus State
 
 .form-entry__options__radio > input:focus ~ .radio__label,
 .form-entry__options__check > input:focus ~ .checkbox__label {
@@ -389,6 +388,7 @@ form > .btn {
     }
 }
 
+// RTL
 
 [dir="rtl"] {
     .form-entry__options__radio > .radio__label::before,
@@ -400,5 +400,4 @@ form > .btn {
         left: unset;
         right: 0;
     }
-
 }
