@@ -385,6 +385,7 @@ fieldset {
 
 .form-entry__options__radio > input:checked ~ .radio__label,
 .form-entry__options__check > input:checked ~ .checkbox__label {
+    // color: var(--primary);
     &::before{
         opacity: 1;
     }
