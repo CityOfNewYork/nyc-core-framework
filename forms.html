@@ -124,56 +124,10 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <fieldset class="form-entry" aria-labelledby="checkbox-group-label">
+                        <fieldset class="form-entry">
 
-                            <legend class="label" id="checkbox-group-label">
-                                Select multiple options
-                            </legend>
-
-                            <small class="form-entry__feedback">
-                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                <strong>Error message description</strong>
-                                <span>How to fix instructions</span>
-                            </small>
-
-                            <div class="form-entry__options">
-
-                                <div>
-                                    <label class="form-entry__options__check">
-                                        <input type="checkbox" name="Select multiple options">
-                                        <span class="checkbox__label">
-                                            Option One
-                                        </span>
-                                    </label>
-                                </div>
-
-                                <div>
-                                    <label class="form-entry__options__check">
-                                        <input type="checkbox" name="Select multiple options">
-                                        <span class="checkbox__label">
-                                            Option Two
-                                        </span>
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-entry__options__check">
-                                        <input type="checkbox" name="Select multiple options">
-                                        <span class="checkbox__label">
-                                            Option Three
-                                        </span>
-                                    </label>
-                                </div>
-
-                            </div>
-
-                        </fieldset>
-                        <!-- .form-entry -->
-
-                        <fieldset class="form-entry" aria-labelledby="radio-group-label">
-
-                            <legend class="label" id="radio-group-label">
-                                Select a single option
+                            <legend class="form-entry__field__label">
+                                What is the priority of this request?
                             </legend>
 
                             <small class="form-entry__feedback">
@@ -186,27 +140,27 @@
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="radio-group-example" required>
+                                        <input type="radio" name="priority-of-request" checked required>
                                         <span class="radio__label">
-                                            Option One
+                                            High
                                         </span>
                                     </label>
                                 </div>
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="radio-group-example" required>
+                                        <input type="radio" name="priority-of-request" required>
                                         <span class="radio__label">
-                                            Option Two
+                                            Medium
                                         </span>
                                     </label> 
                                 </div>
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="radio-group-example" required>
+                                        <input type="radio" name="priority-of-request" required>
                                         <span class="radio__label">
-                                            Option Three
+                                            Low
                                         </span>
                                     </label>
                                 </div>
@@ -269,6 +223,124 @@
                             </div>
                         
                         </div>
+                        <!-- .form-entry -->
+
+                    </form>
+
+                    <hr class="margin-y-4">
+
+                    <form class="font-size-md">
+
+                        <div class="form-entry">
+                            
+                            <p class="form-entry__field__label">
+                                Single Checkbox
+                            </p>
+
+                            <div class="form-entry__options options--divider border">
+                                <div>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-single-example" required>
+                                        <span class="checkbox__label">
+                                            Option One
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                        <fieldset class="form-entry">
+
+                            <legend class="form-entry__field__label">
+                                Checkbox Group
+                            </legend>
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <div class="form-entry__options options--divider border">
+
+                                <div>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option One
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Two
+                                        </span>
+                                    </label>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Three
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+                        <!-- .form-entry -->
+
+                        <fieldset class="form-entry">
+
+                            <legend class="form-entry__field__label">
+                                Radio Group
+                            </legend>
+
+                            <small class="form-entry__feedback">
+                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                <strong>Error message description</strong>
+                                <span>How to fix instructions</span>
+                            </small>
+
+                            <div class="form-entry__options options--divider border">
+
+                                <div>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option One
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option Two
+                                        </span>
+                                    </label> 
+                                </div>
+
+                                <div>
+                                    <label class="form-entry__options__radio">
+                                        <input type="radio" name="radio-group-example" required>
+                                        <span class="radio__label">
+                                            Option Three
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </fieldset>
                         <!-- .form-entry -->
 
                     </form>

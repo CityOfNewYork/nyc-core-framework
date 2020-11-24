@@ -241,6 +241,8 @@ fieldset {
 
 .form-entry__options.options--divider {
 
+    border-radius: var(--form-field-border-radius);
+
     > div {
         padding: 0.5em var(--spacer-2);
         position: relative;
