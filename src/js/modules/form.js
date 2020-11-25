@@ -6,7 +6,7 @@ export default class Form {
 
     constructor() {
 
-        const formList = document.querySelectorAll("form");
+        const formList = document.querySelectorAll("form[novalidate]");
 
         formList.forEach((form) => {
 

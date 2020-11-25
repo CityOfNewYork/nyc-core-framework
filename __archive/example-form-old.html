@@ -213,30 +213,50 @@
     
                         </div>
     
-                        <div class="form-entry">
+                        <div class="grid grid--gap-3 grid--cells-6--md">
     
-                            <label class="form-entry__field">
-                                <span class="form-entry__field__label">Full Name</span>
-                                <span class="form-entry__field__input">
-                                    <span class="nyc_icon_warn"></span>
-                                    <input type="text" id="FullName" name="Full_name" required>
-                                </span>
-                            </label>
-
-                            <small class="form-entry__feedback">
-                                <strong>Error message description</strong>
-                                <span>How to fix instructions</span>
-                            </small>
+                            <div class="grid__cell form-entry">
+    
+                                <label class="form-entry__field">
+                                    <span class="form-entry__field__label">First Name</span>
+                                    <span class="form-entry__field__input">
+                                        <span class="nyc_icon_warn"></span>
+                                        <input type="text" id="firstName" name="first_name" required>
+                                    </span>
+                                </label>
+    
+                                <small class="form-entry__feedback">
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
+    
+                            </div>
+    
+                            <div class="grid__cell form-entry">
+    
+                                <label class="form-entry__field">
+                                    <span class="form-entry__field__label">Last Name</span>
+                                    <span class="form-entry__field__input">
+                                        <span class="nyc_icon_warn"></span>
+                                        <input type="text" id="lastName" name="last_name" required>
+                                    </span>
+                                </label>
+    
+                                <small class="form-entry__feedback">
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
+    
+                            </div>
     
                         </div>
-                        <!-- .form-entry -->
     
                         <div class="form-entry">
     
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Email Address</span>
                                 <span class="form-entry__field__input">
-                                    <input type="email" name="email_address" required>
+                                    <input type="email" name="email_address">
                                 </span>
                             </label>
     
@@ -281,49 +301,49 @@
                         </div>
                         <!-- .form-entry -->
     
-                        <fieldset class="form-entry">
-
-                            <legend class="form-entry__field__label">
-                                What is the priority of this request?
+                        <fieldset class="form-entry" aria-labelledby="checkbox-group-label" tabindex="1">
+    
+                            <legend class="label" id="checkbox-group-label">
+                                Select multiple options
                             </legend>
-
+    
                             <small class="form-entry__feedback">
                                 <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
                                 <strong>Error message description</strong>
                                 <span>How to fix instructions</span>
                             </small>
-
-                            <div class="form-entry__options options--divider border">
-
+    
+                            <div class="form-entry__options">
+    
                                 <div>
-                                    <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" checked required>
-                                        <span class="radio__label">
-                                            High
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option One
                                         </span>
                                     </label>
                                 </div>
-
+    
                                 <div>
-                                    <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" required>
-                                        <span class="radio__label">
-                                            Medium
-                                        </span>
-                                    </label> 
-                                </div>
-
-                                <div>
-                                    <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" required>
-                                        <span class="radio__label">
-                                            Low
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Two
                                         </span>
                                     </label>
                                 </div>
-
+    
+                                <div>
+                                    <label class="form-entry__options__check">
+                                        <input type="checkbox" name="checkbox-group-example">
+                                        <span class="checkbox__label">
+                                            Option Three
+                                        </span>
+                                    </label>
+                                </div>
+    
                             </div>
-
+    
                         </fieldset>
                         <!-- .form-entry -->
     
