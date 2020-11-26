@@ -217,17 +217,15 @@
     
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Full Name</span>
+                                <small class="form-entry__feedback">
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
                                 <span class="form-entry__field__input">
-                                    <span class="nyc_icon_warn"></span>
-                                    <input type="text" id="FullName" name="Full_name" required>
+                                    <input type="text" id="FullName" name="Full_name" aria-required="true">
                                 </span>
                             </label>
 
-                            <small class="form-entry__feedback">
-                                <strong>Error message description</strong>
-                                <span>How to fix instructions</span>
-                            </small>
-    
                         </div>
                         <!-- .form-entry -->
     
@@ -235,8 +233,12 @@
     
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Email Address</span>
+                                <small class="form-entry__feedback">
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
                                 <span class="form-entry__field__input">
-                                    <input type="email" name="email_address" required>
+                                    <input type="email" name="email_address" aria-required="true">
                                 </span>
                             </label>
     
@@ -247,9 +249,12 @@
     
                             <div class="form-entry__field">
                                 <label class="form-entry__field__label" for="select-borough-1">Borough</label>
+                                <small class="form-entry__feedback">
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
                                 <span class="form-entry__field__input select">
-                                    <span class="nyc_icon_warn"></span>
-                                    <select id="select-borough-1" name="Boroughs" required>
+                                    <select id="select-borough-1" name="Boroughs" aria-required="true">
                                         <option value="">Select</option>
                                         <option value="Bronx">Bronx</option>
                                         <option value="Brooklyn">Brooklyn</option>
@@ -258,11 +263,6 @@
                                         <option value="Queens">Queens</option>
                                     </select>
                                 </span>
-    
-                                <small class="form-entry__feedback">
-                                    <strong>Error message description</strong>
-                                    <span>How to fix instructions</span>
-                                </small>
     
                             </div>
     
@@ -297,7 +297,7 @@
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" checked required>
+                                        <input type="radio" name="priority-of-request" checked>
                                         <span class="radio__label">
                                             High
                                         </span>
@@ -306,7 +306,7 @@
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" required>
+                                        <input type="radio" name="priority-of-request">
                                         <span class="radio__label">
                                             Medium
                                         </span>
@@ -315,7 +315,7 @@
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" required>
+                                        <input type="radio" name="priority-of-request">
                                         <span class="radio__label">
                                             Low
                                         </span>
@@ -327,7 +327,9 @@
                         </fieldset>
                         <!-- .form-entry -->
     
-                        <button class="btn theme-primary display-block rounded-pill" type="submit">Submit</button>
+                        <button class="btn theme-primary display-block rounded-pill" type="submit">
+                            Send Request
+                        </button>
     
                     </form>
 
