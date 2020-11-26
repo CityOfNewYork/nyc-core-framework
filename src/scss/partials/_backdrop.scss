@@ -60,12 +60,13 @@ In this file:
     top: 0;
     right: 0;
     width: auto;
+    z-index: 500;
 
     background-color: inherit;
 
     p {
         font-size: var(--font-size-sm);
-        padding: .25rem .75rem;
+        padding: 0.25rem 0.75rem;
     }
 }
 

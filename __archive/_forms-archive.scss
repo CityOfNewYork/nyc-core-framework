@@ -307,7 +307,7 @@ input[type="number"] {
 
 .goog-te-gadget {
     color: inherit !important;
-    font-size: var(--font-size-md) !important;
+    font-size: var(--font-size-sm) !important;
     text-align: center;
     
     > div, 
@@ -635,7 +635,7 @@ input[type="number"] {
   margin-top: var(--spacer-2);
   background-color: white;
 
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   
   display: none;
 }
