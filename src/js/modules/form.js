@@ -102,7 +102,7 @@ export default class Form {
             formEntryInput.addEventListener("focusout", focusOut);
 
             function focusIn() {
-                this.closest(".form-entry").classList.add("active");
+                 this.closest(".form-entry").classList.add("active");
                 console.warn("I'm in!");
             }
 
