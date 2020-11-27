@@ -415,10 +415,12 @@
 
     <div class="modal" id="global-search">
 
-        <div class="modal__content medium box-shadow-2">
+        <div class="modal__content medium box-shadow-2 rounded">
 
             <header class="modal__content__head border-bottom">
-                <h2 class="h6" id="modal-search-title">Website Search</h2>
+                <h2 class="h6" id="modal-search-title">
+                    Search This Website
+                </h2>
                 <button class="btn btn--icon-only" data-modal-close>
                     <span class="screen-reader-only">Close Modal</span>
                     <span class="nyc_icon_close"></span>
@@ -429,21 +431,18 @@
                 <div class="form-entry">
 
                     <div class="form-entry__field">
-
-                        <label class="form-entry__field__label">Enter Search Phrase</label>
-                        <input class="form-entry__field__input" type="text" name="global_search">
-
-                        <div class="form-entry__field__action">
-                            <button class="btn btn--icon-only" title="Search" type="button">
-                                <span class="screen-reader-only">Search</span>
-                                <span class="nyc_icon_search"></span>
+                        <label class="form-entry__field__label screen-reader-only" for="search-example">Search</label>
+                        <span class="form-entry__field__input">
+                            <input type="text" name="search-example" id="search-example" placeholder="Search">
+                            <button class="btn btn--icon-only" type="button" aria-label="Home">
+                                <span class="nyc_icon_search" aria-hidden="true"></span>
                             </button>
-                        </div>
-
+                        </span>
                     </div>
-
+                
                 </div>
                 <!-- .form-entry -->
+
             </div>
 
         </div>
@@ -490,34 +489,34 @@
 
                     <ul class="nav">
                         <li>
-                            <a class="lang-select" href="#" data-lang="ar">عربى</a>
+                            <button data-lang="ar">عربى</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="bn">বাঙালি</a>
+                            <button data-lang="bn">বাঙালি</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="zh-CN">中文</a>
+                            <button data-lang="zh-CN">中文</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="es">Español</a>
+                            <button data-lang="es">Español</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="fr">français</a>
+                            <button data-lang="fr">français</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="ht">Kreyòl Ayisyen</a>
+                            <button data-lang="ht">Kreyòl Ayisyen</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="ko">한국어</a>
+                            <button data-lang="ko">한국어</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="pl">Polskie</a>
+                            <button data-lang="pl">Polskie</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="ru">русский</a>
+                            <button data-lang="ru">русский</button>
                         </li>
                         <li>
-                            <a class="lang-select" href="#" data-lang="ur">اردو</a>
+                            <button data-lang="ur">اردو</button>
                         </li>
                     </ul>
 

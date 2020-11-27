@@ -44,7 +44,5 @@ new Backdrop();
 import Form from "./modules/form.js";
 new Form();
 
-// import DetectAutofill from "./modules/detect-autofill.js";
-// new DetectAutofill();
-
-// document.designMode = "on";
+import GoogleTranslateButtons from "./modules/google-translate-buttons.js";
+new GoogleTranslateButtons();
