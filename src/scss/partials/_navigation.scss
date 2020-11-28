@@ -100,6 +100,7 @@ In this file:
 }
 
 .primary-nav__menu {
+    
     > ul > li {
         position: relative;
     }
@@ -107,6 +108,11 @@ In this file:
     > ul > li > a {
         @extend %expanded-link;
     }
+}
+
+.primary-nav__buttons {
+    padding-left: calc(var(--primary-nav-padding) * 0.5);
+    padding-right: calc(var(--primary-nav-padding) * 0.5);
 }
 
 ////////////////////////////////////////
