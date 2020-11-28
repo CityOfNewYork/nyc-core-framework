@@ -17,6 +17,7 @@ In this file:
     position: relative;
     font-size: 1.5em !important;
     line-height: inherit !important;
+    text-decoration: none !important;
     pointer-events: none;
 
     &:not([class*="_subway-"]) {
