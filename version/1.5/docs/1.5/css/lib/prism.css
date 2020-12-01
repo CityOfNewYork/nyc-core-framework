@@ -14,7 +14,7 @@ pre[class*="language-"] {
 	color: #ccc;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-sm);
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -239,7 +239,7 @@ div.code-toolbar > .toolbar button {
 
 
 .toolbar-item {
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-sm);
 }
 
 .toolbar-item:nth-child(1){

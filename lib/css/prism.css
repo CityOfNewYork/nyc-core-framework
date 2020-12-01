@@ -14,7 +14,7 @@ pre[class*="language-"] {
 	color: #ccc;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-sm);
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -47,7 +47,7 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"]:not([class*="hide-toolbar"]){
-	padding-top: var(--s5);
+	padding-top: var(--spacer-5);
 }
 
 /* Inline code */
@@ -160,7 +160,7 @@ pre[data-line] {
 	left: 0;
 	width: 100%;
 	padding: inherit 0;
-	margin-top: var(--s5); /* Same as .prism’s padding-top */
+	margin-top: var(--spacer-5); /* Same as .prism’s padding-top */
 
 	/* background-color: green !important ; */
 	background: linear-gradient(to right, hsla(0, 0%, 100%, .175), hsla(0, 0%, 100%, 0));
@@ -205,14 +205,14 @@ div.code-toolbar {
 div.code-toolbar > .toolbar {
 	display: flex;
 	justify-content: space-between;
-	padding: var(--s2);
+	padding: var(--spacer-2);
 
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	
-	border-bottom ottom: 1px solid hsla(0, 0%, 100%, .125) !important;
+	border-bottom: 1px solid hsla(0, 0%, 100%, .125) !important;
 }
 
 div.code-toolbar > .toolbar a, 
@@ -239,7 +239,7 @@ div.code-toolbar > .toolbar button {
 
 
 .toolbar-item {
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-sm);
 }
 
 .toolbar-item:nth-child(1){
