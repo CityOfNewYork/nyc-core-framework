@@ -16,8 +16,8 @@ In this file:
 [class*="nyc_icon_"] {
     position: relative;
     font-size: 1.25em !important;
-    line-height: inherit !important;
-    text-decoration: none !important;
+    line-height: 0.75;
+    vertical-align: -.125em;
     pointer-events: none;
 
     &:not([class*="_subway-"]) {
@@ -25,10 +25,9 @@ In this file:
     }
 }
 
-.nyc_icon_font{
+.nyc_icon_font {
   font-family: 'NYC-Core-Icons';
 }
-
 
 .nyc_icon_loading.rotate {
   display: inline-block;

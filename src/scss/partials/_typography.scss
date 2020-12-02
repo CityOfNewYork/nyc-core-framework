@@ -37,10 +37,11 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
     --base-font-size: 22px;
     --base-line-height: 1.5;
 
-    --font-size-sm: calc(var(--base-font-size) * 0.75);  // ~ 18px
+    --font-size-sm: calc(var(--base-font-size) * 0.7);  // ~ 18px
+    --font-size-md: calc(var(--base-font-size) * 0.8);  // ~ 18px
     --font-size-rg: calc(var(--base-font-size) * 1);    // = 22px
-    --font-size-lg: calc(var(--base-font-size) * 1.25);  // ~ 26px
-    --font-size-xl: calc(var(--base-font-size) * 1.5);  // ~ 30px
+    --font-size-lg: calc(var(--base-font-size) * 1.2);  // ~ 26px
+    --font-size-xl: calc(var(--base-font-size) * 1.4);  // ~ 30px
 
     // Headers
 
@@ -81,6 +82,10 @@ $font-sizes: (
 
     sm: (
         size: var(--font-size-sm)
+    ),
+
+    md: (
+        size: var(--font-size-md)
     ),
     
     rg: (
