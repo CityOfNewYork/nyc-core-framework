@@ -146,15 +146,15 @@
     const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
     const coreIconsGrid = document.getElementById("coreIconsGrid");
 
-    let coreIcons = [];
+    let coreIconsArray = [];
     
     const loadCoreIcons = async () => {
         try {
             const response = await fetch(coreIconsData);
             const coreIconData = await response.json();
 
-            coreIcons = coreIconData.icons;
-            displayIcons(coreIcons);
+            coreIconsArray = coreIconData.icons;
+            displayIcons(coreIconsArray);
         
         } catch (err) {
             console.error(err);
@@ -163,16 +163,22 @@
     
     const displayIcons = (icons) => {
 
+
         const iconHTML = icons.map((iconArray) => {
+
+            // console.log("iconArray = ", iconArray);
+
+            let className = iconArray.properties.name;
+
             return `
             <div class="grid__cell">
                 <div class="aspect-ratio--1by1 border margin-bottom-1">
                     <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
-                        <span class="nyc_icon_${iconArray.properties.name}" style="font-size: 225% !important"></span>
+                        <span class="nyc_icon_${className}" style="font-size: 225% !important"></span>
                     </div>
                 </div>
                 <p class="font-size-md">
-                    ${iconArray.properties.name}
+                    ${className}
                 </p>
             </div>
             `;
