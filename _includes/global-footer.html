@@ -141,13 +141,25 @@
 {% if page.title == 'Icons' %}
 
 <script>
-    console.log("I am on the icons page");
 
     const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
+    const searchBar = document.getElementById('core-icon-search');
     const coreIconsGrid = document.getElementById("coreIconsGrid");
 
     let coreIconsArray = [];
-    
+
+    searchBar.addEventListener('keyup', (e) => {
+        const searchString = e.target.value.toLowerCase();
+        const filteredIcons = coreIconsArray.filter((iconArray) => {
+            return (
+                iconArray.properties.name.toLowerCase().includes(searchString) ||
+                iconArray.icon.tags.map((tag) => tag.toLowerCase()).includes(searchString)
+            );
+        });
+
+        displayIcons(filteredIcons);        
+    });
+
     const loadCoreIcons = async () => {
         try {
             const response = await fetch(coreIconsData);
@@ -163,12 +175,12 @@
     
     const displayIcons = (icons) => {
 
-
         const iconHTML = icons.map((iconArray) => {
 
             // console.log("iconArray = ", iconArray);
 
             let className = iconArray.properties.name;
+            let tags = iconArray.icon.tags;
 
             return `
             <div class="grid__cell">
