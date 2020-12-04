@@ -1,0 +1,16 @@
+{% if include.icon_name %}
+    {% assign icon_name = include.icon_name %}
+{% else %}
+    {% assign icon_name = 'none' %}
+{% endif %}
+
+<div class="grid__cell">
+    <div class="aspect-ratio--1by1 border margin-bottom-1">
+        <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+            <span class="nyc_icon_{{ icon_name }}" style="font-size: 225% !important"></span>
+        </div>
+    </div>
+    <p class="font-size-md">
+        {{ icon_name }}
+    </p>
+</div>
