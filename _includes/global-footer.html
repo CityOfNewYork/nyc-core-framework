@@ -137,3 +137,52 @@
 </script>
 
 {% endif %}
+
+{% if page.title == 'Icons' %}
+
+<script>
+    console.log("I am on the icons page");
+
+    const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
+    const coreIconsGrid = document.getElementById("coreIconsGrid");
+
+    let coreIcons = [];
+    
+    const loadCoreIcons = async () => {
+        try {
+            const response = await fetch(coreIconsData);
+            const coreIconData = await response.json();
+
+            coreIcons = coreIconData.icons;
+            displayIcons(coreIcons);
+        
+        } catch (err) {
+            console.error(err);
+        }
+    };
+    
+    const displayIcons = (icons) => {
+
+        const iconHTML = icons.map((iconArray) => {
+            return `
+            <div class="grid__cell">
+                <div class="aspect-ratio--1by1 border margin-bottom-1">
+                    <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+                        <span class="nyc_icon_${iconArray.properties.name}" style="font-size: 225% !important"></span>
+                    </div>
+                </div>
+                <p class="font-size-md">
+                    ${iconArray.properties.name}
+                </p>
+            </div>
+            `;
+        }).join('');
+
+        coreIconsGrid.innerHTML = iconHTML;
+    };
+
+    loadCoreIcons();
+
+</script>
+
+{% endif %}
