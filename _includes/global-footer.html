@@ -152,8 +152,8 @@
         const searchString = e.target.value.toLowerCase();
         const filteredIcons = coreIconsArray.filter((iconArray) => {
             return (
-                iconArray.properties.name.toLowerCase().includes(searchString) ||
-                iconArray.icon.tags.map((tag) => tag.toLowerCase()).includes(searchString)
+                iconArray.properties.name.toLowerCase().includes(searchString) /* ||
+                iconArray.icon.tags.map((tag) => tag).includes(searchString) */
             );
         });
 
