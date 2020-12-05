@@ -148,12 +148,12 @@
 
     let coreIconsArray = [];
 
-    searchBar.addEventListener('keyup', (e) => {
-        const searchString = e.target.value.toLowerCase();
+    searchBar.addEventListener('keyup', (event) => {
+        const searchString = event.target.value.toLowerCase();
         const filteredIcons = coreIconsArray.filter((iconArray) => {
             return (
-                iconArray.properties.name.toLowerCase().includes(searchString) /* ||
-                iconArray.icon.tags.map((tag) => tag).includes(searchString) */
+                iconArray.properties.name.toLowerCase().includes(searchString) ||
+                iconArray.icon.tags.toString().includes(searchString)
             );
         });
 
@@ -178,9 +178,9 @@
         const iconHTML = icons.map((iconArray) => {
 
             // console.log("iconArray = ", iconArray);
+            // let tags = iconArray.icon.tags;
 
             let className = iconArray.properties.name;
-            let tags = iconArray.icon.tags;
 
             return `
             <div class="grid__cell">
