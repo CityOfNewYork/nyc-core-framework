@@ -140,6 +140,8 @@
 
 {% if page.title == 'Icons' %}
 
+<script defer src="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/svgxuse.js"></script>
+
 <script>
 
     const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
@@ -177,20 +179,35 @@
 
         const iconHTML = icons.map((iconArray) => {
 
-            // console.log("iconArray = ", iconArray);
+            console.log("iconArray = ", iconArray);
             // let tags = iconArray.icon.tags;
 
-            let className = iconArray.properties.name;
+            let name = iconArray.properties.name;
+            let tags = iconArray.icon.tags;
+            let paths = iconArray.icon.paths;
+
+            console.log("iconTags = ", tags);
+            console.log("iconPaths = ", paths);
+
+            let svgPaths = paths.map((path) => {
+                return `<path d="${path}"/>`;
+            }).join('');
+
+
+            console.log("svgPaths = ", svgPaths);
 
             return `
             <div class="grid__cell">
-                <div class="aspect-ratio--1by1 border margin-bottom-1">
+                <div class="aspect-ratio--4by3 border margin-bottom-1">
                     <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
-                        <span class="nyc_icon_${className}" style="font-size: 225% !important"></span>
+                        <svg class="nyc_icon_${name}" style="height: 48px;" fill="currentColor">
+                            <use xlink:href="#nyc_icon_${name}"></use>
+                        </svg>
+                        <span class="nyc_icon_${name}" style="font-size: 225% !important; display: none;"></span>
                     </div>
                 </div>
                 <p class="font-size-md">
-                    ${className}
+                    ${name}
                 </p>
             </div>
             `;
