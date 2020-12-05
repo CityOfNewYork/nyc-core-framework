@@ -43,6 +43,9 @@
                     <a href="{{ site.baseurl }}/docs/get-started/" {% if page.url contains '/docs' %} aria-current="page" {% endif %}>Documentation</a>
                 </li>
                 <li>
+                    <a href="{{ site.baseurl }}/icons/" {% if page.url contains '/icons' %} aria-current="page" {% endif %}>Icons</a>
+                </li>
+                <li>
                     <a href="{{ site.baseurl }}/templates/" {% if page.url contains '/templates' %} aria-current="page" {% endif %}>Templates</a>
                 </li>
             </ul>
@@ -53,10 +56,9 @@
             <button class="btn btn--icon-only menu-toggle" title="Menu" data-toggle="collapse" data-target="#primary-menu">
                 <span class="nyc_icon_menu" aria-hidden="true"></span>
             </button>
-            <button class="btn btn--icon-only" title="Search" data-modal-open="global-language">
-                <span class="screen-reader-only">Language</span>
-                <span class="nyc_icon_language" aria-hidden="true"></span>
-            </button>
+            <a class="btn btn--icon-only" href="#1" aria-label="GitHub" target="_blank">
+                <span class="nyc_icon_github" aria-hidden="true"></span>
+            </a>
         </div>
 
     </div>
