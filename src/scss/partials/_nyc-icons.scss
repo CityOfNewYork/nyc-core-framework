@@ -64,6 +64,12 @@ In this file:
         z-index: 1;
         border-radius: 100%;
     }
+
+    &[class*="-express"]::after{
+      --fill-padding: 0.1825em;
+      border-radius: unset;
+      transform: rotate(45deg);
+    }
 }
 
 .nyc_icon_subway-a, 
