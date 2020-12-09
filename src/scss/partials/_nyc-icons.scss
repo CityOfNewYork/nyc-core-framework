@@ -17,7 +17,7 @@ In this file:
     position: relative;
     font-size: 1.25em !important;
     line-height: 0.75;
-    vertical-align: -.125em;
+    vertical-align: -0.125em;
     pointer-events: none;
 
     &:not([class*="_subway-"]) {
@@ -44,8 +44,8 @@ In this file:
 }
 
 [class*="nyc_icon_subway-"] {
-    --fill-padding: 0.125em;
     position: relative;
+    display: flex;
 
     &::before {
         position: relative;
@@ -55,10 +55,14 @@ In this file:
     &::after {
         content: "";
         position: absolute;
-        top: var(--fill-padding);
-        right: var(--fill-padding);
-        bottom: var(--fill-padding);
-        left: var(--fill-padding);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        transform-origin: center;
+        transform: scale(0.875);
+        
         background-color: white;
 
         z-index: 1;
@@ -66,9 +70,8 @@ In this file:
     }
 
     &[class*="-express"]::after{
-      --fill-padding: 0.1825em;
       border-radius: unset;
-      transform: rotate(45deg);
+      transform: rotate(45deg) scale(0.6);
     }
 }
 
