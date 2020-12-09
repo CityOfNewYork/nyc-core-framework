@@ -12,24 +12,15 @@ title: "Backdrops"
 </div>
 <!-- .container -->
 
-<div class="container narrow margin-y-4">
-    <div class="alert alert--confirm margin-y-3">
-        <div class="alert__head">
-            <p>
-                <span class="nyc_icon_accessibility" aria-hidden="true"></span>
-                <span class="alert__head__title">Accessibility Highlight</span>
-            </p>
-        </div>
-        <div class="alert__body">
-            <p>
-                Backdrops replace CSS background images with inline HTML images so screen readers can read the
-                image's <em>alt</em> text.
-            </p>
-            <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
-        </div>
-    </div>
-</div>
-<!-- .container -->
+
+{% include accessibility-spotlight.html content='
+    <p>
+        Backdrops replace CSS background images with inline HTML images so screen readers can read the
+        image\'s <em>alt</em> text.
+    </p>
+    <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
+    '
+%}
 
 <hr class="margin-y-5" id="image-proportional">
 
