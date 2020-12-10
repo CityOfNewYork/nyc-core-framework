@@ -17,12 +17,12 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --btn-padding-x: var(--spacer-3);
-    --btn-padding-y: 0.75em;
+    --btn-padding-x: var(--spacer-2);
+    --btn-padding-y: 0.625em;
 
     --btn-font-weight: var(--base-font-weight-bold);
 
-    --btn--outline-border-width: 2px;
+    --btn--outline-border-width: calc( var(--default-border-width) * 2);
     --btn--icon-only-size: 2.25em;
 }
 

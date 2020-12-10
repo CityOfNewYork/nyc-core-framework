@@ -2,7 +2,7 @@
 
   	"settings": {
 
-  		"liveServer.settings.port": 5505, 
+  		"liveServer.settings.port": 5506, 
 
   		"liveSassCompile.settings.includeItems": [
 			// Main SASS file is location
