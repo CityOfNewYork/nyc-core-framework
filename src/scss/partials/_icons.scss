@@ -23,6 +23,13 @@ In this file:
     &:not([class*="_subway-"]) {
       display: inline-block;
     }
+
+    &[class*="-left"], 
+    &[class*="-right"] {
+      [dir="rtl"] & {
+        transform: scaleX(-1);
+      }
+    }
 }
 
 .nyc_icon_font {
