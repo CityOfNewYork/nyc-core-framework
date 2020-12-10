@@ -3,118 +3,146 @@ layout: templates
 title: "Templates"
 ---
 
-<div class="overflow-hidden" id="nyc-official-templates">
+<div class="overflow-hidden">
 
-    <div class="py-4">
+   <div class="container narrow margin-y-4">
+        <p>
+            The examples below are built using the NYC Core framework. Use them as they are or customize them to fit your needs.
+        </p>
+    </div>
+    <!-- .container -->
 
-        <div class="container medium margin-bottom-3">
-   
-            <ul class="nav nav--divider nav--horizontal--md border rounded font-size-sm text-align-center" role="navigation">
-                <li>
-                    <a href="#1" aria-current="page">Landing Pages</a>
-                </li>
-                <li>
-                    <a href="#1">Articles</a>
-                </li>
-                <li>
-                    <a href="#1">Web Applications</a>
-                </li>
-                <li>
-                    <a href="#1">NYC Headers</a>
-                </li>
-                <li>
-                    <a href="#1">NYC Footer</a>
-                </li>
-            </ul>
+    <div class="theme-white border-top padding-y-5">
+
+        <div class="container wide">
+
+            <div class="grid grid--gap-4 grid--cells-6--lg">
+
+                <div class="grid__cell">
+
+                    <div class="card box-shadow-1">
+
+                        <img src="{{ site.baseurl }}/images/template-example-01.jpg" alt="">
+
+                        <div class="card__body padding-y-3 text-align-center">
+                            <h2 class="h5">Landing Page Nav Below</h2>
+                            <p>
+                                A landing page with global navigation spanning across the header.
+                            </p>
+                        </div>
+
+                        <div class="card__foot border-top font-size-sm">
+                            <ul class="nav nav--horizontal justify-content-center">
+                                <li>
+                                    <a href="#1">Preview in Browser</a>
+                                </li>
+                                <li>
+                                    <a class="btn btn--outline btn--has-icon rounded-pill" href="#1">
+                                        <span class="nyc_icon_github btn__icon"></span>
+                                        <span class="btn__text">View on GitHub</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- .grid__cell -->
+
+                <div class="grid__cell">
+
+                    <div class="card box-shadow-1">
+
+                        <img src="{{ site.baseurl }}/images/template-example-01.jpg" alt="">
+
+                        <div class="card__body padding-y-3 text-align-center">
+                            <h2 class="h5">Landing Page Nav Below</h2>
+                            <p>
+                                A landing page with global navigation spanning across the header.
+                            </p>
+                        </div>
+
+                        <div class="card__foot border-top font-size-sm">
+                            <ul class="nav nav--horizontal justify-content-center">
+                                <li>
+                                    <a href="#1">Preview in Browser</a>
+                                </li>
+                                <li>
+                                    <a class="btn btn--outline btn--has-icon rounded-pill" href="#1">
+                                        <span class="nyc_icon_github btn__icon"></span>
+                                        <span class="btn__text">View on GitHub</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- .grid__cell -->
+
+            </div>
+            <!-- .grid -->
+
+        <div class="grid grid--cells-6--md display-none">
+            <div class="grid__cell">
+                <img src="https://via.placeholder.com/1500x750" alt="">
+            </div>
+
+            <div class="grid__cell">
+
+
+                <div class="card">
+
+                        <div class="card__head border-bottom">
+                            <p>Card Header</p>
+                        </div>
+
+                        <div class="card__body">
+                            <h2 class="h4">Landing Page Nav Across</h2>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
+                                facilis labore reiciendis.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+                <div class="text-align-center">
+                                <h2 class="h3 card-title">Landing Page Nav Across</h2>
+                                <p class="card-text">
+                                    A landing page with global navigation spanning across the header.
+                                </p>
+
+                                <ul class="nav nav--horizontal justify-content-center">
+                                    <li>
+                                        <a class="btn btn--has-icon" href="#1" title="View example of the landing page nav across template">
+                                            <span class="fas fa-eye font-weight-normal"></span>
+                                            <span class="title">View</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn--has-icon" href="#1" title="View code for the landing page nav across template">
+                                            <span class="fab fa-github font-weight-normal"></span>
+                                            <span class="title">GitHub</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                </div>
+                
+            </div>
         </div>
-        <!-- .container -->
-
-        <div class="container narrow text-align-center margin-bottom-2">
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, saepe molestiae. Vitae sequi quia
-                maiores quam!
-            </p>
+        
 
         </div>
-
-        <ul class="nav nav--gap-1 nav--horizontal text-primary font-size-sm justify-content-center display-none" role="navigation">
-            <li>
-                <button class="btn btn--icon-only" title="Previous">
-                    <span class="sr-only">Previous</span>
-                    <span class="fas fa-arrow-left" aria-hidden="true"></span>
-                </button>
-            </li>
-            <li>
-                <a href="#1" aria-current="page">1</a>
-            </li>
-            <li>
-                <a href="#1">2</a>
-            </li>
-            <li>
-                <a href="#1">3</a>
-            </li>
-            <li class="opacity-50">
-                <button class="btn btn--icon-only" title="Next">
-                    <span class="sr-only">Next</span>
-                    <span class="fas fa-arrow-right" aria-hidden="true"></span>
-                </button>
-            </li>
-        </ul>
+        
 
     </div>
-
-    <section class="overflow-hidden theme-light">
-
-        <div class="margin-y-5">    
-
-            <div class="container wide">
-                <div class="grid grid--cells-auto justify-content-between align-items-center">
-                    <div class="grid__cell">
-                        <h2 class="h5 fw-normal">Landing Page Nav Right</h2>
-                    </div>
-                    <div class="grid__cell">
-                        <a class="btn btn--has-icon theme-primary font-size-sm rounded" href="#1">
-                            <span class="fab fa-github btn__icon"></span>
-                            <span class="btn__text">GitHub </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- .container -->
-
-            {% include browser-iframe.html iframe_width="wide" iframe_url="/examples/templates/landing-page.html" %}
-
-        </div>
-
-    </section>
-
-    <hr>
-
-    <section class="overflow-hidden theme-light">
-
-        <div class="margin-y-5">
-
-            <div class="container wide">
-                <div class="grid grid--cells-auto justify-content-between align-items-center">
-                    <div class="grid__cell">
-                        <h2 class="h5 fw-normal">Landing Page Nav Right</h2>
-                    </div>
-                    <div class="grid__cell">
-                        <a class="btn btn--has-icon theme-primary font-size-sm rounded box-shadow-1" href="#1">
-                            <span class="fab fa-github btn__icon"></span>
-                            <span class="btn__text">GitHub </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- .container -->
-
-            {% include browser-iframe.html iframe_width="wide" iframe_url="/examples/templates/landing-page.html" %}
-
-        </div>
-
-    </section>
+    <!-- .container -->
 
 </div>
 <!-- .overflow-hidden -->
