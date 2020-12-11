@@ -14,7 +14,6 @@ In this file:
 
 :root {
     --article-sidebar-width: 340px;
-    --article-text-width: var(--narrow-width);
 }
 
 //////////////////////////////////////////////
@@ -32,13 +31,13 @@ In this file:
 .article__body {
     overflow: hidden;
 
-    @at-root .article__body__content {
+    // @at-root .article__body__content {
 
-        @include breakpoints-up(lg){
-            margin-top: var(--spacer-5);
-            margin-bottom: var(--spacer-5);
-        }
-    }
+    //     @include breakpoints-up(lg){
+    //         margin-top: var(--spacer-5);
+    //         margin-bottom: var(--spacer-5);
+    //     }
+    // }
 
     // section {
     //     margin-top: var(--spacer-4);
@@ -129,7 +128,7 @@ In this file:
 @include breakpoints-up(xl) {
 
     .article--three-column {
-    --article-sidebar-width: 260px;
+        --article-sidebar-width: 260px;
         grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
 
         grid-template-areas:
