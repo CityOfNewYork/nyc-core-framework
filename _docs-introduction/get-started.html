@@ -15,7 +15,7 @@ title: "Get Started"
         wealth of prebuilt front-end components customizable for projects of any size and complexity.
     </p>
 
-    <ul class="nav nav--horizontal--md text-primary font-size-md">
+    <ul class="nav nav--gap-1 nav--horizontal--md text-primary font-size-md">
         <li>
             <a class="btn btn--outline btn--has-icon" href="#quickStartGuide">
                 <span class="nyc_icon_arrow-down btn__icon"></span>
@@ -26,6 +26,13 @@ title: "Get Started"
             <a class="btn btn--outline btn--has-icon" href="#1">
                 <span class="nyc_icon_github btn__icon"></span>
                 <span class="btn__text">View on GitHub</span>
+            </a>
+        </li>
+
+        <li>
+            <a class="btn btn--outline btn--has-icon" href="#1">
+                <span class="nyc_icon_npm btn__icon"></span>
+                <span class="btn__text">Intall with NPM</span>
             </a>
         </li>
     </ul>
@@ -94,7 +101,7 @@ title: "Get Started"
 <hr class="margin-y-5" id="quickStartGuide">
 
 <div class="container narrow margin-y-4">
-    <h2>Quick Start CDN</h2>
+    <h2>Quick Start Guide</h2>
     <p>
         Get up and running in a New York minute. Create a plain HTML document and add the code from Figure 2 (below).
     </p>
@@ -123,10 +130,10 @@ title: "Get Started"
                     &lt;meta charset="utf-8"&gt;
                     &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 
-                    &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
+                    &lt;title&gt;Page Title • Your Website Name&lt;/title&gt;
 
-                    &lt;!-- Font Awesome Kit --&gt;
-                    &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+                    &lt;!-- NYC Core Icons --&gt;
+                    &lt;link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css"&gt;
 
                     &lt;!-- NYC Core Stylesheet --&gt;
                     &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
@@ -135,22 +142,22 @@ title: "Get Started"
 
                 &lt;body&gt;
 
-                    &lt;header id="global-header" role="banner"&gt;
+                    &lt;header id="global-header"&gt;
 
                     &lt;/header&gt;
 
-                    &lt;main id="skip-header-content" role="main"&gt;
+                    &lt;main id="skip-header-content"&gt;
 
                         &lt;h1&gt;Hello New York&lt;/h1&gt;
 
                     &lt;/main&gt;
 
-                    &lt;footer id="global-footer" role="contentinfo"&gt;
+                    &lt;footer id="global-footer"&gt;
 
                     &lt;/footer&gt;
 
                     &lt;!-- NYC Core Javascript --&gt;
-                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js">&lt;/script&gt;
+                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"&gt;&lt;/script&gt;
 
                 &lt;/body&gt;
 
@@ -173,7 +180,7 @@ title: "Get Started"
 <figure class="container narrow margin-y-4">
     <table class="table table--edge">
         <caption class="screen-reader-only">
-            Table Caption
+            NYC Core Framework Scripts
         </caption>
         <thead>
             <tr>
@@ -202,7 +209,7 @@ title: "Get Started"
                 <td>11-15</td>
                 <td>
                     <p>
-                        This Custom Properties polyfill for IE 11 needs to placed before any stylesheet or style reference. All other browsers will not load this script. Thanks to
+                        This Custom Properties polyfill for IE 11 needs to placed before any stylesheet or style reference. All other browsers will not load this script. Many thanks to
                         Tobias Buschor | <a href="#1">https://git.io/fjXMN</a>.
                     </p>
                 </td>
@@ -211,8 +218,8 @@ title: "Get Started"
                 <td>23</td>
                 <td>
                     <p>
-                        Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
-                        an open-source icon library, used for iconography accross the framework.
+                        CDN Stylesheet link to <a href="{{ site.baseurl }}/icons/">NYC Core Icons</a>,
+                        our very own open-source icon library, for iconography across the NYC Core Framework.
                     </p>
                 </td>
             </tr>
@@ -220,7 +227,7 @@ title: "Get Started"
                 <td>26</td>
                 <td>
                     <p>
-                        The Framework's latest stable version of the core stylesheet (available via CDN).
+                        CDN link to the Framework's latest stable version of the core stylesheet.
                     </p>
                 </td>
             </tr>
@@ -237,7 +244,7 @@ title: "Get Started"
                 <td>47</td>
                 <td>
                     <p>
-                        The Framework's latest stable core Javascript file.
+                        CDN link The Framework's latest stable core Javascript file.
                     </p>
                 </td>
             </tr>
@@ -257,7 +264,7 @@ title: "Get Started"
 <div class="container narrow margin-y-4">
     <a class="btn btn--has-icon theme-secondary" href="{{ site.baseurl }}/docs/customization/">
         <span class="btn__text">Customization</span>
-        <span class="fas fa-long-arrow-alt-right btn__icon"></span>
+        <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
     </a>
 </div>
 <!-- .container -->
