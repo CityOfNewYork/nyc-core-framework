@@ -1,29 +1,47 @@
-<ul class="nav font-size-md" role="navigation">
+<!-- For keyboard users -->
+<a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
-    {% for doc in site.docs-introduction %}
-    
-    <li>
-        <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
-            {{ doc.title }}
-        </a>
-    </li>
-    
-    {% endfor %}
+<div class="container narrow display-none--lg margin-y-2">
+    <button class="btn display-block btn--outline" data-toggle="collapse" data-target="#target-id" style="--btn-padding-x: var(--spacer-2)">
+        Documentation
+    </button>
+</div>
 
-</ul>
+ <div class="sticky-top collapse display-block--lg" id="target-id">
 
-<hr class="margin-y-2 margin-x-n2">
+    <div class="container narrow padding-y-2 font-size-md">
 
-<ul class="nav font-size-md" role="navigation">
+        <ul class="nav font-size-md">
 
-    {% for doc in site.docs-a-z %}
+            {% for doc in site.docs-introduction %}
+            
+            <li>
+                <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
+                    {{ doc.title }}
+                </a>
+            </li>
+            
+            {% endfor %}
 
-    <li>
-        <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
-            {{ doc.title }}
-        </a>
-    </li>
+        </ul>
 
-    {% endfor %}
+        <hr class="margin-y-2 margin-x-n2">
 
-</ul>
+        <ul class="nav font-size-md">
+
+            {% for doc in site.docs-a-z %}
+
+            <li>
+                <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
+                    {{ doc.title }}
+                </a>
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+    <!-- .container -->
+
+</div>

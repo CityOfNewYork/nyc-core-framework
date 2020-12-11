@@ -2,51 +2,39 @@
 layout: default
 ---
 
-<div class="display-none--lg">
-    <button class="btn theme-dark display-block" data-toggle="collapse" data-target="#sidebar">
-        <span class="fas fa-arrow-down btn__icon"></span>
-        <span class="btn__text">Button</span>
-    </button>
-</div>
+<div class="article--two-column">
 
-<div class="grid">
-
-    <div class="grid__cell-2--lg display-block--lg" id="sidebar">
-
-        <div class="sticky-top padding-2">
-
-            {% include sidebar.html %}
-
-        </div>
-        <!-- .stick-top -->
-
+    <div class="article__sidebar">
+        {% include sidebar.html %}
     </div>
-    <!-- col -->
 
-    <div class="grid__cell-10--lg border-left--lg overflow-hidden" id="primary-content">
+    <div class="article__body border-left--lg" id="primary-content">
 
-        <div class="theme-secondary overflow-hidden">
+        <div class="article__body__content">
 
-            <div class="margin-y-5">
+            <div class="theme-secondary overflow-hidden">
 
-                <div class="container narrow">
-                    <h1 class="banner-headline">
-                        {{ page.title }}
-                    </h1>
+                <div class="margin-y-5">
+
+                    <div class="container narrow">
+                        <h1 class="banner-headline">
+                            {{ page.title }}
+                        </h1>
+                    </div>
+
                 </div>
+                <!-- .container -->
 
             </div>
-            <!-- .container -->
 
+            <div class="margin-y-5">
+                {{ content }}
+            </div>
+        
         </div>
-
-        <div class="margin-y-5">
-            {{ content }}
-        </div>
-        <!-- .margin-y-5 -->
+        <!-- .article__body__content -->
 
     </div>
-    <!-- col -->
+    <!-- .article__body -->
 
 </div>
-<!-- .grid -->
