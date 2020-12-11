@@ -3,7 +3,10 @@ layout: extras
 title: "Templates"
 ---
 
-<div class="container narrow text-align-center margin-y-4">
+<div class="container narrow margin-y-4">
+    <h2 class="h1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </h2>
     <p>
         The examples below are built using the NYC Core framework. Use them as they are or customize them to fit your needs.
     </p>
@@ -14,17 +17,19 @@ title: "Templates"
 
 <div class="padding-y-5">        
 
-    <div class="container wide">
+    <div class="container medium wide--xl">
 
-        <div class="grid grid--gap-4 grid--cells-6--lg">
+        <div class="grid grid--gap-4 grid--cells-6--md grid--cells-4--xl justify-content-center">
 
             <div class="grid__cell">
 
                 <div class="card box-shadow-2">
 
-                    <img src="{{ site.baseurl }}/images/template-example-01.jpg" alt="">
+                    <div class="gradient-veneer-bottom">
+                        <img src="{{ site.baseurl }}/images/template-example-01.jpg" alt="">
+                    </div>
 
-                    <div class="card__body border-top padding-y-3 text-align-center">
+                    <div class="card__body padding-y-3 text-align-center">
                         <h2 class="h5">Landing Page Nav Below</h2>
                         <p>
                             A simple landing page with global navigation below the logo.
@@ -32,7 +37,7 @@ title: "Templates"
                     </div>
 
                     <div class="card__foot border-top font-size-md">
-                        <ul class="nav nav--horizontal justify-content-center">
+                        <ul class="nav nav--horizontal justify-content-between">
                             <li>
                                 <a href="{{ site.baseurl }}/examples/templates/landing-page-nav-below.html" target="_blank">Preview in Browser</a>
                             </li>
@@ -55,9 +60,11 @@ title: "Templates"
 
                 <div class="card box-shadow-2">
 
-                    <img src="{{ site.baseurl }}/images/template-example-02.jpg" alt="">
+                    <div class="gradient-veneer-bottom">
+                        <img src="{{ site.baseurl }}/images/template-example-02.jpg" alt="">
+                    </div>
 
-                    <div class="card__body border-top padding-y-3 text-align-center">
+                    <div class="card__body padding-y-3 text-align-center">
                         <h2 class="h5">Landing Page Nav Inline</h2>
                         <p>
                             A simple landing page with global navigation inline with the logo.
@@ -65,7 +72,7 @@ title: "Templates"
                     </div>
 
                     <div class="card__foot border-top font-size-md">
-                        <ul class="nav nav--horizontal justify-content-center">
+                        <ul class="nav nav--horizontal justify-content-between">
                             <li>
                                 <a href="{{ site.baseurl }}/examples/templates/landing-page-nav-inline.html" target="_blank">Preview in Browser</a>
                             </li>
@@ -88,17 +95,19 @@ title: "Templates"
 
                 <div class="card box-shadow-2">
 
-                    <img src="{{ site.baseurl }}/images/template-example-03.jpg" alt="">
-
-                    <div class="card__body border-top padding-y-3 text-align-center">
-                        <h2 class="h5">Article Two Column</h2>
+                    <div class="gradient-veneer-bottom">
+                        <img src="{{ site.baseurl }}/images/template-example-03.jpg" alt="">
+                    </div>
+                    
+                    <div class="card__body padding-y-3 text-align-center">
+                        <h2 class="h5">Article Single Column</h2>
                         <p>
                             A landing page with global navigation spanning across the header.
                         </p>
                     </div>
 
                     <div class="card__foot border-top font-size-md">
-                        <ul class="nav nav--horizontal justify-content-center">
+                        <ul class="nav nav--horizontal justify-content-between">
                             <li>
                                 <a href="{{ site.baseurl }}/examples/templates/article-two-column.html" target="_blank">Preview in Browser</a>
                             </li>
@@ -121,19 +130,21 @@ title: "Templates"
 
                 <div class="card box-shadow-2">
 
-                    <img src="{{ site.baseurl }}/images/template-example-01.jpg" alt="">
-
+                    <div class="gradient-veneer-bottom">
+                        <img src="{{ site.baseurl }}/images/template-example-03.jpg" alt="">
+                    </div>
+                    
                     <div class="card__body padding-y-3 text-align-center">
-                        <h2 class="h5">Landing Page Nav Below</h2>
+                        <h2 class="h5">Article Two Column</h2>
                         <p>
                             A landing page with global navigation spanning across the header.
                         </p>
                     </div>
 
                     <div class="card__foot border-top font-size-md">
-                        <ul class="nav nav--horizontal justify-content-center">
+                        <ul class="nav nav--horizontal justify-content-between">
                             <li>
-                                <a href="#1">Preview in Browser</a>
+                                <a href="{{ site.baseurl }}/examples/templates/article-two-column.html" target="_blank">Preview in Browser</a>
                             </li>
                             <li>
                                 <a class="btn btn--outline btn--has-icon rounded-pill" href="#1">
