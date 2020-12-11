@@ -6,16 +6,16 @@ title: "Get Started"
 <div class="container narrow margin-y-4">
 
     <h2 class="h1">
-        Make beautiful, accessible websites easier and faster.
+        Make beautiful, accessible websites.
     </h2>
     
     <p>
         The NYC Core Framework is an open-source front end toolkit for building modern websites and browser-based applications.
-        Designed to remove technical barriers for teams with limited resources, it provides a
+        Designed to remove technical barriers for teams with limited resources, we provide a
         wealth of prebuilt front-end components customizable for projects of any size and complexity.
     </p>
 
-    <ul class="nav nav--horizontal--md text-primary">
+    <ul class="nav nav--horizontal--md text-primary font-size-md">
         <li>
             <a class="btn btn--outline btn--has-icon" href="#quickStartGuide">
                 <span class="nyc_icon_arrow-down btn__icon"></span>
@@ -25,7 +25,7 @@ title: "Get Started"
         <li>
             <a class="btn btn--outline btn--has-icon" href="#1">
                 <span class="nyc_icon_github btn__icon"></span>
-                <span class="btn__text">GitHub</span>
+                <span class="btn__text">View on GitHub</span>
             </a>
         </li>
     </ul>
@@ -36,10 +36,13 @@ title: "Get Started"
 <hr class="margin-y-5" id="theFiles">
 
 <div class="container narrow margin-y-4">
-    <h2>Framework at a Glance</h2>
+    <h2>The Framework at a Glance</h2>
     <p>
-        The NYC Core Framework is built with <a href="https://sass-lang.com/">Sass</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom Properties</a>, and modern <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> Javascript</a>. The Framework proper
-        is made up of the following folders and files.
+        The NYC Core Framework is built with <a href="https://sass-lang.com/">Sass</a>, <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom
+            Properties</a>, and modern <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+            Javascript</a>. The Framework proper
+        is made up of the following folder and file structure.
     </p>
 </div>
 <!-- .container -->
@@ -55,60 +58,35 @@ title: "Get Started"
             |   │   └── nyc_core.js
             ├── src/
             │   ├── js/
-            |   │   └── nyc_core.js
+                    ├── modules/
+                        └── [pre-compiled JS files]
+            |   │   ├── index.js
             |   └── scss/
             |       ├── nyc_core.scss
             |       └── partials/
-            |           ├── _accessibility.scss
-            |           ├── _accordions.scss
-            |           ├── _aspect-ratios.scss
-            |           ├── _backdrops.scss
-            |           ├── _borders.scss
-            |           ├── _breakpoints.scss
-            |           ├── _buttons.scss
-            |           ├── _cards.scss
-            |           ├── _collapse.scss
-            |           ├── _colors.scss
-            |           ├── _dev-tools.scss
-            |           ├── _display.scss
-            |           ├── _flex.scss
-            |           ├── _forms.scss
-            |           ├── _gradients.scss
-            |           ├── _grid.scss
-            |           ├── _links.scss
-            |           ├── _mixins.scss
-            |           ├── _modals.scss
-            |           ├── _navigation.scss
-            |           ├── _opacities.scss
-            |           ├── _shadows.scss
-            |           ├── _sizing.scss
-            |           ├── _spacing.scss
-            |           ├── _tables.scss
-            |           ├── _typography.scss
-            |           ├── _z-index.scss
-            |           └── _rtl.scss
+            |           └── [pre-compiled SCSS files]
             ├── images/
             └── index.html
         </code>
     </pre>
     <figcaption>
-        Figure 1 - The NYC Core Framework's file structure.
+        Figure 1 - The NYC Core Framework's folder and file structure.
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
-    <h3>CSS and Javascript</h3>
+    <h3>CSS and JS Dependencies</h3>
     <p>
         In Figure 1 (above), notice the highlighted files: <strong>/dist/css/nyc_core.css</strong> (line
         4), <strong>/dist/js/nyc_core.js</strong> (line 6).
     </p>
     <p>
-        These CSS and Javascript files are the <strong>only two dependencies</strong> generated from
+        These CSS and JavaScript files are the <strong>only two dependencies</strong> generated from
         the NYC Core Framework, and they are available to be used via CDN (Content Delivery Network). 
     </p>
     <p>
         You don't need to set up a complicated development environment to use the NYC Core Framework. Follow the
-        <em>Quick Start CDN</em> intructions below to get started with our core files.
+        <em>Quick Start CDN</em> intructions below to get started with our CDN.
     </p>
 </div>
 <!-- .container -->

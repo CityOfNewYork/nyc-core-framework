@@ -29,19 +29,13 @@ In this file:
     --primary-border: hsla(0, 0%, 0%, 0.25);
     --secondary-text: var(--dark);
 
-
     --base-font-size: 20px;
-    --base-line-height: 1.5;
 
     --base-font-family: "neue-haas-grotesk-text";
 
     --btn-font-weight: normal;
 
     --body-max-width: null;
-}
-
-#nyc-official-templates{
-    --wide-width: 1600px;
 }
 
 //////////////////////////////////////////////
@@ -58,7 +52,6 @@ a[data-logo="brand"] {
     }
 }
 
-
 #features {
     --backdrop-fixed-height: 600px;
     
@@ -67,55 +60,16 @@ a[data-logo="brand"] {
     }
 }
 
-.callout {
-    overflow: hidden;
-
-    .message {
-        position: relative;
-    }
-
-    @include breakpoints-down(md) {
-        text-align: center;
-
-        .grid {
-            position: relative;
-
-            .message {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                display: flex;
-                background-color: rgba(white, 0.75);
-            }
-
-            .message > div {
-                margin-top: auto;
-                margin-bottom: auto;
-                padding: var(--s4);
-                background-color: transparent;
-            }
-        }
-    }
+.accessibility-spotlight {
+   color: hsl(200, 100%, 30%);
 }
 
-table{
-    line-height: var(--base-line-height);
-}
-
-td > p{
-    margin-bottom: 0.5em;
-}
-
-.browser{
+.browser {
     --browser-bar-height: 2rem;
 
     overflow: hidden;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-
-    // box-shadow: 0 0.25rem  0.5rem rgba(black, 0.125);
 
     iframe {
         border: none;
@@ -166,36 +120,19 @@ td > p{
         &:nth-child(3) {
             background-color: green;
         }
-
-        &:nth-child(4) {
-
-            display: none;
-
-            height: calc(var(--browser-bar-height) - 0.375rem);
-            width: calc(var(--browser-bar-height) * 3);
-            background-color: hsla(0, 0%, 100%, 0.95);
-
-            margin-top: auto;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-
-            border-radius: 0;
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
-        }
     }
 }
 
-#custom-property-list{
+#custom-property-list {
 
-    button[data-clipboard]{
+    button[data-clipboard] {
         font-size: var(--font-size-sm);
         font-weight: bold;
         color: var(--secondary);
         display: inline-block;
     }
 
-    .accordion__button{
+    .accordion__button {
         &[aria-expanded="true"]::before {
             --subtle-fill-opacity: 0.1;
         }
@@ -216,8 +153,3 @@ td > p{
         color: #ccc;
     }
 }
-
-.accessibility-spotlight {
-   color: hsl(200, 100%, 30%);
-}
-
