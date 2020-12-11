@@ -125,31 +125,46 @@ a[data-logo="brand"] {
 
 #custom-property-list {
 
-    button[data-clipboard] {
-        font-size: var(--font-size-sm);
-        font-weight: bold;
+    button {
         color: var(--secondary);
+    }
+
+    button[data-clipboard] {
+        font-weight: bold;
         display: inline-block;
     }
 
-    .accordion__button {
-        &[aria-expanded="true"]::before {
-            --subtle-fill-opacity: 0.1;
-        }
-    }
-
     th, 
-    td{
+    td {
         &:nth-child(3) {
             text-align: right;
         }
+
     }
-    
-    td:nth-child(1){
+
+    th {
+
+        &:nth-child(1):not([colspan]) {
+            // background-color: red;
+            width: 40% !important;
+        }
+
+        &:nth-child(2) {
+            width: 40% !important;
+            // background-color: yellow;
+        }
+
+        &:nth-child(3) {
+            width: 20% !important;
+            // background-color: green;
+        }
+    }
+
+    td:nth-child(1) {
         color: #f8c555;
     }
 
-    td:nth-child(2){
+    td:nth-child(2) {
         color: #ccc;
     }
 }

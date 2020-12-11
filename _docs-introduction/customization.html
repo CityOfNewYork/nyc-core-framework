@@ -243,742 +243,293 @@ title: "Customization"
 </div>
 <!-- .container -->
 
-<div class="container medium margin-y-4">
+<div class="container medium margin-y-4" id="custom-property-list">
 
-    <div class="accordion theme-dark rounded" id="custom-property-list">
-
-        <button
-            class="accordion__button h6"
-            id="acc-color-system"
-            data-toggle="accordion"
-            aria-controls="acc-panel-color-system"
-            aria-expanded="true">
-                Color System
-        </button>
-
-        <div 
-            class="accordion__panel show"
-            id="acc-panel-color-system"
-            data-accordion="panel"
-            aria-labelledby="acc-color-system"
-            role="region">
+    <div class="table-scroll" role="region">
             
-            <div class="accordion__panel__content">
+        {% include table-scroll-help.html %}
 
-                <div class="table-scroll font-size-sm" role="region">
-            
-                    {% include table-scroll-help.html %}
-            
-                    <div class="table-scroll__container">
+        <div class="table-scroll__container overflow-hidden">
 
-                        <table class="table table--edge table--va-middle table--striped" aria-labelledby="table-caption-color-system">
+            <table class="table table--striped table--va-middle theme-dark rounded margin-y-2">
 
-                            <caption class="screen-reader-only" id="table-caption-color-system">
-                              Color System Custom Properties 
-                            </caption>
+                <caption class="screen-reader-only">
+                    Color System Custom Properties
+                </caption>
 
-                            <thead>
-                                <tr>
-                                    <th scope="col">Custom Property</th>
-                                    <th scope="col">Default Value</th>
+                <thead>
+                    <tr class="font-size-rg box-shadow-1">
+                        <th scope="col" colspan="3">
+                            <span class="">
+                                Color System
+                            </span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Custom Property</th>
+                        <th scope="col">Default Value</th>
+                        <th scope="col">
+                            <span class="screen-reader-only">Action</span>
+                        </th>
+                    </tr>
 
-                                    <th scope="col">
-                                        <span class="screen-reader-only">
-                                            Actions
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-prop>
+                            --primary
+                        </td>
+                        <td data-val>
+                            #1E00B3
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-primary">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --secondary
+                        </td>
+                        <td data-val>
+                             #64cc7e
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-secondary">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --dark
+                        </td>
+                        <td data-val>
+                             #191b35
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-dark">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --light
+                        </td>
+                        <td data-val>
+                             #f1f4f6
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-light">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --a11y-link-color
+                        </td>
+                        <td data-val>
+                             blue
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-light">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
 
-                            <tbody>
-                                <tr>
-                                    <td data-prop>
-                                       --primary
-                                    </td>
-                                    <td data-val>
-                                        #25caa4
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-primary">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary
-                                    </td>
-                                    <td data-val>
-                                        #6500d6
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="cp-modal-secondary">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark
-                                    </td>
-                                    <td data-val>
-                                        #262345
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="cp-modal-dark">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light
-                                    </td>
-                                    <td data-val>
-                                        #f1f4f6
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-light">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --a11y-link-color
-                                    </td>
-                                    <td data-val>
-                                        blue
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-a11y-link-color">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --primary-text
-                                    </td>
-                                    <td data-val>
-                                        var(--dark)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-primary-text">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --primary-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 0%, 0.125)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-primary-border">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --primary-link
-                                    </td>
-                                    <td data-val>
-                                        currentColor
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-primary-link">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary-text
-                                    </td>
-                                    <td data-val>
-                                        white
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-secondary-text">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 0%, 0.25)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-secondary-border">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary-link
-                                    </td>
-                                    <td data-val>
-                                        currentColor
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-secondary-link">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-            
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark-text
-                                    </td>
-                                    <td data-val>
-                                        white
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-dark-text">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 100%, 0.125)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-dark-border">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark-link
-                                    </td>
-                                    <td data-val>
-                                        currentColor
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-dark-link">
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light-text
-                                    </td>
-                                    <td data-val>
-                                        var(--dark)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-light-text">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 50%, 0.25)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="example-modal">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light-link
-                                    </td>
-                                    <td data-val>
-                                        var(--a11y-link-color)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="example-modal">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --white-text
-                                    </td>
-                                    <td data-val>
-                                        var(--dark)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-white-text">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --white-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 50%, 0.25)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"  data-modal-open="cp-white-border">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --white-link
-                                    </td>
-                                    <td data-val>
-                                        var(--a11y-link-color)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-white-link">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-            
-                        </table>
-            
-                    </div>
-                    <!-- .table-scroll__container -->
+            </table>
 
-                </div>
-                <!-- .table-scroll -->
+            <table class="table table--striped table--va-middle theme-dark rounded margin-y-2">
 
-            </div>
-            <!-- .panel__content -->
+                <caption class="screen-reader-only">
+                    Color System Custom Properties
+                </caption>
+
+                <thead>
+                    <tr class="font-size-rg box-shadow-1">
+                        <th scope="col" colspan="3">
+                            <span>
+                                Color System
+                            </span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Custom Property</th>
+                        <th scope="col">Default Value</th>
+                        <th scope="col">
+                            <span class="screen-reader-only">Action</span>
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-prop>
+                            --primary
+                        </td>
+                        <td data-val>
+                            #1E00B3
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-primary">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --secondary
+                        </td>
+                        <td data-val>
+                             #64cc7e
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-secondary">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --dark
+                        </td>
+                        <td data-val>
+                             #191b35
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-dark">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --light
+                        </td>
+                        <td data-val>
+                             #f1f4f6
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-light">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-prop>
+                            --a11y-link-color
+                        </td>
+                        <td data-val>
+                             blue
+                        </td>
+                        <td class="text-align-right">  
+                            <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
+                                <li>
+                                    <button data-clipboard>
+                                        Copy
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="btn btn--icon-only" data-modal-open="cp-modal-light">
+                                        <span class="nyc_icon_info" aria-hidden="true"></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
 
         </div>
-        <!-- .accordion__panel -->
-
-        <button class="accordion__button h6"
-                id="acc-accordion"
-                data-toggle="accordion"
-                aria-controls="acc-panel-accordion"
-                aria-expanded="false">
-                    Accordion
-        </button>
-
-        <div class="accordion__panel"
-             id="acc-panel-accordion"
-             data-accordion="panel"
-             aria-labelledby="acc-accordion"
-             role="region">
-            
-            <div class="accordion__panel__content">
-
-                <div class="table-scroll font-size-sm" role="region">
-            
-                    {% include table-scroll-help.html %}
-            
-                    <div class="table-scroll__container">
-
-                        <table class="table table--va-middle table--edge" aria-labelledby="table-caption-color-system">
-
-                            <caption class=" screen-reader-only" id="table-caption-color-system">
-                              Accordion Custom Properties 
-                            </caption>
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">Custom Property</th>
-                                    <th scope="col">Default Value</th>
-                                    <th scope="col">
-                                        <span class="screen-reader-only">
-                                            Actions
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-x
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-x">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-y
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-y">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-            
-                        </table>
-            
-                    </div>
-                    <!-- .table-scroll__container -->
-
-                </div>
-                <!-- .table-scroll -->
-            
-            </div>
-            <!-- .panel__content -->
-
-        </div>
-        <!-- .accordion__panel -->
-
-        <button class="accordion__button h6"
-                id="acc-alerts"
-                data-toggle="accordion"
-                aria-controls="acc-panel-alerts"
-                aria-expanded="false">
-                    Alerts
-        </button>
-
-        <div class="accordion__panel"
-             id="acc-panel-accordion"
-             data-accordion="panel"
-             aria-labelledby="acc-accordion"
-             role="region">
-            
-            <div class="accordion__panel__content">
-
-                <div class="table-scroll font-size-sm" role="region">
-            
-                    {% include table-scroll-help.html %}
-            
-                    <div class="table-scroll__container">
-
-                        <table class="table table--va-middle table--edge" aria-labelledby="table-caption-color-system">
-
-                            <caption class=" screen-reader-only" id="table-caption-color-system">
-                              Accordion Custom Properties 
-                            </caption>
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">Custom Property</th>
-                                    <th scope="col">Default Value</th>
-                                    <th scope="col">
-                                        <span class="screen-reader-only">
-                                            Actions
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-x
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-x">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-y
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-y">
-                    
-                                                    <span class="nyc_icon_info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-            
-                        </table>
-            
-                    </div>
-                    <!-- .table-scroll__container -->
-
-                </div>
-                <!-- .table-scroll -->
-            
-            </div>
-            <!-- .panel__content -->
-
-        </div>
-        <!-- .accordion__panel -->
 
     </div>
-    <!-- .accordion -->
 
 </div>
 <!-- .container -->
@@ -986,7 +537,7 @@ title: "Customization"
 <div class="container narrow margin-y-4">
     <a class="btn btn--has-icon theme-secondary" href="{{ site.baseurl }}/docs/accessibility/">
         <span class="btn__text">Accessibility</span>
-        <span class="fas fa-long-arrow-alt-right btn__icon"></span>
+        <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
     </a>
 </div>
 
