@@ -1,0 +1,79 @@
+[
+    {    
+        "type": "Color System",
+
+        "customProperties": [
+            {
+                "name": "primary",
+                "value": "red",
+                "description": "Your theme's primary color"
+            },
+            {
+                "name": "secondary",
+                "value": "blue",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "dark",
+                "value": "black",
+                "description": "Lorem ipsum dolar"
+            }
+        ]
+    },
+    {
+        "type": "Typography",
+        "customProperties": [
+            {
+                "name": "base-font-family",
+                "value": "Source Sans Pro",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "base-font-weight-normal",
+                "value": "400",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "base-font-weight-medium",
+                "value": "600",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "base-font-weight-bold",
+                "value": "700",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "base-font-size",
+                "value": "22px",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "base-line-height",
+                "value": "1.5",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "font-size-sm",
+                "value": "",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "font-size-md",
+                "value": "",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "font-size-lg",
+                "value": "",
+                "description": "Lorem ipsum dolar"
+            },
+            {
+                "name": "font-size-xl",
+                "value": "",
+                "description": "Lorem ipsum dolar"
+            }
+        ]
+    }
+
+]

@@ -137,6 +137,93 @@
 
 </script>
 
+<script>
+
+    const customPropertiesData = "{{ site.baseurl }}/lib/json/root-custom-properties.json";
+    const customProperyCheetSheet = document.getElementById("customProperyCheetSheet");
+
+    const loadcustomProperties = async () => {
+        try {
+            const response = await fetch(customPropertiesData);
+            const customPropertyData = await response.json();
+
+            console.log("customPropertyData ===== >", customPropertyData);
+            
+            displayCustomProperties(customPropertyData);
+        
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    const displayCustomProperties = (customProperties) => {
+
+        const customProperyHTML = customProperties.map((customPropertyArray) => {
+
+            console.log("customPropertyArray = ", customPropertyArray);
+
+            let type = customPropertyArray.type;
+            let properties = customPropertyArray.customProperties;
+
+            let cpRows = properties.map((property) => {
+                return `
+                    <tr>
+                        <td data-prop>
+                            --${property.name}
+                        </td>
+                        <td data-val>
+                            ${property.value}
+                        </td>
+                        <td>
+                            ${property.description}
+                        </td>
+                        <td>  
+                            <button data-clipboard>
+                                Copy
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            return `
+                <table class="table table--striped theme-dark">
+                    <caption class="screen-reader-only">
+                        Color System Custom Properties
+                    </caption>
+                    <thead>
+                        <tr class="font-size-rg box-shadow-1">
+                            <th scope="col" colspan="4">
+                                <span>
+                                    ${type}
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Custom Property</th>
+                            <th scope="col">Default Value</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">
+                                <span class="screen-reader-only">Action</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${cpRows}
+                    </tbody>
+
+                </table>
+            `;
+
+        }).join('');
+
+        customProperyCheetSheet.innerHTML = customProperyHTML;
+    };
+
+    loadcustomProperties();
+
+</script>
+
 {% endif %}
 
 {% if page.title == 'NYC Core Icons' %}
