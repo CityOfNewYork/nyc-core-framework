@@ -80,7 +80,8 @@
 <script>
 
     const customPropertiesData = "{{ site.baseurl }}/lib/json/root-custom-properties.json";
-    const customProperyCheetSheet = document.getElementById("customProperyCheetSheet");
+    const customPropertiesContainer = document.getElementById("all-custom-properties");
+    const customPropertiesTable = customPropertiesContainer.querySelector(".table-scroll__container");
 
     const loadcustomProperties = async () => {
         try {
@@ -134,7 +135,7 @@
                         Color System Custom Properties
                     </caption>
                     <thead>
-                        <tr class="font-size-lg box-shadow-1">
+                        <tr class="box-shadow-1">
                             <th scope="col" colspan="4">
                                 <span>
                                     ${type}
@@ -159,7 +160,7 @@
 
         }).join('');
 
-        customProperyCheetSheet.innerHTML = customProperyHTML;
+        customPropertiesTable.innerHTML = customProperyHTML;
     };
 
     const initClipboard = () => {

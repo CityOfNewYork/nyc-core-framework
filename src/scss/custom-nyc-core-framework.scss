@@ -123,7 +123,7 @@ a[data-logo="brand"] {
     }
 }
 
-#custom-property-list {
+#all-custom-properties {
 
     button {
         color: var(--secondary);
@@ -136,10 +136,17 @@ a[data-logo="brand"] {
 
     .table{
         table-layout: auto;
+        &:not(:first-child){
+            thead > tr:first-child th {
+                border-top: var(--default-border-width) solid currentColor;
+            }
+        }
     }
 
     thead > tr:first-child th {
         position: relative;
+                font-size: var(--font-size-lg);
+                font-weight: var(--font-weight-normal);
 
         &::after {
             content: "";
@@ -150,6 +157,7 @@ a[data-logo="brand"] {
             left: 0;
             background-color: currentColor;
             opacity: 0.05;
+            pointer-events: none;
         }
     }
 
@@ -161,22 +169,18 @@ a[data-logo="brand"] {
 
         &:nth-child(1):not([colspan]) {
             width: 30%;
-            // background-color: red;
         }
 
         &:nth-child(2) {
             width: 30%;
-            // background-color: yellow;
         }
 
         &:nth-child(3) {
             width: auto;
-            // background-color: green;
         }
 
         &:nth-child(4) {
             width: 30%;
-            // background-color: purple;
         }
     }
 
