@@ -125,39 +125,49 @@ a[data-logo="brand"] {
 
 #all-custom-properties {
 
-    button {
-        color: var(--secondary);
-    }
-
-    button[data-clipboard] {
-        font-weight: bold;
-        display: inline-block;
-    }
-
-    .table{
+    .table {
         table-layout: auto;
-        &:not(:first-child){
-            thead > tr:first-child th {
-                border-top: var(--default-border-width) solid currentColor;
+    }
+
+    .table:not(:first-child) {
+
+        thead > tr {
+            // &:nth-child(1) {
+            //     border-top: var(--default-border-width) solid currentColor;
+            // }
+
+            &:nth-child(2) {
+                display: none;
             }
         }
+
+        tbody > tr {
+
+            &:nth-child(1) td {
+                border-color: transparent;
+            }
+        }
+
     }
 
-    thead > tr:first-child th {
-        position: relative;
-                font-size: var(--font-size-lg);
-                font-weight: var(--font-weight-normal);
+    .table {
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: currentColor;
-            opacity: 0.05;
-            pointer-events: none;
+        thead > tr:first-child th {
+            position: relative;
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-normal);
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: currentColor;
+                opacity: 0.1;
+                pointer-events: none;
+            }
         }
     }
 
@@ -190,5 +200,14 @@ a[data-logo="brand"] {
 
     td:nth-child(2) {
         color: #ccc;
+    }
+
+    button {
+        color: var(--secondary);
+    }
+
+    button[data-clipboard] {
+        font-weight: bold;
+        display: inline-block;
     }
 }
