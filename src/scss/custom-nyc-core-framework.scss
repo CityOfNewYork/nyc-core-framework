@@ -37,6 +37,7 @@ In this file:
     --header-line-height: 1.2;
 
     --body-max-width: null;
+    --table-scroll-min-width: 1000px;
 }
 
 //////////////////////////////////////////////
@@ -208,4 +209,18 @@ a[data-logo="brand"] {
         font-weight: bold;
         display: inline-block;
     }
+}
+
+.cp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cp-header__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+}
+.cp-header__link {
+    font-size: var(--font-size-sm);
 }

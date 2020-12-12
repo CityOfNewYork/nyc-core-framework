@@ -1,6 +1,6 @@
 [   
     {    
-        "type": "Accordion",
+        "type": "Accordions",
         "customProperties": [
             {
                 "name": "accordion-padding-x",
@@ -35,6 +35,7 @@
             }
         ]
     },
+
     {    
         "type": "Backdrops",
         "customProperties": [
@@ -45,6 +46,7 @@
             }
         ]
     },
+
     {    
         "type": "Borders",
         "customProperties": [
@@ -61,6 +63,58 @@
             {
                 "name": "default-border-radius",
                 "value": "0.5em",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
+
+    {    
+        "type": "Buttons",
+        "customProperties": [
+            {
+                "name": "btn-padding-x",
+                "value": "var(--spacer-2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "btn-padding-y",
+                "value": "0.625em",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "btn-font-weight",
+                "value": "var(--base-font-weight-bold)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "btn-font-weight",
+                "value": "var(--base-font-weight-bold)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "btn--outline-border-width",
+                "value": "calc( var(--default-border-width) * 2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "btn--icon-only-size",
+                "value": "2.25em",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
+
+    {    
+        "type": "Cards",
+        "customProperties": [
+            {
+                "name": "card-padding-x",
+                "value": "var(--spacer-2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "card-padding-y",
+                "value": "var(--spacer-2)",
                 "description": "Lorem ipsum dolor"
             }
         ]
@@ -216,7 +270,64 @@
             }
         ]
     },
-    
+
+    {
+        "type": "Containers",
+        "customProperties": [
+            {
+                "name": "container-padding-x",
+                "value": "var(--spacer-2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "narrow-width",
+                "value": "40rem",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "medium-width",
+                "value": "calc( var(--narrow-width) * 1.75)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "wide-width",
+                "value": "calc( var(--narrow-width) * 2.5)",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
+
+    {
+        "type": "Size",
+        "customProperties": [
+            {
+                "name": "spacer-1",
+                "value": "0.5rem",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "spacer-2",
+                "value": "1rem",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "spacer-3",
+                "value": "2rem",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "spacer-4",
+                "value": "3.5rem",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "spacer-5",
+                "value": "5rem",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
+
     {
         "type": "Typography",
         "customProperties": [
