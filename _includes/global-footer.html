@@ -77,65 +77,6 @@
 
 {% if page.title == 'Customization' %}
 
-<script defer>
-
-    const customPropButtonList = document.querySelectorAll('[data-clipboard]');
-
-    for (const customPropButton of customPropButtonList) {
-
-        let myButtonText = customPropButton.innerHTML.trim().replace(/&nbsp;/g, '');
-
-        const resetButton = () => {
-        
-            for (otherButtons of customPropButtonList){
-                otherButtons.innerHTML = myButtonText;
-            }
-        
-        }
-
-        customPropButton.addEventListener('click', function (event) {
-
-            event.preventDefault();
-
-            let currentRow = event.target.closest('tr');
-
-            let myCustomPropertyName = currentRow.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
-            let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
-
-            let myClipboardText = myCustomPropertyName + ':' + ' ' + myCustomPropertyValue + ';';
-            
-            resetButton();
-
-            if( myClipboardText ){
-                event.target.innerHTML = 'Copied!';
-            }
-
-            // Create an auxiliary hidden input
-            var aux = document.createElement( 'input' );
-
-            // Get the text from the element passed into the input
-            aux.setAttribute( 'value', myClipboardText );
-
-            // Append the aux input to the body
-            document.body.appendChild(aux);
-
-            // Highlight the content
-            aux.select();
-
-            // Execute the copy command
-            document.execCommand( 'copy' );
-
-            // Remove the input from the body
-            document.body.removeChild(aux);
-
-        });
-    
-        document.addEventListener("accTrigger", function (e) {
-            resetButton();
-        }, false);
-    }
-
-</script>
 
 <script>
 
@@ -150,6 +91,8 @@
             console.log("customPropertyData ===== >", customPropertyData);
             
             displayCustomProperties(customPropertyData);
+
+            initClipboard();
         
         } catch (err) {
             console.error(err);
@@ -187,7 +130,7 @@
             }).join('');
 
             return `
-                <table class="table table--striped theme-dark">
+                <table class="table table--striped theme-dark margin-y-3">
                     <caption class="screen-reader-only">
                         Color System Custom Properties
                     </caption>
@@ -218,6 +161,61 @@
         }).join('');
 
         customProperyCheetSheet.innerHTML = customProperyHTML;
+    };
+
+    const initClipboard = () => {
+        
+        const customPropButtonList = document.querySelectorAll('[data-clipboard]');
+
+        customPropButtonList.forEach((customPropButton) => {
+
+            let myButtonText = customPropButton.innerHTML.trim().replace(/&nbsp;/g, '');
+
+            const resetButton = () => {
+                customPropButtonList.forEach((otherButtons)=> {
+                    otherButtons.innerHTML = myButtonText;
+                });
+            }
+
+            resetButton();
+
+            customPropButton.addEventListener('click', function (event) {
+
+            event.preventDefault();
+
+            let currentRow = event.target.closest('tr');
+
+            let myCustomPropertyName = currentRow.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
+            let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
+
+            let myClipboardText = myCustomPropertyName + ':' + ' ' + myCustomPropertyValue + ';';
+
+            if( myClipboardText ){
+                event.target.innerHTML = 'Copied!';
+            }
+
+            // Create an auxiliary hidden input
+            var aux = document.createElement( 'input' );
+
+            // Get the text from the element passed into the input
+            aux.setAttribute( 'value', myClipboardText );
+
+            // Append the aux input to the body
+            document.body.appendChild(aux);
+
+            // Highlight the content
+            aux.select();
+
+            // Execute the copy command
+            document.execCommand( 'copy' );
+
+            // Remove the input from the body
+            document.body.removeChild(aux);
+
+        });
+    
+        });
+
     };
 
     loadcustomProperties();

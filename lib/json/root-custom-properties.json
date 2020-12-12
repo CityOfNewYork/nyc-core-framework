@@ -1,22 +1,151 @@
 [
     {    
         "type": "Color System",
-
         "customProperties": [
             {
                 "name": "primary",
-                "value": "red",
+                "value": "#1E00B3",
                 "description": "Your theme's primary color"
             },
             {
                 "name": "secondary",
-                "value": "blue",
-                "description": "Lorem ipsum dolar"
+                "value": "#64cc7e",
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "dark",
-                "value": "black",
-                "description": "Lorem ipsum dolar"
+                "value": "#191b35",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "a11y-link-color",
+                "value": "blue",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "primary-text",
+                "value": "white",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "primary-border",
+                "value": "hsla(0, 0%, 0%, 0.25);",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "primary-link",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "primary-confirm",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "primary-warn",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "secondary-text",
+                "value": "var(--dark)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "secondary-border",
+                "value": "hsla(0, 0%, 0%, 0.25)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "secondary-link",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "secondary-confirm",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "secondary-warn",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "dark-text",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "dark-border",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "dark-link",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "dark-confirm",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "dark-warn",
+                "value": "currentColor",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "light-text",
+                "value": "var(--dark)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "light-border",
+                "value": "hsla(0, 0%, 50%, 0.25)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "light-link",
+                "value": "var(--a11y-link-color)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "light-confirm",
+                "value": "#007e35",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "light-warn",
+                "value": "#ce1736",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "white-text",
+                "value": "var(--dark)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "white-border",
+                "value": "hsla(0, 0%, 50%, 0.25)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "white-link",
+                "value": "var(--a11y-link-color)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "white-confirm",
+                "value": "#008237",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "white-warn",
+                "value": "#e4193c",
+                "description": "Lorem ipsum dolor"
             }
         ]
     },
@@ -26,54 +155,108 @@
             {
                 "name": "base-font-family",
                 "value": "Source Sans Pro",
-                "description": "Lorem ipsum dolar"
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "base-font-weight-normal",
                 "value": "400",
-                "description": "Lorem ipsum dolar"
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "base-font-weight-medium",
                 "value": "600",
-                "description": "Lorem ipsum dolar"
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "base-font-weight-bold",
                 "value": "700",
-                "description": "Lorem ipsum dolar"
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "base-font-size",
                 "value": "22px",
-                "description": "Lorem ipsum dolar"
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "base-line-height",
                 "value": "1.5",
-                "description": "Lorem ipsum dolar"
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-sm",
-                "value": "",
-                "description": "Lorem ipsum dolar"
+                "value": "calc(var(--base-font-size) * 0.7)",
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-md",
-                "value": "",
-                "description": "Lorem ipsum dolar"
+                "value": "calc(var(--base-font-size) * 0.8)",
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-lg",
-                "value": "",
-                "description": "Lorem ipsum dolar"
+                "value": "calc(var(--base-font-size) * 1)",
+                "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-xl",
-                "value": "",
-                "description": "Lorem ipsum dolar"
+                "value": "calc(var(--base-font-size) * 1.4)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "banner-headline-font-size",
+                "value": "calc(var(--base-font-size) * 3.5)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "h1-font-size",
+                "value": "calc(var(--base-font-size) * 3)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "h2-font-size",
+                "value": "calc(var(--base-font-size) * 2.2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "h3-font-size",
+                "value": "calc(var(--base-font-size) * 1.8)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "h4-font-size",
+                "value": "calc(var(--base-font-size) * 1.6)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "h5-font-size",
+                "value": "calc(var(--base-font-size) * 1.4)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "h6-font-size",
+                "value": "calc(var(--base-font-size) * 1.2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "header-line-height",
+                "value": "1.125",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
+    {    
+        "type": "Accordion",
+        "customProperties": [
+            {
+                "name": "accordion-padding-x",
+                "value": "var(--spacer-2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "accordion-padding-y",
+                "value": "0.75",
+                "description": "Lorem ipsum dolor"
             }
         ]
     }
-
 ]
