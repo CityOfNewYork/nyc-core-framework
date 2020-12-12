@@ -53,23 +53,16 @@ In this file:
         border-top-style: var(--default-border-style);
     }
 
-    thead th {
-        vertical-align: bottom;
-
-        &:not([class*="width-"]) {
-            width: auto;
+    thead {
+        th {
+            vertical-align: bottom;
         }
-
-        &.w-fit{
-            width: 2%;
-            white-space: nowrap;
+        tr {
+            border-top-style: unset;
         }
-    } 
-    
-    thead tr {
-        border-top-style: unset;
     }
 }
+    
 
 //////////////////////////////////////////////
 // C. Table Modifiers
@@ -191,7 +184,7 @@ In this file:
         text-align: left;
     }
 
-    .table-scroll__assist {
+    .table-scroll__help {
         position: relative;
         z-index: 400;
         margin-bottom: 0.5rem;
@@ -201,11 +194,12 @@ In this file:
         display: none;
     }
 
-    .table-scroll__container{
+    .table-scroll__container {
         max-width: 100%;
         overflow: auto;
+        position: relative;
 
-        table{
+        table {
             overflow: hidden;
             min-width: var(--table-scroll-min-width);
         }
@@ -233,7 +227,7 @@ In this file:
 
     &[data-scroll=true] {
         .table-scroll__container::after,
-        .table-scroll__assist{
+        .table-scroll__help {
             display: block;
         }
     }   
