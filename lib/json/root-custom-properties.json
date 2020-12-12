@@ -14,6 +14,57 @@
             }
         ]
     },
+
+    {    
+        "type": "Alerts",
+        "customProperties": [
+            {
+                "name": "alert-padding-x",
+                "value": "var(--spacer-2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "alert-padding-y",
+                "value": "var(--spacer-2)",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "alert-highlight-opacity",
+                "value": "0.075",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
+    {    
+        "type": "Backdrops",
+        "customProperties": [
+            {
+                "name": "backdrop-fixed-height",
+                "value": "350px",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
+    {    
+        "type": "Borders",
+        "customProperties": [
+            {
+                "name": "default-border-width",
+                "value": "1px",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "default-border-style",
+                "value": "solid",
+                "description": "Lorem ipsum dolor"
+            },
+            {
+                "name": "default-border-radius",
+                "value": "0.5em",
+                "description": "Lorem ipsum dolor"
+            }
+        ]
+    },
     
     {    
         "type": "Color System",
@@ -165,6 +216,7 @@
             }
         ]
     },
+    
     {
         "type": "Typography",
         "customProperties": [

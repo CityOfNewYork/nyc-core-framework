@@ -34,6 +34,7 @@ In this file:
     --base-font-family: "neue-haas-grotesk-text";
 
     --btn-font-weight: normal;
+    --header-line-height: 1.2;
 
     --body-max-width: null;
 }
@@ -165,7 +166,7 @@ a[data-logo="brand"] {
                 bottom: 0;
                 left: 0;
                 background-color: currentColor;
-                opacity: 0.1;
+                opacity: 0.0825;
                 pointer-events: none;
             }
         }
@@ -173,10 +174,6 @@ a[data-logo="brand"] {
 
     th, 
     td {
-        &:nth-child(3) {
-            text-align: center;
-        }
-
         &:nth-child(1):not([colspan]) {
             width: 30%;
         }
@@ -187,6 +184,7 @@ a[data-logo="brand"] {
 
         &:nth-child(3) {
             width: auto;
+            text-align: center;
         }
 
         &:nth-child(4) {
