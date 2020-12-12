@@ -77,7 +77,6 @@
 
 {% if page.title == 'Customization' %}
 
-
 <script>
 
     const customPropertiesData = "{{ site.baseurl }}/lib/json/root-custom-properties.json";
@@ -117,25 +116,25 @@
                         <td data-val>
                             ${property.value}
                         </td>
-                        <td>
-                            ${property.description}
-                        </td>
                         <td>  
                             <button data-clipboard>
                                 Copy
                             </button>
+                        </td>
+                        <td>
+                            ${property.description}
                         </td>
                     </tr>
                 `;
             }).join('');
 
             return `
-                <table class="table table--striped theme-dark margin-y-3">
+                <table class="table table--striped">
                     <caption class="screen-reader-only">
                         Color System Custom Properties
                     </caption>
                     <thead>
-                        <tr class="font-size-rg box-shadow-1">
+                        <tr class="font-size-lg box-shadow-1">
                             <th scope="col" colspan="4">
                                 <span>
                                     ${type}
@@ -145,10 +144,10 @@
                         <tr>
                             <th scope="col">Custom Property</th>
                             <th scope="col">Default Value</th>
-                            <th scope="col">Description</th>
                             <th scope="col">
                                 <span class="screen-reader-only">Action</span>
                             </th>
+                            <th scope="col">Description</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -177,42 +176,42 @@
                 });
             }
 
-            resetButton();
+            customPropButton.addEventListener('click', (event) => {
 
-            customPropButton.addEventListener('click', function (event) {
+                event.preventDefault();
 
-            event.preventDefault();
+                resetButton();
+                
+                let currentRow = event.target.closest('tr');
 
-            let currentRow = event.target.closest('tr');
+                let myCustomPropertyName = currentRow.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
+                let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
 
-            let myCustomPropertyName = currentRow.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
-            let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
+                let myClipboardText = myCustomPropertyName + ':' + ' ' + myCustomPropertyValue + ';';
 
-            let myClipboardText = myCustomPropertyName + ':' + ' ' + myCustomPropertyValue + ';';
+                if( myClipboardText ){
+                    event.target.innerHTML = 'Copied!';
+                }
 
-            if( myClipboardText ){
-                event.target.innerHTML = 'Copied!';
-            }
+                // Create an auxiliary hidden input
+                var aux = document.createElement( 'input' );
 
-            // Create an auxiliary hidden input
-            var aux = document.createElement( 'input' );
+                // Get the text from the element passed into the input
+                aux.setAttribute( 'value', myClipboardText );
 
-            // Get the text from the element passed into the input
-            aux.setAttribute( 'value', myClipboardText );
+                // Append the aux input to the body
+                document.body.appendChild(aux);
 
-            // Append the aux input to the body
-            document.body.appendChild(aux);
+                // Highlight the content
+                aux.select();
 
-            // Highlight the content
-            aux.select();
+                // Execute the copy command
+                document.execCommand( 'copy' );
 
-            // Execute the copy command
-            document.execCommand( 'copy' );
+                // Remove the input from the body
+                document.body.removeChild(aux);
 
-            // Remove the input from the body
-            document.body.removeChild(aux);
-
-        });
+            });
     
         });
 
@@ -266,7 +265,6 @@
         const iconHTML = icons.map((iconArray) => {
 
             console.log("iconArray = ", iconArray);
-            // let tags = iconArray.icon.tags;
 
             let name = iconArray.properties.name;
             let tags = iconArray.icon.tags;
@@ -278,7 +276,6 @@
             let svgPaths = paths.map((path) => {
                 return `<path d="${path}"/>`;
             }).join('');
-
 
             console.log("svgPaths = ", svgPaths);
 
@@ -294,6 +291,7 @@
                 </p>
             </div>
             `;
+
         }).join('');
 
         coreIconsGrid.innerHTML = iconHTML;

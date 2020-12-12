@@ -134,29 +134,49 @@ a[data-logo="brand"] {
         display: inline-block;
     }
 
-    th, 
-    td {
-        &:nth-child(4) {
-            text-align: right;
-        }
-
+    .table{
+        table-layout: auto;
     }
 
-    th {
+    thead > tr:first-child th {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            opacity: 0.05;
+        }
+    }
+
+    th, 
+    td {
+        &:nth-child(3) {
+            text-align: center;
+        }
 
         &:nth-child(1):not([colspan]) {
+            width: 30%;
             // background-color: red;
-            width: 40% !important;
         }
 
         &:nth-child(2) {
-            width: 40% !important;
+            width: 30%;
             // background-color: yellow;
         }
 
         &:nth-child(3) {
-            width: 20% !important;
+            width: auto;
             // background-color: green;
+        }
+
+        &:nth-child(4) {
+            width: 30%;
+            // background-color: purple;
         }
     }
 
