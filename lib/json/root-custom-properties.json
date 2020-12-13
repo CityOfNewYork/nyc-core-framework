@@ -5,12 +5,12 @@
             {
                 "name": "accordion-padding-x",
                 "value": "var(--spacer-2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Left and right padding of the <em>accordion</em> component button and panel"
             },
             {
                 "name": "accordion-padding-y",
                 "value": "0.75",
-                "description": "Lorem ipsum dolor"
+                "description": "Top and bottom padding of the <em>accordion</em> component button and panel"
             }
         ]
     },
@@ -21,17 +21,17 @@
             {
                 "name": "alert-padding-x",
                 "value": "var(--spacer-2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Left and right padding of the <em>alert</em> component header and body"
             },
             {
                 "name": "alert-padding-y",
                 "value": "var(--spacer-2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Top and bottom padding of the <em>alert</em> component header and body"
             },
             {
-                "name": "alert-highlight-opacity",
+                "name": "alert-background-opacity",
                 "value": "0.075",
-                "description": "Lorem ipsum dolor"
+                "description": "Opacity of the <em>alert</em> component background (without the dark modifier class applied)"
             }
         ]
     },
@@ -42,7 +42,7 @@
             {
                 "name": "backdrop-fixed-height",
                 "value": "350px",
-                "description": "Lorem ipsum dolor"
+                "description": "Height of the <em>backdrop</em> component with the fixed height modifier class"
             }
         ]
     },
@@ -51,19 +51,19 @@
         "type": "Borders",
         "customProperties": [
             {
-                "name": "default-border-width",
+                "name": "global-border-width",
                 "value": "1px",
-                "description": "Lorem ipsum dolor"
+                "description": "Width of all borders applied across your stylesheet"
             },
             {
-                "name": "default-border-style",
+                "name": "global-border-style",
                 "value": "solid",
-                "description": "Lorem ipsum dolor"
+                "description": "Style of all borders applied across your stylesheet"
             },
             {
-                "name": "default-border-radius",
+                "name": "rounded-border-radius",
                 "value": "0.5em",
-                "description": "Lorem ipsum dolor"
+                "description": "Border radius of the <em>rounded</em> utility class"
             }
         ]
     },
@@ -72,34 +72,29 @@
         "type": "Buttons",
         "customProperties": [
             {
-                "name": "btn-padding-x",
+                "name": "button-padding-x",
                 "value": "var(--spacer-2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Left and right padding of the <em>button</em> utility class"
             },
             {
-                "name": "btn-padding-y",
+                "name": "button-padding-y",
                 "value": "0.625em",
-                "description": "Lorem ipsum dolor"
+                "description": "Top and bottom padding of the <em>button</em> utility class"
             },
             {
-                "name": "btn-font-weight",
+                "name": "button-font-weight",
                 "value": "var(--base-font-weight-bold)",
-                "description": "Lorem ipsum dolor"
+                "description": "Weight of text elements within the <em>button</em> utility class"
             },
             {
-                "name": "btn-font-weight",
-                "value": "var(--base-font-weight-bold)",
-                "description": "Lorem ipsum dolor"
-            },
-            {
-                "name": "btn--outline-border-width",
+                "name": "button--outline-border-width",
                 "value": "calc( var(--default-border-width) * 2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Border width of the <em>button outline</em> modifier class"
             },
             {
-                "name": "btn--icon-only-size",
+                "name": "button--icon-only-size",
                 "value": "2.25em",
-                "description": "Lorem ipsum dolor"
+                "description": "Width and height of the <em>button icon only</em> modifier class"
             }
         ]
     },
@@ -110,12 +105,12 @@
             {
                 "name": "card-padding-x",
                 "value": "var(--spacer-2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Left and right padding of the <em>card</em> component header, body, and footer"
             },
             {
                 "name": "card-padding-y",
                 "value": "var(--spacer-2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Top and bottom padding of the <em>card</em> component header, body, and footer"
             }
         ]
     },
@@ -124,149 +119,154 @@
         "type": "Color System",
         "customProperties": [
             {
-                "name": "primary",
-                "value": "#1E00B3",
-                "description": "Your theme's primary color"
-            },
-            {
-                "name": "secondary",
-                "value": "#64cc7e",
-                "description": "Lorem ipsum dolor"
-            },
-            {
-                "name": "dark",
-                "value": "#191b35",
-                "description": "Lorem ipsum dolor"
-            },
-            {
                 "name": "a11y-link-color",
                 "value": "blue",
-                "description": "Lorem ipsum dolor"
+                "description": "Accessible link color applied to links within <em>white</em> and <em>light</em> themes"
+            },
+            {
+                "name": "primary",
+                "value": "#1E00B3",
+                "description": "The <em>primary</em> color applied within the <em>theme</em> and <em>color</em> utility classes"
             },
             {
                 "name": "primary-text",
                 "value": "white",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of text elements within the <em>primary theme</em> utility class"
             },
             {
                 "name": "primary-border",
                 "value": "hsla(0, 0%, 0%, 0.25);",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of borders within the <em>primary theme</em> utility class"
             },
             {
                 "name": "primary-link",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of links within the <em>primary theme</em> utility class"
             },
             {
                 "name": "primary-confirm",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of confirmation alerts within the <em>primary theme</em> utility class"
             },
             {
                 "name": "primary-warn",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of warning alerts within the <em>primary theme</em> utility class"
+            },
+            {
+                "name": "secondary",
+                "value": "#64cc7e",
+                "description": "The <em>secondary</em> color applied within the <em>theme</em> and <em>color</em> utility classes"
             },
             {
                 "name": "secondary-text",
                 "value": "var(--dark)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of text elements within the <em>secondary theme</em> utility class"
             },
             {
                 "name": "secondary-border",
                 "value": "hsla(0, 0%, 0%, 0.25)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of borders within the <em>secondary theme</em> utility class"
             },
             {
                 "name": "secondary-link",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of links within the <em>secondary theme</em> utility class"
             },
             {
                 "name": "secondary-confirm",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of confirmation alerts within the <em>secondary theme</em> utility class"
             },
             {
                 "name": "secondary-warn",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of warning alerts within the <em>secondary theme</em> utility class"
+            },
+            {
+                "name": "dark",
+                "value": "#191b35",
+                "description": "The <em>dark</em> color applied within the <em>theme</em> and <em>color</em> utility classes"
             },
             {
                 "name": "dark-text",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of text elements within the <em>dark theme</em> utility class"
             },
             {
                 "name": "dark-border",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of borders within the <em>dark theme</em> utility class"
             },
             {
                 "name": "dark-link",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of links within the <em>dark theme</em> utility class"
             },
             {
                 "name": "dark-confirm",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of confirmation alerts within the <em>dark theme</em> utility class"
             },
             {
                 "name": "dark-warn",
                 "value": "currentColor",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of warning alerts within the <em>dark theme</em> utility class"
+            },
+            {
+                "name": "light",
+                "value": "#191b35",
+                "description": "The <em>light</em> color applied within the <em>theme</em> and <em>color</em> utility classes"
             },
             {
                 "name": "light-text",
                 "value": "var(--dark)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of text elements within the <em>light theme</em> utility class"
             },
             {
                 "name": "light-border",
                 "value": "hsla(0, 0%, 50%, 0.25)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of borders within the <em>light theme</em> utility class"
             },
             {
                 "name": "light-link",
                 "value": "var(--a11y-link-color)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of links within the <em>light theme</em> utility class"
             },
             {
                 "name": "light-confirm",
                 "value": "#007e35",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of confirmation alerts within the <em>light theme</em> utility class"
             },
             {
                 "name": "light-warn",
                 "value": "#ce1736",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of warning alerts within the <em>light theme</em> utility class"
             },
             {
                 "name": "white-text",
                 "value": "var(--dark)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of text elements within the <em>white theme</em> (default) utility class"
             },
             {
                 "name": "white-border",
                 "value": "hsla(0, 0%, 50%, 0.25)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of borders within the <em>white theme</em> (default) utility class"
             },
             {
                 "name": "white-link",
                 "value": "var(--a11y-link-color)",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of links within the <em>white theme</em> (default) utility class"
             },
             {
                 "name": "white-confirm",
                 "value": "#008237",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of confirmation alerts within the <em>white theme</em> (default) utility class"
             },
             {
                 "name": "white-warn",
                 "value": "#e4193c",
-                "description": "Lorem ipsum dolor"
+                "description": "Color of warning alerts within the <em>white theme</em> (default) utility class"
             }
         ]
     },
@@ -277,53 +277,53 @@
             {
                 "name": "container-padding-x",
                 "value": "var(--spacer-2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Left and right padding of the <em>container</em> component"
             },
             {
                 "name": "narrow-width",
                 "value": "40rem",
-                "description": "Lorem ipsum dolor"
+                "description": "Maximum width of the <em>narrow</em> utility class"
             },
             {
                 "name": "medium-width",
                 "value": "calc( var(--narrow-width) * 1.75)",
-                "description": "Lorem ipsum dolor"
+                "description": "Maximum width of the <em>medium</em> utility class"
             },
             {
                 "name": "wide-width",
                 "value": "calc( var(--narrow-width) * 2.5)",
-                "description": "Lorem ipsum dolor"
+                "description": "Maximum width of the <em>wide</em> utility class"
             }
         ]
     },
 
     {
-        "type": "Size",
+        "type": "Spacing",
         "customProperties": [
             {
                 "name": "spacer-1",
                 "value": "0.5rem",
-                "description": "Lorem ipsum dolor"
+                "description": "Value of <em>spacer 1</em>"
             },
             {
                 "name": "spacer-2",
                 "value": "1rem",
-                "description": "Lorem ipsum dolor"
+                "description": "Value of <em>spacer 2</em>"
             },
             {
                 "name": "spacer-3",
                 "value": "2rem",
-                "description": "Lorem ipsum dolor"
+                "description": "Value of <em>spacer 3</em>"
             },
             {
                 "name": "spacer-4",
                 "value": "3.5rem",
-                "description": "Lorem ipsum dolor"
+                "description": "Value of <em>spacer 4</em>"
             },
             {
                 "name": "spacer-5",
                 "value": "5rem",
-                "description": "Lorem ipsum dolor"
+                "description": "Value of <em>spacer 5</em>"
             }
         ]
     },
