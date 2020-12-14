@@ -17,13 +17,13 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --btn-padding-x: var(--spacer-2);
-    --btn-padding-y: 0.625em;
+    --button-padding-x: 1em;
+    --button-padding-y: 0.625em;
 
-    --btn-font-weight: var(--base-font-weight-bold);
+    --button-font-weight: var(--base-font-weight-bold);
 
-    --btn--outline-border-width: calc( var(--default-border-width) * 2);
-    --btn--icon-only-size: 2.25em;
+    --button--outline-border-width: calc( var(--default-border-width) * 2);
+    --button--icon-only-size: 2.25em;
 }
 
 //////////////////////////////////////////////
@@ -51,18 +51,18 @@ button {
 //////////////////////////////////////////////
 
 button, 
-.btn {
-    --btn-opacity-hover: 0.75;
+.button {
+    --button-opacity-hover: 0.75;
 
     @extend %hover-focus !optional;
 
     &[aria-disabled="true"] {
         cursor: not-allowed;
-        opacity: var(--btn-opacity-hover);
+        opacity: var(--button-opacity-hover);
     }
 }
 
-.btn {
+.button {
     display: inline-block;
     color: inherit;
     background-color: unset;
@@ -77,12 +77,12 @@ button,
     &:hover, 
     &:focus, 
     &:active {
-        opacity: var(--btn-opacity-hover);
+        opacity: var(--button-opacity-hover);
     }
 
     &:not([class*="--icon-only"]) {
-        font-weight: var(--btn-font-weight);
-        padding: var(--btn-padding-y) var(--btn-padding-x);
+        font-weight: var(--button-font-weight);
+        padding: var(--button-padding-y) var(--button-padding-x);
     }
 }
 
@@ -90,30 +90,30 @@ button,
 // D. Button Outline Modifier
 //////////////////////////////////////////////
 
-.btn--outline {
+.button--outline {
     background-color: transparent;
-    box-shadow: inset 0 0 0 var(--btn--outline-border-width) currentColor;
+    box-shadow: inset 0 0 0 var(--button--outline-border-width) currentColor;
 }
 
 //////////////////////////////////////////////
 // E. Button Has Icon Modifier
 //////////////////////////////////////////////
 
-[class*="btn--has-icon"] {
+[class*="button--has-icon"] {
     &:hover,
     &:focus{
-        .btn__text {
+        .button__text {
             text-decoration: underline;
         }
     }
 }
 
-[class*="btn--has-icon"] .btn__text {
+[class*="button--has-icon"] .button__text {
     margin-left: 0.25em;
     margin-right: 0.25em;
 }
 
-.btn--has-icon--disperse {
+.button--has-icon--disperse {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -124,13 +124,13 @@ button,
 // F. Button Icon Only Modifier
 //////////////////////////////////////////////
 
-.btn--icon-only {
+.button--icon-only {
     position: relative;
 
     display: inline-flex;
 
-    width: var(--btn--icon-only-size);
-    height: var(--btn--icon-only-size);
+    width: var(--button--icon-only-size);
+    height: var(--button--icon-only-size);
 
     overflow: hidden;
     border-radius: 50%;
@@ -158,14 +158,14 @@ button,
 
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
-    .btn--icon-only {
+    .button--icon-only {
         display: table-cell; 
 
         &::before {
             display: none;
         }
 
-        .btn__icon {
+        .button__icon {
             margin-right: auto;
             margin-left: auto;
         }

@@ -53,7 +53,7 @@ In this file:
         justify-content: space-between;
         align-items: center;
         
-        > .btn,
+        > .button,
         > button {
             margin-left: calc(var(--primary-nav-padding) * 0.25);
             margin-right: calc(var(--primary-nav-padding) * 0.25);
@@ -422,7 +422,7 @@ nav[aria-label="Breadcrumb"] {
 // F. Dropdown
 ////////////////////////////////////////
 
-[data-toggle="dropdown"]:not([class*="btn--icon-only"]) {
+[data-toggle="dropdown"]:not([class*="button--icon-only"]) {
     @include add-caret;
 
     &[aria-expanded="true"]::after {

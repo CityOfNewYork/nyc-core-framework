@@ -15,7 +15,8 @@ In this file:
 :root {
     --alert-padding-x: var(--spacer-2);
     --alert-padding-y: var(--spacer-2);
-    --alert-highlight-opacity: .075;
+    
+    --alert-background-opacity: 0.075;
 }
 
 //////////////////////////////////////////////
@@ -47,7 +48,7 @@ In this file:
             left: 0;
             pointer-events: none;
             background-color: currentColor;
-            opacity: var(--alert-highlight-opacity);
+            opacity: var(--alert-background-opacity);
         }
     }    
 }

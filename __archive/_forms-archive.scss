@@ -382,15 +382,15 @@ input[type="number"] {
 .form-entry__field--upload {
     flex-direction: column;
 
-    > .form-entry__field__btn, 
+    > .form-entry__field__button, 
     > .field__uploads{
         line-height: inherit;
         padding: var(--form-field-padding-y) var(--form-field-padding-x) !important;
     }
 
-    > .form-entry__field__btn{
-        @extend .btn !optional;
-        @extend .btn--has--icon !optional;
+    > .form-entry__field__button{
+        @extend .button !optional;
+        @extend .button--has--icon !optional;
 
         background-color: var(--dark);
         color: var(--dark-text);

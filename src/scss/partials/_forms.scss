@@ -18,7 +18,7 @@ In this file:
 
 :root {
     --form-field-padding-x: var(--spacer-2);
-    --form-field-padding-y: var(--btn-padding-y);
+    --form-field-padding-y: var(--button-padding-y);
 
     --form-field-border-radius: 0.25em;
 }
@@ -63,7 +63,7 @@ In this file:
 
 form > .form-entry ~ .form-entry,
 form > .grid, 
-form > .btn {
+form > .button {
     margin-top: var(--spacer-3);
     margin-bottom: var(--spacer-3);
 }
@@ -125,7 +125,7 @@ form > .btn {
         flex-shrink: 0;
     }
 
-    [class*="btn--icon-only"] {
+    [class*="button--icon-only"] {
         margin-left: calc(var(--form-field-padding-x) / 2);
         margin-right: calc(var(--form-field-padding-x) / 2);
     }
