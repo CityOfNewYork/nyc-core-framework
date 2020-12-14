@@ -303,27 +303,27 @@
             {
                 "name": "spacer-1",
                 "value": "0.5rem",
-                "description": "Value of <em>spacer 1</em>"
+                "description": "Size of <em>spacer 1</em>, used in CSS including margin and padding utility classes"
             },
             {
                 "name": "spacer-2",
                 "value": "1rem",
-                "description": "Value of <em>spacer 2</em>"
+                "description": "Size of <em>spacer 2</em>, used in CSS including margin and padding utility classes"
             },
             {
                 "name": "spacer-3",
                 "value": "2rem",
-                "description": "Value of <em>spacer 3</em>"
+                "description": "Size of <em>spacer 3</em>, used in CSS including margin and padding utility classes"
             },
             {
                 "name": "spacer-4",
                 "value": "3.5rem",
-                "description": "Value of <em>spacer 4</em>"
+                "description": "Size of <em>spacer 4</em>, used in CSS including margin and padding utility classes"
             },
             {
                 "name": "spacer-5",
                 "value": "5rem",
-                "description": "Value of <em>spacer 5</em>"
+                "description": "Size of <em>spacer 5</em>, used in CSS including margin and padding utility classes"
             }
         ]
     },

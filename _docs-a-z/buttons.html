@@ -24,8 +24,8 @@ title: "Buttons"
     <h2>The Basic Button</h2>
 
     <p>
-        All buttons on in the NYC Core Framework require the definer class <code>.btn</code> on an <code>&lt;a&gt;</code> or
-        <code>&lt;button&gt;</code> tag. By default, <code>.btn</code> selectors inherit text color and font size
+        All buttons on in the NYC Core Framework require the definer class <code>.button</code> on an <code>&lt;a&gt;</code> or
+        <code>&lt;button&gt;</code> tag. By default, <code>.button</code> selectors inherit text color and font size
         from their parent. The example below is a generic button with no color or style yet applied.
     </p>
 
@@ -36,7 +36,7 @@ title: "Buttons"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row align-items-center">
             <div class="w-100 text-align-center">
-                <a class="btn" href="#1">
+                <a class="button" href="#1">
                     Button
                 </a>
             </div>
@@ -47,7 +47,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;a class="btn" href="#1"&gt;
+            &lt;a class="button" href="#1"&gt;
                 Button
             &lt;/a&gt;
         </code>
@@ -60,7 +60,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;button class="btn"&gt;
+            &lt;button class="button"&gt;
                 Button
             &lt;/button&gt;
         </code>
@@ -77,7 +77,7 @@ title: "Buttons"
     <h2>Adding Color</h2>
 
     <p>
-        Add color to a <code>.btn</code> selector with our <a href="{{ site.baseurl }}/docs/color-system/#backgroundColorClasses">background-color utility classes</a>.
+        Add color to a <code>.button</code> selector with our <a href="{{ site.baseurl }}/docs/color-system/#backgroundColorClasses">background-color utility classes</a>.
         These classes automatically apply the button's appropriate text color.
     </p>
 
@@ -91,17 +91,17 @@ title: "Buttons"
             <div class="w-100">
                 <ul class="nav nav--horizontal--md justify-content-center text-align-center">
                     <li>
-                        <a class="btn theme-primary" href="#1">
+                        <a class="button theme-primary" href="#1">
                             Button
                         </a>
                     </li>
                     <li>
-                        <a class="btn theme-secondary" href="#1">
+                        <a class="button theme-secondary" href="#1">
                             Button
                         </a>
                     </li>
                     <li>
-                        <a class="btn theme-dark" href="#1">
+                        <a class="button theme-dark" href="#1">
                             Button
                         </a>
                     </li>
@@ -115,15 +115,15 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="btn theme-primary" href="#1"&gt;
+            &lt;a class="button theme-primary" href="#1"&gt;
                 Button
             &lt;/a&gt;
 
-            &lt;a class="btn theme-secondary" href="#1"&gt;
+            &lt;a class="button theme-secondary" href="#1"&gt;
                 Button
             &lt;/a&gt;
             
-            &lt;a class="btn theme-dark" href="#1"&gt;
+            &lt;a class="button theme-dark" href="#1"&gt;
                 Button
             &lt;/a&gt;
         </code>
@@ -151,7 +151,7 @@ title: "Buttons"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
             <div class="w-100">
-                <a class="btn theme-secondary display-block" href="#1" data-toggle="collapse">
+                <a class="button theme-secondary display-block" href="#1" data-toggle="collapse">
                     Button
                 </a>
             </div>
@@ -163,7 +163,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
    <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="btn theme-primary display-block" href="#1"&gt;
+            &lt;a class="button theme-primary display-block" href="#1"&gt;
                 Button
             &lt;/a&gt;
         </code>
@@ -180,8 +180,8 @@ title: "Buttons"
     <h2>Outlined Buttons</h2>
 
     <p>
-        For a button with an outline instead of a fill, add the outline modifier class <code>.btn--outline</code>
-        to the <code>.btn</code> selector. The outline width  matches your theme's default <a href="#1">border width</a>. The
+        For a button with an outline instead of a fill, add the outline modifier class <code>.button--outline</code>
+        to the <code>.button</code> selector. The outline width  matches your theme's default <a href="#1">border width</a>. The
         outline color inherits the button's text color, which can be changed using
         our <a href="#1">text color utility classes</a>.
     </p>
@@ -196,13 +196,13 @@ title: "Buttons"
             <div class="w-100 px-4">
                 <div class="grid grid--gap-2 grid--cells-6--md justify-content-center">
                     <div class="grid__cell">
-                        <a class="btn btn--outline display-block" href="#1">
+                        <a class="button button--outline display-block" href="#1">
                             Button
                         </a>
                     </div>
                     <!-- .grid__cell -->
                     <div class="grid__cell">
-                        <a class="btn btn--outline display-block text-secondary" href="#1">
+                        <a class="button button--outline display-block text-secondary" href="#1">
                             Button
                         </a>
                     </div>
@@ -218,7 +218,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;a class="btn btn--outline" href="#1"&gt;
+            &lt;a class="button button--outline" href="#1"&gt;
                 Button
             &lt;/a&gt;
         </code>
@@ -231,7 +231,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;button class="btn btn--outline text-secondary"&gt;
+            &lt;button class="button button--outline text-secondary"&gt;
                 Button
             &lt;/button&gt;
         </code>
@@ -247,7 +247,7 @@ title: "Buttons"
 
     <h2>Border Radius</h2>
 
-    <p>Use our <a href="#1">border-radius utility classes</a> (e.g. <code>.rounded</code>) for rounded edges on <code>.btn</code> selectors.</p>
+    <p>Use our <a href="#1">border-radius utility classes</a> (e.g. <code>.rounded</code>) for rounded edges on <code>.button</code> selectors.</p>
 
 </div>
 <!-- .container -->
@@ -259,13 +259,13 @@ title: "Buttons"
             <div class="w-100 px-4">
                 <div class="grid grid--gap-2 grid--cells-6--md">
                     <div class="grid__cell">
-                        <a class="btn theme-primary display-block rounded" href="#1">
+                        <a class="button theme-primary display-block rounded" href="#1">
                             Button
                         </a>
                     </div>
                     <!-- .grid__cell -->
                     <div class="grid__cell">
-                        <a class="btn theme-secondary display-block rounded-pill" href="#1">
+                        <a class="button theme-secondary display-block rounded-pill" href="#1">
                             Button
                         </a>
                     </div>
@@ -280,11 +280,11 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="btn theme-primary rounded" href="#1"&gt;
+            &lt;a class="button theme-primary rounded" href="#1"&gt;
                 Button
             &lt;/a&gt;
 
-            &lt;a class="btn theme-primary rounded-pill" href="#1"&gt;
+            &lt;a class="button theme-primary rounded-pill" href="#1"&gt;
                 Button
             &lt;/A&gt;
         </code>
@@ -318,17 +318,17 @@ title: "Buttons"
             <div class="w-100">
                 <ul class="nav nav--horizontal--md justify-content-center font-size-sm">
                     <li>
-                        <a class="btn theme-primary rounded" href="#1">
+                        <a class="button theme-primary rounded" href="#1">
                             Button
                         </a>
                     </li>
                     <li>
-                        <a class="btn theme-secondary rounded" href="#1">
+                        <a class="button theme-secondary rounded" href="#1">
                             Button
                         </a>
                     </li>
                     <li>
-                        <a class="btn theme-dark rounded" href="#1">
+                        <a class="button theme-dark rounded" href="#1">
                             Button
                         </a>
                     </li>
@@ -343,17 +343,17 @@ title: "Buttons"
         <code class="language-html">
             &lt;ul class="nav nav--horizontal--md justify-content-center font-size-sm"&gt;
                 &lt;li&gt;
-                    &lt;a class="btn theme-primary rounded" href="#1"&gt;
+                    &lt;a class="button theme-primary rounded" href="#1"&gt;
                         Button
                     &lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a class="btn theme-secondary rounded" href="#1"&gt;
+                    &lt;a class="button theme-secondary rounded" href="#1"&gt;
                         Button
                     &lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a class="btn theme-dark rounded" href="#1"&gt;
+                    &lt;a class="button theme-dark rounded" href="#1"&gt;
                         Button
                     &lt;/a&gt;
                 &lt;/li&gt;
@@ -373,12 +373,12 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>Buttons With Text and Icon</h2>
     <p>
-        Add an icon to a <code>.btn</code> selector with the <code>.btn--has-icon</code> modifier class. Buttons with
+        Add an icon to a <code>.button</code> selector with the <code>.button--has-icon</code> modifier class. Buttons with
         icons require two child selectors. The icon itself is a <code>&lt;span&gt;</code> with its combined <a href="#1">Font Awesome</a>
-        classes, and an additional class of <code>.btn__icon</code>.
+        classes, and an additional class of <code>.button__icon</code>.
     </p>
     <p>
-        A second <code>&lt;span&gt;</code> with a <code>.btn__text</code> class is needed for the button's text. This
+        A second <code>&lt;span&gt;</code> with a <code>.button__text</code> class is needed for the button's text. This
         selector is our target for underlining the text on the button's <code>:hover</code> and <code>:focus</code> states. It also provides a small margin to separate the text from the icon.
     </p>
 </div>
@@ -388,9 +388,9 @@ title: "Buttons"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
             <div class="w-100 text-align-center">
-                <a class="btn btn--has-icon theme-primary rounded" href="#1">
-                    <span class="fas fa-pen fa-sm btn__icon"></span>
-                    <span class="btn__text">Button</span>
+                <a class="button button--has-icon theme-primary rounded" href="#1">
+                    <span class="fas fa-pen fa-sm button__icon"></span>
+                    <span class="button__text">Button</span>
                 </a>
             </div>
         </div>
@@ -400,9 +400,9 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;a class="btn btn--has-icon theme-primary" href="#1"&gt;
-                &lt;span class="fas fa-pen fa-sm btn__icon"&gt;&lt;/span&gt;
-                &lt;span class="btn__text"&gt;Button &lt;/span&gt;
+            &lt;a class="button button--has-icon theme-primary" href="#1"&gt;
+                &lt;span class="fas fa-pen fa-sm button__icon"&gt;&lt;/span&gt;
+                &lt;span class="button__text"&gt;Button &lt;/span&gt;
             &lt;/a&gt;
         </code>
     </pre>
@@ -414,9 +414,9 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;button class="btn btn--has-icon theme-primary"&gt;
-                &lt;span class="fas fa-pen fa-sm btn__icon"&gt;&lt;/span&gt;
-                &lt;span class="btn__text"&gt;Button &lt;/span&gt;
+            &lt;button class="button button--has-icon theme-primary"&gt;
+                &lt;span class="fas fa-pen fa-sm button__icon"&gt;&lt;/span&gt;
+                &lt;span class="button__text"&gt;Button &lt;/span&gt;
             &lt;/button&gt;
         </code>
     </pre>
@@ -428,7 +428,7 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <p>
         If you wish for a button's text and icon to be opposite of one another, add the chain modifier
-        class <code>--disperse</code> to <code>.btn--has-icon</code> class (resulting in <code>.btn--has-icon--disperse</code>).
+        class <code>--disperse</code> to <code>.button--has-icon</code> class (resulting in <code>.button--has-icon--disperse</code>).
         This class automatically makes the button full-width of its parent.
     </p>
 </div>
@@ -438,9 +438,9 @@ title: "Buttons"
     <div class="aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
             <div class="w-100 px-4">
-                <button class="btn btn--has-icon--disperse theme-primary">
-                    <span class="btn__text">Button</span>
-                    <span class="fas fa-arrow-right btn__icon"></span>
+                <button class="button button--has-icon--disperse theme-primary">
+                    <span class="button__text">Button</span>
+                    <span class="fas fa-arrow-right button__icon"></span>
                 </button>
             </div>
         </div>
@@ -450,9 +450,9 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="btn btn--has-icon--disperse theme-primary" href="#1"&gt;
-                &lt;span class="fas fa-pen fa-sm btn__icon"&gt;&lt;/span&gt;
-                &lt;span class="btn__text"&gt;Button &lt;/span&gt;
+            &lt;a class="button button--has-icon--disperse theme-primary" href="#1"&gt;
+                &lt;span class="fas fa-pen fa-sm button__icon"&gt;&lt;/span&gt;
+                &lt;span class="button__text"&gt;Button &lt;/span&gt;
             &lt;/a&gt;
         </code>
     </pre>
@@ -466,7 +466,7 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>Icon-only Buttons</h2>
     <p>
-        Icon-only buttons require the <code>.btn</code> definer class and the <code>.btn--icon-only</code> modifier
+        Icon-only buttons require the <code>.button</code> definer class and the <code>.button--icon-only</code> modifier
         class. Include the <code>title</code> attribute to describe the button on
         its hover state (for sighted users).
     </p>
@@ -485,19 +485,19 @@ title: "Buttons"
             <div class="w-100">
                 <ul class="nav nav--horizontal justify-content-center">
                     <li>
-                        <a class="btn btn--icon-only" href="#1" title="Taxi">
+                        <a class="button button--icon-only" href="#1" title="Taxi">
                             <span class="sr-only">Taxi</span>
                             <span class="fas fa-taxi" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li>
-                        <a class="btn btn--icon-only" href="#1" title="Pizza">
+                        <a class="button button--icon-only" href="#1" title="Pizza">
                             <span class="sr-only">Pizza</span>
                             <span class="fas fa-pizza-slice" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li>
-                        <a class="btn btn--icon-only" href="#1" title="Home">
+                        <a class="button button--icon-only" href="#1" title="Home">
                             <span class="sr-only">Home</span>
                             <span class="fas fa-home" aria-hidden="true"></span>
                         </a>
@@ -512,7 +512,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;a class="btn btn--icon-only" href="#1" title="My Account"&gt;
+            &lt;a class="button button--icon-only" href="#1" title="My Account"&gt;
                 &lt;span class="sr-only"&gt;My Account&lt;/span&gt;
                 &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
             &lt;/a&gt;
@@ -526,7 +526,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre>
         <code class="language-html">
-            &lt;button class="btn btn--icon-only" title="My Account"&gt;
+            &lt;button class="button button--icon-only" title="My Account"&gt;
                 &lt;span class="sr-only"&gt;My Account&lt;/span&gt;
                 &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
             &lt;/button&gt;
@@ -551,19 +551,19 @@ title: "Buttons"
             <div class="w-100">
                 <ul class="nav nav--horizontal justify-content-center">
                     <li>
-                        <a class="btn btn--icon-only theme-primary" href="#1" title="Taxi">
+                        <a class="button button--icon-only theme-primary" href="#1" title="Taxi">
                             <span class="sr-only">Taxi</span>
                             <span class="fas fa-taxi" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li>
-                        <a class="btn btn--icon-only theme-secondary" href="#1" title="Pizza">
+                        <a class="button button--icon-only theme-secondary" href="#1" title="Pizza">
                             <span class="sr-only">Pizza</span>
                             <span class="fas fa-pizza-slice" aria-hidden="true"></span>
                         </a>
                     </li>
                     <li>
-                        <a class="btn btn--icon-only theme-dark text-primary" href="#1" title="Home">
+                        <a class="button button--icon-only theme-dark text-primary" href="#1" title="Home">
                             <span class="sr-only">Home</span>
                             <span class="fas fa-home" aria-hidden="true"></span>
                         </a>
@@ -578,17 +578,17 @@ title: "Buttons"
 <figure class="container medium margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="btn btn--icon-only theme-primary" href="#1" title="Taxi"&gt;
+            &lt;a class="button button--icon-only theme-primary" href="#1" title="Taxi"&gt;
                 &lt;span class="sr-only"&gt;Taxi&lt;/span&gt;
                 &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
             &lt;/a&gt;
 
-            &lt;a class="btn btn--icon-only theme-secondary" href="#1" title="Pizza"&gt;
+            &lt;a class="button button--icon-only theme-secondary" href="#1" title="Pizza"&gt;
                 &lt;span class="sr-only"&gt;Pizza&lt;/span&gt;
                 &lt;span class="fas fa-pizza-slice" aria-hidden="true"&gt;&lt;/span&gt;
             &lt;/a&gt;
 
-            &lt;a class="btn btn--icon-only theme-dark text-primary" href="#1" title="Home"&gt;
+            &lt;a class="button button--icon-only theme-dark text-primary" href="#1" title="Home"&gt;
                 &lt;span class="sr-only"&gt;Home&lt;/span&gt;
                 &lt;span class="fas fa-home" aria-hidden="true"&gt;&lt;/span&gt;
             &lt;/a&gt;
