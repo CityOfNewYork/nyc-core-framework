@@ -19,16 +19,12 @@ title: "Accordions"
     '
 %}
 
-<hr class="margin-y-5" id="accordionAnatomy">
+<hr class="margin-y-5" id="outOfTheBox">
 
 <div class="container narrow margin-y-4">
-    <h2>Accordion Anatomy</h2>
+    <h2>Out of the Box</h2>
     <p>
-        The accordion component is made up of a parent <code>.accordion</code> selector and two required child
-        selectors: <code>.accordion__button</code> and it's subsequent sibling <code>.accordion__panel</code>. These children depend on one another as a pair. Each pair makes up a single topic within their parent accordion. 
-    </p>
-    <p>
-        The following example is an accordion with information on each of the five boroughs.
+        The following example is a basic accordion with information on each of the five boroughs.
     </p>
 </div>
 <!-- .container -->
@@ -54,7 +50,7 @@ title: "Accordions"
             role="region">
             <div class="accordion__panel__content">
                 <p>
-                    New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
+                    New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is <a href="#1">Manhattan</a>, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
                 </p>
             </div>
         </div>
@@ -152,45 +148,46 @@ title: "Accordions"
 
 </figure>
 
-<div class="container narrow margin-y-4 display-none">
+<hr class="margin-y-5" id="accordionAnatomy">
+
+<div class="container narrow margin-y-4">
+    <h2>Accordion Anatomy</h2>
     <p>
-        Each subsequent accordion inside of <code>.accordion</code> includes a selector called
-        <code>.accordion__button</code>. This is the accordion's header and triggers the accordion panel to open and close. 
+        The accordion component is made up of a parent <code>.accordion</code> selector and two required child
+        selectors: <code>.accordion__button</code> and it's subsequent sibling <code>.accordion__panel</code>. These children depend on one another as a pair. Each pair makes up a single topic within their parent accordion. 
     </p>
     <p>
-        The next selector, <code>.accordion__panel</code>, holds the content associated with its preceding accordion header.
+        Accordions have one granchild: the <code>.accordion__panel__content</code> selector (found within <code>.accordion__panel</code>). Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </p>
 </div>
 <!-- .container -->
 
-<figure class="container medium margin-y-4">
-    <pre data-line="1,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21">
+<figure class="container narrow margin-y-4">
+    <pre data-line="1,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21">
         <code class="language-html">
-            
             &lt;div class="accordion"&gt;
 
-                &lt;button class="accordion__button h5"
-                    id="acc-button-01"
-                    data-toggle="accordion"
-                    aria-controls="acc-panel-01"
-                    aria-expanded="false"&gt;
-                        Accordion Title
-                &lt;/button&gt;
+                    &lt;button
+                        class="accordion__button h5"
+                        id="acc-button-id"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-id"
+                        aria-expanded="false"&gt;
+                            Header
+                    &lt;/button&gt;
 
-                &lt;div class="accordion__panel"
-                    id="acc-panel-01"
-                    data-accordion="panel"
-                    aria-labelledby="acc-button-01"
-                    role="region"&gt;
-                    &lt;div class="accordion__panel__content"&gt;
-                        &lt;p&gt;
+                    &lt;div
+                        class="accordion__panel"
+                        id="acc-panel-id"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-id"
+                        role="region"&gt;
+                        &lt;div class="accordion__panel__content"&gt;
                             ...
-                        &lt;/p&gt;
+                        &lt;/div&gt;
                     &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;!-- .accordion__panel__content --&gt;
 
-                &lt;!-- Repeat as the above as needed --&gt;
+                &lt;!-- Repeat pair above as needed --&gt;
 
             &lt;/div&gt;
             &lt;!-- .accordion --&gt;
@@ -206,7 +203,7 @@ title: "Accordions"
 
 <figure class="container narrow margin-y-4">
     <table class="table table--edge">
-        <thead class="">
+        <thead>
             <tr>
                 <th class="width-30">Line #</th>
                 <th class="width-70">Details</th>
@@ -249,7 +246,7 @@ title: "Accordions"
     </table>
 </figure>
 
-<div class="container narrow margin-y-4">
+<div class="container narrow margin-y-4 display-none">
     <p>
         Be aware that custom padding directly applied to the <code>.accordion__panel</code> selector will not work.
         If you wish to apply custom padding to the accordion panel, either with CSS or one of our <a href="#1">predefined padding
@@ -259,16 +256,15 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
+<hr class="margin-y-5" id="semanticHeaders">
+
 <div class="container narrow margin-y-4">
-    <h3>Accordion Headers</h3>
+    <h2>Semantic Headers</h2>
     <p>
-        Semantically, accordion headers should match the information architecture of the page. For example, if an accordion
-        group lives directly below a page's <code>&lt;h1&gt;</code> header tag, the accordion headers should be
-        <code>&lt;h2&gt;</code> tags, or have an <code>aria-level="2"</code> attribute present.
+        Semantically, accordion headers should match the information architecture of the page. For example, if an accordion group lives directly below a page's <code>&lt;h1&gt;</code> header tag, the accordion headers should be <code>&lt;h2&gt;</code> tags, or have an <code>aria-level="2"</code> attribute present.
     </p>
     <p>
-        For this reason, you can decide which semantic HTML tags you need for the <code>.accordion__button</code> selector.
-        When placed directly below an <code>&lt;h1&gt;</code> header tag, both examples below are correct:
+        For this reason, you can decide which semantic HTML tags you need for the <code>.accordion__button</code> selector. When placed directly below an <code>&lt;h1&gt;</code> header tag, both examples below are correct:
     </p>
 </div>
 <!-- .container -->
