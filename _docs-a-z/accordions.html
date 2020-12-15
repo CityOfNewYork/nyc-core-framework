@@ -5,9 +5,8 @@ title: "Accordions"
 
 <div class="container narrow margin-y-4">
     <p>
-        Every so often the the need for accordions will arise. Hovever, accordions should be used judiciously and under special circumstances. Accordions are most practical when only
-        specific content might be relevant to a visitor—like an FAQ page, or when several topics are covered on a
-        single page. It's best to avoid using accordions to simply make long pages appear shorter.
+        Accordions are most practical when only specific content might be relevant to a visitor—like an FAQ page, or
+        when several topics are covered on a single page. It's best to avoid using accordions to simply make long pages appear shorter.
     </p>
 </div>
 <!-- .container -->
@@ -20,13 +19,16 @@ title: "Accordions"
     '
 %}
 
-<hr class="margin-y-5" id="accordionGroup">
+<hr class="margin-y-5" id="accordionAnatomy">
 
 <div class="container narrow margin-y-4">
-    <h2>The Accordion Selector</h2>
+    <h2>Accordion Anatomy</h2>
     <p>
-        In the NYC Core Framework, accordions are treated as a group within the <code>.accordion</code> selector. This
-        class is required for the accordions to properly close one another.
+        The accordion component is made up of a parent <code>.accordion</code> selector and two required child
+        selectors: <code>.accordion__button</code> and it's subsequent sibling <code>.accordion__panel</code>. These children depend on one another as a pair. Each pair makes up a single topic within their parent accordion. 
+    </p>
+    <p>
+        The following example is an accordion with information on each of the five boroughs.
     </p>
 </div>
 <!-- .container -->
@@ -35,57 +37,122 @@ title: "Accordions"
 
     <div class="accordion">
 
-        <h3 class="accordion__button h6" id="acc-button-group-b-01" data-toggle="accordion"
-            aria-controls="acc-panel-group-b-01" aria-expanded="false">
-            Accordion One
-        </h3>
-
-        <div class="accordion__panel" id="acc-panel-group-b-01" data-accordion="panel"
-            aria-labelledby="acc-button-group-b-01" role="region">
-            <div class="accordion__panel__content">
-                <p>
-                    Content for accordion one.
-                </p>
-            </div>
-        </div>
-        <!-- .accordion__panel -->
-
-        <button class="accordion__button h6" id="acc-button-group-b-02" data-toggle="accordion"
-            aria-controls="acc-panel-group-b-02" aria-expanded="false">
-            Accordion Two
+        <button
+            class="accordion__button h5"
+            id="acc-button-boroughs-manhattan"
+            data-toggle="accordion"
+            aria-controls="acc-panel-boroughs-manhattan"
+            aria-expanded="false">
+                Manhattan
         </button>
 
-        <div class="accordion__panel" id="acc-panel-group-b-02" data-accordion="panel"
-            aria-labelledby="acc-button-group-b-02" role="region">
+        <div
+            class="accordion__panel"
+            id="acc-panel-boroughs-manhattan"
+            data-accordion="panel"
+            aria-labelledby="acc-button-boroughs-manhattan"
+            role="region">
             <div class="accordion__panel__content">
                 <p>
-                    Content for accordion two.
+                    New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
                 </p>
             </div>
         </div>
-        <!-- .accordion__panel -->
 
-        <button class="accordion__button h6" id="acc-button-group-b-03" data-toggle="accordion"
-            aria-controls="acc-panel-group-b-03" aria-expanded="false">
-            Accordion Three
+        <button
+            class="accordion__button h5"
+            id="acc-button-boroughs-the-bronx"
+            data-toggle="accordion"
+            aria-controls="acc-panel-boroughs-the-bronx"
+            aria-expanded="false">
+                The Bronx
         </button>
 
-        <div class="accordion__panel" id="acc-panel-group-b-03" data-accordion="panel"
-            aria-labelledby="acc-button-group-b-03" role="region">
+        <div
+            class="accordion__panel"
+            id="acc-panel-boroughs-the-bronx"
+            data-accordion="panel"
+            aria-labelledby="acc-button-boroughs-the-bronx"
+            role="region">
             <div class="accordion__panel__content">
                 <p>
-                    Content for accordion three.
+                    The Bronx is a borough of New York City. It's known for Yankee Stadium, the home field of the New York Yankees baseball team. Dating from 1899, the vast Bronx Zoo houses hundreds of species of animals. Nearby, the sprawling New York Botanical Garden features a landmark greenhouse with rainforest and cactus displays.
                 </p>
             </div>
         </div>
-        <!-- .accordion__panel -->
+
+        <button
+            class="accordion__button h5"
+            id="acc-button-boroughs-brooklyn"
+            data-toggle="accordion"
+            aria-controls="acc-panel-boroughs-brooklyn"
+            aria-expanded="false">
+                Brooklyn
+        </button>
+
+        <div
+            class="accordion__panel"
+            id="acc-panel-boroughs-brooklyn"
+            data-accordion="panel"
+            aria-labelledby="acc-button-boroughs-brooklyn"
+            role="region">
+            <div class="accordion__panel__content">
+                <p>
+                    Brooklyn is a borough of New York City, co-extensive with Kings County, in the U.S. state of New York. It is the most-populous county in the state, the second-most densely populated county in the United States, and New York City's most populous borough, with an estimated 2,648,403 residents in 2020.
+                </p>
+            </div>
+        </div>
+
+        <button
+            class="accordion__button h5"
+            id="acc-button-boroughs-queens"
+            data-toggle="accordion"
+            aria-controls="acc-panel-boroughs-queens"
+            aria-expanded="false">
+                Queens
+        </button>
+
+        <div
+            class="accordion__panel"
+            id="acc-panel-boroughs-queens"
+            data-accordion="panel"
+            aria-labelledby="acc-button-boroughs-queens"
+            role="region">
+            <div class="accordion__panel__content">
+                <p>
+                    Queens is a New York City borough on Long Island across the East River from Manhattan. Flushing Meadows Corona Park, with the Unisphere, a 12-story 1964 World's Fair globe sculpture, hosts the annual U.S. Open tennis tournament.
+                </p>
+            </div>
+        </div>
+
+        <button
+            class="accordion__button h5"
+            id="acc-button-boroughs-staten-island"
+            data-toggle="accordion"
+            aria-controls="acc-panel-boroughs-staten-island"
+            aria-expanded="false">
+            Staten Island
+        </button>
+
+        <div
+            class="accordion__panel"
+            id="acc-panel-boroughs-staten-island"
+            data-accordion="panel"
+            aria-labelledby="acc-button-boroughs-staten-island"
+            role="region">
+            <div class="accordion__panel__content">
+                <p>
+                    Staten Island is the southernmost of New York City's 5 boroughs. It is connected to Lower Manhattan via the Staten Island Ferry, which runs across New York Harbor. Staten Island Zoo is home to kangaroos, birds of prey and snakes. The Snug Harbor Cultural Center and Botanical Garden features flower beds, Greek revival buildings and art galleries.
+                </p>
+            </div>
+        </div>
 
     </div>
     <!-- .accordion -->
 
 </figure>
 
-<div class="container narrow margin-y-4">
+<div class="container narrow margin-y-4 display-none">
     <p>
         Each subsequent accordion inside of <code>.accordion</code> includes a selector called
         <code>.accordion__button</code>. This is the accordion's header and triggers the accordion panel to open and close. 
