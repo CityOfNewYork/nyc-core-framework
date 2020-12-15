@@ -38,6 +38,8 @@ In this file:
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    text-align: inherit;
     width: 100%;
 
     cursor: pointer;
@@ -70,7 +72,7 @@ In this file:
             --subtle-fill-opacity: 0.05;
         }
 
-        &::after{
+        &::after {
             transform: rotate(180deg);
         }
     }

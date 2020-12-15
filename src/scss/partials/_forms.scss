@@ -82,7 +82,7 @@ form > .button {
 }
 
 .form-entry__field__label {
-    font-weight: var(--base-font-weight-bold);
+    font-weight: var(--body-font-weight-bold);
     margin-bottom: 0.5em;
 
     padding-left: var(--form-field-padding-x);
@@ -347,7 +347,7 @@ fieldset {
 
 .form-entry__options__radio > input ~ .radio__label,
 .form-entry__options__check > input ~ .checkbox__label {
-    line-height: var(--base-line-height);
+    line-height: var(--body-line-height);
 
     &::before {
         position: absolute;

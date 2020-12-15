@@ -56,7 +56,7 @@ In this file:
 
     [aria-current="page"],
     [aria-selected="true"] {
-        font-weight: var(--base-font-weight-bold);
+        font-weight: var(--body-font-weight-bold);
 
         &::after {
             opacity: 1;

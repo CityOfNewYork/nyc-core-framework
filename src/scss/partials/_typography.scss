@@ -28,32 +28,38 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 
 :root {
 
-    --base-font-family: "Source Sans Pro";
+    // Body Font Stack
+
+    --body-font-family: "Source Sans Pro";
     
-    --base-font-weight-normal: 400;
-    --base-font-weight-medium: 600;
-    --base-font-weight-bold: 700;
+    --body-font-weight-normal: 400;
+    --body-font-weight-medium: 600;
+    --body-font-weight-bold: 700;
 
-    --base-font-size: 22px;
-    --base-line-height: 1.5;
+    --body-font-size: 22px;
+    --body-line-height: 1.5;
 
-    --font-size-sm: calc(var(--base-font-size) * 0.7);  // ~ 18px
-    --font-size-md: calc(var(--base-font-size) * 0.8);  // ~ 18px
-    --font-size-rg: calc(var(--base-font-size) * 1);    // = 22px
-    --font-size-lg: calc(var(--base-font-size) * 1.2);  // ~ 26px
-    --font-size-xl: calc(var(--base-font-size) * 1.4);  // ~ 30px
+    // Font Sizes
+
+    --font-size-sm: calc(var(--body-font-size) * 0.7);  // ~ 18px
+    --font-size-md: calc(var(--body-font-size) * 0.8);  // ~ 18px
+    --font-size-rg: calc(var(--body-font-size) * 1);    // = 22px
+    --font-size-lg: calc(var(--body-font-size) * 1.2);  // ~ 26px
+    --font-size-xl: calc(var(--body-font-size) * 1.4);  // ~ 30px
+
+    // Banner Headline
+
+    --banner-headline-font-size: calc(var(--body-font-size) * 3.8);
+    --banner-headline-font-weight: var(--body-font-weight-normal);
 
     // Headers
 
-    --banner-headline-font-size: calc(var(--base-font-size) * 3.8);
-    --banner-headline-font-weight: var(--base-font-weight-normal);
-
-    --h1-font-size: calc(var(--base-font-size) * 3);    // ~ 60px
-    --h2-font-size: calc(var(--base-font-size) * 2.2);  // ~ 48px
-    --h3-font-size: calc(var(--base-font-size) * 1.8);  // ~ 40px
-    --h4-font-size: calc(var(--base-font-size) * 1.6);  // ~ 35px
-    --h5-font-size: calc(var(--base-font-size) * 1.4);  // ~ 30px
-    --h6-font-size: calc(var(--base-font-size) * 1.2);  // ~ 26px
+    --h1-font-size: calc(var(--body-font-size) * 3);    // ~ 60px
+    --h2-font-size: calc(var(--body-font-size) * 2.2);  // ~ 48px
+    --h3-font-size: calc(var(--body-font-size) * 1.8);  // ~ 40px
+    --h4-font-size: calc(var(--body-font-size) * 1.6);  // ~ 35px
+    --h5-font-size: calc(var(--body-font-size) * 1.4);  // ~ 30px
+    --h6-font-size: calc(var(--body-font-size) * 1.2);  // ~ 26px
 
     --header-line-height: 1.125;
 }
@@ -63,9 +69,9 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 //////////////////////////////////////////////
 
 $font-weights: (
-    normal: var(--base-font-weight-normal),
-    medium: var(--base-font-weight-medium),
-    bold: var(--base-font-weight-bold),
+    normal: var(--body-font-weight-normal),
+    medium: var(--body-font-weight-medium),
+    bold: var(--body-font-weight-bold),
 );
 
 @each $key, $value in $font-weights {
@@ -122,7 +128,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5, 
 h6, .h6 {
-    font-weight: var(--base-font-weight-bold);
+    font-weight: var(--body-font-weight-bold);
     line-height: var(--header-line-height);
 
     margin-bottom: var(--spacer-2);
@@ -175,10 +181,10 @@ $headers: (
 //////////////////////////////////////////////
 
 body {
-    font-size: var(--base-font-size);
-    line-height: var(--base-line-height);
-    font-family: var(--base-font-family), $base-font-fallbacks;
-    font-weight: var(--base-font-weight-normal);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+    font-family: var(--body-font-family), $base-font-fallbacks;
+    font-weight: var(--body-font-weight-normal);
 }
 
 p, 
@@ -207,18 +213,6 @@ figure {
 hr {
     height: unset;
     @extend .border-top !optional;
-}
-
-//////////////////////////////////////////////
-// C. Font Awesome
-//////////////////////////////////////////////
-
-.fontAwesome {
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-weight: 400;
 }
 
 //////////////////////////////////////////////

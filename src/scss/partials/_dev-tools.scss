@@ -25,7 +25,7 @@ $floating-breakpoints-bar: false;
         &::before {
             @extend .sticky-top !optional;
 
-            font-family: var(--base-font-family);
+            font-family: var(--body-font-family);
             display: block;
             color: white;
             text-align: center;

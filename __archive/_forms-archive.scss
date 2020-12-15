@@ -537,7 +537,7 @@ input[type="number"] {
 
 .form-entry__options__radio > input ~ .radio__label,
 .form-entry__options__check > input ~ .checkbox__label {
-    line-height: var(--base-line-height);
+    line-height: var(--body-line-height);
 
     &::before {
         position: absolute;
