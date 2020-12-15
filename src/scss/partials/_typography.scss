@@ -162,7 +162,10 @@ $headers: (
     #{$key} {
         font-size: map-get($header-map, "size");
     }
-    
+}
+
+@each $key, $header-map in $headers {
+
     .#{$key} {
         font-size: map-get($header-map, "size") !important;
     }
