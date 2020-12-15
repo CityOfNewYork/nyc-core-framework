@@ -15,7 +15,7 @@ In this file:
 :root {
     --alert-padding-x: var(--spacer-2);
     --alert-padding-y: var(--spacer-2);
-    
+    --alert-head-font-size: var(--h5-font-size);
     --alert-background-opacity: 0.075;
 }
 
@@ -38,7 +38,6 @@ In this file:
     }
 
     &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"]) {
-
         &::before {
             content: "";
             position: absolute;
@@ -60,6 +59,16 @@ In this file:
 .alert__head, 
 .alert__body {
     position: relative;
+}
+
+.alert__head {
+    display: flex;
+    align-items: center;
+    font-size: var(--alert-head-font-size);
+
+    &:not(:last-child) {
+        margin-bottom: 0.25em;
+    }
 }
 
 .alert__head__title {
