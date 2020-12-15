@@ -263,9 +263,6 @@ fieldset {
 
     > div > label {
 
-        @extend %subtle-fill !optional;
-        --subtle-fill-opacity: 0;
-
         &::before {
             top: calc(0.75em * -1);
             left: calc(var(--spacer-2) * -1);

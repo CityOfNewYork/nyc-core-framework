@@ -133,21 +133,17 @@ button,
     height: var(--button--icon-only-size);
 
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 100%;
 
     align-items: center;
     justify-content: center;
 
     @extend %subtle-fill !optional;
 
-    ::before{
-        transition: opacity 0.5s;
-    }
-
     &:hover, 
     &:focus {
         &::before {
-            --subtle-fill-opacity: 0.075;
+            --subtle-fill-opacity: var(--subtle-fill-visible-opacity);
         }
     }
 }

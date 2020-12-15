@@ -14,7 +14,9 @@ In this file:
 
 :root {
     --accordion-padding-x: var(--spacer-2);
-    --accordion-padding-y: 0.75em;
+    --accordion-padding-y: 0.625em;
+
+    --accordion-active-color: currentColor;
 }
 
 //////////////////////////////////////////////
@@ -39,6 +41,7 @@ In this file:
     display: flex;
     justify-content: space-between;
 
+    margin-bottom: 0;
     text-align: inherit;
     width: 100%;
 
@@ -50,12 +53,10 @@ In this file:
         border-top-color: inherit;
     }
 
-    margin-bottom: 0;
-
-    @extend %hover-focus;
-    @extend %subtle-fill !optional;
-
     @include add-caret("after");
+
+    @extend %hover-focus !optional;
+    @extend %subtle-fill !optional;
 
     &::after{
        transition: transform var(--accordion-transition);
@@ -65,11 +66,12 @@ In this file:
         transform: rotate(0deg);
     }
     
-    &[aria-expanded="true"]{
+    &[aria-expanded="true"] {
         text-decoration: underline;
+        color: var(--accordion-active-color);
 
         &::before {
-            --subtle-fill-opacity: 0.05;
+            --subtle-fill-opacity: var(--subtle-fill-visible-opacity);
         }
 
         &::after {

@@ -19,6 +19,7 @@ In this file:
 ////////////////////////////////////////
 
 :root {
+    --subtle-fill-visible-opacity: 0.05;
     --body-min-width: 325px;
     --body-max-width: 2000px;
 }
@@ -64,7 +65,7 @@ In this file:
 
     &:focus {
         outline-color: currentColor;
-        outline-style: dotted;
+        outline-style: inset;
         outline-width: calc(var(--default-border-width) * 2);
         outline-offset: calc(var(--default-border-width) * -2);
     }
@@ -115,9 +116,8 @@ $default-caret-margin: 0.375em;
 ////////////////////////////////////////
 
 %subtle-fill {
-    // hide until otherwise specified
-    --subtle-fill-opacity: 0;
     position: relative;
+    --subtle-fill-opacity: 0;
 
     &::before {
         content: "";
@@ -131,6 +131,7 @@ $default-caret-margin: 0.375em;
         background-color: currentColor;
         pointer-events: none;
 
+        transition: opacity 0.25s;
         opacity: var(--subtle-fill-opacity);
     }
 }
