@@ -83,7 +83,7 @@
             },
             {
                 "name": "button-font-weight",
-                "value": "var(--base-font-weight-bold)",
+                "value": "var(--body-font-weight-bold)",
                 "description": "Weight of text elements within the <em>button</em> utility class"
             },
             {
@@ -332,88 +332,88 @@
         "type": "Typography",
         "customProperties": [
             {
-                "name": "base-font-family",
+                "name": "body-font-family",
                 "value": "Source Sans Pro",
                 "description": "Lorem ipsum dolor"
             },
             {
-                "name": "base-font-weight-normal",
+                "name": "body-font-weight-normal",
                 "value": "400",
                 "description": "Lorem ipsum dolor"
             },
             {
-                "name": "base-font-weight-medium",
+                "name": "body-font-weight-medium",
                 "value": "600",
                 "description": "Lorem ipsum dolor"
             },
             {
-                "name": "base-font-weight-bold",
+                "name": "body-font-weight-bold",
                 "value": "700",
                 "description": "Lorem ipsum dolor"
             },
             {
-                "name": "base-font-size",
+                "name": "body-font-size",
                 "value": "22px",
                 "description": "Lorem ipsum dolor"
             },
             {
-                "name": "base-line-height",
+                "name": "body-line-height",
                 "value": "1.5",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-sm",
-                "value": "calc(var(--base-font-size) * 0.7)",
+                "value": "calc(var(--body-font-size) * 0.7)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-md",
-                "value": "calc(var(--base-font-size) * 0.8)",
+                "value": "calc(var(--body-font-size) * 0.8)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-lg",
-                "value": "calc(var(--base-font-size) * 1)",
+                "value": "calc(var(--body-font-size) * 1)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "font-size-xl",
-                "value": "calc(var(--base-font-size) * 1.4)",
+                "value": "calc(var(--body-font-size) * 1.4)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "banner-headline-font-size",
-                "value": "calc(var(--base-font-size) * 3.5)",
+                "value": "calc(var(--body-font-size) * 3.5)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "h1-font-size",
-                "value": "calc(var(--base-font-size) * 3)",
+                "value": "calc(var(--body-font-size) * 3)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "h2-font-size",
-                "value": "calc(var(--base-font-size) * 2.2)",
+                "value": "calc(var(--body-font-size) * 2.2)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "h3-font-size",
-                "value": "calc(var(--base-font-size) * 1.8)",
+                "value": "calc(var(--body-font-size) * 1.8)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "h4-font-size",
-                "value": "calc(var(--base-font-size) * 1.6)",
+                "value": "calc(var(--body-font-size) * 1.6)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "h5-font-size",
-                "value": "calc(var(--base-font-size) * 1.4)",
+                "value": "calc(var(--body-font-size) * 1.4)",
                 "description": "Lorem ipsum dolor"
             },
             {
                 "name": "h6-font-size",
-                "value": "calc(var(--base-font-size) * 1.2)",
+                "value": "calc(var(--body-font-size) * 1.2)",
                 "description": "Lorem ipsum dolor"
             },
             {

@@ -29,9 +29,9 @@ In this file:
     --primary-border: hsla(0, 0%, 0%, 0.25);
     --secondary-text: var(--dark);
 
-    --base-font-size: 20px;
+    --body-font-size: 20px;
 
-    --base-font-family: "neue-haas-grotesk-text";
+    --body-font-family: "neue-haas-grotesk-text";
 
     --button-font-weight: normal;
     --header-line-height: 1.2;
@@ -134,9 +134,6 @@ a[data-logo="brand"] {
     .table:not(:first-child) {
 
         thead > tr {
-            // &:nth-child(1) {
-            //     border-top: var(--default-border-width) solid currentColor;
-            // }
 
             &:nth-child(2) {
                 display: none;
@@ -193,11 +190,11 @@ a[data-logo="brand"] {
         }
     }
 
-    td:nth-child(1) {
+    td:nth-child(1) span {
         color: #f8c555;
     }
 
-    td:nth-child(2) {
+    td:nth-child(2) span {
         color: #ccc;
     }
 
