@@ -27,7 +27,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Article Elements
+// C. Article Elements and Modifiers
 //////////////////////////////////////////////
 
 .article__body {
@@ -36,7 +36,7 @@ In this file:
 
 @include breakpoints-up(lg) {
 
-    [class*="article--"] {
+    .article {
 
         .article__header {
             grid-area: header;
