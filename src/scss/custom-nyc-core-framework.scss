@@ -54,7 +54,7 @@ a[data-logo="brand"] {
     }
 }
 
-#features {
+#features .backdrop{
     --backdrop-fixed-height: 600px;
     
     @include breakpoints-down(lg) {
