@@ -100,18 +100,6 @@ In this file:
     }
 }
 
-a[data-logo="brand"] {
-
-    > svg {
-        fill: currentColor;
-        vertical-align: middle;
-    }
-
-    &:focus {
-        opacity: 0.85;
-    }
-}
-
 .primary-nav__menu {
 
     > ul > li {

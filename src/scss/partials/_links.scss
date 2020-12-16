@@ -44,3 +44,17 @@ a {
 p > a {
     text-decoration: underline;
 }
+
+
+a[data-logo="brand"] {
+    display: inline-block;
+
+    > svg {
+        fill: currentColor;
+        vertical-align: middle;
+    }
+
+    &:focus {
+        opacity: 0.85;
+    }
+}
