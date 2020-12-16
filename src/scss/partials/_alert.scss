@@ -12,9 +12,13 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-:root {
-    --alert-padding-x: var(--spacer-2);
-    --alert-padding-y: var(--spacer-2);
+// Scoped to Block
+
+.alert {
+    
+    // Redefine Container Padding Y
+    --container-padding-y: var(--spacer-2);
+
     --alert-head-font-size: var(--h5-font-size);
     --alert-background-opacity: 0.075;
 }
@@ -27,7 +31,7 @@ In this file:
     position: relative;
     overflow: hidden;
 
-    padding: var(--alert-padding-y) var(--alert-padding-x);
+    padding: var(--container-padding-y) var(--container-padding-x);
 
     a {
         color: inherit !important;

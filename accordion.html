@@ -25,21 +25,9 @@
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
 
-    <style>
-
-    :root {
-    --accordion-padding-x: var(--spacer-2);
-    --accordion-padding-y: 0.625em;
-
-    --accordion-active-color: var(--primary);
-    }
-    </style>
-
-}
-
 </head>
  
-<body>
+<body class="theme-dark">
 
     <main>
 
@@ -57,77 +45,113 @@
 
                         <button
                             class="accordion__button h5"
-                            id="acc-button-group-a-01"
+                            id="acc-button-boroughs-manhattan"
                             data-toggle="accordion"
-                            aria-controls="acc-panel-group-a-01"
-                            aria-expanded="true"
-                            role="heading"
-                            aria-level="2">
-                                Accordion One
+                            aria-controls="acc-panel-boroughs-manhattan"
+                            aria-expanded="false">
+                                Manhattan
                         </button>
 
                         <div
-                            class="accordion__panel shown"
-                            id="acc-panel-group-a-01"
+                            class="accordion__panel"
+                            id="acc-panel-boroughs-manhattan"
                             data-accordion="panel"
-                            aria-labelledby="acc-button-group-a-01"
+                            aria-labelledby="acc-button-boroughs-manhattan"
                             role="region">
                             <div class="accordion__panel__content">
                                 <p>
-                                    Content for accordion one.
+                                    New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is <a href="#1">Manhattan</a>, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
                                 </p>
                             </div>
                         </div>
-                        <!-- .accordion__panel -->
 
                         <button
                             class="accordion__button h5"
-                            id="acc-button-group-a-02"
+                            id="acc-button-boroughs-the-bronx"
                             data-toggle="accordion"
-                            aria-controls="acc-panel-group-a-02"
-                            aria-expanded="false"
-                            role="heading"
-                            aria-level="2">
-                                Accordion Two
+                            aria-controls="acc-panel-boroughs-the-bronx"
+                            aria-expanded="false">
+                                The Bronx
                         </button>
 
                         <div
                             class="accordion__panel"
-                            id="acc-panel-group-a-02"
+                            id="acc-panel-boroughs-the-bronx"
                             data-accordion="panel"
-                            aria-labelledby="acc-button-group-a-02"
+                            aria-labelledby="acc-button-boroughs-the-bronx"
                             role="region">
                             <div class="accordion__panel__content">
                                 <p>
-                                    Content for accordion two.
+                                    The Bronx is a borough of New York City. It's known for Yankee Stadium, the home field of the New York Yankees baseball team. Dating from 1899, the vast Bronx Zoo houses hundreds of species of animals. Nearby, the sprawling New York Botanical Garden features a landmark greenhouse with rainforest and cactus displays.
                                 </p>
                             </div>
                         </div>
-                        <!-- .accordion__panel -->
 
-                        <button class="accordion__button h5"
-                                id="acc-button-group-a-03"
-                                data-toggle="accordion"
-                                aria-controls="acc-panel-group-a-03"
-                                aria-expanded="false"
-                                role="heading"
-                                aria-level="2">
-                                    Accordion Three
+                        <button
+                            class="accordion__button h5"
+                            id="acc-button-boroughs-brooklyn"
+                            data-toggle="accordion"
+                            aria-controls="acc-panel-boroughs-brooklyn"
+                            aria-expanded="false">
+                                Brooklyn
                         </button>
 
                         <div
                             class="accordion__panel"
-                            id="acc-panel-group-a-03"
+                            id="acc-panel-boroughs-brooklyn"
                             data-accordion="panel"
-                            aria-labelledby="acc-button-group-a-03"
+                            aria-labelledby="acc-button-boroughs-brooklyn"
                             role="region">
                             <div class="accordion__panel__content">
                                 <p>
-                                    Content for accordion three.
+                                    Brooklyn is a borough of New York City, co-extensive with Kings County, in the U.S. state of New York. It is the most-populous county in the state, the second-most densely populated county in the United States, and New York City's most populous borough, with an estimated 2,648,403 residents in 2020.
                                 </p>
                             </div>
                         </div>
-                        <!-- .accordion__panel -->
+
+                        <button
+                            class="accordion__button h5"
+                            id="acc-button-boroughs-queens"
+                            data-toggle="accordion"
+                            aria-controls="acc-panel-boroughs-queens"
+                            aria-expanded="false">
+                                Queens
+                        </button>
+
+                        <div
+                            class="accordion__panel"
+                            id="acc-panel-boroughs-queens"
+                            data-accordion="panel"
+                            aria-labelledby="acc-button-boroughs-queens"
+                            role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Queens is a New York City borough on Long Island across the East River from Manhattan. Flushing Meadows Corona Park, with the Unisphere, a 12-story 1964 World's Fair globe sculpture, hosts the annual U.S. Open tennis tournament.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button
+                            class="accordion__button h5"
+                            id="acc-button-boroughs-staten-island"
+                            data-toggle="accordion"
+                            aria-controls="acc-panel-boroughs-staten-island"
+                            aria-expanded="false">
+                            Staten Island
+                        </button>
+
+                        <div
+                            class="accordion__panel"
+                            id="acc-panel-boroughs-staten-island"
+                            data-accordion="panel"
+                            aria-labelledby="acc-button-boroughs-staten-island"
+                            role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Staten Island is the southernmost of New York City's 5 boroughs. It is connected to Lower Manhattan via the Staten Island Ferry, which runs across New York Harbor. Staten Island Zoo is home to kangaroos, birds of prey and snakes. The Snug Harbor Cultural Center and Botanical Garden features flower beds, Greek revival buildings and art galleries.
+                                </p>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- .accordion -->
