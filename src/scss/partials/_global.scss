@@ -5,12 +5,11 @@ In this file:
 // A. Variables
 // B. Center Horizontal
 // C. List Nav Style
-// D. Hover Focus
-// E. Caret
-// F. Subtle Fill
-// G. Body Width
-// H. HTML Scroll Behavior
-// I. Truncate Text
+// D. Caret
+// E. Subtle Fill
+// F. Body Width
+// G. HTML Scroll Behavior
+// H. Truncate Text
 
 */
 
@@ -52,7 +51,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// E. Caret
+// D. Caret
 ////////////////////////////////////////
 
 $default-caret-size: 0.25em;
@@ -92,7 +91,7 @@ $default-caret-margin: 0.375em;
 }
 
 ////////////////////////////////////////
-// F. Subtle Fill
+// E. Subtle Fill
 ////////////////////////////////////////
 
 %subtle-fill {
@@ -117,7 +116,7 @@ $default-caret-margin: 0.375em;
 }
 
 ////////////////////////////////////////
-// G. Body Width
+// F. Body Width
 ////////////////////////////////////////
 
 body {
@@ -129,7 +128,7 @@ body {
 }
 
 ////////////////////////////////////////
-// H. HTML Scroll Behavior
+// G. HTML Scroll Behavior
 ////////////////////////////////////////
 
 html {
@@ -137,7 +136,7 @@ html {
 }
 
 ////////////////////////////////////////
-// I. Truncate Text
+// H. Truncate Text
 ////////////////////////////////////////
 
 .truncate-text {
