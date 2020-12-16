@@ -14,7 +14,9 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-:root {
+// Scoped to Block
+
+.backdrop--fixed {
     --backdrop-fixed-height: 350px;
 }
 

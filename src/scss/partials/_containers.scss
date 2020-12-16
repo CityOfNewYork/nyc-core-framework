@@ -14,7 +14,6 @@ In this file:
 
 :root {
     --container-padding-x: var(--spacer-2);
-    --container-padding-y: 0;
 
     --narrow-width: 40rem; // Approximately 55 characters wide for readability
     --medium-width: calc( var(--narrow-width) * 1.75);

@@ -13,7 +13,9 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-:root {
+// Scoped to Block
+
+.card {
     --card-padding-x: var(--spacer-2);
     --card-padding-y: var(--spacer-2);
 }
@@ -34,9 +36,8 @@ In this file:
 //////////////////////////////////////////////
 
 .card__head {
-    --card-padding-y: var(--spacer-1);
     font-size: var(--font-size-sm);
-    padding: var(--card-padding-y) var(--card-padding-x);
+    padding: calc( var(--card-padding-y) * 0.5) var(--card-padding-x);
 }
 
 .card__body,

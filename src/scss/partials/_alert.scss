@@ -15,9 +15,8 @@ In this file:
 // Scoped to Block
 
 .alert {
-    
-    // Redefine Container Padding Y
-    --container-padding-y: var(--spacer-2);
+    --alert-padding-x: var(--spacer-2);
+    --alert-padding-y: var(--spacer-2);
 
     --alert-head-font-size: var(--h5-font-size);
     --alert-background-opacity: 0.075;
@@ -29,9 +28,8 @@ In this file:
 
 .alert {
     position: relative;
-    overflow: hidden;
 
-    padding: var(--container-padding-y) var(--container-padding-x);
+    padding: var(--alert-padding-y) var(--alert-padding-x);
 
     a {
         color: inherit !important;

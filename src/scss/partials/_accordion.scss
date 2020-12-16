@@ -15,12 +15,11 @@ In this file:
 // Scoped to Block
 
 .accordion {
+    --accordion-button-padding-x: var(--spacer-2);
+    --accordion-button-padding-y: var(--button-padding-y);
 
-    // Redefine Button Padding X 
-    --button-padding-x: var(--spacer-2);
-
-    // Redefine Container Padding Y
-    --container-padding-y: var(--spacer-3);
+    --accordion-panel-padding-x: var(--spacer-2);
+    --accordion-panel-padding-y: var(--spacer-3);
     
     --accordion-active-color: currentColor;
     --accordion-animation: 0.2s ease-out;
@@ -30,7 +29,7 @@ In this file:
 // B. Accordion Block
 //////////////////////////////////////////////
 
-.accordion{
+.accordion {
     overflow: hidden;
 }
 
@@ -39,11 +38,11 @@ In this file:
 //////////////////////////////////////////////
 
 .accordion__button{
-    padding: var(--button-padding-y) var(--button-padding-x);
+    padding: var(--accordion-button-padding-y) var(--accordion-button-padding-y);
 } 
 
 .accordion__panel__content {
-    padding: var(--container-padding-y) var(--container-padding-x);
+    padding: var(--accordion-panel-padding-y) var(--accordion-panel-padding-x);
 }
 
 .accordion__button {
