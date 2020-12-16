@@ -58,17 +58,6 @@ In this file:
 
 // Logo
 
-a > svg {
-    fill: currentColor;
-    vertical-align: middle;
-}
-
-a[data-logo="brand"] {
-    &:focus {
-        opacity: 0.85;
-    }
-}
-
 .overflow-hidden {
     overflow: hidden;
 }

@@ -55,7 +55,7 @@ In this file:
 // D. Hover Focus
 //////////////////////////////////////////////
 
-%hover-focus {
+.hover-focus {
     --focus-outline-distance: calc(var(--default-border-width) * 2);
     --focus-outline-size: calc(var(--default-border-width) * 2);
 
@@ -67,8 +67,11 @@ In this file:
     }
 
     &:focus {
-        position: relative;
         outline-style: none;
+
+        &:not(.focusable-only) {
+            position: relative;
+        }
         
         &::before {
             position: absolute;

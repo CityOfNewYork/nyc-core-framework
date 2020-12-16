@@ -39,6 +39,7 @@ In this file:
     > [class*="__logo"] {
         grid-area: logo;
         padding: var(--primary-nav-padding);
+
     }
 
     > [class*="__menu"] {
@@ -99,6 +100,20 @@ In this file:
     }
 }
 
+a[data-logo="brand"] {
+    @extend .hover-focus !optional;
+    --focus-outline-distance: calc(var(--default-border-width) * -4);
+
+    > svg {
+        fill: currentColor;
+        vertical-align: middle;
+    }
+
+    &:focus {
+        opacity: 0.85;
+    }
+}
+
 .primary-nav__menu {
 
     > ul > li {
@@ -136,6 +151,13 @@ In this file:
         margin-bottom: calc(var(--gap-size) * 0.75);
     }
 
+    > li > a,
+    > li > button {
+        &:not([class*="button"]){
+            --focus-outline-distance: calc(var(--default-border-width) * -4);
+        }
+    }
+
     > li > [data-toggle="dropdown"] ~ ul {
         width: calc(100% + (var(--gap-size) * 2));
         padding: var(--gap-size);
@@ -155,10 +177,6 @@ In this file:
         margin-right: 0;
         margin-top: 1rem;
         width: 240px;
-    }
-    
-    > li > form {
-        align-self: center;
     }
 }
 

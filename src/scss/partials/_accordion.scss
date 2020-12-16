@@ -55,7 +55,7 @@ In this file:
 
     @include add-caret("after");
 
-    @extend %hover-focus !optional;
+    @extend .hover-focus !optional;
     @extend %subtle-fill !optional;
 
     &::after{
