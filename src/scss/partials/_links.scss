@@ -32,10 +32,6 @@ In this file:
 a {
     color: inherit;
 
-    &:not([class*="button"]):not(.focusable-only):not([data-logo="brand"]) {
-        @extend .hover-focus;
-    }
-
     &.underline{
         text-decoration: underline;
     }
@@ -47,5 +43,4 @@ a {
 
 p > a {
     text-decoration: underline;
-    --focus-outline-distance: calc(var(--default-border-width) * 4);
 }

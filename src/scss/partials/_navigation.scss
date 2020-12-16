@@ -101,8 +101,6 @@ In this file:
 }
 
 a[data-logo="brand"] {
-    @extend .hover-focus !optional;
-    --focus-outline-distance: calc(var(--default-border-width) * -4);
 
     > svg {
         fill: currentColor;
@@ -149,13 +147,6 @@ a[data-logo="brand"] {
 
     > li:not(:last-child) {
         margin-bottom: calc(var(--gap-size) * 0.75);
-    }
-
-    > li > a,
-    > li > button {
-        &:not([class*="button"]){
-            --focus-outline-distance: calc(var(--default-border-width) * -4);
-        }
     }
 
     > li > [data-toggle="dropdown"] ~ ul {
