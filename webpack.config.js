@@ -1,14 +1,18 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    mode: 'production',
     entry: {
-        nyc_core: './src/js/index.js'
+        nyc_core: [
+            './src/js/index.js',
+            './src/scss/index.scss'
+        ]
     },
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, './dist/js')
+        path: path.resolve(__dirname, './dist'),
+        filename: 'js/[name].js'
     },
-    mode: 'production',
     module: {
         rules: [
             {
@@ -17,7 +21,20 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
-            }
-        ]
-    }
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
+        ],
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
+        }),
+    ]
 }
