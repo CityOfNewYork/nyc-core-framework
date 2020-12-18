@@ -13,42 +13,42 @@ In this file:
 
 // Required
 
-@import "partials/reset";
-@import "partials/breakpoints";
-@import "partials/spacing";
-@import "partials/typography";
-@import "partials/accessibility";
-@import "partials/global";
-@import "partials/buttons";
-@import "partials/color-system";
-@import "partials/links";
-@import "partials/borders";
-@import "partials/containers";
-@import "partials/sizing";
-@import "partials/grid";
-@import "partials/flex";
-@import "partials/display";
-@import "partials/navigation";
-@import "partials/tabs";
-@import "partials/tables";
-@import "partials/collapse";
-@import "partials/backdrop";
-@import "partials/cards";
-@import "partials/z-index";
-@import "partials/position";
+@import "modules/reset";
+@import "modules/breakpoints";
+@import "modules/spacing";
+@import "modules/typography";
+@import "modules/accessibility";
+@import "modules/global";
+@import "modules/buttons";
+@import "modules/color-system";
+@import "modules/links";
+@import "modules/borders";
+@import "modules/containers";
+@import "modules/sizing";
+@import "modules/grid";
+@import "modules/flex";
+@import "modules/display";
+@import "modules/navigation";
+@import "modules/tabs";
+@import "modules/tables";
+@import "modules/collapse";
+@import "modules/backdrop";
+@import "modules/cards";
+@import "modules/z-index";
+@import "modules/position";
 
-@import "partials/accordion";
-@import "partials/alert";
-@import "partials/shadows";
-@import "partials/gradient";
-@import "partials/modals";
-@import "partials/forms";
-@import "partials/aspect-ratio";
-@import "partials/opacities";
-@import "partials/article";
-@import "partials/icons";
+@import "modules/accordion";
+@import "modules/alert";
+@import "modules/shadows";
+@import "modules/gradient";
+@import "modules/modals";
+@import "modules/forms";
+@import "modules/aspect-ratio";
+@import "modules/opacities";
+@import "modules/article";
+@import "modules/icons";
 
-// @import "partials/dev-tools";
+// @import "modules/dev-tools";
 
 //////////////////////////////////////////////
 // B. Custom Theme Styles
