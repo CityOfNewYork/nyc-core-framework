@@ -19,7 +19,6 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    
     --primary: #222BE6;
     --secondary: #00D5A0;
     --dark: #040459;
@@ -211,7 +210,7 @@ a[data-logo="brand"] {
 .cp-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
 .cp-header__title {

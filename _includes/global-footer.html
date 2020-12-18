@@ -106,6 +106,7 @@
 
             let type = customPropertyArray.type;
             let properties = customPropertyArray.customProperties;
+            let scope = customPropertyArray.scope;
 
             let slug = type.replace(/\s+/g, '-').toLowerCase();
 
@@ -131,7 +132,7 @@
             }).join('');
 
             return `
-                <table class="table table--striped">
+                <table class="table">
                     <caption class="screen-reader-only">
                         Color System Custom Properties
                     </caption>
@@ -140,7 +141,8 @@
                             <th scope="col" colspan="4">
                                 <span class="cp-header">
                                     <span class="cp-header__title">
-                                        ${type}
+                                      <span class="display-block">${type}</span>
+                                      <span class="display-block opacity-80 font-size-sm">Scope: <code>${scope}</code></span>
                                     </span>
                                     <a class="cp-header__link button button--has-icon" href="{{ site.baseurl }}/docs/${slug}/">
                                         <span class="button__text">Docs</span>

@@ -1,6 +1,7 @@
 [   
     {    
         "type": "Accordions",
+        "scope" : ".accordion",
         "customProperties": [
             {
                 "name": "accordion-padding-x",
@@ -17,6 +18,7 @@
 
     {    
         "type": "Alerts",
+        "scope" : ".alert",
         "customProperties": [
             {
                 "name": "alert-padding-x",
@@ -38,6 +40,7 @@
 
     {    
         "type": "Backdrops",
+        "scope" : ".backdrop",
         "customProperties": [
             {
                 "name": "backdrop-fixed-height",
@@ -49,6 +52,7 @@
 
     {    
         "type": "Borders",
+        "scope" : ":root",
         "customProperties": [
             {
                 "name": "global-border-width",
@@ -70,6 +74,7 @@
 
     {    
         "type": "Buttons",
+        "scope" : ":root",
         "customProperties": [
             {
                 "name": "button-padding-x",
@@ -101,6 +106,7 @@
 
     {    
         "type": "Cards",
+        "scope" : ".card",
         "customProperties": [
             {
                 "name": "card-padding-x",
@@ -117,6 +123,7 @@
     
     {    
         "type": "Color System",
+        "scope" : ":root",
         "customProperties": [
             {
                 "name": "a11y-link-color",
@@ -273,6 +280,7 @@
 
     {
         "type": "Containers",
+        "scope" : ":root",
         "customProperties": [
             {
                 "name": "container-padding-x",
@@ -299,6 +307,7 @@
 
     {
         "type": "Spacing",
+        "scope" : ":root",
         "customProperties": [
             {
                 "name": "spacer-1",
@@ -330,6 +339,7 @@
 
     {
         "type": "Typography",
+        "scope" : ":root",
         "customProperties": [
             {
                 "name": "body-font-family",

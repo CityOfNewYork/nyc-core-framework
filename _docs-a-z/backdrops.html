@@ -12,7 +12,6 @@ title: "Backdrops"
 </div>
 <!-- .container -->
 
-
 {% include accessibility-spotlight.html content='
     <p>
         Backdrops replace CSS background images with inline HTML images so screen readers can read the
@@ -26,13 +25,15 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <h2>Image Size Proportional</h2>
-
     <p>
         The backdrop component is made up of a parent <code>.backdrop</code> selector, and two required child
-        selectors: <code>.backdrop__image</code> contains the feature image, while <code>.backdrop__cover</code> positions contextual content over the image on the <em>z</em> axiz.
+        selectors: <code>.backdrop__image</code> contains the feature image, while <code>.backdrop__cover</code>
+        positions contextual content over the image on the <em>z</em> axiz.
     </p>
-
-    <p>The <code>img</code> tag within <code>.backdrop__image</code> sets the size (proportional width and height) of our backdrop. The following is a simple example of an image size proportional backdrop:</p>
+    <p>
+        The <code>img</code> tag within <code>.backdrop__image</code> sets the size (proportional width and height) of
+        our backdrop. The following is a simple example of an image size proportional backdrop:
+    </p>
 </div>
 <!-- .container -->
 
@@ -40,8 +41,12 @@ title: "Backdrops"
 
     <div class="backdrop theme-dark rounded" {{ site.style_default_theme_colors }}>
 
+        <div class="backdrop__credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
         <div class="backdrop__image">
-            <img class="opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-01.jpg" loading="lazy" alt="Placeholder">
+            <img class="opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-01.jpg" alt="Placeholder">
         </div>
 
         <div class="backdrop__cover">
@@ -69,14 +74,20 @@ title: "Backdrops"
             utility class</a> (e.g. <code>.opacity-30</code>) applied backdrop's feature image, allows the background
         color to show through.
     </p>
-    <p>Here is the code used to create the example above:</p>
+    <p>
+        Here is the code used to create the example above:
+    </p>
 </div>
 
 <figure class="container medium margin-y-4">
 
-    <pre data-line="1,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18">
+    <pre data-line="1,3,4,5,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22">
         <code class="language-html">
             &lt;div class="backdrop theme-dark rounded"&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
 
                 &lt;div class="backdrop__image"&gt;
                     &lt;img class="opacity-30" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
@@ -117,7 +128,7 @@ title: "Backdrops"
         </thead>
         <tbody>
 
-            <tr>
+            <tr class="border-top">
                 <td>1</td>
                 <td>
                     <p>
@@ -127,8 +138,19 @@ title: "Backdrops"
                     </p>
                 </td>
             </tr>
+
             <tr>
-                <td>3</td>
+                <td>3-5</td>
+                <td>
+                    <p>
+                        The <code>.backdrop__credit</code> selector is optional, and should be the first child of the
+                        backdrop. It is where you can add a credit for the image.
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>7-9</td>
                 <td>
                     <p>
                         The <code>.backdrop__image</code> selector is required, and contains the primary image of the backdrop. The
@@ -337,7 +359,7 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <p>
-        Include a <em>stack breakpoint modifier</em> (e.g. <code>.backdrop--stack--md</code>) to a
+        Include a <em>stack breakpoint modifier</em> (e.g. <code>.backdrop--stack--md</code>) to the
         <code>.backdrop</code> selector and the backdrop's image is placed above the content vertically until the
         viewport reaches the desired breakpoint specified in the modifier.
     </p>
@@ -424,9 +446,8 @@ title: "Backdrops"
 <div class="container narrow margin-y-4">
     <h2>Fixed Height Backdrops</h2>
     <p>
-        Another way to use backdrops is to append the <code>--fixed</code> modifier to <code>.backdrop</code> resulting
-        in <code>.backdrop--fixed</code>. Now the backdrop has a fixed height. The height value is set in <em>section
-            B</em>. of the <a href="#1">/scss/base/_backdrops.scss</a> partial.
+        For a fixed height backdrop, append the <code>backdrop--fixed</code> modifier to the <code>.backdrop</code>
+        selector. The height value is set in <em>section B</em>. of the <a href="#1">/scss/base/_backdrops.scss</a> partial.
     </p>
 </div>
 
@@ -510,11 +531,11 @@ title: "Backdrops"
             <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
         </div>
 
-        <div class="backdrop__image">
+        <div class="backdrop__image gradient-veneer-bottom">
             <img class="opacity-20" src="{{ site.baseurl }}/images/examples/backdrop-example-06.jpg" alt="">
         </div>
 
-        <div class="backdrop__cover text-align-center">
+        <div class="backdrop__cover">
 
             <div class="container medium margin-y-5">
 
