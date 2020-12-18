@@ -238,12 +238,40 @@ title: "Customization"
 <hr class="margin-y-5" id="custom-property-cheat-sheet">
 
 <div class="container narrow margin-y-4">
-    <h2>Our Custom Property Reference Guide</h2>
+    <h2>CSS Custom Property Reference Guide</h2>
     <p>
-        The table below provides a comprehessive list of all properties available to be to customized across the NYC Core Framework. 
+        When defining CSS custom properties, pay close attention to their <strong>scope</strong>. All properties in the
+        NYC Core Framework are scoped to the document (<code>:root</code>), or to a block (e.g., <code>.card</code>).
     </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    
+    <pre class="hide-toolbar">
+        <code class="language-css">
+            /* Scoped to root */
+
+            :root {
+                --primary: #0080f8;
+            }
+
+            /* Scoped to block */
+
+            .card {
+                --card-padding-y: 1em;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 12 - The <code>:root</code> pseudo-class selector represents the root of the document.</p>
+    </figcaption>
+
+</figure>
+<div class="container narrow margin-y-4">
     <p>
-        Keep in mind, with great power comes great responsibilty! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti possimus omnis eaque at maiores recusandae atque.
+        The table below provides a comprehessive list of all custom properties available to be to customized across the NYC Core Framework. 
     </p>
 </div>
 <!-- .container -->
