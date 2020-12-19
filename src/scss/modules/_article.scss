@@ -4,8 +4,8 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. Block
-// D. Elements and Modifiers 
+// C. Alert Block
+// D. Alert Elements and Modifiers 
 
 */
 
@@ -21,20 +21,22 @@ In this file:
 
 // Scoped to Block
 
-.article {
+%custom-properties {
     --article-sidebar-width: 340px;
 }
 
 //////////////////////////////////////////////
-// C. Block
+// C. Alert Block
 //////////////////////////////////////////////
 
 .article {
+    @extend %custom-properties;
+
     display: grid;
 }
 
 //////////////////////////////////////////////
-// D. Elements and Modifiers
+// D. Alert Elements and Modifiers
 //////////////////////////////////////////////
 
 .article__body {

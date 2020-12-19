@@ -1,15 +1,20 @@
-@use "sass:list";
-@use "sass:math";
 /*
 
 In this file:
 
-// A. Variables
-// B. Aspect Ratio Block
-// C. Aspect Ratio Element
-// D. Aspect Ratio Modifiers
+// B. Variables
+// C. Aspect Ratio Block
+// D. Aspect Ratio Element
+// E. Aspect Ratio Modifiers
 
 */
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:list";
+@use "sass:math";
 
 //////////////////////////////////////////////
 // A. Variables
@@ -26,7 +31,7 @@ $aspect-ratios: (
 // B. Apect Ratio Block
 //////////////////////////////////////////////
 
-[class*="aspect-ratio--"] {
+.aspect-ratio {
     position: relative;
     width: 100%;
     padding: unset;

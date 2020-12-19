@@ -21,7 +21,8 @@ In this file:
 
 // Scoped to Block
 
-.accordion {
+%custom-properties {
+    
     --accordion-button-padding-x: var(--spacer-2);
     --accordion-button-padding-y: var(--button-padding-y);
 
@@ -37,7 +38,7 @@ In this file:
 //////////////////////////////////////////////
 
 .accordion {
-    overflow: hidden;
+    @extend %custom-properties;
 }
 
 //////////////////////////////////////////////
