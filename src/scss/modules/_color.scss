@@ -1,15 +1,19 @@
-@use "sass:map";
-@use "breakpoints";
-
 /*
 
 In this file:
 
 // A. Variables
 // B. Color Utilities
-// C. HTML and Body Defaults
+// C. Set Body Theme
 
 */
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "breakpoints";
 
 //////////////////////////////////////////////
 // A. Variables
@@ -228,15 +232,9 @@ body:not([class*="theme-"]),
 }
 
 //////////////////////////////////////////////
-// C. HTML and Body Defaults
+// C. Set Body Theme 
 //////////////////////////////////////////////
 
-html:not([class*="theme-"]) {
-    --default-background-color: var(--dark);
-    background-color: var(--default-background-color);
-}
-
 body {
-    @extend .theme-white !optional;
-    @extend .box-shadow-2 !optional;
+    @extend .theme-white;
 }

@@ -15,12 +15,13 @@ In this file:
 
 @use "modules/reset";
 @use "modules/global";
+@use "modules/document";
 @use "modules/breakpoints";
 @use "modules/spacing";
 @use "modules/typography";
 @use "modules/accessibility";
 @use "modules/buttons";
-@use "modules/color-system";
+@use "modules/color";
 @use "modules/links";
 @use "modules/borders";
 @use "modules/containers";

@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "breakpoints";
-@use "color-system";
+@use "color";
 
 /*
 
@@ -91,7 +91,7 @@ In this file:
     @include breakpoints.breakpoints-up($breakpoint) {
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
-        @each $name, $color-map in color-system.$theme-colors {
+        @each $name, $color-map in color.$theme-colors {
             .border-#{$name}#{$mod} {
                 border-color: map.get( $color-map, "swatch") !important;
             }
