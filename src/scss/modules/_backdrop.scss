@@ -1,30 +1,38 @@
-@use "sass:map";
-@use "breakpoints";
+
 
 /*
 
 In this file:
 
-// A. Variables
-// B. Backdrop Block
-// C. Backdrop Elements
-// D. Backdrop Breakpoint Modifiers
-// E. Backdrop Fixed Modifier
+// A. Modules
+// B. Variables
+// C. Backdrop Block
+// D. Backdrop Elements
+// E. Backdrop Breakpoint Modifiers
+// F. Backdrop Fixed Modifier
 
 */
 
+
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "breakpoints";
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 // Scoped to Block
 
-.backdrop--fixed {
+%custom-properties {
     --backdrop-fixed-height: 350px;
 }
 
 //////////////////////////////////////////////
-// B. Backdrop Block
+// C. Backdrop Block
 //////////////////////////////////////////////
 
 .backdrop {
@@ -32,7 +40,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Backdrop Elements
+// D. Backdrop Elements
 //////////////////////////////////////////////
 
 .backdrop:not([class*="--stack"]):not([class*="--fixed"]) {
@@ -76,7 +84,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. Backdrop Breakpoint Modifiers
+// E. Backdrop Breakpoint Modifiers
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -92,10 +100,12 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// E. Backdrop Fixed Modifier
+// F. Backdrop Fixed Modifier
 //////////////////////////////////////////////
 
 .backdrop--fixed {
+    @extend %custom-properties;
+
     display: flex;
     flex-direction: column;
     justify-content: center;

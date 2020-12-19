@@ -2,9 +2,10 @@
 
 In this file:
 
-// A. Variables
-// B. Color Utilities
-// C. Set Body Theme
+// A. Modules
+// B. Variables
+// C. Color Utilities
+// D. Default Body Theme
 
 */
 
@@ -16,7 +17,7 @@ In this file:
 @use "breakpoints";
 
 //////////////////////////////////////////////
-// A. Variables
+// B. Variables
 //////////////////////////////////////////////
 
 // Scoped to Root
@@ -124,7 +125,7 @@ $theme-colors: (
 );
 
 //////////////////////////////////////////////
-// B. Color Utilities 
+// C. Color Utilities 
 //////////////////////////////////////////////
 
 body:not([class*="theme-"]),
@@ -232,7 +233,7 @@ body:not([class*="theme-"]),
 }
 
 //////////////////////////////////////////////
-// C. Set Body Theme 
+// D. Default Body Theme 
 //////////////////////////////////////////////
 
 body {
