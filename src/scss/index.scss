@@ -11,108 +11,41 @@ In this file:
 // A. Modules
 //////////////////////////////////////////////
 
-@use "modules/reset";
-@use "modules/global";
-@use "modules/document";
-@use "modules/breakpoints";
-@use "modules/spacing";
-@use "modules/typography";
 @use "modules/accessibility";
-@use "modules/color";
-@use "modules/buttons";
-@use "modules/links";
-@use "modules/borders";
-@use "modules/containers";
-@use "modules/sizing";
-@use "modules/grid";
-@use "modules/flex";
-@use "modules/display";
-@use "modules/navigation";
-@use "modules/tabs";
-@use "modules/tables";
-@use "modules/collapse";
-@use "modules/backdrop";
-@use "modules/cards";
-@use "modules/z-index";
-@use "modules/position";
-
 @use "modules/accordion";
 @use "modules/alert";
-@use "modules/shadows";
-@use "modules/gradient";
-@use "modules/modals";
-@use "modules/forms";
-@use "modules/aspect-ratio";
-@use "modules/opacities";
 @use "modules/article";
+@use "modules/aspect-ratio";
+@use "modules/backdrop";
+@use "modules/borders";
+@use "modules/breakpoints";
+@use "modules/buttons";
+@use "modules/cards";
+@use "modules/collapse";
+@use "modules/color";
+@use "modules/containers";
+@use "modules/dev-tools";
+@use "modules/display";
+@use "modules/document";
+@use "modules/flex";
+@use "modules/forms";
+@use "modules/global";
+@use "modules/gradient";
+@use "modules/grid";
 @use "modules/icons";
-
-// @import "modules/dev-tools";
-
-// %collapse-me {
-// }
-
-////////////////////////////////////////
-// B. Horizontal Center
-////////////////////////////////////////
-
-// %center-horizontal{
-//     margin-left: auto;
-//     margin-right: auto;
-// }
-
-
-////////////////////////////////////////
-// C. List Nav Style
-////////////////////////////////////////
-
-// %list-nav-style {
-//     list-style: none;
-//     line-height: normal;
-
-//     > li {
-//         position: relative;
-//     }
-
-//     a[aria-current] {
-//         font-weight: var(--body-font-weight-bold);
-//         text-decoration: underline;
-//     }
-// }
-
-////////////////////////////////////////
-// E. Subtle Fill
-////////////////////////////////////////
-
-// %subtle-fill {
-//     position: relative;
-//     --subtle-fill-opacity: 0;
-
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         right: 0;
-//         bottom: 0;
-//         left: 0;
-
-//         border-radius: inherit;
-//         background-color: currentColor;
-//         pointer-events: none;
-
-//         transition: opacity 0.25s;
-//         opacity: var(--subtle-fill-opacity);
-//     }
-// }
-
-
-//////////////////////////////////////////////
-// B. Custom Theme Styles
-//////////////////////////////////////////////
-
-// Put anything here
-
-// Logo
+@use "modules/links";
+@use "modules/modals";
+@use "modules/navigation";
+@use "modules/opacities";
+@use "modules/position";
+@use "modules/reset";
+@use "modules/shadows";
+@use "modules/sizing";
+@use "modules/spacing";
+@use "modules/tables";
+@use "modules/tabs";
+@use "modules/typography";
+@use "modules/z-index";
 
 .overflow-hidden {
     overflow: hidden;
