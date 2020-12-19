@@ -8,10 +8,8 @@ In this file:
 */
 
 //////////////////////////////////////////////
-// A. Imports
+// A. Modules
 //////////////////////////////////////////////
-
-// Required
 
 @use "modules/reset";
 @use "modules/global";
@@ -20,8 +18,8 @@ In this file:
 @use "modules/spacing";
 @use "modules/typography";
 @use "modules/accessibility";
-@use "modules/buttons";
 @use "modules/color";
+@use "modules/buttons";
 @use "modules/links";
 @use "modules/borders";
 @use "modules/containers";
