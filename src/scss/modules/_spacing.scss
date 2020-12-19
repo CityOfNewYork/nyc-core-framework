@@ -2,9 +2,10 @@
 
 In this file:
 
-// A. Variables
-// B. Responsive Spacer Utilities
-// C. Static Spacer Utilities
+// A. Modules
+// B. Variables
+// C. Responsive Spacer Utilities
+// D. Static Spacer Utilities
 
 */
 
@@ -18,6 +19,8 @@ In this file:
 //////////////////////////////////////////////
 // B. Variables
 //////////////////////////////////////////////
+
+// Scoped to Root
 
 :root {    
     --spacer-1: 0.5rem;
@@ -36,7 +39,7 @@ $spacers: (
 );
 
 //////////////////////////////////////////////
-// B. Responsive Spacer Utilities
+// C. Responsive Spacer Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -142,7 +145,7 @@ $spacers: (
 }
 
 ////////////////////////////////////////////
-// C. Static Spacer Utilities
+// D. Static Spacer Utilities
 ////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {

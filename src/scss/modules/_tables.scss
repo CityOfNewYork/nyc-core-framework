@@ -1,13 +1,12 @@
-
-
 /*
 
 In this file:
 
-// A. Variables
-// B. Table Block
-// C. Table Modifiers
-// D. Table Scroll Block
+// A. Modules
+// B. Variables
+// C. Table Block
+// D. Table Modifiers
+// E. Table Scroll Block
 
 */
 
@@ -19,7 +18,7 @@ In this file:
 @use "breakpoints";
 
 //////////////////////////////////////////////
-// A. Variables
+// B. Variables
 //////////////////////////////////////////////
 
 :root {
@@ -30,7 +29,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Table Block
+// C. Table Block
 //////////////////////////////////////////////
 
 .table {
@@ -73,7 +72,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Table Modifiers
+// D. Table Modifiers
 //////////////////////////////////////////////
 
 .table--striped {
@@ -181,7 +180,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. Table Scroll Block
+// E. Table Scroll Block
 //////////////////////////////////////////////
 
 .table-scroll {
