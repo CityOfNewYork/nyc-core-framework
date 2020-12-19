@@ -1,13 +1,10 @@
-@use "sass:map";
-@use "breakpoints";
-@use "global";
-
 /*
 
 In this file:
 
-// A. Variables
-// B. Form Entry Block
+// A. Modules
+// B. Variables
+// C. Form Entry Block
 // C. Form Entry Elements
 // D. Form Entry Modifiers
 // E. Browser Behavior Modifications
@@ -17,10 +14,21 @@ In this file:
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
 //////////////////////////////////////////////
 
-:root {
+@use "sass:map";
+@use "breakpoints";
+@use "global";
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%custom-properties {
+
     --form-field-padding-x: var(--spacer-2);
     --form-field-padding-y: var(--button-padding-y);
 
@@ -28,7 +36,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Form Entry Block
+// C. Form Entry Block
 //////////////////////////////////////////////
 
 .form-entry {
@@ -73,10 +81,12 @@ form > .button {
 }
 
 //////////////////////////////////////////////
-// C. Form Entry Elements
+// D. Form Entry Elements
 //////////////////////////////////////////////
 
 .form-entry__field {
+    @extend %custom-properties;
+
     position: relative;
 
     display: flex;
@@ -224,7 +234,7 @@ form > .button {
 }
 
 //////////////////////////////////////////////
-// C. Checkbox and Radio Elements
+// F. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
 fieldset {

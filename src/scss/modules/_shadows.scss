@@ -1,22 +1,27 @@
-@use "sass:map";
-@use "breakpoints";
-
 /*
 
 In this file:
 
-// A. Variables
-// B. Box Shadow Utilities
-// C. Text Shadow Utility
-// D. I.E. 11 Support
+// A. Modules
+// B. Variables
+// C. Box Shadow Utilities
+// D. Text Shadow Utility
+// E. I.E. 11 Support
 
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
 //////////////////////////////////////////////
 
-:root {
+@use "sass:map";
+@use "breakpoints";
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+%custom-properties {
     --base-shadow-unit: 1rem;
     --base-shadow-opacity: 0.125;
 }
@@ -26,11 +31,13 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Box Shadow Utilities
+// C. Box Shadow Utilities
 //////////////////////////////////////////////
 
 body:not([class*="box-shadow-"]),
 [class*="box-shadow-"] {
+    @extend %custom-properties;
+
     --shadow-opacity: 0;
 
     box-shadow:
@@ -65,7 +72,7 @@ body:not([class*="box-shadow-"]){
 }
 
 //////////////////////////////////////////////
-// C. Text Shadow Utility
+// D. Text Shadow Utility
 //////////////////////////////////////////////
 
 .text-shadow {
@@ -73,7 +80,7 @@ body:not([class*="box-shadow-"]){
 }
 
 //////////////////////////////////////////////
-// D. I.E. 11 Support
+// E. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),

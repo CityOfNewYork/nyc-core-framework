@@ -1,17 +1,23 @@
-@use "sass:map";
-@use "breakpoints";
 
 /*
 
 In this file:
 
-// A. Opacities Map
-// B. Opacity Utilities
+// A. Modules
+// B. Variables
+// C. Opacity Utilities
 
 */
 
 //////////////////////////////////////////////
-// A. Opacities Map
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "breakpoints";
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 $opacities: (
@@ -27,7 +33,7 @@ $opacities: (
 );
 
 //////////////////////////////////////////////
-// B. Opacity Utilities
+// C. Opacity Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {

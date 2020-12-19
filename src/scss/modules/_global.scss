@@ -7,43 +7,12 @@ In this file:
 
 // A. @use
 
-// A. Variables
-// B. Center Horizontal
-// C. List Nav Style
 // D. Caret
 // E. Subtle Fill
-// F. Body Width
-// G. HTML Scroll Behavior
 // H. Truncate Text
 
 */
 
-////////////////////////////////////////
-// A. Variables
-////////////////////////////////////////
-
-:root {
-    --body-min-width: 325px;
-    --body-max-width: 2000px;
-}
-
-////////////////////////////////////////
-// C. List Nav Style
-////////////////////////////////////////
-
-%list-nav-style {
-    list-style: none;
-    line-height: normal;
-
-    > li {
-        position: relative;
-    }
-
-    a[aria-current] {
-        font-weight: var(--body-font-weight-bold);
-        text-decoration: underline;
-    }
-}
 
 ////////////////////////////////////////
 // D. Caret
@@ -108,14 +77,4 @@ $default-caret-margin: 0.375em;
         transition: opacity 0.25s;
         opacity: var(--subtle-fill-opacity);
     }
-}
-
-////////////////////////////////////////
-// H. Truncate Text
-////////////////////////////////////////
-
-.truncate-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }

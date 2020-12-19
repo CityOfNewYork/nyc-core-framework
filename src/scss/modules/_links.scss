@@ -2,16 +2,33 @@
 
 In this file:
 
-// A. Placeholders
-// B. Link Styles
+// A. Generic Links
+// B. Expanded Link
+// C. Logo Link
 
 */
 
 //////////////////////////////////////////////
-// A. Placeholders
+// A. Generic Links
 //////////////////////////////////////////////
 
-%expanded-link {
+a {
+    color: inherit;
+
+    &.underline{
+        text-decoration: underline;
+    }
+}
+
+p > a {
+    text-decoration: underline;
+}
+
+//////////////////////////////////////////////
+// B. Expanded Link
+//////////////////////////////////////////////
+
+.expanded-link {
     &::before {
         content: "";
         position: absolute;
@@ -26,24 +43,8 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Link Styles
+// C. Logo Link
 //////////////////////////////////////////////
-
-a {
-    color: inherit;
-
-    &.underline{
-        text-decoration: underline;
-    }
-
-    &.expanded-link {
-        @extend %expanded-link !optional;
-    }
-}
-
-p > a {
-    text-decoration: underline;
-}
 
 a[data-logo="brand"] {
     display: inline-block;

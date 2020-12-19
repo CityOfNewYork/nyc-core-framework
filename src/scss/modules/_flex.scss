@@ -1,21 +1,27 @@
-@use "sass:map";
-@use "breakpoints";
+
 
 /*
 
 In this file:
 
-// A. Flex Direction Utilities
-// B. Flex Grow, Shrink, and Fill Utilites
-// B. Justify Content Utilites
-// C. Align Content Utilites
-// D. Align Items Utilites
-// E. Align Self Utilites
+// B. Flex Direction Utilities
+// C. Flex Grow, Shrink, and Fill Utilites
+// D. Justify Content Utilites
+// E. Align Content Utilites
+// F. Align Items Utilites
+// G. Align Self Utilites
 
 */
 
 //////////////////////////////////////////////
-// A. Flex Direction Utilities 
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "breakpoints";
+
+//////////////////////////////////////////////
+// B. Flex Direction Utilities 
 //////////////////////////////////////////////
 
 [class*="flex-"],
@@ -49,7 +55,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Flex Grow, Shrink, and Fill Utilites
+// C. Flex Grow, Shrink, and Fill Utilites
 //////////////////////////////////////////////
 
 .flex-grow-0 {
@@ -73,7 +79,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Justify Content Utilites
+// D. Justify Content Utilites
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -103,7 +109,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Align Content Utilites
+// E. Align Content Utilites
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -138,7 +144,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. Align Items Utilites
+// F. Align Items Utilites
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -169,7 +175,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// E. Align Self Utilites
+// G. Align Self Utilites
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {

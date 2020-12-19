@@ -1,19 +1,24 @@
-@use "sass:map";
-@use "breakpoints";
-@use "spacing";
-
 /*
 
 In this file:
 
-// A. Variables
-// B. Container Utility
-// C. Narrow, Medium, and Wide Utilities
+// A. Modules
+// B. Variables
+// C. Container Utility
+// D. Narrow, Medium, and Wide Utilities
 
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "breakpoints";
+@use "spacing";
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 :root {
@@ -25,7 +30,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Container Utility
+// C. Container Utility
 //////////////////////////////////////////////
 
 .container {
@@ -34,12 +39,12 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Narrow, Medium, and Wide Utilities
+// D. Narrow, Medium, and Wide Utilities
 //////////////////////////////////////////////
 
-[class*="narrow"], 
-[class*="medium"],
-[class*="wide"] {
+.narrow,
+.medium,
+.wide {
     @extend .margin-x-auto;
 }
 

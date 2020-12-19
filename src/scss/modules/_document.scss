@@ -4,8 +4,8 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. Body Width
-// D. HTML Scroll Behavior
+// C. HTML
+// D. Body
 
 */
 
@@ -15,6 +15,7 @@ In this file:
 
 @use "spacing";
 @use "shadows";
+@use "color";
 
 ////////////////////////////////////////
 // B. Variables
@@ -28,7 +29,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// D. HTML 
+// C. HTML 
 ////////////////////////////////////////
 
 html {
@@ -42,7 +43,7 @@ html {
 }
 
 ////////////////////////////////////////
-// C. Body 
+// D. Body 
 ////////////////////////////////////////
 
 body {
@@ -54,4 +55,5 @@ body {
     max-width: var(--body-max-width);
 
     @extend .margin-x-auto;
+    @extend .theme-white;
 }

@@ -1,11 +1,10 @@
-@use "sass:map";
-@use "breakpoints";
+
 
 /*
 
 In this file:
 
-// A. Variables
+// B. Variables
 // B. Font Weight Utilities
 // C. Font Size Utilities
 // D. Headers
@@ -18,7 +17,15 @@ In this file:
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "breakpoints";
+@use "borders";
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 // Base Font Fallback (credit: Bootstrap 4.x)
@@ -222,7 +229,7 @@ figure {
 
 hr {
     height: unset;
-    @extend .border-top !optional;
+    @extend .border-top;
 }
 
 //////////////////////////////////////////////
@@ -258,4 +265,15 @@ hr {
 
 .break-word {
     word-wrap: break-word;
+}
+
+
+////////////////////////////////////////
+// H. Truncate Text
+////////////////////////////////////////
+
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

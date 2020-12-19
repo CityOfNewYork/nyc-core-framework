@@ -1,33 +1,58 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Placeholders 
+// D. Head Nav Components 
+// E. Nav
+// F. Nav Divider
+// G. Nav Breadcrumb
+// H. Dropdown
+// I. I.E. 11 Support
+
+*/
+
+////////////////////////////////////////
+// A. Modules
+////////////////////////////////////////
+
 @use "sass:map";
 @use "breakpoints";
 @use "global";
 @use "spacing";
 @use "collapse";
-
-/*
-
-In this file:
-
-// A. Variables
-// B. Head Nav Components 
-// C. Nav
-// D. Nav Divider
-// E. Nav Breadcrumb
-// F. Dropdown
-// G. I.E. 11 Support
-
-*/
+@use "links";
 
 ////////////////////////////////////////
-// A. Variables
+// B. Variables
 ////////////////////////////////////////
 
-:root {        
+%custom-properties {        
     --dropdown-z-index: 1200;
 }
 
+////////////////////////////////////////
+// C.  Placeholders 
+////////////////////////////////////////
+
+%list-nav-style {
+    list-style: none;
+    line-height: normal;
+
+    > li {
+        position: relative;
+    }
+
+    a[aria-current] {
+        font-weight: var(--body-font-weight-bold);
+        text-decoration: underline;
+    }
+}
+
 //////////////////////////////////////////////
-// B. Head Nav Components
+// D. Head Nav Components
 //////////////////////////////////////////////
 
 [class*="primary-nav--"] {
@@ -110,7 +135,7 @@ In this file:
     }
 
     > ul > li > a {
-        // @extend %expanded-link;
+        @extend .expanded-link;
     }
 }
 
@@ -120,7 +145,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// C. Nav
+// E. Nav
 ////////////////////////////////////////
 
 [class*="primary-nav--inline--"] > [class*="__menu"] > ul,
@@ -220,7 +245,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// D. Nav Divider
+// F. Nav Divider
 ////////////////////////////////////////
 
 [class*="primary-nav--below--"] > [class*="__menu"] > ul,
@@ -388,7 +413,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// E. Nav Breadcrumb
+// G. Nav Breadcrumb
 ////////////////////////////////////////
 
 nav[aria-label="Breadcrumb"] {
@@ -419,10 +444,12 @@ nav[aria-label="Breadcrumb"] {
 }
 
 ////////////////////////////////////////
-// F. Dropdown
+// H. Dropdown
 ////////////////////////////////////////
 
 [data-toggle="dropdown"]:not([class*="button--icon-only"]) {
+
+    @extend %custom-properties;
     @include global.add-caret;
 
     &[aria-expanded="true"]::after {
@@ -496,7 +523,7 @@ nav[aria-label="Breadcrumb"] {
 }
 
 //////////////////////////////////////////////
-// G. I.E. 11 Support
+// I. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),
