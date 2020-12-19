@@ -31,7 +31,7 @@ In this file:
 
 .article {
     @extend %custom-properties;
-
+    
     display: grid;
 }
 
@@ -45,7 +45,7 @@ In this file:
 
 @include breakpoints.breakpoints-up(lg) {
 
-    .article {
+    [class*="article"] {
 
         .article__header {
             grid-area: header;
@@ -79,7 +79,6 @@ In this file:
         }
 
         [dir="rtl"] & {
-
             header .backdrop__cover > * {
                 margin-left: unset;
                 margin-right: var(--article-sidebar-width);

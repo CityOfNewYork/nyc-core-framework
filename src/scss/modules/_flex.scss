@@ -22,9 +22,10 @@ In this file:
 // B. Flex Direction Utilities 
 //////////////////////////////////////////////
 
-[class*="flex-"],
-[class*="-column"],
-[class*="-row"] {
+[class*="flex-row"],
+[class*="flex-column"]
+[class*="row-reverse"],
+[class*="column-reverse"] {
     display: flex;
     flex-wrap: wrap;
 }
