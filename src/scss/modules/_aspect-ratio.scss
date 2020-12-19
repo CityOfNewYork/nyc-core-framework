@@ -1,3 +1,5 @@
+@use "sass:list";
+@use "sass:math";
 /*
 
 In this file:
@@ -57,12 +59,12 @@ $aspect-ratios: (
 //////////////////////////////////////////////
 
 @each $aspect-ratio in $aspect-ratios {
-    $aspect-ratio-x: nth($aspect-ratio, 1);
-    $aspect-ratio-y: nth($aspect-ratio, 2);
+    $aspect-ratio-x: list.nth($aspect-ratio, 1);
+    $aspect-ratio-y: list.nth($aspect-ratio, 2);
 
     .aspect-ratio--#{$aspect-ratio-x}by#{$aspect-ratio-y} {
         &::before {
-            padding-top: percentage($aspect-ratio-y / $aspect-ratio-x);
+            padding-top: math.percentage($aspect-ratio-y / $aspect-ratio-x);
         }
     }
 }

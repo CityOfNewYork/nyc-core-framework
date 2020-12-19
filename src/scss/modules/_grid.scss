@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "breakpoints";
+@use "spacing";
+
 /*
 
 In this file:
@@ -61,7 +65,7 @@ $columns: 12;
     }
 }
 
-@each $spacer, $value in $spacers {
+@each $spacer, $value in spacing.$spacers {
     .grid--gap-#{$spacer} {
         --gap-size: #{$value};
     }
@@ -75,9 +79,9 @@ $columns: 12;
 // D. Grid Size Utilities and Modifiers
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .grid--cells-fill#{$mod} > [class*="grid__cell"] {
             flex: 1;
@@ -106,9 +110,9 @@ $columns: 12;
 // E. Grid Cell Size Utilities and Modifiers
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         @for $i from 1 through $columns {
             .grid > .grid__cell-#{$i}#{$mod} {

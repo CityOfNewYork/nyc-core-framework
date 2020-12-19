@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -22,9 +25,9 @@ In this file:
     flex-wrap: wrap;
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .flex-row#{$mod} {
             flex-direction: row;
@@ -73,9 +76,9 @@ In this file:
 // B. Justify Content Utilites
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .justify-content-start#{$mod} {
             justify-content: flex-start !important;
@@ -103,9 +106,9 @@ In this file:
 // C. Align Content Utilites
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .align-content-start {
             align-content: flex-start !important;
@@ -138,9 +141,9 @@ In this file:
 // D. Align Items Utilites
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .align-items-start#{$mod} {
             align-items: flex-start !important;
@@ -169,9 +172,9 @@ In this file:
 // E. Align Self Utilites
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .align-self-auto#{$mod} {
             align-self: auto !important;

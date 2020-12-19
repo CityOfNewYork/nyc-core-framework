@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -110,10 +113,10 @@ $font-sizes: (
 
 @each $key, $font-size-map in $font-sizes {
     .font-size-#{$key} {
-        font-size: map-get($font-size-map, "size") !important;
+        font-size: map.get($font-size-map, "size") !important;
 
-        @if map-has-key($font-size-map, "line-height") {
-            line-height: map-get($font-size-map, "line-height");
+        @if map.has-key($font-size-map, "line-height") {
+            line-height: map.get($font-size-map, "line-height");
         }
     }
 }
@@ -164,21 +167,21 @@ $headers: (
 @each $key, $header-map in $headers {
 
     #{$key} {
-        font-size: map-get($header-map, "size");
+        font-size: map.get($header-map, "size");
     }
 }
 
 @each $key, $header-map in $headers {
 
     .#{$key} {
-        font-size: map-get($header-map, "size") !important;
+        font-size: map.get($header-map, "size") !important;
     }
 }
 
 .banner-headline {
     font-weight: var(--banner-headline-font-weight);
 
-    @include breakpoints-up(lg){
+    @include breakpoints.breakpoints-up(lg){
         font-size: var(--banner-headline-font-size);
     }
 }
@@ -226,9 +229,9 @@ hr {
 // I. Text Align Utilities
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .text-align-center{
         text-align: center !important;

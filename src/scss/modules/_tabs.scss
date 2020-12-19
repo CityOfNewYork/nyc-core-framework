@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -104,9 +107,9 @@ In this file:
         }
     }
 
-    @each $breakpoint in map-keys($breakpoints) {
-        @include breakpoints-up($breakpoint) {
-            $mod: breakpoint-modifier($breakpoint, $breakpoints);
+    @each $breakpoint in map.keys(breakpoints.$breakpoints) {
+        @include breakpoints.breakpoints-up($breakpoint) {
+            $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
             &.tabs-nav--horizontal#{$mod} {
                 display: flex;
@@ -143,9 +146,9 @@ In this file:
         }
     }
 
-    @each $breakpoint in map-keys($breakpoints) {
-        @include breakpoints-up($breakpoint) {
-            $mod: breakpoint-modifier($breakpoint, $breakpoints);
+    @each $breakpoint in map.keys(breakpoints.$breakpoints) {
+        @include breakpoints.breakpoints-up($breakpoint) {
+            $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
             &.tabs-nav--horizontal#{$mod} {
                 display: flex;

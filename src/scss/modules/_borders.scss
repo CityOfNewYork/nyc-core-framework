@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "breakpoints";
+@use "color-system";
+
 /*
 
 In this file:
@@ -28,9 +32,9 @@ In this file:
     border-color: inherit;
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .border#{$mod} {
             border-width: var(--default-border-width);
@@ -83,29 +87,29 @@ In this file:
 // C. Border Color Utilities
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
-        @each $name, $color-map in $theme-colors {
+        @each $name, $color-map in color-system.$theme-colors {
             .border-#{$name}#{$mod} {
-                border-color: map-get( $color-map, "swatch") !important;
+                border-color: map.get( $color-map, "swatch") !important;
             }
 
             .border-top-#{$name}#{$mod} {
-                border-top-color: map-get($color-map, "swatch") !important;
+                border-top-color: map.get($color-map, "swatch") !important;
             }
 
             .border-right-#{$name}#{$mod} {
-                border-right-color: map-get($color-map, "swatch") !important;
+                border-right-color: map.get($color-map, "swatch") !important;
             }
 
             .border-bottom-#{$name}#{$mod} {
-                border-bottom-color: map-get($color-map, "swatch") !important;
+                border-bottom-color: map.get($color-map, "swatch") !important;
             }
 
             .border-left-#{$name}#{$mod} {
-                border-left-color: map-get($color-map, "swatch") !important;
+                border-left-color: map.get($color-map, "swatch") !important;
             }
         }
 
@@ -120,9 +124,9 @@ In this file:
     overflow: hidden;
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .rounded#{$mod} {
             border-radius: var(--border-radius);

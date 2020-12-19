@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -17,9 +20,9 @@ $display-types: block, inline, inline-block, flex, none;
 // B. Display Utilities
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         @each $value in $display-types {
             .display-#{$value}#{$mod} {

@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -188,18 +191,18 @@ body:not([class*="theme-"]),
     }
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         @each $name, $color-map in $theme-colors {
-            $swatch: map-get($color-map, "swatch");
-            $text: map-get($color-map, "text");
-            $border: map-get($color-map, "border");
-            $link: map-get($color-map, "link");
+            $swatch: map.get($color-map, "swatch");
+            $text: map.get($color-map, "text");
+            $border: map.get($color-map, "border");
+            $link: map.get($color-map, "link");
 
-            $confirm: map-get($color-map, "confirm");
-            $warn: map-get($color-map, "warn");
+            $confirm: map.get($color-map, "confirm");
+            $warn: map.get($color-map, "warn");
 
             .theme-#{$name}#{$mod} {
                 --background-color: #{$swatch};

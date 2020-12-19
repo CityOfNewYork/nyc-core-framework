@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "breakpoints";
+@use "global";
+@use "spacing";
+@use "collapse";
+
 /*
 
 In this file:
@@ -41,7 +47,7 @@ In this file:
 
     > [class*="__menu"] {
         grid-area: menu;
-        @extend .collapse !optional;
+        @extend .collapse;
     }
 
     > [class*="__buttons"] {
@@ -104,7 +110,7 @@ In this file:
     }
 
     > ul > li > a {
-        @extend %expanded-link;
+        // @extend %expanded-link;
     }
 }
 
@@ -160,7 +166,7 @@ In this file:
     --gap-size: 0;
 }
 
-@each $spacer, $value in $spacers {
+@each $spacer, $value in spacing.$spacers {
     @if ($spacer != 2) {
         .nav--gap-#{$spacer} {
             --gap-size: #{$value};
@@ -168,9 +174,9 @@ In this file:
     }
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .primary-nav--inline#{$mod} > [class*="__menu"] > ul,
         .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
@@ -262,9 +268,9 @@ In this file:
     }
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .primary-nav--inline#{$mod},
         .primary-nav--below#{$mod} {
@@ -402,7 +408,7 @@ nav[aria-label="Breadcrumb"] {
     }
     
     > li:not(:last-child) {
-        @include add-caret;
+        @include global.add-caret;
         
         &:after {
             margin-left: var(--gap-size);
@@ -417,7 +423,7 @@ nav[aria-label="Breadcrumb"] {
 ////////////////////////////////////////
 
 [data-toggle="dropdown"]:not([class*="button--icon-only"]) {
-    @include add-caret;
+    @include global.add-caret;
 
     &[aria-expanded="true"]::after {
         transform: rotate(180deg);

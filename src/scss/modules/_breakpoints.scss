@@ -1,3 +1,4 @@
+@use "sass:map";
 /*
 
 In this file:
@@ -24,7 +25,7 @@ $breakpoints: (
   xl: $bp-xl,
 );
 
-$breakpoints: map-merge((null : 0), $breakpoints);
+$breakpoints: map.merge((null : 0), $breakpoints);
 
 //////////////////////////////////////////////
 // B. Breakpoints Functions
@@ -33,7 +34,7 @@ $breakpoints: map-merge((null : 0), $breakpoints);
 // Name of the next breakpoint, or null for the last breakpoint.
 
 @function breakpoint-value($name, $breakpoints) {
-  $value: map-get($breakpoints, $name);
+  $value: map.get($breakpoints, $name);
   @return if($value != 0, $value, null);
 }
 
@@ -47,7 +48,7 @@ $breakpoints: map-merge((null : 0), $breakpoints);
 
 @mixin breakpoints-up($breakpoint) {
   @if ($breakpoint != null) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   }
@@ -58,7 +59,7 @@ $breakpoints: map-merge((null : 0), $breakpoints);
 
 @mixin breakpoints-down($breakpoint) {
   @if ($breakpoint != null) {
-    @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   }

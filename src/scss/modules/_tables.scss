@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -119,11 +122,11 @@ In this file:
     }
 }
 
-@each $breakpoint in map-keys($breakpoints) {
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
 
-    @include breakpoints-down($breakpoint) {
+    @include breakpoints.breakpoints-down($breakpoint) {
     
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
         
         .table--stack#{$mod} {
 

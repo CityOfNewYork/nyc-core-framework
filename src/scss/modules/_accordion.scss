@@ -2,14 +2,21 @@
 
 In this file:
 
-// A. Variables
-// B. Accordion Block
-// C. Accordion Elements
+// A. Modules
+// B. Variables
+// C. Accordion Block
+// D. Accordion Elements
 
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
+//////////////////////////////////////////////
+
+@use "global";
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 // Scoped to Block
@@ -26,7 +33,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Accordion Block
+// C. Accordion Block
 //////////////////////////////////////////////
 
 .accordion {
@@ -34,7 +41,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Accordion Elements
+// D. Accordion Elements
 //////////////////////////////////////////////
 
 .accordion__button{
@@ -62,7 +69,7 @@ In this file:
         border-top-color: inherit;
     }
 
-    @include add-caret("after");
+    @include global.add-caret("after");
 
     &::after{
        transition: transform var(--accordion-animation);

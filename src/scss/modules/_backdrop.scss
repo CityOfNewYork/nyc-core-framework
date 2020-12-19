@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -76,9 +79,9 @@ In this file:
 // D. Backdrop Breakpoint Modifiers
 //////////////////////////////////////////////
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .backdrop--stack#{$mod} {
             .backdrop__cover {
@@ -126,7 +129,7 @@ In this file:
         width: 100%;
     }
     
-    @include breakpoints-down(md) {
+    @include breakpoints.breakpoints-down(md) {
         min-height: calc( var(--backdrop-fixed-height) * 0.75 );
     }
 }

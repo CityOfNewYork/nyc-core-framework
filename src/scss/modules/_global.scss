@@ -1,6 +1,11 @@
+
+// @use "spacing";
+
 /*
 
 In this file:
+
+// A. @use
 
 // A. Variables
 // B. Center Horizontal
@@ -18,18 +23,8 @@ In this file:
 ////////////////////////////////////////
 
 :root {
-    --subtle-fill-visible-opacity: 0.05;
     --body-min-width: 325px;
     --body-max-width: 2000px;
-}
-
-////////////////////////////////////////
-// B. Horizontal Center
-////////////////////////////////////////
-
-%center-horizontal{
-    margin-left: auto;
-    margin-right: auto;
 }
 
 ////////////////////////////////////////
@@ -113,26 +108,6 @@ $default-caret-margin: 0.375em;
         transition: opacity 0.25s;
         opacity: var(--subtle-fill-opacity);
     }
-}
-
-////////////////////////////////////////
-// F. Body Width
-////////////////////////////////////////
-
-body {
-    overflow-x: hidden;
-    min-width: var(--body-min-width);
-    max-width: var(--body-max-width);
-    
-    @extend %center-horizontal !optional;
-}
-
-////////////////////////////////////////
-// G. HTML Scroll Behavior
-////////////////////////////////////////
-
-html {
-    scroll-behavior: smooth;
 }
 
 ////////////////////////////////////////

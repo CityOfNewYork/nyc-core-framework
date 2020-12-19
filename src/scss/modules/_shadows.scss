@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "breakpoints";
+
 /*
 
 In this file:
@@ -36,9 +39,9 @@ body:not([class*="box-shadow-"]),
         0 calc(var(--base-shadow-unit) * 1.5) calc(var(--base-shadow-unit) * 3) rgba(0, 0, 0, calc(var(--shadow-opacity) * 0.25));
 }
 
-@each $breakpoint in map-keys($breakpoints) {
-    @include breakpoints-up($breakpoint) {
-        $mod: breakpoint-modifier($breakpoint, $breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
         
         .box-shadow-1#{$mod} {
             --base-shadow-unit: 0.25rem;

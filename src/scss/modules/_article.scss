@@ -2,14 +2,21 @@
 
 In this file:
 
-// A. Variables
-// B. Article Block
-// C. Article Elements 
+// A. Modules
+// B. Variables
+// C. Block
+// D. Elements and Modifiers 
 
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
+//////////////////////////////////////////////
+
+@use "breakpoints";
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 // Scoped to Block
@@ -19,7 +26,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Article Block
+// C. Block
 //////////////////////////////////////////////
 
 .article {
@@ -27,14 +34,14 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Article Elements and Modifiers
+// D. Elements and Modifiers
 //////////////////////////////////////////////
 
 .article__body {
     overflow: hidden;
 }
 
-@include breakpoints-up(lg) {
+@include breakpoints.breakpoints-up(lg) {
 
     .article {
 
@@ -79,7 +86,7 @@ In this file:
     }
 }
 
-@include breakpoints-up(xl) {
+@include breakpoints.breakpoints-up(xl) {
 
     .article--three-column {
         --article-sidebar-width: 260px;

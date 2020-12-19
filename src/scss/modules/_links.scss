@@ -37,7 +37,7 @@ a {
     }
 
     &.expanded-link {
-        @extend %expanded-link;
+        @extend %expanded-link !optional;
     }
 }
 
