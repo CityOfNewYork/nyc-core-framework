@@ -1,0 +1,52 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Mixins
+
+*/
+
+////////////////////////////////////////
+// A. Variables
+////////////////////////////////////////
+
+$default-caret-size: 0.25em;
+$default-caret-margin: 0.375em;
+
+////////////////////////////////////////
+// B. Mixins
+////////////////////////////////////////
+
+// Create caret icon
+
+@mixin caret-icon( $size: $default-caret-size ) {
+    border-top: $size solid;
+    border-right: $size solid transparent;
+    border-bottom: 0;
+    border-left: $size solid transparent;
+}
+
+// Add Caret ::aftter
+
+@mixin add-caret( $location: "append" ) {
+
+    display: flex;
+    align-items: center;
+    
+    &::after {
+        content: "";
+        display: inline-block;
+
+        @include caret-icon;
+
+        margin-left: $default-caret-margin;
+        margin-right: $default-caret-margin;
+        color: inherit;
+        
+    } 
+    
+    @if $location == "prepend" {
+        flex-direction: row-reverse;
+    }
+}

@@ -1,0 +1,100 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Alert Block
+// D. Alert Elements and Modifiers 
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "../breakpoint/style" as breakpoints;
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%custom-properties {
+    --article-sidebar-width: 340px;
+}
+
+//////////////////////////////////////////////
+// C. Alert Block
+//////////////////////////////////////////////
+
+.article {
+    @extend %custom-properties;
+    
+    display: grid;
+}
+
+//////////////////////////////////////////////
+// D. Alert Elements and Modifiers
+//////////////////////////////////////////////
+
+.article__body {
+    overflow: hidden;
+}
+
+@include breakpoints.breakpoints-up(lg) {
+
+    [class*="article"] {
+
+        .article__header {
+            grid-area: header;
+        }
+        
+        .article__sidebar {
+            position: relative;
+            grid-area: sidebar;
+        }
+
+        .article__body {
+            grid-area: body;
+        }
+
+        .article__related {
+            grid-area: related;
+        }
+    }
+
+    .article--three-column,
+    .article--two-column {
+        grid-template-columns: var(--article-sidebar-width) 1fr;
+
+        grid-template-areas:
+            "header header"
+            "sidebar body"
+            "related related";
+
+        header .backdrop__cover > * {
+            margin-left: var(--article-sidebar-width);
+        }
+
+        [dir="rtl"] & {
+            header .backdrop__cover > * {
+                margin-left: unset;
+                margin-right: var(--article-sidebar-width);
+            }
+        }
+    }
+}
+
+@include breakpoints.breakpoints-up(xl) {
+
+    .article--three-column {
+        --article-sidebar-width: 260px;
+        grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
+
+        grid-template-areas:
+            "header header header"
+            "sidebar body related";
+    }
+}

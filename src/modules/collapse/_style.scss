@@ -1,0 +1,19 @@
+/*
+
+In this file:
+
+// A. Collapse Utility
+
+*/
+
+//////////////////////////////////////////////
+// A. Collapse Utility
+//////////////////////////////////////////////
+
+.collapse {
+    display: none;
+    
+    &.shown {
+        display: block;
+    }
+}

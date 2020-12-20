@@ -1,0 +1,143 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Backdrop Block
+// D. Backdrop Elements
+// E. Backdrop Breakpoint Modifiers
+// F. Backdrop Fixed Modifier
+
+*/
+
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoint/style" as breakpoints;
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%custom-properties {
+    --backdrop-fixed-height: 350px;
+}
+
+//////////////////////////////////////////////
+// C. Backdrop Block
+//////////////////////////////////////////////
+
+.backdrop {
+    position: relative;
+}
+
+//////////////////////////////////////////////
+// D. Backdrop Elements
+//////////////////////////////////////////////
+
+.backdrop:not([class*="--stack"]):not([class*="--fixed"]) {
+    .backdrop__cover {
+        position: absolute;
+    }
+}
+
+.backdrop__image {
+    img {
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+.backdrop__cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.backdrop__credit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    z-index: 500;
+
+    background-color: inherit;
+
+    p {
+        font-size: var(--font-size-sm);
+        padding: 0.25rem 0.75rem;
+    }
+}
+
+//////////////////////////////////////////////
+// E. Backdrop Breakpoint Modifiers
+//////////////////////////////////////////////
+
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+
+        .backdrop--stack#{$mod} {
+            .backdrop__cover {
+                position: absolute;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// F. Backdrop Fixed Modifier
+//////////////////////////////////////////////
+
+.backdrop--fixed {
+    @extend %custom-properties;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: var(--backdrop-fixed-height);
+    
+    > *:not(.backdrop__credit) {
+        position: relative;
+        width: 100%;
+    }
+
+    .backdrop__image {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+
+        img {
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+
+    .backdrop__cover {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    
+    @include breakpoints.breakpoints-down(md) {
+        min-height: calc( var(--backdrop-fixed-height) * 0.75 );
+    }
+}

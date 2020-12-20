@@ -1,12 +1,12 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     mode: 'production',
     entry: {
         nyc_core: [
-            './src/js/index.js',
-            './src/css/index.scss'
+            './src/index.js'
         ]
     },
     output: {
@@ -32,9 +32,11 @@ module.exports = {
             },
         ],
     },
+    stats: { children: false },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
         }),
+        new OptimizeCssAssetsPlugin(),
     ]
 }

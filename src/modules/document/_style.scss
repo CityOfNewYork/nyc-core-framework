@@ -1,0 +1,59 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. HTML
+// D. Body
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "../spacing/style" as spacing;
+@use "../shadow/style" as shadow;
+@use "../color/style" as color;
+
+////////////////////////////////////////
+// B. Variables
+////////////////////////////////////////
+
+// Scoped to Block
+
+%custom-properties {
+    --body-min-width: 325px;
+    --body-max-width: 2000px;
+}
+
+////////////////////////////////////////
+// C. HTML 
+////////////////////////////////////////
+
+html {
+    --default-background-color: var(--dark);
+
+    &:not([class*="theme-"]):not([class*="background-color"]) {
+        background-color: var(--default-background-color);
+    }
+    
+    scroll-behavior: smooth;
+}
+
+////////////////////////////////////////
+// D. Body 
+////////////////////////////////////////
+
+body {
+
+    @extend %custom-properties;
+
+    overflow-x: hidden;
+    min-width: var(--body-min-width);
+    max-width: var(--body-max-width);
+
+    @extend .margin-x-auto;
+    @extend .theme-white;
+}

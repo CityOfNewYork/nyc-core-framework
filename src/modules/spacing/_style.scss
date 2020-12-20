@@ -1,0 +1,215 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Responsive Spacer Utilities
+// D. Static Spacer Utilities
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoint/style" as breakpoints;
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+// Scoped to Root
+
+:root {    
+    --spacer-1: 0.5rem;
+    --spacer-2: 1rem;
+    --spacer-3: 2rem;
+    --spacer-4: 3.5rem;
+    --spacer-5: 5rem;
+}
+
+$spacers: (
+    1: var(--spacer-1), 
+    2: var(--spacer-2), 
+    3: var(--spacer-3), 
+    4: var(--spacer-4), 
+    5: var(--spacer-5)
+);
+
+//////////////////////////////////////////////
+// C. Responsive Spacer Utilities
+//////////////////////////////////////////////
+
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+
+        @each $spacer, $value in $spacers {
+
+            // Padding
+
+            .padding-#{$spacer}#{$mod} {
+                padding: #{$value} !important;
+            }
+
+            .padding-x-#{$spacer}#{$mod} {
+                padding-left: #{$value} !important;
+                padding-right: #{$value} !important;
+            }
+
+            .padding-y-#{$spacer}#{$mod} {
+                padding-top: #{$value} !important;
+                padding-bottom: #{$value} !important;
+            }
+
+            .padding-top-#{$spacer}#{$mod} {
+                padding-top: #{$value} !important;
+            }
+
+            .padding-right-#{$spacer}#{$mod} {
+                padding-right: #{$value} !important;
+            }
+
+            .padding-bottom-#{$spacer}#{$mod} {
+                padding-bottom: #{$value} !important;
+            }
+
+            .padding-left-#{$spacer}#{$mod} {
+                padding-left: #{$value} !important;
+            }
+
+            // Margin
+
+            .margin-#{$spacer}#{$mod} {
+                margin: #{$value} !important;
+            }
+
+            .margin-x-#{$spacer}#{$mod} {
+                margin-left: #{$value} !important;
+                margin-right: #{$value} !important;
+            }
+
+            .margin-y-#{$spacer}#{$mod} {
+                margin-top: #{$value} !important;
+                margin-bottom: #{$value} !important;
+            }
+
+            .margin-top-#{$spacer}#{$mod} {
+                margin-top: #{$value} !important;
+            }
+
+            .margin-right-#{$spacer}#{$mod} {
+                margin-right: #{$value} !important;
+            }
+
+            .margin-bottom-#{$spacer}#{$mod} {
+                margin-bottom: #{$value} !important;
+            }
+
+            .margin-left-#{$spacer}#{$mod} {
+                margin-left: #{$value} !important;
+            }
+
+            // Negative Margin
+
+            .margin-x-n#{$spacer}#{$mod} {
+                margin-left: calc(#{$value} * -1) !important;
+                margin-right: calc(#{$value} * -1) !important;
+            }
+
+            .margin-y-n#{$spacer}#{$mod} {
+                margin-top: calc(#{$value} * -1) !important;
+                margin-bottom: calc(#{$value} * -1) !important;
+            }
+
+            .margin-top-n#{$spacer}#{$mod} {
+                margin-top: calc(#{$value} * -1) !important;
+            }
+
+            .margin-right-n#{$spacer}#{$mod} {
+                margin-right: calc(#{$value} * -1) !important;
+            }
+
+            .margin-bottom-n#{$spacer}#{$mod} {
+                margin-bottom: calc(#{$value} * -1) !important;
+            }
+
+            .margin-left-n#{$spacer}#{$mod} {
+                margin-left: calc(#{$value} * -1) !important;
+            }
+            
+        }
+    }
+}
+
+////////////////////////////////////////////
+// D. Static Spacer Utilities
+////////////////////////////////////////////
+
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+
+        .padding-0#{$mod} {
+            padding: 0 !important;
+        }
+
+        .margin-0#{$mod} {
+            margin: 0 !important;
+        }
+
+        .margin-top-0#{$mod} {
+            margin-top: 0 !important;
+        }
+
+        .margin-right-0#{$mod} {
+            margin-right: 0 !important;
+        }
+
+        .margin-bottom-0#{$mod} {
+            margin-bottom: 0 !important;
+        }
+
+        .margin-left-0#{$mod} {
+            margin-left: 0 !important;
+        }
+
+        .margin-y-0#{$mod} {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .margin-x-0#{$mod} {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        .margin-x-auto#{$mod} {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .margin-y-auto#{$mod} {
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+        }
+
+        .margin-top-auto#{$mod} {
+            margin-top: auto !important;
+        }
+
+        .margin-right-auto#{$mod} {
+            margin-right: auto !important;
+        }
+
+        .margin-bottom-auto#{$mod} {
+            margin-bottom: auto !important;
+        }
+
+        .margin-left-auto#{$mod} {
+            margin-left: auto !important;
+        }
+    }
+}
