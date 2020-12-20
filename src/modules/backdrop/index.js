@@ -8,7 +8,7 @@ export default class Backdrop {
 
     constructor() {
 
-        var isIE11 = !!(navigator.userAgent.match(/Trident/) && !navigator.userAgent.match(/MSIE/));
+        const isIE11 = !!(navigator.userAgent.match(/Trident/) && !navigator.userAgent.match(/MSIE/));
 
         if (isIE11) {
 

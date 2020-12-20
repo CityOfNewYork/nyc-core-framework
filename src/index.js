@@ -37,7 +37,8 @@ import "./modules/container";
 
 import "./modules/display";
 
-import "./modules/document";
+import Document from "./modules/document";
+new Document();
 
 import "./modules/flex";
 
@@ -71,8 +72,8 @@ import "./modules/spacing";
 import Table from "./modules/table";
 new Table();
 
-// import Tab from "./modules/tab";
-// new Tab();
+import Tab from "./modules/tab";
+new Tab();
 
 import "./modules/typography";
 
