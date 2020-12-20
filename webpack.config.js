@@ -6,7 +6,7 @@ module.exports = {
     entry: {
         nyc_core: [
             './src/js/index.js',
-            './src/scss/index.scss'
+            './src/css/index.scss'
         ]
     },
     output: {

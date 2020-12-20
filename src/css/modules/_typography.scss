@@ -226,7 +226,9 @@ figure {
 }
 
 hr {
-    height: unset;
+    &:not([class*="margin-"]){
+        margin: 0;
+    }
     @extend .border-top;
 }
 
