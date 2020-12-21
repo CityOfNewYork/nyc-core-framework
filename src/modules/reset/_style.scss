@@ -24,28 +24,28 @@ In this file:
 
 // HTML5 display-role reset for older browsers
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
+// article,
+// aside,
+// details,
+// figcaption,
+// figure,
+// footer,
+// header,
+// hgroup,
+// menu,
+// nav,
+// section {
+//     display: block;
+// }
 
-body {
-    line-height: 1;
-}
+// body {
+//     line-height: 1;
+// }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+// table {
+//     border-collapse: collapse;
+//     border-spacing: 0;
+// }
 
 //////////////////////////////////////////////
 // B. Margin Bottom
@@ -111,10 +111,10 @@ a {
 }
 
 button {
-    color: inherit;
-    font-size: inherit;
     border: unset;
     border-radius: unset;
+    color: inherit;
+    font-size: inherit;
 
     &::-moz-focus-inner {
         padding: 0;
