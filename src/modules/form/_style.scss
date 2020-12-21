@@ -208,7 +208,6 @@ form > .button {
     border-radius: var(--form-field-border-radius);
     overflow: hidden;
     
-
     input,
     select, 
     textarea
@@ -251,6 +250,12 @@ form > .button {
             margin-right: var(--form-field-padding-x);
         }
     }
+
+    
+}
+
+[class*="primary-nav"] .form-entry__field__input::after {
+    display: none;
 }
 
 .active .form-entry__field__input::after {
