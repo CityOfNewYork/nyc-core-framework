@@ -11,8 +11,8 @@ import "element-closest-polyfill";
 import Accessibility from "./modules/accessibility/";
 new Accessibility();
 
-import Document from "./modules/document";
-new Document();
+import Accordion from "./modules/accordion/";
+new Accordion();
 
 import "./modules/alert/";
 
@@ -40,6 +40,8 @@ import "./modules/container";
 
 import "./modules/display";
 
+import Document from "./modules/document";
+new Document();
 
 import "./modules/flex";
 
@@ -51,6 +53,8 @@ import "./modules/gradient";
 import "./modules/grid";
 
 import "./modules/icon";
+
+import "./modules/language";
 
 import "./modules/link";
 
@@ -66,17 +70,16 @@ import "./modules/overflow";
 
 import "./modules/position";
 
-import "./modules/spacing";
+import "./modules/shadow";
 
-import Table from "./modules/table";
-new Table();
+import "./modules/spacing";
 
 import Tab from "./modules/tab";
 new Tab();
 
-import "./modules/typography";
+import Table from "./modules/table";
+new Table();
 
-import Accordion from "./modules/accordion/";
-new Accordion();
+import "./modules/typography";
 
 import "./modules/z-index";

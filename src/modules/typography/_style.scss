@@ -140,7 +140,9 @@ h6, .h6 {
     font-weight: var(--body-font-weight-bold);
     line-height: var(--header-line-height);
 
-    margin-bottom: var(--spacer-2);
+    &:not(.accordion__button){
+        margin-bottom: var(--spacer-2);
+    }
 }
 
 $headers: (
@@ -234,9 +236,9 @@ hr {
     &:not([class*="margin-"]){
         margin: 0;
     }
+
     @extend .border-top;
 }
-
 
 //////////////////////////////////////////////
 // G. Last Child Margin Bottom
