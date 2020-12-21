@@ -4,8 +4,11 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. HTML
-// D. Body
+// C. Selector Resets
+// D. Border Box
+// E. HTML
+// F. Body
+// G. Last Child Margin Bottom
 
 */
 
@@ -29,27 +32,86 @@ In this file:
 }
 
 ////////////////////////////////////////
-// C. HTML 
+// C. Selector Resets
+////////////////////////////////////////
+
+* {
+    margin: 0;
+    padding: 0;
+    border: unset;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+img {
+    border-style: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: unset;
+    border-radius: unset;
+
+    color: inherit;
+    font-size: inherit;
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0
+    }
+}
+
+a, 
+button{
+    > * {
+        pointer-events: none;
+    }
+}
+
+////////////////////////////////////////
+// D. Border Box
+////////////////////////////////////////
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+////////////////////////////////////////
+// E. HTML 
 ////////////////////////////////////////
 
 html {
     --default-background-color: var(--dark);
 
+    font-size: 1rem;
+    line-height: 1.125;
+    text-size-adjust: 100%;
+
+    scroll-behavior: smooth;
+
     &:not([class*="theme-"]):not([class*="background-color"]) {
         background-color: var(--default-background-color);
     }
-    
-    scroll-behavior: smooth;
 }
 
 ////////////////////////////////////////
-// D. Body 
+// F. Body 
 ////////////////////////////////////////
 
 body {
     @extend %custom-properties;
 
+    font-family: sans-serif;
     overflow-x: hidden;
+
     min-width: var(--body-min-width);
     max-width: var(--body-max-width);
 

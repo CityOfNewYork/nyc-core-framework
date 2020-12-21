@@ -8,9 +8,10 @@ In this file:
 // D. Font Size Utilities
 // E. Headers
 // F. Body Selectors
-// G. Text Align Utilities
-// H. Word Wrap Utilities
-// I. Truncate Text
+// G. Last Child Margin Bottom
+// H. Text Align Utilities
+// I. Word Wrap Utilities
+// J. Truncate Text
 
 */
 
@@ -197,9 +198,13 @@ $headers: (
 
 body {
     font-size: var(--body-font-size);
-    line-height: var(--body-line-height);
     font-family: var(--body-font-family), $base-font-fallbacks;
     font-weight: var(--body-font-weight-normal);
+    
+    line-height: var(--body-line-height);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 p, 
@@ -232,8 +237,34 @@ hr {
     @extend .border-top;
 }
 
+
 //////////////////////////////////////////////
-// G. Text Align Utilities
+// G. Last Child Margin Bottom
+//////////////////////////////////////////////
+
+// Remove margin bottom on specific ':last-child' selectors 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+dl,
+dd,
+blockquote,
+address {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+//////////////////////////////////////////////
+// H. Text Align Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoint.$breakpoints) {
@@ -256,7 +287,7 @@ hr {
 }
 
 //////////////////////////////////////////////
-// H. Word Wrap Utilities
+// I. Word Wrap Utilities
 //////////////////////////////////////////////
 
 .nowrap {
@@ -267,9 +298,8 @@ hr {
     word-wrap: break-word;
 }
 
-
 ////////////////////////////////////////
-// I. Truncate Text
+// J. Truncate Text
 ////////////////////////////////////////
 
 .truncate-text {

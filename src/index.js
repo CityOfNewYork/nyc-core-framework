@@ -5,11 +5,14 @@
 import "element-closest-polyfill";
 
 //////////////////////////////////////////////
-// Modules
+// Required Modules
 //////////////////////////////////////////////
 
 import Accessibility from "./modules/accessibility/";
 new Accessibility();
+
+import Document from "./modules/document";
+new Document();
 
 import "./modules/alert/";
 
@@ -37,8 +40,6 @@ import "./modules/container";
 
 import "./modules/display";
 
-import Document from "./modules/document";
-new Document();
 
 import "./modules/flex";
 
@@ -64,8 +65,6 @@ import "./modules/opacity";
 import "./modules/overflow";
 
 import "./modules/position";
-
-import "./modules/reset";
 
 import "./modules/spacing";
 

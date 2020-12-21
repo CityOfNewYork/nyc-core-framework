@@ -43,10 +43,11 @@ In this file:
     top: var(--spacer-1);
     left: var(--spacer-1);
 
-    color: var(--dark);
-    background-color: rgba( #ffffff, 0.95);
     font-size: var(--font-size-sm);
     padding: var(--button-padding-y) var(--button-padding-x);
+    
+    color: var(--dark);
+    background-color: rgba( #ffffff, 0.95);
     box-shadow: 0 0 0.25rem currentColor;
     z-index: 25;
 }

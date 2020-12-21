@@ -4,12 +4,13 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. Form Entry Block
-// C. Form Entry Elements
-// D. Form Entry Modifiers
-// E. Browser Behavior Modifications
-// F. Form Entry within Nav
-// F. Form Feedback and Alerts
+// C. Selector Resets
+// D. Form Entry Block
+// E. Form Entry Elements
+// F. Form Entry Modifiers
+// G. Browser Behavior Modifications
+// H. Form Entry within Nav
+// I. Form Feedback and Alerts
 
 */
 
@@ -20,6 +21,7 @@ In this file:
 @use "sass:map";
 @use "../breakpoint/style" as breakpoint;
 @use "../caret/style" as caret;
+@use "../icon/style" as icon;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -33,6 +35,86 @@ In this file:
     --form-field-padding-y: var(--button-padding-y);
 
     --form-field-border-radius: 0.25em;
+}
+
+//////////////////////////////////////////////
+// C. Selector Resets
+//////////////////////////////////////////////
+
+label, .label,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    font-size: inherit;
+}
+
+select {
+    border-radius: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    appearance: unset;
+    
+    // Hide select default icon on IE
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+input {
+    margin: unset;
+    padding: unset;
+
+    &::-ms-clear {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+}
+
+// Remove FireFox specific 'inner-focus' styles
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+legend {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+
+    + * {
+        clear: both;
+    }
+    
+    // Correct color inheritance in IE
+    color: inherit;
+    display: table;
+
+    // Correct the text wrapping in Edge and IE
+    line-height: normal;
+    max-width: 100%;
+    white-space: normal;
+}
+
+fieldset {
+    display: table-cell;
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0;
+    min-width: 0;
 }
 
 //////////////////////////////////////////////
@@ -369,7 +451,7 @@ fieldset {
         font-size: 125%;
         margin-top: -0.125em;
 
-        @extend .nyc_icon_font !optional;
+        @extend .nyc_icon_font;
     }
 }
 
