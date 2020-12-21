@@ -14,7 +14,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "../breakpoint/style" as breakpoints;
+@use "../breakpoint/style" as breakpoint;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -42,9 +42,9 @@ $spacers: (
 // C. Responsive Spacer Utilities
 //////////////////////////////////////////////
 
-@each $breakpoint in map.keys(breakpoints.$breakpoints) {
-    @include breakpoints.breakpoints-up($breakpoint) {
-        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+@each $breakpoint in map.keys(breakpoint.$breakpoints) {
+    @include breakpoint.breakpoints-up($breakpoint) {
+        $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
 
         @each $spacer, $value in $spacers {
 
@@ -148,9 +148,9 @@ $spacers: (
 // D. Static Spacer Utilities
 ////////////////////////////////////////////
 
-@each $breakpoint in map.keys(breakpoints.$breakpoints) {
-    @include breakpoints.breakpoints-up($breakpoint) {
-        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+@each $breakpoint in map.keys(breakpoint.$breakpoints) {
+    @include breakpoint.breakpoints-up($breakpoint) {
+        $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
 
         .padding-0#{$mod} {
             padding: 0 !important;

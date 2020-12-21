@@ -15,7 +15,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "../breakpoint/style" as breakpoints;
+@use "../breakpoint/style" as breakpoint;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -127,11 +127,11 @@ In this file:
     }
 }
 
-@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+@each $breakpoint in map.keys(breakpoint.$breakpoints) {
 
-    @include breakpoints.breakpoints-down($breakpoint) {
+    @include breakpoint.breakpoints-down($breakpoint) {
     
-        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+        $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
         
         .table--stack#{$mod} {
 
