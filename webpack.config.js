@@ -11,15 +11,16 @@ module.exports = {
     },
     output: {
         filename: 'js/[name].js',
-        path: path.resolve(__dirname, './dist')
+        path: path.resolve(__dirname, 'dist')
     },
+    watch: false,
     module: {
         rules: [
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: "babel-loader"
                 }
             },
             {
@@ -27,17 +28,11 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader, 
                     "css-loader",
-                    { 
-                        loader: "sass-loader",
-                        options: {
-                            sourceMap: true
-                        }
-                    },
+                    "sass-loader",
                 ],
             },
         ],
     },
-    stats: { children: false },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
