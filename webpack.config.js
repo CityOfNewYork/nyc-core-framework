@@ -25,9 +25,14 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader, 
                     "css-loader",
-                    "sass-loader"
+                    { 
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
                 ],
             },
         ],
