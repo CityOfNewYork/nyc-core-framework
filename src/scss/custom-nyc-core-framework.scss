@@ -125,54 +125,19 @@ a[data-logo="brand"] {
 }
 
 #all-custom-properties {
-
+    
     .table {
         table-layout: auto;
     }
 
-    .table:not(:first-child) {
-
-        thead > tr {
-
-            &:nth-child(2) {
-                display: none;
-            }
-        }
-
-        tbody > tr {
-
-            &:nth-child(1) td {
-                border-color: transparent;
-            }
-        }
-
-    }
-
-    .table {
-
-        thead > tr:first-child th {
-            position: relative;
-            font-size: var(--font-size-lg);
-            font-weight: var(--font-weight-normal);
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: currentColor;
-                opacity: 0.0825;
-                pointer-events: none;
-            }
-        }
+    caption {
+        caption-side: top;
     }
 
     th, 
     td {
         &:nth-child(1):not([colspan]) {
-            width: 30%;
+            width: 25%;
         }
 
         &:nth-child(2) {
@@ -181,7 +146,6 @@ a[data-logo="brand"] {
 
         &:nth-child(3) {
             width: auto;
-            text-align: center;
         }
 
         &:nth-child(4) {
@@ -197,13 +161,15 @@ a[data-logo="brand"] {
         color: #ccc;
     }
 
-    button {
-        color: var(--secondary);
-    }
-
     button[data-clipboard] {
+        text-align: left;
+        color: var(--secondary);
         font-weight: bold;
         display: inline-block;
+        
+        > span {
+            display: block;
+        }
     }
 }
 
@@ -211,12 +177,30 @@ a[data-logo="brand"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+    padding: var(--spacer-2);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: currentColor;
+        opacity: 0.0825;
+        pointer-events: none;
+    }
 }
 
 .cp-header__title {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
     font-weight: var(--font-weight-normal);
 }
 .cp-header__link {
     font-size: var(--font-size-sm);
 }
+
+// Testing

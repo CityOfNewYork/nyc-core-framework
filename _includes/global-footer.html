@@ -82,6 +82,9 @@
     const customPropertiesContainer = document.getElementById("all-custom-properties");
     const customPropertiesTable = customPropertiesContainer.querySelector(".table-scroll__container");
 
+    const copyButtonText = "Copy";
+    const copyButtonActionText = "Copied!";
+
     const loadcustomProperties = async () => {
         try {
             const response = await fetch(customPropertiesData);
@@ -102,8 +105,6 @@
 
         const customProperyHTML = customProperties.map((customPropertyArray) => {
 
-            console.log("customPropertyArray = ", customPropertyArray);
-
             let type = customPropertyArray.type;
             let properties = customPropertyArray.customProperties;
             let scope = customPropertyArray.scope;
@@ -113,15 +114,15 @@
             let cpRows = properties.map((property) => {
                 return `
                     <tr>
-                        <td data-prop>
-                          <span>--${property.name}</span>
+                        <td>
+                          <span data-prop>--${property.name}</span>
                         </td>
-                        <td data-val>
-                            <span>${property.value}</span>
+                        <td>
+                            <span data-val>${property.value}</span>
                         </td>
                         <td>  
-                            <button data-clipboard>
-                                Copy
+                            <button data-clipboard="single">
+                                ${copyButtonText}
                             </button>
                         </td>
                         <td>
@@ -132,30 +133,27 @@
             }).join('');
 
             return `
+                <div class="cp-header box-shadow-1">
+                    <span class="cp-header__title">${type}</span>
+                    <a class="cp-header__link button button--has-icon" href="{{ site.baseurl }}/docs/${slug}/">
+                        <span class="button__text">Docs</span>
+                        <span class="nyc_icon_arrow-right button__icon"></span>
+                    </a>
+                </div>
                 <table class="table">
-                    <caption class="screen-reader-only">
-                        Color System Custom Properties
+                    <caption class="border-bottom">
+                        <p class="font-size-md">Scoped to <code>${scope}</code></p>
                     </caption>
                     <thead>
-                        <tr class="box-shadow-1">
-                            <th scope="col" colspan="4">
-                                <span class="cp-header">
-                                    <span class="cp-header__title">
-                                      <span class="display-block">${type}</span>
-                                      <span class="display-block opacity-80 font-size-sm">Scope: <code>${scope}</code></span>
-                                    </span>
-                                    <a class="cp-header__link button button--has-icon" href="{{ site.baseurl }}/docs/${slug}/">
-                                        <span class="button__text">Docs</span>
-                                        <span class="nyc_icon_arrow-right button__icon"></span>
-                                    </a>
-                                </span>
-                            </th>
-                        </tr>
                         <tr>
-                            <th scope="col">Custom Property</th>
+                            <th scope="col">
+                                Property</span>
+                            </th>
                             <th scope="col">Default Value</th>
                             <th scope="col">
-                                <span class="screen-reader-only">Action</span>
+                                <button data-clipboard="all">
+                                    <span>Copy All</span>
+                                </button>
                             </th>
                             <th scope="col">Description</th>
                         </tr>
@@ -174,33 +172,89 @@
 
     const initClipboard = () => {
         
-        const customPropButtonList = document.querySelectorAll('[data-clipboard]');
+        const allCPButtonList = document.querySelectorAll('[data-clipboard="all"]');
+        const cpButtonList = document.querySelectorAll('[data-clipboard="single"]');
 
-        customPropButtonList.forEach((customPropButton) => {
+        allCPButtonList.forEach((cpButton) => {
 
-            let myButtonText = customPropButton.innerHTML.trim().replace(/&nbsp;/g, '');
-
-            const resetButton = () => {
-                customPropButtonList.forEach((otherButtons)=> {
-                    otherButtons.innerHTML = myButtonText;
-                });
-            }
-
-            customPropButton.addEventListener('click', (event) => {
+            cpButton.addEventListener('click', (event) => {
 
                 event.preventDefault();
 
+                let currentTable = event.target.closest("table");
+                let currentTableRowsList = currentTable.querySelectorAll("tbody > tr");
+                let currentTableSingleButtonList = currentTable.querySelectorAll('[data-clipboard="single"]');
+
+                currentTableSingleButtonList.forEach((singleButton) => {
+                    singleButton.innerHTML = copyButtonActionText.toString(); 
+                });
+
+                let currentCPArray = [];
+
+                currentTableRowsList.forEach((row) => {
+
+                    let cpName = row.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
+                    let cpValue = row.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
+                    let cpText = `${cpName}: ${cpValue};`;
+
+                    currentCPArray.push(cpText);
+
+                });
+
+                let myClipboardProperties = currentCPArray.map((property) => {
+
+                    return `    ${property}`
+                
+                }).join('\n');
+                
+                let myClipboardText = `
+:root {
+${myClipboardProperties}
+}`;
+
+                // Create an auxiliary hidden input
+                var aux = document.createElement( 'textarea' );
+
+                // Get the text from the element passed into the input
+                aux.innerHTML = myClipboardText.trim();
+
+                // Append the aux input to the body
+                document.body.appendChild(aux);
+
+                // Highlight the content
+                aux.select();
+
+                // Execute the copy command
+                document.execCommand( 'copy' );
+
+                // Remove the input from the body
+                document.body.removeChild(aux);
+
+            });
+
+        });
+
+        cpButtonList.forEach((cpButton) => {
+
+            const resetButton = () => {
+                cpButtonList.forEach((otherButtons)=> {
+                    otherButtons.innerHTML = copyButtonText;
+                });
+            }
+
+            cpButton.addEventListener('click', (event) => {
+
+                event.preventDefault();
                 resetButton();
                 
                 let currentRow = event.target.closest('tr');
 
                 let myCustomPropertyName = currentRow.querySelector('[data-prop]').innerHTML.trim().replace(/&nbsp;/g, '');
                 let myCustomPropertyValue = currentRow.querySelector('[data-val]').innerHTML.trim().replace(/&nbsp;/g, '');
-
-                let myClipboardText = myCustomPropertyName + ':' + ' ' + myCustomPropertyValue + ';';
+                let myClipboardText = `${myCustomPropertyName}: ${myCustomPropertyValue};`;
 
                 if( myClipboardText ){
-                    event.target.innerHTML = 'Copied!';
+                    event.target.innerHTML = copyButtonActionText;
                 }
 
                 // Create an auxiliary hidden input
