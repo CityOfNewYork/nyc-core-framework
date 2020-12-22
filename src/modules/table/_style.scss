@@ -35,6 +35,7 @@ In this file:
 .table {
     table-layout: fixed;
     width: 100%;
+    border-collapse: collapse;
 
     font-size: var(--font-size-md);
 
@@ -166,7 +167,7 @@ In this file:
             }
 
             &.table--edge{
-                td{
+                td {
                     padding-left: 0;
                     padding-right: 0;
                 }
@@ -187,7 +188,6 @@ In this file:
     position: relative;
 
     caption {
-        caption-side: bottom;
         text-align: left;
     }
 
@@ -202,9 +202,9 @@ In this file:
     }
 
     .table-scroll__container {
-        max-width: 100%;
-        overflow: auto;
         position: relative;
+        overflow: auto;
+        max-width: 100%;
 
         table {
             overflow: hidden;
@@ -219,8 +219,8 @@ In this file:
             bottom: 0;
             left: 50%;
             z-index: 600;
-            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
-            transition: opacity 0.2s;
+            -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
+            
             pointer-events: none;
 
             display: none;

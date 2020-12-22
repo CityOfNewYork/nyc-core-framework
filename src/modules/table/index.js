@@ -87,7 +87,7 @@ export default class Table {
 
             });
         }
-
+    
         initTableScroll();
         window.addEventListener("resize", initTableScroll);
 
