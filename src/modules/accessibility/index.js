@@ -4,7 +4,7 @@ import "./_style.scss";
 // Button Focus
 //////////////////////////////////////////////
 
-export default class Accessibility{
+export default class Accessibility {
 
     constructor() {
 
