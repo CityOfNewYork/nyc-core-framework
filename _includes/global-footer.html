@@ -333,7 +333,7 @@ ${myClipboardProperties}
                         </div>
                     </div>
                     <p class="font-size-sm">
-                            ${tags}
+                            ${name}
                         </p>
                 </div>`;
 
@@ -345,28 +345,26 @@ ${myClipboardProperties}
             let tags = iconArray.icon.tags;
 
             return `
-                <div class="grid__cell">
-                    <p class="font-size-sm">
-                            ${tags}
-                        </p>
+                <div class="grid__cell display-flex">
+                    
+                    <div class="width-25">
+                        <div class="aspect-ratio aspect-ratio--1by1 border">
+                            <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+                                <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-dark flex-fill">
+
+                    </div>
+                        
                 </div>`;
 
         }).join('');
 
         coreIconsGrid.innerHTML = iconGridHTML;
         coreIconsList.innerHTML = iconListHTML;
-
-            iconListHTML = `
-                <div class="grid__cell">
-                    <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
-                        <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
-                            <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
-                        </div>
-                    </div>
-                    <p class="font-size-sm">
-                            ${tags}
-                        </p>
-                </div>`;
+        
     };
 
     loadCoreIcons();
