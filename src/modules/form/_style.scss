@@ -220,7 +220,7 @@ form > .button {
         flex-shrink: 0;
     }
 
-    [class*="button--icon-only"] {
+    > [class*="button--icon-only"] {
         margin-left: calc(var(--form-field-padding-x) / 2);
         margin-right: calc(var(--form-field-padding-x) / 2);
     }
