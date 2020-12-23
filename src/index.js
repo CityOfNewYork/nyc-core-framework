@@ -72,6 +72,8 @@ import "./modules/position";
 
 import "./modules/shadow";
 
+import "./modules/sizing";
+
 import "./modules/spacing";
 
 import Tab from "./modules/tab";

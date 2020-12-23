@@ -70,7 +70,7 @@ export default class Form {
 
             formEntryInput.addEventListener("change", () => {
                 console.log("I have changed, I'm different now", formEntryInput.value);
-                checkIfEmpty(formEntryInput);
+                // checkIfEmpty(formEntryInput);
             });
 
             // Click Into Input

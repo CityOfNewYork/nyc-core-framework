@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <!-- I.E. Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Icons • NYC Core Framework</title>
+
+    <!-- NYC Core Icons -->
+    <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
+
+    <!-- NYC Core Stylesheet -->
+    <link rel="stylesheet" href="./dist/css/nyc_core.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="overflow-hidden">
+
+            <div class="margin-y-5">
+
+                <div class="container text-align-center margin-y-4">
+                    <h1>Icons</h1>
+                </div>
+
+                <div class="tabs medium margin-y-5" role="tablist">
+
+                    <div class="container padding-y-4">
+                                
+                    <h2 class="screen-reader-only">The Icons</h2>
+
+                    <div class="form-entry margin-bottom-4">
+
+                        <div class="form-entry__field">
+                            <label class="form-entry__field__label screen-reader-only"
+                                for="core-icon-search">Search</label>
+                            <span class="form-entry__field__input">
+                                <span class="nyc_icon_search opacity-40" aria-hidden="true"></span>
+                                <input type="text" name="core-icon-search" id="core-icon-search" placeholder="Filter Icons" autocomplete="off">
+                                <ul class="nav nav--gap-0 nav--horizontal font-size-md">
+                                    <li>
+                                        <button class="button button--icon-only theme-light" aria-selected="true"
+                                            id="tab-button-group-d-01" aria-controls="tab-panel-group-d-01" role="tab">
+                                            <span class="nyc_icon_grid" aria-hidden="true"></span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="button button--icon-only theme-light" aria-selected="false"
+                                            id="tab-button-group-d-02" aria-controls="tab-panel-group-d-02" role="tab">
+                                            <span class="nyc_icon_list" aria-hidden="true"></span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+
+                    </div>
+                    <!-- .form-entry -->
+                    
+
+                    <div class="tabs__panel shown" id="tab-panel-group-d-01" aria-labelledby="tab-button-group-d-01" role="tabpanel">
+                        <div class="grid grid--gap-2 grid--cells-4 grid--cells-2--md text-align-center" id="coreIconsGrid"></div>
+                    </div>
+
+                    <div class="tabs__panel" id="tab-panel-group-d-02" aria-labelledby="tab-button-group-d-02" role="tabpanel">
+                        <div class="grid grid--gap-2 grid--cells-12" id="coreIconsList"></div>
+                    </div>
+
+                </div>
+                <!-- .container -->
+
+                </div>
+
+            </div>
+            <!-- .margin-y-4 -->
+
+        </div>
+        <!-- .container -->
+        
+    </main>
+
+    <footer class="container theme-dark text-align-center padding-y-4">
+        <a href="#" data-scroll="top">To Top</a>
+    </footer>
+    
+    <!-- NYC Core Javascript -->
+    <script src="./dist/js/nyc_core.js"></script>
+
+<script>
+
+    const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
+    const coreIconsGridView = document.getElementById("coreIconsGrid");
+    const coreIconsListView = document.getElementById("coreIconsList");
+
+    let coreIconsArray = [];
+
+    const loadCoreIcons = async () => {
+        try {
+            const response = await fetch(coreIconsData);
+            const coreIconData = await response.json();
+
+            coreIconsArray = coreIconData.icons;
+
+            displayIcons(coreIconsArray);
+        
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    let currentView = "Grid";
+
+    const displayIcons = (icons) => {
+
+        const iconGridHTML = icons.map((iconArray) => {
+
+            let name = iconArray.properties.name;
+            let tags = iconArray.icon.tags;
+
+            return `
+                <div class="grid__cell">
+                    <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
+                        <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+                            <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
+                        </div>
+                    </div>
+                    <p class="font-size-sm">
+                            ${tags}
+                        </p>
+                </div>`;
+
+        }).join('');
+
+        const iconListHTML = icons.map((iconArray) => {
+
+            let name = iconArray.properties.name;
+            let tags = iconArray.icon.tags;
+
+            return `
+                <div class="grid__cell">
+                    <p class="font-size-sm">
+                            ${tags}
+                        </p>
+                </div>`;
+
+        }).join('');
+
+        coreIconsGrid.innerHTML = iconGridHTML;
+        coreIconsList.innerHTML = iconListHTML;
+
+            iconListHTML = `
+                <div class="grid__cell">
+                    <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
+                        <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+                            <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
+                        </div>
+                    </div>
+                    <p class="font-size-sm">
+                            ${tags}
+                        </p>
+                </div>`;
+    };
+
+    loadCoreIcons();
+
+    // Toggle
+    
+    const searchBar = document.getElementById('core-icon-search');
+
+    searchBar.addEventListener('keyup', (event) => {
+        const searchString = event.target.value.toLowerCase();
+        const filteredIcons = coreIconsArray.filter((iconArray) => {
+            return (
+                iconArray.properties.name.toLowerCase().includes(searchString) ||
+                iconArray.icon.tags.toString().includes(searchString)
+            );
+        });
+
+        displayIcons(filteredIcons);
+
+    });
+
+</script>
+
+</body>
+
+</html>
