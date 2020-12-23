@@ -208,3 +208,8 @@ a[data-logo="brand"] {
 .cp-header__link {
     font-size: var(--font-size-sm);
 }
+
+:root {
+    --accordion-padding-x: var(--spacer-2);
+    --accordion-padding-y: 0.75;
+}

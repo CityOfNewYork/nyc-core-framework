@@ -285,7 +285,7 @@
             {
                 "name": "container-padding-x",
                 "value": "var(--spacer-2)",
-                "description": "Left and right padding of the <em>container</em> component"
+                "description": "Left and right padding (or gutter) of the <em>container</em> component"
             },
             {
                 "name": "narrow-width",
@@ -344,92 +344,92 @@
             {
                 "name": "body-font-family",
                 "value": "Source Sans Pro",
-                "description": "Lorem ipsum dolor"
+                "description": "Font family applied to the entire document"
             },
             {
                 "name": "body-font-weight-normal",
                 "value": "400",
-                "description": "Lorem ipsum dolor"
+                "description": "Numeric font weight value for <em>normal</em> fonts"
             },
             {
                 "name": "body-font-weight-medium",
                 "value": "600",
-                "description": "Lorem ipsum dolor"
+                "description": "Numeric font weight value for <em>medium</em> fonts"
             },
             {
                 "name": "body-font-weight-bold",
                 "value": "700",
-                "description": "Lorem ipsum dolor"
+                "description": "Numeric font weight value for <em>bold</em> fonts"
             },
             {
                 "name": "body-font-size",
                 "value": "22px",
-                "description": "Lorem ipsum dolor"
+                "description": "Base font size applied to the entire document"
             },
             {
                 "name": "body-line-height",
                 "value": "1.5",
-                "description": "Lorem ipsum dolor"
+                "description": "Line height applied to the entire document (excluding headers)"
             },
             {
                 "name": "font-size-sm",
                 "value": "calc(var(--body-font-size) * 0.7)",
-                "description": "Lorem ipsum dolor"
+                "description": "Small font size used in CSS including <em>font size</em> utility classes"
             },
             {
                 "name": "font-size-md",
                 "value": "calc(var(--body-font-size) * 0.8)",
-                "description": "Lorem ipsum dolor"
+                "description": "Medium font size used in CSS including <em>font size</em> utility classes"
             },
             {
                 "name": "font-size-lg",
                 "value": "calc(var(--body-font-size) * 1)",
-                "description": "Lorem ipsum dolor"
+                "description": "Large font size used in CSS including <em>font size</em> utility classes"
             },
             {
                 "name": "font-size-xl",
                 "value": "calc(var(--body-font-size) * 1.4)",
-                "description": "Lorem ipsum dolor"
+                "description": "Extra large font size used in CSS including <em>font size</em> utility classes"
             },
             {
                 "name": "banner-headline-font-size",
                 "value": "calc(var(--body-font-size) * 3.5)",
-                "description": "Lorem ipsum dolor"
+                "description": "Font size of the <em>Banner Headline</em> utility class"
             },
             {
                 "name": "h1-font-size",
                 "value": "calc(var(--body-font-size) * 3)",
-                "description": "Lorem ipsum dolor"
+                "description": "Font size of <em>Header 1</em>"
             },
             {
                 "name": "h2-font-size",
                 "value": "calc(var(--body-font-size) * 2.2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Font size of <em>Header 2</em>"
             },
             {
                 "name": "h3-font-size",
                 "value": "calc(var(--body-font-size) * 1.8)",
-                "description": "Lorem ipsum dolor"
+                "description": "Font size of <em>Header 3</em>"
             },
             {
                 "name": "h4-font-size",
                 "value": "calc(var(--body-font-size) * 1.6)",
-                "description": "Lorem ipsum dolor"
+                "description": "Font size of <em>Header 4</em>"
             },
             {
                 "name": "h5-font-size",
                 "value": "calc(var(--body-font-size) * 1.4)",
-                "description": "Lorem ipsum dolor"
+                "description": "Font size of <em>Header 5</em>"
             },
             {
                 "name": "h6-font-size",
                 "value": "calc(var(--body-font-size) * 1.2)",
-                "description": "Lorem ipsum dolor"
+                "description": "Font size of <em>Header 6</em>"
             },
             {
                 "name": "header-line-height",
                 "value": "1.125",
-                "description": "Lorem ipsum dolor"
+                "description": "Line height applied to headers"
             }
         ]
     }

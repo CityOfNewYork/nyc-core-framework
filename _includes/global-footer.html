@@ -76,7 +76,7 @@
 
 {% if page.title == 'Customization' %}
 
-<script>
+<script async>
 
     const customPropertiesData = "{{ site.baseurl }}/lib/json/root-custom-properties.json";
     const customPropertiesContainer = document.getElementById("all-custom-properties");
@@ -143,8 +143,7 @@
                 <table class="table">
                     <caption class="border-bottom">
                         <p class="font-size-md">
-                            <span class="nyc_icon_info"></span>
-                            Variables scoped to <code>${scope}</code>
+                            Variable scope: <code>${scope}</code>
                         </p>
                     </caption>
                     <thead>

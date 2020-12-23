@@ -8,8 +8,8 @@ title: "Customization"
         Distinguish yourself without starting from scratch.
     </h2>
     <p>
-        There are two different ways to customize the NYC Core Framework—with our customizable CDN stylesheet, or with a
-        Sass development environment. We'll cover the former approach in the following section.
+        There are two different ways to customize the NYC Core Framework—with our customizable CDN (covered in
+        the following section) or with a <a href="#1">Webpack</a> development environment.
     </p>
 </div>
 <!-- .container -->
@@ -19,17 +19,16 @@ title: "Customization"
 <div class="container narrow margin-y-4">
     <h2>Customizable CDN</h2>
         <p>
-            Our <a href="{{ site.baseurl }}/docs/get-started/#quickStartGuide">Quick Start Guide</a> shows you how to
-            include the Framework's core stylesheet via CDN. Within he Framework, a handful of our
-            styles are declared using custom properties (also known as CSS variables).
+            Our <a href="{{ site.baseurl }}/docs/get-started/#quickStart">Quick Start</a> shows you how to
+            include the Framework's core stylesheet via CDN. Within the Framework, many of our
+            styles are declared using CSS custom properties, often referred to as <strong>CSS variables</strong>, the term we
+            use throughout this documentation.
         </p>
         <p>
-            If you're unfamiliar with custom properties, <a href="#1">read the MDN web docs</a>. They are similar to <a
-                href="https://sass-lang.com/documentation/variables">Sass variables</a> because they both allow you to
-            store
-            and reuse values in your CSS (see Figure 6 and 7 below). Custom properties, however, provide additional
-            benefits
-            that Sass variables do not.
+            If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. They are
+            similar to <a href="https://sass-lang.com/documentation/variables">Sass variables</a> because they allow you to store
+            and reuse values in your CSS (Figure 6 and 7 below). CSS variables, however, provide additional
+            benefits that Sass variables do not.
         </p>
 </div>
 <!-- .container -->
@@ -72,9 +71,12 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        Because custom properties update at runtime, we can modify values from our CDN stylesheet by declaring new
-        values in a second stylesheet. In the next exercise, you'll learn how to customize your theme colors using this
-        methodology.
+        Because CSS variables update at runtime, we can modify values from our CDN stylesheet by redeclaring values with
+        a <code>style</code> tag in the header (ideal for exploriation and prototyping), with a second stylesheet (the
+        preferred method), or even with JavaScript!
+    </p>
+    <p>
+        With the following practice exercise, learn how to customize your theme colors using a second stylesheet.
     </p>
 </div>
 <!-- .container -->
@@ -82,7 +84,7 @@ title: "Customization"
 <hr class="margin-y-5" id="customizingColors">
 
 <div class="container narrow margin-y-4">
-    <h2>Quick Exercise: Customizing Color</h2>
+    <h2>Practice Exercise: Customizing Colors</h2>
     <p>
         Copy and paste the following HTML into a new document. Save it as <em>theming-example.html</em>
         into your project's root directory.
@@ -102,20 +104,13 @@ title: "Customization"
                         &lt;!-- I.E. Compatibility Mode --&gt;
                         &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
 
-                        &lt;!-- I.E. Custom Properties Polyfill --&gt;
-                        &lt;script&gt;
-                            window.MSInputMethodContext && document.documentMode && document.write(
-                                '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
-                            );
-                        &lt;/script&gt;
-
                         &lt;meta charset="utf-8"&gt;
                         &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 
                         &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
 
-                        &lt;!-- Font Awesome Kit --&gt;
-                        &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+                        &lt;!-- NYC Core Icons --&gt;
+                        &lt;link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css"&gt;
 
                         &lt;!-- NYC Core Stylesheet --&gt;
                         &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
@@ -238,10 +233,14 @@ title: "Customization"
 <hr class="margin-y-5" id="custom-property-cheat-sheet">
 
 <div class="container narrow margin-y-4">
-    <h2>CSS Custom Property Reference Guide</h2>
+    <h2>Reference Guide: CSS Variables</h2>
     <p>
-        When defining CSS custom properties, pay close attention to their <strong>scope</strong>. All properties in the
-        NYC Core Framework are scoped to the document (<code>:root</code>), or to a block (e.g., <code>.card</code>).
+        CSS Variables are hierarchal, or <strong>scoped</strong>. A variable's scope simply determines its reach
+        throughout the DOM tree.
+    </p>
+    <p>
+        All CSS Variables in the Framework are either scoped to the document using the <code>:root</code> psuedo selector (available to the entire page), or
+        scoped to their relative parent selector (e.g., <code>.card</code>) where they are available only to that selector.
     </p>
 </div>
 <!-- .container -->
@@ -250,13 +249,13 @@ title: "Customization"
     
     <pre class="hide-toolbar">
         <code class="language-css">
-            /* Scoped to root */
+            /* Scoped to the root */
 
             :root {
                 --primary: #0080f8;
             }
 
-            /* Scoped to block */
+            /* Scoped to a parent selector */
 
             .card {
                 --card-padding-y: 1em;
@@ -265,13 +264,14 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 12 - The <code>:root</code> pseudo-class selector represents the root of the document.</p>
+        <p>Figure 12 - Examples of CSS variable scoping in the NYC Core Framework.</p>
     </figcaption>
 
 </figure>
 <div class="container narrow margin-y-4">
     <p>
-        The table below provides a comprehessive list of all custom properties available to be to customized across the NYC Core Framework. 
+        A comprehessive list of all CSS variables available throughout the
+        NYC Core Framework are captured within the following table.
     </p>
 </div>
 <!-- .container -->
