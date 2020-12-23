@@ -296,10 +296,84 @@ ${myClipboardProperties}
 <script>
 
     const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
-    const searchBar = document.getElementById('core-icon-search');
-    const coreIconsGrid = document.getElementById("coreIconsGrid");
+
+    const coreIconsGridView = document.getElementById("coreIconsGrid");
+    const coreIconsListView = document.getElementById("coreIconsList");
 
     let coreIconsArray = [];
+
+    const loadCoreIcons = async () => {
+        try {
+            const response = await fetch(coreIconsData);
+            const coreIconData = await response.json();
+
+            coreIconsArray = coreIconData.icons;
+
+            displayIcons(coreIconsArray);
+        
+        } catch (err) {
+            //console.error(err);
+        }
+    };
+
+    let currentView = "Grid";
+
+    const displayIcons = (icons) => {
+
+        const iconGridHTML = icons.map((iconArray) => {
+
+            let name = iconArray.properties.name;
+            let tags = iconArray.icon.tags;
+
+            return `
+                <div class="grid__cell">
+                    <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
+                        <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+                            <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
+                        </div>
+                    </div>
+                    <p class="font-size-sm">
+                            ${tags}
+                        </p>
+                </div>`;
+
+        }).join('');
+
+        const iconListHTML = icons.map((iconArray) => {
+
+            let name = iconArray.properties.name;
+            let tags = iconArray.icon.tags;
+
+            return `
+                <div class="grid__cell">
+                    <p class="font-size-sm">
+                            ${tags}
+                        </p>
+                </div>`;
+
+        }).join('');
+
+        coreIconsGrid.innerHTML = iconGridHTML;
+        coreIconsList.innerHTML = iconListHTML;
+
+            iconListHTML = `
+                <div class="grid__cell">
+                    <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
+                        <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+                            <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
+                        </div>
+                    </div>
+                    <p class="font-size-sm">
+                            ${tags}
+                        </p>
+                </div>`;
+    };
+
+    loadCoreIcons();
+
+    // Toggle
+    
+    const searchBar = document.getElementById('core-icon-search');
 
     searchBar.addEventListener('keyup', (event) => {
         const searchString = event.target.value.toLowerCase();
@@ -310,60 +384,9 @@ ${myClipboardProperties}
             );
         });
 
-        displayIcons(filteredIcons);        
+        displayIcons(filteredIcons);
+
     });
-
-    const loadCoreIcons = async () => {
-        try {
-            const response = await fetch(coreIconsData);
-            const coreIconData = await response.json();
-
-            coreIconsArray = coreIconData.icons;
-            displayIcons(coreIconsArray);
-        
-        } catch (err) {
-            console.error(err);
-        }
-    };
-    
-    const displayIcons = (icons) => {
-
-        const iconHTML = icons.map((iconArray) => {
-
-            console.log("iconArray = ", iconArray);
-
-            let name = iconArray.properties.name;
-            let tags = iconArray.icon.tags;
-            let paths = iconArray.icon.paths;
-
-            console.log("iconTags = ", tags);
-            console.log("iconPaths = ", paths);
-
-            let svgPaths = paths.map((path) => {
-                return `<path d="${path}"/>`;
-            }).join('');
-
-            console.log("svgPaths = ", svgPaths);
-
-            return `
-            <div class="grid__cell">
-                <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
-                    <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
-                        <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>
-                    </div>
-                </div>
-                <p class="font-size-sm">
-                    ${name}
-                </p>
-            </div>
-            `;
-
-        }).join('');
-
-        coreIconsGrid.innerHTML = iconHTML;
-    };
-
-    loadCoreIcons();
 
 </script>
 
