@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
     entry: {
         home: './src/js/home.js',
-        iframe_height: './src/js/iframe_height.js'
+        iframe_height: './src/js/iframe_height.js',
+        icon_display: './src/js/icon_display.js',
     },
     output: {
         filename: '[name].js',

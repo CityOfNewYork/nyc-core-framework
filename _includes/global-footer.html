@@ -61,22 +61,13 @@
 
 </footer>
 
-<script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
-
 {% if page.title == 'Home' %}  
 <script src="{{ site.baseurl }}/dist/js/home.js"></script>
 {% endif %}
 
-{% if page.url contains '/documentation' or '/templates' %}
-
-<script src="{{ site.baseurl }}/lib/js/prism.js"></script>
-<script src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
-
-{% endif %}
-
 {% if page.title == 'Customization' %}
 
-<script async>
+<script>
 
     const customPropertiesData = "{{ site.baseurl }}/lib/json/root-custom-properties.json";
     const customPropertiesContainer = document.getElementById("all-custom-properties");
@@ -289,103 +280,24 @@ ${myClipboardProperties}
 
 {% endif %}
 
-{% if page.title == 'NYC Core Icons' %}
+{% if page.url contains '/documentation' or '/templates' %}
 
-<script defer src="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/svgxuse.js"></script>
-
-<script>
-
-    const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
-
-    const coreIconsGridView = document.getElementById("coreIconsGrid");
-    const coreIconsListView = document.getElementById("coreIconsList");
-
-    let coreIconsArray = [];
-
-    const loadCoreIcons = async () => {
-        try {
-            const response = await fetch(coreIconsData);
-            const coreIconData = await response.json();
-
-            coreIconsArray = coreIconData.icons;
-
-            displayIcons(coreIconsArray);
-        
-        } catch (err) {
-            //console.error(err);
-        }
-    };
-
-    let currentView = "Grid";
-
-    const displayIcons = (icons) => {
-
-        const iconGridHTML = icons.map((iconArray) => {
-
-            let name = iconArray.properties.name;
-            let tags = iconArray.icon.tags;
-
-            return `
-                <div class="grid__cell">
-                    <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
-                        <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
-                            <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
-                        </div>
-                    </div>
-                    <p class="font-size-sm">
-                            ${name}
-                        </p>
-                </div>`;
-
-        }).join('');
-
-        const iconListHTML = icons.map((iconArray) => {
-
-            let name = iconArray.properties.name;
-            let tags = iconArray.icon.tags;
-
-            return `
-                <div class="grid__cell display-flex">
-                    
-                    <div class="width-25">
-                        <div class="aspect-ratio aspect-ratio--1by1 border">
-                            <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
-                                <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
-                            </div>
-                        </div>
-                    </div>
-                    <div class="theme-dark flex-fill">
-
-                    </div>
-                        
-                </div>`;
-
-        }).join('');
-
-        coreIconsGrid.innerHTML = iconGridHTML;
-        coreIconsList.innerHTML = iconListHTML;
-        
-    };
-
-    loadCoreIcons();
-
-    // Toggle
-    
-    const searchBar = document.getElementById('core-icon-search');
-
-    searchBar.addEventListener('keyup', (event) => {
-        const searchString = event.target.value.toLowerCase();
-        const filteredIcons = coreIconsArray.filter((iconArray) => {
-            return (
-                iconArray.properties.name.toLowerCase().includes(searchString) ||
-                iconArray.icon.tags.toString().includes(searchString)
-            );
-        });
-
-        displayIcons(filteredIcons);
-
-    });
-
-</script>
+<script src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
 
 {% endif %}
+
+
+{% if page.title == 'NYC Core Icons' %}
+
+<script defer src="{{ site.baseurl }}/dist/js/icon_display.js"></script>
+
+{% endif %}
+
+{% if page.url contains '/documentation' or '/icons' %}
+
+<script src="{{ site.baseurl }}/lib/js/prism.js"></script>
+
+{% endif %}
+
+
+<script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
