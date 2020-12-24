@@ -11,22 +11,12 @@ title: "Color System"
 </div>
 <!-- .container -->
 
-<div class="container narrow margin-y-4">
-    <div class="alert alert--confirm margin-y-3">
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Color Accessibility</span>
-            </p>
-        </div>
-        <div class="alert__body">
-            <p>
-                When selecting colors for your theme, it is wise to check that your colors meet a sufficient <a href="#1">contrast ratio</a>.
-            </p>
-        </div>
-    </div>
-</div>
-<!-- .container -->
+{% include accessibility-spotlight.html content='
+    <p>
+        When selecting colors for your theme, you must check that your colors meet a sufficient <a href="#1">contrast ratio</a>.
+    </p>
+    '
+%}
 
 <hr class="margin-y-5" id="basicNavigation">
 
@@ -40,18 +30,16 @@ title: "Color System"
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-2 grid--cells-fill--md font-size-sm" {{ site.style_default_theme_colors }}>
+    <div class="grid grid--gap-1 grid--cells-fill--md" {{ site.style_default_theme_colors }}>
 
         <div class="grid__cell">
             <div class="padding-2 theme-primary display-none--lg">
-                <p class="margin-bottom-0"><strong>Primary</strong></p>
-                <p class="margin-bottom-0">#25caa4</p>
+                <p><strong>Primary</strong></p>
             </div>
-            <div class="aspect-ratio aspect-ratio--1by1 display-none">
+            <div class="aspect-ratio aspect-ratio--3by2 display-none display-block--lg">
                 <div class="aspect-ratio__content theme-primary">
                     <div class="padding-2">
-                        <p class="margin-bottom-0"><strong>Primary</strong></p>
-                        <p class="margin-bottom-0">#25caa4</p>
+                        <p><strong>Primary</strong></p>
                     </div>
                 </div>
             </div>
@@ -61,15 +49,13 @@ title: "Color System"
 
         <div class="grid__cell">
             <div class="padding-2 theme-secondary display-none--lg">
-                <p class="margin-bottom-0"><strong>Secondary</strong></p>
-                <p class="margin-bottom-0">#6500d6</p>
+                <p><strong>Secondary</strong></p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio aspect-ratio--1by1 display-none display-block--lg">
+            <div class="aspect-ratio aspect-ratio--3by2 display-none display-block--lg">
                 <div class="aspect-ratio__content theme-secondary">
-                    <div class="m-2">
-                        <p class="margin-bottom-0"><strong>Secondary</strong></p>
-                        <p class="margin-bottom-0">#6500d6</p>
+                    <div class="padding-2">
+                        <p><strong>Secondary</strong></p>
                     </div>
                 </div>
             </div>
@@ -79,15 +65,13 @@ title: "Color System"
 
         <div class="grid__cell">
             <div class="padding-2 theme-dark display-none--lg">
-                <p class="margin-bottom-0"><strong>Dark</strong></p>
-                <p class="margin-bottom-0">#262345</p>
+                <p><strong>Dark</strong></p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio aspect-ratio--1by1 display-none display-block--lg">
+            <div class="aspect-ratio aspect-ratio--3by2 display-none display-block--lg">
                 <div class="aspect-ratio__content theme-dark">
-                    <div class="m-2">
-                        <p class="margin-bottom-0"><strong>Dark</strong></p>
-                        <p class="margin-bottom-0">#262345</p>
+                    <div class="padding-2">
+                        <p><strong>Dark</strong></p>
                     </div>
                 </div>
             </div>
@@ -97,15 +81,13 @@ title: "Color System"
 
         <div class="grid__cell">
             <div class="padding-2 theme-light display-none--lg">
-                <p class="margin-bottom-0"><strong>Light</strong></p>
-                <p class="margin-bottom-0">#f1f4f6</p>
+                <p><strong>Light</strong></p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio aspect-ratio--1by1 display-none display-block--lg">
+            <div class="aspect-ratio aspect-ratio--3by2 display-none display-block--lg">
                 <div class="aspect-ratio__content theme-light">
-                    <div class="m-2">
+                    <div class="padding-2">
                         <p class="margin-bottom-0"><strong>Light</strong></p>
-                        <p class="margin-bottom-0">#f1f4f6</p>
                     </div>
                 </div>
             </div>
@@ -115,15 +97,13 @@ title: "Color System"
 
         <div class="grid__cell">
             <div class="padding-2 theme-white border display-none--lg">
-                <p class="margin-bottom-0"><strong>White</strong></p>
-                <p class="margin-bottom-0">#ffffff</p>
+                <p><strong>White</strong></p>
             </div>
             <!-- px-2 -->
-            <div class="aspect-ratio aspect-ratio--1by1 display-none display-block--lg">
+            <div class="aspect-ratio aspect-ratio--3by2 display-none display-block--lg">
                 <div class="aspect-ratio__content theme-white border">
-                    <div class="m-2">
-                        <p class="margin-bottom-0"><strong>White</strong></p>
-                        <p class="margin-bottom-0">#ffffff</p>
+                    <div class="padding-2">
+                        <p><strong>White</strong></p>
                     </div>
                 </div>
             </div>
