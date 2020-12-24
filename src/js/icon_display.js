@@ -15,7 +15,7 @@ const loadCoreIcons = async () => {
         displayIcons(coreIconsArray);
 
     } catch (err) {
-        //console.error(err);
+        console.error(err);
     }
 };
 
@@ -58,6 +58,13 @@ const displayIcons = (icons) => {
                     <span class="token punctuation attr-equals">=</span>
                     <span class="token punctuation">"</span>
                     nyc_icon_${name}
+                    <span class="token punctuation">" </span>
+                </span>
+                <span class="token attr-name">aria-hidden</span>
+                <span class="token attr-value">
+                    <span class="token punctuation attr-equals">=</span>
+                    <span class="token punctuation">"</span>
+                    true
                     <span class="token punctuation">"</span>
                 </span>
                 <span class="token punctuation">&gt;</span>
@@ -72,14 +79,18 @@ const displayIcons = (icons) => {
         return `           
             <div class="display-flex align-items-stretch theme-dark border-top">
 
-                <div class="display-flex width-25 d border-right padding-2">
+                <div class="display-flex width-25 border-right padding-2">
                     <div class="margin-y-auto text-align-center width-100">
-                        <span class="nyc_icon_${name} display-inline-block"></span>
+                        <span class="nyc_icon_${name} display-inline-block" style="font-size: 1.5em !important;"></span>
                     </div>
                 </div>
 
-                <div class="width-75 padding-x-2 padding-y-3">
-                    <p class="font-size-md margin-bottom-1">Tags: ${tags.map((cool) => cool.replace(',', '')).join(', ')}</p>
+                <div class="width-75 padding-2">
+                    <p class="font-size-md margin-bottom-1">
+                        Class: ${name}
+                    </p>
+                    <p class="font-size-sm opacity-80 margin-bottom-1">
+                        Tags: ${tags.map((cool) => cool.replace(',', '')).join(', ')}</p>
                     <div class="font-size-md">
                         ${htmlSpan.split('\n').map((s) => s.trim()).join('')}
                     </div>
@@ -92,11 +103,10 @@ const displayIcons = (icons) => {
     coreIconsGrid.innerHTML = iconGridHTML;
     coreIconsList.innerHTML = iconListHTML;
 
-    console.log("I AM ICONS JS!");
-
 };
 
 loadCoreIcons();
+
 // Toggle
 
 const searchBar = document.getElementById('core-icon-search');
@@ -111,5 +121,4 @@ searchBar.addEventListener('keyup', (event) => {
     });
 
     displayIcons(filteredIcons);
-
 });
