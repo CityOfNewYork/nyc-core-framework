@@ -11,12 +11,14 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
+	background-color: none;
 	color: #ccc;
-	background: none;
+	
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: var(--font-size-md);
 	text-align: left;
 	white-space: pre;
+
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
@@ -37,13 +39,14 @@ pre[class*="language-"] {
 
 pre[class*="language-"] {
 	padding: 2em 1em;
-	margin: .5em 0;
+	margin: 0.5em 0;
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	border-radius: var(--border-radius);
+	overflow: hidden;
+	
 	background-color: var(--dark);
 }
 
@@ -160,12 +163,10 @@ pre[data-line] {
 .line-highlight {
 	position: absolute;
 	left: 0;
-	width: 100%;
+	right: 0;
 	padding: inherit 0;
 	margin-top: var(--spacer-5); /* Same as .prism’s padding-top */
-
-	/* background-color: green !important ; */
-	background: linear-gradient(to right, hsla(0, 0%, 100%, .175), hsla(0, 0%, 100%, 0));
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
 
 	pointer-events: none;
 
@@ -324,13 +325,12 @@ pre.hide-toolbar + div.toolbar {
 .token.treeview-part .entry-name:before {
 	content: "\ea01";
 	font-family: "PrismTreeview";
-	font-size: 95%;
 	font-style: inherit;
-	line-height: normal;
+	font-size: 95%;
 	vertical-align: baseline;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	width: 1.5em;
+	width: 2.5ex;
 	display: inline-block;
 }
 
