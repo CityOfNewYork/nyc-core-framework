@@ -162,7 +162,7 @@ In this file:
 .nav:not([class*="nav--divider"]):not([class*="nav--breadcrumb"]) {
 
     > li:not(:last-child) {
-        margin-bottom: calc(var(--gap-size) * 0.75);
+        margin-bottom: calc(var(--gap-size));
     }
 
     > li > [data-toggle="dropdown"] ~ ul {
@@ -189,6 +189,10 @@ In this file:
 
 .nav--gap-0 {
     --gap-size: 0;
+}
+
+.nav--gap-border {
+    --gap-size: var(--default-border-width);
 }
 
 @each $spacer, $value in spacing.$spacers {
@@ -488,6 +492,12 @@ nav[aria-label="Breadcrumb"] {
     --dropdown-link-margin: 0.5em;
 
     @extend %list-nav-style;
+
+    > li > a {
+        font-size: var(--font-size-md);
+    }
+
+    a{ color: red !important; }
 
     &:not([class*="font-size-"]) {
         font-size: inherit;

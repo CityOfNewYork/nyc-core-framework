@@ -25,7 +25,9 @@ In this file:
     --button-font-weight: var(--body-font-weight-bold);
 
     --button--outline-border-width: calc( var(--default-border-width) * 2);
+    
     --button--icon-only-size: 2.25em;
+    --button--icon-only-radius: 0.25em;
 }
 
 //////////////////////////////////////////////
@@ -131,7 +133,6 @@ button,
     height: var(--button--icon-only-size);
 
     overflow: hidden;
-    border-radius: 100%;
 
     align-items: center;
     justify-content: center;

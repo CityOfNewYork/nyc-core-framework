@@ -32,8 +32,8 @@ module.exports = {
         ],
     },
     stats: { children: false },
-    mode: 'development',
-    watch: false,
+    mode: 'production',
+    watch: true,
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
