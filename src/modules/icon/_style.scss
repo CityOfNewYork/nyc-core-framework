@@ -16,8 +16,7 @@ In this file:
 [class*="nyc_icon_"] {
     position: relative;
     font-size: 1.25em !important;
-    line-height: 0.75;
-    vertical-align: -0.125em;
+    line-height: inherit;
     pointer-events: none;
 
     &:not([class*="_subway-"]) {
