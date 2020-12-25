@@ -275,6 +275,7 @@ In this file:
     > li > a, 
     > li > button {
         width: 100%;
+        position: relative;
     }
 
     > li > a:not([data-toggle="dropdown"]), 
@@ -493,11 +494,9 @@ nav[aria-label="Breadcrumb"] {
 
     @extend %list-nav-style;
 
-    > li > a {
-        font-size: var(--font-size-md);
+    > li {
+    font-size: var(--font-size-md);
     }
-
-    a{ color: red !important; }
 
     &:not([class*="font-size-"]) {
         font-size: inherit;
