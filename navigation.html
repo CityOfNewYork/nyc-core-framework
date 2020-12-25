@@ -34,7 +34,7 @@
                     <h1>Navigation</h1>
                 </div>
 
-                <figure class="medium margin-y-4 box-shadow-1">
+                <figure class="medium margin-y-4 box-shadow-1 z-index-1500">
 
                     <div class="primary-nav--below--lg theme-primary">
 
@@ -103,7 +103,7 @@
                     <!-- .primary-nav -->
                 </figure>
 
-                <figure class="medium margin-y-4 box-shadow-1">
+                <figure class="medium margin-y-4 box-shadow-1 z-index-1000">
 
                     <div class="primary-nav--inline--lg">
 
@@ -128,7 +128,7 @@
                             <ul>
                                 <li>
                                     <a href="#1" data-toggle="dropdown">Dropdown</a>
-                                    <ul>
+                                    <ul class="nav__dropdown box-shadow-1">
                                         <li>
                                             <a href="#1">Link</a>
                                         </li>
@@ -201,9 +201,8 @@
                             <div class="width-100 padding-4">
                                 <ul class="nav nav--breadcrumb font-size-sm">
                                     <li>
-                                        <a class="button button--icon-only" href="#1" title="Home">
-                                            <span class="screen-reader-only">Home</span>
-                                            <span class="fas fa-home" aria-hidden="true"></span>
+                                        <a class="button button--icon-only" href="#1" aria-label="Home">
+                                            <span class="nyc_icon_home" aria-hidden="true"></span>
                                         </a>
                                     </li>
                                     <li>
