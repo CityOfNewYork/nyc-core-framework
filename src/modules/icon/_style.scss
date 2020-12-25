@@ -2,11 +2,22 @@
 
 In this file:
 
-// A. Shared Styles
-// B. Screen Reader Only Utility
-// C. Focusable Only Utility
+// A. Variables
+// B. Shared Styles
+// C. Screen Reader Only Utility
+// D. Focusable Only Utility
 
 */
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%custom-properties {
+    --icon-size: 1.25em;
+}
 
 //////////////////////////////////////////////
 // A. Shared Styles
@@ -14,21 +25,24 @@ In this file:
 
 [class^="nyc_icon_"],
 [class*="nyc_icon_"] {
-    position: relative;
-    font-size: 1.25em !important;
-    line-height: inherit;
-    pointer-events: none;
 
-    &:not([class*="_subway-"]) {
-      display: inline-block;
-    }
+  @extend %custom-properties;
+  font-size: var(--icon-size) !important;
 
-    &[class*="-left"], 
-    &[class*="-right"] {
-      [dir="rtl"] & {
-        transform: scaleX(-1);
-      }
+  position: relative;
+  line-height: 1;
+  pointer-events: none;
+
+  &:not([class*="_subway-"]) {
+    display: inline-block;
+  }
+
+  &[class*="-left"], 
+  &[class*="-right"] {
+    [dir="rtl"] & {
+      transform: scaleX(-1);
     }
+  }
 }
 
 .nyc_icon_font {

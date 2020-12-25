@@ -6,7 +6,7 @@ In this file:
 // B. Default Button Tag
 // C. Button Utility
 // D. Button Outline Modifier
-// E. Button Has Icon Modifier
+// E. Button Has Icon Modifiers
 // F. Button Icon Only Modifier
 // G. I.E. 11 Support
 
@@ -96,26 +96,30 @@ button,
 }
 
 //////////////////////////////////////////////
-// E. Button Has Icon Modifier
+// E. Button Has Icon Modifiers
 //////////////////////////////////////////////
 
 [class*="button--has-icon"] {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover,
-    &:focus{
+    &:focus {
         .button__text {
             text-decoration: underline;
         }
     }
-}
 
-[class*="button--has-icon"] .button__text {
-    margin-left: 0.25em;
-    margin-right: 0.25em;
+    &:not([class*="--disperse"]){
+        .button__text {
+            margin-left: 0.25em;
+            margin-right: 0.25em;
+        }
+    }
 }
 
 .button--has-icon--disperse {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
 }

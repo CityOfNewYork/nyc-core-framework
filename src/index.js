@@ -58,8 +58,8 @@ import "./modules/language";
 
 import "./modules/link";
 
-// import Modal from "./modules/modal";
-// new Modal();
+import Modal from "./modules/modal";
+new Modal();
 
 import Navigation from "./modules/navigation";
 new Navigation();

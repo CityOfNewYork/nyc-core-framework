@@ -5,7 +5,7 @@ In this file:
 // A. Modules
 // B. Variables
 // C. Placeholders 
-// D. Head Nav Components 
+// D. Primary Nav Components 
 // E. Nav
 // F. Nav Divider
 // G. Nav Breadcrumb
@@ -28,6 +28,8 @@ In this file:
 ////////////////////////////////////////
 // B. Variables
 ////////////////////////////////////////
+
+// Scoped to Block
 
 %custom-properties {        
     --dropdown-z-index: 1200;
@@ -52,7 +54,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. Head Nav Components
+// D. Primary Nav Components
 //////////////////////////////////////////////
 
 [class*="primary-nav--"] {
@@ -72,6 +74,7 @@ In this file:
 
     > [class*="__menu"] {
         grid-area: menu;
+
         @extend .collapse;
     }
 
@@ -165,7 +168,7 @@ In this file:
         margin-bottom: calc(var(--gap-size));
     }
 
-    > li > [data-toggle="dropdown"] ~ ul {
+    > li > .nav__dropdown {
         width: calc(100% + (var(--gap-size) * 2));
         padding: var(--gap-size);
         margin-left: calc(var(--gap-size) * -1);
@@ -222,7 +225,7 @@ In this file:
                 margin-bottom: 0 !important;
             }
 
-            > li > [data-toggle="dropdown"] ~ ul {
+            > li > .nav__dropdown {
                 min-width: 200px;
                 position: absolute;
             }
@@ -285,11 +288,11 @@ In this file:
 
     > li > a, 
     > li > button,
-    > li > [data-toggle="dropdown"] ~ ul {
+    > li > .nav__dropdown {
         padding: var(--button-padding-y) var(--button-padding-x);
     }
 
-    > li > [data-toggle="dropdown"] ~ ul {
+    > li > .nav__dropdown {
         border-top-width: 0 !important;
     }
 
@@ -384,7 +387,7 @@ In this file:
             }
 
             &[class*="border"] {
-                > li > [data-toggle="dropdown"] ~ ul {
+                > li > .nav__dropdown {
                     border-top-width: 0;
                     border-width: var(--default-border-width);
                     border-style: var(--default-border-style);
@@ -392,7 +395,7 @@ In this file:
                 }
             }
 
-            [data-toggle="dropdown"] ~ ul {
+            .nav__dropdown {
                 position: absolute;
                 width: 100%;
                 left: 0;
@@ -403,9 +406,9 @@ In this file:
                 }
             }
 
-            // Fix for <ul> tags with borders applied
+            // For <ul> tags with borders applied
 
-            &[class*="border"] [data-toggle="dropdown"] ~ ul {
+            &[class*="border"] .nav__dropdown {
                 margin-left: calc(var(--default-border-width) * -1);
 
                 [dir="rtl"] & {
@@ -489,18 +492,11 @@ nav[aria-label="Breadcrumb"] {
     }
 }
 
-[data-toggle="dropdown"] ~ ul {
-    --dropdown-link-margin: 0.5em;
+.nav__dropdown {
 
-    @extend %list-nav-style;
+    @extend .nav;
 
-    > li {
     font-size: var(--font-size-md);
-    }
-
-    &:not([class*="font-size-"]) {
-        font-size: inherit;
-    }
 
     font-weight: normal;
     position: static;
@@ -515,14 +511,14 @@ nav[aria-label="Breadcrumb"] {
         text-align: right;
     }
 
-    > li {
-        margin-left: 0;
-        margin-right: 0;
+    // > li {
+    //     margin-left: 0;
+    //     margin-right: 0;
 
-        &:not(:last-child) {
-            margin-bottom: var(--dropdown-link-margin);
-        }
-    }
+    //     // &:not(:last-child) {
+    //     //     margin-bottom: var(--dropdown-link-margin);
+    //     // }
+    // }
 
     display: none;
 
