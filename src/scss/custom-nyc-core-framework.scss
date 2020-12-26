@@ -185,7 +185,7 @@ a[data-logo="brand"] {
     position: relative;
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-normal);
-    padding: var(--spacer-2);
+    padding: var(--spacer-3);
     min-width: var(--table-scroll-min-width);
 
     &::after {
@@ -205,6 +205,7 @@ a[data-logo="brand"] {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-normal);
 }
+
 .cp-header__link {
     font-size: var(--font-size-sm);
 }
