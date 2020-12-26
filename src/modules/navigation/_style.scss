@@ -7,10 +7,11 @@ In this file:
 // C. Placeholders 
 // D. Primary Nav Components 
 // E. Nav
-// F. Nav Divider
-// G. Nav Breadcrumb
-// H. Dropdown
-// I. I.E. 11 Support
+// F. Nav Gap Modifier
+// G. Nav Divider
+// H. Nav Breadcrumb
+// I. Dropdown
+// J. I.E. 11 Support
 
 */
 
@@ -45,7 +46,6 @@ In this file:
 
     > li {
         position: relative;
-        // background-color: hsla(60, 100%, 50%, 0.5);
     }
 
     a[aria-current] {
@@ -59,7 +59,7 @@ In this file:
 //////////////////////////////////////////////
 
 [class*="primary-nav--"] {
-    --primary-nav-padding: var(--spacer-2);
+    --primary-nav-padding: var(--spacer-3);
 
     display: grid;
 
@@ -197,7 +197,10 @@ In this file:
 
         .primary-nav--inline#{$mod} > [class*="__menu"] > ul,
         .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
-            --gap-size: 1.5em;
+
+            &:not([class*="nav--gap"]){
+                --gap-size: 1.5em;
+            }
         
             display: flex;
             flex-direction: row;
@@ -234,8 +237,22 @@ In this file:
     }
 }
 
+//////////////////////////////////////////////
+// F. Nav Gap Modifiers
+//////////////////////////////////////////////
+
+@each $spacer, $value in spacing.$spacers {
+    .nav--gap-#{$spacer} {
+        --gap-size: #{$value};
+    }
+}
+
+.nav--gap-border {
+    --gap-size: var(--default-border-width);
+}
+
 ////////////////////////////////////////
-// F. Nav Divider
+// G. Nav Divider
 ////////////////////////////////////////
 
 [class*="primary-nav--below--"] > [class*="__menu"] > ul,
@@ -404,7 +421,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// G. Nav Breadcrumb
+// H. Nav Breadcrumb
 ////////////////////////////////////////
 
 nav[aria-label="Breadcrumb"] {
@@ -435,7 +452,7 @@ nav[aria-label="Breadcrumb"] {
 }
 
 ////////////////////////////////////////
-// H. Dropdown
+// I. Dropdown
 ////////////////////////////////////////
 
 [data-toggle="dropdown"]:not([class*="button--icon-only"]) {
@@ -502,7 +519,7 @@ nav[aria-label="Breadcrumb"] {
 }
 
 //////////////////////////////////////////////
-// I. I.E. 11 Support
+// J. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),
