@@ -2,14 +2,22 @@
 
 In this file:
 
-// A. Variables
-// B. Width Utilities
-// C. Height Utilities
+// A. Modules
+// B. Variables
+// C. Width Utilities
+// D. Height Utilities
 
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoint/style" as breakpoint;
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 $widths: (
@@ -35,21 +43,33 @@ $heights: (
 );
 
 //////////////////////////////////////////////
-// B. Width Utilities
+// C. Width Utilities
 //////////////////////////////////////////////
 
-@each $key, $value in $widths {
-    .width-#{$key} {
-        width: $value;
+@each $breakpoint in map.keys(breakpoint.$breakpoints) {
+    @include breakpoint.breakpoints-up($breakpoint) {
+        $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
+
+        @each $key, $value in $widths {
+            .width-#{$key}#{$mod} {
+                width: $value;
+            }
+        }
     }
 }
 
 //////////////////////////////////////////////
-// C. Height Utilities
+// D. Height Utilities
 //////////////////////////////////////////////
 
-@each $key, $value in $heights {
-    .height-#{$key} {
-        height: $value;
+@each $breakpoint in map.keys(breakpoint.$breakpoints) {
+    @include breakpoint.breakpoints-up($breakpoint) {
+        $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
+
+        @each $key, $value in $heights {
+            .height-#{$key}#{$mod} {
+                height: $value;
+            }
+        }
     }
 }
