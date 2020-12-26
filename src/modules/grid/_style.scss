@@ -45,7 +45,7 @@ $columns: 12;
 [class*="grid__cell"] {
 
     > .grid:not([class*="cols-"]) {
-        height: calc(100% + var(--gap-size));
+        height: calc(var(--gap-size) + 100%);
 
         > [class*="grid__cell"]:not([class*="grid__cell-"]) {
             width: 100%;
@@ -60,14 +60,14 @@ $columns: 12;
 [class*="grid--gap"] {
     --gap-size: 0;
 
-    margin-top: calc(-1 * var(--gap-size));
-    margin-right: calc(-0.5 * var(--gap-size));
-    margin-left: calc(-0.5 * var(--gap-size));
+    margin-top: calc(var(--gap-size) * -1);
+    margin-right: calc(var(--gap-size) * -0.5);
+    margin-left: calc(var(--gap-size) * -0.5);
 
     > [class*="grid__cell"] {
         margin-top: var(--gap-size);
-        padding-left: calc(0.5 * var(--gap-size));
-        padding-right: calc(0.5 * var(--gap-size));
+        padding-left: calc(var(--gap-size) * 0.5);
+        padding-right: calc(var(--gap-size) * 0.5);
     }
 }
 
