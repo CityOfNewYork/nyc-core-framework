@@ -38,23 +38,23 @@ In this file:
         position: relative;
         padding: var(--tab-padding-y) var(--tab-padding-x);
 
-        @extend %subtle-fill !optional;
-        --subtle-fill-opacity: 0.05;
-
         display: block;
         width: 100%;
         text-align: center;
         
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: var(--accent-bar-size);
-            background-color: currentColor;
-            opacity: 0.125;
-        }
+        // @extend %subtle-fill !optional;
+        // --subtle-fill-opacity: 0.05;
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     left: 0;
+        //     height: var(--accent-bar-size);
+        //     background-color: currentColor;
+        //     opacity: 0.125;
+        // }
     }
 
     [aria-current="page"],
@@ -69,7 +69,7 @@ In this file:
 
 .tabs-nav:not([class*="tabs-nav--across"]) {
 
-    &::before {
+    &::after {
         content: "";
         position: absolute;
         top: 100%;

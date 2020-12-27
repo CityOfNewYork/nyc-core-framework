@@ -166,17 +166,16 @@ body:not([class*="theme-"]),
     }
 
     // Alerts
-
-    [class*="alert--confirm"]:not([class*="--inverse"]) {
+    .alert--confirm {
         color: var(--confirm-color);
     }
 
-    [class*="alert--confirm--inverse"] {
+    .alert--confirm--inverse {
         color: var(--background-color);
         background-color: var(--confirm-color);
     }
     
-    [class*="alert--warn"]:not([class*="--inverse"]),
+    .alert--warn,
     .invalid .form-entry__feedback, 
     .invalid .form-entry__field__input::after,
     .invalid [class*="_icon_warn"]
@@ -184,7 +183,7 @@ body:not([class*="theme-"]),
         color: var(--warn-color);
     }
 
-    [class*="alert--warn--inverse"] {
+    .alert--warn--inverse {
         color: var(--background-color);
         background-color: var(--warn-color);
     }
