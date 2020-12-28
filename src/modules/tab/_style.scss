@@ -4,8 +4,7 @@ In this file:
 
 // A. Modules
 // B. Variables
-// B. Tabs Block 
-// C. Tabs Nav Element
+// C. Tabs Nav Block
 // D. Tabs Panel Element
 // E. Tabs With 'theme-*' Class
 
@@ -32,18 +31,12 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Tabs Block
-////////////////////////////////////////
-
-.tabs {
-    @extend %custom-properties;
-}
-
-////////////////////////////////////////
-// C. Tabs Nav Element
+// B. Tabs Nav Block
 ////////////////////////////////////////
 
 .tabs-nav {
+    @extend %custom-properties;
+
     list-style: none;
 
     > li {
