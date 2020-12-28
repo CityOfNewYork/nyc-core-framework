@@ -6,8 +6,8 @@ title: "Backdrops"
 <div class="container narrow margin-y-4">
     <p>
         Backdrops are useful for placing a translucent image behind custom content. Backdrops offer two fundamentally
-        distinct variations: an image proportional block that scales and stacks responsively, and a fixed-height backdrop that, when needed,
-        adjust to the height of its inner content.
+        distinct variations: an <strong>image size proportional</strong> backdrop that scales and stacks responsively, and a
+        <strong>fixed-height</strong> backdrop that, when needed, adjusts to the height of its inner content.
     </p>
 </div>
 <!-- .container -->
@@ -26,7 +26,7 @@ title: "Backdrops"
 <div class="container narrow margin-y-4">
     <h2>Image Size Proportional</h2>
     <p>
-        The backdrop component is made up of a parent <code>.backdrop</code> selector, and two required child
+        The <em>backdrop</em> component is made up of a parent <code>.backdrop</code> selector, and two required child
         selectors: <code>.backdrop__image</code> contains the feature image, while <code>.backdrop__cover</code>
         positions contextual content over the image on the <em>z</em> axiz.
     </p>
@@ -543,13 +543,13 @@ title: "Backdrops"
                     Lorem ipsum dolor sit amet consectetur
                 </h1>
 
-                <div class=" text-align-left">
+                <div class="text-align-left">
 
                     <div class="grid grid--gap-2 grid--cells-fill--md justify-content-center">
 
                         <div class="grid__cell">
 
-                            <div class="card theme-white box-shadow-1">
+                            <div class="card theme-white rounded box-shadow-1">
 
                                 <div class="card__head border-bottom">
                                     <p>Card Header</p>
@@ -563,7 +563,7 @@ title: "Backdrops"
                                     </p>
                                 </div>
 
-                                <div class="card__foot border-top font-size-md">
+                                <div class="card__foot border-top">
                                     <a class="button theme-secondary display-block" href="#1">Action</a>
                                 </div>
                             </div>
@@ -574,7 +574,7 @@ title: "Backdrops"
 
                         <div class="grid__cell">
 
-                            <div class="card theme-white box-shadow-1">
+                            <div class="card theme-white rounded box-shadow-1">
 
                                 <div class="card__head border-bottom">
                                     <p>Card Header</p>
@@ -588,7 +588,7 @@ title: "Backdrops"
                                     </p>
                                 </div>
 
-                                <div class="card__foot border-top font-size-md">
+                                <div class="card__foot border-top">
                                     <a class="button theme-secondary display-block" href="#1">Action</a>
                                 </div>
                             </div>
@@ -601,23 +601,23 @@ title: "Backdrops"
 
                 </div>
 
-                <div class="margin-y-3">
+                <div class="margin-y-4">
 
                     <p><strong>Follow Us</strong></p>
 
-                    <ul class="nav nav--horizontal justify-content-center font-size-lg" role="list">
+                    <ul class="nav nav--gap-2 nav--horizontal justify-content-center font-size-lg" role="list">
                         <li>
-                            <a class="button button--icon-only theme-secondary" href="#1" aria-label="Facebook">
+                            <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Facebook">
                                 <span class="nyc_icon_facebook" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
-                            <a class="button button--icon-only theme-secondary" href="#1" aria-label="Twitter">
+                            <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Twitter">
                                 <span class="nyc_icon_twitter" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
-                            <a class="button button--icon-only theme-secondary" href="#1" aria-label="YouTube">
+                            <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="YouTube">
                                 <span class="nyc_icon_youtube" aria-hidden="true"></span>
                             </a>
                         </li>
@@ -629,20 +629,17 @@ title: "Backdrops"
 
         </div>
         <!-- .backdrop__cover -->
-
-        <div class="backdrop__credit">
-            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
-        </div>
-
     </div>
-    <!-- backdrop -->
 
  </figure>
 
  <div class="container narrow margin-y-4">
     <p>
-        In this example, the content inside <code>.backdrop__cover</code> is taller than the default height (375px), and
-        <code>.backdrop--fixed</code> adjusts its height accordingly.
+        In this example, the content inside <code>.backdrop__cover</code> is taller than the default height (400px), and
+        <code>.backdrop--fixed</code> adjusts its height automatically.
+    </p>
+    <p>
+        The markup for the above example:
     </p>
  </div>
 
@@ -656,25 +653,25 @@ title: "Backdrops"
                     &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
                 &lt;/div&gt;
 
-                &lt;div class="backdrop__image"&gt;
+                &lt;div class="backdrop__image gradient-veneer-bottom"&gt;
                     &lt;img class="opacity-20" src="https://via.placeholder.com/1500x750.jpg" alt=""&gt;
                 &lt;/div&gt;
 
-                &lt;div class="backdrop__cover text-align-center"&gt;
+                &lt;div class="backdrop__cover"&gt;
 
-                    &lt;div class="container medium margin-y-5"&gt;
+                    &lt;div class="container medium text-align-center margin-y-5"&gt;
 
                         &lt;h1 class="banner-headline text-shadow margin-bottom-4"&gt;
                             Lorem ipsum dolor sit amet consectetur
                         &lt;/h1&gt;
 
-                        &lt;div class="margin-y-4"&gt;
+                        &lt;div class="text-align-left"&gt;
 
                             &lt;div class="grid grid--gap-2 grid--cells-fill--md justify-content-center"&gt;
 
                                 &lt;div class="grid__cell"&gt;
 
-                                    &lt;div class="card theme-white box-shadow-1"&gt;
+                                    &lt;div class="card theme-white rounded box-shadow-1"&gt;
 
                                         &lt;div class="card__head border-bottom"&gt;
                                             &lt;p&gt;Card Header&lt;/p&gt;
@@ -688,7 +685,7 @@ title: "Backdrops"
                                             &lt;/p&gt;
                                         &lt;/div&gt;
 
-                                        &lt;div class="card__foot border-top font-size-md"&gt;
+                                        &lt;div class="card__foot border-top"&gt;
                                             &lt;a class="button theme-secondary display-block" href="#1"&gt;Action&lt;/a&gt;
                                         &lt;/div&gt;
                                     &lt;/div&gt;
@@ -699,7 +696,7 @@ title: "Backdrops"
 
                                 &lt;div class="grid__cell"&gt;
 
-                                    &lt;div class="card theme-white box-shadow-1"&gt;
+                                    &lt;div class="card theme-white rounded box-shadow-1"&gt;
 
                                         &lt;div class="card__head border-bottom"&gt;
                                             &lt;p&gt;Card Header&lt;/p&gt;
@@ -713,7 +710,7 @@ title: "Backdrops"
                                             &lt;/p&gt;
                                         &lt;/div&gt;
 
-                                        &lt;div class="card__foot border-top font-size-md"&gt;
+                                        &lt;div class="card__foot border-top"&gt;
                                             &lt;a class="button theme-secondary display-block" href="#1"&gt;Action&lt;/a&gt;
                                         &lt;/div&gt;
                                     &lt;/div&gt;
@@ -726,23 +723,23 @@ title: "Backdrops"
 
                         &lt;/div&gt;
 
-                        &lt;div class="margin-y-3"&gt;
+                        &lt;div class="margin-y-4"&gt;
 
                             &lt;p&gt;&lt;strong&gt;Follow Us&lt;/strong&gt;&lt;/p&gt;
 
-                            &lt;ul class="nav nav--gap-1 nav--horizontal justify-content-center" role="list"&gt;
+                            &lt;ul class="nav nav--gap-2 nav--horizontal justify-content-center font-size-lg" role="list"&gt;
                                 &lt;li&gt;
-                                    &lt;a class="button button--icon-only theme-secondary" href="#1" aria-label="Facebook"&gt;
+                                    &lt;a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Facebook"&gt;
                                         &lt;span class="nyc_icon_facebook" aria-hidden="true"&gt;&lt;/span&gt;
                                     &lt;/a&gt;
                                 &lt;/li&gt;
                                 &lt;li&gt;
-                                    &lt;a class="button button--icon-only theme-secondary" href="#1" aria-label="Twitter"&gt;
+                                    &lt;a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Twitter"&gt;
                                         &lt;span class="nyc_icon_twitter" aria-hidden="true"&gt;&lt;/span&gt;
                                     &lt;/a&gt;
                                 &lt;/li&gt;
                                 &lt;li&gt;
-                                    &lt;a class="button button--icon-only theme-secondary" href="#1" aria-label="YouTube"&gt;
+                                    &lt;a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="YouTube"&gt;
                                         &lt;span class="nyc_icon_youtube" aria-hidden="true"&gt;&lt;/span&gt;
                                     &lt;/a&gt;
                                 &lt;/li&gt;
@@ -756,8 +753,6 @@ title: "Backdrops"
                 &lt;!-- .backdrop__cover --&gt;
 
             &lt;/div&gt;
-            &lt;!-- backdrop --&gt;
-
         </code>
     </pre>
 

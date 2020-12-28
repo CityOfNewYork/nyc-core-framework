@@ -19,70 +19,60 @@ title: "NYC Core Icons"
     <div class="container">
         <ul class="tabs-nav tabs-nav--horizontal">
             <li>
-                <button
-                    id="tab-icons"
-                    aria-controls="tab-panel-icons"
-                    aria-selected="true"
-                    role="tab">
-                        Icons
-                </button>
+                <a href="{{ site.baseurl }}/icons/" aria-current="page">
+                    Icons
+                </a>
             </li>
             <li>
-                <button
-                    id="tab-usage"
-                    aria-controls="tab-panel-usage"
-                    aria-selected="false"
-                    role="tab">
+                <a href="{{ site.baseurl }}/icons/usage.html">
                     Usage
-                </button>
+                </a>
             </li>
         </ul>
     </div>
 
-    <div class="tabs" role="tablist">
+    <div class="tabs container padding-y-4" role="tablist">
 
-        <div class="container padding-y-4">
+        <h2 class="screen-reader-only">The Icons</h2>
 
-            <h2 class="screen-reader-only">The Icons</h2>
+        <div class="form-entry margin-bottom-4">
 
-            <div class="form-entry margin-bottom-4">
-
-                <div class="form-entry__field">
-                    <label class="form-entry__field__label screen-reader-only" for="core-icon-search">Search</label>
-                    <span class="form-entry__field__input">
-                        <span class="nyc_icon_search opacity-40" aria-hidden="true"></span>
-                        <input type="text" name="core-icon-search" id="core-icon-search" placeholder="Filter Icons" autocomplete="off">
-                        <ul class="nav nav--gap-1 nav--horizontal font-size-md margin-x-1" id="icon-view-toggle">
-                            <li>
-                                <button class="button button--icon-only" style="border-radius: 0.25rem;" aria-selected="true"
-                                    id="tab-button-group-d-01" aria-controls="tab-panel-group-d-01" role="tab">
-                                    <span class="nyc_icon_grid" aria-hidden="true"></span>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="button button--icon-only" style="border-radius: 0.25rem;" aria-selected="false"
-                                    id="tab-button-group-d-02" aria-controls="tab-panel-group-d-02" role="tab">
-                                    <span class="nyc_icon_list" aria-hidden="true"></span>
-                                </button>
-                            </li>
-                        </ul>
-                    </span>
-                </div>
-
-            </div>
-            <!-- .form-entry -->
-
-            <div class="tabs__panel shown" id="tab-panel-group-d-01" aria-labelledby="tab-button-group-d-01" role="tabpanel">
-                <div class="grid grid--gap-1 grid--cells-4 grid--cells-2--md text-align-center" id="coreIconsGrid"></div>
-            </div>
-
-            <div class="tabs__panel" id="tab-panel-group-d-02" aria-labelledby="tab-button-group-d-02" role="tabpanel">
-                <div id="coreIconsList"></div>
+            <div class="form-entry__field">
+                <label class="form-entry__field__label screen-reader-only" for="core-icon-search">Search</label>
+                <span class="form-entry__field__input">
+                    <span class="nyc_icon_search opacity-40" aria-hidden="true"></span>
+                    <input type="text" name="core-icon-search" id="core-icon-search" placeholder="Filter Icons" autocomplete="off">
+                    <ul class="nav nav--gap-1 nav--horizontal font-size-md margin-x-1" id="icon-view-toggle">
+                        <li>
+                            <button class="button button--icon-only" style="border-radius: 0.25rem;"
+                                aria-selected="true" id="tab-button-group-d-01" aria-controls="tab-panel-group-d-01"
+                                role="tab">
+                                <span class="nyc_icon_grid" aria-hidden="true"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="button button--icon-only" style="border-radius: 0.25rem;"
+                                aria-selected="false" id="tab-button-group-d-02" aria-controls="tab-panel-group-d-02"
+                                role="tab">
+                                <span class="nyc_icon_list" aria-hidden="true"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </span>
             </div>
 
         </div>
-        <!-- .container -->
+        <!-- .form-entry -->
+
+        <div class="tabs__panel shown" id="tab-panel-group-d-01" aria-labelledby="tab-button-group-d-01" role="tabpanel">
+            <div class="grid grid--gap-1 grid--cells-4 grid--cells-2--md text-align-center" id="coreIconsGrid"></div>
+        </div>
+
+        <div class="tabs__panel" id="tab-panel-group-d-02" aria-labelledby="tab-button-group-d-02" role="tabpanel">
+            <div id="coreIconsList"></div>
+        </div>
 
     </div>
+    <!-- .container -->
 
 </div>

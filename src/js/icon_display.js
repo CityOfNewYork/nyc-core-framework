@@ -85,7 +85,7 @@ const displayIcons = (icons) => {
                     </div>
                 </div>
 
-                <div class="width-75 padding-2">
+                <div class="width-75 padding-3">
                     <p class="font-size-md margin-bottom-1">
                         Class: ${name}
                     </p>
