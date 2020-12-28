@@ -148,8 +148,6 @@ body:not([class*="theme-"]),
     }
 
     select option,
-    .tabs [role="tab"],
-    .tabs [role="tabpanel"],
     [data-toggle="dropdown"] ~ ul, 
     .modal::before,
     .modal__content,

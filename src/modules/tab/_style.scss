@@ -2,19 +2,24 @@
 
 In this file:
 
-// A. Variables
-// B. Tabs Nav Block 
-// C. Tabs Nav Modifier
+// A. Modules
+// B. Variables
+// B. Tabs Block 
+// C. Tabs Nav Element
 // D. Tabs Panel Element
 // E. Tabs With 'theme-*' Class
 
 */
 
+////////////////////////////////////////
+// A. Modules
+////////////////////////////////////////
+
 @use "sass:map";
 @use "../breakpoint/style" as breakpoint;
 
 ////////////////////////////////////////
-// A. Variables
+// B. Variables
 ////////////////////////////////////////
 
 // Scoped to Block
@@ -26,32 +31,34 @@ In this file:
     --tab-accent-bar-size: calc(var(--default-border-width) * 2);
 }
 
-//////////////////////////////////////////////
-// C. Accordion Block
-//////////////////////////////////////////////
+////////////////////////////////////////
+// B. Tabs Block
+////////////////////////////////////////
 
 .tabs {
     @extend %custom-properties;
 }
 
 ////////////////////////////////////////
-// B. Tabs Nav Block
+// C. Tabs Nav Element
 ////////////////////////////////////////
 
 .tabs-nav {
     list-style: none;
-    position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        height: var(--tab-accent-bar-size);
-        background-color: currentColor;
-        opacity: 0.125;
-        display: none;
+    > li {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: var(--tab-accent-bar-size);
+            background-color: currentColor;
+            opacity: 0.125;
+        }
     }
 
     > li > a,
@@ -59,8 +66,6 @@ In this file:
         position: relative;
         padding: var(--tab-button-padding-y) var(--tab-button-padding-x);
 
-        background-color: transparent;
-        display: block;
         width: 100%;
         text-align: center;
     
@@ -71,9 +76,8 @@ In this file:
             right: 0;
             bottom: 0;
             left: 0;
-            height: var(--tab-accent-bar-size);
             background-color: currentColor;
-            display: none;
+            opacity: 0.0625;
         }
     }
 
@@ -82,45 +86,14 @@ In this file:
         font-weight: var(--body-font-weight-bold);
 
         &::after {
+            height: var(--tab-accent-bar-size);
             display: block;
+            opacity: 1;
         }
     }
 }
 
 .tabs-nav {
-
-    @each $breakpoint in map.keys(breakpoint.$breakpoints) {
-        @include breakpoint.breakpoints-up($breakpoint) {
-            $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
-
-            &.tabs-nav--horizontal#{$mod} {
-                display: flex;
-                flex-direction: row;
-                align-items: baseline;
-
-                &::before {
-                    display: block;
-                }
-
-                > li {
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
-}
-
-////////////////////////////////////////
-// C. Tabs Nav Modifier
-////////////////////////////////////////
-
-.tabs-nav--across {
-
-    > li > a,
-    > li > button {
-        padding-top: calc(var(--tab-button-padding-y) + var(--tab-accent-bar-size));
-    }
-
     @each $breakpoint in map.keys(breakpoint.$breakpoints) {
         @include breakpoint.breakpoints-up($breakpoint) {
             $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
@@ -132,7 +105,6 @@ In this file:
 
                 > li {
                     flex: 1;
-                    flex-basis: 0;
                 }
             }
         }
@@ -146,7 +118,7 @@ In this file:
 .tabs__panel {
     display: none;
 
-    &.shown{
+    &.shown {
         display: block;
     }
 }
@@ -155,14 +127,15 @@ In this file:
 // E. Tabs With 'theme-*' Class
 ////////////////////////////////////////
 
-.tabs-nav,
-[data-tab-group] {
+.tabs {
     &[class*="theme-"] {
-        ::after {
-            display: none;
-        }
+
         [aria-current="page"],
         [aria-selected="true"] {
+            &::after {
+                margin: 2px;
+            }
+
             text-decoration: underline;
         }
     }
