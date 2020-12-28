@@ -17,12 +17,21 @@ In this file:
 // A. Variables
 ////////////////////////////////////////
 
-:root {
-    --tab-padding-x: 1em;
-    --tab-padding-y: 0.5em;
+// Scoped to Block
 
-    --accent-bar-size: calc(var(--default-border-width) * 2);
-    --accent-bar-opacity: 1;
+%custom-properties {
+    --tab-button-padding-x: var(--spacer-3);
+    --tab-button-padding-y: var(--button-padding-y);
+
+    --tab-accent-bar-size: calc(var(--default-border-width) * 2);
+}
+
+//////////////////////////////////////////////
+// C. Accordion Block
+//////////////////////////////////////////////
+
+.tabs {
+    @extend %custom-properties;
 }
 
 ////////////////////////////////////////
@@ -33,28 +42,39 @@ In this file:
     list-style: none;
     position: relative;
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        height: var(--tab-accent-bar-size);
+        background-color: currentColor;
+        opacity: 0.125;
+        display: none;
+    }
+
     > li > a,
     > li > button {
         position: relative;
-        padding: var(--tab-padding-y) var(--tab-padding-x);
+        padding: var(--tab-button-padding-y) var(--tab-button-padding-x);
 
+        background-color: transparent;
         display: block;
         width: 100%;
         text-align: center;
-        
-        // @extend %subtle-fill !optional;
-        // --subtle-fill-opacity: 0.05;
-
-        // &::after {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     left: 0;
-        //     height: var(--accent-bar-size);
-        //     background-color: currentColor;
-        //     opacity: 0.125;
-        // }
+    
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: var(--tab-accent-bar-size);
+            background-color: currentColor;
+            display: none;
+        }
     }
 
     [aria-current="page"],
@@ -62,50 +82,12 @@ In this file:
         font-weight: var(--body-font-weight-bold);
 
         &::after {
-            opacity: 1;
+            display: block;
         }
     }
 }
 
-.tabs-nav:not([class*="tabs-nav--across"]) {
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        height: var(--accent-bar-size);
-        background-color: currentColor;
-        opacity: 0.125;
-        display: none;
-    }
-
-    > li{
-        margin-bottom: var(--accent-bar-size);
-    }
-
-    > li > a,
-    > li > button {
-        padding-bottom: calc( var(--tab-padding-y) + var(--accent-bar-size));
-
-        &::after,
-        &::before {
-            display: none;
-        }
-
-        &::after {
-            top: 100%;
-        }
-    }
-
-    [aria-current="page"],
-    [aria-selected="true"] {
-        &::after,
-        &::before {
-            display: block;
-        }
-    }
+.tabs-nav {
 
     @each $breakpoint in map.keys(breakpoint.$breakpoints) {
         @include breakpoint.breakpoints-up($breakpoint) {
@@ -136,14 +118,7 @@ In this file:
 
     > li > a,
     > li > button {
-        padding-top: calc(var(--tab-padding-y) + var(--accent-bar-size));
-    }
-
-    [aria-current="page"],
-    [aria-selected="true"] {
-        &::before {
-            display: none;
-        }
+        padding-top: calc(var(--tab-button-padding-y) + var(--tab-accent-bar-size));
     }
 
     @each $breakpoint in map.keys(breakpoint.$breakpoints) {
