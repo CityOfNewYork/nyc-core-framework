@@ -214,3 +214,12 @@ a[data-logo="brand"] {
     --accordion-padding-x: var(--spacer-2);
     --accordion-padding-y: 0.75;
 }
+
+#icon-view-toggle {
+
+    [aria-selected="true"] {
+        background-color: var(--light);
+        color: var(--primary);
+
+    }
+}
