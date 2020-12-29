@@ -5,7 +5,7 @@ title: "Navigation"
 
 <div class="container narrow margin-y-4">
     <p>
-        The NYC Core Framework provides an assortment of prebuilt, responsive navigation menus.
+        A surprising and simple approach with a variety of responsive navigation and menu options.
     </p>
 </div>
 <!-- .container -->
@@ -73,7 +73,7 @@ title: "Navigation"
         </nav>
 
         <div class="primary-nav__buttons">
-            <button class="button button--icon-only" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-below">
+            <button class="button button--icon-only menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-below">
                 <span class="nyc_icon_menu"></span>
             </button>
             <button class="button button--icon-only" aria-label="Language">
@@ -168,7 +168,7 @@ title: "Navigation"
         <em>language</em>, <em>search</em>, or <em>login</em>).
     </p>
     <p>
-        The complete markup for the primary nav component:
+        Review the complete markup for the primary nav component as shown in Figure 1.
     </p>
 </div>
 <!-- .container -->
@@ -241,7 +241,7 @@ title: "Navigation"
     </pre>
     <figcaption>
         <p>
-            Figure 3 - Example HTML for the <em>primary nav</em> component.
+            Figure 1
         </p>
     </figcaption>
 </figure>
@@ -315,7 +315,7 @@ title: "Navigation"
 
 <div class="container narrow margin-y-4">
     <h2>Generic Navigation</h2>
-    <p>Create a simple vertical navigation anywhere with the <code>.nav</code> component class added to a <code>ul</code> with links inside of its <code>li</code> tags.</p>
+    <p>Create a simple vertical navigation with the <code>.nav</code> component class added to a list (using the <code>ul</code> tag) of links (Figure 2).</p>
 </div>
 <!-- .container -->
 
@@ -356,13 +356,13 @@ title: "Navigation"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 1 - Simple vertical navigation menu.</p>
+        <p>Figure 2</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        For a horizontal menu, apply the <code>.nav--horizontal</code> modifier class.
+        For a horizontal menu, apply the <code>.nav--horizontal</code> modifier class (Figure 3).
     </p>
 </div>
 <!-- .container -->
@@ -404,15 +404,15 @@ title: "Navigation"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - Simple horizontal menu</p>
+        <p>Figure 3</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
         The <code>.nav--horizontal</code> modifier class accepts an additional chained breakpoint modifier (e.g.,
-        <code>--md</code>). With the <code>.nav--horizontal--md</code> class present, the navigation below starts as a vertical menu and
-        changes into a horizontal menu at the medium (md) breakpoint.
+        <code>--md</code>). With the <code>.nav--horizontal--md</code> class, the navigation below begins as a vertical menu and
+        changes into a horizontal menu at the medium breakpoint (Figure 4).
     </p>
 </div>
 <!-- .container -->
@@ -455,13 +455,13 @@ title: "Navigation"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 3 - Horizontal navigation with breakpoint modifier.</p>
+        <p>Figure 4</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        Use our <a href="#1">flex utilities</a> for centered or right-aligned navigation.
+        Use the available <a href="#1">flex utilities</a> for centered or right-aligned navigation (Figure 5).
     </p>
 </div>
 <!-- .container -->
@@ -527,7 +527,86 @@ title: "Navigation"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 4 - Added flex utilities provide centered and right-justified navigation.</p>
+        <p>Figure 5</p>
+    </figcaption>
+</figure>
+
+<hr class="margin-y-5" id="navItemSpacing">
+
+<div class="container narrow margin-y-4">
+    <h2>List Item Spacing</h2>
+    <p>
+        With the <code>.nav</code> component, list items are separated with margin using relative (<em>em</em>) units. This way, the spacing
+        of list items adjusts to the list's font-size, whether inherited or explicit. In some cases, such as a list of smaller buttons, you may want more
+        concise spacing (using <em>rem</em> units) between list items.
+    </p>
+    <p>
+        On the <code>.nav</code> selector, add the modifier class <code>.nav--gap-{x}</code>, where
+        <strong><em>x</em></strong> equals one of the available <a href="#!">spacing units</a> (similar to the <a href="#1">grid-gap modifiers</a>).
+    </p>
+    <p>
+        With the example below, the first list is without a gap modifier and has default spacing, vis-a-vis the second
+        list example where the <code>.nav--gap-1</code> modifier is present, creating tighter, non-relative space between the list items.
+    </p>
+</div>
+
+<figure class="container narrow margin-y-4">
+
+    <div class="aspect-ratio aspect-ratio--3by2 border">
+        <div class="aspect-ratio__content flex-row align-items-center">
+            <div class="width-100">
+                <ul class="nav nav--horizontal justify-content-center margin-y-4">
+                    <li>
+                        <a class="button theme-primary rounded" href="#1" aria-label="Home">
+                            Link
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button theme-primary rounded" href="#1" aria-label="Home">
+                            Link
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button theme-primary rounded" href="#1" aria-label="Home">
+                            Link
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav--gap-1 nav--horizontal justify-content-center margin-y-4">
+                    <li>
+                        <a class="button theme-primary rounded" href="#1" aria-label="Home">
+                            Link
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button theme-primary rounded" href="#1" aria-label="Home">
+                            Link
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button theme-primary rounded" href="#1" aria-label="Home">
+                            Link
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;ul class="nav nav--gap-1 nav--horizontal"&gt;
+            ...
+            &lt;/ul&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>
+            Figure 6
+        </p>
     </figcaption>
 </figure>
 
@@ -535,7 +614,7 @@ title: "Navigation"
 
 <div class="container narrow margin-y-4">
     <h2>Bordered Navigation</h2>
-    <p>Add the <code>.nav--divider</code> modifier class to a <code>.nav</code> selector for a vertical, bordered navigation.</p>
+    <p>Add the <code>.nav--divider</code> modifier class to a <code>.nav</code> selector for a vertical, bordered navigation (Figure 7).</p>
 </div>
 <!-- .container -->
 
@@ -576,7 +655,7 @@ title: "Navigation"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 6 - Simple vertical divided menu</p>
+        <p>Figure 7</p>
     </figcaption>
 </figure>
 
@@ -748,7 +827,7 @@ title: "Navigation"
 <div class="container narrow margin-y-4">
     <p>
         All that is needed to create a dropdown is the <code>data-toggle="dropdown"</code> attribute on a link, and
-        a sibling <code>&lt;ul&gt;</code> with the <code>nav__dropdown</code> class, highlighted in the figure below.
+        a sibling <code>&lt;ul&gt;</code> with the <code>.nav__dropdown</code> class, highlighted in the figure below.
     </p>
 </div>
 
@@ -785,7 +864,7 @@ title: "Navigation"
 
 <div class="container narrow margin-y-4">
     <p>
-        Dropdowns work as expected within verticle navigation:
+        Dropdowns work as expected within vertical navigation:
     </p>
 </div>
 
