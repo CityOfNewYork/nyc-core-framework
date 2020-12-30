@@ -8,13 +8,10 @@ title: "Get Started"
         Make beautiful, accessible websites.
     </h2>
     <p>
-        The NYC Core Framework is an open-source design system for building modern websites. The Framework aims to
-        remove technical barriers for those with limited resources. It provides a wealth of customizable components
-        accessible via <a href="#1">CDN</a>.
+        The NYC Core Framework is an open-source design system for building modern websites. The Framework aims to remove technical barriers for those with limited resources. It provides a wealth of customizable components accessible via <a href="#1">CDN</a>.
     </p>
     <p>
-        At the same time, the framework is ideal for seasoned developers and complex projects. Install it with NPM,
-        customize your build with Webpack, or use it in your next a React App.
+        At the same time, the framework is ideal for seasoned developers and complex projects. Install it with NPM, customize it with Webpack, or use it in your next a React App.
     </p>
 
     <ul class="nav nav--gap-2 nav--horizontal--md text-primary font-size-md">
@@ -47,26 +44,26 @@ title: "Get Started"
 <div class="container narrow margin-y-4">
     <h2>Framework at a Glance</h2>
     <p>
-        We build and maintain the Framework using modular CSS (SASS) and JavaScript (es6+). Figure 1 (bellow) depicts the folder and file tree that make up the Framework proper:
+        We build and maintain the Framework using modular CSS (SASS) and JavaScript (es6+). Figure 1 (bellow) depicts the general folder and file tree that makes up the Framework proper:
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">    
-    <pre class="hide-toolbar" data-line="4,6,9,10,11">
+    <pre class="hide-toolbar" data-line="4,6,8">
         <code class="language-treeview">
             nyc-core-framework/
             ├── dist/
             │   ├── css/
-            |   │   └── nyc_core.css
+            │   │   └── nyc_core.css
             │   ├── js/
-            |   │   └── nyc_core.js
+            │   │   └── nyc_core.js
             ├── src/
             │   └── modules/
-            │       ├── module-name/
+            │       ├── [module-name]/
             │       │   ├── _style.scss
             │       │   └── index.js
-            |       └── index.js
+            │       └── index.js
             ├── images/
             └── index.html
         </code>
@@ -78,17 +75,13 @@ title: "Get Started"
 
 <div class="container narrow margin-y-4"> 
     <p>
-        Each module is a folder within the /src/modules/ directory. We use Webpack to bundle all modules into one CSS file, and one JavaScript file. This helps maintain (and
-        future-proof) the framework while accounting for out-of-date browsers.
-    </p>
-    <h3>CSS and JS Dependencies</h3>
-    <p>
-        In Figure 1 (above), notice the highlighted files: <strong>/dist/css/nyc_core.css</strong> (line 4),
-        <strong>/dist/js/nyc_core.js</strong> (line 6).
+        The <strong>/src/modules/</strong> <a href="https://github.com/CityOfNewYork/nyc-core-framework/tree/new-version/src/modules" target="_blank">directory</a> (Figure 1, line 8) contains the framework <em>modules</em>. Each <em>module</em> (e.g., <em>button</em>) is a directory containing two files: <strong>_style.scss</strong> and <strong>index.js</strong>.
     </p>
     <p>
-        These files are two of the three required dependencies of the NYC Core Framework. The third dependency is for
-        icons. Follow our Quick Start instructions (below) to learn how to use each of the three dependencies.
+        We use a module bundler to process all modules into a single CSS file, and a single JavaScript file. This helps maintain (and future-proof) the framework while accounting for out-of-date browsers. Figure 1 highlights these files: <strong>/dist/css/nyc_core.css</strong> (line 4), <strong>dist/js/nyc_core.js</strong>/ (line 6).
+    </p>
+    <p>
+       These files are two of the three required dependencies of the framework. The third dependency is for icons. Follow our <em>Quick Start</em> instructions for including these dependencies (via CDN).
     </p>
 </div>
 <!-- .container -->
@@ -134,7 +127,7 @@ title: "Get Started"
 
                     &lt;main id="skip-header-content"&gt;
 
-                        &lt;h1&gt;Hello New York City&lt;/h1&gt;
+                        &lt;h1&gt;Hello NYC&lt;/h1&gt;
 
                     &lt;/main&gt;
 
@@ -153,14 +146,6 @@ title: "Get Started"
     </figcaption>
 </figure>
 
-<div class="container narrow margin-y-4">
-    <p>
-        Highlighted in Figure 2, line 8 and 11-15 are required for Internet Explorer 11. Lines 26 and 47
-        are required for the Framework. Learn what these scripts do with the table below.
-    </p>
-</div>
-<!-- .container -->
-
 <figure class="container narrow margin-y-4">
     <table class="table table--edge">
         <caption class="screen-reader-only">
@@ -177,7 +162,7 @@ title: "Get Started"
                 <td>3</td>
                 <td>
                     <p>
-                        On the HTML tag, the <code>lang="en"</code> attrribute sets the default language (English). The <code>dir="ltr"</code> attribute sets the default text direction (left to right).
+                        On the HTML tag, the <code>lang="en"</code> attribute sets the default language (English). The <code>dir="ltr"</code> attribute sets the default text direction (left to right).
                     </p>
                 </td>
             </tr>
@@ -194,7 +179,7 @@ title: "Get Started"
                 <td>
                     <p>
                         CDN Stylesheet link to <a href="{{ site.baseurl }}/icons/">NYC Core Icons</a>,
-                        our very own open-source icon library, for iconography across the NYC Core Framework.
+                        our very own open-source icon library.
                     </p>
                 </td>
             </tr>
@@ -207,7 +192,7 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>25,27,33</td>
+                <td>25, 27, 33</td>
                 <td>
                     <p>
                         Minimal regions of your page. Each with a unique identifier (<code>id</code> attribute).
@@ -231,7 +216,7 @@ title: "Get Started"
 
 <div class="container narrow margin-y-4">
     <p>
-        That's it! With the all of the required scripts in place, you are ready to start building with the NYC Core Framework. Next, learn how to customize your layouts look and feel.
+        That's it! With the the required scripts in place, you are ready to start building with the NYC Core Framework. Next, learn how to customize your layouts look and feel.
     </p>
 </div>
 <!-- .container -->
