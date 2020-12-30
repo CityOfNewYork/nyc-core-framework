@@ -226,12 +226,12 @@ title: "Customization"
 <div class="container narrow margin-y-4">
     <h2>Reference Guide: CSS Variables</h2>
     <p>
-        CSS Variables are hierarchal, or <strong>scoped</strong>. A variable's scope simply determines its reach
-        throughout the DOM tree.
+        CSS Variables are hierarchal, or <strong>scoped</strong>. AA variable's scope determines its reach throughout the DOM tree..
     </p>
     <p>
-        All CSS Variables in the framework are either scoped to the document using the <code>:root</code> psuedo selector (available to the entire page), or
-        scoped to their relative parent selector (e.g., <code>.card</code>) where they are available only to that selector (Figure 5). 
+        All CSS Variables in the framework are either scoped to the document or to a block. Document scoped variables
+        use the <code>:root</code> psuedo selector (available to the entire page). Block scoped variables use their selector class
+        (e.g., <code>.card</code>). These variables are available only to their selector (Figure 5).
     </p>
 </div>
 <!-- .container -->
@@ -261,8 +261,10 @@ title: "Customization"
 </figure>
 <div class="container narrow margin-y-4">
     <p>
-        A comprehessive list of all CSS variables available throughout the
-        NYC Core Framework are captured within the following table.
+        The following table accounts for all CSS variables within the NYC Core framework. Pay close attention to scope of each set of variables (noted under each header in the table). 
+    </p>
+    <p>
+        When declaring new values within your own CSS, be sure their scopes match.
     </p>
 </div>
 <!-- .container -->
@@ -286,3 +288,9 @@ title: "Customization"
         <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
     </a>
 </div>
+
+
+:root {
+    --accordion-padding-x: var(--spacer-2);
+    --accordion-padding-y: 0.75;
+}
