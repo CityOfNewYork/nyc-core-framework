@@ -5,30 +5,30 @@ title: "Buttons"
 
 <div class="container narrow margin-y-4">
     <p>
-        Our predefined text and icon classes provide a variety of distinct, actionable button styles.
+        An assortment of distinct, actionable button styles available with our predefined component, utility, and
+        modifier classes.
     </p>
 </div>
 <!-- .container -->
 
-{% include accessibility-spotlight.html content='
-    <p>
-        Like our <a href="#1">navigation</a> links, buttons include visible hover and focus states to
-        communicate their current state to the user. Icon-only buttons provide text for screen readers.
-    </p>
-    '
-%}
+{% capture as_body %}
+<p>
+    Like our <a href="{{ site.baseurl }}/docs/navigation">navigation</a> links, buttons include visible hover and focus states to
+    communicate their current state to the user. Icon-only buttons provide text for screen readers.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
 
 <hr class="margin-y-5" id="theBasicButton">
 
 <div class="container narrow margin-y-4">
-    <h2>The Basic Button</h2>
-
+    <h2>The Button Selector</h2>
     <p>
-        All buttons on in the NYC Core Framework require the definer class <code>.button</code> on an <code>&lt;a&gt;</code> or
-        <code>&lt;button&gt;</code> tag. By default, <code>.button</code> selectors inherit text color and font size
-        from their parent. The example below is a generic button with no color or style yet applied.
+        Buttons within the NYC Core Framework each require the <code>.button</code> definer class on an <code>&lt;a&gt;</code> or
+        <code>&lt;button&gt;</code> tag (Figure 1 below). By default, <code>.button</code> selectors inherit text color and font size
+        from their parent. The example below is a generic <code>.button</code> selector with no additional styles yet applied.
     </p>
-
 </div>
 <!-- .container -->
 
@@ -45,15 +45,19 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <pre>
+    <pre class="hide-toolbar">
         <code class="language-html">
             &lt;a class="button" href="#1"&gt;
                 Button
             &lt;/a&gt;
+            
+            &lt;button class="button"&gt;
+                Button
+            &lt;/button&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 1 - The button definer class applied to an <code>&lt;a&gt;</code> tag.</p>
+        <p>Figure 1</p>
     </figcaption>
 </figure>
 
@@ -77,7 +81,7 @@ title: "Buttons"
     <h2>Adding Color</h2>
 
     <p>
-        Add color to a <code>.button</code> selector with our <a href="{{ site.baseurl }}/docs/color-system/#backgroundColorClasses">background-color utility classes</a>.
+        Add color to a <code>.button</code> selector with our <a href="{{ site.baseurl }}/docs/color-system/#themeColorClasses">theme-color utilities</a>.
         These classes automatically apply the button's appropriate text color.
     </p>
 

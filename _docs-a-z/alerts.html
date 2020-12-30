@@ -11,20 +11,21 @@ title: "Alerts"
 </div>
 <!-- .container -->
 
-{% include accessibility-spotlight.html content='
-    <p>
-        When modifying alert colors, be sure to check that your colors meet a sufficient <a href="#1">contrast
-            ratio</a>. The colors provided in the Framework already do.
-    </p>
-    <p>
-        Never rely on color alone to convey meaning. Include a visual icon in alerts for those who
-        experience colors differently.
-    </p>
-    <p>
-       Include an <a href="#1"><em>alert role</em></a> for assistive technology.
-    </p>
-    '
-%}
+{% capture as_body %}
+<p>
+    When modifying alert colors, be sure to check that your colors meet a sufficient <a href="#1">contrast
+        ratio</a>. The colors provided in the Framework already do.
+</p>
+<p>
+    Never rely on color alone to convey meaning. Include a visual icon in alerts for those who
+    experience colors differently.
+</p>
+<p>
+    Include an <a href="#1"><em>alert role</em></a> for assistive technology.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
 
 <hr class="margin-y-5" id="Alert Types">
 

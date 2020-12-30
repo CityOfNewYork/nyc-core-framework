@@ -11,12 +11,13 @@ title: "Color System"
 </div>
 <!-- .container -->
 
-{% include accessibility-spotlight.html content='
-    <p>
-        When selecting colors for your theme, you must check that your colors meet a sufficient <a href="#1">contrast ratio</a>.
-    </p>
-    '
-%}
+{% capture as_body %}
+<p>
+    When selecting colors for your theme, you must check that your colors meet a sufficient <a href="#1">contrast ratio</a>.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
 
 <hr class="margin-y-5" id="basicNavigation">
 

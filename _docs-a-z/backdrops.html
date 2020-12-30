@@ -12,14 +12,15 @@ title: "Backdrops"
 </div>
 <!-- .container -->
 
-{% include accessibility-spotlight.html content='
-    <p>
-        Backdrops replace CSS background images with inline HTML images so screen readers can read the
-        image\'s <em>alt</em> text.
-    </p>
-    <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
-    '
-%}
+{% capture as_body %}
+<p>
+    Backdrops replace CSS background images with inline HTML images so screen readers can read the
+    image\'s <em>alt</em> text.
+</p>
+<p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
 
 <hr class="margin-y-5" id="imageSizeProportional">
 

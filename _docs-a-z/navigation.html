@@ -5,19 +5,21 @@ title: "Navigation"
 
 <div class="container narrow margin-y-4">
     <p>
-        A surprising and simple approach with a variety of responsive navigation and menu options.
+        A surprising and simple approach to a variety of responsive navigation and menu options.
     </p>
 </div>
 <!-- .container -->
 
-{% include accessibility-spotlight.html content='
-    <p>
-        Like our buttons, navigation features visible hover and focus states to communicate a button\'s
-        current state to the user.
-    </p>
-    <p>Learn more about <a href="#1">visible hover and focus</a>.</p>
-    '
-%}
+
+{% capture as_body %}
+<p>
+    Like our <a href="{{ site.baseurl }}/docs/buttons">buttons</a>, navigation features visible hover and focus states to communicate a button\'s
+    current state to the user.
+</p>
+<p>Learn more about <a href="#1">visible hover and focus</a>.</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
 
 <hr class="margin-y-5" id="primaryNavigation">
 

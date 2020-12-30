@@ -11,13 +11,14 @@ title: "Accordions"
 </div>
 <!-- .container -->
 
-{% include accessibility-spotlight.html content='
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quasi alias culpa quisquam deserunt nobis
-        molestiae.
-    </p>
-    '
-%}
+{% capture as_body %}
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quasi alias culpa quisquam deserunt nobis
+    molestiae.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
 
 <hr class="margin-y-5" id="outOfTheBox">
 

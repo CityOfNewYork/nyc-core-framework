@@ -8,9 +8,13 @@ title: "Get Started"
         Make beautiful, accessible websites.
     </h2>
     <p>
-        The NYC Core Framework is an open-source design system for building modern websites and browser-based applications.
-        Designed to remove technical barriers for teams with limited resources, it provides a
-        wealth of prebuilt front-end components customizable for projects of any size and complexity.
+        The NYC Core Framework is an open-source design system for building modern websites. The Framework aims to
+        remove technical barriers for those with limited resources. It provides a wealth of customizable components
+        accessible via <a href="#1">CDN</a>.
+    </p>
+    <p>
+        At the same time, the framework is ideal for seasoned developers and complex projects. Install it with NPM,
+        customize your build with Webpack, or use it in your next a React App.
     </p>
 
     <ul class="nav nav--gap-2 nav--horizontal--md text-primary font-size-md">
@@ -41,19 +45,15 @@ title: "Get Started"
 <hr class="margin-y-5" id="theFiles">
 
 <div class="container narrow margin-y-4">
-    <h2>The Framework at a Glance</h2>
+    <h2>Framework at a Glance</h2>
     <p>
-        The NYC Core Framework is built with <a href="https://sass-lang.com/">Sass</a>, <a
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom
-            Properties</a>, and modern <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-            Javascript</a>. The Framework proper
-        is made up of the following folder and file structure.
+        We build and maintain the Framework using modular CSS (SASS) and JavaScript (es6+). Figure 1 (bellow) depicts the folder and file tree that make up the Framework proper:
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">    
-    <pre class="hide-toolbar" data-line="4,6">
+    <pre class="hide-toolbar" data-line="4,6,9,10,11">
         <code class="language-treeview">
             nyc-core-framework/
             ├── dist/
@@ -63,7 +63,7 @@ title: "Get Started"
             |   │   └── nyc_core.js
             ├── src/
             │   └── modules/
-            │       ├── folder/
+            │       ├── module-name/
             │       │   ├── _style.scss
             │       │   └── index.js
             |       └── index.js
@@ -72,23 +72,23 @@ title: "Get Started"
         </code>
     </pre>
     <figcaption>
-        Figure 1 - The NYC Core Framework's folder and file structure.
+        Figure 1
     </figcaption>
 </figure>
 
-<div class="container narrow margin-y-4">
+<div class="container narrow margin-y-4"> 
+    <p>
+        Each module is a folder within the /src/modules/ directory. We use Webpack to bundle all modules into one CSS file, and one JavaScript file. This helps maintain (and
+        future-proof) the framework while accounting for out-of-date browsers.
+    </p>
     <h3>CSS and JS Dependencies</h3>
     <p>
-        In Figure 1 (above), notice the highlighted files: <strong>/dist/css/nyc_core.css</strong> (line
-        4), <strong>/dist/js/nyc_core.js</strong> (line 6).
+        In Figure 1 (above), notice the highlighted files: <strong>/dist/css/nyc_core.css</strong> (line 4),
+        <strong>/dist/js/nyc_core.js</strong> (line 6).
     </p>
     <p>
-        These CSS and JavaScript files are the <strong>only two dependencies</strong> generated from
-        the NYC Core Framework, and they are available to be used via CDN (Content Delivery Network). 
-    </p>
-    <p>
-        You don't need to set up a complicated development environment to use the NYC Core Framework. Follow the
-        <em>Quick Start CDN</em> intructions below to get started with our CDN.
+        These files are two of the three required dependencies of the NYC Core Framework. The third dependency is for
+        icons. Follow our Quick Start instructions (below) to learn how to use each of the three dependencies.
     </p>
 </div>
 <!-- .container -->
@@ -104,7 +104,7 @@ title: "Get Started"
 <!-- .container -->
 
 <figure class="container medium margin-y-4">
-    <pre data-line="3,8,11,12,13,14,15,23,26,32,36,42,47">
+    <pre data-line="3,8,16,19,25,27,33,36">
         <code class="language-html">
             &lt;!DOCTYPE html&gt;
 
@@ -114,13 +114,6 @@ title: "Get Started"
 
                     &lt;!-- I.E. Compatibility Mode --&gt;
                     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-
-                    &lt;!-- I.E. Custom Properties Polyfill --&gt;
-                    &lt;script&gt;
-                        window.MSInputMethodContext && document.documentMode && document.write(
-                            '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
-                        );
-                    &lt;/script&gt;
 
                     &lt;meta charset="utf-8"&gt;
                     &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
@@ -137,19 +130,15 @@ title: "Get Started"
 
                 &lt;body&gt;
 
-                    &lt;header id="global-header"&gt;
-
-                    &lt;/header&gt;
+                    &lt;header id="global-header"&gt;&lt;/header&gt;
 
                     &lt;main id="skip-header-content"&gt;
 
-                        &lt;h1&gt;Hello New York&lt;/h1&gt;
+                        &lt;h1&gt;Hello New York City&lt;/h1&gt;
 
                     &lt;/main&gt;
 
-                    &lt;footer id="global-footer"&gt;
-
-                    &lt;/footer&gt;
+                    &lt;footer id="global-footer"&gt;&lt;/footer&gt;
 
                     &lt;!-- NYC Core Javascript --&gt;
                     &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"&gt;&lt;/script&gt;
@@ -160,7 +149,7 @@ title: "Get Started"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 2 - HTML Boilerplate required for using the NYC Core Framework.</p>
+        <p>Figure 2</p>
     </figcaption>
 </figure>
 
@@ -201,16 +190,7 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>11-15</td>
-                <td>
-                    <p>
-                        This Custom Properties polyfill for IE 11 needs to placed before any stylesheet or style reference. All other browsers will not load this script. Many thanks to
-                        Tobias Buschor | <a href="#1">https://git.io/fjXMN</a>.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>23</td>
+                <td>16</td>
                 <td>
                     <p>
                         CDN Stylesheet link to <a href="{{ site.baseurl }}/icons/">NYC Core Icons</a>,
@@ -219,7 +199,7 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>26</td>
+                <td>19</td>
                 <td>
                     <p>
                         CDN link to the Framework's latest stable version of the core stylesheet.
@@ -227,16 +207,16 @@ title: "Get Started"
                 </td>
             </tr>
             <tr>
-                <td>32, 36, 42</td>
+                <td>25,27,33</td>
                 <td>
                     <p>
-                        Accessible landmarks (regions and roles) are present for assistive technology.
+                        Minimal regions of your page. Each with a unique identifier (<code>id</code> attribute).
                     </p>
                 </td>
             </tr>
 
             <tr>
-                <td>47</td>
+                <td>36</td>
                 <td>
                     <p>
                         CDN link The Framework's latest stable core Javascript file.
