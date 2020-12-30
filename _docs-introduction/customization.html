@@ -8,8 +8,8 @@ title: "Customization"
         Distinguish yourself without starting from scratch.
     </h2>
     <p>
-        There are two different ways to customize the NYC Core Framework—with our customizable CDN (covered in
-        the following section) or with a <a href="#1">Webpack</a> development environment.
+        There are two ways to customize the NYC Core Framework. The CDN Stylesheet allows you to redefine styles. We'll
+        cover this method in the following section. Your other option is to set up a modern development environment.
     </p>
 </div>
 <!-- .container -->
@@ -19,16 +19,12 @@ title: "Customization"
 <div class="container narrow margin-y-4">
     <h2>Customizable CDN</h2>
         <p>
-            Our <a href="{{ site.baseurl }}/docs/get-started/#quickStart">Quick Start</a> shows you how to
-            include the Framework's core stylesheet via CDN. Within the Framework, many of our
-            styles are declared using CSS custom properties, often referred to as <strong>CSS variables</strong>, the term we
-            use throughout this documentation.
+            Our <a href="{{ site.baseurl }}/docs/get-started/#quickStart">Quick Start</a> guide shows you how to include the framework's core stylesheet via CDN. Within the framework, we
+            use CSS custom properties to declare styles. CSS People often refer to CSS custom properties as <strong>CSS variables</strong>. We use this term throughout our documentation.
         </p>
         <p>
-            If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. They are
-            similar to <a href="https://sass-lang.com/documentation/variables">Sass variables</a> because they allow you to store
-            and reuse values in your CSS (Figure 6 and 7 below). CSS variables, however, provide additional
-            benefits that Sass variables do not.
+            If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. Figure 1 (below) offers a simple example of using
+            a SASS variable and a CSS Variable to achieve the same result.
         </p>
 </div>
 <!-- .container -->
@@ -37,24 +33,16 @@ title: "Customization"
 
     <pre class="hide-toolbar">
         <code class="language-scss">
+            // Primary as a SASS Variable:
+
             $primary: navy;
 
             .selector--primary{
                 background-color: $primary
             }
-        </code>
-    </pre>
 
-    <figcaption>
-        <p>Figure 1 - Basic example of Sass variable usage.</p>
-    </figcaption>
+            // Primary as a CSS Variable:
 
-</figure>
-
-<figure class="container narrow margin-y-4">
-
-    <pre class="hide-toolbar">
-        <code class="language-scss">
             --primary: navy;
 
             .selector--primary{
@@ -64,19 +52,23 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 2 - Basic example of custom property usage.</p>
+        <p>Figure 1</p>
     </figcaption>
 
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        Because CSS variables update at runtime, we can modify values from our CDN stylesheet by redeclaring values with
-        a <code>style</code> tag in the header (ideal for exploriation and prototyping), with a second stylesheet (the
-        preferred method), or even with JavaScript!
+        CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime?
+        You can declare new values from <strong>nyc_core.css</strong> anytime after that stylesheet reference.
     </p>
     <p>
-        With the following practice exercise, learn how to customize your theme colors using a second stylesheet.
+        There are different ways to declare new values for CSS variables. Adding a style tag in the header is ideal for
+        prototyping and exploring. Creating a second stylesheet is the preferred method. You can even redeclare values
+        using JavaScript!
+    </p>
+    <p>
+        In the following exercise, learn how to change your theme colors with a second stylesheet.
     </p>
 </div>
 <!-- .container -->
@@ -86,8 +78,8 @@ title: "Customization"
 <div class="container narrow margin-y-4">
     <h2>Practice Exercise: Customizing Colors</h2>
     <p>
-        Copy and paste the following HTML into a new document. Save it as <em>theming-example.html</em>
-        into your project's root directory.
+        Make new directory somewhere on your computer. Call it <strong>color-example</strong>. Copy and paste the
+        markup from Figure 2 (below) into a new HTML document. Save this document as <strong>index.html</strong> inside of the <strong>color-example</strong> directory.
     </p>
 </div>
 <!-- .container -->
@@ -150,12 +142,12 @@ title: "Customization"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 3 - HTML for color exercise.</p>
+        <p>Figure 2</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
-    <p>Preview it in a browser. It should resemble the following.</p>
+    <p>Preview <strong>index.html</strong> in a browser. It should resemble the following.</p>
 </div>
 <!-- .container -->
 
@@ -163,39 +155,38 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        These four colors (<em>primary</em>, <em>secondary</em>, <em>dark</em>, and <em>light</em>) are declared as
-        custom properties within our core stylesheet. Let's replace (or override) these values in a second
-        stylesheet referenced just below the reference to the core stylesheet.
+        Declared as CSS variables in <strong>nyc_core.css</strong>, we have four colors. They are <em>Primary</em>, <em>Secondary</em>, <em>Dark</em>, and <em>Light</em>.
+        Let's customize their color values with a second stylesheet.
     </p>
     <p>
-        Within your project, create a new CSS file and name it <em>theme-properties.css</em> and
-        save it to the <strong>/css/lib/</strong> directory.
+        Within the <strong>color-example</strong> directory, create a new directory called <strong>css</strong>. Make a new CSS file and name it
+        <strong>new-colors.css</strong>. Save it into the <strong>/css</strong> directory.
     </p>
     <p>
-        Next, open your HTML document and add a link to <em>theme-properties.css</em> below
-        <em>nyc_core.css</em>.
+        Open your HTML document. Add a link to <strong>new-colors.css</strong> somewhere below
+        <strong>nyc_core.css</strong> (Figure 3, line 5).
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container medium margin-y-4">
-    <pre>
+    <pre class="hide-toolbar" data-line="5">
         <code class="language-html">
             &lt;!-- NYC Core Stylesheet --&gt;
             &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
 
             &lt;!-- Custom Theme Properties --&gt;
-            &lt;link rel="stylesheet" href="./css/lib/theme-properties.css"&gt;
+            &lt;link rel="stylesheet" href="./css/lib/new-colors.css"&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 11 - Custom Properties declared in <em>theme-properties.css</em> will override properties in <em>nyc_core.css</em>.</p>
+        <p>Figure 3</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        With <em>theme-properties.css</em> open, include the following css, save this file, and refresh your browser.
+        With <strong>new-colors.css</strong> open, include the CSS from Figure 4. Save this file and refresh your browser.
     </p>
 
 </div>
@@ -215,7 +206,7 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 12 - The <code>:root</code> pseudo-class selector represents the root of the document.</p>
+        <p>Figure 4</p>
     </figcaption>
 
 </figure>
@@ -239,8 +230,8 @@ title: "Customization"
         throughout the DOM tree.
     </p>
     <p>
-        All CSS Variables in the Framework are either scoped to the document using the <code>:root</code> psuedo selector (available to the entire page), or
-        scoped to their relative parent selector (e.g., <code>.card</code>) where they are available only to that selector.
+        All CSS Variables in the framework are either scoped to the document using the <code>:root</code> psuedo selector (available to the entire page), or
+        scoped to their relative parent selector (e.g., <code>.card</code>) where they are available only to that selector (Figure 5). 
     </p>
 </div>
 <!-- .container -->
@@ -264,7 +255,7 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 12 - Examples of CSS variable scoping in the NYC Core Framework.</p>
+        <p>Figure 5</p>
     </figcaption>
 
 </figure>
