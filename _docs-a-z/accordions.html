@@ -5,8 +5,8 @@ title: "Accordions"
 
 <div class="container narrow margin-y-4">
     <p>
-        Accordions are most practical when only specific content might be relevant to a visitor—like an FAQ page, or
-        when several topics are covered on a single page. It's best to avoid using accordions to simply make long pages appear shorter.
+        Accordions are useful when a page covers several different topics. A good example would be an FAQ page. It's
+        best to avoid using accordions to make long pages appear shorter.
     </p>
 </div>
 <!-- .container -->
@@ -25,14 +25,14 @@ title: "Accordions"
 <div class="container narrow margin-y-4">
     <h2>Out of the Box</h2>
     <p>
-        The following example is a basic accordion with information on each of the five boroughs.
+        The following is a basic accordion in NYC Core Framework.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
 
-    <div class="accordion">
+    <div class="accordion box-shadow-1">
 
         <button
             class="accordion__button h5"
@@ -149,20 +149,18 @@ title: "Accordions"
 
 </figure>
 
-<hr class="margin-y-5" id="accordionAnatomy">
-
 <div class="container narrow margin-y-4">
-    <h2>Accordion Selectors</h2>
     <p>
-        The accordion component is made up of a parent <code>.accordion</code> selector and two required child
-        selectors: <code>.accordion__button</code> and its subsequent sibling <code>.accordion__panel</code>. These
-        child selectors depend on one another as a pair. Each pair makes up a single topic within their parent
-        accordion.
+        The accordion component requires an <code>.accordion</code> class on the parent selector. An accordion requires two child
+        selectors: <code>.accordion__button</code> followed by <code>.accordion__panel</code>. These child selectors depend on one another as a
+        pair. Each pair makes up a single topic within their parent accordion.
     </p>
+
     <p>
-        Accordions have one required granchild: the <code>.accordion__panel__content</code> selector (found within
-        <code>.accordion__panel</code>). The panel's padding is applied to <code>.accordion__panel__content</code>. 
+        There is one required granchild: the <code>.accordion__panel__content</code> selector (found within <code>.accordion__panel)</code>.
+        Padding applied to <code>.accordion__panel__content</code> allows a clean open and close transition, without jQuery.
     </p>
+
 </div>
 <!-- .container -->
 
@@ -200,7 +198,7 @@ title: "Accordions"
     </pre>
     <figcaption>
         <p>
-            Figure 1 - The NYC Core Framework's basic accordion set up.
+            Figure 1
         </p>
     </figcaption>
 </figure>
@@ -264,10 +262,9 @@ title: "Accordions"
 <div class="container narrow margin-y-4">
     <h2>Semantic Headers</h2>
     <p>
-        The the <code>.accordion__button</code> selector doesn't have to be a <code>button</code> tag. In fact, header
-        tags can be used describe the architecture of a page. For example, if an
-        accordion group lives directly below a page's <code>&lt;h1&gt;</code> tag, the accordion headers could
-        be <code>&lt;h2&gt;</code> tags.
+        The the <code>.accordion__button</code> selector doesn't have to be a button tag. In fact, header tags in the
+        accordion help describe the architecture of a page. For example, if an accordion group lives below a page's
+        <code>&lt;h1&gt;</code>, the accordion headers could be <code>&lt;h2&gt;</code> tags.
     </p>
 </div>
 <!-- .container -->
@@ -287,17 +284,16 @@ title: "Accordions"
     </pre>
     <figcaption>
         <p>
-            Figure 2 - An accordion header as <code>h2</code> tag.
+            Figure 2.
         </p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        In Figure 2 (line 2) notice the <code>h5</code> class. Our <a href="#1">header utility classes</a> are
-        particularly convenient when a semantic header (e.g. <code>&lt;h2&gt;</code>) needs to be visually bigger or
-        smaller than its natural markup style—or when something that is not a semantic
-        header (e.g. <code>&lt;button&gt;</code>) needs the appearance of a header.
+        In Figure 2 (line 2) notice the <code>.h5</code> class. Header utility classes are particularly useful in this example. When a
+        semantic header (e.g. <code>&lt;h1&gt;</code>) needs to be smaller (in visual size) than its natural markup style. You can use
+            header utilities on non-semantic tags (e.g., <code>&lt;button&gt;</code>), that need the appearance of a header.
     </p>
 </div>
 <!-- .container -->
@@ -314,7 +310,7 @@ title: "Accordions"
 
 <figure class="container narrow margin-y-4">
 
-    <div class="accordion theme-light">
+    <div class="accordion box-shadow-1">
 
         <button
             class="accordion__button h6"
@@ -433,7 +429,7 @@ title: "Accordions"
 
 <div class="container narrow margin-y-4">
     <p>
-        On the <code>.accordion__button</code> selector, set the <code>aria-expanded</code> attribute to
+        On <code>.accordion__button</code>, set the <code>aria-expanded</code> attribute to
         <code>"true"</code> (Figure 3, line 6). On the related <code>.accordion__panel</code>
         selector, include the class <code>.show</code> (Figure 3, line 11).
     </p>
@@ -443,30 +439,30 @@ title: "Accordions"
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar" data-line="6,11">
         <code class="language-html">
-                    &lt;button
-                        class="accordion__button h5"
-                        id="acc-button-id"
-                        data-toggle="accordion"
-                        aria-controls="acc-panel-id"
-                        aria-expanded="true"&gt;
-                            Manhattan
-                    &lt;/button&gt;
+            &lt;button
+                class="accordion__button h5"
+                id="acc-button-id"
+                data-toggle="accordion"
+                aria-controls="acc-panel-id"
+                aria-expanded="true"&gt;
+                    Manhattan
+            &lt;/button&gt;
 
-                    &lt;div
-                        class="accordion__panel show"
-                        id="acc-panel-id"
-                        data-accordion="panel"
-                        aria-labelledby="acc-button-id"
-                        role="region"&gt;
-                        &lt;div class="accordion__panel__content"&gt;
-                            ...
-                        &lt;/div&gt;
-                    &lt;/div&gt;
+            &lt;div
+                class="accordion__panel show"
+                id="acc-panel-id"
+                data-accordion="panel"
+                aria-labelledby="acc-button-id"
+                role="region"&gt;
+                &lt;div class="accordion__panel__content"&gt;
+                    ...
+                &lt;/div&gt;
+            &lt;/div&gt;
         </code>
     </pre>
     <figcaption>
         <p>
-            Figure 3 - Example HTML required for an accordion's panel to be open by default.
+            Figure 3
         </p>
     </figcaption>
 </figure>
