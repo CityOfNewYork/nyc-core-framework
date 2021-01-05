@@ -31,7 +31,7 @@ In this file:
 
 %custom-properties {
 
-    --form-field-padding-x: var(--spacer-2);
+    --form-field-padding-x: var(--spacer-3);
     --form-field-padding-y: var(--button-padding-y);
 
     --form-field-border-radius: 0.25em;
@@ -122,7 +122,10 @@ fieldset {
 //////////////////////////////////////////////
 
 .form-entry {
+    @extend %custom-properties;
+
     position: relative;
+    background-color: rgba(yellow, 0.25);
 
     select,
     textarea,
@@ -148,8 +151,6 @@ fieldset {
         opacity: 0.675;
     }
 
-    // text-align: left;
-
     [dir="rtl"] & {
         text-align: right;
     }
@@ -158,8 +159,8 @@ fieldset {
 form > .form-entry ~ .form-entry,
 form > .grid, 
 form > .button {
-    margin-top: var(--spacer-3);
-    margin-bottom: var(--spacer-3);
+    margin-top: var(--spacer-4);
+    margin-bottom: var(--spacer-4);
 }
 
 //////////////////////////////////////////////
@@ -167,7 +168,6 @@ form > .button {
 //////////////////////////////////////////////
 
 .form-entry__field {
-    @extend %custom-properties;
 
     position: relative;
 
@@ -178,6 +178,7 @@ form > .button {
 }
 
 .form-entry__field__label {
+    display: block;
     font-weight: var(--body-font-weight-bold);
     margin-bottom: 0.5em;
 
@@ -198,7 +199,6 @@ form > .button {
     display: inline-block !important;
 }
 
-
 .form-entry__field__input {
     position: relative;
     
@@ -218,6 +218,11 @@ form > .button {
 
     button {
         flex-shrink: 0;
+    }
+
+    .button--icon-only {
+        border-radius: inherit;
+        font-size: 80%;
     }
 
     > [class*="button--icon-only"] {
@@ -266,7 +271,7 @@ form > .button {
     font-size: 0.8em;
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
-    margin-top: var(--spacer-1);
+    margin-top: var(--spacer-2);
 }
 
 .form-entry__field__input.select {
@@ -280,8 +285,8 @@ form > .button {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: var(--spacer-2);
-        margin-right: var(--spacer-2);
+        margin-left: var(--form-field-padding-x);
+        margin-right: var(--form-field-padding-x);
     }
 
 }
@@ -323,13 +328,6 @@ form > .button {
 //////////////////////////////////////////////
 // F. Checkbox and Radio Elements
 //////////////////////////////////////////////
-
-fieldset {
-    &.form-entry > legend {
-        font-weight: bold;
-        margin-bottom: var(--spacer-2);
-    }
-}
 
 .form-entry__options {
     --gap-size: 0.5em;
@@ -490,7 +488,6 @@ fieldset {
 
 .form-entry__options__radio > input:checked ~ .radio__label,
 .form-entry__options__check > input:checked ~ .checkbox__label {
-    // color: var(--primary);
     &::before{
         opacity: 1;
     }

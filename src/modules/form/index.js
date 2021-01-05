@@ -8,6 +8,8 @@ export default class Form {
 
     constructor() {
 
+        let formSubmitted = false;
+
         const formList = document.querySelectorAll("form[novalidate]");
         const formEntryList = document.querySelectorAll(".form-entry");
 
@@ -18,6 +20,8 @@ export default class Form {
             // Handle Form Submission
 
             form.addEventListener("submit", (event) => {
+
+                formSubmitted = true;
 
                 event.preventDefault();
 
@@ -70,7 +74,10 @@ export default class Form {
 
             formEntryInput.addEventListener("change", () => {
                 console.log("I have changed, I'm different now", formEntryInput.value);
-                // checkIfEmpty(formEntryInput);
+
+                if (formSubmitted === true) {
+                    checkIfEmpty(formEntryInput);
+                }
             });
 
             // Click Into Input
@@ -130,7 +137,7 @@ export default class Form {
             return false;
         }
 
-        const invalidClasses = ["invalid", "not-cool"];
+        const invalidClasses = ["invalid", "not-formSubmitted"];
 
         const setInvalid = (field) => {
             let entryRoot = field.closest(".form-entry");
