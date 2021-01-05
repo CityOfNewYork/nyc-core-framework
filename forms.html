@@ -38,43 +38,40 @@
 
                         <div class="form-entry">
 
-                            <label class="form-entry__field">
+                            <label class="form-entry__field"
+                            data-error-description="First name is required!" 
+                            data-error-instructions="Enter your first name">
                                 <span class="form-entry__field__label">First Name</span>
                                 <span class="form-entry__field__input">
                                     <span class="nyc_icon_warn"></span>
                                     <input type="text" id="firstName" name="first_name" required>
                                 </span>
                             </label>
-                            
-                            <small class="form-entry__feedback">
-                                <strong>Error message description</strong>
-                                <span>How to fix instructions</span>
-                            </small>
 
                         </div>
                         <!-- .form-entry -->
 
                         <div class="form-entry">
 
-                            <label class="form-entry__field">
+                            <label class="form-entry__field"
+                            data-error-description="Last name is required!" 
+                            data-error-instructions="Enter your last name">
                                 <span class="form-entry__field__label">Last Name</span>
                                 <span class="form-entry__field__input">
                                     <span class="nyc_icon_warn"></span>
                                     <input type="text" id="lastName" name="last_name" required>
                                 </span>
                             </label>
-                            
-                            <small class="form-entry__feedback">
-                                <strong>Error message description</strong>
-                                <span>How to fix instructions</span>
-                            </small>
 
                         </div>
                         <!-- .form-entry -->
 
                         <div class="form-entry">
 
-                            <div class="form-entry__field">
+                            <div class="form-entry__field"
+                                data-error-description="Borough is required!" 
+                                data-error-instructions="Select a Borough"
+                            >
                                 <label class="form-entry__field__label" for="select-borough-1">Borough</label>
                                 <span class="form-entry__field__input select">
                                     <span class="nyc_icon_warn"></span>
@@ -87,11 +84,6 @@
                                         <option value="Queens">Queens</option>
                                     </select>
                                 </span>
-
-                                <small class="form-entry__feedback">
-                                    <strong>Error message description</strong>
-                                    <span>How to fix instructions</span>
-                                </small>
 
                             </div>
 

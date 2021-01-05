@@ -10,6 +10,14 @@ export default class Form {
 
         const formList = document.querySelectorAll("form[novalidate]");
         const formEntryList = document.querySelectorAll(".form-entry");
+        
+        const createErrorMessage = ((desc = "Error message description", inst = "How to fix instructions") => {
+            return `<small class="form-entry__feedback">
+                        <strong>${desc}</strong>
+                        <span>${inst}</span>
+                </small>`;
+        });
+
         let formSubmitAttempted = false;
 
         formList.forEach((form) => {
@@ -21,18 +29,33 @@ export default class Form {
                 formSubmitAttempted = true;
 
                 let errors = [];
+
                 let formErrorsList = form.querySelectorAll(":invalid");
 
                 formErrorsList.forEach((formError) => {
-                    errors.push(formError.closest(".form-entry").querySelector(".form-entry__feedback").innerText);
+
+                    let formErrorEntry = formError.closest(".form-entry__field");
+
+                    const feedback = formErrorEntry.querySelector(".form-entry__feedback");
+
+                    let errorDescription = formErrorEntry.getAttribute("data-error-description");
+                    let errorInstructions = formErrorEntry.getAttribute("data-error-instructions");
+                    let errorArray = [errorDescription, errorInstructions];
+
+                    errors.push(errorArray);
                     checkIfEmpty(formError);
+
+                    if(feedback){
+                        return;
+                    } else {
+                        formErrorEntry.insertAdjacentHTML('beforeend', createErrorMessage(errorDescription, errorInstructions));
+                    }
+
                 });
 
                 if(errors.length > 0){
                     event.preventDefault();
-                    console.log("WHOOOOOOPS!!!!!!!!!!! ", errors);
-                } else {
-                    return;
+                    console.log("WHOOOOOOPS!!!!!!!!!!!", errors);
                 }
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
@@ -68,7 +91,6 @@ export default class Form {
                 formEntry.classList.add("is-required");
                 
                 formEntryInputParent.insertBefore(errorIcon, formEntryInput);
-
             }
 
             console.log("Form Entry = ", formEntry);
