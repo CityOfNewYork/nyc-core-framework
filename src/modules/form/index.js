@@ -8,28 +8,32 @@ export default class Form {
 
     constructor() {
 
-        let formSubmitted = false;
-
         const formList = document.querySelectorAll("form[novalidate]");
         const formEntryList = document.querySelectorAll(".form-entry");
+        let formSubmitAttempted = false;
 
         formList.forEach((form) => {
-
-            console.log("I am a form => ", form);
 
             // Handle Form Submission
 
             form.addEventListener("submit", (event) => {
 
-                formSubmitted = true;
+                formSubmitAttempted = true;
 
-                event.preventDefault();
-
+                let errors = [];
                 let formErrorsList = form.querySelectorAll(":invalid");
 
                 formErrorsList.forEach((formError) => {
+                    errors.push(formError.closest(".form-entry").querySelector(".form-entry__feedback").innerText);
                     checkIfEmpty(formError);
                 });
+
+                if(errors.length > 0){
+                    event.preventDefault();
+                    console.log("WHOOOOOOPS!!!!!!!!!!! ", errors);
+                } else {
+                    return;
+                }
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
 
@@ -49,8 +53,6 @@ export default class Form {
         });
 
         formEntryList.forEach((formEntry) => {
-
-            // const formEntryInputContainer  = formEntry.querySelector("[class*='form-entry__field__input]");
 
             const formEntryInput = formEntry.querySelector("input, select, textarea");
             const formEntryInputParent = formEntryInput.parentNode;
@@ -75,7 +77,7 @@ export default class Form {
             formEntryInput.addEventListener("change", () => {
                 console.log("I have changed, I'm different now", formEntryInput.value);
 
-                if (formSubmitted === true) {
+                if (formSubmitAttempted === true) {
                     checkIfEmpty(formEntryInput);
                 }
             });
@@ -137,7 +139,7 @@ export default class Form {
             return false;
         }
 
-        const invalidClasses = ["invalid", "not-formSubmitted"];
+        const invalidClasses = ["invalid"];
 
         const setInvalid = (field) => {
             let entryRoot = field.closest(".form-entry");
