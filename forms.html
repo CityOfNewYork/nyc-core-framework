@@ -36,46 +36,51 @@
 
                     <form novalidate>
 
-                        <div class="form-entry">
-
-                            <label class="form-entry__field"
+                        <div class="form-entry"
+                            data-required="true"
                             data-error-description="First name is required!" 
-                            data-error-instructions="Enter your first name">
+                            data-error-instructions="Enter your first name"
+                        >
+
+                            <label class="form-entry__field">
                                 <span class="form-entry__field__label">First Name</span>
                                 <span class="form-entry__field__input">
                                     <span class="nyc_icon_warn"></span>
-                                    <input type="text" id="firstName" name="first_name" required>
+                                    <input type="text" id="firstName" name="first_name">
                                 </span>
                             </label>
 
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry">
-
-                            <label class="form-entry__field"
+                        <div class="form-entry"
+                            data-required="true"
                             data-error-description="Last name is required!" 
-                            data-error-instructions="Enter your last name">
+                            data-error-instructions="Enter your last name"
+                        >
+
+                            <label class="form-entry__field">
                                 <span class="form-entry__field__label">Last Name</span>
                                 <span class="form-entry__field__input">
                                     <span class="nyc_icon_warn"></span>
-                                    <input type="text" id="lastName" name="last_name" required>
+                                    <input type="text" id="lastName" name="last_name">
                                 </span>
                             </label>
 
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry">
+                        <div class="form-entry"
+                            data-required="true"
+                            data-error-description="Borough is required!" 
+                            data-error-instructions="Select a Borough"
+                        >
 
-                            <div class="form-entry__field"
-                                data-error-description="Borough is required!" 
-                                data-error-instructions="Select a Borough"
-                            >
+                            <div class="form-entry__field">
                                 <label class="form-entry__field__label" for="select-borough-1">Borough</label>
                                 <span class="form-entry__field__input select">
                                     <span class="nyc_icon_warn"></span>
-                                    <select id="select-borough-1" name="Boroughs" required>
+                                    <select id="select-borough-1" name="Boroughs">
                                         <option value="">Select</option>
                                         <option value="Bronx">Bronx</option>
                                         <option value="Brooklyn">Brooklyn</option>
@@ -112,17 +117,11 @@
                                 What is the priority of this request?
                             </legend>
 
-                            <small class="form-entry__feedback">
-                                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                <strong>Error message description</strong>
-                                <span>How to fix instructions</span>
-                            </small>
-
                             <div class="form-entry__options options--divider border">
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" checked required>
+                                        <input type="radio" name="priority-of-request" required>
                                         <span class="radio__label">
                                             High
                                         </span>

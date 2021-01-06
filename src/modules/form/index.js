@@ -8,41 +8,37 @@ export default class Form {
 
     constructor() {
 
+        // Get each form on page
         const formList = document.querySelectorAll("form[novalidate]");
+        
+        // Get each form entry on page (with and without form parent)
         const formEntryList = document.querySelectorAll(".form-entry");
         
-        const createErrorMessage = ((desc = "Error message description", inst = "How to fix instructions") => {
-            return `<small class="form-entry__feedback">
-                        <strong>${desc}</strong>
-                        <span>${inst}</span>
-                </small>`;
-        });
-
         let formSubmitAttempted = false;
-
+        
         formList.forEach((form) => {
 
-            // Handle Form Submission
+            // Submission Handler
 
             form.addEventListener("submit", (event) => {
 
                 formSubmitAttempted = true;
 
-                let errors = [];
+                let errorsArray = [];
 
                 let formErrorsList = form.querySelectorAll(":invalid");
 
                 formErrorsList.forEach((formError) => {
 
-                    let formErrorEntry = formError.closest(".form-entry__field");
+                    let formErrorEntry = formError.closest(".form-entry");
 
                     const feedback = formErrorEntry.querySelector(".form-entry__feedback");
 
                     let errorDescription = formErrorEntry.getAttribute("data-error-description");
                     let errorInstructions = formErrorEntry.getAttribute("data-error-instructions");
-                    let errorArray = [errorDescription, errorInstructions];
+                    let errorFeedback = [errorDescription, errorInstructions];
 
-                    errors.push(errorArray);
+                    errorsArray.push(errorFeedback);
                     checkIfEmpty(formError);
 
                     if(feedback){
@@ -53,9 +49,8 @@ export default class Form {
 
                 });
 
-                if(errors.length > 0){
+                if (errorsArray.length > 0) {
                     event.preventDefault();
-                    console.log("WHOOOOOOPS!!!!!!!!!!!", errors);
                 }
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
@@ -77,8 +72,22 @@ export default class Form {
 
         formEntryList.forEach((formEntry) => {
 
-            const formEntryInput = formEntry.querySelector("input, select, textarea");
+            const inputSelectors =  "input, select, textarea";
+
+            const formEntryInput = formEntry.querySelector(inputSelectors);
             const formEntryInputParent = formEntryInput.parentNode;
+
+            if (formEntry.hasAttribute("data-required")) {
+
+               const requiredInputs = formEntry.querySelectorAll(inputSelectors);
+
+               requiredInputs.forEach((requiredInput) => {
+                requiredInput.setAttribute("required", "true");
+               })
+
+            }
+
+            
 
             let errorIcon = document.createElement("span");
             errorIcon.classList.add("nyc_icon_warn");
@@ -86,11 +95,11 @@ export default class Form {
             // Required
 
             if(formEntryInput.hasAttribute("aria-required")) {
-                console.log("This entry is required!");
-                formEntryInput.setAttribute("required", "true");
                 formEntry.classList.add("is-required");
+                // formEntryInput.setAttribute("required", "true");
                 
                 formEntryInputParent.insertBefore(errorIcon, formEntryInput);
+                // formEntry.insertAdjacentHTML('afterbegin', errorIcon);
             }
 
             console.log("Form Entry = ", formEntry);
@@ -146,8 +155,15 @@ export default class Form {
         
         });
     
+        const createErrorMessage = ((desc = "Error message description", inst = "How to fix instructions") => {
+            return `<small class="form-entry__feedback">
+                        <strong>${desc}</strong>
+                        <span>${inst}</span>
+                </small>`;
+        });
+
         const checkIfEmpty = (field) => {
-            if (isEmpty(field.value.trim())) {
+            if (isEmpty(field.value)) {
                 setInvalid(field);
                 return true;
             } else {

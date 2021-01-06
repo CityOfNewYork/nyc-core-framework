@@ -154,8 +154,8 @@ fieldset {
         text-align: right;
     }
 
-    &[data-error-description]{
-        background-color: rgba(yellow, 0.25);
+    &[data-required]{
+        // background-color: rgba(yellow, 0.25);
     }
 }
 
