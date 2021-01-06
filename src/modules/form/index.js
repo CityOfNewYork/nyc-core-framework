@@ -22,8 +22,8 @@ export default class Form {
 
             form.addEventListener("submit", (event) => {
                 
-                event.preventDefault();
                 
+                    event.preventDefault();
                 formSubmitAttempted = true;
 
                 let errorsArray = [];
@@ -33,13 +33,12 @@ export default class Form {
                 formErrorsList.forEach((formError) => {
 
                     let formErrorEntry = formError.closest(".form-entry");
+                    let formErrorEntryField = formErrorEntry.querySelector(".form-entry__field__label");
                     let formErrorFieldType = formError.tagName;
 
                     formErrorEntry.classList.add("is-invalid");
 
                     console.log("Form Error Field Type is :: ", formErrorFieldType);
-
-
                     
                     const feedback = formErrorEntry.querySelector(".form-entry__feedback");
 
@@ -50,7 +49,7 @@ export default class Form {
                     if(feedback){
                         return;
                     } else {
-                        formErrorEntry.insertAdjacentHTML('beforeend', createErrorMessage(errorDescription, errorInstructions));
+                        formErrorEntryField.insertAdjacentHTML('afterend', createErrorMessage(errorDescription, errorInstructions));
                     }
 
                     errorsArray.push(errorFeedback);
