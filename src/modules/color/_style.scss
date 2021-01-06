@@ -174,9 +174,10 @@ body:not([class*="theme-"]),
     }
     
     .alert--warn,
-    .invalid .form-entry__feedback, 
-    .invalid .form-entry__field__input::after,
-    .invalid [class*="_icon_warn"]
+    .is-invalid .form-entry__feedback, 
+    .is-invalid .form-entry__field__input::after,
+    .is-invalid [class*="_icon_warn"],
+    .is-invalid .form-entry__options
     {
         color: var(--warn-color);
     }

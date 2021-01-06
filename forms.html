@@ -45,7 +45,6 @@
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">First Name</span>
                                 <span class="form-entry__field__input">
-                                    <span class="nyc_icon_warn"></span>
                                     <input type="text" id="firstName" name="first_name">
                                 </span>
                             </label>
@@ -62,7 +61,6 @@
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Last Name</span>
                                 <span class="form-entry__field__input">
-                                    <span class="nyc_icon_warn"></span>
                                     <input type="text" id="lastName" name="last_name">
                                 </span>
                             </label>
@@ -79,7 +77,6 @@
                             <div class="form-entry__field">
                                 <label class="form-entry__field__label" for="select-borough-1">Borough</label>
                                 <span class="form-entry__field__input select">
-                                    <span class="nyc_icon_warn"></span>
                                     <select id="select-borough-1" name="Boroughs">
                                         <option value="">Select</option>
                                         <option value="Bronx">Bronx</option>
@@ -111,7 +108,9 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <fieldset class="form-entry">
+                        <fieldset class="form-entry"
+                            data-required="true"
+                        >
 
                             <legend class="form-entry__field__label">
                                 What is the priority of this request?
@@ -121,7 +120,7 @@
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" required>
+                                        <input type="radio" name="priority-of-request">
                                         <span class="radio__label">
                                             High
                                         </span>
@@ -130,7 +129,7 @@
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" required>
+                                        <input type="radio" name="priority-of-request">
                                         <span class="radio__label">
                                             Medium
                                         </span>
@@ -139,7 +138,7 @@
 
                                 <div>
                                     <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request" required>
+                                        <input type="radio" name="priority-of-request">
                                         <span class="radio__label">
                                             Low
                                         </span>

@@ -155,7 +155,7 @@ fieldset {
     }
 
     &[data-required]{
-        // background-color: rgba(yellow, 0.25);
+        background-color: rgba(yellow, 0.25);
     }
 }
 
@@ -198,7 +198,7 @@ form > .button {
 
 // Required Asterisk
 
-.is-required .form-entry__field__label::after {
+[data-required="true"] .form-entry__field__label::after {
     display: inline-block !important;
 }
 
@@ -320,7 +320,7 @@ form > .button {
     padding-right: var(--form-field-padding-x);
 }
 
-.invalid {
+.is-invalid {
     .form-entry__feedback,
     .form-entry__field__input .nyc_icon_warn
     {

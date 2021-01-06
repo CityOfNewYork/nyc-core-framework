@@ -21,7 +21,9 @@ export default class Form {
             // Submission Handler
 
             form.addEventListener("submit", (event) => {
-
+                
+                event.preventDefault();
+                
                 formSubmitAttempted = true;
 
                 let errorsArray = [];
@@ -31,15 +33,19 @@ export default class Form {
                 formErrorsList.forEach((formError) => {
 
                     let formErrorEntry = formError.closest(".form-entry");
+                    let formErrorFieldType = formError.tagName;
 
+                    formErrorEntry.classList.add("is-invalid");
+
+                    console.log("Form Error Field Type is :: ", formErrorFieldType);
+
+
+                    
                     const feedback = formErrorEntry.querySelector(".form-entry__feedback");
 
                     let errorDescription = formErrorEntry.getAttribute("data-error-description");
                     let errorInstructions = formErrorEntry.getAttribute("data-error-instructions");
                     let errorFeedback = [errorDescription, errorInstructions];
-
-                    errorsArray.push(errorFeedback);
-                    checkIfEmpty(formError);
 
                     if(feedback){
                         return;
@@ -47,10 +53,13 @@ export default class Form {
                         formErrorEntry.insertAdjacentHTML('beforeend', createErrorMessage(errorDescription, errorInstructions));
                     }
 
+                    errorsArray.push(errorFeedback);
+
                 });
+                
+                console.log("errorsArray == ", errorsArray);
 
                 if (errorsArray.length > 0) {
-                    event.preventDefault();
                 }
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
@@ -72,20 +81,29 @@ export default class Form {
 
         formEntryList.forEach((formEntry) => {
 
-            const inputSelectors =  "input, select, textarea";
+            const inputSelectors = "input, select, textarea";
 
-            const formEntryInput = formEntry.querySelector(inputSelectors);
-            const formEntryInputParent = formEntryInput.parentNode;
+            const formEntryInputList = formEntry.querySelectorAll(inputSelectors);
 
             if (formEntry.hasAttribute("data-required")) {
 
-               const requiredInputs = formEntry.querySelectorAll(inputSelectors);
 
-               requiredInputs.forEach((requiredInput) => {
-                requiredInput.setAttribute("required", "true");
-               })
+            formEntryInputList.forEach((formEntryInput) => {
+                formEntryInput.setAttribute("required", "true");
+
+                formEntryInput.addEventListener("change", () => {
+                    console.log("I have changed, I'm different now", formEntryInput.value);
+
+                    if (formSubmitAttempted === true) {
+                        checkIfEmpty(formEntryInput);
+                    }
+                });
+
+            })
 
             }
+
+            // const formEntryInputParent = formEntryInput.parentNode;
 
             
 
@@ -94,24 +112,16 @@ export default class Form {
 
             // Required
 
-            if(formEntryInput.hasAttribute("aria-required")) {
-                formEntry.classList.add("is-required");
+            // if(formEntryInput.hasAttribute("aria-required")) {
+                // formEntry.classList.add("is-required");
                 // formEntryInput.setAttribute("required", "true");
                 
-                formEntryInputParent.insertBefore(errorIcon, formEntryInput);
+                // formEntryInputParent.insertBefore(errorIcon, formEntryInput);
                 // formEntry.insertAdjacentHTML('afterbegin', errorIcon);
-            }
+            // }
 
-            console.log("Form Entry = ", formEntry);
-            console.log("Form Entry Input = ", formEntryInput);
-
-            formEntryInput.addEventListener("change", () => {
-                console.log("I have changed, I'm different now", formEntryInput.value);
-
-                if (formSubmitAttempted === true) {
-                    checkIfEmpty(formEntryInput);
-                }
-            });
+            // console.log("Form Entry = ", formEntry);
+            // console.log("Form Entry Input = ", formEntryInput);
 
             // Click Into Input
             
@@ -131,7 +141,7 @@ export default class Form {
 
                     if(myTarget === "SPAN") {
                         myInput.focus();
-                        console.log("I have been clicked!!!!!!", myTarget);
+                        // console.log("I have been clicked!!!!!!", myTarget);
                     }
 
                 });
@@ -140,17 +150,17 @@ export default class Form {
             
             // Focus
             
-            formEntryInput.addEventListener("focusin", focusIn);
-            formEntryInput.addEventListener("focusout", focusOut);
+            // formEntryInput.addEventListener("focusin", focusIn);
+            // formEntryInput.addEventListener("focusout", focusOut);
 
             function focusIn() {
                  this.closest(".form-entry").classList.add("active");
-                console.warn("I'm in!");
+                // console.warn("I'm in!");
             }
 
             function focusOut() {
                 this.closest(".form-entry").classList.remove("active");
-                console.warn("I'm out!");
+                // console.warn("I'm out!");
             }
         
         });
