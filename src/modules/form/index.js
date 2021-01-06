@@ -23,7 +23,8 @@ export default class Form {
             form.addEventListener("submit", (event) => {
                 
                 
-                    event.preventDefault();
+                event.preventDefault();
+                
                 formSubmitAttempted = true;
 
                 let errorsArray = [];
@@ -165,10 +166,13 @@ export default class Form {
         });
     
         const createErrorMessage = ((desc = "Error message description", inst = "How to fix instructions") => {
-            return `<small class="form-entry__feedback">
-                        <strong>${desc}</strong>
-                        <span>${inst}</span>
-                </small>`;
+            return `<div class="form-entry__feedback">
+                        <small>
+                            <span class="nyc_icon_warn" aria-hidden="true"></span>
+                            <strong>${desc}</strong>
+                            <span>${inst}</span>
+                        </small>
+                    </div>`;
         });
 
         const checkIfEmpty = (field) => {

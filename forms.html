@@ -108,50 +108,52 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <fieldset class="form-entry"
+                        <div class="form-entry"
                             data-required="true"
+                            data-error-description="Priority is required!" 
+                            data-error-instructions="Select your priority rating"
                         >
 
-                        <div class="form-entry__field">
+                            <fieldset class="form-entry__field">
 
-                            <legend class="form-entry__field__label">
-                                What is the priority of this request?
-                            </legend>
+                                <legend class="form-entry__field__label">
+                                    What is the priority of this request?
+                                </legend>
 
-                            <div class="form-entry__options options--divider border">
+                                <div class="form-entry__options options--divider border">
 
-                                <div>
-                                    <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request">
-                                        <span class="radio__label">
-                                            High
-                                        </span>
-                                    </label>
+                                    <div>
+                                        <label class="form-entry__options__radio">
+                                            <input type="radio" name="priority-of-request">
+                                            <span class="radio__label">
+                                                High
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-entry__options__radio">
+                                            <input type="radio" name="priority-of-request">
+                                            <span class="radio__label">
+                                                Medium
+                                            </span>
+                                        </label> 
+                                    </div>
+
+                                    <div>
+                                        <label class="form-entry__options__radio">
+                                            <input type="radio" name="priority-of-request">
+                                            <span class="radio__label">
+                                                Low
+                                            </span>
+                                        </label>
+                                    </div>
+
                                 </div>
 
-                                <div>
-                                    <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request">
-                                        <span class="radio__label">
-                                            Medium
-                                        </span>
-                                    </label> 
-                                </div>
-
-                                <div>
-                                    <label class="form-entry__options__radio">
-                                        <input type="radio" name="priority-of-request">
-                                        <span class="radio__label">
-                                            Low
-                                        </span>
-                                    </label>
-                                </div>
-
-                            </div>
+                            </fieldset>
 
                         </div>
-
-                        </fieldset>
                         <!-- .form-entry -->
                         
                         <button class="button theme-primary display-block rounded-pill" type="submit">Submit</button>

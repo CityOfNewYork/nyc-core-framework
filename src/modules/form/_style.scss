@@ -172,8 +172,6 @@ form > .button {
 
 .form-entry__field {
 
-    background-color: blue;
-
     position: relative;
 
     display: flex;
@@ -316,10 +314,21 @@ form > .button {
 
 .form-entry__feedback {
     order: 3;
-    margin-top: 0.5rem;
-    font-size: 80%;
+
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
+    margin-top: 0.5rem;
+
+    > small {
+        font-size: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    > small > strong {
+        margin-left: var(--spacer-2);
+        margin-right: var(--spacer-2);
+    }
 }
 
 .is-invalid {
