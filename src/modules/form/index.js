@@ -89,6 +89,7 @@ export default class Form {
 
 
             formEntryInputList.forEach((formEntryInput) => {
+                
                 formEntryInput.setAttribute("required", "true");
 
                 formEntryInput.addEventListener("change", () => {
@@ -103,25 +104,8 @@ export default class Form {
 
             }
 
-            // const formEntryInputParent = formEntryInput.parentNode;
-
-            
-
             let errorIcon = document.createElement("span");
             errorIcon.classList.add("nyc_icon_warn");
-
-            // Required
-
-            // if(formEntryInput.hasAttribute("aria-required")) {
-                // formEntry.classList.add("is-required");
-                // formEntryInput.setAttribute("required", "true");
-                
-                // formEntryInputParent.insertBefore(errorIcon, formEntryInput);
-                // formEntry.insertAdjacentHTML('afterbegin', errorIcon);
-            // }
-
-            // console.log("Form Entry = ", formEntry);
-            // console.log("Form Entry Input = ", formEntryInput);
 
             // Click Into Input
             
@@ -150,8 +134,8 @@ export default class Form {
             
             // Focus
             
-            // formEntryInput.addEventListener("focusin", focusIn);
-            // formEntryInput.addEventListener("focusout", focusOut);
+            formEntryInput.addEventListener("focusin", focusIn);
+            formEntryInput.addEventListener("focusout", focusOut);
 
             function focusIn() {
                  this.closest(".form-entry").classList.add("active");

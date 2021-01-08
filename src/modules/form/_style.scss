@@ -202,6 +202,7 @@ form > .button {
     display: inline-block !important;
 }
 
+.form-entry__field__select,
 .form-entry__field__input {
     position: relative;
     
@@ -277,7 +278,7 @@ form > .button {
     margin-top: var(--spacer-2);
 }
 
-.form-entry__field__input.select {
+.form-entry__field__select {
     position: relative;
 
     &::before {
@@ -294,7 +295,7 @@ form > .button {
 
 }
 
-.form-entry__field__input.select::before {
+.form-entry__field__select::before {
     [dir="rtl"] & {
         right: unset;
         left: 0;
