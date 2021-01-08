@@ -14,54 +14,55 @@ export default class Form {
         // Get each form entry on page (with and without form parent)
         const formEntryList = document.querySelectorAll(".form-entry");
 
-        const formInput = document.querySelectorAll(".coool");
-        
+        // Set form submit to false
         let formSubmitAttempted = false;
         
         formList.forEach((form) => {
 
             // Submission Handler
-
             form.addEventListener("submit", (event) => {
-                
                 
                 formSubmitAttempted = true;
 
                 let errorsArray = [];
 
+                // Create list of elements that fail to validate
                 let formErrorsList = form.querySelectorAll(":invalid");
 
                 formErrorsList.forEach((formError) => {
 
                     let formErrorEntry = formError.closest(".form-entry");
-                    let formErrorEntryField = formErrorEntry.querySelector(".form-entry__field__label");
-                    let formErrorFieldType = formError.tagName;
+                    let formErrorEntryLabel = formErrorEntry.querySelector(".form-entry__field__label");
 
+                    // Add error class to .form-entry selector
                     formErrorEntry.classList.add("is-invalid");
 
-                    console.log("Form Error Field Type is :: ", formErrorFieldType);
-                    
-                    const feedback = formErrorEntry.querySelector(".form-entry__feedback");
+                    // 
+                    const formEntryFeedback = formErrorEntry.querySelector(".form-entry__feedback");
 
                     let errorDescription = formErrorEntry.getAttribute("data-error-description");
                     let errorInstructions = formErrorEntry.getAttribute("data-error-instructions");
                     let errorFeedback = [errorDescription, errorInstructions];
 
-                    if(feedback){
+                    if (formEntryFeedback) {
                         return;
                     } else {
-                        formErrorEntryField.insertAdjacentHTML('afterend', createErrorMessage(errorDescription, errorInstructions));
+                        formErrorEntryLabel.insertAdjacentHTML('afterend', createErrorMessage(errorDescription, errorInstructions));
                     }
 
+                    // Send errors
                     errorsArray.push(errorFeedback);
 
                 });
                 
-                console.log("errorsArray == ", errorsArray);
+                // console.log("errorsArray == ", errorsArray);
 
+                // If errors exist, do not submit the form
                 if (errorsArray.length > 0) {
                     event.preventDefault();
                 }
+
+                // Scroll to error
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
 
@@ -86,11 +87,13 @@ export default class Form {
 
             const formEntryInputList = formEntry.querySelectorAll(inputSelectors);
 
-
             formEntryInputList.forEach((formEntryInput) => {
-
-                console.log("I am the input ::: ", formEntryInput);
                 
+                // Call focus (in out) functions
+                formEntryInput.addEventListener("focusin", focusIn);
+                formEntryInput.addEventListener("focusout", focusOut);
+
+                // Set required inputs
                 if (formEntry.hasAttribute("data-required")) {
 
                     formEntryInput.setAttribute("required", "true");
@@ -104,16 +107,20 @@ export default class Form {
                     });
                 }
 
-                // Focus
-                
-                formEntryInput.addEventListener("focusin", focusIn);
-                formEntryInput.addEventListener("focusout", focusOut);
 
             });
 
+            function focusIn() {
+                 this.closest(".form-entry").classList.add("active");
+            }
+
+            function focusOut() {
+                this.closest(".form-entry").classList.remove("active");
+            }
+
             // Click Into Input
             
-            const formEntryFieldInputList = formEntry.querySelectorAll("[class*='form-entry__field__input']");
+            const formEntryFieldInputList = formEntry.querySelectorAll("[class*='form-entry__field__']");
 
             formEntryFieldInputList.forEach((formEntryField) => {
 
@@ -134,14 +141,6 @@ export default class Form {
                 });
 
             });
-
-            function focusIn() {
-                 this.closest(".form-entry").classList.add("active");
-            }
-
-            function focusOut() {
-                this.closest(".form-entry").classList.remove("active");
-            }
         
         });
     
@@ -170,7 +169,7 @@ export default class Form {
             return false;
         }
 
-        const invalidClasses = ["invalid"];
+        const invalidClasses = ["is-invalid"];
 
         const setInvalid = (field) => {
             let entryRoot = field.closest(".form-entry");

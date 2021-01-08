@@ -41,7 +41,8 @@ In this file:
 // C. Selector Resets
 //////////////////////////////////////////////
 
-label, .label,
+label,
+.label,
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -153,15 +154,9 @@ fieldset {
     [dir="rtl"] & {
         text-align: right;
     }
-
-    &[data-required]{
-        background-color: rgba(yellow, 0.25);
-    }
 }
 
-form > .form-entry ~ .form-entry,
-form > .grid, 
-form > .button {
+form > .form-entry ~ .form-entry {
     margin-top: var(--spacer-4);
     margin-bottom: var(--spacer-4);
 }
@@ -181,6 +176,7 @@ form > .button {
 
 .form-entry__field__label {
     display: block;
+
     font-weight: var(--body-font-weight-bold);
     margin-bottom: 0.5em;
 
@@ -203,7 +199,6 @@ form > .button {
 
 }
 
-
 .form-entry__field__select,
 .form-entry__field__input {
     position: relative;
@@ -214,8 +209,8 @@ form > .button {
     border-radius: var(--form-field-border-radius);
     overflow: hidden;
     
-    input,
     select, 
+    input,
     textarea
     {
         padding: var(--form-field-padding-y) var(--form-field-padding-x);
@@ -226,7 +221,7 @@ form > .button {
         flex-shrink: 0;
     }
 
-    .button--icon-only {
+    [class*="button--icon-only"] {
         border-radius: inherit;
         font-size: 80%;
     }
@@ -270,8 +265,13 @@ form > .button {
 }
 
 .active .form-entry__field__select::after,
-.active .form-entry__field__input::after {
+.active .form-entry__field__input::after,
+.active .form-entry__options > div > label::after  {
     box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
+}
+
+.active .form-entry__options > div > label::after {
+    // display: block;
 }
 
 .form-entry__help {
@@ -310,9 +310,7 @@ form > .button {
 //////////////////////////////////////////////
 
 [data-alert="form-errors"],
-.form-entry__feedback,
-.form-entry__field__input span.nyc_icon_warn
-{
+.form-entry__feedback {
     display: none;
 }
 
@@ -336,9 +334,7 @@ form > .button {
 }
 
 .is-invalid {
-    .form-entry__feedback,
-    .form-entry__field__input .nyc_icon_warn
-    {
+    .form-entry__feedback {
         display: block;
     }
 }
@@ -348,27 +344,16 @@ form > .button {
 //////////////////////////////////////////////
 
 .form-entry__options {
-    --gap-size: 0.5em;
 
-    clear: both;
-    
-    display: flex;
-    flex-direction: column;
-}
-
-.form-entry__options:not([class*="--divider"]){
-
-    > div:not(:last-child) {
-        margin-bottom: var(--gap-size);
-    }
-}
-
-.form-entry__options.options--divider {
+    position: relative;
 
     border-radius: var(--form-field-border-radius);
+    border-color: currentColor;
+    border-style: solid;
+    border-width: 1px;
 
     > div {
-        padding: 0.5em var(--spacer-2);
+        padding: var(--form-field-padding-y) var(--form-field-padding-x);
         position: relative;
     }
 
@@ -379,16 +364,36 @@ form > .button {
     }
 
     > div > label {
+        position: relative;
 
+
+        &::after,
         &::before {
-            top: calc(0.75em * -1);
-            left: calc(var(--spacer-2) * -1);
-            bottom: calc(0.75em * -1);
-            right: calc(var(--spacer-2) * -1);
+            content: "";
+            position: absolute;
+            top: calc(var(--form-field-padding-y) * -1);
+            left: calc(var(--form-field-padding-x) * -1);
+            bottom: calc(var(--form-field-padding-y) * -1);
+            right: calc(var(--form-field-padding-x) * -1);
 
             pointer-events: inherit;
         }
+        input:focus {
+            background-color: green !important;
+        }
+
+        &::after {
+            
+            pointer-events: none;
+            
+            box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+
+            display: none;
+        }
+
     }
+
+
 }
 
 @each $breakpoint in map.keys(breakpoint.$breakpoints) {
@@ -396,22 +401,6 @@ form > .button {
         $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
         
         .form-entry__options:not([class*="--divider"]).options--horizontal#{$mod} {
-            flex-direction: row;
-
-            --gap-size: 1.5em;
-
-            margin-left: calc(-1 * var(--gap-size));
-            margin-right: calc(-1 * var(--gap-size));
-
-            > div {
-                margin-bottom: unset;
-                margin-left: var(--gap-size);
-                margin-right: var(--gap-size);
-            }
-
-        }
-
-        .options--divider.options--horizontal#{$mod}{
             flex-direction: row;
             align-items: stretch;
 
