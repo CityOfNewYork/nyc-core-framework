@@ -171,7 +171,6 @@ form > .button {
 //////////////////////////////////////////////
 
 .form-entry__field {
-
     position: relative;
 
     display: flex;
@@ -188,19 +187,22 @@ form > .button {
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
 
+    // Required Asterisk
+    
     &::after {
         content: "*";
         margin: auto 0.25rem;
         display: none;
         font-size: 80%;
+
+        [data-required="true"] & { 
+            display: inline-block !important;
+        }
+
     }
+
 }
 
-// Required Asterisk
-
-[data-required="true"] .form-entry__field__label::after {
-    display: inline-block !important;
-}
 
 .form-entry__field__select,
 .form-entry__field__input {
@@ -267,6 +269,7 @@ form > .button {
     display: none;
 }
 
+.active .form-entry__field__select::after,
 .active .form-entry__field__input::after {
     box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
 }

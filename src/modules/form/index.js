@@ -13,6 +13,8 @@ export default class Form {
         
         // Get each form entry on page (with and without form parent)
         const formEntryList = document.querySelectorAll(".form-entry");
+
+        const formInput = document.querySelectorAll(".coool");
         
         let formSubmitAttempted = false;
         
@@ -22,8 +24,6 @@ export default class Form {
 
             form.addEventListener("submit", (event) => {
                 
-                
-                event.preventDefault();
                 
                 formSubmitAttempted = true;
 
@@ -60,6 +60,7 @@ export default class Form {
                 console.log("errorsArray == ", errorsArray);
 
                 if (errorsArray.length > 0) {
+                    event.preventDefault();
                 }
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
@@ -85,27 +86,30 @@ export default class Form {
 
             const formEntryInputList = formEntry.querySelectorAll(inputSelectors);
 
-            if (formEntry.hasAttribute("data-required")) {
-
 
             formEntryInputList.forEach((formEntryInput) => {
+
+                console.log("I am the input ::: ", formEntryInput);
                 
-                formEntryInput.setAttribute("required", "true");
+                if (formEntry.hasAttribute("data-required")) {
 
-                formEntryInput.addEventListener("change", () => {
-                    console.log("I have changed, I'm different now", formEntryInput.value);
+                    formEntryInput.setAttribute("required", "true");
 
-                    if (formSubmitAttempted === true) {
-                        checkIfEmpty(formEntryInput);
-                    }
-                });
+                    formEntryInput.addEventListener("change", () => {
+                        console.log("I have changed, I'm different now", formEntryInput.value);
 
-            })
+                        if (formSubmitAttempted === true) {
+                            checkIfEmpty(formEntryInput);
+                        }
+                    });
+                }
 
-            }
+                // Focus
+                
+                formEntryInput.addEventListener("focusin", focusIn);
+                formEntryInput.addEventListener("focusout", focusOut);
 
-            let errorIcon = document.createElement("span");
-            errorIcon.classList.add("nyc_icon_warn");
+            });
 
             // Click Into Input
             
@@ -125,26 +129,18 @@ export default class Form {
 
                     if(myTarget === "SPAN") {
                         myInput.focus();
-                        // console.log("I have been clicked!!!!!!", myTarget);
                     }
 
                 });
 
             });
-            
-            // Focus
-            
-            formEntryInput.addEventListener("focusin", focusIn);
-            formEntryInput.addEventListener("focusout", focusOut);
 
             function focusIn() {
                  this.closest(".form-entry").classList.add("active");
-                // console.warn("I'm in!");
             }
 
             function focusOut() {
                 this.closest(".form-entry").classList.remove("active");
-                // console.warn("I'm out!");
             }
         
         });
