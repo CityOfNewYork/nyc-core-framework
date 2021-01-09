@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body class="theme-dark">
 
     <main>
 
@@ -36,11 +36,11 @@
 
                     <form novalidate>
 
-                        <div class="form-entry"
+                        <div 
+                            class="form-entry"
                             data-required="true"
                             data-error-description="First name is required!" 
-                            data-error-instructions="Enter your first name"
-                        >
+                            data-error-instructions="Enter your first name">
 
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">First Name</span>
@@ -52,11 +52,11 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry"
+                        <div
+                            class="form-entry"
                             data-required="true"
                             data-error-description="Last name is required!" 
-                            data-error-instructions="Enter your last name"
-                        >
+                            data-error-instructions="Enter your last name">
 
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Last Name</span>
@@ -68,11 +68,11 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry"
+                        <div
+                            class="form-entry"
                             data-required="true"
                             data-error-description="Borough is required!" 
-                            data-error-instructions="Select a Borough"
-                        >
+                            data-error-instructions="Select a Borough">
 
                             <div class="form-entry__field">
                                 <label class="form-entry__field__label" for="select-borough-1">Borough</label>
@@ -92,7 +92,7 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry">
+                        <div class="form-entry" data-required="true">
 
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Message</span>
@@ -108,11 +108,11 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry"
+                        <div
+                            class="form-entry"
                             data-required="true"
                             data-error-description="Priority is required!" 
-                            data-error-instructions="Select your priority rating"
-                        >
+                            data-error-instructions="Select your priority rating">
 
                             <fieldset class="form-entry__field">
 
@@ -155,6 +155,29 @@
 
                         </div>
                         <!-- .form-entry -->
+
+                        <div class="form-entry" data-required="true">
+
+                            <div class="form-entry__field">
+
+                                <p class="form-entry__field__label">
+                                    Terms and Conditions
+                                </p>
+
+                                <div class="form-entry__options">
+                                    <div>
+                                        <label class="form-entry__options__check">
+                                            <input type="checkbox" name="checkbox-single-example" required>
+                                            <span class="checkbox__label">
+                                                I have read the terms and conditions, and I agree to them wholeheartedly without reservation
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
                         
                         <button class="button theme-primary display-block rounded-pill" type="submit">Submit</button>
 
@@ -237,7 +260,6 @@
                                 </div>
 
                             </div>
-                            
                             
                         </div>
 

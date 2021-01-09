@@ -119,7 +119,7 @@ fieldset {
 }
 
 //////////////////////////////////////////////
-// C. Form Entry Block
+// D. Form Entry Block
 //////////////////////////////////////////////
 
 .form-entry {
@@ -162,7 +162,7 @@ form > .form-entry ~ .form-entry {
 }
 
 //////////////////////////////////////////////
-// D. Form Entry Elements
+// E. Form Entry Elements
 //////////////////////////////////////////////
 
 .form-entry__field {
@@ -266,12 +266,8 @@ form > .form-entry ~ .form-entry {
 
 .active .form-entry__field__select::after,
 .active .form-entry__field__input::after,
-.active .form-entry__options > div > label::after  {
-    box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
-}
-
 .active .form-entry__options > div > label::after {
-    // display: block;
+    box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
 }
 
 .form-entry__help {
@@ -306,7 +302,7 @@ form > .form-entry ~ .form-entry {
 }
 
 //////////////////////////////////////////////
-// E. Form Feedback and Alerts
+// F. Form Feedback and Alerts
 //////////////////////////////////////////////
 
 [data-alert="form-errors"],
@@ -340,17 +336,14 @@ form > .form-entry ~ .form-entry {
 }
 
 //////////////////////////////////////////////
-// F. Checkbox and Radio Elements
+// G. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
 .form-entry__options {
-
     position: relative;
 
-    border-radius: var(--form-field-border-radius);
-    border-color: currentColor;
-    border-style: solid;
-    border-width: 1px;
+    border-style: var(--default-border-style);
+    border-width: var(--default-border-width);
 
     > div {
         padding: var(--form-field-padding-y) var(--form-field-padding-x);
@@ -366,8 +359,6 @@ form > .form-entry ~ .form-entry {
     > div > label {
         position: relative;
 
-
-        &::after,
         &::before {
             content: "";
             position: absolute;
@@ -377,23 +368,13 @@ form > .form-entry ~ .form-entry {
             right: calc(var(--form-field-padding-x) * -1);
 
             pointer-events: inherit;
-        }
-        input:focus {
-            background-color: green !important;
+            opacity: 0.05;
         }
 
-        &::after {
-            
-            pointer-events: none;
-            
-            box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
-
-            display: none;
+        &.active::before {
+            background-color: currentColor;
         }
-
     }
-
-
 }
 
 @each $breakpoint in map.keys(breakpoint.$breakpoints) {
@@ -491,6 +472,10 @@ form > .form-entry ~ .form-entry {
     &::before{
         opacity: 0.75;
     }
+}
+
+.form-entry__options__radio > input:focus ~ ::after{
+    background-color: red !important;
 }
 
 .form-entry__options__radio > input:checked ~ .radio__label,

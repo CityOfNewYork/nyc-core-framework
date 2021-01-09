@@ -87,11 +87,35 @@ export default class Form {
 
             const formEntryInputList = formEntry.querySelectorAll(inputSelectors);
 
+
             formEntryInputList.forEach((formEntryInput) => {
+                
+                const isInputText = formEntry.querySelector(".form-entry__field__input");
+                
+                const inputTag = formEntryInput.tagName;
+
+                let activeTarget = ".form-entry";
+
+                if (inputTag === "INPUT") {
+                    const inputType = formEntryInput.getAttribute("type");
+
+                    if (inputType == "radio" || inputType == "checkbox") {
+                        activeTarget = "label";
+                    }
+
+                }
                 
                 // Call focus (in out) functions
                 formEntryInput.addEventListener("focusin", focusIn);
                 formEntryInput.addEventListener("focusout", focusOut);
+
+                function focusIn() {
+                    this.closest(activeTarget).classList.add("active");
+                }
+
+                function focusOut() {
+                    this.closest(activeTarget).classList.remove("active");
+                }
 
                 // Set required inputs
                 if (formEntry.hasAttribute("data-required")) {
@@ -107,44 +131,40 @@ export default class Form {
                     });
                 }
 
+                // Put click into input stuff here
 
-            });
+                if (isInputText) {
+                    isInputText.addEventListener("click", (event) => {
 
-            function focusIn() {
-                 this.closest(".form-entry").classList.add("active");
-            }
+                        let clickTarget = event.target.tagName;
+                        let clickInput = event.target.closest(".form-entry__field__input").querySelector("input");
 
-            function focusOut() {
-                this.closest(".form-entry").classList.remove("active");
-            }
+                        if(clickTarget === "SPAN") {
+                            console.log(event.target.nextSibling)
+                            clickInput.focus();
+                        }
 
-            // Click Into Input
-            
-            const formEntryFieldInputList = formEntry.querySelectorAll("[class*='form-entry__field__']");
+                        if(clickTarget === "BUTTON") {
+                            return;
+                        }
 
-            formEntryFieldInputList.forEach((formEntryField) => {
-
-                const myInput = formEntryField.querySelector("input, select");
-                
-                formEntryField.addEventListener("click", (event) => {
-
-                    let myTarget = event.target.tagName;
-                    
-                    if(myTarget === "BUTTON") {
-                        return;
-                    }
-
-                    if(myTarget === "SPAN") {
-                        myInput.focus();
-                    }
-
-                });
+                    });
+                }
 
             });
         
         });
     
-        const createErrorMessage = ((desc = "Error message description", inst = "How to fix instructions") => {
+        const createErrorMessage = ((desc, inst) => {
+            
+            if(desc === null) {
+                desc = "This field is Required";
+            }
+
+            if (inst === null) {
+                inst = "Complete this field";
+            }
+
             return `<div class="form-entry__feedback">
                         <small>
                             <span class="nyc_icon_warn" aria-hidden="true"></span>
