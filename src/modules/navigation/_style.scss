@@ -32,7 +32,7 @@ In this file:
 
 // Scoped to Block
 
-%custom-properties {        
+%custom-properties {
     --dropdown-z-index: 1200;
 }
 
@@ -366,6 +366,7 @@ In this file:
             align-items: stretch;
 
             > li {
+                display: flex;
                 flex: 1;
                 border-bottom-style: none !important; // Thanks, IE.
                 text-align: center;
