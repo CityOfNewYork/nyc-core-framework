@@ -42,10 +42,26 @@
                             data-error-description="First name is required!" 
                             data-error-instructions="Enter your first name">
 
+                            <label class="form-entry__field cool">
+                                <span class="form-entry__field__label">Coffee</span>
+                                <span class="form-entry__field__input">
+                                    <input type="text" id="firstName" name="coffee" placeholder="cool">
+                                </span>
+                            </label>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div 
+                            class="form-entry"
+                            data-required="true"
+                            data-error-description="First name is required!" 
+                            data-error-instructions="Enter your first name">
+
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">First Name</span>
                                 <span class="form-entry__field__input">
-                                    <input type="text" id="firstName" name="first_name">
+                                    <input type="text" id="firstName" name="first_name" placeholder="cool">
                                 </span>
                             </label>
 
@@ -156,6 +172,57 @@
                         </div>
                         <!-- .form-entry -->
 
+                        <fieldset class="form-entry" data-required="true">
+
+                            <div class="form-entry__field">
+
+                                <legend class="form-entry__field__label">
+                                    Checkbox Group
+                                </legend>
+
+                                <small class="form-entry__feedback">
+                                    <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
+                                    <strong>Error message description</strong>
+                                    <span>How to fix instructions</span>
+                                </small>
+
+                                <div class="form-entry__options">
+
+                                    <div>
+                                        <label class="form-entry__options__check">
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="checkbox__label">
+                                                Option One
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-entry__options__check">
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="checkbox__label">
+                                                Option Two
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="form-entry__options__check">
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="checkbox__label">
+                                                Option Three
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </fieldset>
+                        <!-- .form-entry -->
+
                         <div class="form-entry" data-required="true">
 
                             <div class="form-entry__field">
@@ -262,57 +329,6 @@
                             </div>
                             
                         </div>
-
-                        <fieldset class="form-entry">
-
-                            <div class="form-entry__field">
-
-                                <legend class="form-entry__field__label">
-                                    Checkbox Group
-                                </legend>
-
-                                <small class="form-entry__feedback">
-                                    <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                                    <strong>Error message description</strong>
-                                    <span>How to fix instructions</span>
-                                </small>
-
-                                <div class="form-entry__options">
-
-                                    <div>
-                                        <label class="form-entry__options__check">
-                                            <input type="checkbox" name="checkbox-group-example">
-                                            <span class="checkbox__label">
-                                                Option One
-                                            </span>
-                                        </label>
-                                    </div>
-
-                                    <div>
-                                        <label class="form-entry__options__check">
-                                            <input type="checkbox" name="checkbox-group-example">
-                                            <span class="checkbox__label">
-                                                Option Two
-                                            </span>
-                                        </label>
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-entry__options__check">
-                                            <input type="checkbox" name="checkbox-group-example">
-                                            <span class="checkbox__label">
-                                                Option Three
-                                            </span>
-                                        </label>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </fieldset>
-                        <!-- .form-entry -->
 
                         <fieldset class="form-entry">
 

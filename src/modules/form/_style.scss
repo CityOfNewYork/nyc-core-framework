@@ -53,6 +53,7 @@ textarea {
     width: 100%;
     max-width: 100%;
     font-size: inherit;
+    line-height: normal;
 }
 
 select {
@@ -149,6 +150,7 @@ fieldset {
     ::placeholder {
         color: currentColor;
         opacity: 0.675;
+        opacity: 0;
     }
 
     [dir="rtl"] & {
@@ -172,6 +174,25 @@ form > .form-entry ~ .form-entry {
     flex-direction: column;
 
     color: inherit;
+
+    &.cool {
+        .form-entry__field__label,
+        .form-entry__field__select {
+        } 
+        .form-entry__field__label {
+            padding-top: var(--form-field-padding-y);
+            padding-bottom: var(--form-field-padding-y);
+            background-color: red;
+            margin-bottom: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+        
+
+    }
 }
 
 .form-entry__field__label {
