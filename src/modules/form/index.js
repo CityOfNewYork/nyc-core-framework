@@ -37,7 +37,7 @@ export default class Form {
                     // Add error class to .form-entry selector
                     formErrorEntry.classList.add("is-invalid");
 
-                    // 
+                    // Form Entry Feedback
                     const formEntryFeedback = formErrorEntry.querySelector(".form-entry__feedback");
 
                     let errorDescription = formErrorEntry.getAttribute("data-error-description");
@@ -50,19 +50,17 @@ export default class Form {
                         formErrorEntryLabel.insertAdjacentHTML('afterend', createErrorMessage(errorDescription, errorInstructions));
                     }
 
-                    // Send errors
+                    // Send errors to errorArray
                     errorsArray.push(errorFeedback);
 
                 });
-                
-                // console.log("errorsArray == ", errorsArray);
 
                 // If errors exist, do not submit the form
                 if (errorsArray.length > 0) {
                     event.preventDefault();
                 }
 
-                // Scroll to error
+                // Scroll to first error
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
 
@@ -90,7 +88,7 @@ export default class Form {
             let isRequired;
 
             if(formEntry.hasAttribute("data-required")) {
-              isRequired = true;
+                isRequired = true;
             } else {
                 isRequired = false;
             }
@@ -108,6 +106,11 @@ export default class Form {
 
                     if (inputType == "radio" || inputType == "checkbox") {
                         activeTarget = "label";
+                        
+                        if (formEntryInput.disabled) {
+                            formEntryInput.closest("label").classList.add("disabled");
+                        }
+
                     }
 
                 }

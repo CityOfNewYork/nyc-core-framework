@@ -42,22 +42,6 @@
                             data-error-description="First name is required!" 
                             data-error-instructions="Enter your first name">
 
-                            <label class="form-entry__field form-entry__field--float">
-                                <span class="form-entry__field__label">Coffee</span>
-                                <span class="form-entry__field__input">
-                                    <input type="text" id="firstName" name="coffee" placeholder="cool">
-                                </span>
-                            </label>
-
-                        </div>
-                        <!-- .form-entry -->
-
-                        <div 
-                            class="form-entry"
-                            data-required="true"
-                            data-error-description="First name is required!" 
-                            data-error-instructions="Enter your first name">
-
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">First Name</span>
                                 <span class="form-entry__field__input">
@@ -90,11 +74,11 @@
                             data-error-description="Borough is required!" 
                             data-error-instructions="Select a Borough">
 
-                            <div class="form-entry__field form-entry__field--float">
+                            <div class="form-entry__field">
                                 <label class="form-entry__field__label" for="select-borough-1">Borough</label>
                                 <span class="form-entry__field__select">
                                     <select id="select-borough-1" name="Boroughs">
-                                        <option value=""></option>
+                                        <option value="">Select One</option>
                                         <option value="Bronx">Bronx</option>
                                         <option value="Brooklyn">Brooklyn</option>
                                         <option value="Manhattan">Manhattan</option>
@@ -108,7 +92,7 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry" data-required="true">
+                        <div class="form-entry">
 
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Message</span>
@@ -253,11 +237,70 @@
 
                     <hr class="margin-y-4">
 
-                    <form novalidate>
+                    <div class="grid grid--gap-3 margin-y-4">
+                        <div class="grid__cell grid__cell-6--lg">
+
+                            <div 
+                                class="form-entry"
+                                data-required="true"
+                                data-error-description="Username is required!" 
+                                data-error-instructions="Enter your username">
+
+                                <label class="form-entry__field form-entry__field--float">
+                                    <span class="form-entry__field__label">Username</span>
+                                    <span class="form-entry__field__input">
+                                        <input type="text" id="accountUsername" name="username">
+                                    </span>
+                                </label>
+
+                            </div>
+                            <!-- .form-entry -->
+
+                        </div>
+                        <div class="grid__cell grid__cell-6--lg">
+
+                            <div 
+                                class="form-entry"
+                                data-required="true"
+                                data-error-description="Password is required!" 
+                                data-error-instructions="Enter your password">
+
+                                <label class="form-entry__field form-entry__field--float">
+                                    <span class="form-entry__field__label">Password</span>
+                                    <span class="form-entry__field__input">
+                                        <input type="password" id="accountPassword" name="password">
+                                    </span>
+                                </label>
+
+                            </div>
+                            <!-- .form-entry -->
+                            
+                        </div>
+
+                        <div class="grid__cell">
+                            <div 
+                                class="form-entry"
+                                data-required="true"
+                                data-error-description="Password is required!" 
+                                data-error-instructions="Enter your password">
+
+                                <label class="form-entry__field form-entry__field--float">
+                                    <span class="form-entry__field__label">Email</span>
+                                    <span class="form-entry__field__input">
+                                        <input type="email" id="accountEmail" name="password">
+                                    </span>
+                                </label>
+
+                            </div>
+                            <!-- .form-entry -->
+                        </div>
+                    </div>
+
+                    <form>
 
                         <div class="form-entry">
 
-                            <div class="form-entry__field form-entry__field--float">
+                            <div class="form-entry__field">
                                 <label class="form-entry__field__label" for="email_address">Email Address</label>
                                 <span class="form-entry__field__input">
                                     <input type="email" name="email_address" id="email_address">
@@ -348,7 +391,7 @@
 
                                     <div>
                                         <label class="form-entry__options__radio">
-                                            <input type="radio" name="radio-group-example" required>
+                                            <input type="radio" name="radio-group-example">
                                             <span class="radio__label">
                                                 Option One
                                             </span>
@@ -357,7 +400,7 @@
 
                                     <div>
                                         <label class="form-entry__options__radio">
-                                            <input type="radio" name="radio-group-example" required>
+                                            <input type="radio" name="radio-group-example">
                                             <span class="radio__label">
                                                 Option Two
                                             </span>
@@ -366,7 +409,7 @@
 
                                     <div>
                                         <label class="form-entry__options__radio">
-                                            <input type="radio" name="radio-group-example" required>
+                                            <input type="radio" name="radio-group-example" disabled>
                                             <span class="radio__label">
                                                 Option Three
                                             </span>

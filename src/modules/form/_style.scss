@@ -126,8 +126,6 @@ fieldset {
 .form-entry {
     @extend %custom-properties;
 
-    // position: relative;
-
     select,
     textarea,
     input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
@@ -177,11 +175,8 @@ form > .form-entry ~ .form-entry {
 }
 
 .form-entry__field__label {
-    display: block;
-
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
-
     margin-bottom: 0.5em;
 
     font-weight: var(--body-font-weight-bold);
@@ -192,7 +187,7 @@ form > .form-entry ~ .form-entry {
         content: "*";
         margin: auto 0.25rem;
         display: none;
-        font-size: 80%;
+        font-size: 75%;
 
         [data-required="true"] & { 
             display: inline-block !important;
@@ -273,8 +268,6 @@ form > .form-entry ~ .form-entry {
 // Floating Labels
 
 .form-entry__field--float {
-    --button-padding-y: 1em;
-    --form-field-padding-y: 1em;
 
     position: relative;
 
@@ -290,6 +283,7 @@ form > .form-entry ~ .form-entry {
 
         padding-top: var(--form-field-padding-y);
         padding-bottom: var(--form-field-padding-y);
+
         margin-bottom: unset;
     }
 
@@ -320,7 +314,7 @@ form > .form-entry ~ .form-entry {
             margin-left: var(--form-field-padding-x);
             margin-right: var(--form-field-padding-x);
 
-            font-size: 80%;
+            font-size: 0.75em;
 
             [dir="rtl"] & {
                 transform-origin: top right;
@@ -330,7 +324,6 @@ form > .form-entry ~ .form-entry {
 
     }
 }
-
 
 .form-entry__help {
     font-size: 0.8em;
@@ -528,6 +521,23 @@ form > .form-entry ~ .form-entry {
     content: "\e949";
 }
 
+.form-entry__options__check > input:disabled ~ .checkbox__label::before,
+.form-entry__options__radio > input:disabled ~ .radio__label::before{
+    content: "\e95e";
+}
+
+
+.form-entry__options__check.disabled,
+.form-entry__options__radio.disabled
+{
+    cursor: not-allowed;
+
+    [class*="__label"] {
+        opacity: 0.625;
+    }
+
+}
+
 // Focus State
 
 .form-entry__options__radio > input:focus ~ .radio__label,
@@ -536,10 +546,6 @@ form > .form-entry ~ .form-entry {
     &::before{
         opacity: 0.75;
     }
-}
-
-.form-entry__options__radio > input:focus ~ ::after{
-    background-color: red !important;
 }
 
 .form-entry__options__radio > input:checked ~ .radio__label,
