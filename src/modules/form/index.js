@@ -87,6 +87,13 @@ export default class Form {
 
             const formEntryInputList = formEntry.querySelectorAll(inputSelectors);
 
+            let isRequired;
+
+            if(formEntry.hasAttribute("data-required")) {
+              isRequired = true;
+            } else {
+                isRequired = false;
+            }
 
             formEntryInputList.forEach((formEntryInput) => {
                 
@@ -116,20 +123,24 @@ export default class Form {
                 function focusOut() {
                     this.closest(activeTarget).classList.remove("active");
                 }
-
+                
                 // Set required inputs
-                if (formEntry.hasAttribute("data-required")) {
-
+                if (isRequired === true) {  
                     formEntryInput.setAttribute("required", "true");
-
-                    formEntryInput.addEventListener("change", () => {
-                        console.log("I have changed, I'm different now", formEntryInput.value);
-
-                        if (formSubmitAttempted === true) {
-                            checkIfEmpty(formEntryInput);
-                        }
-                    });
                 }
+                
+                formEntryInput.addEventListener("change", () => {
+
+                    if (formSubmitAttempted === true && isRequired ===true) {
+                        checkIfEmpty(formEntryInput);
+                    }
+
+                    if (formEntryInput.value != "") {
+                        formEntryInput.closest(".form-entry").classList.add("has-value");
+                    } else {
+                        formEntryInput.closest(".form-entry").classList.remove("has-value");
+                    }
+                });
 
                 // Put click into input stuff here
 

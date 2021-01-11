@@ -126,7 +126,7 @@ fieldset {
 .form-entry {
     @extend %custom-properties;
 
-    position: relative;
+    // position: relative;
 
     select,
     textarea,
@@ -174,35 +174,17 @@ form > .form-entry ~ .form-entry {
     flex-direction: column;
 
     color: inherit;
-
-    &.cool {
-        .form-entry__field__label,
-        .form-entry__field__select {
-        } 
-        .form-entry__field__label {
-            padding-top: var(--form-field-padding-y);
-            padding-bottom: var(--form-field-padding-y);
-            background-color: red;
-            margin-bottom: 0;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-        }
-        
-
-    }
 }
 
 .form-entry__field__label {
     display: block;
 
-    font-weight: var(--body-font-weight-bold);
-    margin-bottom: 0.5em;
-
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
+
+    margin-bottom: 0.5em;
+
+    font-weight: var(--body-font-weight-bold);
 
     // Required Asterisk
     
@@ -217,7 +199,6 @@ form > .form-entry ~ .form-entry {
         }
 
     }
-
 }
 
 .form-entry__field__select,
@@ -277,8 +258,6 @@ form > .form-entry ~ .form-entry {
             margin-right: var(--form-field-padding-x);
         }
     }
-
-    
 }
 
 [class*="primary-nav"] .form-entry__field__input::after {
@@ -290,6 +269,68 @@ form > .form-entry ~ .form-entry {
 .active .form-entry__options > div > label::after {
     box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
 }
+
+// Floating Labels
+
+.form-entry__field--float {
+    --button-padding-y: 1em;
+    --form-field-padding-y: 1em;
+
+    position: relative;
+
+    .form-entry__field__label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+
+        pointer-events: none;
+
+        padding-top: var(--form-field-padding-y);
+        padding-bottom: var(--form-field-padding-y);
+        margin-bottom: unset;
+    }
+
+    .active &, 
+    .has-value & {
+
+        [class*="form-entry__field__"] {
+            select, 
+            input,
+            textarea
+            {
+                padding-top: calc( var(--form-field-padding-y) * 1.5);
+                padding-bottom: calc( var(--form-field-padding-y) * 0.5);
+            }
+
+            select option:first-child {
+                display: none;
+            }
+        }
+
+        .form-entry__field__label {
+            padding: 0;
+
+            top: calc( var(--form-field-padding-y) * 0.5);
+            right: unset;
+            bottom: unset;
+            
+            margin-left: var(--form-field-padding-x);
+            margin-right: var(--form-field-padding-x);
+
+            font-size: 80%;
+
+            [dir="rtl"] & {
+                transform-origin: top right;
+                left: unset;
+            }
+        }
+
+    }
+}
+
 
 .form-entry__help {
     font-size: 0.8em;
