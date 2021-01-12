@@ -141,6 +141,8 @@ button,
     align-items: center;
     justify-content: center;
 
+    border-radius: var(--button--icon-only-radius);
+
     &:hover, 
     &:focus {
         &::before {
