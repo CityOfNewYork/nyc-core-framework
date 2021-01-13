@@ -569,3 +569,66 @@ form > .form-entry ~ .form-entry {
         right: 0;
     }
 }
+
+//////////////////////////////////////////////
+// G. Input Toggle Switch
+//////////////////////////////////////////////
+
+.toggle-switch {
+    --toggle-switch-width: 5rem;
+    --toggle-switch-transition: 0.3s;
+    --toggle-switch-active-color: var(--primary);
+
+    position: relative;
+    display: inline-block;
+    width: var(--toggle-switch-width); 
+    height: calc(var(--toggle-switch-width) * 0.5);
+
+    input[type="checkbox"] { 
+        background-color: transparent;
+        opacity: 0;
+    }
+
+    .toggle-switch__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        cursor: pointer;
+
+        background-color: currentColor;
+        transition: var(--toggle-switch-transition);
+
+        border-radius: calc(var(--toggle-switch-width) * 0.5);
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: calc(var(--toggle-switch-width) * 0.4);
+            width: calc(var(--toggle-switch-width) * 0.4);
+            left: calc(var(--toggle-switch-width) * 0.05);
+            top: calc(var(--toggle-switch-width) * 0.05);
+            background-color: white;
+
+            border-radius: 100%;
+
+            transition: var(--toggle-switch-transition);
+        }
+    }
+
+    input:checked + .toggle-switch__slider {
+        background-color: var(--toggle-switch-active-color);
+    }
+
+    input:focus + .toggle-switch__slider {
+        box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
+    }
+
+    input:checked + .toggle-switch__slider::before {
+        transform: translateX(calc(var(--toggle-switch-width) * 0.5));
+    }
+}
+
+
