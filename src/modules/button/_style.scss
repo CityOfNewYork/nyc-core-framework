@@ -27,7 +27,7 @@ In this file:
     --button--outline-border-width: calc( var(--default-border-width) * 2);
     
     --button--icon-only-size: 2.25em;
-    --button--icon-only-radius: 0.25em;
+    --button--border-radius: 0.25em;
 }
 
 //////////////////////////////////////////////
@@ -65,18 +65,36 @@ button,
 }
 
 .button {
+    position: relative;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     line-height: normal;
     cursor: pointer;
 
+    border-radius: var(--button--border-radius);
+
     transition: opacity 0.5s;
+
+    &:not([class*="button--outline"]):not([class*="theme-color"]):not([class*="background-color"])::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.05;
+        background-color: currentColor;
+        pointer-events: none;
+    }
 
     &:hover, 
     &:focus, 
     &:active {
         opacity: var(--button-opacity-hover);
+        &::after {
+            --subtle-fill-opacity: var(--subtle-fill-visible-opacity);
+        }
     }
 
     &:not([class*="--icon-only"]) {
@@ -128,26 +146,14 @@ button,
 //////////////////////////////////////////////
 
 .button--icon-only {
-    position: relative;
-    
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     width: var(--button--icon-only-size);
     height: var(--button--icon-only-size);
 
     overflow: hidden;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: var(--button--icon-only-radius);
-
-    &:hover, 
-    &:focus {
-        &::before {
-            --subtle-fill-opacity: var(--subtle-fill-visible-opacity);
-        }
-    }
 }
 
 //////////////////////////////////////////////

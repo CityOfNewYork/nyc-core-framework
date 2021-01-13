@@ -91,6 +91,10 @@ In this file:
             margin-left: calc(var(--primary-nav-padding) * 0.25);
             margin-right: calc(var(--primary-nav-padding) * 0.25);
         }
+
+        > .button:not([class*="--icon-only"]){
+            font-size: var(--font-size-md);
+        }
     }
 }
 
