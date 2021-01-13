@@ -76,7 +76,7 @@ button,
 
     transition: opacity 0.5s;
 
-    &:not([class*="button--outline"]):not([class*="theme-color"]):not([class*="background-color"])::after {
+    &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::after {
         position: absolute;
         content: "";
         top: 0;
@@ -86,6 +86,7 @@ button,
         opacity: 0.05;
         background-color: currentColor;
         pointer-events: none;
+        border-radius: inherit;
     }
 
     &:hover, 

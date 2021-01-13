@@ -2,39 +2,47 @@
 
 In this file:
 
-// A. Variables
-// B. Modal Animation
+// A. Modules
+// B. Variables
+// C. Modal Block
+// D. Modal Elements
 
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Modules
+//////////////////////////////////////////////
+
+@use "../spacing/style" as spacing;
+
+//////////////////////////////////////////////
+// B. Variables
 //////////////////////////////////////////////
 
 :root {
   --modal-padding: var(--spacer-3);
-  --modal-overlay-opacity: 0.85;
+  --modal-overlay-opacity: 0.8;
   --modal-z-index: 1400;
 }
 
 //////////////////////////////////////////////
-// A. Modal Block
+// C. Modal Block
 //////////////////////////////////////////////
 
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-content: center;
 
-  justify-content: center;
-
   z-index: var(--modal-z-index);
+  
   padding: var(--modal-padding);
 
   &[class*="theme-"]{
@@ -53,7 +61,7 @@ In this file:
 
   display: none;
 
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.75rem);
 
   &[aria-hidden="false"] {
     display: flex;
@@ -62,11 +70,11 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// A. Modal Elements
+// D. Modal Elements
 //////////////////////////////////////////////
 
 .modal__content {
-  @extend %center-horizontal !optional;
+  @extend .margin-x-auto;
 
   position: relative;
   z-index: auto;
@@ -103,43 +111,4 @@ In this file:
 .modal__content__body, 
 .modal__content__foot {
   padding: var(--modal-padding);
-}
-
-//////////////////////////////////////////////
-// A. Modal Animation
-//////////////////////////////////////////////
-
-@keyframes fadeIn {
-  
-  from {
-    opacity: 0;
-  }
-  
-  to {
-    opacity: var(--modal-overlay-opacity);
-  }
-}
-
-@keyframes slideIn {
-
-  from {
-    transform: translateY(15%);
-  }
-  
-  to {
-    transform: translateY(0);
-  }
-}
-
-@supports ( display: grid ) {
-
-  // .modal[aria-hidden="false"] .modal__content {
-  //   animation-name: slideIn;
-  //   animation-duration: 0.2s;
-  // }
-
-  // .modal[aria-hidden="false"]::before{
-  //   animation-name: fadeIn;
-  //   animation-duration: 0.2s;
-  // }
 }
