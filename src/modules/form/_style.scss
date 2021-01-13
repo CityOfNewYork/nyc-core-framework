@@ -262,7 +262,7 @@ fieldset {
 
 .active .form-entry__field__select::after,
 .active .form-entry__field__input::after,
-.active .form-entry__options > div > label::after {
+.active .form-entry__option > div > label::after {
     box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
 }
 
@@ -395,7 +395,7 @@ fieldset {
 // G. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
-.form-entry__options {
+.form-entry__option {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -439,7 +439,7 @@ fieldset {
     @include breakpoint.breakpoints-up($breakpoint) {
         $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
         
-        .form-entry__options.options--horizontal#{$mod} {
+        .form-entry__option.option--horizontal#{$mod} {
             flex-direction: row;
             align-items: stretch;
 
@@ -465,33 +465,33 @@ fieldset {
 
 // Shared Styles
 
-.form-entry__options__radio,
-.form-entry__options__check, 
-.form-entry__options__switch {
+.form-entry__option__radio,
+.form-entry__option__check, 
+.form-entry__option__switch {
     position: relative;
     color: inherit;
     display: flex;
     align-items: baseline;
-    padding-left: 1em;
+    padding-left: 1.25em;
     width: auto;
     cursor: pointer;
 
     [dir="rtl"] & {
         padding-left: unset;
-        padding-right: 1em;
+        padding-right: 1.25em;
     }
 }
 
-.form-entry__options__radio > input[type="radio"],
-.form-entry__options__check > input[type="checkbox"],
-.form-entry__options__switch > input[type="checkbox"]  {
+.form-entry__option__radio > input[type="radio"],
+.form-entry__option__check > input[type="checkbox"],
+.form-entry__option__switch > input[type="checkbox"]  {
     background-color: transparent;
     opacity: 0;
 } 
 
-.form-entry__options__radio > input ~ .radio__label,
-.form-entry__options__check > input ~ .checkbox__label,
-.form-entry__options__switch > input ~ .switch__label {
+.form-entry__option__radio > input ~ .radio__label,
+.form-entry__option__check > input ~ .check__label,
+.form-entry__option__switch > input ~ .switch__label {
     line-height: var(--body-line-height);
 
     &::before {
@@ -507,46 +507,50 @@ fieldset {
     }
 }
 
-// Unchecked and Checked States
 
-.form-entry__options__check > input ~ .checkbox__label::before {
-    content: "\e946";
-}
+// Form Option Radio
 
-.form-entry__options__check > input:checked ~ .checkbox__label::before {
-    content: "\e947";
-}
-
-.form-entry__options__radio > input ~ .radio__label::before{
+.form-entry__option__radio > input ~ .radio__label::before{
     content: "\e948";
 }
 
-.form-entry__options__radio > input:checked ~ .radio__label::before{
+.form-entry__option__radio > input:checked ~ .radio__label::before{
     content: "\e949";
 }
 
+// Form Option Check
 
-.form-entry__options__switch > input ~ .switch__label::before {
+.form-entry__option__check > input ~ .check__label::before {
+    content: "\e946";
+}
+
+.form-entry__option__check > input:checked ~ .check__label::before {
+    content: "\e947";
+}
+
+// Form Option Switch
+
+.form-entry__option__switch > input ~ .switch__label::before {
     content: "\e95f";
 }
 
-.form-entry__options__switch > input:checked ~ .switch__label::before {
+.form-entry__option__switch > input:checked ~ .switch__label::before {
     content: "\e960";
 }
 
-.form-entry__options__switch > input:checked ~ .switch__label {
-    color:var(--primary);
-}
+// Form Option Disabled
 
-
-.form-entry__options__check > input:disabled ~ .checkbox__label::before,
-.form-entry__options__radio > input:disabled ~ .radio__label::before{
+.form-entry__option__radio > input:disabled ~ .radio__label::before,
+.form-entry__option__check > input:disabled ~ .check__label::before, 
+.form-entry__option__switch > input:disabled ~ .switch__label::before 
+{
     content: "\e95e";
 }
 
 
-.form-entry__options__check.disabled,
-.form-entry__options__radio.disabled
+.form-entry__option__radio.disabled,
+.form-entry__option__check.disabled,
+.form-entry__option__switch.disabled
 {
     cursor: not-allowed;
 
@@ -558,18 +562,21 @@ fieldset {
 
 // Focus State
 
-.form-entry__options__radio > input:focus ~ .radio__label,
-.form-entry__options__check > input:focus ~ .checkbox__label,
-.form-entry__options__switch > input:focus ~ .checkbox__label {
+.form-entry__option__radio > input:focus ~ .radio__label,
+.form-entry__option__check > input:focus ~ .check__label,
+.form-entry__option__switch > input:focus ~ .check__label {
     text-decoration: underline;
     &::before{
         opacity: 0.75;
     }
 }
 
-.form-entry__options__radio > input:checked ~ .radio__label,
-.form-entry__options__check > input:checked ~ .checkbox__label,
-.form-entry__options__switch > input:checked ~ .switch__label {
+
+// Checked State
+
+.form-entry__option__radio > input:checked ~ .radio__label,
+.form-entry__option__check > input:checked ~ .check__label,
+.form-entry__option__switch > input:checked ~ .switch__label {
     &::before{
         opacity: 1;
     }
@@ -578,12 +585,15 @@ fieldset {
 // RTL
 
 [dir="rtl"] {
-    .form-entry__options__radio > .radio__label::before,
-    .form-entry__options__radio > input[type="radio"],
+    .form-entry__option__radio > .radio__label::before,
+    .form-entry__option__radio > input[type="radio"],
 
-    .form-entry__options__check > .checkbox__label::before,
-    .form-entry__options__check > .checkbox__label::after,
-    .form-entry__options__check > input[type="checkbox"] {
+    .form-entry__option__check > .check__label::before,
+    .form-entry__option__check > input[type="checkbox"],     
+
+    .form-entry__option__switch > .switch__label::before,
+    .form-entry__option__switch > input[type="checkbox"]
+    {
         left: unset;
         right: 0;
     }
@@ -618,38 +628,50 @@ fieldset {
 
         cursor: pointer;
 
-        background-color: currentColor;
-        opacity: 0.375;
         transition: var(--toggle-switch-transition);
 
-        border-radius: calc(var(--toggle-switch-width) * 0.5);
 
-        &::before {
+        &::before,
+        &::after
+        {
             position: absolute;
             content: "";
+            transition: var(--toggle-switch-transition);
+        }
+
+        &::before {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            opacity: 0.375;
+
+            border-radius: calc(var(--toggle-switch-width) * 0.5);
+        }
+
+        &::after {
             height: calc(var(--toggle-switch-width) * 0.4);
             width: calc(var(--toggle-switch-width) * 0.4);
-            left: calc(var(--toggle-switch-width) * 0.05);
             top: calc(var(--toggle-switch-width) * 0.05);
+            left: calc(var(--toggle-switch-width) * 0.05);
             background-color: white;
 
             border-radius: 100%;
-
-            transition: var(--toggle-switch-transition);
         }
     }
 
-    input:checked + .toggle-switch__slider {
+    input:checked + .toggle-switch__slider::before {
         opacity: 1;
         background-color: var(--toggle-switch-active-color);
     }
 
-    input:focus + .toggle-switch__slider {
-        // box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
+    input:checked + .toggle-switch__slider::after {
+        transform: translateX(calc(var(--toggle-switch-width) * 0.5));
     }
 
-    input:checked + .toggle-switch__slider::before {
-        transform: translateX(calc(var(--toggle-switch-width) * 0.5));
+    input:focus + .toggle-switch__slider {
+        // box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
     }
 }
 

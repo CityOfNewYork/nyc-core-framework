@@ -175,7 +175,7 @@ body:not([class*="theme-"]),
     .is-invalid .form-entry__field__input::after,
     .is-invalid .form-entry__field__select::after,
     .is-invalid [class*="_icon_warn"],
-    .is-invalid .form-entry__options
+    .is-invalid .form-entry__option
     {
         color: var(--warn-color);
     }
