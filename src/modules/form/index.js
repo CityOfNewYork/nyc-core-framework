@@ -16,16 +16,16 @@ export default class Form {
 
         // Set form submit to false
         let formSubmitAttempted = false;
-        
+
         formList.forEach((form) => {
 
             // Submission Handler
             form.addEventListener("submit", (event) => {
-                
+
                 formSubmitAttempted = true;
-
+        
                 let errorsArray = [];
-
+        
                 // Create list of elements that fail to validate
                 let formErrorsList = form.querySelectorAll(":invalid");
 
@@ -44,36 +44,36 @@ export default class Form {
                     let errorInstructions = formErrorEntry.getAttribute("data-error-instructions");
                     let errorFeedback = [errorDescription, errorInstructions];
 
-                    if (formEntryFeedback) {
-                        return;
-                    } else {
-                        formErrorEntryLabel.insertAdjacentHTML('afterend', createErrorMessage(errorDescription, errorInstructions));
-                    }
-
                     // Send errors to errorArray
                     errorsArray.push(errorFeedback);
 
+                    if (formEntryFeedback === null) {
+                        formErrorEntryLabel.insertAdjacentHTML('afterend', createErrorMessage(errorDescription, errorInstructions));
+                    }
                 });
 
                 // If errors exist, do not submit the form
                 if (errorsArray.length > 0) {
                     event.preventDefault();
                 }
-
+                
                 // Scroll to first error
 
                 let firstError = form.querySelector("[class*='alert'], [class*='invalid']");
+                
+                if (firstError) {
 
-                if (firstError.hasAttribute("data-alert")) {
-                    firstError.style.display = "block";
+                    if (firstError.hasAttribute("data-alert")) {
+                        firstError.style.display = "block";
+                    }
+
+                    let myScroll = firstError.offsetTop - 16;
+
+                    window.scrollTo({
+                        top: myScroll,
+                        behavior: "smooth"
+                    });
                 }
-
-                let myScroll = firstError.offsetTop - 16;
-
-                window.scrollTo({
-                    top: myScroll,
-                    behavior: "smooth"
-                });
 
             });
 
@@ -134,7 +134,7 @@ export default class Form {
                 
                 formEntryInput.addEventListener("change", () => {
 
-                    if (formSubmitAttempted === true && isRequired ===true) {
+                    if (formSubmitAttempted === true && isRequired === true) {
                         checkIfEmpty(formEntryInput);
                     }
 
@@ -214,6 +214,5 @@ export default class Form {
             let entryRoot = field.closest(".form-entry");
             entryRoot.classList.remove(...invalidClasses);
         }
-    
     }
 }

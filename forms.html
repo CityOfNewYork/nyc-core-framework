@@ -35,16 +35,6 @@
                 <div class="container narrow margin-y-4">
 
                     <form novalidate>
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolores minima aliquid iure unde
-                            laborum, error fugit culpa ea eaque cupiditate consequatur, officiis sapiente.
-                        </p>
-
-                        <label class="toggle-switch margin-y-4">
-                            <input type="checkbox">
-                            <span class="toggle-switch__slider"></span>
-                        </label>
                         
                         <div 
                             class="form-entry"
@@ -165,8 +155,45 @@
 
                         </div>
                         <!-- .form-entry -->
+                        
+                        <button class="button theme-primary display-block rounded-pill" type="submit">Submit</button>
 
-                        <fieldset class="form-entry" data-required="true">
+                    </form>
+                    <!-- .needs-validation -->
+
+                    <hr class="margin-y-4">
+
+                        <div class="form-entry">
+                            <label class="toggle-switch margin-y-4">
+                                <input type="checkbox">
+                                <span class="toggle-switch__slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="form-entry">
+
+                            <div class="form-entry__field">
+
+                                <p class="form-entry__field__label">
+                                    Terms and Conditions
+                                </p>
+
+                                <div class="form-entry__options">
+                                    <div>
+                                        <label class="form-entry__options__switch">
+                                            <input type="checkbox" name="checkbox-single-example" required>
+                                            <span class="switch__label">
+                                                Receive Notifications
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <fieldset class="form-entry">
 
                             <div class="form-entry__field">
 
@@ -216,37 +243,6 @@
 
                         </fieldset>
                         <!-- .form-entry -->
-
-                        <div class="form-entry" data-required="true">
-
-                            <div class="form-entry__field">
-
-                                <p class="form-entry__field__label">
-                                    Terms and Conditions
-                                </p>
-
-                                <div class="form-entry__options">
-                                    <div>
-                                        <label class="form-entry__options__check">
-                                            <input type="checkbox" name="checkbox-single-example" required>
-                                            <span class="checkbox__label">
-                                                I have read the terms and conditions, and I agree to them wholeheartedly without reservation
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                            </div>
-                            
-                        </div>
-                        
-                        <button class="button theme-primary display-block rounded-pill" type="submit">Submit</button>
-
-                    </form>
-                    <!-- .needs-validation -->
-
-                    <hr class="margin-y-4">
-
                     <div class="grid grid--gap-3 margin-y-4">
                         <div class="grid__cell grid__cell-6--lg">
 

@@ -156,7 +156,7 @@ fieldset {
     }
 }
 
-form > .form-entry ~ .form-entry {
+.form-entry ~ .form-entry {
     margin-top: var(--spacer-4);
     margin-bottom: var(--spacer-4);
 }
@@ -466,7 +466,8 @@ form > .form-entry ~ .form-entry {
 // Shared Styles
 
 .form-entry__options__radio,
-.form-entry__options__check {
+.form-entry__options__check, 
+.form-entry__options__switch {
     position: relative;
     color: inherit;
     display: flex;
@@ -482,13 +483,15 @@ form > .form-entry ~ .form-entry {
 }
 
 .form-entry__options__radio > input[type="radio"],
-.form-entry__options__check > input[type="checkbox"] {
+.form-entry__options__check > input[type="checkbox"],
+.form-entry__options__switch > input[type="checkbox"]  {
     background-color: transparent;
     opacity: 0;
 } 
 
 .form-entry__options__radio > input ~ .radio__label,
-.form-entry__options__check > input ~ .checkbox__label {
+.form-entry__options__check > input ~ .checkbox__label,
+.form-entry__options__switch > input ~ .switch__label {
     line-height: var(--body-line-height);
 
     &::before {
@@ -522,6 +525,20 @@ form > .form-entry ~ .form-entry {
     content: "\e949";
 }
 
+
+.form-entry__options__switch > input ~ .switch__label::before {
+    content: "\e95f";
+}
+
+.form-entry__options__switch > input:checked ~ .switch__label::before {
+    content: "\e960";
+}
+
+.form-entry__options__switch > input:checked ~ .switch__label {
+    color:var(--primary);
+}
+
+
 .form-entry__options__check > input:disabled ~ .checkbox__label::before,
 .form-entry__options__radio > input:disabled ~ .radio__label::before{
     content: "\e95e";
@@ -542,7 +559,8 @@ form > .form-entry ~ .form-entry {
 // Focus State
 
 .form-entry__options__radio > input:focus ~ .radio__label,
-.form-entry__options__check > input:focus ~ .checkbox__label {
+.form-entry__options__check > input:focus ~ .checkbox__label,
+.form-entry__options__switch > input:focus ~ .checkbox__label {
     text-decoration: underline;
     &::before{
         opacity: 0.75;
@@ -550,7 +568,8 @@ form > .form-entry ~ .form-entry {
 }
 
 .form-entry__options__radio > input:checked ~ .radio__label,
-.form-entry__options__check > input:checked ~ .checkbox__label {
+.form-entry__options__check > input:checked ~ .checkbox__label,
+.form-entry__options__switch > input:checked ~ .switch__label {
     &::before{
         opacity: 1;
     }
@@ -581,6 +600,7 @@ form > .form-entry ~ .form-entry {
 
     position: relative;
     display: inline-block;
+
     width: var(--toggle-switch-width); 
     height: calc(var(--toggle-switch-width) * 0.5);
 
@@ -599,6 +619,7 @@ form > .form-entry ~ .form-entry {
         cursor: pointer;
 
         background-color: currentColor;
+        opacity: 0.375;
         transition: var(--toggle-switch-transition);
 
         border-radius: calc(var(--toggle-switch-width) * 0.5);
@@ -619,11 +640,12 @@ form > .form-entry ~ .form-entry {
     }
 
     input:checked + .toggle-switch__slider {
+        opacity: 1;
         background-color: var(--toggle-switch-active-color);
     }
 
     input:focus + .toggle-switch__slider {
-        box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
+        // box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
     }
 
     input:checked + .toggle-switch__slider::before {
