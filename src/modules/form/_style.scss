@@ -628,9 +628,6 @@ fieldset {
 
         cursor: pointer;
 
-        transition: var(--toggle-switch-transition);
-
-
         &::before,
         &::after
         {
