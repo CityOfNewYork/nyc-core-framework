@@ -30,7 +30,6 @@ In this file:
     @extend %custom-properties;
     
     position: relative;
-
     padding: var(--alert-padding-y) var(--alert-padding-x);
 
     a {
@@ -49,9 +48,11 @@ In this file:
             right: 0;
             bottom: 0;
             left: 0;
-            pointer-events: none;
+
             background-color: currentColor;
             opacity: var(--alert-background-opacity);
+            
+            pointer-events: none;
         }
     }    
 }

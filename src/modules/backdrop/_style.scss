@@ -70,8 +70,8 @@ In this file:
     position: absolute;
     top: 0;
     right: 0;
-    width: auto;
     z-index: 500;
+    width: auto;
 
     background-color: inherit;
 
@@ -116,7 +116,6 @@ In this file:
     }
 
     .backdrop__image {
-        overflow: hidden;
         position: absolute;
         top: 0;
         left: 0;
@@ -124,6 +123,7 @@ In this file:
         right: 0;
 
         display: flex;
+        overflow: hidden;
 
         img {
             object-fit: cover;
