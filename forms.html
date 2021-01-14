@@ -36,7 +36,7 @@
 
                     <form novalidate>
 
-                        <p class="required-indicator">
+                        <p class="required-indicator" aria-hidden="true">
                             <span class="required-indicator__text">Indicates Required Fields</span> 
                             <span class="required-indicator__icon">*</span>
                         </p>
@@ -45,7 +45,7 @@
                             class="form-entry"
                             data-required="true"
                             data-error-description="First name is required!" 
-                            data-error-instructions="Enter your first name, Johnnie!!!!!">
+                            data-error-instructions="Enter your first name">
 
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">First Name</span>
@@ -170,7 +170,7 @@
 
                         <div class="form-entry">
                             <label class="toggle-switch margin-y-4">
-                                <input type="checkbox">
+                                <input type="checkbox" name="switch-emaple">
                                 <span class="toggle-switch__slider"></span>
                             </label>
                         </div>

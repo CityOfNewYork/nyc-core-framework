@@ -130,6 +130,7 @@ export default class Form {
                 // Set required inputs
                 if (isRequired === true) {  
                     formEntryInput.setAttribute("required", "true");
+                    formEntryInput.setAttribute("aria-required", true);
                 }
                 
                 formEntryInput.addEventListener("change", () => {

@@ -135,6 +135,10 @@ fieldset {
         opacity: 0.05;
         border-radius: inherit;
     }
+
+    [dir="rtl"] & {
+        text-align: left;
+    }
 }
 
 .required-indicator__text {
