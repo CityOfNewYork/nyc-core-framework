@@ -171,6 +171,8 @@ body:not([class*="theme-"]),
     }
     
     .alert--warn,
+    .required-indicator__icon,
+    .form-entry__field__label::after,
     .is-invalid .form-entry__feedback, 
     .is-invalid .form-entry__field__input::after,
     .is-invalid .form-entry__field__select::after,

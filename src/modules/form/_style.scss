@@ -27,9 +27,9 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-// Scoped to Block
+// Scoped to Root
 
-%custom-properties {
+:root {
     --form-field-padding-x: var(--spacer-3);
     --form-field-padding-y: var(--button-padding-y);
 
@@ -118,8 +118,32 @@ fieldset {
 // D. Form Entry Block
 //////////////////////////////////////////////
 
+.required-indicator {
+    position: relative;
+    text-align: right;
+    padding: 0.25em 0.5em;
+    border-radius: var(--form-field-border-radius);
+    
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: currentColor;
+        opacity: 0.05;
+        border-radius: inherit;
+    }
+}
+
+.required-indicator__text {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: var(--font-size-md);
+}
+
 .form-entry {
-    @extend %custom-properties;
 
     select,
     textarea,
@@ -160,6 +184,7 @@ fieldset {
 // E. Form Entry Elements
 //////////////////////////////////////////////
 
+
 .form-entry__field {
     position: relative;
 
@@ -168,6 +193,8 @@ fieldset {
 
     color: inherit;
 }
+
+
 
 .form-entry__field__label {
     padding-left: var(--form-field-padding-x);
@@ -182,7 +209,6 @@ fieldset {
         content: "*";
         margin: auto 0.25rem;
         display: none;
-        font-size: 75%;
 
         [data-required="true"] & { 
             display: inline-block !important;
