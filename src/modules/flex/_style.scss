@@ -6,9 +6,10 @@ In this file:
 // B. Flex Direction Utilities
 // C. Flex Grow, Shrink, and Fill Utilites
 // D. Justify Content Utilites
-// E. Align Content Utilites
-// F. Align Items Utilites
-// G. Align Self Utilites
+// E. Justify Self Utilites
+// F. Align Content Utilites
+// G. Align Items Utilites
+// H. Align Self Utilites
 
 */
 
@@ -109,7 +110,33 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// E. Align Content Utilites
+// D. Justify Self Utilites
+//////////////////////////////////////////////
+
+@each $breakpoint in map.keys(breakpoint.$breakpoints) {
+    @include breakpoint.breakpoints-up($breakpoint) {
+        $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
+
+        .justify-self-start#{$mod} {
+            justify-self: start !important;
+        }
+
+        .justify-self-end#{$mod} {
+            justify-self: end !important;
+        }
+
+        .justify-self-center#{$mod} {
+            justify-self: center !important;
+        }
+
+        .justify-self-between#{$mod} {
+            justify-self: stretch !important;
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// F. Align Content Utilites
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoint.$breakpoints) {
@@ -144,7 +171,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// F. Align Items Utilites
+// G. Align Items Utilites
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoint.$breakpoints) {
@@ -175,7 +202,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// G. Align Self Utilites
+// H. Align Self Utilites
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoint.$breakpoints) {
