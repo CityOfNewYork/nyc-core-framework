@@ -15,10 +15,10 @@ export default class Modal {
 
             modalTarget.setAttribute("aria-hidden", false);
 
-            // element that was focused before modal opened
+            // Element that was focused before modal opened
             let focusedElementBeforeModal = document.activeElement;
 
-            // add the key listener  
+            // Add the key listener  
             modalTarget.addEventListener("keydown", processEscapeTabKeys);
 
             const modalCloseList = modalTarget.querySelectorAll("[data-modal-close]");
@@ -31,9 +31,6 @@ export default class Modal {
             // Find all focusable modal elements
             const modalElements = "input:not([disabled]), button:not([disabled]), a:not([disabled]";
             let focusableElements = modalTarget.querySelectorAll(modalElements);
-
-            // Convert NodeList to Array only for IE 11
-            // focusableElements = Array.prototype.slice.call(focusableElements);
 
             const firstElementOfModal = focusableElements[0];
             const lastElementOfModal = focusableElements[focusableElements.length - 1];

@@ -44,23 +44,18 @@ button {
     &:not([class*="border-"]){
         border: none;
     }
-
-    &[class*="display-block"] {
-        width: 100%;
-    }
 }
 
 //////////////////////////////////////////////
 // C. Button Utility
 //////////////////////////////////////////////
-
-button, 
+ 
 .button {
     --button-opacity-hover: 0.75;
 
     &[aria-disabled="true"] {
-        cursor: not-allowed;
         opacity: var(--button-opacity-hover);
+        cursor: not-allowed;
     }
 }
 
@@ -78,29 +73,29 @@ button,
 
     &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::after {
         position: absolute;
+        
         content: "";
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+
+        border-radius: inherit;
+        pointer-events: none;
+
         opacity: 0.05;
         background-color: currentColor;
-        pointer-events: none;
-        border-radius: inherit;
     }
 
     &:hover, 
     &:focus, 
     &:active {
         opacity: var(--button-opacity-hover);
-        &::after {
-            --subtle-fill-opacity: var(--subtle-fill-visible-opacity);
-        }
     }
 
-    &:not([class*="--icon-only"]) {
-        font-weight: var(--button-font-weight);
+    &:not([class*="button--icon-only"]) {
         padding: var(--button-padding-y) var(--button-padding-x);
+        font-weight: var(--button-font-weight);
     }
 }
 

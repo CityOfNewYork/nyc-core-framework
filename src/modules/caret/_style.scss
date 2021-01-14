@@ -38,12 +38,12 @@ $default-caret-margin: 0.375em;
         content: "";
         display: inline-block;
 
+        color: inherit;
+
         @include caret-icon;
 
         margin-left: $default-caret-margin;
         margin-right: $default-caret-margin;
-        color: inherit;
-        
     } 
     
     @if $location == "prepend" {
