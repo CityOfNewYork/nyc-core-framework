@@ -30,7 +30,6 @@ In this file:
 // Scoped to Block
 
 %custom-properties {
-
     --form-field-padding-x: var(--spacer-3);
     --form-field-padding-y: var(--button-padding-y);
 
@@ -61,8 +60,7 @@ select {
     -moz-appearance: unset;
     -webkit-appearance: unset;
     appearance: unset;
-    
-    // Hide select default icon on IE
+
     &::-ms-expand {
         display: none;
     }
@@ -80,34 +78,31 @@ input {
 }
 
 textarea {
-    resize: vertical;
     overflow: auto;
     vertical-align: top;
+    resize: vertical;
 }
 
-// Remove FireFox specific 'inner-focus' styles
 button::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
 
 legend {
+    display: table;
     width: 100%;
-    float: left;
+    max-width: 100%;
     margin: 0;
     padding: 0;
+    float: left;
 
     + * {
         clear: both;
     }
-    
-    // Correct color inheritance in IE
-    color: inherit;
-    display: table;
 
-    // Correct the text wrapping in Edge and IE
+    color: inherit;
+
     line-height: normal;
-    max-width: 100%;
     white-space: normal;
 }
 
@@ -218,19 +213,18 @@ fieldset {
         flex-shrink: 0;
     }
 
-    [class*="button--icon-only"] {
+    > [class*="button--icon-only"] {
         border-radius: inherit;
-        font-size: 80%;
+        height: unset;
+        width: unset;
+        padding-left: var(--form-field-padding-x);
+        padding-right: var(--form-field-padding-x);
+        align-self: stretch;
     }
 
-    > [class*="button--icon-only"] {
-        margin-left: calc(var(--form-field-padding-x) / 2);
-        margin-right: calc(var(--form-field-padding-x) / 2);
-    }
-    
     > [class*="nyc_icon"] {
-        font-size: 75%;
         margin-left: var(--form-field-padding-x);
+        font-size: 75%;
     }
 
     &::after {

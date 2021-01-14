@@ -15,8 +15,17 @@
     <!-- NYC Core Icons -->
     <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
 
+    <!-- NYC Font from Adobe -->
+    <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
+
     <!-- NYC Core Stylesheet -->
-    <link rel="stylesheet" href="./dist/css/nyc_core.css">
+    <link rel="stylesheet" href="./dist/css/nyc_core.css" media="screen">
+
+    <style>
+        :root {
+            --body-font-size: 20px;
+        }
+    </style>
     
 </head>
 
@@ -102,7 +111,7 @@
 
                <ul>
                    <li>
-                       <a href="#1" data-toggle="dropdown">Dropdown</a>
+                       <button data-toggle="dropdown">Dropdown</button>
                        <ul class="nav__dropdown box-shadow-1--lg">
                            <li>
                                <a href="#1">Link</a>
@@ -157,12 +166,10 @@
                             <div class="grid__cell">
                                 <a class="button theme-white width-100" href="#1">Primary Action</a>
                             </div>
-                            <!-- .grid__cell -->
 
                             <div class="grid__cell">
                                 <a class="button button--outline width-100" href="#1">Secondary Action</a>
                             </div>
-                            <!-- .grid__cell -->
 
                         </div>
                         <!-- .grid -->
@@ -182,7 +189,7 @@
 
                 <div class="grid__cell">
 
-                    <div class="card theme-primary">
+                    <div class="card theme-primary" style="--body-font-family: 'neue-haas-grotesk-text';">
 
                         <div class="card__body">
                             <h2 class="h4">Card Title</h2>
@@ -447,9 +454,9 @@
 
     </main>
 
-    <div class="modal" id="global-search">
+    <div class="modal theme-light" id="global-search">
 
-        <div class="modal__content medium box-shadow-2 rounded">
+        <div class="modal__content narrow medium--lg rounded box-shadow-3">
 
             <header class="modal__content__head border-bottom">
                 <h2 class="h6" id="modal-search-title">
@@ -463,20 +470,18 @@
 
             <div class="modal__content__body" id="modal-1-content" aria-labelledby="modal-search-title">
                 <div class="form-entry">
-
                     <div class="form-entry__field">
-                        <label class="form-entry__field__label screen-reader-only" for="search-example">Search</label>
+                        <label class="form-entry__field__label screen-reader-only" for="email_address-2">Email Address</label>
                         <span class="form-entry__field__input">
+                            <span class="nyc_icon_search opacity-40" aria-hidden="true"></span>
                             <input type="text" name="search-example" id="search-example" placeholder="Search">
-                            <button class="button button--icon-only" type="button" aria-label="Home">
-                                <span class="nyc_icon_search" aria-hidden="true"></span>
+                            <button class="button theme-primary" type="button">
+                                Search
                             </button>
                         </span>
                     </div>
-                
                 </div>
                 <!-- .form-entry -->
-
             </div>
 
         </div>
@@ -487,7 +492,7 @@
 
     <div class="modal" id="global-language">
 
-        <div class="modal__content medium box-shadow-2" aria-labelledby="modal-language-title">
+        <div class="modal__content medium rounded box-shadow-2" aria-labelledby="modal-language-title">
 
             <header class="modal__content__head border-bottom">
                 <h2 class="h6" id="modal-language-title">Website Translation</h2>
@@ -519,7 +524,7 @@
 
                 <div class="grid__cell">
 
-                    <h2 class="h6 mb-2">Languages</h2>
+                    <h2 class="h6 margin-bottom-3">Languages</h2>
 
                     <ul class="nav">
                         <li>
@@ -559,7 +564,7 @@
 
                 <div class="grid__cell">
 
-                    <h2 class="h6 mb-2">Resources</h2>
+                    <h2 class="h6 margin-bottom-3">Resources</h2>
 
                     <ul class="nav">
                         <li>
@@ -614,7 +619,7 @@
 
                 <div class="grid__cell">
 
-                    <h2 class="h6 margin-bottom-2">
+                    <h2 class="h6 margin-bottom-3">
                         <a href="https://www1.nyc.gov/">
                             <span class="screen-reader-only">Visit</span>
                             <strong>NYC.gov</strong>
@@ -686,17 +691,16 @@
     <script src="./dist/js/nyc_core.js"></script>
     
     <script>
-
-        /*
-
+        /* 
+        
         const rootElement = document.documentElement;
         const rootElementStyle = rootElement.style;
 
-        rootElementStyle.setProperty('--dark', "hsla(0, 100%, 50%, 0.75)");
-        rootElementStyle.setProperty('--body-font-size', "24px");
+        rootElementStyle.setProperty('--dark', "blue");
+        rootElementStyle.setProperty('--body-font-size', "22px");
         rootElementStyle.setProperty('--body-font-family', "Georgia");
-        */
         
+        */
     </script>
     
 </body>

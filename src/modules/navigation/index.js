@@ -25,12 +25,10 @@ export default class Navigation {
 
                 let expanded = dropdownButton.getAttribute("aria-expanded");
 
-                if (expanded == "true") {
+                if (expanded === "true") {
                     dropdownButton.setAttribute("aria-expanded", false);
-                    return;
                 } else if (expanded === "false") {
                     dropdownButton.setAttribute("aria-expanded", true);
-                    return;
                 }
             });
 
