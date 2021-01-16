@@ -43,7 +43,11 @@ $default-caret-margin: 0.375em;
         @include caret-icon;
 
         margin-left: $default-caret-margin;
-        margin-right: $default-caret-margin;
+        
+        [dir="rtl"] & {
+            margin-left: unset;
+            margin-right: $default-caret-margin;
+        }
     } 
     
     @if $location == "prepend" {

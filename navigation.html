@@ -18,8 +18,6 @@
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css">
 
-    <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
-
 </head>
 
 <body>
@@ -36,7 +34,7 @@
 
                 <figure class="medium margin-y-4 box-shadow-1 z-index-1500">
 
-                    <div class="primary-nav--below--lg theme-primary">
+                    <div class="primary-nav--below--lg">
 
                         <div class="primary-nav__logo">
                             <a href="#1" title="Home" data-logo="brand">
@@ -84,19 +82,21 @@
 
                         </nav>
 
-                        <div class="primary-nav__buttons">
-                            <button class="button button--icon-only menu-toggle" title="Menu" data-toggle="collapse" data-target="#primary-menu-below">
-                                <span class="screen-reader-only">Menu</span>
-                                <span class="nyc_icon_menu"></span>
+                        <div class="primary-nav__actions">
+
+                            <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-below">
+                                <span class="nyc_icon_menu" aria-hidden="true"></span>
                             </button>
-                            <button class="button button--icon-only" title="Language">
-                                <span class="screen-reader-only">Language</span>
-                                <span class="nyc_icon_language" aria-hidden="true"></span>
-                            </button>
-                            <button class="button button--icon-only" title="Search">
-                                <span class="screen-reader-only">Search</span>
-                                <span class="nyc_icon_search"></span>
-                            </button>
+                            
+                            <div class="button-group">
+                                <a class="button" href="#1">
+                                    Sign In  
+                                </a>
+                                <button class="button button--icon-only" title="Language" data-modal-open="global-language">
+                                    <span class="nyc_icon_language" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        
                         </div>
 
                     </div>
@@ -153,23 +153,50 @@
 
                         </nav>
 
-                        <div class="primary-nav__buttons">
-                            <button class="button button--icon-only menu-toggle" title="Menu" data-toggle="collapse" data-target="#primary-menu-inline">
-                                <span class="screen-reader-only">Menu</span>
+                        <div class="primary-nav__actions">
+
+                            <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-inline">
                                 <span class="nyc_icon_menu"></span>
                             </button>
-                            <button class="button button--icon-only" title="Language" data-modal-open="global-language">
-                                <span class="screen-reader-only">Language</span>
-                                <span class="nyc_icon_language"></span>
-                            </button>
-                            <button class="button button--icon-only" title="Search" data-modal-open="global-search">
-                                <span class="screen-reader-only">Search</span>
-                                <span class="nyc_icon_search"></span>
-                            </button>
+                            
+                            <div class="button-group">
+
+                                <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                                    <span class="nyc_icon_language"></span>
+                                </button>
+                                <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
+                                    <span class="nyc_icon_search"></span>
+                                </button>
+
+                            </div>
                         </div>
 
                     </div>
                     <!-- .primary-nav -->
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--breadcrumb">
+                                    <li>
+                                        <a class="button button--icon-only" href="#1" aria-label="Home">
+                                            <span class="nyc_icon_home" aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">About</a>
+                                    </li>
+                                    <li>
+                                        Services
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </figure>
 
                 <figure class="container narrow margin-y-4">
@@ -193,31 +220,7 @@
                     </div>
 
                 </figure>
-
-                <figure class="container narrow margin-y-4">
-
-                    <div class="aspect-ratio aspect-ratio--3by2 border">
-                        <div class="aspect-ratio__content flex-row align-items-center">
-                            <div class="width-100 padding-4">
-                                <ul class="nav nav--breadcrumb font-size-sm">
-                                    <li>
-                                        <a class="button button--icon-only" href="#1" aria-label="Home">
-                                            <span class="nyc_icon_home" aria-hidden="true"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#1">About</a>
-                                    </li>
-                                    <li>
-                                        Services
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </figure>
-
+                
                 <figure class="container narrow margin-y-4">
 
                     <div class="aspect-ratio aspect-ratio--3by2 border">
@@ -517,7 +520,7 @@
                                         <a href="#1">Link</a>
                                     </li>
                                     <li>
-                                        <a class="button--icon-only rounded theme-light" href="#1" data-toggle="dropdown" aria-label="Account">
+                                        <a class="button button--icon-only" href="#1" data-toggle="dropdown" aria-label="Account">
                                             <span class="nyc_icon_person" aria-hidden="true"></span>
                                         </a>
                                         <ul class="nav__dropdown border">
@@ -552,10 +555,9 @@
                                         <a href="#1">Link</a>
                                     </li>
                                     <li>
-                                        <a class="button--icon-only rounded" href="#1" data-toggle="dropdown" aria-label="Account">
+                                        <a class="button button--icon-only" href="#1" data-toggle="dropdown" aria-label="Account">
                                             <span class="nyc_icon_person" aria-hidden="true"></span>
                                         </a>
-                
                                         <ul class="nav__dropdown theme-secondary border rounded">
                                             <li>
                                                 <a href="#1">Link</a>

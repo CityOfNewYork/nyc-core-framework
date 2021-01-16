@@ -8,7 +8,8 @@ In this file:
 // D. Button Outline Modifier
 // E. Button Has Icon Modifiers
 // F. Button Icon Only Modifier
-// G. I.E. 11 Support
+// G. Button Group Component
+// H. I.E. 11 Support
 
 */
 
@@ -65,10 +66,10 @@ button {
     text-align: center;
     vertical-align: middle;
     line-height: normal;
+    flex-shrink: 0;
     cursor: pointer;
 
     border-radius: var(--button--border-radius);
-
     transition: opacity 0.5s;
 
     &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::after {
@@ -153,7 +154,40 @@ button {
 }
 
 //////////////////////////////////////////////
-// G. I.E. 11 Support
+// G. Button Group Component
+//////////////////////////////////////////////
+
+.button-group {
+    list-style: none;
+    --gap-size: var(--spacer-2);
+
+    display: flex;
+    justify-content: center;
+
+    min-height: var(--button--icon-only-size);
+    
+    margin-left: calc(var(--gap-size) * -0.5);
+    margin-right: calc(var(--gap-size) * -0.5);
+
+    > [class*="button"]{
+        margin-left: calc(var(--gap-size) * 0.5);
+        margin-right: calc(var(--gap-size) * 0.5);
+    }
+
+    > [class*="button"]:not(.button--icon-only) {
+        display: flex;
+        align-items: center;
+
+        padding-top: unset;
+        padding-bottom: unset;
+
+        min-height: 100%;
+        font-size: 80%; 
+    }
+}
+
+//////////////////////////////////////////////
+// H. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),

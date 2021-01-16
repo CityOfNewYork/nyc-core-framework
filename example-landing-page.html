@@ -15,17 +15,8 @@
     <!-- NYC Core Icons -->
     <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
 
-    <!-- NYC Font from Adobe -->
-    <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
-
     <!-- NYC Core Stylesheet -->
     <link rel="stylesheet" href="./dist/css/nyc_core.css" media="screen">
-
-    <style>
-        :root {
-            --body-font-size: 20px;
-        }
-    </style>
     
 </head>
 
@@ -93,19 +84,24 @@
 
            </div>
 
-           <div class="primary-nav__buttons">
+           <div class="primary-nav__actions">
 
-               <button class="button button--icon-only menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu">
-                   <span class="nyc_icon_menu" aria-hidden="true"></span>
-               </button>
-               <button class="button button--icon-only" title="Language" data-modal-open="global-language">
-                   <span class="nyc_icon_language" aria-hidden="true"></span>
-               </button>
-               <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
-                   <span class="nyc_icon_search" aria-hidden="true"></span>
-               </button>
+                <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-below">
+                    <span class="nyc_icon_menu" aria-hidden="true"></span>
+                </button>
+                
+                <div class="button-group">
 
-           </div>
+                    <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                        <span class="nyc_icon_language"></span>
+                    </button>
+                    <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
+                        <span class="nyc_icon_search"></span>
+                    </button>
+
+                </div>
+            
+            </div>
 
            <nav class="primary-nav__menu" id="primary-menu" aria-label="Primary">
 
