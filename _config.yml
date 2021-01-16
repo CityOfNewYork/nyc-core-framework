@@ -52,4 +52,5 @@ style_default_theme_colors:
             --dark: #262345;
             --light: #f1f4f6;
             --primary-text: var(--dark);
-            --secondary-text: white;"'
+            --secondary-text: white;
+            --button-font-weight: var(--body-font-weight-bold)"'

@@ -5,16 +5,15 @@ title: "Buttons"
 
 <div class="container narrow margin-y-4">
     <p>
-        An assortment of distinct, actionable button styles available with our predefined component, utility, and
-        modifier classes.
+        An assortment of distinct, actionable button styles.
     </p>
 </div>
 <!-- .container -->
 
 {% capture as_body %}
 <p>
-    Like our <a href="{{ site.baseurl }}/docs/navigation">navigation</a> links, buttons include visible hover and focus states to
-    communicate their current state to the user. Icon-only buttons provide text for screen readers.
+    Like our <a href="{{ site.baseurl }}/docs/navigation">navigation</a> links, buttons include visible hover and focus
+    states. Icon buttons include aria labels for screen readers.
 </p>
 {% endcapture %}
 
@@ -25,9 +24,7 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>The Button Selector</h2>
     <p>
-        Buttons within the NYC Core Framework each require the <code>.button</code> definer class on an <code>&lt;a&gt;</code> or
-        <code>&lt;button&gt;</code> tag (Figure 1 below). By default, <code>.button</code> selectors inherit text color and font size
-        from their parent. The example below is a generic <code>.button</code> selector with no additional styles yet applied.
+        Buttons within the NYC Core Framework require a <code>.button</code> utility class on an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> tag (Figure 1 below). By default, <code>.button</code> selectors inherit text color and font size from their parent. The example below is a generic <code>.button</code> selector with no other styles yet applied.
     </p>
 </div>
 <!-- .container -->
@@ -45,7 +42,7 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar">
+    <pre>
         <code class="language-html">
             &lt;a class="button" href="#1"&gt;
                 Button
@@ -61,28 +58,14 @@ title: "Buttons"
     </figcaption>
 </figure>
 
-<figure class="container narrow margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;button class="button"&gt;
-                Button
-            &lt;/button&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 2 - The button definer class applied to an <code>&lt;button&gt;</code> tag.</p>
-    </figcaption>
-</figure>
-
-<hr class="margin-y-5" id="addColor">
+<hr class="margin-y-5" id="addingColor">
 
 <div class="container narrow margin-y-4">
 
-    <h2>Adding Color</h2>
+    <h2>Coloring Buttons</h2>
 
     <p>
-        Add color to a <code>.button</code> selector with our <a href="{{ site.baseurl }}/docs/color-system/#themeColorClasses">theme-color utilities</a>.
-        These classes automatically apply the button's appropriate text color.
+        Add color to a <code>.button</code> selector with our <a href="{{ site.baseurl }}/docs/color-system/#themeColorClasses">theme-color utilities</a>. These utilities apply the button's appropriate text color automatically (see Figure 3).
     </p>
 
 </div>
@@ -117,7 +100,7 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar">
+    <pre>
         <code class="language-html">
             &lt;a class="button theme-primary" href="#1"&gt;
                 Button
@@ -133,7 +116,7 @@ title: "Buttons"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 3 - Colored buttons using the background-color utility classes.</p>
+        <p>Figure 2</p>
     </figcaption>
 </figure>
 
@@ -142,17 +125,20 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>Full-width Buttons</h2>
     <p>
-        For full-width buttons, add the <code>.display-block</code> <a href="#1">display utility class</a>.
+        For buttons that span the width of their parent, add the <code>.width-100</code> <a href="#1">size utility class</a> (Figure 3).
+    </p>
+    <p>
+        Do not use <code>.display-block</code> for full-width buttons. Buttons have a display property of <code>flex</code> (for vertical centering icons). Using use <code>.display-block</code> changes the buttons display property from <code>flex</code> to <code>block</code>. This breaks the vertical centering of the icon within the button (See <a href="#1">buttons with text and icon</a> below).
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
 
-    <div class="aspect-ratio aspect-ratio--3by2 border">
+    <div class="aspect-ratio aspect-ratio--3by2 border" {{ site.style_default_theme_colors }}>
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-            <div class="width-100">
-                <button class="button theme-secondary display-block">
+            <div class="width-100 padding-3">
+                <button class="button theme-primary width-100">
                     Button
                 </button>
             </div>
@@ -164,13 +150,13 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
    <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="button theme-primary display-block" href="#1"&gt;
+            &lt;a class="button theme-primary width-100" href="#1"&gt;
                 Button
             &lt;/a&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 4 - Full-width button using the display block utility class.</p>
+        <p>Figure 3</p>
     </figcaption>
 </figure>
 
@@ -179,12 +165,8 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>Outlined Buttons</h2>
     <p>
-        For a button with an outline instead of a fill, add the outline modifier class <code>.button--outline</code>
-        to the <code>.button</code> selector. The outline width  matches your theme's default <a href="#1">border width</a>. The
-        outline color inherits the button's text color, which can be changed using
-        our <a href="#1">text color utility classes</a>.
+        Create a button with an outline instead of a fill. Add the outline modifier class <code>.button--outline</code> to the <code>.button</code> selector. The outline width matches your theme's body border width. The outline color inherits the button's text color. You can change the color using our <a href="#1">text color utility classes</a>.
     </p>
-
 </div>
 <!-- .container -->
 
@@ -193,7 +175,7 @@ title: "Buttons"
     <div class="aspect-ratio aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
             <div class="width-100 padding-x-4">
-                <div class="grid grid--gap-2 grid--cells-6--md justify-content-center">
+                <div class="grid grid--gap-3 grid--cells-6--md justify-content-center">
                     <div class="grid__cell">
                         <a class="button button--outline display-block" href="#1">
                             Button
@@ -215,28 +197,19 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <pre>
+    <pre class="hide-toolbar">
         <code class="language-html">
             &lt;a class="button button--outline" href="#1"&gt;
                 Button
             &lt;/a&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 5 - The button outline modifier class applied to an <code>&lt;a&gt;</code> tag.</p>
-    </figcaption>
-</figure>
 
-<figure class="container narrow margin-y-4">
-    <pre>
-        <code class="language-html">
             &lt;button class="button button--outline text-secondary"&gt;
                 Button
             &lt;/button&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 6 - The button outline modifier class applied to an <code>&lt;button&gt;</code> tag, and colored with the text color utility class.</p>
+        <p>Figure 4</p>
     </figcaption>
 </figure>
 
@@ -244,7 +217,7 @@ title: "Buttons"
 
 <div class="container narrow margin-y-4">
 
-    <h2>Border Radius</h2>
+    <h2>Button Border Radius</h2>
 
     <p>Use our <a href="#1">border-radius utility classes</a> (e.g. <code>.rounded</code>) for rounded edges on <code>.button</code> selectors.</p>
 
@@ -255,16 +228,16 @@ title: "Buttons"
 
     <div class="aspect-ratio aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-            <div class="with-100 px-4">
-                <div class="grid grid--gap-2 grid--cells-6--md">
+            <div class="width-100 padding-x-4">
+                <div class="grid grid--gap-3 grid--cells-6--md">
                     <div class="grid__cell">
-                        <a class="button theme-primary display-block rounded" href="#1">
+                        <a class="button width-100 theme-primary" href="#1">
                             Button
                         </a>
                     </div>
                     <!-- .grid__cell -->
                     <div class="grid__cell">
-                        <a class="button theme-secondary display-block rounded-pill" href="#1">
+                        <a class="button width-100 theme-secondary rounded-pill" href="#1">
                             Button
                         </a>
                     </div>
@@ -296,18 +269,14 @@ title: "Buttons"
 <hr class="margin-y-5" id="buttonSizes">
 
 <div class="container narrow margin-y-4">
-
     <h2>Button Sizes</h2>
-
     <p>
         Instead of providing predetermined button sizes (like you'll find in other frameworks) our buttons inherit their font size and use relative
         (em) sizes for padding, allowing buttons to be resized using our <a href="#1">font size</a> utility classes.
     </p>
     <p>
-        This is particularly useful because multiple buttons can be resized within a single selector. In the example
-        below, the small font size utility class (<code>.font-size-sm</code>) is applied to <code>&lt;ul&gt;</code> containing buttons, making all buttons smaller with a single class.
+        This is particularly useful because multiple buttons can be resized within a single selector. In the example below, the small font size utility class (<code>.font-size-sm</code>) is applied to <code>&lt;ul&gt;</code> containing buttons, making all buttons smaller with a single class.
     </p>
-
 </div>
 <!-- .container -->
 
