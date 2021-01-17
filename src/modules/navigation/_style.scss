@@ -135,7 +135,7 @@ In this file:
     }
     
     > [class*="__actions"] {
-        padding: var(--primary-nav-padding);
+        padding: calc(var(--primary-nav-padding) * 0.5) var(--primary-nav-padding);
         justify-content: space-between;
     }
 
@@ -317,10 +317,13 @@ In this file:
                 display: block !important;
             }
 
+            [class*="__actions"] {
+                padding: var(--primary-nav-padding);
+            }
+
             [class*="__actions"] button.mobile-menu-toggle {
                 display: none;
             }
-
         }
 
         .primary-nav--inline#{$mod} {
