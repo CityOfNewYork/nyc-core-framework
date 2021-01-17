@@ -5,8 +5,7 @@ title: "Breakpoints"
 
 <div class="container narrow margin-y-4">
     <p>
-        The NYC Core Framework uses simple breakpoints. These breakpoints are mostly based on minimum viewport
-        widths and allow us to scale up elements as the viewport changes.
+        Adapt layouts and styles across devices with our mobile-first, responsive breakpoints.
     </p>
 </div>
 <!-- .container -->
@@ -16,16 +15,77 @@ title: "Breakpoints"
 <div class="container narrow margin-y-4">
     <h2>Breakpoint Values</h2>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus omnis maiores sed unde eius assumenda quidem ducimus asperiores quas? Molestiae quia deleniti maiores consectetur? Quod alias libero sunt quidem veniam.
-    </p>
+        The NYC Core Framework ships with only four breakpoint sizes, shown in the following table.
+    </p> 
 </div>
 <!-- .container -->
+
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <caption class="screen-reader-only">
+            NYC Core Framework Scripts
+        </caption>
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Name</th>
+                <th class="width-30" scope="col">Modifier</th>
+                <th class="width-40 text-align-right" scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Small</td>
+                <td>
+                    <p><code>--sm</code></p>
+                </td>
+                <td class="text-align-right">
+                    400px
+                </td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>
+                    <p><code>--md</code></p>
+                </td>
+                <td class="text-align-right">
+                    760px
+                </td>
+            </tr>
+            <tr>
+                <td>Large</td>
+                <td>
+                    <p><code>--lg</code></p>
+                </td>
+                <td class="text-align-right">
+                    1000px
+                </td>
+            </tr>
+            <tr>
+                <td>Extra Large</td>
+                <td>
+                    <p><code>--xl</code></p>
+                </td>
+                <td class="text-align-right">
+                    1340px
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</figure>
 
 <hr class="margin-y-5" id="breakpointModifiers">
 <div class="container narrow margin-y-4">
     <h2>Breakpoint Modifiers</h2>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus omnis maiores sed unde eius assumenda quidem ducimus asperiores quas? Molestiae quia deleniti maiores consectetur? Quod alias libero sunt quidem veniam.
+        Notice the <em>Modifier</em> column in the table above. Across the Framework, <em>breakpoint modifiers</em> are available for many of our component and utility classes.
+    </p>
+    <p>
+        A breakpoint modifier has a double-dash and two-letter abbreation representing its breakpoint (e.g.,
+        <code>--md</code> for the <em>medium</em> breakpoint). Breakpoint modifiers are always afixed to the end of
+        certain component and utility classes.
     </p>
 </div>
 <!-- .container -->
