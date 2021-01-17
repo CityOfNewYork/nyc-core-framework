@@ -13,7 +13,10 @@ title: "Buttons"
 {% capture as_body %}
 <p>
     Like our <a href="{{ site.baseurl }}/docs/navigation">navigation</a> links, buttons include visible hover and focus
-    states. Icon buttons include aria labels for screen readers.
+    states for keyboard users.
+</p>
+<p>
+    Icon buttons include aria labels for screen readers.
 </p>
 {% endcapture %}
 
@@ -24,7 +27,12 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>The Button Selector</h2>
     <p>
-        Buttons within the NYC Core Framework require a <code>.button</code> utility class on an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> tag (Figure 1 below). By default, <code>.button</code> selectors inherit text color and font size from their parent. The example below is a generic <code>.button</code> selector with no other styles yet applied.
+        Buttons within the NYC Core Framework require a <code>.button</code> utility class on an <code>&lt;a&gt;</code>
+        or <code>&lt;button&gt;</code> tag (Figure 1 below). By default, <code>.button</code> selectors inherit text
+        color and font size from their parent.
+    </p>
+    <p>
+        The example below is a generic <code>.button</code> selector with no other styles yet applied.
     </p>
 </div>
 <!-- .container -->
@@ -61,13 +69,12 @@ title: "Buttons"
 <hr class="margin-y-5" id="addingColor">
 
 <div class="container narrow margin-y-4">
-
     <h2>Coloring Buttons</h2>
-
     <p>
-        Add color to a <code>.button</code> selector with our <a href="{{ site.baseurl }}/docs/color-system/#themeColorClasses">theme-color utilities</a>. These utilities apply the button's appropriate text color automatically (see Figure 3).
+        Add color to a <code>.button</code> selector with our <a
+            href="{{ site.baseurl }}/docs/color-system/#themeColorClasses">theme-color utilities</a>. These utilities
+        apply the button's appropriate text color automatically (Figure 2).
     </p>
-
 </div>
 <!-- .container -->
 
@@ -165,7 +172,13 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>Outlined Buttons</h2>
     <p>
-        Create a button with an outline instead of a fill. Add the outline modifier class <code>.button--outline</code> to the <code>.button</code> selector. The outline width matches your theme's body border width. The outline color inherits the button's text color. You can change the color using our <a href="#1">text color utility classes</a>.
+        Create a button with an outline instead of a fill. Add the outline modifier class <code>.button--outline</code>
+        to the <code>.button</code> selector. The outline width is a <strong>2x</strong> multiple of your theme's body
+        border width.
+    </p>
+    <p>
+        The outline color inherits the button's text color. You can change the color using our <a href="#1">text color
+            utility classes</a>
     </p>
 </div>
 <!-- .container -->
@@ -331,10 +344,10 @@ title: "Buttons"
     </figcaption>
 </figure>
 
-<hr class="margin-y-5" id="buttonsWithTextAndIcon">
+<hr class="margin-y-5" id="textAndIconButtons">
 
 <div class="container narrow margin-y-4">
-    <h2>Buttons With Text and Icon</h2>
+    <h2>Text and Icon Buttons</h2>
     <p>
         Add an icon to a <code>.button</code> selector with the <code>.button--has-icon</code> modifier class. Buttons with
         icons require two child selectors. The icon itself is a <code>&lt;span&gt;</code> with its combined <a href="#1">Font Awesome</a>
@@ -347,17 +360,32 @@ title: "Buttons"
 </div>
 <!-- .container -->
 
-<figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
-    <div class="aspect-ratio aspect-ratio--3by2 border">
+<figure class="container narrow margin-y-4">
+
+    <div class="aspect-ratio aspect-ratio--3by2 border" {{ site.style_default_theme_colors }}>
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-            <div class="with-100 text-align-center">
-                <a class="button button--has-icon display-block theme-primary" href="#1">
-                    <span class="nyc_icon_edit button__icon"></span>
-                    <span class="button__text">Button</span>
-                </a>
+            <div class="width-100 padding-x-4">
+                <div class="grid grid--gap-2 grid--cells-6--md">
+                    <div class="grid__cell">
+                        <a class="button button--has-icon width-100 theme-dark" href="#1">
+                            <span class="nyc_icon_edit button__icon"></span>
+                            <span class="button__text">Edit</span>
+                        </a>  
+                    </div>
+                    <!-- .grid__cell -->
+                    <div class="grid__cell">
+                        <a class="button button--has-icon width-100 button--outline" href="#1">
+                            <span class="nyc_icon_delete button__icon"></span>
+                            <span class="button__text">Delete</span>
+                        </a>
+                    </div>
+                    <!-- .grid__cell -->
+                </div>
+                <!-- .grid -->    
             </div>
         </div>
     </div>
+
 </figure>
 
 <figure class="container narrow margin-y-4">
@@ -572,3 +600,25 @@ title: "Buttons"
 
 </div>
 <!-- .container -->
+
+ <figure class="container narrow margin-y-4">
+
+    <div class="aspect-ratio aspect-ratio--3by2 border"  {{ site.style_default_theme_colors }}>
+        <div class="aspect-ratio__content flex-row align-items-center">
+            <div class="width-100 padding-4">
+                <div class="button-group text-color-secondary justify-content-center" role="menu">
+                    <a class="button button--outline" href="#1">
+                        Sign In  
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Language">
+                        <span class="nyc_icon_language" aria-hidden="true"></span>
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Search">
+                        <span class="nyc_icon_search" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</figure>
