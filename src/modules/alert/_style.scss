@@ -19,7 +19,7 @@ In this file:
     --alert-padding-y: var(--spacer-3);
 
     --alert-head-font-size: var(--h5-font-size);
-    --alert-background-opacity: 0.075;
+    --alert-faint-fill-opacity: 0.075;
 }
 
 //////////////////////////////////////////////
@@ -40,20 +40,19 @@ In this file:
         border-color: currentColor !important;
     }
 
-    &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"]) {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+    &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"])::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-            background-color: currentColor;
-            opacity: var(--alert-background-opacity);
-            
-            pointer-events: none;
-        }
+        border-radius: inherit;
+        pointer-events: none;
+
+        background-color: currentColor;
+        opacity: var(--alert-faint-fill-opacity);    
     }    
 }
 

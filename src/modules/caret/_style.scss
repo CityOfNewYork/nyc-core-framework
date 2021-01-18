@@ -34,8 +34,11 @@ $default-caret-margin: 0.375em;
     display: flex;
     align-items: center;
     
-    &::after {
+    flex-direction: row-reverse;
+    
+    &::before {
         content: "";
+        position: relative;
         display: inline-block;
 
         color: inherit;
@@ -51,6 +54,5 @@ $default-caret-margin: 0.375em;
     } 
     
     @if $location == "prepend" {
-        flex-direction: row-reverse;
     }
 }

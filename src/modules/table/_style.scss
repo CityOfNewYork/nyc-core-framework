@@ -211,17 +211,19 @@ In this file:
             min-width: var(--table-scroll-min-width);
         }
 
-        &::after{
-            content: "";
+        &::after {
             position: absolute;
+            content: "";
             top: 0;
             right: 0;
             bottom: 0;
             left: 50%;
-            z-index: 600;
+
+            pointer-events: none;
+            
             -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
             
-            pointer-events: none;
+            z-index: 600;
 
             display: none;
         }

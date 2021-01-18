@@ -131,9 +131,11 @@ fieldset {
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: currentColor;
-        opacity: 0.05;
+
         border-radius: inherit;
+        background-color: currentColor;
+        
+        opacity: 0.05;
     }
 
     [dir="rtl"] & {
@@ -442,8 +444,8 @@ fieldset {
         position: relative;
 
         &::before {
-            content: "";
             position: absolute;
+            content: "";
             top: calc(var(--form-field-padding-y) * -1);
             left: calc(var(--form-field-padding-x) * -1);
             bottom: calc(var(--form-field-padding-y) * -1);

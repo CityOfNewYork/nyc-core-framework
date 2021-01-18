@@ -80,13 +80,14 @@ In this file:
         bottom: 0;
         right: 0;
 
+        border-radius: 100%;
+        
         transform-origin: center;
         transform: scale(0.875);
         
         background-color: white;
 
         z-index: 1;
-        border-radius: 100%;
     }
 
     &[class*="-express"]::after{

@@ -40,8 +40,8 @@ $aspect-ratios: (
     display: block;
 
     &::before {
-        display: block;
         content: "";
+        display: block;
     }
 
 }

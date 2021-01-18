@@ -65,7 +65,7 @@ button {
     border-radius: var(--button-border-radius);
     transition: opacity 0.5s ease-out;
 
-    &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::after {
+    &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::before {
         position: absolute;
         content: "";
         top: 0;

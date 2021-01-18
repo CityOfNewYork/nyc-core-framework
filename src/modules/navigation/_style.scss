@@ -463,7 +463,7 @@ In this file:
     @extend %custom-properties;
     @include caret.add-caret;
 
-    &[aria-expanded="true"]::after {
+    &[aria-expanded="true"]::before {
         transform: rotate(180deg);
     }
 }
@@ -476,8 +476,8 @@ In this file:
     overflow: visible;
 
     &::after {
-        content: "";
         position: absolute;
+        content: "";
         top: 0;
         left: calc(var(--gap-size) + var(--dropdown-pointer-size) + 4px);
         transform: translateX(-50%) rotate(45deg);
