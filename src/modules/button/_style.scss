@@ -29,6 +29,8 @@ In this file:
     
     --button--icon-only-size: 2.25em;
     --button--border-radius: 0.25em;
+    
+    --button-hit-area-opacity: 0.025;
 }
 
 //////////////////////////////////////////////
@@ -66,7 +68,6 @@ button {
     text-align: center;
     vertical-align: middle;
     line-height: normal;
-    flex-shrink: 0;
     cursor: pointer;
 
     border-radius: var(--button--border-radius);
@@ -84,7 +85,7 @@ button {
         border-radius: inherit;
         pointer-events: none;
 
-        opacity: 0.05;
+        opacity: var(--button-hit-area-opacity);
         background-color: currentColor;
     }
 
@@ -144,6 +145,7 @@ button {
 
 .button--icon-only {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
 
