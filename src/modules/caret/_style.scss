@@ -3,7 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Mixins
+// B. Placeholders
+// C. Caret Utility
 
 */
 
@@ -19,10 +20,8 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Mixins
+// B. Placeholders
 ////////////////////////////////////////
-
-// Create caret icon
 
 %caret-icon {
     border-top: var(--caret-size) solid;
@@ -31,8 +30,11 @@ In this file:
     border-left: var(--caret-size) solid transparent;
 }
 
+////////////////////////////////////////
+// C. Caret Utility
+////////////////////////////////////////
 
-@mixin add-caret() {
+.has-caret {
 
     display: flex;
     align-items: center;

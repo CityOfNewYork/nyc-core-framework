@@ -54,6 +54,7 @@ In this file:
 }
 
 .accordion__button {
+    
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -70,7 +71,7 @@ In this file:
         border-top-color: inherit;
     }
 
-    @include caret.add-caret();
+    @extend .has-caret;
 
     &::before{
        transition: transform var(--accordion-animation);
