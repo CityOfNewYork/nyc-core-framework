@@ -3,8 +3,8 @@
 In this file:
 
 // A. Variables
-// B. Default Button Tag
-// C. Button Utility
+// B. Selector Resets
+// C. Button Block
 // D. Button Outline Modifier
 // E. Button Has Icon Modifiers
 // F. Button Icon Only Modifier
@@ -24,17 +24,16 @@ In this file:
     --button-padding-y: 0.75em;
 
     --button-font-weight: var(--body-font-weight-bold);
+    --button-faint-fill-opacity: 0.05;
+    --button-border-radius: 0.25em;
+    
+    --button-outline-border-width: calc( var(--default-border-width) * 2);
 
-    --button--outline-border-width: calc( var(--default-border-width) * 2);
-    
     --button--icon-only-size: 2.25em;
-    --button--border-radius: 0.25em;
-    
-    --button-hit-area-opacity: 0.025;
 }
 
 //////////////////////////////////////////////
-// B. Default Button Tag
+// B. Selector Resets
 //////////////////////////////////////////////
 
 button {
@@ -50,19 +49,12 @@ button {
 }
 
 //////////////////////////////////////////////
-// C. Button Utility
+// C. Button Block
 //////////////////////////////////////////////
- 
+
 .button {
     --button-opacity-hover: 0.75;
 
-    &[aria-disabled="true"] {
-        opacity: var(--button-opacity-hover);
-        cursor: not-allowed;
-    }
-}
-
-.button {
     position: relative;
     display: inline-block;
     text-align: center;
@@ -70,12 +62,11 @@ button {
     line-height: normal;
     cursor: pointer;
 
-    border-radius: var(--button--border-radius);
-    transition: opacity 0.5s;
+    border-radius: var(--button-border-radius);
+    transition: opacity 0.5s ease-out;
 
     &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::after {
         position: absolute;
-        
         content: "";
         top: 0;
         right: 0;
@@ -85,19 +76,26 @@ button {
         border-radius: inherit;
         pointer-events: none;
 
-        opacity: var(--button-hit-area-opacity);
         background-color: currentColor;
+        opacity: var(--button-faint-fill-opacity);
     }
 
     &:hover, 
     &:focus, 
-    &:active {
+    &:active
+    {
         opacity: var(--button-opacity-hover);
+        --button-faint-fill-opacity: 0.075;
     }
 
     &:not([class*="button--icon-only"]) {
         padding: var(--button-padding-y) var(--button-padding-x);
         font-weight: var(--button-font-weight);
+    }
+
+    &[aria-disabled="true"] {
+        opacity: var(--button-opacity-hover);
+        cursor: not-allowed;
     }
 }
 
@@ -107,7 +105,7 @@ button {
 
 .button--outline {
     background-color: transparent;
-    box-shadow: inset 0 0 0 var(--button--outline-border-width) currentColor;
+    box-shadow: inset 0 0 0 var(--button-outline-border-width) currentColor;
 }
 
 //////////////////////////////////////////////
@@ -160,7 +158,6 @@ button {
 //////////////////////////////////////////////
 
 .button-group {
-    list-style: none;
     --gap-size: var(--spacer-2);
 
     display: flex;
