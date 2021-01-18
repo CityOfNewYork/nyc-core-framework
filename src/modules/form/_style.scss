@@ -363,13 +363,15 @@ fieldset {
     position: relative;
 
     &::before {
-        content: "";
-        @include caret.caret-icon;
-        pointer-events: none;
+        @extend %caret-icon;
+
         position: absolute;
+        content: "";
         right: 0;
         top: 50%;
+        
         transform: translateY(-50%);
+        
         margin-left: var(--form-field-padding-x);
         margin-right: var(--form-field-padding-x);
     }

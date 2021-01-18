@@ -70,13 +70,13 @@ In this file:
         border-top-color: inherit;
     }
 
-    @include caret.add-caret("after");
+    @include caret.add-caret();
 
-    &::after{
+    &::before{
        transition: transform var(--accordion-animation);
     }
 
-    &:not([aria-expanded="true"])::after {
+    &:not([aria-expanded="true"])::before {
         transform: rotate(0deg);
     }
     
@@ -85,10 +85,6 @@ In this file:
         color: var(--accordion-active-color);
 
         &::before {
-            --subtle-fill-opacity: var(--subtle-fill-visible-opacity);
-        }
-
-        &::after {
             transform: rotate(180deg);
         }
     }

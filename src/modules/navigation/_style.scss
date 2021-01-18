@@ -446,7 +446,7 @@ In this file:
     > li:not(:last-child) {
         @include caret.add-caret;
         
-        &::after {
+        &::before {
             margin-left: var(--gap-size) !important;
             margin-right: var(--gap-size) !important;
             transform: rotate(-90deg);
