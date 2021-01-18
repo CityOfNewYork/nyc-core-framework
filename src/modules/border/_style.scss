@@ -33,6 +33,11 @@ In this file:
 // C. Border Utilies
 //////////////////////////////////////////////
 
+hr {
+    border-top-width: var(--default-border-width);
+    border-top-style: var(--default-border-style);
+}
+ 
 [class*="border"]:not([class*="theme-"]){
     border-color: inherit;
 }

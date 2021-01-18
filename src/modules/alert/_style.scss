@@ -18,8 +18,10 @@ In this file:
     --alert-padding-x: var(--spacer-3);
     --alert-padding-y: var(--spacer-3);
 
-    --alert-head-font-size: var(--h5-font-size);
+    --alert-title-font-size: inherit;
     --alert-faint-fill-opacity: 0.075;
+
+    --alert-border-radius: 0;
 }
 
 //////////////////////////////////////////////
@@ -30,16 +32,21 @@ In this file:
     @extend %custom-properties;
     
     position: relative;
+    
     padding: var(--alert-padding-y) var(--alert-padding-x);
+
+    border-radius: var(--alert-border-radius);
+
+    > hr {
+        margin: var(--alert-padding-x) calc(var(--alert-padding-x) * -1);
+        border-color: currentColor !important;
+        opacity: 0.5;
+    }
 
     a {
         color: inherit !important;
     }
-
-    &[class*="border"] {
-        border-color: currentColor !important;
-    }
-
+    
     &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"])::before {
         position: absolute;
         content: "";
@@ -54,35 +61,68 @@ In this file:
         background-color: currentColor;
         opacity: var(--alert-faint-fill-opacity);    
     }    
+
+    &[class*="border"] {
+        border-color: currentColor !important;
+    }
+
 }
 
 //////////////////////////////////////////////
 // C. Alert Elements
 //////////////////////////////////////////////
 
-.alert__head, 
-.alert__body {
+.alert__title, 
+.alert__description {
     position: relative;
 }
 
-.alert__head {
+.alert__title {
     display: flex;
     align-items: center;
-    font-size: var(--alert-head-font-size);
 
+    font-size: var(--alert-title-font-size);
+    
     &:not(:last-child) {
         margin-bottom: 0.25em;
     }
+
+    button {
+        margin-left: auto;
+        font-size: var(--font-size-sm);
+    }
+
+    [dir="rtl"] & {
+        button {
+            margin-left: unset;
+            margin-right: auto;
+        }
+    }
 }
 
-.alert__head__title {
+.alert__title__text {
+    margin-left: var(--spacer-2);
+    margin-right: var(--spacer-2);
     font-weight: var(--body-font-weight-bold);
-    margin-left: var(--spacer-1);
-    margin-right: var(--spacer-1);
 }
 
-.alert__body {
+.alert__description {
     p:not(:last-child) {
         margin-bottom: 0.5em;
     }
+}
+
+.dismissed {
+  animation-duration: 0.5s;
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }

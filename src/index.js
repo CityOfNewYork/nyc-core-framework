@@ -14,6 +14,9 @@ new Accessibility();
 import Accordion from "./modules/accordion/";
 new Accordion();
 
+import Alert from "./modules/alert/";
+new Alert();
+
 import "./modules/alert/";
 
 import "./modules/article/";

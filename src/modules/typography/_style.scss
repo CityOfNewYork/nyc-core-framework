@@ -232,14 +232,6 @@ figure {
     }
 }
 
-hr {
-    &:not([class*="margin-"]){
-        margin: 0;
-    }
-
-    @extend .border-top;
-}
-
 //////////////////////////////////////////////
 // G. Last Child Margin Bottom
 //////////////////////////////////////////////
