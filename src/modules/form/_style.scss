@@ -433,16 +433,21 @@ fieldset {
 //////////////////////////////////////////////
 
 .form-entry__option {
+
     position: relative;
+
     display: flex;
     flex-direction: column;
+
+    border-radius: var(--form-field-border-radius);
 
     border-style: var(--default-border-style);
     border-width: var(--default-border-width);
 
     > div {
-        padding: var(--form-field-padding-y) var(--form-field-padding-x);
         position: relative;
+        padding: var(--form-field-padding-y) var(--form-field-padding-x);
+    
     }
 
     > div:not(:last-child) {
@@ -453,6 +458,7 @@ fieldset {
 
     > div > label {
         position: relative;
+        background-color: yellow;
 
         &::before {
             position: absolute;
