@@ -19,7 +19,9 @@ export default class Button {
                 ${tooltipText}
             </span>`;
 
-            iconOnlyButton.insertAdjacentHTML('beforeend', tooltipHTML);
+            if(tooltipText != null){
+                iconOnlyButton.insertAdjacentHTML('beforeend', tooltipHTML);
+            }
 
         });
     }
