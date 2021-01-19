@@ -254,10 +254,20 @@ fieldset {
         align-self: stretch;
     }
 
-    > [class*="nyc_icon"] {
+    > [class*="nyc_icon"],
+    > .button-group
+    {
+        background-color: yellow;
         margin-left: var(--form-field-padding-x);
         font-size: 75%;
     }
+ { 
+        font-size: 75%;
+        margin-left: calc(var(--form-field-padding-x) * 0.5);
+        margin-right: calc(var(--form-field-padding-x) * 0.5);
+    }
+
+    // background-color: yellow;
 
     &::after {
         content: "";
