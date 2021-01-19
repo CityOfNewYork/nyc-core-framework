@@ -266,8 +266,6 @@ fieldset {
         margin-right: calc(var(--form-field-padding-x) * 0.5);
     }
 
-    // background-color: yellow;
-
     &::after {
         content: "";
         position: absolute;
@@ -433,7 +431,6 @@ fieldset {
 //////////////////////////////////////////////
 
 .form-entry__option {
-
     position: relative;
 
     display: flex;
@@ -447,7 +444,6 @@ fieldset {
     > div {
         position: relative;
         padding: var(--form-field-padding-y) var(--form-field-padding-x);
-    
     }
 
     > div:not(:last-child) {
@@ -458,7 +454,6 @@ fieldset {
 
     > div > label {
         position: relative;
-        background-color: yellow;
 
         &::before {
             position: absolute;
@@ -508,8 +503,8 @@ fieldset {
 
 // Shared Styles
 
-.form-entry__option__radio,
-.form-entry__option__check, 
+.form-entry__option__radio > label,
+.form-entry__option__check > label, 
 .form-entry__option__switch {
     position: relative;
     color: inherit;
@@ -525,15 +520,15 @@ fieldset {
     }
 }
 
-.form-entry__option__radio > input[type="radio"],
-.form-entry__option__check > input[type="checkbox"],
+.form-entry__option__radio > label > input[type="radio"],
+.form-entry__option__check > label > input[type="checkbox"],
 .form-entry__option__switch > input[type="checkbox"]  {
     background-color: transparent;
     opacity: 0;
 } 
 
-.form-entry__option__radio > input ~ .radio__label,
-.form-entry__option__check > input ~ .check__label,
+.form-entry__option__radio > label > input ~ .radio__label,
+.form-entry__option__check > label > input ~ .check__label,
 .form-entry__option__switch > input ~ .switch__label {
     line-height: var(--body-line-height);
 
@@ -553,21 +548,21 @@ fieldset {
 
 // Form Option Radio
 
-.form-entry__option__radio > input ~ .radio__label::before{
+.form-entry__option__radio > label > input ~ .radio__label::before{
     content: "\e948";
 }
 
-.form-entry__option__radio > input:checked ~ .radio__label::before{
+.form-entry__option__radio > label > input:checked ~ .radio__label::before{
     content: "\e949";
 }
 
 // Form Option Check
 
-.form-entry__option__check > input ~ .check__label::before {
+.form-entry__option__check > label > input ~ .check__label::before {
     content: "\e946";
 }
 
-.form-entry__option__check > input:checked ~ .check__label::before {
+.form-entry__option__check > label > input:checked ~ .check__label::before {
     content: "\e947";
 }
 
@@ -583,16 +578,16 @@ fieldset {
 
 // Form Option Disabled
 
-.form-entry__option__radio > input:disabled ~ .radio__label::before,
-.form-entry__option__check > input:disabled ~ .check__label::before, 
+.form-entry__option__radio > label > input:disabled ~ .radio__label::before,
+.form-entry__option__check > label > input:disabled ~ .check__label::before, 
 .form-entry__option__switch > input:disabled ~ .switch__label::before 
 {
     content: "\e95e";
 }
 
 
-.form-entry__option__radio.disabled,
-.form-entry__option__check.disabled,
+.form-entry__option__radio > label.disabled,
+.form-entry__option__check > label.disabled,
 .form-entry__option__switch.disabled
 {
     cursor: not-allowed;
@@ -605,8 +600,8 @@ fieldset {
 
 // Focus State
 
-.form-entry__option__radio > input:focus ~ .radio__label,
-.form-entry__option__check > input:focus ~ .check__label,
+.form-entry__option__radio > label > input:focus ~ .radio__label,
+.form-entry__option__check > label > input:focus ~ .check__label,
 .form-entry__option__switch > input:focus ~ .check__label {
     text-decoration: underline;
     &::before{
@@ -617,8 +612,8 @@ fieldset {
 
 // Checked State
 
-.form-entry__option__radio > input:checked ~ .radio__label,
-.form-entry__option__check > input:checked ~ .check__label,
+.form-entry__option__radio > label > input:checked ~ .radio__label,
+.form-entry__option__check > label > input:checked ~ .check__label,
 .form-entry__option__switch > input:checked ~ .switch__label {
     &::before{
         opacity: 1;
@@ -628,11 +623,11 @@ fieldset {
 // RTL
 
 [dir="rtl"] {
-    .form-entry__option__radio > .radio__label::before,
-    .form-entry__option__radio > input[type="radio"],
+    .form-entry__option__radio > label > .radio__label::before,
+    .form-entry__option__radio > label > input[type="radio"],
 
-    .form-entry__option__check > .check__label::before,
-    .form-entry__option__check > input[type="checkbox"],     
+    .form-entry__option__check > label > .check__label::before,
+    .form-entry__option__check > label > input[type="checkbox"],     
 
     .form-entry__option__switch > .switch__label::before,
     .form-entry__option__switch > input[type="checkbox"]
