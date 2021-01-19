@@ -13,6 +13,9 @@ In this file:
 
 */
 
+
+@use "../caret/style" as caret;
+
 //////////////////////////////////////////////
 // A. Variables
 //////////////////////////////////////////////
@@ -78,6 +81,7 @@ button {
 
         background-color: currentColor;
         opacity: var(--button-faint-fill-opacity);
+
     }
 
     &:hover, 
@@ -161,23 +165,44 @@ button {
 }
 
 .button__tooltip {
+    --button-tooltip-background: hsla(0, 0%, 0%, 0.9);
+
     position: absolute;
     top: 100%;
-    left: 50%;
+    right: 50%;
 
-    transform: translateX(-50%);
     margin-top: var(--spacer-2);
 
-    font-size: var(--font-size-sm);
     color: white;
-    text-shadow: 0 0 6px hsl(0, 0%, 0%);
-    background-color: hsla(0, 0%, 0%, 0.875);
+    background-color: var(--button-tooltip-background);
+
+    font-size: var(--font-size-sm);
 
     padding: 0.5em 1em;
-    border-radius: 0.5em;
+
+    border-radius: inherit;
+    border-top-right-radius: unset;
 
     animation-name: fadeIn;
     animation-duration: 0.75s;
+    
+    pointer-events: none;
+    
+    display: none;
+
+    &::before {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 100%;
+
+        border-style: solid;
+        border-color: transparent;
+
+        border-width: var(--spacer-1);
+        border-bottom-color: var(--button-tooltip-background);
+        border-right-color: var(--button-tooltip-background);
+    }
 }
 
 @keyframes fadeIn {
