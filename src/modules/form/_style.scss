@@ -47,7 +47,8 @@ input[type="email"],
 input[type="password"],
 input[type="search"],
 select,
-textarea {
+textarea
+{
     display: block;
     width: 100%;
     max-width: 100%;
@@ -120,9 +121,9 @@ fieldset {
 
 .required-indicator {
     position: relative;
-    text-align: right;
     padding: 0.25em 0.5em;
     border-radius: var(--form-field-border-radius);
+    text-align: right;
     
     &::before {
         position: absolute;
@@ -190,7 +191,6 @@ fieldset {
 // E. Form Entry Elements
 //////////////////////////////////////////////
 
-
 .form-entry__field {
     position: relative;
 
@@ -199,8 +199,6 @@ fieldset {
 
     color: inherit;
 }
-
-
 
 .form-entry__field__label {
     padding-left: var(--form-field-padding-x);
@@ -245,8 +243,11 @@ fieldset {
         flex-shrink: 0;
     }
 
+    > .button {
+        --button-border-radius: 0;
+    }
+
     > [class*="button--icon-only"] {
-        border-radius: inherit;
         height: unset;
         width: unset;
         padding-left: var(--form-field-padding-x);
@@ -257,13 +258,11 @@ fieldset {
     > [class*="nyc_icon"],
     > .button-group
     {
-        background-color: yellow;
         margin-left: var(--form-field-padding-x);
         font-size: 75%;
     }
- { 
-        font-size: 75%;
-        margin-left: calc(var(--form-field-padding-x) * 0.5);
+
+    > .button-group {
         margin-right: calc(var(--form-field-padding-x) * 0.5);
     }
 
@@ -709,5 +708,3 @@ fieldset {
         // box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
     }
 }
-
-
