@@ -505,7 +505,8 @@ fieldset {
 
 .form-entry__option__radio > label,
 .form-entry__option__check > label, 
-.form-entry__option__switch {
+.form-entry__option__switch > label
+{
     position: relative;
     color: inherit;
     display: flex;
@@ -522,14 +523,16 @@ fieldset {
 
 .form-entry__option__radio > label > input[type="radio"],
 .form-entry__option__check > label > input[type="checkbox"],
-.form-entry__option__switch > input[type="checkbox"]  {
+.form-entry__option__switch > label > input[type="checkbox"]
+{
     background-color: transparent;
     opacity: 0;
 } 
 
 .form-entry__option__radio > label > input ~ .radio__label,
 .form-entry__option__check > label > input ~ .check__label,
-.form-entry__option__switch > input ~ .switch__label {
+.form-entry__option__switch > label > input ~ .switch__label
+{
     line-height: var(--body-line-height);
 
     &::before {
@@ -566,29 +569,16 @@ fieldset {
     content: "\e947";
 }
 
-// Form Option Switch
-
-.form-entry__option__switch > input ~ .switch__label::before {
-    content: "\e95f";
-}
-
-.form-entry__option__switch > input:checked ~ .switch__label::before {
-    content: "\e960";
-}
-
-// Form Option Disabled
-
 .form-entry__option__radio > label > input:disabled ~ .radio__label::before,
 .form-entry__option__check > label > input:disabled ~ .check__label::before, 
-.form-entry__option__switch > input:disabled ~ .switch__label::before 
+.form-entry__option__switch > label > input:disabled ~ .switch__label::before 
 {
     content: "\e95e";
 }
 
-
 .form-entry__option__radio > label.disabled,
 .form-entry__option__check > label.disabled,
-.form-entry__option__switch.disabled
+.form-entry__option__switch > label.disabled
 {
     cursor: not-allowed;
 
@@ -602,7 +592,7 @@ fieldset {
 
 .form-entry__option__radio > label > input:focus ~ .radio__label,
 .form-entry__option__check > label > input:focus ~ .check__label,
-.form-entry__option__switch > input:focus ~ .check__label {
+.form-entry__option__switch > label > input:focus ~ .check__label {
     text-decoration: underline;
     &::before{
         opacity: 0.75;
@@ -614,7 +604,7 @@ fieldset {
 
 .form-entry__option__radio > label > input:checked ~ .radio__label,
 .form-entry__option__check > label > input:checked ~ .check__label,
-.form-entry__option__switch > input:checked ~ .switch__label {
+.form-entry__option__switch > label > input:checked ~ .switch__label {
     &::before{
         opacity: 1;
     }
@@ -629,8 +619,8 @@ fieldset {
     .form-entry__option__check > label > .check__label::before,
     .form-entry__option__check > label > input[type="checkbox"],     
 
-    .form-entry__option__switch > .switch__label::before,
-    .form-entry__option__switch > input[type="checkbox"]
+    .form-entry__option__switch > label > .switch__label::before,
+    .form-entry__option__switch > label > input[type="checkbox"]
     {
         left: unset;
         right: 0;
@@ -641,37 +631,26 @@ fieldset {
 // G. Input Toggle Switch
 //////////////////////////////////////////////
 
-.toggle-switch {
-    --toggle-switch-width: 5rem;
-    --toggle-switch-transition: 0.3s;
-    --toggle-switch-active-color: var(--primary);
+.form-entry__option__switch {
+    --toggle-switch-width: 1.5em;
+    --toggle-switch-transition: 0.2s;
+    --toggle-switch-active-color: green;
 
-    position: relative;
-    display: inline-block;
-
-    width: var(--toggle-switch-width); 
-    height: calc(var(--toggle-switch-width) * 0.5);
-
-    input[type="checkbox"] { 
-        background-color: transparent;
-        opacity: 0;
-    }
-
-    .toggle-switch__slider {
+    .switch__slider {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-        cursor: pointer;
+        width: var(--toggle-switch-width); 
+        height: calc(var(--toggle-switch-width) * 0.5);
+        left: -0.125em;
+        top: 50%;
+        transform: translateY(-50%);
+        
 
         &::before,
         &::after
         {
             position: absolute;
             content: "";
-            transition: var(--toggle-switch-transition);
+            transition: var(--toggle-switch-transition) ease-in-out;
         }
 
         &::before {
@@ -679,33 +658,40 @@ fieldset {
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: currentColor;
-            opacity: 0.375;
 
             border-radius: calc(var(--toggle-switch-width) * 0.5);
+
+            background-color: currentColor;
+            opacity: 0.375;
         }
 
         &::after {
-            height: calc(var(--toggle-switch-width) * 0.4);
-            width: calc(var(--toggle-switch-width) * 0.4);
-            top: calc(var(--toggle-switch-width) * 0.05);
-            left: calc(var(--toggle-switch-width) * 0.05);
+            height: calc(var(--toggle-switch-width) * 0.5);
+            width: calc(var(--toggle-switch-width) * 0.5);
+            top: 0;
+            left: 0;
+
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparent;
+
             background-color: white;
+            background-clip: padding-box;
 
             border-radius: 100%;
         }
     }
 
-    input:checked + .toggle-switch__slider::before {
+    input:checked + .switch__slider::before {
         opacity: 1;
         background-color: var(--toggle-switch-active-color);
     }
 
-    input:checked + .toggle-switch__slider::after {
-        transform: translateX(calc(var(--toggle-switch-width) * 0.5));
+    input:checked + .switch__slider::after {
+        left: 50%;
     }
 
-    input:focus + .toggle-switch__slider {
+    input:focus + .switch__slider {
         // box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
     }
 }
