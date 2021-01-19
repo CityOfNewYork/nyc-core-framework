@@ -28,7 +28,8 @@ import "./modules/border";
 
 import "./modules/breakpoint";
 
-import "./modules/button";
+import Button from "./modules/button/";
+new Button();
 
 import "./modules/card";
 
