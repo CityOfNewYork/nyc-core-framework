@@ -92,7 +92,8 @@ button {
         --button-faint-fill-opacity: 0.075;
 
         > .button__tooltip {
-            display: block;
+            opacity: 1;
+            top: 100%;
         }
     }
 
@@ -158,18 +159,17 @@ button {
 
     width: var(--button--icon-only-size);
     height: var(--button--icon-only-size);
-
-    > .button__tooltip {
-        display: none;
-    }
 }
 
 .button__tooltip {
     --button-tooltip-background: hsla(0, 0%, 0%, 0.9);
 
     position: absolute;
-    top: 100%;
-    right: 50%;
+    top: -1000px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-block;
 
     margin-top: var(--spacer-2);
 
@@ -181,27 +181,22 @@ button {
     padding: 0.5em 1em;
 
     border-radius: inherit;
-    border-top-right-radius: unset;
 
     animation-name: fadeIn;
-    animation-duration: 0.75s;
+    animation-duration: 1s;
     
     pointer-events: none;
-    
-    display: none;
 
-    &::before {
-        position: absolute;
-        content: "";
+    &.left {
+        transform: unset;
+        right: unset;
+        left: 0;
+    }
+
+    &.right {
+        transform: unset;
+        left: unset;
         right: 0;
-        bottom: 100%;
-
-        border-style: solid;
-        border-color: transparent;
-
-        border-width: var(--spacer-1);
-        border-bottom-color: var(--button-tooltip-background);
-        border-right-color: var(--button-tooltip-background);
     }
 }
 
