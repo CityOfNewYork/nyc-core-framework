@@ -33,7 +33,8 @@ In this file:
 // Scoped to Block
 
 %custom-properties {
-    --dropdown-z-index: 1200;
+    --nav-divider-padding-y: 0.625em;
+    --nav-divider-padding-x: var(--spacer-3);
 }
 
 ////////////////////////////////////////
@@ -257,6 +258,7 @@ In this file:
 
 [class*="primary-nav--below--"] > [class*="__menu"] > ul,
 .nav--divider {
+    @extend %custom-properties;
 
     &:not([class*="theme-"]) {
         border-color: inherit;
@@ -289,7 +291,7 @@ In this file:
     > li > a, 
     > li > button,
     > li > .nav__dropdown {
-        padding: 0.625em var(--spacer-3);
+        padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
     }
 
     > li > .nav__dropdown {
@@ -459,10 +461,7 @@ In this file:
 // H. Dropdown
 ////////////////////////////////////////
 
-[data-toggle="dropdown"]:not([class*="button--icon-only"]) {
-
-    @extend %custom-properties;
-    
+[data-toggle="dropdown"]:not([class*="button--icon-only"]) {    
     @extend .has-caret;
 
     &[aria-expanded="true"]::before {
@@ -498,6 +497,7 @@ In this file:
 }
 
 .nav__dropdown {
+    --dropdown-z-index: 1200;
 
     @extend .nav;
 
