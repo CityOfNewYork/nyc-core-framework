@@ -10,6 +10,23 @@ export default class Button {
 
         const iconOnlyButtonList = document.querySelectorAll(".button--icon-only");
 
+        let hoverFocusDelay;
+
+        const hoverFocusIn = (event) => {
+           hoverFocusDelay = setTimeout(() => { 
+                iconOnlyButtonList.forEach((iconOnlyButton) => {
+                    iconOnlyButton.classList.remove("tooltip-show");
+                });
+
+                event.target.classList.add("tooltip-show");
+             }, 300);
+        };
+
+        const hoverFocusOut = (event) => {
+            clearTimeout(hoverFocusDelay);
+            event.target.classList.remove("tooltip-show");
+        }
+
         iconOnlyButtonList.forEach((iconOnlyButton) => {
 
             const tooltipText = iconOnlyButton.getAttribute("aria-label");
@@ -25,37 +42,45 @@ export default class Button {
                 
                 const buttonTooltip = iconOnlyButton.querySelector(".button__tooltip");
 
-                const buttonTooltipWidth = buttonTooltip.offsetWidth / 2;
-                const buttonPositionLeft = iconOnlyButton.offsetLeft ;
-                const buttonPositionRight = window.innerWidth - (iconOnlyButton.offsetLeft + iconOnlyButton.offsetWidth);
+                const tooltipPosition = () => {
 
-                if (buttonTooltipWidth > buttonPositionLeft) {
-                    buttonTooltip.classList.add("left");
-                }
+                    const buttonTooltipWidth = buttonTooltip.offsetWidth / 2;
+                    const buttonPositionLeft = iconOnlyButton.offsetLeft ;
+                    const buttonPositionRight = window.innerWidth - (iconOnlyButton.offsetLeft + iconOnlyButton.offsetWidth);
 
-                if (buttonTooltipWidth > buttonPositionRight) {
-                    buttonTooltip.classList.add("right");
-                }
+                    if (buttonTooltipWidth > buttonPositionLeft) {
+                        buttonTooltip.classList.add("left");
+                    }
 
-                // iconOnlyButton.addEventListener("click", (event) => {
+                    if (buttonTooltipWidth > buttonPositionRight) {
+                        buttonTooltip.classList.add("right");
+                    }
 
-                //     event.preventDefault();
+                    // iconOnlyButton.addEventListener("click", (event) => {
 
-                //     console.log(`
-                //         I am ${iconOnlyButton.offsetWidth} pixels wide
-                //         My Tooltip is ${buttonTooltipWidth} pixels wide
-                //         I am ${buttonPositionLeft} from the left
-                //         I am ${buttonPositionRight} from the right
-                //     `);
+                    //     event.preventDefault();
 
-                //     if (buttonTooltipWidth > buttonPositionLeft) {
+                    //     console.log(`
+                    //         I am ${iconOnlyButton.offsetWidth} pixels wide
+                    //         My Tooltip is ${buttonTooltipWidth} pixels wide
+                    //         I am ${buttonPositionLeft} from the left
+                    //         I am ${buttonPositionRight} from the right
+                    //     `);
 
-                //         console.log("I AM TOO BIG!!");
+                    // });
 
-                //         buttonTooltip.classList.add("cool");
+                };
 
-                //     }
-                // });
+                tooltipPosition();
+
+                iconOnlyButton.addEventListener("mouseenter", hoverFocusIn);
+                iconOnlyButton.addEventListener("focus", hoverFocusIn);
+
+                iconOnlyButton.addEventListener("mouseleave", hoverFocusOut);
+                iconOnlyButton.addEventListener("blur", hoverFocusOut);
+
+                window.addEventListener("resize", tooltipPosition);
+
             }
             
         });

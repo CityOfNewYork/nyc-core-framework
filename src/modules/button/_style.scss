@@ -89,11 +89,6 @@ button {
     {
         opacity: var(--button-opacity-hover);
         --button-faint-fill-opacity: 0.075;
-
-        > .button__tooltip {
-            opacity: 1;
-            top: 100%;
-        }
     }
 
     &:not([class*="button--icon-only"]) {
@@ -158,6 +153,15 @@ button {
 
     width: var(--button--icon-only-size);
     height: var(--button--icon-only-size);
+
+    &.tooltip-show {
+        > .button__tooltip {
+            top: 100%;
+            animation-name: fadeIn;
+            animation-duration: 0.5s;
+        }
+
+    }
 }
 
 .button__tooltip {
@@ -168,7 +172,8 @@ button {
     left: 50%;
     transform: translateX(-50%);
 
-    display: inline-block;
+    display: block;
+    white-space: nowrap;
 
     margin-top: var(--spacer-2);
 
@@ -181,9 +186,6 @@ button {
 
     border-radius: inherit;
 
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    
     pointer-events: none;
 
     &.left {

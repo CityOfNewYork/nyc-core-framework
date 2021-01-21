@@ -32,7 +32,7 @@ module.exports = {
         ],
     },
     mode: 'production',
-    watch: false,
+    watch: true,
     stats: { children: false },
     plugins: [
         new MiniCssExtractPlugin({
