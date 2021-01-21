@@ -56,31 +56,16 @@ export default class Button {
                         buttonTooltip.classList.add("right");
                     }
 
-                    // iconOnlyButton.addEventListener("click", (event) => {
-
-                    //     event.preventDefault();
-
-                    //     console.log(`
-                    //         I am ${iconOnlyButton.offsetWidth} pixels wide
-                    //         My Tooltip is ${buttonTooltipWidth} pixels wide
-                    //         I am ${buttonPositionLeft} from the left
-                    //         I am ${buttonPositionRight} from the right
-                    //     `);
-
-                    // });
-
                 };
 
                 tooltipPosition();
-
-                iconOnlyButton.addEventListener("mouseenter", hoverFocusIn);
-                iconOnlyButton.addEventListener("focus", hoverFocusIn);
-
-                iconOnlyButton.addEventListener("mouseleave", hoverFocusOut);
-                iconOnlyButton.addEventListener("blur", hoverFocusOut);
-
                 window.addEventListener("resize", tooltipPosition);
 
+                iconOnlyButton.addEventListener("mouseenter", hoverFocusIn);
+                iconOnlyButton.addEventListener("focusin", hoverFocusIn);
+
+                iconOnlyButton.addEventListener("mouseleave", hoverFocusOut);
+                iconOnlyButton.addEventListener("focusout", hoverFocusOut);
             }
             
         });
