@@ -8,8 +8,9 @@ In this file:
 // D. Button Outline Modifier
 // E. Button Has Icon Modifiers
 // F. Button Icon Only Modifier
-// G. Button Group Component
-// H. I.E. 11 Support
+// G. Button Icon Only Tooltip
+// H. Button Group Component
+// I. I.E. 11 Support
 
 */
 
@@ -155,6 +156,10 @@ button {
     height: var(--button--icon-only-size);
 }
 
+//////////////////////////////////////////////
+// G. Button Icon Only Tooltip
+//////////////////////////////////////////////
+
 .button__tooltip {
     --button-tooltip-background: hsla(0, 0%, 0%, 0.9);
 
@@ -211,7 +216,7 @@ button {
 }
 
 //////////////////////////////////////////////
-// G. Button Group Component
+// H. Button Group Component
 //////////////////////////////////////////////
 
 .button-group {
@@ -243,7 +248,7 @@ button {
 }
 
 //////////////////////////////////////////////
-// H. I.E. 11 Support
+// I. I.E. 11 Support
 //////////////////////////////////////////////
 
 @media screen and (-ms-high-contrast: active),
