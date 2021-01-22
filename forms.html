@@ -44,8 +44,8 @@
                         <div class="alert alert--dismissable alert--warn--inverse margin-y-4" data-alert="form-errors">
 
                             <div class="alert__title">
-                                <span class="nyc_icon_confirm" aria-hidden="true"></span>
-                                <span class="alert__title__text">Confirm Title</span>
+                                <span class="nyc_icon_warn" aria-hidden="true"></span>
+                                <span class="alert__title__text">Oh Shit!!!</span>
                             </div>
 
                             <div class="alert__description">
@@ -113,7 +113,7 @@
                         </div>
                         <!-- .form-entry -->
 
-                        <div class="form-entry">
+                        <div class="form-entry" data-required="true">
 
                             <label class="form-entry__field">
                                 <span class="form-entry__field__label">Message</span>
@@ -122,12 +122,46 @@
                                 </span>
                             </label>
 
+                        
                             <small class="form-entry__help">
                                 This is help text
                             </small>
-                        
                         </div>
                         <!-- .form-entry -->
+
+                        <div
+                            class="form-entry"
+                            data-required="true"
+                            data-error-description="Upload is required!" 
+                            data-error-instructions="Select a file for upload">
+
+                                <div class="form-entry__field">
+
+                                    <span class="form-entry__field__label">
+                                        Upload your file
+                                    </span>
+
+                                    <div class="form-entry__field__input">
+                                        <label class="file-upload">
+                                            <span class="file-upload__drag">
+                                                <span class="file-upload__drag__text">Drag and Drop</span>
+                                            </span>
+                                            <input class="file-upload__input" type="file" id="fileUpload" accept="image/*">    
+                                            <span class="button button--outline button--has-icon file-upload__button">
+                                                <span class="nyc_icon_upload"></span>
+                                                <span class="button__text">Browse for a File</span>
+                                            </span>
+                                        </label>
+
+                                    </div>
+
+                                    <small class="form-entry__help display-none">
+                                        Uploads are limited to a single .CSV file
+                                    </small>
+
+                                </div>
+
+                            </div>
 
                         <div
                             class="form-entry"

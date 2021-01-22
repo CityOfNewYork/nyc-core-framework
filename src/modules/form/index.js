@@ -215,5 +215,54 @@ export default class Form {
             let entryRoot = field.closest(".form-entry");
             entryRoot.classList.remove(...invalidClasses);
         }
+
+        // File Upload
+
+        const fileUploadList = document.querySelectorAll('.file-upload');
+
+        fileUploadList.forEach((fileUpload) => {
+
+            const fileUploadInput = fileUpload.querySelector('input[type="file"]');
+
+            fileUploadInput.addEventListener('change', (event) => {
+
+                const [file] = event.target.files;
+                const { name: fileName, size } = file;
+                const fileSize = (size / 1000).toFixed(2);
+
+                const dataHTML = `
+                <span class="file-upload__data">
+                    <span class="file-name">${fileName}</span>
+                    <span class="file-size">${fileSize} kb</span>
+                </span>
+                `;
+
+                const fileUploadData = fileUpload.querySelector(".file-upload__data");
+
+                if (fileUploadData) {
+                    fileUploadData.remove();
+                }
+
+                fileUpload.insertAdjacentHTML('beforeend', dataHTML);
+
+            });
+
+            const dragOver = () => {
+                fileUpload.closest('.form-entry').classList.add('active');
+            }
+
+            const dragOff = () => {
+                fileUpload.closest('.form-entry').classList.remove('active');
+            }
+
+            const dropped = () => {
+                fileUpload.closest('.form-entry').classList.remove('active');
+            }
+
+            fileUpload.addEventListener("dragenter", dragOver);
+            fileUpload.addEventListener("dragleave", dragOff);
+            fileUpload.addEventListener("dragend", dragOff);
+            fileUpload.addEventListener("drop", dropped);
+        });
     }
 }
