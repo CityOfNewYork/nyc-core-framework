@@ -374,6 +374,7 @@ fieldset {
 
         position: absolute;
         content: "";
+        
         right: 0;
         top: 50%;
         
@@ -424,6 +425,97 @@ fieldset {
     .form-entry__feedback {
         display: block;
     }
+}
+
+//////////////////////////////////////////////
+// C. File Upload
+//////////////////////////////////////////////
+
+.file-upload {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    overflow: hidden;
+
+    padding: var(--form-field-padding-y) var(--form-field-padding-x);
+
+    cursor: pointer;
+}
+
+.file-upload__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    opacity: 0.01;
+    width: 100%;
+    
+    z-index: 25;
+
+    cursor: pointer;
+}
+
+.file-upload__drag {
+    position: relative;
+    height: 150px;
+    
+    border-radius: var(--form-field-border-radius);
+    margin-bottom: var(--form-field-padding-y);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    
+    pointer-events: none;
+
+    font-size: var(--font-size-md);
+
+    &::before {
+        position: absolute;
+        content: "";
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        background-color: currentColor;
+        opacity: 0.05;
+    }
+
+    .active & {
+
+        &::before {
+            opacity: .125;
+        }
+    }
+}
+
+.file-upload__drag__text {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+.file-upload__button {
+    position: relative;
+    z-index: 15;
+    pointer-events: none;
+    font-size: var(--font-size-md);
+}
+
+.file-upload__data {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: var(--font-size-md);
+    margin-top: var(--form-field-padding-y);
 }
 
 //////////////////////////////////////////////
