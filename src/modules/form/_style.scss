@@ -128,6 +128,7 @@ fieldset {
     &::before {
         position: absolute;
         content: "";
+
         top: 0;
         right: 0;
         bottom: 0;
@@ -145,9 +146,9 @@ fieldset {
 }
 
 .required-indicator__text {
+    font-size: var(--font-size-md);
     font-style: italic;
     opacity: 0.8;
-    font-size: var(--font-size-md);
 }
 
 .form-entry {
@@ -155,8 +156,8 @@ fieldset {
     select,
     textarea,
     input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
-        background-color: transparent;
         color: inherit;
+        background-color: transparent;
         border-radius: inherit;
         border: 0;
         width: 100%;
@@ -169,12 +170,6 @@ fieldset {
 
     select option {
         color: currentColor !important;
-    }
-
-    ::placeholder {
-        color: currentColor;
-        opacity: 0.675;
-        opacity: 0;
     }
 
     [dir="rtl"] & {
@@ -201,11 +196,10 @@ fieldset {
 }
 
 .form-entry__field__label {
+    font-weight: var(--body-font-weight-bold);
+
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
-    margin-bottom: 0.5em;
-
-    font-weight: var(--body-font-weight-bold);
 
     // Required Asterisk
     
@@ -221,6 +215,11 @@ fieldset {
     }
 }
 
+[class*="form-entry__field__"] {
+    background-color: hsla(60, 100%, 50%, 0.5);
+
+}
+
 .form-entry__field__select,
 .form-entry__field__input {
     position: relative;
@@ -230,6 +229,7 @@ fieldset {
 
     border-radius: var(--form-field-border-radius);
     overflow: hidden;
+
     
     select, 
     input,
