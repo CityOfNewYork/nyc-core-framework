@@ -201,6 +201,7 @@ fieldset {
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
 
+
     // Required Asterisk
     
     &::after {
@@ -215,13 +216,9 @@ fieldset {
     }
 }
 
-.form-entry__field:not([class*="--float"]) .form-entry__field__label + * {
-    margin-top: calc(var(--form-field-padding-y) * 0.75);
+.form-entry__field:not([class*="--float"]) .form-entry__field__label {
+    margin-bottom: calc(var(--form-field-padding-y) * 0.75);
 }
-
-// [class*="form-entry__field__"] {
-    // background-color: hsla(60, 100%, 50%, 0.5);
-// }
 
 .form-entry__field__select,
 .form-entry__field__input
@@ -263,7 +260,6 @@ fieldset {
 }
 
 .form-entry__field__input {
-
     display: flex;
     align-items: center;
 
@@ -326,8 +322,6 @@ fieldset {
 
         padding-top: var(--form-field-padding-x);
         padding-bottom: var(--form-field-padding-x);
-
-        margin-bottom: unset;
     }
 
     .active &, 
@@ -368,7 +362,7 @@ fieldset {
     }
 }
 
-.form-entry__help {
+.form-entry__field__help {
     font-size: 0.8em;
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
@@ -431,6 +425,9 @@ fieldset {
 }
 
 .is-invalid {
+    .form-entry__field__help {
+        display: none;
+    }
     .form-entry__feedback {
         display: block;
     }

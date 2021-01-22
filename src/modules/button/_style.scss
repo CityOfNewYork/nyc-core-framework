@@ -71,6 +71,7 @@ button {
     &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::before {
         position: absolute;
         content: "";
+        
         top: 0;
         right: 0;
         bottom: 0;
@@ -81,7 +82,6 @@ button {
 
         background-color: currentColor;
         opacity: var(--button-faint-fill-opacity);
-
     }
 
     &:hover, 
