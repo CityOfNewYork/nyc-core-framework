@@ -154,6 +154,10 @@ button {
 
     width: var(--button--icon-only-size);
     height: var(--button--icon-only-size);
+
+    [class*="_icon"] {
+        display: flex;
+    }
 }
 
 //////////////////////////////////////////////

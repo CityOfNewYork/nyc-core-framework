@@ -215,55 +215,28 @@ fieldset {
     }
 }
 
-[class*="form-entry__field__"] {
-    background-color: hsla(60, 100%, 50%, 0.5);
-
+.form-entry__field:not([class*="--float"]) .form-entry__field__label + * {
+    margin-top: calc(var(--form-field-padding-y) * 0.75);
 }
 
+// [class*="form-entry__field__"] {
+    // background-color: hsla(60, 100%, 50%, 0.5);
+// }
+
 .form-entry__field__select,
-.form-entry__field__input {
+.form-entry__field__input
+{
     position: relative;
-    
-    display: flex;
-    align-items: center;
 
     border-radius: var(--form-field-border-radius);
     overflow: hidden;
 
-    
     select, 
     input,
     textarea
     {
         padding: var(--form-field-padding-y) var(--form-field-padding-x);
         outline: none;
-    }
-
-    button {
-        flex-shrink: 0;
-    }
-
-    > .button {
-        --button-border-radius: 0;
-    }
-
-    > [class*="button--icon-only"] {
-        height: unset;
-        width: unset;
-        padding-left: var(--form-field-padding-x);
-        padding-right: var(--form-field-padding-x);
-        align-self: stretch;
-    }
-
-    > [class*="nyc_icon"],
-    > .button-group
-    {
-        margin-left: var(--form-field-padding-x);
-        font-size: 75%;
-    }
-
-    > .button-group {
-        margin-right: calc(var(--form-field-padding-x) * 0.5);
     }
 
     &::after {
@@ -287,6 +260,42 @@ fieldset {
             margin-right: var(--form-field-padding-x);
         }
     }
+}
+
+.form-entry__field__input {
+
+    display: flex;
+    align-items: center;
+
+    button {
+        flex-shrink: 0;
+    }
+
+    > .button {
+        --button-border-radius: 0;
+    }
+
+    > [class*="button--icon-only"] {
+        height: unset;
+        width: unset;
+
+        padding-left: var(--form-field-padding-x);
+        padding-right: var(--form-field-padding-x);
+        
+        align-self: stretch;
+    }
+
+    > [class*="nyc_icon"],
+    > .button-group
+    {
+        margin-left: var(--form-field-padding-x);
+        font-size: 75%;
+    }
+
+    > .button-group {
+        margin-right: calc(var(--form-field-padding-x) * 0.5);
+    }
+
 }
 
 [class*="primary-nav"] .form-entry__field__input::after {
