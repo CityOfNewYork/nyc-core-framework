@@ -9,12 +9,23 @@
  * 
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+figure figcaption {
+	background-color: var(--dark);
+	color: var(--dark-text);
+	padding: var(--spacer-3);
+	margin-top: unset;
+
+	opacity: 0.9;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
 	background-color: none;
 	color: #ccc;
 	
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: var(--font-size-md);
 	text-align: left;
 	white-space: pre;
@@ -39,13 +50,15 @@ pre[class*="language-"] {
 
 pre[class*="language-"] {
 	padding: 2em 1em;
-	margin: 0.5em 0;
+	/* margin: 0.5em 0; */
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	overflow: hidden;
+
+	overflow-x: scroll;
+
 	
 	background-color: var(--dark);
 }
@@ -164,13 +177,13 @@ pre[data-line] {
 	position: absolute;
 	left: 0;
 	right: 0;
-	padding: inherit 0;
+	/* padding: inherit 0; */
 	margin-top: var(--spacer-5); /* Same as .prism’s padding-top */
 	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
 
 	pointer-events: none;
 
-	line-height: inherit;
+	line-height: 1.75;
 	white-space: pre;
 }
 
@@ -215,7 +228,7 @@ div.code-toolbar > .toolbar {
 	left: 0;
 	right: 0;
 	
-	border-bottom: 1px solid hsla(0, 0%, 100%, .125) !important;
+	border-bottom: 1px solid hsla(0, 0%, 100%, 0.125) !important;
 }
 
 div.code-toolbar > .toolbar a, 

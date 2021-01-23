@@ -35,8 +35,11 @@ In this file:
     --button-font-weight: normal;
     --header-line-height: 1.2;
 
-    --body-max-width: null;
     --table-scroll-min-width: 1000px;
+}
+
+body {
+    --body-max-width: 100%;
 }
 
 //////////////////////////////////////////////

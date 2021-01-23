@@ -50,7 +50,7 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <pre>
+    <pre class="hide-toolbar">
         <code class="language-html">
             &lt;a class="button" href="#1"&gt;
                 Button
@@ -107,7 +107,7 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <pre>
+    <pre class="hide-toolbar">
         <code class="language-html">
             &lt;a class="button theme-primary" href="#1"&gt;
                 Button
@@ -187,7 +187,7 @@ title: "Buttons"
 
     <div class="aspect-ratio aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-            <div class="width-100 padding-x-4">
+            <div class="width-100 padding-4">
                 <div class="grid grid--gap-3 grid--cells-6--md justify-content-center">
                     <div class="grid__cell">
                         <a class="button button--outline display-block" href="#1">
@@ -216,9 +216,9 @@ title: "Buttons"
                 Button
             &lt;/a&gt;
 
-            &lt;button class="button button--outline text-secondary"&gt;
+            &lt;a class="button button--outline text-secondary" href="#1"&gt;
                 Button
-            &lt;/button&gt;
+            &lt;/a&gt;
         </code>
     </pre>
     <figcaption>
@@ -229,11 +229,10 @@ title: "Buttons"
 <hr class="margin-y-5" id="borderRadius">
 
 <div class="container narrow margin-y-4">
-
     <h2>Button Border Radius</h2>
-
-    <p>Use our <a href="#1">border-radius utility classes</a> (e.g. <code>.rounded</code>) for rounded edges on <code>.button</code> selectors.</p>
-
+    <p>
+        Globally, all <code>.button</code> selectors have a border radius. This value is set with the <code>:root</code> scoped CSS Variable <code>--button-border-radius</code> (see Figure 5). Learn how to <a href="{{ site.baseurl }}/docs/customization/#referenceGuideCSSVariables">customize CSS Variables</a>. 
+    </p>
 </div>
 <!-- .container -->
 
@@ -241,22 +240,44 @@ title: "Buttons"
 
     <div class="aspect-ratio aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-            <div class="width-100 padding-x-4">
-                <div class="grid grid--gap-3 grid--cells-6--md">
-                    <div class="grid__cell">
-                        <a class="button width-100 theme-primary" href="#1">
-                            Button
-                        </a>
-                    </div>
-                    <!-- .grid__cell -->
-                    <div class="grid__cell">
-                        <a class="button width-100 theme-secondary rounded-pill" href="#1">
-                            Button
-                        </a>
-                    </div>
-                    <!-- .grid__cell -->
-                </div>
-                <!-- .grid -->
+            <div class="width-100 padding-4">
+                <a class="button width-100 theme-primary" style="--button-border-radius: 0;" href="#1">
+                    Button
+                </a>
+            </div>
+        </div>
+    </div>
+</figure>
+<figure class="container narrow margin-y-4">
+    <pre class="hide-toolbar">
+        <code class="language-css">
+            /* Globally remove border radius in CSS */
+
+            :root {
+                --button-border-radius: 0;
+            }
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 5</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Optionally, use our <a href="#1">border-radius utility classes</a> (e.g. <code>.rounded</code>) for rounded edges on <code>.button</code> selectors.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio aspect-ratio--3by2 border">
+        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+            <div class="width-100 padding-4">
+                <a class="button width-100 theme-secondary rounded-pill" href="#1">
+                    Button
+                </a>
             </div>
         </div>
     </div>
@@ -265,9 +286,7 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="button theme-primary rounded" href="#1"&gt;
-                Button
-            &lt;/a&gt;
+            &lt;!-- Directly apply a border radius in HTML --&gt;
 
             &lt;a class="button theme-primary rounded-pill" href="#1"&gt;
                 Button
@@ -275,20 +294,20 @@ title: "Buttons"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 7 - Two variations of rounded edges using the border-radius utility classes.</p>
+        <p>Figure 5</p>
     </figcaption>
 </figure>
 
-<hr class="margin-y-5" id="buttonSizes">
+<hr class="margin-y-5" id="sizingButtons">
 
 <div class="container narrow margin-y-4">
-    <h2>Button Sizes</h2>
+    <h2>Sizing Buttons</h2>
     <p>
-        Instead of providing predetermined button sizes (like you'll find in other frameworks) our buttons inherit their font size and use relative
-        (em) sizes for padding, allowing buttons to be resized using our <a href="#1">font size</a> utility classes.
+        In the NYC Core Framework, <code>.button</code> selectors inherit their font size. Padding is set with relative (em) sizes. This allows you to resize multiple buttons at once. Use our <a href="#1">font size</a> utility classes, or declare your own CSS values.
     </p>
+
     <p>
-        This is particularly useful because multiple buttons can be resized within a single selector. In the example below, the small font size utility class (<code>.font-size-sm</code>) is applied to <code>&lt;ul&gt;</code> containing buttons, making all buttons smaller with a single class.
+        The example below applies the utility class (<code>.font-size-sm</code>) to a <code>&lt;ul&gt;</code> containing buttons. Each button within this <code>&lt;ul&gt;</code> becomes smaller with this single declaration.
     </p>
 </div>
 <!-- .container -->
@@ -297,14 +316,19 @@ title: "Buttons"
     <div class="aspect-ratio aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row align-items-center">
             <div class="width-100">
-                <ul class="nav nav--horizontal justify-content-center font-size-xl">
+                <ul class="nav nav--horizontal justify-content-center font-size-sm">
                     <li>
-                        <a class="button theme-dark rounded" href="#1">
+                        <a class="button theme-primary" href="#1">
                             Button
                         </a>
                     </li>
                     <li>
-                        <a class="button theme-light rounded" href="#1">
+                        <a class="button theme-primary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button theme-primary" href="#1">
                             Button
                         </a>
                     </li>
@@ -315,21 +339,21 @@ title: "Buttons"
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar" data-line="1">
+    <pre>
         <code class="language-html">
-            &lt;ul class="nav nav--horizontal--md justify-content-center font-size-sm"&gt;
+            &lt;ul class="nav nav--horizontal font-size-sm"&gt;
                 &lt;li&gt;
-                    &lt;a class="button theme-primary rounded" href="#1"&gt;
+                    &lt;a class="button theme-primary" href="#1"&gt;
                         Button
                     &lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a class="button theme-secondary rounded" href="#1"&gt;
+                    &lt;a class="button theme-primary" href="#1"&gt;
                         Button
                     &lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a class="button theme-dark rounded" href="#1"&gt;
+                    &lt;a class="button theme-primary" href="#1"&gt;
                         Button
                     &lt;/a&gt;
                 &lt;/li&gt;
@@ -337,25 +361,19 @@ title: "Buttons"
         </code>
     </pre>
     <figcaption>
-        <p>
-            Figure 8 - On line 1 of this figure: a small font size (<code>.font-size-sm</code>) utility class applied to the
-            list resizes all three buttons within the list.
-        </p>
+        <p>Figure 6</p>
     </figcaption>
 </figure>
 
-<hr class="margin-y-5" id="textAndIconButtons">
+<hr class="margin-y-5" id="buttonsWithTextandIcon">
 
 <div class="container narrow margin-y-4">
-    <h2>Text and Icon Buttons</h2>
+    <h2>Buttons With Text and Icon</h2>
     <p>
-        Add an icon to a <code>.button</code> selector with the <code>.button--has-icon</code> modifier class. Buttons with
-        icons require two child selectors. The icon itself is a <code>&lt;span&gt;</code> with its combined <a href="#1">Font Awesome</a>
-        classes, and an additional class of <code>.button__icon</code>.
+        Add an icon to a <code>.button</code> selector with the <code>.button--has-icon</code> modifier class (Figure 7). Buttons with cons require two child selectors.
     </p>
     <p>
-        A second <code>&lt;span&gt;</code> with a <code>.button__text</code> class is needed for the button's text. This
-        selector is our target for underlining the text on the button's <code>:hover</code> and <code>:focus</code> states. It also provides a small margin to separate the text from the icon.
+        The first child is is a <code>&lt;span&gt;</code> with its combined <a href="#1">icon</a> classes. The second child is a <code>&lt;span&gt;</code> with a <code>.button__text</code> class. This holds the button's text. Further, the <code>.button__text</code> selector is our target for underlining the text on <code>:hover</code> and <code>:focus</code> states. Further still, it provides a small margin to separate the text from the icon.
     </p>
 </div>
 <!-- .container -->
@@ -364,7 +382,7 @@ title: "Buttons"
 
     <div class="aspect-ratio aspect-ratio--3by2 border" {{ site.style_default_theme_colors }}>
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-            <div class="width-100 padding-x-4">
+            <div class="width-100 padding-4">
                 <div class="grid grid--gap-2 grid--cells-6--md">
                     <div class="grid__cell">
                         <a class="button button--has-icon width-100 theme-dark" href="#1">
@@ -392,35 +410,20 @@ title: "Buttons"
     <pre>
         <code class="language-html">
             &lt;a class="button button--has-icon theme-primary" href="#1"&gt;
-                &lt;span class="fas fa-pen fa-sm button__icon"&gt;&lt;/span&gt;
+                &lt;span class="nyc_icon_edit button__icon"&gt;&lt;/span&gt;
                 &lt;span class="button__text"&gt;Button &lt;/span&gt;
             &lt;/a&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 9 - An <code>&lt;a&gt;</code> tag with text and and icon.</p>
-    </figcaption>
-</figure>
-
-<figure class="container narrow margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;button class="button button--has-icon theme-primary"&gt;
-                &lt;span class="fas fa-pen fa-sm button__icon"&gt;&lt;/span&gt;
-                &lt;span class="button__text"&gt;Button &lt;/span&gt;
-            &lt;/button&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 10 - A <code>&lt;button&gt;</code> tag with text and and icon.</p>
+        <p>Figure 7</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
+    <h3>Dispersing the text and icon</h3>
     <p>
-        If you wish for a button's text and icon to be opposite of one another, add the chain modifier
-        class <code>--disperse</code> to <code>.button--has-icon</code> class (resulting in <code>.button--has-icon--disperse</code>).
-        This class automatically makes the button full-width of its parent.
+        Create a button where the text and icon sit on opposing sides. Add the chain modifier class <code>--disperse</code> to <code>.button--has-icon</code> class. Chained together, the class is .button--has-icon--disperse. By default, this class makes the button full-width of its parent.
     </p>
 </div>
 <!-- .container -->
@@ -428,10 +431,10 @@ title: "Buttons"
 <figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
     <div class="aspect-ratio aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-            <div class="width-100 px-4">
-                <a class="button button--has-icon--disperse theme-secondary display-block" href="#1">
+            <div class="width-100 padding-4">
+                <a class="button button--has-icon--disperse" href="#1">
                     <span class="button__text">Button</span>
-                    <span class="nyc_icon_double-chevron-right button__icon"></span>
+                    <span class="nyc_icon_arrow-right button__icon"></span>
                 </a>
             </div>
         </div>
@@ -441,14 +444,14 @@ title: "Buttons"
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;a class="button button--has-icon--disperse theme-primary" href="#1"&gt;
-                &lt;span class="fas fa-pen fa-sm button__icon"&gt;&lt;/span&gt;
-                &lt;span class="button__text"&gt;Button &lt;/span&gt;
+            &lt;a class="button button--has-icon--disperse" href="#1"&gt;
+                &lt;span class="button__text"&gt;Button&lt;/span&gt;
+                &lt;span class="nyc_icon_arrow-right button__icon"&gt;&lt;/span&gt;
             &lt;/a&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 11 - A button with its text and and icon dispersed.</p>
+        <p>Figure 8</p>
     </figcaption>
 </figure>
 
@@ -457,14 +460,11 @@ title: "Buttons"
 <div class="container narrow margin-y-4">
     <h2>Icon-only Buttons</h2>
     <p>
-        Icon-only buttons require the <code>.button</code> definer class and the <code>.button--icon-only</code> modifier
-        class. Include the <code>title</code> attribute to describe the button on
-        its hover state (for sighted users).
+        For icon-only buttons, apply the <code>.button--icon--only</code> modifier class to the <code>.button</code> selector.
     </p>
     <p>
-        Like our buttons with text and icon (above), icon-only buttons also require two child selectors. A
-        <code>&lt;span&gt;</code> with an <code>.sr-only</code> class that includes descriptive text for screan readers, and another
-        <code>&lt;span&gt;</code> selector with the combination <a href="#1">Font Awesome</a> classes.
+        Icon-only buttons require a single child selector. A <code>&lt;span&gt;</code> with its combined icon classes (just like the text and
+            icon buttons described above).
     </p>
 </div>
 <!-- .container -->
@@ -473,93 +473,18 @@ title: "Buttons"
 
     <div class="aspect-ratio aspect-ratio--3by2 border">
         <div class="aspect-ratio__content flex-row align-items-center">
-            <div class="with-100">
-                <ul class="nav nav--horizontal justify-content-center">
-                    <li>
-                        <a class="button button--icon-only" href="#1" title="Taxi">
-                            <span class="sr-only">Taxi</span>
-                            <span class="fas fa-taxi" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="button button--icon-only" href="#1" title="Pizza">
-                            <span class="sr-only">Pizza</span>
-                            <span class="fas fa-pizza-slice" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="button button--icon-only" href="#1" title="Home">
-                            <span class="sr-only">Home</span>
-                            <span class="fas fa-home" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-</figure>
-
-<figure class="container narrow margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;a class="button button--icon-only" href="#1" title="My Account"&gt;
-                &lt;span class="sr-only"&gt;My Account&lt;/span&gt;
-                &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
-            &lt;/a&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 12 - Example of an icon-only <code>&lt;a&gt;</code> tag.</p>
-    </figcaption>
-</figure>
-
-<figure class="container narrow margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;button class="button button--icon-only" title="My Account"&gt;
-                &lt;span class="sr-only"&gt;My Account&lt;/span&gt;
-                &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
-            &lt;/button&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 13 - Example of an icon-only <code>&lt;button&gt;</code> tag.</p>
-    </figcaption>
-</figure>
-
-<div class="container narrow margin-y-4">
-    <p>
-        Icon-only buttons are transparent by default. Like our other buttons, color can be applied with <a href="{{ site.baseurl }}/docs/color-system/#backgroundColorClasses">background-color</a> and <a href="#1">text color</a> utility classes.
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
-
-    <div class="aspect-ratio aspect-ratio--3by2 border">
-        <div class="aspect-ratio__content flex-row align-items-center">
-            <div class="with-100">
-                <ul class="nav nav--horizontal justify-content-center">
-                    <li>
-                        <a class="button button--icon-only theme-primary" href="#1" title="Taxi">
-                            <span class="sr-only">Taxi</span>
-                            <span class="fas fa-taxi" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="button button--icon-only theme-secondary" href="#1" title="Pizza">
-                            <span class="sr-only">Pizza</span>
-                            <span class="fas fa-pizza-slice" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="button button--icon-only theme-dark text-primary" href="#1" title="Home">
-                            <span class="sr-only">Home</span>
-                            <span class="fas fa-home" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                </ul>
+            <div class="width-100">
+                <div class="button-group font-size-lg">
+                    <a class="button button--icon-only" href="#1" aria-label="Home">
+                        <span class="nyc_icon_home" aria-hidden="true"></span>
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Print">
+                        <span class="nyc_icon_print" aria-hidden="true"></span>
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Settings">
+                        <span class="nyc_icon_settings" aria-hidden="true"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -567,28 +492,71 @@ title: "Buttons"
 </figure>
 
 <figure class="container medium margin-y-4">
-    <pre class="hide-toolbar">
+    <pre>
         <code class="language-html">
-            &lt;a class="button button--icon-only theme-primary" href="#1" title="Taxi"&gt;
-                &lt;span class="sr-only"&gt;Taxi&lt;/span&gt;
-                &lt;span class="fas fa-user" aria-hidden="true"&gt;&lt;/span&gt;
-            &lt;/a&gt;
-
-            &lt;a class="button button--icon-only theme-secondary" href="#1" title="Pizza"&gt;
-                &lt;span class="sr-only"&gt;Pizza&lt;/span&gt;
-                &lt;span class="fas fa-pizza-slice" aria-hidden="true"&gt;&lt;/span&gt;
-            &lt;/a&gt;
-
-            &lt;a class="button button--icon-only theme-dark text-primary" href="#1" title="Home"&gt;
-                &lt;span class="sr-only"&gt;Home&lt;/span&gt;
-                &lt;span class="fas fa-home" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;a class="button button--icon-only" href="#1" aria-label="Home"&gt;
+                &lt;span class="nyc_icon_home" aria-hidden="true"&gt;&lt;/span&gt;
             &lt;/a&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 14 - Example of an icon-only <code>&lt;a&gt;</code> tag.</p>
+        <p>Figure 9</p>
     </figcaption>
 </figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Icon-only buttons are transparent by default. Like our other buttons, color can be applied with <a
+            href="{{ site.baseurl }}/docs/color-system/#backgroundColorClasses">background-color</a> and <a
+            href="#1">text color</a> utility classes.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
+
+    <div class="aspect-ratio aspect-ratio--3by2 border">
+        <div class="aspect-ratio__content flex-row align-items-center">
+            <div class="width-100">
+                <div class="button-group font-size-lg">
+                    <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
+                        <span class="nyc_icon_home" aria-hidden="true"></span>
+                    </a>
+                    <a class="button button--icon-only theme-secondary" href="#1" aria-label="Print">
+                        <span class="nyc_icon_print" aria-hidden="true"></span>
+                    </a>
+                    <a class="button button--icon-only theme-dark" href="#1" aria-label="Settings">
+                        <span class="nyc_icon_settings" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</figure>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;a class="button button--icon-only theme-primary" aria-label="Home" href="#1"&gt;
+                &lt;span class="nyc_icon_home" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 10</p>
+    </figcaption>
+</figure>
+
+
+<div class="container narrow margin-y-4">
+    <p>
+        Do not the <code>title</code> attribute to describe the button(on its hover state). Instead apply the <code>aria-label</code> attribute
+        (see Figure 10). Icon-only buttons with the aria-label attribute offer a custom visible tooltip. The core
+        javascript file (<strong>nyc_core.js</strong>) adds these tooltips to the DOM when the document loads.
+    </p>
+</div>
+<!-- .container -->
 
 <hr class="margin-y-5" id="theButtonGroup">
 
@@ -597,7 +565,6 @@ title: "Buttons"
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos deserunt sed perferendis tenetur in architecto cumque! Pariatur dolore, quae alias nam architecto explicabo.
     </p>
-
 </div>
 <!-- .container -->
 
@@ -606,7 +573,7 @@ title: "Buttons"
     <div class="aspect-ratio aspect-ratio--3by2 border"  {{ site.style_default_theme_colors }}>
         <div class="aspect-ratio__content flex-row align-items-center">
             <div class="width-100 padding-4">
-                <div class="button-group text-color-secondary justify-content-center" role="menu">
+                <div class="button-group justify-content-center" role="menu">
                     <a class="button button--outline" href="#1">
                         Sign In  
                     </a>
@@ -621,4 +588,25 @@ title: "Buttons"
         </div>
     </div>
 
+</figure>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="button-group"&gt;
+                &lt;a class="button button--outline" href="#1"&gt;
+                    Sign In  
+                &lt;/a&gt;
+                &lt;a class="button button--icon-only" href="#1" aria-label="Language"&gt;
+                    &lt;span class="nyc_icon_language" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a class="button button--icon-only" href="#1" aria-label="Search"&gt;
+                    &lt;span class="nyc_icon_search" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 11</p>
+    </figcaption>
 </figure>
