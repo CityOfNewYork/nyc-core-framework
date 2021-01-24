@@ -34,7 +34,7 @@ title: "Navigation"
 
 <figure class="container medium margin-y-4">
 
-    <div class="primary-nav--below--lg box-shadow-1 z-index-1500">
+    <div class="primary-nav--below--lg box-shadow-1 z-index-1500 overflow-hidden">
 
         <div class="primary-nav__logo">
             <a href="#1" title="Home" data-logo="brand">
@@ -74,16 +74,23 @@ title: "Navigation"
 
         </nav>
 
-        <div class="primary-nav__buttons">
-            <button class="button button--icon-only menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-below">
+        <div class="primary-nav__actions">
+
+            <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-inline">
                 <span class="nyc_icon_menu"></span>
             </button>
-            <button class="button button--icon-only" aria-label="Language">
-                <span class="nyc_icon_language" aria-hidden="true"></span>
-            </button>
-            <button class="button button--icon-only" aria-label="Search">
-                <span class="nyc_icon_search" aria-hidden="true"></span>
-            </button>
+            
+            <div class="button-group">
+
+                <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                    <span class="nyc_icon_language"></span>
+                </button>
+                <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
+                    <span class="nyc_icon_search"></span>
+                </button>
+
+            </div>
+
         </div>
 
     </div>
@@ -106,7 +113,7 @@ title: "Navigation"
 
 <figure class="container medium margin-y-4">
 
-    <div class="primary-nav--inline--lg box-shadow-1 z-index-1000">
+    <div class="primary-nav--inline--lg box-shadow-1 z-index-1000 overflow-hidden">
 
         <div class="primary-nav__logo">
             <a href="#1" title="Home" data-logo="brand">
@@ -146,20 +153,28 @@ title: "Navigation"
 
         </nav>
 
-        <div class="primary-nav__buttons">
-            <button class="button button--icon-only menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-inline">
-                <span class="nyc_icon_menu" aria-hidden="true"></span>
+       <div class="primary-nav__actions">
+
+            <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-inline">
+                <span class="nyc_icon_menu"></span>
             </button>
-            <button class="button button--icon-only" aria-label="Language">
-                <span class="nyc_icon_language" aria-hidden="true"></span>
-            </button>
-            <button class="button button--icon-only" aria-label="Search">
-                <span class="nyc_icon_search" aria-hidden="true"></span>
-            </button>
+            
+            <div class="button-group">
+
+                <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                    <span class="nyc_icon_language"></span>
+                </button>
+                <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
+                    <span class="nyc_icon_search"></span>
+                </button>
+
+            </div>
+
         </div>
 
     </div>
     <!-- .primary-nav -->
+
 </figure>
 
 <div class="container narrow margin-y-4">

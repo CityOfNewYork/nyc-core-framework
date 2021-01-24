@@ -5,7 +5,7 @@ title: "Buttons"
 
 <div class="container narrow margin-y-4">
     <p>
-        An assortment of distinct, actionable button styles.
+        An assortment of distinct, actionable style variations for text and icon buttons.
     </p>
 </div>
 <!-- .container -->
@@ -608,5 +608,43 @@ title: "Buttons"
     </pre>
     <figcaption>
         <p>Figure 11</p>
+    </figcaption>
+</figure>
+
+<hr class="margin-y-5" id="theButtonGroup">
+
+<div class="container narrow margin-y-4">
+    <h2>Button CSS Variables</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos deserunt sed perferendis tenetur in architecto cumque! Pariatur dolore, quae alias nam a
+        <a href="{{ site.baseurl }}/docs/customization/#cp_buttons">architecto explicabo</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre class="hide-toolbar">
+        <code class="language-css">
+            /* Scoped to root */
+
+            :root {
+                --button-padding-x: 1em;
+
+                --button-padding-y: 0.75em;
+
+                --button-font-weight: var(--body-font-weight-bold);
+
+                --button-faint-fill-opacity: 0.05;
+                
+                --button-border-radius: 0.25em;
+                
+                --button-outline-border-width: calc( var(--default-border-width) * 2);
+
+                --button--icon-only-size: 2.25em;
+            }
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 12</p>
     </figcaption>
 </figure>

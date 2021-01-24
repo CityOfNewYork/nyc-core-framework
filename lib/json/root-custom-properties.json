@@ -92,6 +92,11 @@
                 "description": "Weight of text elements within the <em>button</em> utility class"
             },
             {
+                "name": "button-border-radius",
+                "value": "0.25em",
+                "description": "Default Border radius of all <em>button</em> selectors"
+            },
+            {
                 "name": "button--outline-border-width",
                 "value": "calc( var(--default-border-width) * 2)",
                 "description": "Border width of the <em>button outline</em> modifier class"
@@ -100,6 +105,11 @@
                 "name": "button--icon-only-size",
                 "value": "2.25em",
                 "description": "Width and height of the <em>button icon only</em> modifier class"
+            },
+            {
+                "name": "button-faint-fill-opacity",
+                "value": "0.05",
+                "description": "Opacity of faint fill present on the <em>button</em> utility class"
             }
         ]
     },
