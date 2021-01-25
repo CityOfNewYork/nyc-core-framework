@@ -11,7 +11,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-figure figcaption {
+figure .example + figcaption {
 	background-color: var(--dark);
 	color: var(--dark-text);
 	padding: var(--spacer-3);
