@@ -82,10 +82,6 @@
         if (window.location.hash) {
             console.log("window.location.hash : " +  hash);
             window.location.href = hash;
-            // let target = document.querySelector("html");
-            // target.style.scrollBehavior = "unset";
-        } else {
-            return;
         }
     };
 
@@ -289,9 +285,7 @@ ${myClipboardProperties}
     };
 
     loadcustomProperties();
-
-
-
+    
 </script>
 
 {% endif %}
@@ -315,5 +309,6 @@ ${myClipboardProperties}
 
 {% endif %}
 
-
 <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
+
+<script src="{{ site.baseurl }}/dist/js/toc.js"></script>

@@ -234,3 +234,8 @@ a[data-logo="brand"] {
 .example > div{
     overflow: hidden;
 }
+
+.section-start{
+    margin-top: var(--spacer-5);
+    margin-bottom: var(--spacer-5);
+}
