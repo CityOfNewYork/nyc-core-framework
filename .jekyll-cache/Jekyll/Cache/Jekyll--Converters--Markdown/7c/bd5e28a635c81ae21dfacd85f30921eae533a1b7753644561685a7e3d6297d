@@ -1,0 +1,157 @@
+I"G<figure class="container narrow margin-y-4" style="--primary: #25caa4; --secondary: #6500d6; --dark: #262345; --light: #f1f4f6; --primary-text: var(--dark); --secondary-text: white; --button-font-weight: var(--body-font-weight-bold)">
+
+     <div class="margin-y-2">
+
+         <div class="grid grid--gap-2 grid--cells-4 text-align-center font-size-sm">
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-90" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-10</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-80" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-20</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-70" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-30</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-60" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-40</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-50" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-50</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-40" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-60</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-30" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-70</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-20" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-80</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+             <div class="grid__cell">
+                 <div class="aspect-ratio aspect-ratio--3by2">
+                     <div class="aspect-ratio__content">
+                         <div class="backdrop theme-primary">
+                             <img class="backdrop__image opacity-10" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true" />
+                             <div class="backdrop__cover">
+                                 <div class="p-2">
+                                     <p>.opacity-90</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- col -->
+
+         </div>
+         <!-- grid -->
+
+     </div>
+
+ </figure>
+:ET

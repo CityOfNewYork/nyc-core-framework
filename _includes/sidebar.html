@@ -9,7 +9,7 @@
 
  <div class="sticky-top collapse display-block--lg" id="target-id">
 
-    <div class="container narrow padding-y-3 border-bottom">
+    <form class="container narrow padding-y-3 border-bottom" autocomplete="off">
 
         <div class="form-entry font-size-md">
 
@@ -20,7 +20,7 @@
                 </label>
                 
                 <span class="form-entry__field__input">
-                    <input type="text" name="search-example" id="search-example" placeholder="Search">
+                    <input type="text" name="search-example" id="search-input" placeholder="Search Docs">
                     <button class="button button--icon-only" type="button" aria-label="Home">
                         <span class="nyc_icon_search" aria-hidden="true"></span>
                     </button>
@@ -30,7 +30,9 @@
         
         </div>
 
-    </div>
+        <ul class="nav font-size-md text-color-primary margin-top-2" id="search-results"></ul>
+
+    </form>
 
     <div class="container narrow padding-y-3 font-size-md">
 

@@ -1,0 +1,33 @@
+---
+layout: none
+---
+
+{
+  "docs" : [
+
+    {% for collection in site.collections %}
+    
+    {
+
+      {% assign name = collection.label %}
+      
+      "collection"  : "{{ name }}",
+      "pages"       : [
+
+        {% for page in site[name] %}
+        
+        {
+          "title"    : "{{ page.title | escape }}",
+          "tags"     : "{{ page.tags | join: ', ' }}",
+          "url"      : "{{ site.baseurl }}{{ page.url }}"
+        } {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+
+      ]
+    
+    } {% unless forloop.last %},{% endunless %}
+
+  {% endfor %}
+
+  ]
+}

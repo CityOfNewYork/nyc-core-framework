@@ -1,0 +1,322 @@
+I""*<div class="container narrow margin-y-4">
+    <h2 class="h1">
+        Distinguish yourself without starting from scratch.
+    </h2>
+    <p>
+        There are two ways to customize the NYC Core Framework. The CDN Stylesheet allows you to redefine styles. We'll
+        cover this method in the following section. Your other option is to set up a modern development environment.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="customizableCDN" />
+
+<div class="container narrow margin-y-4">
+    <h2>Customizable CDN</h2>
+        <p>
+            Our <a href="/nyc-core-framework/docs/get-started/#quickStart">Quick Start</a> guide shows you how to include the framework's core stylesheet via CDN. Within the framework, we
+            use CSS custom properties to declare styles. People often refer to CSS custom properties as <strong>CSS variables</strong>. We use this term throughout our documentation.
+        </p>
+        <p>
+            If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. Figure 1 (below) offers a simple example of using
+            a SASS variable and a CSS Variable to achieve the same result.
+        </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+
+    <pre class="hide-toolbar">
+        <code class="language-scss">
+            // Primary as a SASS Variable:
+
+            $primary: navy;
+
+            .selector--primary{
+                background-color: $primary
+            }
+
+            // Primary as a CSS Variable:
+
+            --primary: navy;
+
+            .selector--primary{
+                background-color: var(--primary);
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime?
+        You can declare new values from <strong>nyc_core.css</strong> anytime after that stylesheet reference.
+    </p>
+    <p>
+        There are different ways to declare new values for CSS variables. Adding a style tag in the header is ideal for
+        prototyping and exploring. Creating a second stylesheet is the preferred method. You can even redeclare values
+        using JavaScript!
+    </p>
+    <p>
+        In the following exercise, learn how to change your theme colors with a second stylesheet.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="customizingColors" />
+
+<div class="container narrow margin-y-4">
+    <h2>Practice Exercise: Customizing Colors</h2>
+    <p>
+        Make new directory somewhere on your computer. Call it <strong>color-example</strong>. Copy and paste the
+        markup from Figure 2 (below) into a new HTML document. Save this document as <strong>index.html</strong> inside of the <strong>color-example</strong> directory.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!DOCTYPE html&gt;
+
+                &lt;html lang="en" dir="ltr"&gt;
+
+                    &lt;head&gt;
+
+                        &lt;!-- I.E. Compatibility Mode --&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+                        &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
+
+                        &lt;!-- NYC Core Icons --&gt;
+                        &lt;link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css"&gt;
+
+                        &lt;!-- NYC Core Stylesheet --&gt;
+                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
+
+                    &lt;/head&gt;
+
+                    &lt;body&gt;
+
+                        &lt;main id="skip-header-content" role="main"&gt;
+
+                            &lt;div class="container narrow margin-y-5"&gt;
+
+                                &lt;div class="theme-primary p-3 margin-y-2"&gt;
+                                    &lt;p&gt;Primary&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class="theme-secondary p-3 margin-y-2"&gt;
+                                    &lt;p&gt;Secondary&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class="theme-dark p-3 margin-y-2"&gt;
+                                    &lt;p&gt;Dark&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class="theme-light p-3 margin-y-2"&gt;
+                                    &lt;p&gt;Light&lt;/p&gt;
+                                &lt;/div&gt;
+
+                            &lt;/div&gt;
+                            &lt;!-- .container --&gt;        
+
+                        &lt;/main&gt;
+
+                        &lt;!-- NYC Core Javascript --&gt;
+                        &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"&gt;&lt;/script&gt;
+
+                    &lt;/body&gt;
+
+                &lt;/html&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>Preview <strong>index.html</strong> in a browser. It should resemble the following.</p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+
+    <div class="browser box-shadow-1">
+
+        <div class="browser__bar">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <iframe src="/nyc-core-framework/examples/customization/custom-properties-01.html" aria-hidden="true"></iframe>
+    
+    </div>
+    <!-- .browser -->
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Declared as CSS variables in <strong>nyc_core.css</strong>, we have four colors. They are <em>Primary</em>, <em>Secondary</em>, <em>Dark</em>, and <em>Light</em>.
+        Let's customize their color values with a second stylesheet.
+    </p>
+    <p>
+        Within the <strong>color-example</strong> directory, create a new directory called <strong>css</strong>. Make a new CSS file and name it
+        <strong>new-colors.css</strong>. Save it into the <strong>/css</strong> directory.
+    </p>
+    <p>
+        Open your HTML document. Add a link to <strong>new-colors.css</strong> somewhere below
+        <strong>nyc_core.css</strong> (Figure 3, line 5).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre class="hide-toolbar" data-line="5">
+        <code class="language-html">
+            &lt;!-- NYC Core Stylesheet --&gt;
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
+
+            &lt;!-- Custom Theme Properties --&gt;
+            &lt;link rel="stylesheet" href="./css/lib/new-colors.css"&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 3</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        With <strong>new-colors.css</strong> open, include the CSS from Figure 4. Save this file and refresh your browser.
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+
+    <pre>
+        <code class="language-css">
+            :root {
+                --primary: #0080f8;
+                --secondary: #004080;
+                --dark: #09172c;
+                --light: #e6f6fe;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 4</p>
+    </figcaption>
+
+</figure>
+
+<figure class="container medium margin-y-4">
+
+    <div class="browser box-shadow-1">
+
+        <div class="browser__bar">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <iframe src="/nyc-core-framework/examples/customization/custom-properties-02.html" aria-hidden="true"></iframe>
+    
+    </div>
+    <!-- .browser -->
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Did your colors update to the purple palette? With your new stylesheet in place, you have the ability to customize
+        much more than just colors. In fact, you have full control over your design. 
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="referenceGuideCSSVariables" />
+
+<div class="container narrow margin-y-4">
+    <h2>Reference Guide: CSS Variables</h2>
+    <p>
+        CSS Variables are hierarchal, or <strong>scoped</strong>. A variable's scope determines its reach throughout the DOM tree.
+    </p>
+    <p>
+        All CSS Variables in the framework are either scoped to the document or to a block. Document scoped variables
+        use the <code>:root</code> psuedo selector (available to the entire page). Block scoped variables use their selector class
+        (e.g., <code>.card</code>). These variables are available only to their selector (Figure 5).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    
+    <pre class="hide-toolbar">
+        <code class="language-css">
+            /* Scoped to the root */
+
+            :root {
+                --primary: #0080f8;
+            }
+
+            /* Scoped to a parent selector */
+
+            .card {
+                --card-padding-y: 1em;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 5</p>
+    </figcaption>
+
+</figure>
+<div class="container narrow margin-y-4">
+    <p>
+        The following table accounts for all CSS variables within the NYC Core framework. Pay close attention to scope of each set of variables (noted under each header in the table). 
+    </p>
+    <p>
+        When declaring new values within your own CSS, be sure their scopes match.
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container medium margin-y-4" id="all-custom-properties">
+
+    <div class="table-scroll" role="region">
+            
+        <small class="table-scroll__help" aria-hidden="true">
+    Scroll left or right to see entire table
+</small>
+
+        <div class="table-scroll__container theme-dark"></div>
+
+    </div>
+
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <a class="button button--has-icon theme-secondary" href="/nyc-core-framework/docs/accessibility/">
+        <span class="button__text">Accessibility</span>
+        <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
+    </a>
+</div>
+:ET

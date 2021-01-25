@@ -1,14 +1,4 @@
----
-layout: documentation
-title: "Alerts"
-tags:
-    confirm
-    warn
-    feedback
-    dismissable
----
-
-<div class="container narrow margin-y-4">
+I"�,<div class="container narrow margin-y-4">
     <p>
         Alerts help draw attention to brief confirmation or warning messages—or any other important
         information—that shouldn't be overlooked while your visitor scans the page.
@@ -16,7 +6,14 @@ tags:
 </div>
 <!-- .container -->
 
-{% capture as_body %}
+<div class="container narrow margin-y-4">
+    <div class="alert accessibility-spotlight border-left margin-y-3" role="alert">
+        <div class="alert__title">
+            <span class="nyc_icon_accessibility" aria-hidden="true"></span>
+            <span class="alert__title__text">Accessibility Spotlight</span>
+        </div>
+        <div class="alert__description">
+            
 <p>
     When modifying alert colors, be sure to check that your colors meet a sufficient <a href="#1">contrast
         ratio</a>. The colors provided in the Framework already do.
@@ -28,11 +25,13 @@ tags:
 <p>
     Include an <a href="#1"><em>alert role</em></a> for assistive technology.
 </p>
-{% endcapture %}
+    
+        </div>
+    </div>
+</div>
+<!-- .container -->
 
-{% include accessibility-spotlight.html content=as_body %}
-
-<hr class="section-start" id="Alert Types">
+<hr class="section-start" id="Alert Types" />
 
 <div class="container narrow margin-y-4">
     <h2>Out of the Box</h2>
@@ -84,7 +83,7 @@ tags:
 
 <div class="container narrow margin-y-4">
     <p>
-        Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="{{ site.baseurl}}/icons">NYC Core Icons</a>, our open-source icon library, is used
+        Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="/nyc-core-framework/icons">NYC Core Icons</a>, our open-source icon library, is used
         for all icons.
     </p>
     <p>
@@ -165,7 +164,7 @@ tags:
     </table>
 </figure>
 
-<hr class="section-start" id="InverseColor">
+<hr class="section-start" id="InverseColor" />
 
 <div class="container narrow margin-y-4">
     <h2>Inverse Color</h2>
@@ -237,7 +236,7 @@ tags:
     </figcaption>
 </figure>
 
-<hr class="section-start" id="dismissableAlerts">
+<hr class="section-start" id="dismissableAlerts" />
 
 <div class="container narrow margin-y-4">
     <h2>Dismissable Alerts</h2>
@@ -286,7 +285,6 @@ tags:
 
 </figure>
 
-
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
@@ -302,7 +300,7 @@ tags:
     </figcaption>
 </figure>
 
-<hr class="section-start" id="moreStyleVariations">
+<hr class="section-start" id="moreStyleVariations" />
 
 <div class="container narrow margin-y-4">
     <h2>More Style Variations</h2>
@@ -312,7 +310,7 @@ tags:
 </div>
 <!-- .container -->
 
-<figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
+<figure class="container narrow margin-y-4" style="--primary: #25caa4; --secondary: #6500d6; --dark: #262345; --light: #f1f4f6; --primary-text: var(--dark); --secondary-text: white; --button-font-weight: var(--body-font-weight-bold)">
 
     <div class="alert theme-secondary rounded margin-y-3" role="alert">
 
@@ -364,3 +362,4 @@ tags:
 
 </figure>
 
+:ET

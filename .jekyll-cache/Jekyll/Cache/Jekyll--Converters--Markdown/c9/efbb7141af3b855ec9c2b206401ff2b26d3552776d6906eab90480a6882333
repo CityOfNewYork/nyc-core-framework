@@ -1,0 +1,186 @@
+I"�$<div class="margin-y-5">
+
+    <div class="container narrow margin-y-4">
+        <h2 class="h1">
+            Equitable experiences for people with all abilities.
+        </h2>
+        <p>
+            Everyone deserves equal opportunities to engage with digital content online. The NYC Core Framework is designed to demystify <a href="https://www.w3.org/TR/WCAG21/">web accessibility</a>—and help
+            you integrate accessible best practices into your everyday workflow. Web accessibility is not only the right
+            thing to do—it is now becoming <a href="https://www.searchenginejournal.com/website-accessibility-law/285199">the law</a>.
+        </p>
+        <p>
+            In this section, learn about the high-level accessibility features built into the NYC Core Framework, and circumstances to look out for when developing your custom templates.
+        </p>
+    </div>
+    <!-- .container -->
+
+    <hr class="section-start" id="validHTML" />
+
+    <div class="container narrow margin-y-4">
+        <h2>Valid HTML</h2>
+        <p>The first and easiest step towards better accessibility is to create valid HTML, which better provides a
+            consistent experience across all browsers and assistive technologies.</p>
+        <p>Our <a href="#1">prebuilt templates</a> have been validated through the <a href="https://validator.w3.org/nu/">W3C Nu Html Checker</a>. It is a good idea to periodically check
+            your work here, too at different stages of development. </p>
+    </div>
+    <!-- .container -->
+
+    <hr class="section-start" id="colorContrast" />
+
+    <div class="container narrow margin-y-4">
+        <h2>Color Contrast</h2>
+        <p>With respect to accessibility, color contrast refers the difference in color between text and background
+            color or image. When applying your own colors to our <a href="#1">color system</a>, check the <a href="https://colorable.jxnblk.com/">color-contrast ratio</a> to ensure readability. To be compliant
+            with <a href="https://www.w3.org/WAI/WCAG21/quickref/#use-of-color">WCAG Level AA</a>, aim for a contrast
+            ratio of 4.5:1 or higher.<br /></p>
+    </div>
+    <!-- .container -->
+
+    <figure class="container narrow margin-y-4">
+
+        <div class="grid grid--gap-2 grid--cells-fill--sm">
+            <div class="grid__cell">
+                <img src="/nyc-core-framework/images/color-contrast-pass.svg" alt="Color Contrast Pass" />
+            </div>
+            <!-- .grid__cell -->
+            <div class="grid__cell">
+                <img src="/nyc-core-framework/images/color-contrast-fail.svg" alt="Color Contrast Fail" />
+            </div>
+            <!-- .grid__cell -->
+        </div>
+        <!-- .grid -->
+
+        <figcaption>
+            <p>
+                In the examples above, the dark text on green passes readability with a color contrast ratio of 7.14,
+                while the white text on green fails with a color contrast ratio of 2.09.
+            </p>
+        </figcaption>
+
+    </figure>
+
+    <div class="container narrow margin-y-4">
+        <p>Learn how our <a href="/documentation/colors">color system</a> helps you keep your accessible colors
+            consistent throughout your layouts.</p>
+    </div>
+    <!-- .container -->
+
+    <hr class="section-start" />
+
+    <div class="container narrow margin-y-4">
+        <h2>Aria Attributes</h2>
+        <p>Landmarks refer to the use of regions and roles throughout an HTML document. Common regions are
+            <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>. Common roles are
+            <code>role="banner"</code>, <code>role="list"</code>, and <code>role="button"</code>.</p>
+        <p>Landmarks allow screen readers quick access to regions helps communicate important information about the page
+            layout. As an example, adding <code>&lt;role="list"&gt;</code> to a <code>&lt;ul&gt;</code> provides the
+            number of list items to the screen reader.</p>
+    </div>
+    <!-- .container -->
+
+
+
+
+    <figure class="container narrow margin-y-4">
+
+        <div class="code-toolbar">
+            <pre class="hide-toolbar language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>banner<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navigation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>list<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                ...
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>main<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            ...
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>contentinfo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            ...
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+            <div class="toolbar">
+                <div class="toolbar-item"><span>HTML</span></div>
+                <div class="toolbar-item"><a>Copy</a></div>
+            </div>
+        </div>
+
+    </figure>
+
+
+
+
+    <hr class="section-start" id="hoverAndFocusStates" />
+
+
+
+
+    <div class="container narrow margin-y-4">
+        <h2>Hover and Focus States</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus dolor voluptate quaerat consequuntur
+            voluptatibus quisquam assumenda, incidunt rerum velit praesentium, vitae ipsa nobis similique impedit
+            numquam asperiores officia.</p>
+    </div>
+    <!-- .container -->
+
+
+
+
+
+    <figure class="container narrow margin-y-4">
+
+        <ul class="nav horizontal">
+            <li>
+                <a class="button theme-secondary expanded-link" href="#1">Link</a>
+            </li>
+            <li>
+                <a class="button-outline text-secondary" href="#1">Link</a>
+            </li>
+            <li>
+                <a class="button-icon text-secondary" href="#1" title="Frog">
+                    <span class="sr-only">Frog</span>
+                    <span class="fas fa-frog" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a class="text-secondary" href="#1">Link</a>
+            </li>
+        </ul>
+
+
+    </figure>
+
+
+
+
+    <hr class="section-start" id="keyboardNavigation" />
+
+
+
+
+    <div class="container narrow margin-y-4">
+        <h2>Keyboard Navigation</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus dolor voluptate quaerat consequuntur
+            voluptatibus quisquam assumenda, incidunt rerum velit praesentium, vitae ipsa nobis similique impedit
+            numquam asperiores officia in dolore.</p>
+    </div>
+    <!-- .container -->
+
+
+
+</div>
+<!-- .margin-y-5 -->
+:ET

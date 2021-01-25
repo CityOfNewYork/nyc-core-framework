@@ -296,7 +296,6 @@ ${myClipboardProperties}
 
 {% endif %}
 
-
 {% if page.title == 'NYC Core Icons' %}
 
 <script defer src="{{ site.baseurl }}/dist/js/icon_display.js"></script>
@@ -307,8 +306,60 @@ ${myClipboardProperties}
 
 <script src="{{ site.baseurl }}/lib/js/prism.js"></script>
 
+<script src="{{ site.baseurl }}/dist/js/toc.js"></script>
+
 {% endif %}
 
 <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
 
-<script src="{{ site.baseurl }}/dist/js/toc.js"></script>
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+    const searchContentData = "{{ site.baseurl }}/search.json";
+
+
+    let searchContentArray = [];
+
+    const loadSearchDocsData = async () => {
+        try {
+            const response = await fetch(searchContentData);
+            const searchContent = await response.json();
+
+            searchContentArray = searchContent.docs;
+
+            printDocs(searchContentArray);
+
+
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    const printDocs = (categories) => {
+
+       categories.forEach((category) => {
+
+           if(category.pages.length){
+
+            console.log(`holy ${category.collection}`);
+
+            let categoryType = category.collection;
+            let categoryPages = category.pages;
+
+            let pagesArray = categoryPages.map((page) => {
+                console.log(`
+                    I am the page: ${page.title}
+                    I have these tags: ${page.tags}
+                `);
+
+            });
+           }
+
+
+
+        });
+    } 
+
+    loadSearchDocsData();
+
+</script>

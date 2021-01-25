@@ -1,0 +1,171 @@
+I"¡<figure class="container medium margin-y-4">
+
+    <div class="table-scroll">
+
+        <small class="table-scroll__help">
+            Scroll to see whole table
+        </small>
+
+        <div class="table-scroll__container">
+
+            <table class="table" id="nyc-population-demographics">
+
+                <caption class="screen-reader-only">
+                    New York City Population Demographics
+                </caption>
+
+                <thead>
+
+                    <tr>
+                        <th scope="col">Borough</th>
+                        <th scope="col">Population</th>
+                        <th scope="col">Land Area</th>
+                        <th scope="col">Density</th>
+                        <th scope="col">
+                            <span class="screen-reader-only">Action</span>
+                        </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Brooklyn</td>
+                        <td>2,559,903</td>
+                        <td>70.82</td>
+                        <td>36,147</td>
+                        <td class="text-align-right">
+                            <a href="#1">View Map</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bronx</td>
+                        <td>1,418,207</td>
+                        <td>42.10</td>
+                        <td>33,867</td>
+                        <td class="text-align-right">
+                            <a href="#1">View Map</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Manhattan</td>
+                        <td>1,628,706</td>
+                        <td>22.83</td>
+                        <td>71,341</td>
+                        <td class="text-align-right">
+                            <a href="#1">View Map</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Queens</td>
+                        <td>2,253,858</td>
+                        <td>108.53</td>
+                        <td>20,767</td>
+                        <td class="text-align-right">
+                            <a href="#1">View Map</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Staten Island</td>
+                        <td>476,143</td>
+                        <td>58.37</td>
+                        <td>8,157</td>
+                        <td class="text-align-right">
+                            <a href="#1">View Map</a>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <!-- -->
+                </tfoot>
+
+            </table>
+
+        </div>
+        <!-- table-scroll__container -->
+
+    </div>
+
+</figure>
+
+<figure class="container medium margin-y-4">
+
+    <div class="box-shadow-1 theme-primary">
+
+        <table class="table table--stack--md table--striped table--va-middle">
+
+            <caption class="screen-reader-only">
+                New York City Population Demographics
+            </caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Borough</th>
+                    <th scope="col">Population</th>
+                    <th scope="col">Land Area</th>
+                    <th scope="col">Density</th>
+                    <th scope="col">
+                        <span class="screen-reader-only">Action</span>
+                    </th>
+                </tr>
+
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Brooklyn</td>
+                    <td>2,559,903</td>
+                    <td>70.82</td>
+                    <td>36,147</td>
+                    <td class="text-align-right">
+                        <a href="#1">View Map</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bronx</td>
+                    <td>1,418,207</td>
+                    <td>42.10</td>
+                    <td>33,867</td>
+                    <td class="text-align-right">
+                        <a href="#1">View Map</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Manhattan</td>
+                    <td>1,628,706</td>
+                    <td>22.83</td>
+                    <td>71,341</td>
+                    <td class="text-align-right">
+                        <a href="#1">View Map</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Queens</td>
+                    <td>2,253,858</td>
+                    <td>108.53</td>
+                    <td>20,767</td>
+                    <td class="text-align-right">
+                        <a href="#1">View Map</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Staten Island</td>
+                    <td>476,143</td>
+                    <td>58.37</td>
+                    <td>8,157</td>
+                    <td class="text-align-right">
+                        <a href="#1">View Map</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</figure>
+:ET
