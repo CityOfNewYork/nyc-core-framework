@@ -3,206 +3,684 @@ layout: documentation
 title: "Forms"
 ---
 
-<div class="container medium margin-y-4">
-
-    <div class="alert alert--confirm margin-y-2">
-
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-check-circle fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Confirm</span>
-            </p>
-        </div>
-
-        <div class="alert__body">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
-                <a href="#1">quos natus aliquam</a>.
-            </p>
-        </div>
-
-    </div>
-    <!-- .alert -->
-
-    <form class="needs-validation margin-y-3" novalidate>
-
-        <span class="required-fields-annotation display-none" aria-hidden="true">* Required field</span>
-
-        <fieldset>
-
-            <div class="form-group">
-            
-                <label class="form-group__field has-action">
-
-                    <input class="field__input" type="text" name="email_address">
-                    <p class="field__label">Enter Search Phrase</p>
-                    
-                    <button href="#1" title="Search">
-                        <span class="sr-only">Search</span>
-                        <span class="fas fa-search"></span>
-                    </button>
-                </label>
-
-            </div>
-            <!-- .form-group -->
-
-            <div class="form-group">
-                <div class="grid--gap-lg grid--cells-6--md">
-
-                    <div class="grid__cell">
-                        <label class="form-group__field">
-                            <input class="field__input" type="text" name="user_name">
-                            <p class="field__label">First Name</p>
-                        </label>
-                    </div>
-
-                    <div class="grid__cell">
-                        <label class="form-group__field">
-                            <input class="field__input" type="text" name="user_name">
-                            <p class="field__label">Last Name</p>
-                        </label>
-                    </div>
-
-                </div> 
-            </div>
-            <!-- .form-group -->
-            
-            <div class="form-group">
-                <label class="form-group__field">
-                    <input class="field__input" type="text" name="email_address">
-                    <p class="field__label">Email Address</p>
-                </label>
-            </div>
-            <!-- .form-group -->
-
-            <div class="form-group">
-
-                <label class="form-group__field">
-                    <div class="field__input-wrap">
-                        <select class="field__input" name="Boroughs" required>
-                            <option value=""></option>
-                            <option value="Bronx">Bronx</option>
-                            <option value="Brooklyn">Brooklyn</option>
-                            <option value="Manhattan">Manhattan</option>
-                            <option value="Staten Island">Staten Island</option>
-                            <option value="Queens">Queens</option>
-                        </select>
-                    </div>
-                    <p class="field__label">Borough</p>
-                </label>
-            </div>
-            <!-- .form-group -->
-
-        </fieldset>
-        
-        
-        <div class="form-group validate-parent" role="group" aria-labelledby="checkbox-group-label">
-
-            <p class="label" id="checkbox-group-label">
-                Select multiple options
-            </p>
-
-            <p class="invalid-feedback">
-                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                <span class="invalid-description">Error message description</span>
-                <span class="invalid-instruction">How to fix instructions</span>
-            </p>
-
-            <ul class="nav" role="list">
-                <li>
-                    <label class="form-group__checkbox">
-                        <input type="checkbox" name="checkbox-group-example" required>
-                        <span class="checkbox__label">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita velit porro provident soluta nobis ex eligendi maxime assumenda, beatae debitis illum maiores inventore rerum dolorem nihil. Voluptatum saepe aperiam cupiditate.
-                        </span>
-                    </label>
-                </li>
-                <li>
-                    <label class="form-group__checkbox">
-                        <input type="checkbox" name="checkbox-group-example" required>
-                        <span class="checkbox__label">
-                            Option One
-                        </span>
-                    </label>
-                </li>
-                <li>
-                    <label class="form-group__checkbox">
-                        <input type="checkbox" name="checkbox-group-example" required>
-                        <span class="checkbox__label">
-                            Option One
-                        </span>
-                    </label>
-                </li>
-            </ul>
-
-        </div>
-        <!-- .form-group -->
-
-        <div class="form-group validate-parent" role="group" aria-labelledby="checkbox-group-label">
-
-            <p class="label" id="checkbox-group-label">
-                Select a single option
-            </p>
-
-            <p class="invalid-feedback">
-                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                <span class="invalid-description">Error message description</span>
-                <span class="invalid-instruction">How to fix instructions</span>
-            </p>
-
-            <ul class="nav" role="list">
-                <li>
-                    <label class="form-group__radio">
-                        <input type="radio" name="radio-group-example" required>
-                        <span class="radio__label">
-                            Option One
-                        </span>
-                    </label>
-                </li>
-
-                <li>
-                    <label class="form-group__radio">
-                        <input type="radio" name="radio-group-example" required>
-                        <span class="radio__label">
-                            Option One
-                        </span>
-                    </label>
-                </li>
-
-                <li>
-                    <label class="form-group__radio">
-                        <input type="radio" name="radio-group-example" required>
-                        <span class="radio__label">
-                            Option One
-                        </span>
-                    </label>
-                </li>
-
-            </ul>
-
-        </div>
-        <!-- .form-group -->
-
-        <div class="form-group validate-parent">
-
-            <label class="form-group__field">
-                <textarea class="field__input" id="message" rows="4"></textarea>
-                <p class="field__label">Message</p>
-            </label>
-
-            <p class="invalid-feedback">
-                <span class="fas fa-exclamation-triangle" aria-hidden="true"></span>
-                <span class="invalid-description">Error message description</span>
-                <span class="invalid-instruction">How to fix instructions</span>
-            </p>
-
-        </div>
-        <!-- .form-group -->
-
-        <button class="button display-block theme-secondary fw-bold" type="submit">Submit</button>
-
-    </form>
-    <!-- .needs-validation -->
-
+<div class="container narrow margin-y-4">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore iure quisquam eius.
+    </p>
 </div>
 <!-- .container -->
+
+{% capture as_body %}
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore iure quisquam eius.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="margin-y-5" id="theBasicButton">
+
+<div class="container narrow margin-y-4">
+    <h2>Form Entries</h2>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div class="form-entry">
+                    <label class="form-entry__field">
+                        <span class="form-entry__field__label">
+                            Form Entry Label
+                        </span>
+                        <span class="form-entry__field__input">
+                            <input type="text" id="formEntryLabel">
+                        </span>
+                    </label>
+                    <small class="form-entry__field__help">
+                        Form Entry help text (optional)
+                    </small>
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+
+                    &lt;label class="form-entry__field"&gt;
+
+                        &lt;span class="form-entry__field__label"&gt;
+                            First Name
+                        &lt;/span&gt;
+
+                        &lt;span class="form-entry__field__input"&gt;
+                            &lt;input type="text" id="..." name="..."&gt;
+                        &lt;/span&gt;
+
+                    &lt;/label&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Select (dropdown)</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div
+                    class="form-entry"
+                    data-required="true"
+                    data-error-description="Borough is required!" 
+                    data-error-instructions="Select a Borough">
+
+                    <div class="form-entry__field">
+                        <label class="form-entry__field__label" for="select-borough">
+                            Borough
+                        </label>
+                        <span class="form-entry__field__select">
+                            <select id="select-borough" name="Boroughs">
+                                <option value="">Select One</option>
+                                <option value="Bronx">Bronx</option>
+                                <option value="Brooklyn">Brooklyn</option>
+                                <option value="Manhattan">Manhattan</option>
+                                <option value="Staten Island">Staten Island</option>
+                                <option value="Queens">Queens</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div
+                    class="form-entry"
+                    data-required="true"
+                    data-error-description="Borough is required!" 
+                    data-error-instructions="Select a Borough"&gt;
+
+                    &lt;div class="form-entry__field"&gt;
+
+                        &lt;label class="form-entry__field__label" for="select-borough"&gt;
+                            Borough
+                        &lt;/label&gt;
+
+                        &lt;span class="form-entry__field__select"&gt;
+                            &lt;select id="select-borough" name="Boroughs"&gt;
+                                &lt;option value=""&gt;Select One&lt;/option&gt;
+                                &lt;option value="Bronx"&gt;Bronx&lt;/option&gt;
+                                &lt;option value="Brooklyn"&gt;Brooklyn&lt;/option&gt;
+                                &lt;option value="Manhattan"&gt;Manhattan&lt;/option&gt;
+                                &lt;option value="Staten Island"&gt;Staten Island&lt;/option&gt;
+                                &lt;option value="Queens"&gt;Queens&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/span&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Required Fields</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div
+                    class="form-entry is-invalid"
+                    data-required="true"
+                    data-error-description="Borough is required!" 
+                    data-error-instructions="Select a Borough">
+
+                    <div class="form-entry__field">
+                        <label class="form-entry__field__label" for="select-borough">
+                            Borough
+                        </label>
+                        <div class="form-entry__feedback">
+                            <small>
+                                <span class="nyc_icon_warn" aria-hidden="true"></span>
+                                <strong>Borough is required!</strong>
+                                <span>Select a Borough</span>
+                            </small>
+                        </div>
+                        <span class="form-entry__field__select">
+                            <select id="select-borough" name="Boroughs">
+                                <option value="">Select One</option>
+                                <option value="Bronx">Bronx</option>
+                                <option value="Brooklyn">Brooklyn</option>
+                                <option value="Manhattan">Manhattan</option>
+                                <option value="Staten Island">Staten Island</option>
+                                <option value="Queens">Queens</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div
+                    class="form-entry is-invalid"
+                    data-required="true"
+                    data-error-description="Borough is required!" 
+                    data-error-instructions="Select a Borough"&gt;
+
+                    &lt;div class="form-entry__field"&gt;
+
+                        &lt;label class="form-entry__field__label" for="select-borough"&gt;
+                            Borough
+                        &lt;/label&gt;
+
+                        &lt;span class="form-entry__field__select"&gt;
+                            &lt;select id="select-borough" name="Boroughs"&gt;
+                                &lt;option value=""&gt;Select One&lt;/option&gt;
+                                &lt;option value="Bronx"&gt;Bronx&lt;/option&gt;
+                                &lt;option value="Brooklyn"&gt;Brooklyn&lt;/option&gt;
+                                &lt;option value="Manhattan"&gt;Manhattan&lt;/option&gt;
+                                &lt;option value="Staten Island"&gt;Staten Island&lt;/option&gt;
+                                &lt;option value="Queens"&gt;Queens&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/span&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Text Area</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div class="form-entry">
+
+                    <label class="form-entry__field">
+
+                        <span class="form-entry__field__label">
+                            Message
+                        </span>
+
+                        <span class="form-entry__field__input">
+                            <textarea rows="8"></textarea>
+                        </span>
+                        
+                        <small class="form-entry__field__help">
+                            This is help text
+                        </small>
+
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+
+                    &lt;label class="form-entry__field"&gt;
+
+                        &lt;span class="form-entry__field__label"&gt;
+                            Message
+                        &lt;/span&gt;
+
+                        &lt;span class="form-entry__field__input"&gt;
+                            &lt;textarea rows="8"&gt;&lt;/textarea&gt;
+                        &lt;/span&gt;
+                        
+                        &lt;small class="form-entry__field__help"&gt;
+                            This is help text
+                        &lt;/small&gt;
+
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>File Upload</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div
+                    class="form-entry"
+                    data-required="true"
+                    data-error-description="Upload is required!" 
+                    data-error-instructions="Select a file for upload">
+
+                    <div class="form-entry__field">
+
+                        <span class="form-entry__field__label">
+                            Upload your file
+                        </span>
+
+                        <div class="form-entry__field__input">
+                            <label class="file-upload">
+                                <span class="file-upload__drag">
+                                    <span class="file-upload__drag__text">Drag and Drop</span>
+                                </span>
+                                <input class="file-upload__input" type="file" id="file-upload" accept="image/*">    
+                                <span class="button button--outline button--has-icon file-upload__button">
+                                    <span class="nyc_icon_upload"></span>
+                                    <span class="button__text">Browse for a File</span>
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div
+                    class="form-entry"
+                    data-required="true"
+                    data-error-description="Upload is required!" 
+                    data-error-instructions="Select a file for upload"&gt;
+
+                    &lt;div class="form-entry__field"&gt;
+
+                        &lt;span class="form-entry__field__label"&gt;
+                            Upload your file
+                        &lt;/span&gt;
+
+                        &lt;div class="form-entry__field__input"&gt;
+                            &lt;label class="file-upload"&gt;
+                                &lt;span class="file-upload__drag"&gt;
+                                    &lt;span class="file-upload__drag__text"&gt;Drag and Drop&lt;/span&gt;
+                                &lt;/span&gt;
+                                &lt;input class="file-upload__input" type="file" id="file-upload" accept="image/*"&gt;    
+                                &lt;span class="button button--outline button--has-icon file-upload__button"&gt;
+                                    &lt;span class="nyc_icon_upload"&gt;&lt;/span&gt;
+                                    &lt;span class="button__text"&gt;Browse for a File&lt;/span&gt;
+                                &lt;/span&gt;
+                            &lt;/label&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Checkboxes</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div class="form-entry">
+
+                    <fieldset class="form-entry__field">
+
+                        <legend class="form-entry__field__label">
+                            Checkbox Group
+                        </legend>
+
+                        <div class="form-entry__option">
+
+                            <div class="form-entry__option__check">
+                                <label>
+                                    <input type="checkbox" name="example-checkbox-group">
+                                    <span class="check__label">
+                                        Option One
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-entry__option__check">
+                                <label>
+                                    <input type="checkbox" name="example-checkbox-group">
+                                    <span class="check__label">
+                                        Option Two
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-entry__option__check">
+                                <label>
+                                    <input type="checkbox" name="example-checkbox-group">
+                                    <span class="check__label">
+                                        Option Three
+                                    </span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+                 ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Radios</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div
+                    class="form-entry"
+                    data-required="true"
+                    data-error-description="Priority is required!" 
+                    data-error-instructions="Select your priority rating">
+
+                    <fieldset class="form-entry__field">
+
+                        <legend class="form-entry__field__label">
+                            What is the priority of this request?
+                        </legend>
+
+                        <div class="form-entry__option">
+
+                            <div class="form-entry__option__radio">
+                                <label>
+                                    <input type="radio" name="example-priority-of-request">
+                                    <span class="radio__label">
+                                        High
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-entry__option__radio">
+                                <label>
+                                    <input type="radio" name="example-priority-of-request">
+                                    <span class="radio__label">
+                                        Medium
+                                    </span>
+                                </label> 
+                            </div>
+
+                            <div class="form-entry__option__radio">
+                                <label>
+                                    <input type="radio" name="example-priority-of-request">
+                                    <span class="radio__label">
+                                        Low
+                                    </span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+                 ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div
+                    class="form-entry"
+                    data-required="true"
+                    data-error-description="Priority is required!" 
+                    data-error-instructions="Select your priority rating">
+
+                    <fieldset class="form-entry__field">
+
+                        <legend class="form-entry__field__label">
+                            What is the priority of this request?
+                        </legend>
+
+                        <div class="form-entry__option option--horizontal--md">
+
+                            <div class="form-entry__option__radio">
+                                <label>
+                                    <input type="radio" name="example-priority-of-request-02">
+                                    <span class="radio__label">
+                                        High
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-entry__option__radio">
+                                <label>
+                                    <input type="radio" name="example-priority-of-request-02">
+                                    <span class="radio__label">
+                                        Medium
+                                    </span>
+                                </label> 
+                            </div>
+
+                            <div class="form-entry__option__radio">
+                                <label>
+                                    <input type="radio" name="example-priority-of-request-02">
+                                    <span class="radio__label">
+                                        Low
+                                    </span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+                 ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div class="form-entry">
+
+                    <div class="form-entry__field">
+
+                        <span class="form-entry__field__label">
+                            Single Checkbox
+                        </span>
+
+                        <div class="form-entry__option">
+                            <div class="form-entry__option__check">
+                                <label>
+                                    <input type="checkbox" name="checkbox-single-example" required>
+                                    <span class="check__label">
+                                        Option One
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+                    ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-4 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+                <div class="form-entry">
+
+                    <div class="form-entry__field">
+
+                        <span class="form-entry__field__label">
+                            Single Checkbox (Switch)
+                        </span>
+
+                        <div class="form-entry__option">
+                            <div class="form-entry__option__switch">
+                                <label>
+                                    <input type="checkbox" name="checkbox-switch-example" required>
+                                    <span class="switch__slider"></span>
+                                    <span class="switch__label">
+                                        Receive Notifications
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+                    ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<hr class="margin-y-5" id="formValidation">
+
+<div class="container narrow margin-y-4">
+    <h2>Form Validation</h2>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+
+
+<hr class="margin-y-5" id="floatingLabels">
+
+<div class="container narrow margin-y-4">
+    <h2>Floating Labels</h2>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus,
+        corrupti tempore sint quos exercitationem cum rerum porro.
+    </p>
+</div>
+<!-- .container -->
+

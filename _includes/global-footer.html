@@ -76,6 +76,19 @@
     const copyButtonText = "Copy";
     const copyButtonActionText = "Copied!";
 
+    const hash = window.location.hash;
+
+    const checkAchor = () => {
+        if (window.location.hash) {
+            console.log("window.location.hash : " +  hash);
+            window.location.href = hash;
+            // let target = document.querySelector("html");
+            // target.style.scrollBehavior = "unset";
+        } else {
+            return;
+        }
+    };
+
     const loadcustomProperties = async () => {
         try {
             const response = await fetch(customPropertiesData);
@@ -86,6 +99,7 @@
             displayCustomProperties(customPropertyData);
 
             initClipboard();
+            checkAchor();
         
         } catch (err) {
             console.error(err);
@@ -275,6 +289,8 @@ ${myClipboardProperties}
     };
 
     loadcustomProperties();
+
+
 
 </script>
 
