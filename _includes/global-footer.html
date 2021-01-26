@@ -317,47 +317,56 @@ ${myClipboardProperties}
 <script>
     const searchContentData = "{{ site.baseurl }}/search.json";
 
-
-    let searchContentArray = [];
+    let searchContentObject = [];
 
     const loadSearchDocsData = async () => {
         try {
             const response = await fetch(searchContentData);
             const searchContent = await response.json();
 
-            searchContentArray = searchContent.docs;
+            searchContentObject = searchContent.docs;
 
-            printDocs(searchContentArray);
-
+            console.log("whoa", searchContentObject);
 
         } catch (err) {
             console.error(err);
         }
     };
 
-    const printDocs = (categories) => {
+    const searchDocs = document.getElementById('search-docs-input');
 
-       categories.forEach((category) => {
+    searchDocs.addEventListener('keyup', (event) => {
+        const searchString = event.target.value.toLowerCase();
 
-           if(category.pages.length){
+        let searchResults = searchContentObject.Array.prototype.filter(searchString);
+        console.log("whoa", searchResults);
 
-            console.log(`holy ${category.collection}`);
+    });
 
-            let categoryType = category.collection;
-            let categoryPages = category.pages;
+    const printDocs = (searchResults) => {
 
-            let pagesArray = categoryPages.map((page) => {
-                console.log(`
-                    I am the page: ${page.title}
-                    I have these tags: ${page.tags}
-                `);
+    console.log(`holy ${searchResults}`);
 
-            });
-           }
+    //    categories.forEach((category) => {
 
+    //        if(category.pages.length) {
 
+    //         console.log(`holy ${category.collection}`);
 
-        });
+    //         let categoryType = category.collection;
+    //         let categoryPages = category.pages;
+
+    //         let pagesArray = categoryPages.map((page) => {
+    //             console.log(`
+    //                 I am the page: ${page.title}
+    //                 I have these tags: ${page.tags}
+    //             `);
+    //         });
+
+    //        }
+           
+    //     });
+
     } 
 
     loadSearchDocsData();
