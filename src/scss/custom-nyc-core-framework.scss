@@ -46,7 +46,7 @@ body {
     --article-sidebar-width: 275px;
 }
 
-#docs-menu {
+#docs-sidebar {
     overflow: hidden;
 
     &.filtered {
@@ -58,7 +58,21 @@ body {
 
         ul:not(:last-child) {
             margin-bottom: var(--gap-size);
-        }    
+        }
+
+        ul {
+            animation: fadeIn 0.5s;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
     }
 }
 

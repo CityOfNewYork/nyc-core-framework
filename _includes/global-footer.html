@@ -340,11 +340,41 @@ ${myClipboardProperties}
         }
     };
 
-    const docsSidebar = document.querySelector('#docs-menu');
+    const docsSidebar = document.querySelector('#docs-sidebar');
 
-    const searchDocs = document.querySelector('#search-docs-input');
+    const filterDocsInput = document.querySelector('#filter-docs-input');
 
-    searchDocs.addEventListener('keyup', (event) => {
+    const filterPages = (pages) => {
+
+        let filteredPagesArray = [];
+
+        pages.forEach((page) => {
+            let pageTitle = page.title;
+            filteredPagesArray.push(pageTitle);
+        });
+
+        filterMenu(filteredPagesArray);
+    }
+
+    const filterMenu = (keepInMenu) => {
+
+        const menuItemList = docsSidebar.querySelectorAll("li");
+
+        let checkString = keepInMenu.toString();
+
+        menuItemList.forEach((menuItem) => {
+            
+            let dataTitle = menuItem.getAttribute("data-title");
+            
+            if (!(checkString.includes(dataTitle))) {
+                menuItem.classList.add("hide");
+            } else {
+                menuItem.classList.remove("hide");
+            }
+        });
+    }
+
+    filterDocsInput.addEventListener('keyup', (event) => {
 
         const searchQuery = event.target.value.toLowerCase();
 
@@ -364,36 +394,6 @@ ${myClipboardProperties}
 
     });
 
-    function filterPages(pages) {
-
-        let filteredPagesArray = [];
-
-        pages.forEach((page) => {
-            let pageTitle = page.title;
-            filteredPagesArray.push(pageTitle);
-        });
-
-        filterMenu(filteredPagesArray);
-    }
-
-    function filterMenu(keepInMenu) {
-
-        const menuItemList = docsSidebar.querySelectorAll("li");
-
-        let checkString = keepInMenu.toString();
-
-        menuItemList.forEach((menuItem) => {
-            
-            let dataTitle = menuItem.getAttribute("data-title");
-            
-            if (!(checkString.includes(dataTitle))) {
-                menuItem.classList.add("hide");
-            } else {
-                menuItem.classList.remove("hide");
-            }
-        });
-
-    }
 
     loadDocPagesData();
 
