@@ -2,14 +2,14 @@
 <a class="focusable-only" href="#primary-content">Skip Navigation</a>
 
 <div class="container narrow display-none--lg margin-y-3">
-    <button class="button button--outline width-100" data-toggle="collapse" data-target="#target-id">
+    <button class="button button--outline width-100" data-toggle="collapse" data-target="#docs-menu">
         Documentation
     </button>
 </div>
 
- <div class="sticky-top collapse display-block--lg" id="target-id">
+ <div class="sticky-top collapse display-block--lg" id="docs-menu">
 
-    <form class="container narrow padding-y-3 border-bottom" autocomplete="off">
+    <form class="container narrow margin-y-3" autocomplete="off">
 
         <div class="form-entry font-size-md">
 
@@ -20,27 +20,25 @@
                 </label>
                 
                 <span class="form-entry__field__input">
-                    <input type="text" name="search-example" id="search-docs-input" placeholder="Search Docs">
-                    <button class="button button--icon-only" type="button" aria-label="Home">
-                        <span class="nyc_icon_search" aria-hidden="true"></span>
-                    </button>
+                    <span class="nyc_icon_search opacity-40" aria-hidden="true"></span>
+                    <input type="text" name="search-example" id="search-docs-input" placeholder="Filter Docs">
                 </span>
 
             </div>
         
         </div>
 
-        <ul class="nav font-size-md text-color-primary margin-top-2" id="search-docs-results"></ul>
-
     </form>
+    
+    <hr class="margin-y-3 margin-x-n3">
 
-    <div class="container narrow padding-y-3 font-size-md">
+    <div class="container narrow margin-y-3 font-size-md">
 
         <ul class="nav font-size-md">
 
             {% for doc in site.docs-introduction %}
             
-            <li>
+            <li data-title="{{ doc.title }}">
                 <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
                     {{ doc.title }}
                 </a>
@@ -56,7 +54,7 @@
 
             {% for doc in site.docs-a-z %}
 
-            <li>
+            <li data-title="{{ doc.title }}">
                 <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
                     {{ doc.title }}
                 </a>

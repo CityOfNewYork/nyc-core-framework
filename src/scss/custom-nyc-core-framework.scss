@@ -46,6 +46,22 @@ body {
     --article-sidebar-width: 275px;
 }
 
+#docs-menu {
+    overflow: hidden;
+
+    &.filtered {
+
+        ul + hr,
+        .hide {
+            display: none;
+        }
+
+        ul:not(:last-child) {
+            margin-bottom: var(--gap-size);
+        }    
+    }
+}
+
 //////////////////////////////////////////////
 // C. Theme Styles
 //////////////////////////////////////////////
