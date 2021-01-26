@@ -315,18 +315,19 @@ ${myClipboardProperties}
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 
 <script>
-    const searchContentData = "{{ site.baseurl }}/search.json";
 
-    let searchContentObject = [];
+    const docPagesData = "{{ site.baseurl }}/lib/json/documentation-pages.json";
 
-    const loadSearchDocsData = async () => {
+    let docPagesObject = [];
+
+    const loadDocPagesData = async () => {
         try {
-            const response = await fetch(searchContentData);
-            const searchContent = await response.json();
+            const response = await fetch(docPagesData);
+            const docPages = await response.json();
 
-            searchContentObject = searchContent.docs;
+            docPagesObject = docPages.docs;
 
-            console.log("whoa", searchContentObject);
+            console.log("whoa", docPagesObject);
 
         } catch (err) {
             console.error(err);
@@ -335,40 +336,21 @@ ${myClipboardProperties}
 
     const searchDocs = document.getElementById('search-docs-input');
 
-    searchDocs.addEventListener('keyup', (event) => {
-        const searchString = event.target.value.toLowerCase();
+    // searchDocs.addEventListener('keyup', (event) => {
 
-        let searchResults = searchContentObject.Array.prototype.filter(searchString);
-        console.log("whoa", searchResults);
+        // const searchString = event.target.value.toLowerCase();
 
-    });
+        // const filteredIcons = docPagesObject.filter((searchResults) => {
+        //     return (
+        //         searchResults.properties.name.toLowerCase().includes(searchString) ||
+        //         searchResults.pages.tags.toString().includes(searchString)
+        //     );
+        // });
 
-    const printDocs = (searchResults) => {
+        // filterItems(docPagesObject, searchString);
 
-    console.log(`holy ${searchResults}`);
+    // });
 
-    //    categories.forEach((category) => {
-
-    //        if(category.pages.length) {
-
-    //         console.log(`holy ${category.collection}`);
-
-    //         let categoryType = category.collection;
-    //         let categoryPages = category.pages;
-
-    //         let pagesArray = categoryPages.map((page) => {
-    //             console.log(`
-    //                 I am the page: ${page.title}
-    //                 I have these tags: ${page.tags}
-    //             `);
-    //         });
-
-    //        }
-           
-    //     });
-
-    } 
-
-    loadSearchDocsData();
+    loadDocPagesData();
 
 </script>

@@ -21,6 +21,7 @@ layout: none
           "tags"     : "{{ page.tags | join: ', ' }}",
           "url"      : "{{ site.baseurl }}{{ page.url }}"
         } {% unless forloop.last %},{% endunless %}
+        
       {% endfor %}
 
       ]

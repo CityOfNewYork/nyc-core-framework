@@ -112,7 +112,9 @@ loadCoreIcons();
 const searchBar = document.getElementById('core-icon-search');
 
 searchBar.addEventListener('keyup', (event) => {
+
     const searchString = event.target.value.toLowerCase();
+    
     const filteredIcons = coreIconsArray.filter((iconArray) => {
         return (
             iconArray.properties.name.toLowerCase().includes(searchString) ||
