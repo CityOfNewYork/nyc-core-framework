@@ -49,14 +49,14 @@ In this file:
         display: inline-block;
         color: inherit;
         margin-left: var(--caret-margin);
-        
-        [dir="rtl"] & {
-            margin-left: unset;
-            margin-right: var(--caret-margin);
-        }
     }
 
     [dir="rtl"] & {
         justify-content: flex-start;
+        
+        &::before {
+            margin-left: unset;
+            margin-right: var(--caret-margin);
+        }
     }
 }
