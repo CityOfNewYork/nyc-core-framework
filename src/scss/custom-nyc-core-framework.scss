@@ -2,23 +2,29 @@
 
 In this file:
 
-// A. Imports
-// B. Custom Properties
+// A. Core Framework Breakpoints
+// B. Custom CSS Variables
 // C. Theme Styles
 
 */
 
 //////////////////////////////////////////////
-// A. Imports
+// A. Core Framework Breakpoints
 //////////////////////////////////////////////
 
-@import "partials/breakpoints";
+$bp-sm: 400px; 
+$bp-md: 760px;
+$bp-lg: 1000px;
+$bp-xl: 1340px;
 
 //////////////////////////////////////////////
-// B. Custom Properties
+// B. Custom CSS Variables
 //////////////////////////////////////////////
 
 :root {
+
+    // Colors
+
     --primary: #222BE6;
     --secondary: #00D5A0;
     --dark: #040459;
@@ -28,7 +34,11 @@ In this file:
     --primary-border: hsla(0, 0%, 0%, 0.25);
     --secondary-text: var(--dark);
 
+    // Fonts
+
     --body-font-size: 20px;
+
+    // --font-size-md: calc(var(--body-font-size) * 0.85);  // ~ 18px
 
     --body-font-family: "neue-haas-grotesk-text";
 
@@ -44,36 +54,6 @@ body {
 
 .article {
     --article-sidebar-width: 275px;
-}
-
-#docs-sidebar {
-    overflow: hidden;
-
-    &.filtered {
-
-        ul + hr,
-        .hide {
-            display: none;
-        }
-
-        ul:not(:last-child) {
-            margin-bottom: var(--gap-size);
-        }
-
-        ul {
-            animation: fadeIn 0.5s;
-        }
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 100;
-    }
 }
 
 //////////////////////////////////////////////
@@ -92,8 +72,8 @@ a[data-logo="brand"] {
 
 #features .backdrop{
     --backdrop-fixed-height: 600px;
-    
-    @include breakpoints-down(lg) {
+
+    @media (max-width: $bp-lg) {
         --backdrop-fixed-height: 800px;
     }
 }
@@ -158,6 +138,36 @@ a[data-logo="brand"] {
         &:nth-child(3) {
             background-color: green;
         }
+    }
+}
+
+#docs-sidebar {
+    overflow: hidden;
+
+    &.filtered {
+
+        ul + hr,
+        .hide {
+            display: none;
+        }
+
+        ul:not(:last-child) {
+            margin-bottom: var(--gap-size);
+        }
+
+        ul {
+            animation: fadeIn 0.5s;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
     }
 }
 

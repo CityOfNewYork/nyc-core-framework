@@ -20,12 +20,23 @@ figure .example + figcaption {
 	opacity: 0.9;
 }
 
+:root {
+	--code-font-family:
+		'Roboto Mono',
+		Consolas,
+		Monaco,
+		'Andale Mono',
+		'Ubuntu Mono',
+		monospace;
+}
+
+
 code[class*="language-"],
 pre[class*="language-"] {
 	background-color: none;
 	color: #ccc;
 	
-	font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: var(--code-font-family);
 	font-size: var(--font-size-md);
 	text-align: left;
 	white-space: pre;
@@ -40,10 +51,10 @@ pre[class*="language-"] {
 	-o-tab-size: 4;
 	tab-size: 4;
 
+	hyphens: none;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
-	hyphens: none;
 }
 
 /* Code blocks */
@@ -71,13 +82,16 @@ pre[class*="language-"]:not([class*="hide-toolbar"]){
 
 p > code {
 	--code-color: var(--white-confirm);
+
 	position: relative;
 	display: inline-block;
-	padding: 0.075rem 0.25rem;
-    white-space: normal;
-    color: inherit;
+	
+	font-family: var(--code-font-family);
 	font-size: 0.875em;
 	line-height: 1.4;
+    white-space: normal;
+
+	padding: 0.075rem 0.25rem;
 	color: var(--code-color);
 }
 
