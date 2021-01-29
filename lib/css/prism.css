@@ -11,7 +11,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-figure .example + figcaption {
+figure .example + figcaption,
+figure .code-toolbar +figcaption {
 	background-color: var(--dark);
 	color: var(--dark-text);
 	padding: var(--spacer-3);
@@ -61,16 +62,12 @@ pre[class*="language-"] {
 
 pre[class*="language-"] {
 	padding: 2em 1em;
-	/* margin: 0.5em 0; */
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-
 	overflow-x: scroll;
-
-	
 	background-color: var(--dark);
 }
 
@@ -106,7 +103,6 @@ p > code::before {
     opacity: .095;
     border-radius: .25em;
 }
-
 
 .token.comment,
 .token.block-comment,
