@@ -19,9 +19,9 @@ export default class Alert {
 
             const alertTitleBar = alertDismissable.querySelector(".alert__title");
 
-            alertTitleBar.insertAdjacentHTML('beforeend', closeButtonHTML);
+            alertDismissable.insertAdjacentHTML('afterbegin', closeButtonHTML);
 
-            const alertCloseButton = alertTitleBar.querySelector("button");
+            const alertCloseButton = alertDismissable.querySelector("button");
 
             alertCloseButton.addEventListener("click", (event) => {
                 

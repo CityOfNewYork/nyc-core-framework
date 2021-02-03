@@ -37,12 +37,6 @@ In this file:
 
     border-radius: var(--alert-border-radius);
 
-    > hr {
-        margin: var(--alert-padding-x) calc(var(--alert-padding-x) * -1);
-        border-color: currentColor !important;
-        opacity: 0.5;
-    }
-
     a {
         color: inherit !important;
     }
@@ -78,8 +72,8 @@ In this file:
 }
 
 .alert__title {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     font-size: var(--alert-title-font-size);
     
@@ -101,8 +95,8 @@ In this file:
 }
 
 .alert__title__text {
-    margin-left: var(--spacer-2);
-    margin-right: var(--spacer-2);
+    margin-left: var(--spacer-1);
+    margin-right: var(--spacer-1);
     font-weight: var(--body-font-weight-bold);
 }
 
@@ -110,6 +104,33 @@ In this file:
     p:not(:last-child) {
         margin-bottom: 0.5em;
     }
+}
+
+.alert--dismissable { 
+    display: grid;
+
+    > [class*="__title"] {
+        grid-area: title;
+        align-self: stretch;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    > [class*="button"] {
+        grid-area: close;
+        font-size: var(--font-size-md);
+    }
+
+    > [class*="__description"] {
+        grid-area: description;
+    }
+
+    grid-template-columns: 1fr auto;
+    
+    grid-template-areas:
+            "title close"
+            "description description";
+
 }
 
 .dismissed {

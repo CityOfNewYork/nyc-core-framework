@@ -16,7 +16,7 @@ In this file:
 // Scoped to Block
 
 %custom-properties {
-    --icon-size: 1.375em;
+    --icon-size: 1.25em;
 }
 
 //////////////////////////////////////////////
@@ -25,12 +25,15 @@ In this file:
 
 [class^="nyc_icon_"],
 [class*="nyc_icon_"] {
-
   @extend %custom-properties;
+  
   font-size: var(--icon-size) !important;
+  font-size: inherit;
+  line-height: inherit;
 
+  vertical-align: text-top;
+  
   position: relative;
-  line-height: 1;
   pointer-events: none;
 
   &:not([class*="_subway-"]) {
