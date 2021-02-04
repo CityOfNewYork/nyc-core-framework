@@ -4,7 +4,7 @@
   "description": "NYC Core Framework",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
