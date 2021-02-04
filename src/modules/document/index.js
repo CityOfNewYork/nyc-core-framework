@@ -94,13 +94,13 @@ export default class Document {
 
         });
 
+        ///////////////////////
+        // Custom Properties Polyfill
+        ///////////////////////
+
         const isIE11 = /Trident\/|MSIE/.test(window.navigator.userAgent);
 
-        if (isIE11) {
-            loadCustomPropertiesPolyfill();            
-        }
-
-        function loadCustomPropertiesPolyfill(){
+        const loadCustomPropertiesPolyfill = () => {
 
             const targetNode = document.querySelector('[name="viewport"]');
             const cpIEPolyfill = document.createElement('script');
@@ -109,9 +109,14 @@ export default class Document {
 
             targetNode.parentNode.insertBefore(cpIEPolyfill, targetNode.nextSibling);
 
-            cpIEPolyfill.onload = () => {
+            // cpIEPolyfill.onload = () => {
+            //     alert("IE Loaded")
+            // }
 
-            }
+        }
+
+        if (isIE11) {
+            loadCustomPropertiesPolyfill();            
         }
 
     }

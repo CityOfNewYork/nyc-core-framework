@@ -530,9 +530,7 @@ fieldset {
 
 .form-entry__option {
     position: relative;
-
-    display: flex;
-    flex-direction: column;
+    display: block;
 
     border-radius: var(--form-field-border-radius);
 
@@ -576,7 +574,7 @@ fieldset {
         $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
         
         .form-entry__option.option--horizontal#{$mod} {
-            flex-direction: row;
+            display: flex;
             align-items: stretch;
 
             > div {
@@ -611,6 +609,7 @@ fieldset {
     align-items: baseline;
     padding-left: 1.25em;
     width: auto;
+    
     cursor: pointer;
 
     [dir="rtl"] & {

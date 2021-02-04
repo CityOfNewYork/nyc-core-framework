@@ -44,7 +44,7 @@
   },
   "main": "webpack.config.js",
   "browserslist": [
-    "last 1 version",
+    "last 2 versions",
     "IE 11"
   ]
 }
