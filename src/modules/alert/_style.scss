@@ -72,32 +72,19 @@ In this file:
 }
 
 .alert__title {
-    // display: flex;
-    // align-items: center;
-
     font-size: var(--alert-title-font-size);
     
     &:not(:last-child) {
         margin-bottom: 0.25em;
     }
-
-    button {
-        margin-left: auto;
-        font-size: var(--font-size-sm);
-    }
-
-    [dir="rtl"] & {
-        button {
-            margin-left: unset;
-            margin-right: auto;
-        }
-    }
+    
+    background-color: rgba(yellow, 0.5);
 }
 
 .alert__title__text {
+    font-weight: var(--body-font-weight-bold);
     margin-left: var(--spacer-1);
     margin-right: var(--spacer-1);
-    font-weight: var(--body-font-weight-bold);
 }
 
 .alert__description {
@@ -111,14 +98,13 @@ In this file:
 
     > [class*="__title"] {
         grid-area: title;
-        align-self: stretch;
         margin-top: auto;
         margin-bottom: auto;
     }
 
     > [class*="button"] {
         grid-area: close;
-        font-size: var(--font-size-md);
+        font-size: 80%;
     }
 
     > [class*="__description"] {
@@ -133,7 +119,7 @@ In this file:
 
 }
 
-.dismissed {
+.alert--dismissable {
   animation-duration: 0.5s;
   animation-name: fadeOut;
 }
