@@ -4,7 +4,7 @@
   "description": "NYC Core Framework",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "@babel/core": "^7.12.13",
     "@babel/plugin-transform-shorthand-properties": "^7.10.4",
     "@babel/preset-env": "^7.12.13",
-    "autoprefixer": "^10.1.0",
+    "autoprefixer": "^10.2.4",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "extract-loader": "^5.1.0",

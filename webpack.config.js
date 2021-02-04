@@ -10,7 +10,9 @@ module.exports = {
     },
     output: {
         filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        chunkLoading: false,
+        wasmLoading: false,
     },
     module: {
         rules: [
@@ -24,8 +26,22 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
                     "css-loader",
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        "autoprefixer"
+                                    ],
+                                ],
+                            },
+                        },
+                    },
                     "sass-loader",
                 ],
             },
@@ -37,7 +53,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
-        }),
+        }), 
         new OptimizeCssAssetsPlugin()
     ]
 }

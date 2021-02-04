@@ -94,7 +94,7 @@ export default class Document {
 
         });
 
-        const isIE11 = !!(navigator.userAgent.match(/Trident/) && !navigator.userAgent.match(/MSIE/));
+        const isIE11 = /Trident\/|MSIE/.test(window.navigator.userAgent);
 
         if (isIE11) {
             loadCustomPropertiesPolyfill();            
