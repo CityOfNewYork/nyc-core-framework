@@ -20,7 +20,22 @@ module.exports = {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            [
+                                "@babel/preset-env",
+                                {
+                                    "useBuiltIns": "usage",
+                                    "corejs": 3
+                                }
+                            ]
+                        ],
+                        plugins: [
+                            "@babel/plugin-transform-shorthand-properties",
+                            "@babel/plugin-proposal-object-rest-spread"
+                        ]
+                    }
                 }
             },
             {
@@ -47,13 +62,13 @@ module.exports = {
             },
         ],
     },
-    mode: 'production',
-    watch: false,
-    stats: { children: false },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
         }), 
         new OptimizeCssAssetsPlugin()
-    ]
+    ],
+    mode: 'production',
+    watch: false,
+    stats: { children: false }
 }

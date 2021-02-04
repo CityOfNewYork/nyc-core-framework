@@ -4,7 +4,7 @@
   "description": "NYC Core Framework",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -42,5 +42,9 @@
     "file-loader": "^6.2.0",
     "npm-install-missing": "^0.1.4"
   },
-  "main": "webpack.config.js"
+  "main": "webpack.config.js",
+  "browserslist": [
+    "last 1 version",
+    "IE 11"
+  ]
 }
