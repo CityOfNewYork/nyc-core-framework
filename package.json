@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "webpack serve --open",
     "watch": "webpack --watch",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",

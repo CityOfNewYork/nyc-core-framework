@@ -1,6 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+let mode = "development";
+let target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
+
+if(process.env.NODE_ENV === "production"){
+    mode = "production";
+}
 
 module.exports = {
     entry: {
@@ -66,13 +74,18 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
         }), 
-        new OptimizeCssAssetsPlugin()
+        new OptimizeCssAssetsPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'My App',
+            filename: './admin.html'
+        })
     ],
-    devtool: "source-map",
     devServer: {
-        contentBase: './'
+        // contentBase: '../../',
+        hot: true
     },
-    mode: 'production',
+    mode: mode,
+    target: target,
     watch: false,
     stats: { children: false }
 }
