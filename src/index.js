@@ -87,3 +87,5 @@ new Table();
 import "./modules/typography";
 
 import "./modules/z-index";
+
+console.log("Hello from Index");

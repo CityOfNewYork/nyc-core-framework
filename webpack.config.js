@@ -68,6 +68,10 @@ module.exports = {
         }), 
         new OptimizeCssAssetsPlugin()
     ],
+    devtool: "source-map",
+    devServer: {
+        contentBase: './'
+    },
     mode: 'production',
     watch: false,
     stats: { children: false }
