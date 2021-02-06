@@ -1,14 +1,14 @@
 const path = require('path');
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-let mode = "development";
-let target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
+const mode = process.env.NODE_ENV || "development";
 
-if(process.env.NODE_ENV === "production"){
-    mode = "production";
-}
+// Temporary workaround for 'browserslist' bug that is being patched in the near future
+const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
+
 
 module.exports = {
     entry: {
@@ -18,9 +18,7 @@ module.exports = {
     },
     output: {
         filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'dist'),
-        chunkLoading: false,
-        wasmLoading: false,
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
@@ -50,6 +48,12 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     {
+                        loader: 'style-loader',
+                        options: {
+                            injectType: 'singletonStyleTag'
+                        },
+                    },
+                    {
                         loader: MiniCssExtractPlugin.loader
                     },
                     "css-loader",
@@ -77,15 +81,18 @@ module.exports = {
         new OptimizeCssAssetsPlugin(),
         new HtmlWebpackPlugin({
             title: 'My App',
-            filename: './admin.html'
+            filename: './index.html'
         })
     ],
     devServer: {
-        // contentBase: '../../',
+        port: 8080,
+        contentBase: path.resolve(__dirname, "dist"),
         hot: true
     },
+    stats: {
+        children: false
+    },
+    devtool: "eval-cheap-source-map",
     mode: mode,
-    target: target,
-    watch: false,
-    stats: { children: false }
+    target: target
 }
