@@ -14,13 +14,20 @@ module.exports = merge(common, {
     },
     devServer: {
         port: 8080, 
-        contentBase: path.resolve(__dirname, 'dist'),
+        contentBase: path.resolve(__dirname),
 
         compress: true,
         hot: true
     },
     module: {
         rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                }
+            },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
@@ -38,8 +45,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Carl',
-            filename: './index.html'
-        })
+            template: "./index.html",
+    })
     ],
 });
