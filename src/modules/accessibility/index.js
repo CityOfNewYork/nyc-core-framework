@@ -9,9 +9,7 @@ export default class Accessibility {
     constructor() {
 
         window.addEventListener('DOMContentLoaded', () => {
-
-            console.log("nice");
-
+            
             const focusableElementList = document.querySelectorAll("[role='tab'], [data-toggle='accordion'], a[href], button:not([data-type='subtract']):not([data-type='add'])");
 
             focusableElementList.forEach((focusableElement) => {

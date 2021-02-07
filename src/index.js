@@ -88,4 +88,8 @@ import "./modules/typography";
 
 import "./modules/z-index";
 
-console.log("Hello from Index");
+if (process.env.NODE_ENV === 'development') {
+    console.log("Development Mode");
+} else if (process.env.NODE_ENV === 'production') {
+    console.log("Production Mode");
+}

@@ -4,13 +4,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const mode = process.env.NODE_ENV || "development";
+let mode = process.env.NODE_ENV || "development";
 
 // Temporary workaround for 'browserslist' bug
 const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 module.exports = {
     mode: mode,
+
     entry: {
         nyc_core: [
             './src/index.js'
@@ -57,18 +58,18 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader
                     },
                     "css-loader",
-                    // {
-                    //     loader: "postcss-loader",
-                    //     options: {
-                    //         postcssOptions: {
-                    //             plugins: [
-                    //                 [
-                    //                     "autoprefixer"
-                    //                 ],
-                    //             ],
-                    //         },
-                    //     },
-                    // },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        "autoprefixer"
+                                    ],
+                                ],
+                            },
+                        },
+                    },
                     "sass-loader",
                 ],
             },
@@ -84,14 +85,15 @@ module.exports = {
             filename: './index.html'
         })
     ],
-    devServer: {
-        port: 8080,
-        // contentBase: path.resolve(__dirname, "dist"),
-        hot: true
-    },
+    // devServer: {
+    //     port: 8080,
+    //     contentBase: path.resolve(__dirname, "dist"),
+    //     hot: true
+    // },
     stats: {
         children: false
     },
     target: target,
-    devtool: "eval-cheap-source-map"
+    devtool: "eval-cheap-source-map"   
+
 }
