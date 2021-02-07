@@ -5,7 +5,7 @@
 import "element-closest-polyfill";
 
 //////////////////////////////////////////////
-// Required Modules
+// Modules
 //////////////////////////////////////////////
 
 import Accessibility from "./modules/accessibility/";
@@ -87,6 +87,10 @@ new Table();
 import "./modules/typography";
 
 import "./modules/z-index";
+
+//////////////////////////////////////////////
+// Environments
+//////////////////////////////////////////////
 
 if (process.env.NODE_ENV === 'development') {
     console.log("Development Mode");

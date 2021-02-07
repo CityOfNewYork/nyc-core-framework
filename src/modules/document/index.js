@@ -15,7 +15,7 @@ export default class Document {
         const copyrightYear = document.querySelector(".copyright-year");
 
         if (copyrightYear) {
-            let currentYear = new Date().getFullYear();
+            const currentYear = new Date().getFullYear();
             copyrightYear.innerHTML = currentYear;
         }
 
@@ -108,10 +108,6 @@ export default class Document {
             cpIEPolyfill.src = 'https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.1.0/ie11CustomProperties.min.js';
 
             targetNode.parentNode.insertBefore(cpIEPolyfill, targetNode.nextSibling);
-
-            // cpIEPolyfill.onload = () => {
-            //     alert("IE Loaded")
-            // }
 
         }
 
