@@ -236,7 +236,8 @@ button {
     margin-left: calc(var(--gap-size) * -0.5);
     margin-right: calc(var(--gap-size) * -0.5);
 
-    > [class*="button"]{
+    > [class*="button"], 
+    button {
         margin-left: calc(var(--gap-size) * 0.5);
         margin-right: calc(var(--gap-size) * 0.5);
     }
