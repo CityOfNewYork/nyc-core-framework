@@ -7,13 +7,6 @@
     <!-- I.E. Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- I.E. Custom Properties Polyfill -->
-    <script>
-        window.MSInputMethodContext && document.documentMode && document.write(
-            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
-        );
-    </script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -23,13 +16,14 @@
     <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
 
     <!-- NYC Core Stylesheet -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css">
     
 </head>
 
 <body>
 
-   <header class="theme-white box-shadow-1 z-index-900" id="global-header">
+   <header class="box-shadow-1 z-index-900" id="global-header">
 
        <!-- For keyboard users -->
        <a class="focusable-only" href="#skip-header-target">Skip Header</a>
@@ -91,26 +85,35 @@
 
            </div>
 
-           <div class="primary-nav__buttons">
+           <div class="primary-nav__actions">
 
-               <button class="button button--icon-only menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu">
-                   <span class="nyc_icon_menu" aria-hidden="true"></span>
-               </button>
-               <button class="button button--icon-only" title="Language" data-modal-open="global-language">
-                   <span class="nyc_icon_language" aria-hidden="true"></span>
-               </button>
-               <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
-                   <span class="nyc_icon_search" aria-hidden="true"></span>
-               </button>
+                <button
+                    class="button button--icon-only mobile-menu-toggle"
+                    aria-label="Main Menu"
+                    data-toggle="collapse"
+                    data-target="#primary-menu-below">
+                    <span class="nyc_icon_menu" aria-hidden="true"></span>
+                </button>
+                
+                <div class="button-group">
 
-           </div>
+                    <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                        <span class="nyc_icon_language"></span>
+                    </button>
+                    <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
+                        <span class="nyc_icon_search"></span>
+                    </button>
 
-           <nav class="primary-nav__menu" id="primary-menu" aria-label="Primary">
+                </div>
+            
+            </div>
+
+           <nav class="primary-nav__menu" id="primary-menu-below" aria-label="Primary">
 
                <ul>
                    <li>
-                       <a href="#1" data-toggle="dropdown">Dropdown</a>
-                       <ul class="box-shadow-1--lg">
+                       <button data-toggle="dropdown">Dropdown</button>
+                       <ul class="nav__dropdown box-shadow-1--lg">
                            <li>
                                <a href="#1">Link</a>
                            </li>
@@ -153,23 +156,21 @@
 
                 <div class="container narrow medium--md margin-y-3">
 
-                    <h1 class="banner-headline text-align-center text-shadow--md margin-bottom-3 text-shadow">
+                    <h1 class="banner-headline text-align-center text-shadow--md margin-bottom-4 text-shadow">
                         Lorem ipsum dolor sit amet consectetur
                     </h1>
 
                     <div class="narrow">
 
-                        <div class="grid grid--gap-2 grid--cells-6--sm">
+                        <div class="grid grid--gap-3 grid--cells-6--md">
 
                             <div class="grid__cell">
-                                <a class="button theme-white display-block theme-white box-shadow--2" href="#1">Primary Action</a>
+                                <a class="button theme-white width-100" href="#1">Primary Action</a>
                             </div>
-                            <!-- .grid__cell -->
 
                             <div class="grid__cell">
-                                <a class="button button--outline display-block" href="#1">Secondary Action</a>
+                                <a class="button button--outline width-100" href="#1">Secondary Action</a>
                             </div>
-                            <!-- .grid__cell -->
 
                         </div>
                         <!-- .grid -->
@@ -183,7 +184,7 @@
 
         </section>
 
-        <section class="container medium margin-y-4">
+        <section class="container medium margin-y-5">
 
             <div class="grid grid--gap-2 grid--cells-6--md">
 
@@ -236,15 +237,15 @@
 
         </section>
 
-        <section class="theme-light padding-y-4">
+        <section class="padding-y-5 theme-light">
 
-            <div class="container narrow medium--lg margin-bottom-3">
-                <div class="grid grid--cells-fit--md justify-content-between align-items-center">
+            <div class="container narrow medium--lg margin-bottom-4">
+                <div class="grid grid--gap-3 grid--cells-fit--md justify-content-between align-items-center">
                     <div class="grid__cell">
                         <h2>Programs and Initiatives</h2>
                     </div>
                     <div class="grid__cell">
-                       <a class="button button--outline rounded-pill font-size-sm margin-y-1" href="#1">See All</a>
+                       <a class="button button--outline margin-y-1 font-size-sm" href="#1">See All</a>
                     </div>
                 </div>
             </div>
@@ -252,7 +253,7 @@
             
             <div class="container narrow medium--lg">
 
-                <div class="grid grid--gap-2 grid--cells-6--md grid--cells-4--lg">
+                <div class="grid grid--gap-3 grid--cells-6--md grid--cells-4--lg">
 
                     <div class="grid__cell">
 
@@ -428,19 +429,19 @@
 
                 <div class="grid grid--gap-2 grid--cells-4--lg">
                     <div class="grid__cell">
-                        <a class="button button--outline button--has-icon display-block" href="#1">
+                        <a class="button button--outline button--has-icon width-100" href="#1">
                             <span class="nyc_icon_mobile" aria-hidden="true"></span>
                             <span class="button__text">Mobile Apps</span>
                         </a>
                     </div>
                     <div class="grid__cell">
-                        <a class="button button--outline button--has-icon display-block" href="#1">
+                        <a class="button button--outline button--has-icon width-100" href="#1">
                             <span class="nyc_icon_hashtag" aria-hidden="true"></span>
                             <span class="button__text">Social Media</span>
                         </a>
                     </div>
                     <div class="grid__cell">
-                        <a class="button button--outline button--has-icon display-block" href="#1">
+                        <a class="button button--outline button--has-icon width-100" href="#1">
                             <span class="nyc_icon_mail" aria-hidden="true"></span>
                             <span class="button__text">Contact City Hall</span>
                         </a>
