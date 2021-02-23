@@ -63,12 +63,12 @@ In this file:
         width: 100%;
         text-align: center;
     
-        &::after {
+        &::before {
             content: "";
             position: absolute;
             top: 0;
             right: 0;
-            bottom: 0;
+            height: var(--tab-accent-bar-size);
             left: 0;
             background-color: currentColor;
             opacity: 0.0625;
@@ -79,9 +79,8 @@ In this file:
     [aria-selected="true"] {
         font-weight: var(--body-font-weight-bold);
 
-        &::after {
+        &::before {
             height: var(--tab-accent-bar-size);
-            display: block;
             opacity: 1;
         }
     }
@@ -126,6 +125,7 @@ In this file:
 
         [aria-current="page"],
         [aria-selected="true"] {
+
             &::after {
                 margin: 2px;
             }
