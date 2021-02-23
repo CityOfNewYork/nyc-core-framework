@@ -8,16 +8,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'eval-cheap-source-map',
-    target: "web",
+    target: 'web',
     stats: {
         children: false
     },
     devServer: {
         port: 8080, 
-        contentBase: path.resolve(__dirname),
-
-        compress: true,
-        hot: true
+        contentBase: path.resolve(__dirname)
     },
     module: {
         rules: [
@@ -45,7 +42,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html",
-    })
-    ],
+            template: './index.html',
+        })
+    ]
 });
