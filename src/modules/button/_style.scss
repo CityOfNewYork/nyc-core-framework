@@ -158,6 +158,7 @@ button {
     height: var(--button--icon-only-size);
 
     [class*="_icon"] {
+        --icon-size: 1.25em;
         display: flex;
     }
 }

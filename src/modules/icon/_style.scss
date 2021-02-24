@@ -16,7 +16,7 @@ In this file:
 // Scoped to Block
 
 %custom-properties {
-    --icon-size: 1.25em;
+    --icon-size: 1em;
 }
 
 //////////////////////////////////////////////
@@ -29,15 +29,15 @@ In this file:
   
   font-size: var(--icon-size) !important;
   font-size: inherit;
-  line-height: inherit;
 
-  vertical-align: text-top;
+  vertical-align: middle;
   
   position: relative;
   pointer-events: none;
 
   &:not([class*="_subway-"]) {
     display: inline-block;
+    line-height: inherit;
   }
 
   &[class*="-left"], 
