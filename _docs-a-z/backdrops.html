@@ -5,35 +5,33 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <p>
-        Backdrops are useful for placing a translucent image behind custom content. Backdrops offer two fundamentally
-        distinct variations: an <strong>image size proportional</strong> backdrop that scales and stacks responsively, and a
-        <strong>fixed-height</strong> backdrop that, when needed, adjusts to the height of its inner content.
+        Backdrops are useful for placing a translucent image behind custom content. Backdrops offer two distinct
+        variations. <strong>Image proportional</strong> backdrops scale and stack responsively. <strong>Fixed-height</strong> backdrops remain at a fixed height across breakpoints. When needed, they adjust to the height of their inner content.
     </p>
 </div>
 <!-- .container -->
 
 {% capture as_body %}
 <p>
-    Backdrops replace CSS background images with inline HTML images so screen readers can read the
-    image\'s <em>alt</em> text.
+    Backdrops remove the need for CSS background images. Feature images exist within the HTML, so screen readers can read the text of the image's <em>alt</em> attribute.
 </p>
 <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
 {% endcapture %}
 
 {% include accessibility-spotlight.html content=as_body %}
 
-<hr class="section-start" id="imageSizeProportional">
+<hr class="section-start" id="imageProportional">
 
 <div class="container narrow margin-y-4">
-    <h2>Image Size Proportional</h2>
+    <h2>Image Proportional</h2>
     <p>
-        The <em>backdrop</em> component is made up of a parent <code>.backdrop</code> selector, and two required child
-        selectors: <code>.backdrop__image</code> contains the feature image, while <code>.backdrop__cover</code>
-        positions contextual content over the image on the <em>z</em> axiz.
+        The <em>backdrop</em> component requires a parent <code>.backdrop</code> selector, and two child selectors. The <code>.backdrop__image</code> child selector contains the feature image. Its sibling, the <code>.backdrop__cover</code> selector, contains the contextual content for the backdrop.
     </p>
     <p>
-        The <code>img</code> tag within <code>.backdrop__image</code> sets the size (proportional width and height) of
-        our backdrop. The following is a simple example of an image size proportional backdrop:
+        Within image proportional backdrops, the <code>.backdrop__cover</code> selector is absolutely positioned over  <code>.backdrop__image</code>.
+    </p>
+    <p>
+        Locate the <code>img</code> tag within <code>.backdrop__image</code> selector (Figure 1). The size of this image sets the proportional width and height of the backdrop. The following is a simple example of an image size proportional backdrop:
     </p>
 </div>
 <!-- .container -->
@@ -112,6 +110,9 @@ title: "Backdrops"
             &lt;!-- .backdrop --&gt;
         </code>
     </pre>
+    <figcaption>
+        Figure 1
+    </figcaption>
 
 </figure>
 <!-- .container -->
