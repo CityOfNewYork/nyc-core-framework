@@ -1,11 +1,9 @@
----
-layout: documentation
-title: "Backdrops"
----
+
 
 <div class="container narrow margin-y-4">
     <p>
-        Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variations: <a href="#1">Image proportional</a> and <a href="">fixed height</a>.
+        Backdrops are useful for placing a translucent image behind custom content. Backdrops offer two distinct
+        variations. <strong>Image proportional</strong> backdrops scale and stack responsively. <strong>Fixed-height</strong> backdrops remain at a fixed height across breakpoints. When needed, they adjust to the height of their inner content.
     </p>
 </div>
 <!-- .container -->
@@ -14,9 +12,7 @@ title: "Backdrops"
 <p>
     Backdrops remove the need for CSS background images. Feature images exist within the HTML, so screen readers can read the text of the image's <em>alt</em> attribute.
 </p>
-<p>
-    Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.
-</p>
+<p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
 {% endcapture %}
 
 {% include accessibility-spotlight.html content=as_body %}
@@ -26,14 +22,20 @@ title: "Backdrops"
 <div class="container narrow margin-y-4">
     <h2>Image Proportional</h2>
     <p>
-        Image proportional backdrops scale and stack responsively. Below is an example of a basic image proportional backdrop.
+        The <em>backdrop</em> component requires a parent <code>.backdrop</code> selector, and two child selectors. The <code>.backdrop__image</code> child selector contains the feature image. Its sibling, the <code>.backdrop__cover</code> selector, contains the contextual content for the backdrop.
+    </p>
+    <p>
+        Within image proportional backdrops, the <code>.backdrop__cover</code> selector is absolutely positioned over  <code>.backdrop__image</code>.
+    </p>
+    <p>
+        Locate the <code>img</code> tag within <code>.backdrop__image</code> selector (Figure 1). The size of this image sets the proportional width and height of the backdrop. The following is a simple example of an image size proportional backdrop:
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
 
-    <div class="backdrop theme-dark" {{ site.style_default_theme_colors }}>
+    <div class="backdrop theme-dark rounded" {{ site.style_default_theme_colors }}>
 
         <div class="backdrop__credit">
             <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
@@ -63,22 +65,25 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <p>
-        The size of this backdrop (proportional width and height) is determined by the size of its feature image.
-    </p>
-    <p>
-        The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color. The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied backdrop's feature image, allows the background
+        The transparent color effect of the backdrop is acheived with the use of additional utility classes. Our <a
+            href="#1">theme color utilities</a> provide the background and text color, while the <a href="#1">opacity
+            utility class</a> (e.g. <code>.opacity-30</code>) applied backdrop's feature image, allows the background
         color to show through.
     </p>
     <p>
-        Review the markup for the above example shown in Figure 1:
+        Here is the code used to create the example above:
     </p>
 </div>
 
 <figure class="container medium margin-y-4">
 
-    <pre data-line="1,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,20,21,22">
+    <pre data-line="1,3,4,5,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22">
         <code class="language-html">
-            &lt;div class="backdrop theme-dark"&gt;
+            &lt;div class="backdrop theme-dark rounded"&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
 
                 &lt;div class="backdrop__image"&gt;
                     &lt;img class="opacity-30" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
@@ -96,12 +101,10 @@ title: "Backdrops"
                     &lt;/div&gt;
 
                 &lt;/div&gt;
-
-                &lt;div class="backdrop__credit"&gt;
-                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
-                &lt;/div&gt;
+                &lt;!-- .backdrop__cover --&gt;
                 
             &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
         </code>
     </pre>
     <figcaption>
@@ -128,10 +131,9 @@ title: "Backdrops"
                 <td>1</td>
                 <td>
                     <p>
-                        The parent <code>.backdrop</code> selector is required.
-                    </p>
-                    <p>
-                        The <code>.theme-dark</code> utility class is optional. It provides the background and text color. If not present, these colors are inherited from the backdrop's parent.
+                        The <code>.backdrop</code> block-level selector is required. The
+                        <code>.theme-dark</code> utility class sets the background and text color. The <code>.rounded</code>
+                        utility class creates the <a href="#1">rounded corner </a> effect.
                     </p>
                 </td>
             </tr>
@@ -140,25 +142,27 @@ title: "Backdrops"
                 <td>3-5</td>
                 <td>
                     <p>
-                        The <code>.backdrop__image</code> selector is required. It contains the feature image.
+                        The <code>.backdrop__credit</code> selector is optional, and should be the first child of the
+                        backdrop. It is where you can add a credit for the image.
                     </p>
                 </td>
             </tr>
 
             <tr>
-                <td>7-18</td>
+                <td>7-9</td>
                 <td>
                     <p>
-                        The <code>.backdrop__cover</code> selector is required. It holds the backdrop's contextual content. 
+                        The <code>.backdrop__image</code> selector is required, and contains the primary image of the backdrop. The
+                        <code>.opacity-40</code> utility class sets a 40% opacity to the image.
                     </p>
                 </td>
             </tr>
 
             <tr>
-                <td>20-22</td>
+                <td>5-14</td>
                 <td>
                     <p>
-                        The <code>.backdrop__credit</code> selector is optional. It is where you provide a credit for the image.
+                        The <code>.backdrop__cover</code> selector holds the backdrop's contextual content.
                     </p>
                 </td>
             </tr>
@@ -166,6 +170,125 @@ title: "Backdrops"
         </tbody>
 
     </table>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        The following example shows backdrops nested within two columns using the <a href="#1">grid component</a>, with
+        the <code>.theme-primary</code> utility class applied to the the left, and <code>.theme-secondary</code> applied
+        to the right. The <code>&lt;a&gt;</code> tag within <code>backdrop__cover</code> includes a
+        <code>.expanded-link</code> class, making each entire backdrop clickable.
+    </p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <div class="grid grid--gap-2 grid--cells-fill--md text-align-center" {{ site.style_default_theme_colors }}>
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-primary rounded">
+
+                <div class="backdrop__image">
+                    <img class="opacity-50" src="{{ site.baseurl }}/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+                </div>
+                
+                <div class="backdrop__cover">
+                    <div class="container">
+                        <a href="#1" class="h3 expanded-link">Title Link</a>
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop -->
+
+        </div>
+        <!-- col -->
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-secondary rounded">
+
+                <div class="backdrop__image">
+                    <img class="opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+                </div>
+
+                <div class="backdrop__cover">
+                    <div class="container margin-y-4">
+                        <a href="#1" class="h3 expanded-link">Title Link</a>
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop -->
+
+        </div>
+        <!-- grid__cell -->
+
+    </div>
+    <!-- grid -->
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>Here is the code used to create the example above:</p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <pre>
+        <code class="language-html">
+            &lt;div class="grid grid--gap-2 grid--cells-fill--md text-align-center"&gt;
+
+                &lt;div class="grid__cell"&gt;
+
+                    &lt;div class="backdrop theme-primary rounded"&gt;
+
+                        &lt;div class="backdrop__image"&gt;
+                            &lt;img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class="backdrop__cover"&gt;
+                            &lt;div class="container"&gt;
+                                &lt;a href="#1" class="h3 expanded-link"&gt;Title Link&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- cover --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .backdrop --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- col --&gt;
+
+                &lt;div class="grid__cell"&gt;
+
+                    &lt;div class="backdrop theme-secondary rounded"&gt;
+
+                        &lt;div class="backdrop__image"&gt;
+                            &lt;img class="opacity-40" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="backdrop__cover"&gt;
+                            &lt;div class="container margin-y-4"&gt;
+                                &lt;a href="#1" class="h3 expanded-link"&gt;Title Link&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- cover --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .backdrop --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- grid__cell --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .grid --&gt;
+        </code>
+    </pre>
+
 </figure>
 
 <div class="container narrow margin-y-4">
@@ -316,9 +439,6 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <h2>Fixed Height Backdrops</h2>
-    <p>
-When needed, they adjust to the height of their inner content.</p>
-
     <p>
         For a fixed height backdrop, append the <code>backdrop--fixed</code> modifier to the <code>.backdrop</code>
         selector. The height value is set in <em>section B</em>. of the <a href="#1">/scss/base/_backdrops.scss</a> partial.
