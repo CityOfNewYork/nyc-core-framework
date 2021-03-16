@@ -5,7 +5,7 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <p>
-        Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variations: <a href="#1">Image proportional</a> and <a href="">fixed height</a>.
+        Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variations: <a href="#imageProportional">Image proportional</a> and <a href="#fixedHeight">fixed height</a>.
     </p>
 </div>
 <!-- .container -->
@@ -224,7 +224,6 @@ title: "Backdrops"
         <!-- .backdrop__cover -->
 
     </div>
-    <!-- .backdrop -->
 
 </figure>
 
@@ -242,15 +241,13 @@ title: "Backdrops"
     <p>
         The above example shows how the same full-with backdrop appears on a smaller (mobile) viewport.
     </p>
-    <p class="display-none">
-        The first is an optional
-        <code>.backdrop__credit</code> selector (for the image credit) which appears in the upper right-hand corner of the backdrop.
-    </p>
     <p>
         Notice the image is at full opacity. That's because our <a href="#1">opacity classes</a> have their own a breakpoint modifiers. Adding <code>.opacity-40--md</code> to the <code>.backdrop__image</code> selector gives that image
         a specified opacity (40%) at the medium (md) breakpoint.
     </p>
-    <p>Examine the code used to create the backdrops above:</p>
+    <p>
+        Figure 2 (below) shows the code used to create the backdrops above. Notice the <code>.backdrop--stack--md</code> breakpoint modifier present on line 1.
+    </p>
 </div>
 
 <figure class="container medium margin-y-4">
@@ -259,49 +256,57 @@ title: "Backdrops"
         <code class="language-html">
             &lt;div class="backdrop backdrop--stack--md theme-dark"&gt;
 
-                &lt;img class="backdrop__image opacity-40--md" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;
+                        Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="backdrop__image"&gt;
+                    &lt;img class="opacity-30" src="https://via.placeholder.com/1500x750" loading="lazy" alt="Placeholder"&gt;
+                &lt;/div&gt;
 
                 &lt;div class="backdrop__cover"&gt;
 
-                    &lt;div class="container medium margin-y-4"&gt;
+                    &lt;div class="container text-align-center"&gt;
+                        &lt;div class="container medium margin-y-4"&gt;
 
-                        &lt;h1 class="banner-headline text-align-center text-shadow margin-bottom-4"&gt;
-                            Lorem ipsum dolor sit amet consectetur
-                        &lt;/h1&gt;
+                            &lt;h1 class="banner-headline text-align-center text-shadow margin-bottom-4"&gt;
+                                Lorem ipsum dolor sit amet consectetur
+                            &lt;/h1&gt;
 
-                        &lt;div class="narrow"&gt;
+                            &lt;div class="narrow"&gt;
 
-                            &lt;div class="grid grid--gap-2 grid--cells-fill--sm justify-center"&gt;
+                                &lt;div class="grid grid--gap-2 grid--cells-fill--sm justify-center"&gt;
 
-                                &lt;div class="grid__cell"&gt;
-                                    &lt;a class="button theme-primary display-block theme-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                    &lt;div class="grid__cell"&gt;
+                                        &lt;a class="button theme-primary display-block theme-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- .grid__cell --&gt;
+
+                                    &lt;div class="grid__cell"&gt;
+                                        &lt;a class="button theme-secondary display-block theme-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- .grid__cell --&gt;
+
                                 &lt;/div&gt;
-                                &lt;!-- .grid__cell --&gt;
-
-                                &lt;div class="grid__cell"&gt;
-                                    &lt;a class="button theme-secondary display-block theme-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
-                                &lt;/div&gt;
-                                &lt;!-- .grid__cell --&gt;
+                                &lt;!-- .grid --&gt;
 
                             &lt;/div&gt;
-                            &lt;!-- .grid --&gt;
 
                         &lt;/div&gt;
-
+                        &lt;!-- .container --&gt;
                     &lt;/div&gt;
-                    &lt;!-- .container --&gt;
 
                 &lt;/div&gt;
                 &lt;!-- .backdrop__cover --&gt;
 
-                &lt;div class="backdrop__credit"&gt;
-                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
-                &lt;/div&gt;
-                
             &lt;/div&gt;
-            &lt;!-- .backdrop --&gt;
         </code>
     </pre>
+    <figcaption>
+        Figure 2
+    </figcaption>
 
 </figure>
 
@@ -312,16 +317,17 @@ title: "Backdrops"
 </div>
 <!-- .container -->
 
-<hr class="section-start" id="fixedHeightBackdrops">
+<hr class="section-start" id="fixedHeight">
 
 <div class="container narrow margin-y-4">
-    <h2>Fixed Height Backdrops</h2>
+    <h2>Fixed Height</h2>
     <p>
-When needed, they adjust to the height of their inner content.</p>
+        Fixed height backdrops retain their height across viewport sizes. When needed, they adjust to the height of their inner content.
+    </p>
 
     <p>
         For a fixed height backdrop, append the <code>backdrop--fixed</code> modifier to the <code>.backdrop</code>
-        selector. The height value is set in <em>section B</em>. of the <a href="#1">/scss/base/_backdrops.scss</a> partial.
+        selector.
     </p>
 </div>
 
