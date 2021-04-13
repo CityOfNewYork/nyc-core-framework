@@ -17,12 +17,7 @@ export default class Tearsheet {
 
             tsToggleButton.addEventListener("click", (event) => {
 
-                const collapseTargetID = event.target.getAttribute("data-target").replace(/#/, "");
-
-                const collapseTarget = document.getElementById(collapseTargetID);
-
-
-                // collapseTarget.classList.toggle("shown");
+                event.preventDefault();
                 tsContainer.classList.toggle("menu-shown");
                 
             });
