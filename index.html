@@ -10,674 +10,3384 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Landing Page • NYC Core Framework</title>
+    <title>Tearsheet • NYC Core Framework</title>
 
     <!-- NYC Core Icons -->
     <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css">
 
-    <!-- NYC Core Stylesheet -->
-
 </head>
 
-<body>
+<body class="tearsheet">
 
-   <header class="box-shadow-1 z-index-900" id="global-header">
+    <div class="tearsheet__toggle">
+        <button class="button button--icon-only mobile-menu-toggle box-shadow-1" data-toggle="ts-menu" data-target="#tearsheet-nav">
+            <span class="nyc_icon_menu" aria-hidden="true"></span>
+        </button>
+    </div>
+    
+    <div class="tearsheet__menu theme-white box-shadow-1" id="tearsheet-nav">
+        <div class="logo padding-2">
+            <a href="#brand" data-logo="brand">
+                <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+                    <g>
+                        <polygon points="87.5 0 80 7.5 80 2.5 77.5 0 67.5 0 65 2.5 65 7.5 60 12.5 55 7.5 55 2.5 52.5 0 42.5 0 40 2.5 37.5 0 27.5 0 25 2.5 25 12.5 12.501 0 2.501 0 0 2.5 0 37.5 2.501 40 12.501 40 15 37.5 15 27.5 27.5 40 37.5 40 40 37.5 40 17.5 52.5 30 52.5 37.5 55 40 65 40 67.5 37.5 67.5 30 80 17.5 80 32.5 87.5 40 112.5 40 120 32.5 120 25 117.5 22 105 22 105 25 95 25 95 15 105 15 105 18 117.5 18 120 15 120 7.5 112.5 0 87.5 0" />
+                        <path d="M117.9877,1.8787h.293l.4888.8088h.3522l-.53-.831a.4834.4834,0,0,0,.4927-.517c0-.3837-.2322-.5435-.6895-.5435h-.718V2.6875h.3105Zm0-.8182h.3758c.1867,0,.411.0278.411.2568,0,.2742-.2055.2962-.4385.2962h-.3483Z" />
+                        <path d="M118.3265,3.42A1.6573,1.6573,0,0,0,120,1.71a1.6784,1.6784,0,1,0-3.3563,0A1.6456,1.6456,0,0,0,118.3265,3.42Zm0-3.1218A1.3255,1.3255,0,0,1,119.6342,1.71a1.3157,1.3157,0,1,1-2.6242,0A1.3271,1.3271,0,0,1,118.3265.2977Z" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <ul class="nav nav--divider font-size-md" id="section-nav" role="menu">
+            <li>
+                <a href="#example-accordion">Accordion</a>
+            </li>
+            <li>
+                <a href="#example-alert">Alert</a>
+            </li>
+            <li>
+                <a href="#example-aspect-ratio">Aspect Ratio</a>
+            </li>
+            <li>
+                <a href="#example-backdrops">Backdrops</a>
+            </li>
+            <li>
+                <a href="#example-borders">Borders</a>
+            </li>
+            <li>
+                <a href="#example-buttons">Buttons</a>
+            </li>
+            <li>
+                <a href="#example-cards">Cards</a>
+            </li>
+            <li>
+                <a href="#example-color">Color</a>
+            </li>
+            <li>
+                <a href="#example-containers">Containers</a>
+            </li>
+            <li>
+                <a href="#example-forms">Forms</a>
+            </li>
+            <li>
+                <a href="#example-grid">Grid</a>
+            </li>
+            <li>
+                <a href="#example-modal">Modal</a>
+            </li>
+            <li>
+                <a href="#example-navigation">Navigation</a>
+            </li>
+            <li>
+                <a href="#example-opacities">Opacities</a>
+            </li>
+            <li>
+                <a href="#example-shadows">Shadows</a>
+            </li>
+            <li>
+                <a href="#example-spacers">Spacers</a>
+            </li>
+            <li>
+                <a href="#example-tab">Tab</a>
+            </li>
+            <li>
+                <a href="#example-table">Table</a>
+            </li>
+            <li>
+                <a href="#example-typography">Typography</a>
+            </li>
+        </ul>
+    </div>
 
-       <!-- For keyboard users -->
-       <a class="focusable-only" href="#skip-header-target">Skip Header</a>
+    <main class="tearsheet__main">
 
-       <div class="theme-dark font-size-md">
+        <div class="overflow-hidden">
 
-           <div class="grid grid--cells-fit justify-content-between align-items-center">
+            <section id="brand">
 
-               <div class="grid__cell container">
-                   <p class="truncate display-none display-block--md">Name of Office</p>
-               </div>
-
-               <nav class="grid__cell" aria-label="N Y C Resources">
-                   <ul class="nav nav--divider nav--horizontal">
-                       <li>
-                           <a href="#1">
-                               <span class="screen-reader-only">Search all n y c.gov</span>
-                               <strong aria-hidden="true">Search all NYC.gov</strong>
-                           </a>
-                       </li>
-                       <li>
-                           <a href="#1">
-                               <strong>
-                                   <span class="screen-reader-only">Visit NYC 3 1 1</span>
-                                   <span class="nyc_icon_311"></span>
-                               </strong>
-                           </a>
-                       </li>
-                       <li>
-                           <a href="#1" data-logo="brand">
-                               <span class="screen-reader-only">Go to n y c.gov</span>
-                               <span class="nyc_icon_bubble-logo"></span>
-                           </a>
-                       </li>
-                   </ul>
-               </nav>
-
-           </div>
-           <!-- .grid -->
-
-       </div>
-
-       <div class="primary-nav--below--lg">
-
-           <div class="primary-nav__logo">
-
-               <a href="#1" title="Website Home" data-logo="brand">
-
-                   <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
-                   <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" style="display: block;">
-                       <g>
-                           <polygon points="87.5 0 80 7.5 80 2.5 77.5 0 67.5 0 65 2.5 65 7.5 60 12.5 55 7.5 55 2.5 52.5 0 42.5 0 40 2.5 37.5 0 27.5 0 25 2.5 25 12.5 12.501 0 2.501 0 0 2.5 0 37.5 2.501 40 12.501 40 15 37.5 15 27.5 27.5 40 37.5 40 40 37.5 40 17.5 52.5 30 52.5 37.5 55 40 65 40 67.5 37.5 67.5 30 80 17.5 80 32.5 87.5 40 112.5 40 120 32.5 120 25 117.5 22 105 22 105 25 95 25 95 15 105 15 105 18 117.5 18 120 15 120 7.5 112.5 0 87.5 0" />
-                           <path d="M117.9877,1.8787h.293l.4888.8088h.3522l-.53-.831a.4834.4834,0,0,0,.4927-.517c0-.3837-.2322-.5435-.6895-.5435h-.718V2.6875h.3105Zm0-.8182h.3758c.1867,0,.411.0278.411.2568,0,.2742-.2055.2962-.4385.2962h-.3483Z" />
-                           <path d="M118.3265,3.42A1.6573,1.6573,0,0,0,120,1.71a1.6784,1.6784,0,1,0-3.3563,0A1.6456,1.6456,0,0,0,118.3265,3.42Zm0-3.1218A1.3255,1.3255,0,0,1,119.6342,1.71a1.3157,1.3157,0,1,1-2.6242,0A1.3271,1.3271,0,0,1,118.3265.2977Z" />
-                       </g>
-                   </svg>
-
-               </a>
-
-           </div>
-
-           <div class="primary-nav__actions">
-
-                <button
-                    class="button button--icon-only mobile-menu-toggle"
-                    aria-label="Main Menu"
-                    data-toggle="collapse"
-                    data-target="#primary-menu-below">
-                    <span class="nyc_icon_menu" aria-hidden="true"></span>
-                </button>
-                
-                <div class="button-group">
-
-                    <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
-                        <span class="nyc_icon_language"></span>
-                    </button>
-                    <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
-                        <span class="nyc_icon_search"></span>
-                    </button>
-
-                </div>
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Brand
+                    </h2>
+                </header>
             
-            </div>
+            </section>
 
-           <nav class="primary-nav__menu" id="primary-menu-below" aria-label="Primary">
+            <hr>
+            
+            <section id="example-accordion">
 
-               <ul>
-                   <li>
-                       <button data-toggle="dropdown">Dropdown</button>
-                       <ul class="nav__dropdown box-shadow-1--lg">
-                           <li>
-                               <a href="#1">Link</a>
-                           </li>
-                           <li>
-                               <a href="#1">Link</a>
-                           </li>
-                           <li>
-                               <a href="#1">Link</a>
-                           </li>
-                       </ul>
-                   </li>
-                   <li>
-                       <a href="#1">Link</a>
-                   </li>
-                   <li>
-                       <a href="#1">Link</a>
-                   </li>
-                   <li>
-                       <a href="#1">Link</a>
-                   </li>
-               </ul>
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Accordion
+                    </h2>
+                </header>
 
-           </nav>
+                <figure class="container narrow">
 
-       </div>
-       <!-- .primary-nav -->
+                    <div class="accordion">
 
-   </header>
-   <!-- #global-header -->
+                        <button class="accordion__button h5" id="acc-button-boroughs-manhattan" data-toggle="accordion" aria-controls="acc-panel-boroughs-manhattan" aria-expanded="false">
+                            Manhattan
+                        </button>
 
-    <main id="skip-header-target">
-
-        <section class="backdrop backdrop--stack--md theme-dark">
-
-            <div class="backdrop__image gradient-veneer-bottom">
-                <img class="opacity-50" src="./images/backdrop-example-01.jpg" alt="View of the Manhattan Bridge from Brooklyn">
-            </div>
-
-            <div class="backdrop__cover">
-
-                <div class="container narrow medium--md margin-y-3">
-
-                    <h1 class="banner-headline text-align-center text-shadow--md margin-bottom-4 text-shadow">
-                        Lorem ipsum dolor sit amet consectetur
-                    </h1>
-
-                    <div class="narrow">
-
-                        <div class="grid grid--gap-3 grid--cells-6--md">
-
-                            <div class="grid__cell">
-                                <a class="button theme-white width-100" href="#1">Primary Action</a>
+                        <div class="accordion__panel" id="acc-panel-boroughs-manhattan" data-accordion="panel" aria-labelledby="acc-button-boroughs-manhattan" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is
+                                    <a href="#1">Manhattan</a>, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
+                                </p>
                             </div>
-
-                            <div class="grid__cell">
-                                <a class="button button--outline width-100" href="#1">Secondary Action</a>
-                            </div>
-
                         </div>
-                        <!-- .grid -->
 
-                    </div>
+                        <button class="accordion__button h5" id="acc-button-boroughs-the-bronx" data-toggle="accordion" aria-controls="acc-panel-boroughs-the-bronx" aria-expanded="false">
+                            The Bronx
+                        </button>
 
-                </div>
+                        <div class="accordion__panel" id="acc-panel-boroughs-the-bronx" data-accordion="panel" aria-labelledby="acc-button-boroughs-the-bronx" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    The Bronx is a borough of New York City. It's known for Yankee Stadium, the home field of the New York Yankees baseball team. Dating from 1899, the vast Bronx Zoo houses hundreds of species of animals. Nearby, the sprawling New York Botanical Garden features a landmark greenhouse with rainforest and cactus displays.
+                                </p>
+                            </div>
+                        </div>
 
-            </div>
-            <!-- .backdrop__cover -->
+                        <button class="accordion__button h5" id="acc-button-boroughs-brooklyn" data-toggle="accordion" aria-controls="acc-panel-boroughs-brooklyn" aria-expanded="false">
+                            Brooklyn
+                        </button>
 
-        </section>
+                        <div class="accordion__panel" id="acc-panel-boroughs-brooklyn" data-accordion="panel" aria-labelledby="acc-button-boroughs-brooklyn" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Brooklyn is a borough of New York City, co-extensive with Kings County, in the U.S. state of New York. It is the most-populous county in the state, the second-most densely populated county in the United States, and New York City's most populous borough, with an estimated 2,648,403 residents in 2020.
+                                </p>
+                            </div>
+                        </div>
 
-        <section class="container medium margin-y-5">
+                        <button class="accordion__button h5" id="acc-button-boroughs-queens" data-toggle="accordion" aria-controls="acc-panel-boroughs-queens" aria-expanded="false">
+                            Queens
+                        </button>
 
-            <div class="grid grid--gap-3 grid--cells-6--md">
+                        <div class="accordion__panel" id="acc-panel-boroughs-queens" data-accordion="panel" aria-labelledby="acc-button-boroughs-queens" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Queens is a New York City borough on Long Island across the East River from Manhattan. Flushing Meadows Corona Park, with the Unisphere, a 12-story 1964 World's Fair globe sculpture, hosts the annual U.S. Open tennis tournament.
+                                </p>
+                            </div>
+                        </div>
 
-                <div class="grid__cell">
+                        <button class="accordion__button h5" id="acc-button-boroughs-staten-island" data-toggle="accordion" aria-controls="acc-panel-boroughs-staten-island" aria-expanded="false">
+                            Staten Island
+                        </button>
 
-                    <div class="card theme-primary" style="--body-font-family: 'neue-haas-grotesk-text';">
-
-                        <div class="card__body">
-                            <h2 class="h4">Card Title</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam est dolor eaque
-                                aspernatur amet voluptatem beatae ea, inventore delectus ullam.
-                            </p>
-                            <a class="button button--has-icon--disperse theme-white" href="#1">
-                                <span class="button__title">Action</span>
-                                <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
-                            </a>
+                        <div class="accordion__panel" id="acc-panel-boroughs-staten-island" data-accordion="panel" aria-labelledby="acc-button-boroughs-staten-island" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Staten Island is the southernmost of New York City's 5 boroughs. It is connected to Lower Manhattan via the Staten Island Ferry, which runs across New York Harbor. Staten Island Zoo is home to kangaroos, birds of prey and snakes. The Snug Harbor Cultural Center and Botanical Garden features flower beds, Greek revival buildings and art galleries.
+                                </p>
+                            </div>
                         </div>
 
                     </div>
-                    <!-- .card -->
+                    <!-- .accordion -->
 
-                </div>
-                <!-- col -->
+                </figure>
 
-                <div class="grid__cell">
+                <figure class="container narrow">
 
-                    <div class="card theme-primary">
+                    <div class="accordion">
 
-                        <div class="card__body">
-                            <h2 class="h4">Card Title</h2>
+                        <button class="accordion__button h6" id="acc-button-group-b-01" data-toggle="accordion" aria-controls="acc-panel-group-b-01" aria-expanded="false">
+                            Accordion One
+                        </button>
+
+                        <div class="accordion__panel" id="acc-panel-group-b-01" data-accordion="panel" aria-labelledby="acc-button-group-b-01" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Content for accordion one.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- .accordion__panel -->
+
+                        <button class="accordion__button h6" id="acc-button-group-b-02" data-toggle="accordion" aria-controls="acc-panel-group-b-02" aria-expanded="false">
+                            Accordion Two
+                        </button>
+
+                        <div class="accordion__panel" id="acc-panel-group-b-02" data-accordion="panel" aria-labelledby="acc-button-group-b-02" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Content for accordion two.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- .accordion__panel -->
+
+                        <button class="accordion__button h6" id="acc-button-group-b-03" data-toggle="accordion" aria-controls="acc-panel-group-b-03" aria-expanded="false">
+                            Accordion Three
+                        </button>
+
+                        <div class="accordion__panel" id="acc-panel-group-b-03" data-accordion="panel" aria-labelledby="acc-button-group-b-03" role="region">
+                            <div class="accordion__panel__content">
+                                <p>
+                                    Content for accordion three.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- .accordion__panel -->
+
+                    </div>
+                    <!-- .accordion -->
+
+                </figure>
+
+            </section>
+
+            <hr>
+
+            <section id="example-alert">
+                
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Alert
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="alert alert alert--dismissable alert--confirm alert--confirm rounded margin-y-3">
+
+                        <div class="alert__title">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Lorem ipsum dolor</span>
+                        </div>
+
+                        <div class="alert__description">
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam est dolor eaque
-                                aspernatur amet voluptatem beatae ea, inventore delectus ullam.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                <a href="#1">quos natus aliquam</a>.
                             </p>
-                            <a class="button button--has-icon--disperse theme-white" href="#1">
-                                <span class="button__title">Action</span>
-                                <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
-                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="alert alert--dismissable alert--confirm--inverse margin-y-3">
+
+                        <div class="alert__title">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Confirm Title</span>
+                        </div>
+
+                        <div class="alert__description">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                <a href="#1">quos natus aliquam</a>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="alert alert--warn margin-y-3">
+
+                        <div class="alert__title">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Confirm Title</span>
+                        </div>
+
+                        <div class="alert__description">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                <a href="#1">quos natus aliquam</a>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="alert alert--dismissable alert--warn--inverse margin-y-3">
+
+                        <div class="alert__title">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Confirm Title</span>
+                        </div>
+
+                        <div class="alert__description">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                <a href="#1">quos natus aliquam</a>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="alert alert--dismissable text-color-primary margin-y-3">
+
+                        <div class="alert__title">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Confirm Title</span>
+                        </div>
+
+                        <div class="alert__description">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                <a href="#1">quos natus aliquam</a>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="alert alert--dismissable theme-primary margin-y-3">
+
+                        <div class="alert__title">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Confirm Title</span>
+                        </div>
+
+                        <div class="alert__description">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                <a href="#1">quos natus aliquam</a>.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="alert alert--dismissable alert alert--warn--inverse dismissable margin-y-3">
+
+                        <div class="alert__title">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Confirm Title</span>
+                        </div>
+
+                    </div>
+
+                    <div class="alert alert text-align-center alert--dismissable theme-primary margin-y-3 rounded">
+
+                        <div class="alert__title justify-content-center">
+                            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+                            <span class="alert__title__text">Confirm Title</span>
                         </div>
                         
                     </div>
+
+                </figure>
+            
+            </section>
+            
+            <hr>
+
+            <section id="example-aspect-ratio">
+                
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Aspect Ratio
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--16by9">
+                        <iframe
+                            class="aspect-ratio__content"
+                            title="Iframe Title"
+                            src="https://player.vimeo.com/video/80364498?title=0&byline=0&portrait=0"
+                            allow="autoplay; fullscreen"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <table class="table">
+
+                        <thead>
+                            <tr>
+                                <th class="col-a width-50">Size &amp; Class Name</th>
+                                <th class="col-c width-50">Visual</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table">
+                            <tr>
+                                <td>
+                                    <p class="margin-bottom-1">
+                                        16x9
+                                    </p>
+                                    <code>.aspect-ratio--16by9</code>
+                                </td>
+                                <td>
+                                    <div class="aspect-ratio aspect-ratio--16by9 theme-primary opacity-50">
+                                        <div class="aspect-ratio__content"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="margin-bottom-1">
+                                        4x3
+                                    </p>
+                                    <code>.aspect-ratio--4by3</code>
+                                </td>
+                                <td>
+                                    <div class="aspect-ratio aspect-ratio--4by3 theme-primary opacity-50">
+                                        <div class="aspect-ratio__content"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="margin-bottom-1">
+                                        3x1
+                                    </p>
+                                    <code>.aspect-ratio--3by2</code>
+                                </td>
+                                <td>
+                                    <div class="aspect-ratio aspect-ratio--3by2 theme-primary opacity-50">
+                                        <div class="aspect-ratio__content"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="margin-bottom-1">
+                                        1x1
+                                    </p>
+                                    <code>.aspect-ratio--1by1</code>
+                                </td>
+                                <td>
+                                    <div class="aspect-ratio aspect-ratio--1by1 theme-primary opacity-50">
+                                        <div class="aspect-ratio__content"></div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </figure>
+            
+            </section>
+            
+            <hr>
+
+            <section id="example-backdrops">
+                
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Backdrops
+                    </h2>
+                </header>
+
+                <figure class="container wide margin-y-5">
+
+                    <div class="backdrop backdrop--stack--md theme-primary theme-dark--md">
+
+                        <div class="backdrop__image gradient-veneer-bottom">
+                            <img class="opacity-50" src="./images/backdrop-example-01.jpg" loading="lazy" alt="Placeholder">
+                        </div>
+                        
+                        <div class="backdrop__credit">
+                            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+                        </div>
+
+                        <div class="backdrop__cover">
+
+                            <div class="container narrow medium--md margin-y-3">
+
+                                <h1 class="banner-headline text-align-center text-shadow margin-bottom-3">
+                                    Lorem ipsum dolor sit amet consectetur
+                                </h1>
+
+                                <div class="narrow">
+
+                                    <div class="grid grid--gap-3 grid--cells-fill--sm">
+
+                                        <div class="grid__cell">
+                                            <a class="button theme-white display-block box-shadow-3" href="#1">Link</a>
+                                        </div>
+                                        <!-- .grid__cell -->
+
+                                        <div class="grid__cell">
+                                            <a class="button theme-secondary display-block box-shadow-2" href="#1">Link</a>
+                                        </div>
+                                        <!-- .grid__cell -->
+
+                                    </div>
+                                    <!-- .grid -->
+
+                                </div>
+
+                            </div>
+                            <!-- .container -->
+
+                        </div>
+                        <!-- .backdrop__cover -->
+                        
+                    </div>
+                    <!-- .backdrop -->
+
+                </figure>
+
+                <figure class="container medium margin-y-4">
+
+                    <div class="grid grid--gap-2 grid--cells-fill--md text-align-center">
+
+                        <div class="grid__cell">
+
+                            <div class="backdrop theme-primary rounded">
+
+                                <div class="backdrop__image gradient-veneer-bottom">
+                                    <img class="opacity-50" src="./images/backdrop-example-02.jpg" alt="Placeholder">
+                                </div>
+
+                                <div class="backdrop__cover justify-content-end">
+                                    <div class="container margin-y-2">
+                                        <a href="#1" class="h3">Title Link</a>
+                                    </div>
+                                </div>
+                                <!-- cover -->
+
+                            </div>
+                            <!-- .backdrop-feature -->
+
+                        </div>
+                        <!-- col -->
+
+                        <div class="grid__cell">
+
+                            <div class="backdrop theme-secondary rounded">
+
+                                <div class="backdrop__image gradient-veneer-bottom">
+                                    <img class="opacity-50" src="./images/backdrop-example-03.jpg" alt="Placeholder">
+                                </div>
+
+                                <div class="backdrop__cover justify-content-end">
+
+                                    <div class="container margin-y-2">
+                                        <a href="#1" class="h3">Title Link</a>
+                                    </div>
+                                    
+                                </div>
+                                <!-- cover -->
+
+                            </div>
+                            <!-- .backdrop-feature -->
+
+                        </div>
+                        <!-- grid__cell -->
+
+                    </div>
+                    <!-- grid -->
+
+                </figure>
+
+                <figure class="margin-y-4">
+
+                    <div class="backdrop backdrop--fixed theme-primary">
+
+                        <div class="backdrop__image">
+                            <img class="opacity-30" src="./images/backdrop-example-04.jpg" alt="Placeholder">
+                        </div>
+
+                        <div class="backdrop__cover">
+
+                            <div class="container wide">
+
+                                <h1 class="banner-headline">
+                                    Lorem ipsum dolor
+                                </h1>
+
+                            </div>
+                            <!-- .container -->
+
+                        </div>
+                        <!-- .backdrop__cover -->
+
+                        <div class="backdrop__credit">
+                            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+                        </div>
+
+                    </div>
+                    <!-- .backdrop -->
+                    
+                </figure>
+
+                <figure class="margin-y-4">
+
+                    <div class="backdrop backdrop--fixed theme-dark">
+
+                        <div class="backdrop__image">
+                            <img class="backdrop__image opacity-30" src="./images/backdrop-example-05.jpg" alt="Placeholder">
+                        </div>
+
+                        <div class="backdrop__credit">
+                            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+                        </div>
+
+                        <div class="backdrop__cover text-align-center">
+
+                            <div class="container medium margin-y-5">
+
+                                <h1 class="banner-headline text-shadow margin-bottom-4">
+                                    Lorem ipsum dolor sit amet consectetur
+                                </h1>
+
+                                <div class="margin-y-4">
+
+                                    <div class="grid grid--gap-3 grid--cells-fill--md justify-content-center">
+
+                                        <div class="grid__cell">
+
+                                            <div class="card box-shadow-2 rounded text-align-left" style="backdrop-filter: blur(0.75rem) brightness(50%); background-clip:border-box;">
+
+                                                <div class="card__head border-bottom ">
+                                                    <p>Card Header</p>
+                                                </div>
+
+                                                <div class="card__body">
+                                                    <h2 class="h5">Card Title</h2>
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+                                                        obcaecati autem, ex facilis labore reiciendis.
+                                                    </p>
+                                                </div>
+
+                                                <div class="card__foot border-top font-size-sm">
+                                                    <a class="button theme-primary display-block" href="#1">Action</a>
+                                                </div>
+                                            </div>
+                                            <!-- .card -->
+
+                                        </div>
+                                        <!-- .grid__cell -->
+
+                                        <div class="grid__cell">
+
+                                            <div class="card box-shadow-2 rounded text-align-left" style="backdrop-filter: blur(1em) brightness(50%); background-clip:border-box;">
+
+                                                <div class="card__head border-bottom">
+                                                    <p>Card Header</p>
+                                                </div>
+
+                                                <div class="card__body">
+                                                    <h2 class="h4">Card Title</h2>
+                                                    <p>
+                                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+                                                        obcaecati autem, ex
+                                                        facilis labore reiciendis.
+                                                    </p>
+                                                </div>
+
+                                                <div class="card__foot border-top font-size-sm">
+                                                    <a class="button theme-primary display-block" href="#1">Action</a>
+                                                </div>
+                                            </div>
+                                            <!-- .card -->
+
+                                        </div>
+                                        <!-- .grid__cell -->
+
+                                    </div>
+                                    <!-- .grid -->
+
+                                </div>
+
+                                <div class="margin-y-3">
+
+                                    <p>Follow Us</p>
+
+                                    <ul class="nav nav--horizontal justify-content-center font-size-lg">
+                                        <li>
+                                            <a class="button--icon-only theme-primary" href="#1" title="Facebook">
+                                                <span class="screen-reader-only">Facebook</span>
+                                                <span class="fab fa-facebook-f" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="button--icon-only theme-primary" href="#1" title="Facebook">
+                                                <span class="screen-reader-only">Facebook</span>
+                                                <span class="fab fa-twitter" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="button--icon-only theme-primary" href="#1" title="Facebook">
+                                                <span class="screen-reader-only">Facebook</span>
+                                                <span class="fab fa-youtube" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="button--icon-only theme-primary" href="#1" title="Facebook">
+                                                <span class="screen-reader-only">Facebook</span>
+                                                <span class="fas fa-share" aria-hidden="true"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                
+                            </div>
+                            <!-- .container -->
+
+                        </div>
+                        <!-- .backdrop__cover -->
+
+                    </div>
+                    <!-- backdrop -->
+
+                </figure>
+            
+            </section>
+
+            <hr>
+
+            <section id="example-borders">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Borders
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1" style="width: 150px;">
+                                <div class="aspect-ratio__content theme-light border"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1" style="width: 150px;">
+                                <div class="aspect-ratio__content theme-light border-right"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1" style="width: 150px;">
+                                <div class="aspect-ratio__content theme-light border--md"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 theme-dark">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1" style="width: 150px;">
+                                <div class="aspect-ratio__content border--lg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 theme-dark">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1" style="width: 150px;">
+                                <div class="aspect-ratio__content border border-right-primary"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+            </section>
+
+            <hr>
+            
+            <section id="example-buttons">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Buttons
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 text-align-center">
+                                <a class="button" href="#1">
+                                    Button
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100">
+                                <ul class="nav nav--horizontal--md justify-content-center text-align-center">
+                                    <li>
+                                        <a class="button theme-primary" href="#1">
+                                            Button
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="button theme-dark" href="#1">
+                                            Button
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="width-100 padding-x-3">
+                                <button class="button theme-secondary width-100">
+                                    Button
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="width-100 padding-x-4">
+                                <div class="grid grid--gap-2 grid--cells-6--md justify-content-center">
+                                    <div class="grid__cell">
+                                        <a class="button button--outline width-100" href="#1">
+                                            Button
+                                        </a>
+                                    </div>
+                                    <!-- .grid__cell -->
+                                    <div class="grid__cell">
+                                        <a class="button button--outline width-100 text-color-primary rounded-pill" href="#1">
+                                            Button
+                                        </a>
+                                    </div>
+                                    <!-- .grid__cell -->
+                                </div>
+                                <!-- .grid -->
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="width-100 padding-x-4">
+                                <div class="grid grid--gap-2 grid--cells-6--md">
+                                    <div class="grid__cell">
+                                        <a class="button theme-primary display-block rounded" href="#1">
+                                            Button
+                                        </a>
+                                    </div>
+                                    <!-- .grid__cell -->
+                                    <div class="grid__cell">
+                                        <a class="button theme-secondary display-block rounded-pill" href="#1">
+                                            Button
+                                        </a>
+                                    </div>
+                                    <!-- .grid__cell -->
+                                </div>
+                                <!-- .grid -->
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="width-100 padding-x-4">
+                                <div class="grid grid--gap-2 grid--cells-6--md">
+                                    <div class="grid__cell">
+                                        <a class="button button--has-icon width-100 theme-primary" href="#1">
+                                            <span class="nyc_icon_edit button__icon"></span>
+                                            <span class="button__text">Button</span>
+                                        </a>
+                                    </div>
+                                    <!-- .grid__cell -->
+                                    <div class="grid__cell">
+                                        <a class="button button--has-icon--disperse theme-secondary" href="#1">
+                                            <span class="button__text">Button</span>
+                                            <span class="nyc_icon_double-chevron-right button__icon"></span>
+                                        </a>
+                                    </div>
+                                    <!-- .grid__cell -->
+                                </div>
+                                <!-- .grid -->
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100">
+                                <ul class="nav nav--horizontal justify-content-center font-size-sm">
+                                    <li>
+                                        <a class="button theme-dark rounded" href="#1">
+                                            Button
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="button theme-primary rounded" href="#1">
+                                            Button
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="button theme-light rounded" href="#1">
+                                            Button
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100">
+                                <div class="button-group">
+                                    <a class="button button--icon-only" href="#1" aria-label="Home">
+                                        <span class="nyc_icon_home" aria-hidden="true"></span>
+                                    </a>
+                                    <a class="button button--icon-only" href="#1" aria-label="Print">
+                                        <span class="nyc_icon_print" aria-hidden="true"></span>
+                                    </a>
+                                    <a class="button button--icon-only" href="#1" aria-label="Home">
+                                        <span class="nyc_icon_settings" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+                
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100">
+                                <div class="button-group">
+                                    <a class="button button--icon-only theme-primary" href="#1" aria-label="Home">
+                                        <span class="nyc_icon_home" aria-hidden="true"></span>
+                                    </a>
+                                    <a class="button button--icon-only theme-secondary" href="#1" aria-label="Print">
+                                        <span class="nyc_icon_print" aria-hidden="true"></span>
+                                    </a>
+                                    <a class="button button--icon-only background-color-dark text-color-secondary" href="#1" aria-label="Home">
+                                        <span class="nyc_icon_settings" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <div class="button-group" role="menu">
+                                    <a class="button button--outline" href="#1">
+                                        Sign In
+                                    </a>
+                                    <a class="button button--icon-only theme-dark" href="#1" aria-label="Language">
+                                        <span class="nyc_icon_language" aria-hidden="true"></span>
+                                    </a>
+                                    <a class="button button--icon-only theme-dark" href="#1" aria-label="Search">
+                                        <span class="nyc_icon_search" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <div class="button-group text-color-primary justify-content-center" role="menu">
+                                    <a class="button button--outline" href="#1">
+                                        Sign In  
+                                    </a>
+                                    <a class="button button--icon-only" href="#1" aria-label="Language">
+                                        <span class="nyc_icon_language" aria-hidden="true"></span>
+                                    </a>
+                                    <a class="button button--icon-only" href="#1" aria-label="Search">
+                                        <span class="nyc_icon_search" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+            
+            </section>
+
+            <hr>
+
+            <section id="example-cards">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Cards
+                    </h2>
+                </header>
+
+                <figure class="container medium margin-y-4">
+
+                    <div class="grid grid--gap-2 grid--cells-6--md">
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-primary">
+                                
+                                <div class="card__head border-bottom">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
+                                        facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top font-size-sm">
+                                    <ul class="nav nav--horizontal justify-content-between">
+                                        <li>
+                                            <a href="#1">Secondary Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="button button--outline rounded-pill" href="#1">Primary Action</a>
+                                        </li>
+                                    </ul> 
+                                </div>
+
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- col -->
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-secondary">
+
+                                <div class="card__head border-bottom">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati
+                                        autem, ex facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top font-size-sm">
+                                    <ul class="nav nav--horizontal justify-content-between">
+                                        <li>
+                                            <a href="#1">Secondary Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="button button--outline rounded-pill" href="#1">Primary Action</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        <!-- col -->
+
+                    </div>
+                    <!-- .grid -->
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="card border theme-white">
+
+                        <div class="card__head border-bottom">
+                            <p>Card Header</p>
+                        </div>
+
+                        <div class="card__body">
+                            <h2 class="h4">Card Title</h2>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex
+                                facilis labore reiciendis.
+                            </p>
+                        </div>
+
+                        <div class="card__foot border-top font-size-sm">
+                            <ul class="nav nav--horizontal justify-content-between">
+                                <li>
+                                    <a href="#1">Secondary Action</a>
+                                </li>
+                                <li>
+                                    <a class="button button--outline rounded-pill" href="#1">Primary Action</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                     <!-- .card -->
 
-                </div>
-                <!-- col -->
+                </figure>
 
-            </div>
-            <!-- .grid -->
+                <figure class="container medium margin-y-4">
 
-        </section>
+                    <div class="grid grid--gap-2 grid--cells-6--md">
 
-        <section class="padding-y-5 theme-light">
+                        <div class="grid__cell">
 
-            <div class="container narrow medium--lg margin-bottom-4">
-                <div class="grid grid--gap-3 grid--cells-fit--md justify-content-between align-items-center">
-                    <div class="grid__cell">
-                        <h2>Programs and Initiatives</h2>
+                            <div class="card theme-white border">
+
+                                <img src="./images/card-example-01.jpg" alt="">
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                                        ex facilis labore reiciendis.
+                                    </p>
+                                    <a class="button theme-secondary display-block" href="#1">Link</a>
+                                </div>
+
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- col -->
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-white border">
+
+                                <img src="./images/card-example-02.jpg" alt="">
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                                        ex facilis labore reiciendis.
+                                    </p>
+                                    <a class="button theme-secondary display-block" href="#1">Link</a>
+                                </div>
+                                
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- col -->
+
                     </div>
-                    <div class="grid__cell">
-                       <a class="button button--outline margin-y-1 font-size-sm" href="#1">See All</a>
+                    <!-- .grid -->
+
+                </figure>
+
+                <figure class="container medium margin-y-4">
+
+                    <div class="grid grid--gap-2 grid--cells-6--md">
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-primary rounded">
+
+                                <div class="card__head border-bottom">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati
+                                        autem, ex facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot font-size-sm border-top">
+                                    <ul class="nav nav--horizontal justify-content-between">
+                                        <li>
+                                            <a href="#1">Secondary Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="button theme-white box-shadow-sm rounded-pill" href="#1">Primary Action</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- col -->
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-secondary rounded">
+
+                                <div class="card__head border-bottom">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati
+                                        autem, ex facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot font-size-sm border-top">
+                                    <ul class="nav nav--horizontal justify-content-between">
+                                        <li>
+                                            <a href="#1">Secondary Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="button theme-white box-shadow-sm rounded-pill" href="#1">Primary Action</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- col -->
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-dark rounded">
+
+                                <div class="card__head border-bottom">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati
+                                        autem, ex facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot font-size-sm border-top">
+                                    <ul class="nav nav--horizontal justify-content-between">
+                                        <li>
+                                            <a href="#1">Secondary Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="button theme-white box-shadow-sm rounded-pill" href="#1">Primary Action</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- col -->
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-light rounded">
+
+                                <div class="card__head border-bottom">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati
+                                        autem, ex facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot font-size-sm border-top">
+                                    <ul class="nav nav--horizontal justify-content-between">
+                                        <li>
+                                            <a href="#1">Secondary Action</a>
+                                        </li>
+                                        <li>
+                                            <a class="button theme-white box-shadow-sm rounded-pill" href="#1">Primary Action</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- col -->
+
                     </div>
-                </div>
-            </div>
-            <!-- .container -->
+                    <!-- .grid -->
+
+                </figure>
+
+            </section>
             
-            <div class="container narrow medium--lg">
+            <hr>
+            
+            <section id="example-color">
 
-                <div class="grid grid--gap-3 grid--cells-6--md grid--cells-4--lg">
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Color
+                    </h2>
+                </header>
 
-                    <div class="grid__cell">
+            </section>
 
-                        <div class="card theme-white box-shadow-1">
+            <hr>
+            
+            <section id="example-containers">
 
-                           <img src="https://via.placeholder.com/800x400/eeeeee/666666" alt="Placeholder"> 
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Containers
+                    </h2>
+                </header>
 
-                            <div class="card__body">
-                                <h2 class="h5">Card Title</h2>
+                <figure class="container margin-y-4">
+
+                    <div class="container border border-secondary tc-secondary py-1 margin-y-3">
+                        <p>
+                            Full
+                        </p>
+                    </div>
+                    <!-- .container -->
+
+                    <div class="container narrow border border-secondary tc-secondary py-1 margin-y-3">
+                        <p>
+                            Narrow
+                        </p>
+                    </div>
+                    <!-- .container -->
+
+                    <div class="container medium border border-secondary tc-secondary py-1 margin-y-3">
+                        <p>
+                            Medium
+                        </p>
+                    </div>
+                    <!-- .container -->
+
+                    <div class="container wide border border-secondary tc-secondary py-1 margin-y-3">
+                        <p>
+                            Wide
+                        </p>
+                    </div>
+                    <!-- .container -->
+
+                </figure>
+
+            </section>
+
+            <hr>
+
+            <section id="example-forms">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Forms
+                    </h2>
+                </header>
+
+                <div class="container narrow margin-y-4">
+
+                    <form novalidate>
+
+                        <p class="required-indicator" aria-hidden="true">
+                            <span class="required-indicator__text">Indicates Required Fields</span> 
+                            <span class="required-indicator__icon">*</span>
+                        </p>
+                        
+                        <div class="alert alert--warn--inverse margin-y-4" data-alert="form-errors">
+
+                            <div class="alert__title">
+                                <span class="nyc_icon_warn" aria-hidden="true"></span>
+                                <span class="alert__title__text">Warn Title</span>
+                            </div>
+
+                            <div class="alert__description">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit culpa obcaecati autem.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                                    <a href="#1">quos natus aliquam</a>.
                                 </p>
                             </div>
 
-                            <div class="card__foot">
-                                <a class="button button--has-icon--disperse theme-primary" href="#1">
-                                    <span class="button__text">Button </span>
-                                    <span class="nyc_icon_chevron-right button__icon" aria-hidden="true"></span>
-                                </a>
+                        </div>
+
+                        <div 
+                            class="form-entry"
+                            data-required="true"
+                            data-error-description="First name is required!" 
+                            data-error-instructions="Enter your first name">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    First Name
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input type="text" id="firstName" name="first_name">
+                                </span>
+
+                            </label>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div
+                            class="form-entry"
+                            data-required="true"
+                            data-error-description="Last name is required!" 
+                            data-error-instructions="Enter your last name">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Last Name
+                                </span>
+                                
+                                <span class="form-entry__field__input">
+                                    <input type="text" id="lastName" name="last_name">
+                                </span>
+
+                            </label>
+
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div
+                            class="form-entry"
+                            data-required="true"
+                            data-error-description="Borough is required!" 
+                            data-error-instructions="Select a Borough">
+
+                            <div class="form-entry__field">
+                                
+                                <label class="form-entry__field__label" for="select-borough">
+                                    Borough
+                                </label>
+                                
+                                <span class="form-entry__field__select">
+                                    <select id="select-borough" name="Boroughs">
+                                        <option value="">Select One</option>
+                                        <option value="Bronx">Bronx</option>
+                                        <option value="Brooklyn">Brooklyn</option>
+                                        <option value="Manhattan">Manhattan</option>
+                                        <option value="Staten Island">Staten Island</option>
+                                        <option value="Queens">Queens</option>
+                                    </select>
+                                </span>
+
                             </div>
 
                         </div>
-                        <!-- .card -->
+                        <!-- .form-entry -->
 
-                    </div>
-                    <!-- .grid__cell -->
+                        <div class="form-entry" data-required="true">
 
-                    <div class="grid__cell">
+                            <label class="form-entry__field">
 
-                        <div class="card theme-white box-shadow-1">
+                                <span class="form-entry__field__label">
+                                    Message
+                                </span>
 
-                           <img src="https://via.placeholder.com/800x400/eeeeee/666666" alt="Placeholder"> 
+                                <span class="form-entry__field__input">
+                                    <textarea rows="8"></textarea>
+                                </span>
+                                
+                                <small class="form-entry__field__help">
+                                    This is help text
+                                </small>
 
-                            <div class="card__body">
-                                <h2 class="h5">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit culpa obcaecati autem.
-                                </p>
-                            </div>
-
-                            <div class="card__foot">
-                                <a class="button button--has-icon--disperse theme-primary" href="#1">
-                                    <span class="button__text">Button </span>
-                                    <span class="nyc_icon_chevron-right button__icon" aria-hidden="true"></span>
-                                </a>
-                            </div>
+                            </label>
 
                         </div>
-                        <!-- .card -->
+                        <!-- .form-entry -->
 
-                    </div>
-                    <!-- .grid__cell -->
+                        <div
+                            class="form-entry"
+                            data-required="true"
+                            data-error-description="Upload is required!" 
+                            data-error-instructions="Select a file for upload">
 
-                    <div class="grid__cell">
+                                <div class="form-entry__field">
 
-                        <div class="card theme-white box-shadow-1">
+                                    <span class="form-entry__field__label">
+                                        Upload your file
+                                    </span>
 
-                           <img src="https://via.placeholder.com/800x400/eeeeee/666666" alt="Placeholder"> 
+                                    <div class="form-entry__field__input">
+                                        <label class="file-upload">
+                                            <span class="file-upload__drag">
+                                                <span class="file-upload__drag__text">Drag and Drop</span>
+                                            </span>
+                                            <input class="file-upload__input" type="file" id="file-upload" accept="image/*">    
+                                            <span class="button button--outline button--has-icon file-upload__button">
+                                                <span class="nyc_icon_upload"></span>
+                                                <span class="button__text">Browse for a File</span>
+                                            </span>
+                                        </label>
+                                    </div>
 
-                            <div class="card__body">
-                                <h2 class="h5">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit culpa obcaecati autem.
-                                </p>
+                                </div>
+
                             </div>
 
-                            <div class="card__foot">
-                                <a class="button button--has-icon--disperse theme-primary" href="#1">
-                                    <span class="button__text">Button </span>
-                                    <span class="nyc_icon_chevron-right button__icon" aria-hidden="true"></span>
-                                </a>
-                            </div>
+                        <div
+                            class="form-entry"
+                            data-required="true"
+                            data-error-description="Priority is required!" 
+                            data-error-instructions="Select your priority rating">
+
+                            <fieldset class="form-entry__field">
+
+                                <legend class="form-entry__field__label">
+                                    What is the priority of this request?
+                                </legend>
+
+                                <div class="form-entry__option">
+
+                                    <div class="form-entry__option__radio">
+                                        <label>
+                                            <input type="radio" name="priority-of-request">
+                                            <span class="radio__label">
+                                                High
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-entry__option__radio">
+                                        <label>
+                                            <input type="radio" name="priority-of-request">
+                                            <span class="radio__label">
+                                                Medium
+                                            </span>
+                                        </label> 
+                                    </div>
+
+                                    <div class="form-entry__option__radio">
+                                        <label>
+                                            <input type="radio" name="priority-of-request">
+                                            <span class="radio__label">
+                                                Low
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
 
                         </div>
-                        <!-- .card -->
+                        <!-- .form-entry -->
+                        
+                        <button class="button theme-primary width-100 rounded-pill" type="submit">Submit</button>
 
-                    </div>
-                    <!-- .grid__cell -->
+                    </form>
+                    <!-- .needs-validation -->
 
-                    <div class="grid__cell">
+                    <hr class="margin-y-4">
 
-                        <div class="card theme-white box-shadow-1">
+                        <div class="form-entry display-none">
 
-                           <img src="https://via.placeholder.com/800x400/eeeeee/666666" alt="Placeholder"> 
+                            <div class="form-entry__field">
 
-                            <div class="card__body">
-                                <h2 class="h5">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit culpa obcaecati autem.
-                                </p>
+                                <span class="form-entry__field__label">
+                                    Switch
+                                </span>
+
+                                <div class="form-entry__option">
+                                    <div class="form-entry__option__switch">
+                                        <label>
+                                            <input type="checkbox" name="checkbox-switch-example" required>
+                                            <span class="switch__slider"></span>
+                                            <span class="switch__label">
+                                                Receive Notifications
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
                             </div>
+                            
+                        </div>
 
-                            <div class="card__foot">
-                                <a class="button button--has-icon--disperse theme-primary" href="#1">
-                                    <span class="button__text">Button </span>
-                                    <span class="nyc_icon_chevron-right button__icon" aria-hidden="true"></span>
-                                </a>
-                            </div>
+                        <div class="form-entry">
+
+                            <fieldset class="form-entry__field">
+
+                                <legend class="form-entry__field__label">
+                                    Checkbox Group
+                                </legend>
+
+                                <div class="form-entry__option">
+
+                                    <div class="form-entry__option__check">
+                                        <label>
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="check__label">
+                                                Option One
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-entry__option__check">
+                                        <label>
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="check__label">
+                                                Option Two
+                                            </span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-entry__option__check">
+                                        <label>
+                                            <input type="checkbox" name="checkbox-group-example">
+                                            <span class="check__label">
+                                                Option Three
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+
 
                         </div>
-                        <!-- .card -->
+                        <!-- .form-entry -->
 
-                    </div>
-                    <!-- .grid__cell -->
+                    <div class="grid grid--gap-3 margin-y-4">
+                        <div class="grid__cell grid__cell-6--lg">
 
-                    <div class="grid__cell">
+                            <div 
+                                class="form-entry"
+                                data-required="true"
+                                data-error-description="Username is required!" 
+                                data-error-instructions="Enter your username">
 
-                        <div class="card theme-white box-shadow-1">
+                                <label class="form-entry__field form-entry__field--float">
 
-                           <img src="https://via.placeholder.com/800x400/eeeeee/666666" alt="Placeholder"> 
+                                    <span class="form-entry__field__label">
+                                        Username
+                                    </span>
+                                    
+                                    <span class="form-entry__field__input">
+                                        <input type="text" id="accountUsername" name="username">
+                                    </span>
 
-                            <div class="card__body">
-                                <h2 class="h5">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit culpa obcaecati autem.
-                                </p>
+                                </label>
+
                             </div>
-
-                            <div class="card__foot">
-                                <a class="button button--has-icon--disperse theme-primary" href="#1">
-                                    <span class="button__text">Button </span>
-                                    <span class="nyc_icon_chevron-right button__icon" aria-hidden="true"></span>
-                                </a>
-                            </div>
+                            <!-- .form-entry -->
 
                         </div>
-                        <!-- .card -->
+                        <div class="grid__cell grid__cell-6--lg">
 
+                            <div 
+                                class="form-entry"
+                                data-required="true"
+                                data-error-description="Password is required!" 
+                                data-error-instructions="Enter your password">
+
+                                <label class="form-entry__field form-entry__field--float">
+
+                                    <span class="form-entry__field__label">
+                                        Password
+                                    </span>
+                                    
+                                    <span class="form-entry__field__input">
+                                        <input type="password" id="accountPassword" name="password">
+                                    </span>
+
+                                </label>
+
+                            </div>
+                            <!-- .form-entry -->
+                            
+                        </div>
+
+                        <div class="grid__cell">
+                            <div 
+                                class="form-entry"
+                                data-required="true"
+                                data-error-description="Password is required!" 
+                                data-error-instructions="Enter your password">
+
+                                <label class="form-entry__field form-entry__field--float">
+
+                                    <span class="form-entry__field__label">
+                                        Email
+                                    </span>
+                                    
+                                    <span class="form-entry__field__input">
+                                        <input type="email" id="accountEmail" name="password">
+                                    </span>
+
+                                </label>
+
+                            </div>
+                            <!-- .form-entry -->
+                        </div>
                     </div>
-                    <!-- .grid__cell -->
 
-                    <div class="grid__cell">
+                    <form>
 
-                        <div class="card theme-white box-shadow-1">
+                        <div class="form-entry">
 
-                           <img src="https://via.placeholder.com/800x400/eeeeee/666666" alt="Placeholder"> 
+                            <div class="form-entry__field">
 
-                            <div class="card__body">
-                                <h2 class="h5">Card Title</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit culpa obcaecati autem.
-                                </p>
+                                <label class="form-entry__field__label" for="email_address">
+                                    Email Address
+                                </label>
+                                
+                                <span class="form-entry__field__input">
+                                    <input type="email" name="email_address" id="email_address">
+                                    <button class="button" type="button">
+                                        Sign Up
+                                    </button>
+                                </span>
+
                             </div>
+                        
+                        </div>
+                        <!-- .form-entry -->
 
-                            <div class="card__foot">
-                                <a class="button button--has-icon--disperse theme-primary" href="#1">
-                                    <span class="button__text">Button </span>
-                                    <span class="nyc_icon_chevron-right button__icon" aria-hidden="true"></span>
-                                </a>
+                        <div class="form-entry">
+
+                            <div class="form-entry__field">
+
+                                <label class="form-entry__field__label screen-reader-only" for="email_address-2">
+                                    Email Address
+                                </label>
+                                
+                                <span class="form-entry__field__input">
+                                    <span class="nyc_icon_mail opacity-40" aria-hidden="true"></span>
+                                    <input type="email" name="email_address-2" id="email_address-2" placeholder="Email Address">
+                                    <button class="button" type="button">
+                                        Sign Up
+                                    </button>
+                                </span>
+
                             </div>
+                        
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+
+                            <div class="form-entry__field">
+
+                                <label class="form-entry__field__label screen-reader-only" for="search-example">
+                                    Search
+                                </label>
+                                
+                                <span class="form-entry__field__input">
+                                    <input type="text" name="search-example" id="search-example" placeholder="Search">
+                                    <button class="button button--icon-only" type="button" aria-label="Home">
+                                        <span class="nyc_icon_search" aria-hidden="true"></span>
+                                    </button>
+                                </span>
+
+                            </div>
+                        
+                        </div>
+                        <!-- .form-entry -->
+
+                        <div class="form-entry">
+
+                            <div class="form-entry__field">
+
+                                <label class="form-entry__field__label screen-reader-only" for="search-example-02">
+                                    Search
+                                </label>
+                                
+                                <span class="form-entry__field__input">
+                                    <span class="nyc_icon_search opacity-40"></span>
+                                    <input type="text" name="search-example" id="search-example-02" placeholder="Search">
+
+                                    <div class="button-group">
+                                        <button class="button button--icon-only" type="button">
+                                            <span class="nyc_icon_grid"></span>
+                                        </button>
+                                        <button class="button button--icon-only" type="button">
+                                            <span class="nyc_icon_list"></span>
+                                        </button>
+                                    </div>
+                                </span>
+
+                            </div>
+                        
+                        </div>
+                        <!-- .form-entry -->
+
+                    </form>
+
+                    <hr class="margin-y-4">
+
+                    <form novalidate>
+
+                        <div class="form-entry">
+
+                            <div class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Single Checkbox
+                                </span>
+
+                                <div class="form-entry__option">
+                                    <div class="form-entry__option__check">
+                                        <label>
+                                            <input type="checkbox" name="checkbox-single-example" required>
+                                            <span class="check__label">
+                                                Option One
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-entry">
+
+                            <fieldset class="form-entry__field">
+
+                                <legend class="form-entry__field__label">
+                                    Radio Group
+                                </legend>
+
+                                <div class="form-entry__option">
+
+                                    <div class="form-entry__option__radio">
+                                        <label>
+                                            <input type="radio" name="radio-group-example">
+                                            <span class="radio__label">
+                                                Option One
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-entry__option__radio">
+                                        <label>
+                                            <input type="radio" name="radio-group-example">
+                                            <span class="radio__label">
+                                                Option Two
+                                            </span>
+                                        </label> 
+                                    </div>
+
+                                    <div class="form-entry__option__radio">
+                                        <label>
+                                            <input type="radio" name="radio-group-example" disabled>
+                                            <span class="radio__label">
+                                                Option Three
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
 
                         </div>
-                        <!-- .card -->
+                        <!-- .form-entry -->
 
-                    </div>
-                    <!-- .grid__cell -->
+                    </form>
 
                 </div>
-                <!-- .grid -->
+                <!-- .container -->
 
-            </div>
-            <!-- .container -->
+            </section>
 
-        </section>
+            <hr>
 
-        <section class="padding-y-4">
+            <section id="example-grid">
 
-            <div class="container narrow medium--lg">
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Grid
+                    </h2>
+                </header>
 
-                <h2 class="screen-reader-only">
-                    Stay Connected with NYC!
-                </h2>
+            </section>
 
-                <div class="grid grid--gap-2 grid--cells-4--lg">
-                    <div class="grid__cell">
-                        <a class="button button--outline button--has-icon width-100" href="#1">
-                            <span class="nyc_icon_mobile" aria-hidden="true"></span>
-                            <span class="button__text">Mobile Apps</span>
-                        </a>
+            <hr>
+
+            <section id="example-modal">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Modal
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-4">
+
+                    <button class="button theme-primary width-100 rounded-pill margin-y-3" data-modal-open="modal-1">
+                        Open Modal
+                    </button>
+
+                </figure>
+
+                <div class="modal" id="modal-1" role="dialog">
+
+                    <div class="modal__content narrow medium--md rounded box-shadow-3" aria-labelledby="modal-1-title">
+
+                        <header class="modal__content__head border-bottom">
+                            <h2 class="h4" id="modal-1-title">
+                                Modal Title
+                            </h2>
+                            <button class="button button--icon-only" data-modal-close>
+                                <span class="nyc_icon_close"></span>
+                            </button>
+                        </header>
+
+                        <main class="modal__content__body" id="modal-1-content">
+                            <p>
+                                Lorem, ipsum
+                                <a href="#1">dolor sit amet</a>
+                                consectetur adipisicing elit. Vero eveniet, deleniti
+                                                    perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est
+                                                    perspiciatis.
+                            </p>
+                            <p>
+                                Lorem, ipsum
+                                <a href="#1">dolor sit amet</a>
+                                consectetur adipisicing elit. Vero eveniet, deleniti
+                                                    perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est
+                                                    perspiciatis.
+                            </p>
+                            <p>
+                                Lorem, ipsum
+                                <a href="#1">dolor sit amet</a>
+                                consectetur adipisicing elit. Vero eveniet, deleniti
+                                                    perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est
+                                                    perspiciatis.
+                            </p>
+                            <p>
+                                Lorem, ipsum
+                                <a href="#1">dolor sit amet</a>
+                                consectetur adipisicing elit. Vero eveniet, deleniti
+                                                    perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est
+                                                    perspiciatis.
+                            </p>
+                        </main>
+
+                        <footer class="modal__content__foot border-top">
+                            <ul class="nav nav--horizontal justify-content-between">
+                                <li>
+                                    <a href="#1">Secondary Action</a>
+                                </li>
+                                <li>
+                                    <a class="button theme-primary rounded-pill" href="#1">Primary Action</a>
+                                </li>
+                            </ul>
+                        </footer>
                     </div>
-                    <div class="grid__cell">
-                        <a class="button button--outline button--has-icon width-100" href="#1">
-                            <span class="nyc_icon_hashtag" aria-hidden="true"></span>
-                            <span class="button__text">Social Media</span>
-                        </a>
-                    </div>
-                    <div class="grid__cell">
-                        <a class="button button--outline button--has-icon width-100" href="#1">
-                            <span class="nyc_icon_mail" aria-hidden="true"></span>
-                            <span class="button__text">Contact City Hall</span>
-                        </a>
-                    </div>
+                    <!-- .modal__content -->
+
                 </div>
-                <!-- .grid -->
+                
+            </section>
+            
+            <hr>
 
-            </div>
+            <section id="example-navigation">
 
-        </section>
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Navigation
+                    </h2>
+                </header>
+
+                <figure class="medium margin-y-4 box-shadow-1 z-index-1500">
+
+                    <div class="primary-nav--below--lg">
+
+                        <div class="primary-nav__logo">
+                            <a href="#1" title="Home" data-logo="brand">
+
+                                <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewbox="0 0 120 40">
+                                    <g>
+                                        <polygon points="87.5 0 80 7.5 80 2.5 77.5 0 67.5 0 65 2.5 65 7.5 60 12.5 55 7.5 55 2.5 52.5 0 42.5 0 40 2.5 37.5 0 27.5 0 25 2.5 25 12.5 12.501 0 2.501 0 0 2.5 0 37.5 2.501 40 12.501 40 15 37.5 15 27.5 27.5 40 37.5 40 40 37.5 40 17.5 52.5 30 52.5 37.5 55 40 65 40 67.5 37.5 67.5 30 80 17.5 80 32.5 87.5 40 112.5 40 120 32.5 120 25 117.5 22 105 22 105 25 95 25 95 15 105 15 105 18 117.5 18 120 15 120 7.5 112.5 0 87.5 0"/>
+                                        <path d="M117.9877,1.8787h.293l.4888.8088h.3522l-.53-.831a.4834.4834,0,0,0,.4927-.517c0-.3837-.2322-.5435-.6895-.5435h-.718V2.6875h.3105Zm0-.8182h.3758c.1867,0,.411.0278.411.2568,0,.2742-.2055.2962-.4385.2962h-.3483Z"/>
+                                        <path d="M118.3265,3.42A1.6573,1.6573,0,0,0,120,1.71a1.6784,1.6784,0,1,0-3.3563,0A1.6456,1.6456,0,0,0,118.3265,3.42Zm0-3.1218A1.3255,1.3255,0,0,1,119.6342,1.71a1.3157,1.3157,0,1,1-2.6242,0A1.3271,1.3271,0,0,1,118.3265.2977Z"/>
+                                    </g>
+                                </svg>
+
+                            </a>
+                        </div>
+
+                        <nav class="primary-nav__menu" aria-label="navigation" id="primary-menu-below">
+
+                            <ul>
+                                <li>
+                                    <a href="#1" data-toggle="dropdown">Dropdown</a>
+                                    <ul class="nav__dropdown">
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                            </ul>
+
+                        </nav>
+
+                        <div class="primary-nav__actions">
+
+                            <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-below">
+                                <span class="nyc_icon_menu" aria-hidden="true"></span>
+                            </button>
+                            
+                            <div class="button-group">
+                                <a class="button" href="#1">
+                                    Sign In  
+                                </a>
+                                <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                                    <span class="nyc_icon_language" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        
+                        </div>
+
+                    </div>
+                    <!-- .primary-nav -->
+
+                </figure>
+
+                <figure class="medium margin-y-4 box-shadow-1 z-index-1000">
+
+                    <div class="primary-nav--inline--lg">
+
+                        <div class="primary-nav__logo">
+                            <a href="#1" title="Home" data-logo="brand">
+
+                                <!-- Placeholder logo, replace the following <svg> tag with your own image version -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewbox="0 0 120 40">
+                                    <g>
+                                        <polygon points="87.5 0 80 7.5 80 2.5 77.5 0 67.5 0 65 2.5 65 7.5 60 12.5 55 7.5 55 2.5 52.5 0 42.5 0 40 2.5 37.5 0 27.5 0 25 2.5 25 12.5 12.501 0 2.501 0 0 2.5 0 37.5 2.501 40 12.501 40 15 37.5 15 27.5 27.5 40 37.5 40 40 37.5 40 17.5 52.5 30 52.5 37.5 55 40 65 40 67.5 37.5 67.5 30 80 17.5 80 32.5 87.5 40 112.5 40 120 32.5 120 25 117.5 22 105 22 105 25 95 25 95 15 105 15 105 18 117.5 18 120 15 120 7.5 112.5 0 87.5 0"/>
+                                        <path d="M117.9877,1.8787h.293l.4888.8088h.3522l-.53-.831a.4834.4834,0,0,0,.4927-.517c0-.3837-.2322-.5435-.6895-.5435h-.718V2.6875h.3105Zm0-.8182h.3758c.1867,0,.411.0278.411.2568,0,.2742-.2055.2962-.4385.2962h-.3483Z"/>
+                                        <path d="M118.3265,3.42A1.6573,1.6573,0,0,0,120,1.71a1.6784,1.6784,0,1,0-3.3563,0A1.6456,1.6456,0,0,0,118.3265,3.42Zm0-3.1218A1.3255,1.3255,0,0,1,119.6342,1.71a1.3157,1.3157,0,1,1-2.6242,0A1.3271,1.3271,0,0,1,118.3265.2977Z"/>
+                                    </g>
+                                </svg>
+
+
+                            </a>
+                        </div>
+
+                        <nav class="primary-nav__menu" id="primary-menu-inline">
+
+                            <ul>
+                                <li>
+                                    <a href="#1" data-toggle="dropdown">Dropdown</a>
+                                    <ul class="nav__dropdown box-shadow-1">
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                            </ul>
+
+                        </nav>
+
+                        <div class="primary-nav__actions">
+
+                            <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#primary-menu-inline">
+                                <span class="nyc_icon_menu"></span>
+                            </button>
+                            
+                            <div class="button-group">
+
+                                <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                                    <span class="nyc_icon_language"></span>
+                                </button>
+                                <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
+                                    <span class="nyc_icon_search"></span>
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- .primary-nav -->
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--breadcrumb">
+                                    <li>
+                                        <a class="button button--icon-only" href="#1" aria-label="Home">
+                                            <span class="nyc_icon_home" aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">About</a>
+                                    </li>
+                                    <li>
+                                        Services
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+                
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--divider" role="menu">
+                                    <li>
+                                        <a href="#1" aria-current="page">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--horizontal" role="menu">
+                                    <li>
+                                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="nav__dropdown">
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--horizontal--md" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center padding-4">
+                            <div class="width-100">
+                                <ul class="nav nav--horizontal justify-content-center margin-y-3" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav--horizontal justify-content-end margin-y-3" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--horizontal justify-content-center tc-secondary font-weight-bold" role="menu">
+                                    <li>
+                                        <a class="button" href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a class="button" href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a class="button" href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--divider" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+                    <div class="aspect-ratio aspect-ratio--3by2 border theme-dark">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--divider nav--horizontal--md" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--divider nav--horizontal border" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content display-flex">
+                            <div class="width-100 padding-4 as-center--md">
+                                <ul class="nav nav--divider nav--horizontal border justify-content-center" role="menu">
+                                    <li>
+                                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="nav__dropdown">
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="nav__dropdown">
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content display-flex">
+                            <div class="width-100 padding-4 as-center--md">
+                                <ul class="nav nav--divider nav--horizontal--md border" role="menu">
+                                    <li>
+                                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="nav__dropdown">
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="nav__dropdown">
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+                
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content display-flex">
+                            <div class="width-100 padding-4 as-center--md">
+                                <ul class="nav nav--horizontal--md justify-content-center" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a class="button button--icon-only" href="#1" data-toggle="dropdown" aria-label="Account">
+                                            <span class="nyc_icon_person" aria-hidden="true"></span>
+                                        </a>
+                                        <ul class="nav__dropdown border">
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+                
+                    <div class="aspect-ratio aspect-ratio--3by2 theme-dark">
+                        <div class="aspect-ratio__content display-flex">
+                            <div class="width-100 padding-4 as-center--md">
+                                <ul class="nav nav--horizontal justify-content-center" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a class="button button--icon-only" href="#1" data-toggle="dropdown" aria-label="Account">
+                                            <span class="nyc_icon_person" aria-hidden="true"></span>
+                                        </a>
+                                        <ul class="nav__dropdown theme-secondary border rounded">
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row align-items-center">
+                            <div class="width-100 padding-4">
+                                <ul class="nav nav--divider nav--horizontal border border-primary" role="menu">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+                
+            </section>
+
+            <hr>
+
+            <section id="example-opacities">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Opacities
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="margin-y-2">
+
+                        <div class="grid grid--gap-2 grid--cells-4 text-align-center font-size-sm">
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-90" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-10</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-80" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-20</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-70" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-30</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-60" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-40</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-50" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-50</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-40" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-60</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-30" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-70</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-20" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-80</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                            <div class="grid__cell">
+                                <div class="aspect-ratio aspect-ratio--3by2">
+                                    <div class="aspect-ratio__content">
+                                        <div class="backdrop theme-primary">
+                                            <img class="backdrop__image opacity-10" src="https://via.placeholder.com/300x200/FFFFFF/FFFFFF" alt="Placeholder" aria-hidden="true">
+                                            <div class="backdrop__cover">
+                                                <div class="p-2">
+                                                    <p>.opacity-90</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+
+                        </div>
+                        <!-- grid -->
+
+                    </div>
+
+                </figure>
+
+            </section>
+
+            <hr>
+
+            <section id="example-shadows">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Shadows
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1 box-shadow-1--md" style="width: 100px;">
+                                <div class="aspect-ratio__content"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1 box-shadow-2" style="width: 150px;">
+                                <div class="aspect-ratio__content"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+                <figure class="container narrow margin-y-4">
+
+                    <div class="aspect-ratio aspect-ratio--3by2 border">
+                        <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                            <div class="aspect-ratio aspect-ratio--1by1 box-shadow-3" style="width: 200px;">
+                                <div class="aspect-ratio__content"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </figure>
+
+            </section>
+
+            <hr>
+
+            <section id="example-spacers">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Spacers
+                    </h2>
+                </header>
+
+                <figure class="container narrow margin-y-3">
+
+                    <div class="theme-secondary margin-y-2" style="height: var(--spacer-1);"></div>
+                    <div class="theme-secondary margin-y-2" style="height: var(--spacer-2);"></div>
+                    <div class="theme-secondary margin-y-2" style="height: var(--spacer-3);"></div>
+                    <div class="theme-secondary margin-y-2" style="height: var(--spacer-4);"></div>
+                    <div class="theme-secondary margin-y-2" style="height: var(--spacer-5);"></div>
+
+                </figure>
+
+            </section>
+
+            <hr>
+
+            <section id="example-tab">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Tab
+                    </h2>
+                </header>
+
+                <figure class="container medium margin-y-4">
+
+                    <ul class="tabs-nav tabs-nav--horizontal">
+                        <li>
+                            <a href="#1" aria-current="page">
+                                Icons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#1">
+                                Usage
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </figure>
+
+                <figure class="container medium margin-y-4">
+
+                    <div class="tabs" role="tablist">
+
+                        <ul class="tabs-nav tabs-nav--horizontal--md">
+                            <li>
+                                <button
+                                    id="tab-button-group-b-01"
+                                    aria-controls="tab-panel-group-b-01"
+                                    aria-selected="true"
+                                    role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    id="tab-button-group-b-02"
+                                    aria-controls="tab-panel-group-b-02"
+                                    aria-selected="false"
+                                    role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    id="tab-button-group-b-03"
+                                    aria-controls="tab-panel-group-b-03"
+                                    aria-selected="false"
+                                    role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tabs__panel shown" id="tab-panel-group-b-01" aria-labelledby="tab-button-group-b-01" role="tabpanel">
+                            <div class="container padding-y-4">
+                                <h2 class="h4">Tab 01</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                        <div class="tabs__panel" id="tab-panel-group-b-02" aria-labelledby="tab-button-group-b-02" role="tabpanel">
+                            <div class="container padding-y-4">
+                                <h2 class="h4">Tab 02</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                        <div class="tabs__panel" id="tab-panel-group-b-03" aria-labelledby="tab-button-group-b-02" role="tabpanel">
+                            <div class="container padding-y-4">
+                                <h2 class="h4">Tab 03</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                    </div>
+                    <!-- tabs -->
+
+                </figure>
+
+                <figure class="container medium margin-y-4 display-none">
+
+                    <div class="tabs">
+
+                        <ul class="tabs-nav tabs-nav--horizontal--md" role="tablist">
+                            <li>
+                                <button aria-selected="true"
+                                    aria-controls="tab-panel-group-a-01"
+                                    id="tab-button-group-a-01"
+                                    role="tab">
+                                        Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button aria-selected="false"
+                                    aria-controls="tab-panel-group-a-02"
+                                    id="tab-button-group-a-02"
+                                    role="tab">
+                                        Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button aria-selected="false"
+                                    aria-controls="tab-panel-group-a-03"
+                                    id="tab-button-group-a-03"
+                                    role="tab">
+                                        Tab
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tabs__panel shown"
+                            id="tab-panel-group-a-01"
+                            aria-labelledby="tab-button-group-a-01"
+                            role="tabpanel">
+                            <div class="container padding-y-4">
+                                <h2 class="h4">Tab 01</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                        <div class="tabs__panel" id="tab-panel-group-a-02" aria-labelledby="tab-button-group-a-02" role="tabpanel">
+                            <div class="container padding-y-4">
+                                <h2 class="h4">Tab 02</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                        <div class="tabs__panel" id="tab-panel-group-a-03" aria-labelledby="tab-button-group-a-02" role="tabpanel">
+                            <div class="container padding-y-4">
+                                <h2 class="h4">Tab 03</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
+                                    ducimus quam provident repellendus eos libero error adipisci laudantium
+                                    exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
+                                    quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
+                                    velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
+                                    reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
+                                </p>
+                            </div>
+                            <!-- .container -->
+                        </div>
+
+                    </div>
+                    <!-- tabs -->
+                </figure>
+
+                <figure class="container medium margin-y-4">
+
+                    <div class="tabs" role="tablist">
+
+                        <ul class="nav nav--horizontal--md justify-content-center">
+                            <li>
+                                <button class="button theme-primary"
+                                    aria-selected="true"
+                                    aria-controls="tab-panel-group-d-01"
+                                    id="tab-button-group-d-01" role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button class="button theme-primary"
+                                    aria-selected="false"
+                                    aria-controls="tab-panel-group-d-02"
+                                    id="tab-button-group-d-02" role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                            <li>
+                                <button class="button theme-primary"
+                                    aria-selected="false"
+                                    aria-controls="tab-panel-group-d-03"
+                                    id="tab-button-group-d-03" role="tab">
+                                    Tab
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tabs__panel shown" id="tab-panel-group-d-01" aria-labelledby="tab-button-group-d-01" role="tabpanel">
+                            <h6>Tab 01</h6>
+                            <p>
+                                Nils Frahm is a German musician, composer and record producer based in Berlin. He is
+                                known
+                                for combining classical and electronic music and for an unconventional approach to the
+                                piano
+                                in which he mixes a grand piano, upright piano, Roland Juno-60, Rhodes piano, drum
+                                machine,
+                                and Moog Taurus.
+                            </p>
+                        </div>
+
+                        <div class="tabs__panel" id="tab-panel-group-d-02" aria-labelledby="tab-button-group-d-02" role="tabpanel">
+                            <h6>Tab 02</h6>
+                            <p>
+                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album,
+                                Philharmonics,
+                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was
+                                certified
+                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000
+                                Copies.
+                            </p>
+                        </div>
+
+                        <div class="tabs__panel" id="tab-panel-group-d-03" aria-labelledby="tab-button-group-d-02" role="tabpanel">
+                            <h6>Tab 03</h6>
+                            <p>
+                                Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album,
+                                Philharmonics,
+                                was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was
+                                certified
+                                gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000
+                                Copies.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- tabs -->
+
+                </figure>
+
+            </section>
+
+            <hr>
+
+            <section id="example-table">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Tables
+                    </h2>
+                </header>
+
+                <figure class="container medium margin-y-4">
+
+                    <div class="table-scroll">
+
+                        <small class="table-scroll__help">
+                            Scroll to see whole table
+                        </small>
+
+                        <div class="table-scroll__container">
+
+                            <table class="table" id="nyc-population-demographics">
+
+                                <caption class="screen-reader-only">
+                                    New York City Population Demographics
+                                </caption>
+
+                                <thead>
+
+                                    <tr>
+                                        <th scope="col">Borough</th>
+                                        <th scope="col">Population</th>
+                                        <th scope="col">Land Area</th>
+                                        <th scope="col">Density</th>
+                                        <th scope="col">
+                                            <span class="screen-reader-only">Action</span>
+                                        </th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Brooklyn</td>
+                                        <td>2,559,903</td>
+                                        <td>70.82</td>
+                                        <td>36,147</td>
+                                        <td class="text-align-right">
+                                            <a href="#1">View Map</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bronx</td>
+                                        <td>1,418,207</td>
+                                        <td>42.10</td>
+                                        <td>33,867</td>
+                                        <td class="text-align-right">
+                                            <a href="#1">View Map</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manhattan</td>
+                                        <td>1,628,706</td>
+                                        <td>22.83</td>
+                                        <td>71,341</td>
+                                        <td class="text-align-right">
+                                            <a href="#1">View Map</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Queens</td>
+                                        <td>2,253,858</td>
+                                        <td>108.53</td>
+                                        <td>20,767</td>
+                                        <td class="text-align-right">
+                                            <a href="#1">View Map</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Staten Island</td>
+                                        <td>476,143</td>
+                                        <td>58.37</td>
+                                        <td>8,157</td>
+                                        <td class="text-align-right">
+                                            <a href="#1">View Map</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <!-- -->
+                                </tfoot>
+
+                            </table>
+
+                        </div>
+                        <!-- table-scroll__container -->
+
+                    </div>
+
+                </figure>
+                
+                <figure class="container medium margin-y-4">
+
+                    <div class="box-shadow-1 theme-primary">
+
+                        <table class="table table--stack--md table--striped table--va-middle">
+
+                                <caption class="screen-reader-only">
+                                    New York City Population Demographics
+                                </caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col">Borough</th>
+                                    <th scope="col">Population</th>
+                                    <th scope="col">Land Area</th>
+                                    <th scope="col">Density</th>
+                                    <th scope="col">
+                                        <span class="screen-reader-only">Action</span>
+                                    </th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>Brooklyn</td>
+                                    <td>2,559,903</td>
+                                    <td>70.82</td>
+                                    <td>36,147</td>
+                                    <td class="text-align-right">
+                                        <a href="#1">View Map</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bronx</td>
+                                    <td>1,418,207</td>
+                                    <td>42.10</td>
+                                    <td>33,867</td>
+                                    <td class="text-align-right">
+                                        <a href="#1">View Map</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Manhattan</td>
+                                    <td>1,628,706</td>
+                                    <td>22.83</td>
+                                    <td>71,341</td>
+                                    <td class="text-align-right">
+                                        <a href="#1">View Map</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Queens</td>
+                                    <td>2,253,858</td>
+                                    <td>108.53</td>
+                                    <td>20,767</td>
+                                    <td class="text-align-right">
+                                        <a href="#1">View Map</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Staten Island</td>
+                                    <td>476,143</td>
+                                    <td>58.37</td>
+                                    <td>8,157</td>
+                                    <td class="text-align-right">
+                                        <a href="#1">View Map</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </figure>
+
+            </section>
+
+            <hr>
+
+            <section id="example-typography">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Typography
+                    </h2>
+                </header>
+
+                <figure class="container medium margin-y-4">
+                    <h2 class="banner-headline">Banner Headline</h2>
+                    <p class="h1">Header 1</p>
+                    <p class="h2">Header 2</p>
+                    <p class="h3">Header 3</p>
+                    <p class="h4">Header 4</p>
+                    <p class="h5">Header 5</p>
+                    <p class="h6">Header 6</p>
+                </figure>
+
+                <figure class="container medium margin-y-4">
+                    <p class="h1">Header 1</p>
+                    <p class="h2">Header 2</p>
+                    <p class="h3">Header 3</p>
+                    <p class="h4">Header 4</p>
+                    <p class="h5">Header 5</p>
+                    <p class="h6">Header 6</p>
+                </figure>
+
+            </section>
+
+        </div>
 
     </main>
 
-    <div class="modal theme-light" id="global-search">
-
-        <div class="modal__content narrow medium--lg rounded box-shadow-3">
-
-            <header class="modal__content__head border-bottom">
-                <h2 class="h6" id="modal-search-title">
-                    Search This Website
-                </h2>
-                <button class="button button--icon-only" data-modal-close>
-                    <span class="screen-reader-only">Close Modal</span>
-                    <span class="nyc_icon_close"></span>
-                </button>
-            </header>
-
-            <div class="modal__content__body" id="modal-1-content" aria-labelledby="modal-search-title">
-                <div class="form-entry">
-                    <div class="form-entry__field">
-                        <label class="form-entry__field__label screen-reader-only" for="email_address-2">Email Address</label>
-                        <span class="form-entry__field__input">
-                            <span class="nyc_icon_search opacity-40" aria-hidden="true"></span>
-                            <input type="text" name="search-example" id="search-example" placeholder="Search">
-                            <button class="button theme-primary" type="button">
-                                Search
-                            </button>
-                        </span>
-                    </div>
-                </div>
-                <!-- .form-entry -->
-            </div>
-
-        </div>
-        <!-- .modal__content -->
-
-    </div>
-    <!-- #global-search -->
-
-    <div class="modal" id="global-language">
-
-        <div class="modal__content medium rounded box-shadow-2" aria-labelledby="modal-language-title">
-
-            <header class="modal__content__head border-bottom">
-                <h2 class="h6" id="modal-language-title">Website Translation</h2>
-                <button class="button button--icon-only" data-modal-close>
-                    <span class="screen-reader-only">Close Modal</span>
-                    <span class="nyc_icon_close"></span>
-                </button>
-            </header>
-
-            <div class="modal__content__body" id="modal-language-content">
-                <div id="google_translate_element"></div>
-            </div>
-
-        </div>
-        <!-- .modal__content -->
-
-    </div>
-    <!-- #global-language -->
-
-    <footer class="overflow-hidden theme-dark font-size-md">
+    <footer id="global-footer">
 
         <h2 class="screen-reader-only">
             Page Footer
         </h2>
 
-        <div class="container narrow medium--lg margin-y-4" id="nyc-foot">
-
-            <div class="grid grid--gap-3 grid--cells-6--sm grid--cells-3--lg">
-
-                <div class="grid__cell">
-
-                    <h2 class="h6 margin-bottom-3">Languages</h2>
-
-                    <ul class="nav">
-                        <li>
-                            <button data-lang="ar">عربى</button>
-                        </li>
-                        <li>
-                            <button data-lang="bn">বাঙালি</button>
-                        </li>
-                        <li>
-                            <button data-lang="zh-CN">中文</button>
-                        </li>
-                        <li>
-                            <button data-lang="es">Español</button>
-                        </li>
-                        <li>
-                            <button data-lang="fr">français</button>
-                        </li>
-                        <li>
-                            <button data-lang="ht">Kreyòl Ayisyen</button>
-                        </li>
-                        <li>
-                            <button data-lang="ko">한국어</button>
-                        </li>
-                        <li>
-                            <button data-lang="pl">Polskie</button>
-                        </li>
-                        <li>
-                            <button data-lang="ru">русский</button>
-                        </li>
-                        <li>
-                            <button data-lang="ur">اردو</button>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- .col -->
-
-                <div class="grid__cell">
-
-                    <h2 class="h6 margin-bottom-3">Resources</h2>
-
-                    <ul class="nav">
-                        <li>
-                            <a class="text-reset" href="http://www1.nyc.gov/home/contact-us.page">
-                                Contact NYC Government
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="http://www1.nyc.gov/nyc-resources/agencies.page">
-                                City Agency Directory
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page">
-                                Resident Toolkit
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="http://www1.nyc.gov/connect/mobile-applications.page">
-                                NYC Mobile Apps
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="https://a858-nycnotify.nyc.gov/notifynyc/">
-                                Notify NYC
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="http://maps.nyc.gov/doitt/nycitymap/">
-                                Maps
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="https://a127-ess.nyc.gov/psp/prdess/?cmd=login&languageCd=ENG&">
-                                City Employees
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="https://a856-citystore.nyc.gov/">
-                                CityStore
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-reset" href="http://www1.nyc.gov/connect/social-media.page">
-                                Stay Connected
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- .col -->
-
-                <div class="grid__cell">
-
-                    <h2 class="h6 margin-bottom-3">
-                        <a href="https://www1.nyc.gov/">
-                            <span class="screen-reader-only">Visit</span>
-                            <strong>NYC.gov</strong>
-                        </a>
-                    </h2>
-
-                    <ul class="nav">
-                        <li>
-                            <a href="http://www1.nyc.gov/home/privacy-policy.page">
-                                Privacy Policy
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www1.nyc.gov/home/terms-of-use.page">
-                                Terms of Use
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www1.nyc.gov/site/mopd/index.page" title="Mayor's Office for People with Disabilities">
-                                <span class="screen-reader-only">Mayor's Office for People with Disabilities</span>
-                                <span class="nyc_icon_wheelchair" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- .col -->
-
-                <div class="grid__cell">
-
-                    <a class="margin-bottom-2" href="https://www1.nyc.gov" title="Go to nyc.gov" data-logo="brand">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
-                            <polygon points="117.83 17.47 120.33 15 120.33 7.5 112.83 0 87.83 0 80.33 7.5 80.33 2.5 77.83 0 67.83 0 65.33 2.5 65.33 7.5 60.33 12.5 55.33 7.5 55.33 2.5 52.83 0 42.83 0 40.33 2.5 37.83 0 27.83 0 25.33 2.5 25.33 12.5 12.83 0 2.83 0 0.33 2.5 0.33 37.5 2.83 40 12.83 40 15.33 37.5 15.33 27.5 27.83 40 37.83 40 40.33 37.5 40.33 17.5 52.83 30 52.83 37.5 55.33 40 65.33 40 67.83 37.5 67.83 30 80.33 17.5 80.33 32.5 87.83 40 112.83 40 120.33 32.5 120.33 25 117.83 22.5 105.33 22.5 105.33 25 95.33 25 95.33 15 105.33 15 105.33 17.47 117.83 17.47" />
-                            <path d="M118.55,1.69c.24,0,.44,0,.44-.3s-.22-.26-.41-.26h-.37v.56Zm-.34,1.07h-.32V.87h.72c.46,0,.69.16.69.54a.48.48,0,0,1-.44.52h0l.53.83H119L118.5,2h-.29Zm.33-2.39a1.34,1.34,0,0,0-1.32,1.34v.07a1.31,1.31,0,1,0,2.62.2.67.67,0,0,0,0-.2A1.31,1.31,0,0,0,118.62.37h-.08m0,3.12a1.65,1.65,0,0,1-1.68-1.6V1.78a1.68,1.68,0,1,1,3.36-.06v.06a1.66,1.66,0,0,1-1.61,1.71h-.07" />
-                        </svg>
-                    </a>
-
-                    <p>
-                        &#169; City of New York - <span class="copyright-year"></span>. All Rights Reserved. NYC is a trademark and service mark of the City of New York.
-                    </p>
-
-                    <a href="#" data-scroll="top">
-                        Back to Top
-                    </a>
-
-                </div>
-                <!-- .col -->
-
-            </div>
-            <!-- .grid -->
-
-        </div>
-        <!-- #nyc-foot -->
-
     </footer>
 
+    <!-- Google Translate JS -->
+    
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Google Translate Js -->
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -686,7 +3396,11 @@
         }
     </script>
 
-    <!-- NYC Core Javascript -->
+    <script>
+    
+        
+    
+    </script>
     
 </body>
 
