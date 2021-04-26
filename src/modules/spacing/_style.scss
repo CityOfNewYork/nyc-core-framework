@@ -23,11 +23,13 @@ In this file:
 // Scoped to Root
 
 :root {
-    --spacer-1: 0.25rem;
-    --spacer-2: 0.5rem;
-    --spacer-3: 1rem;
-    --spacer-4: 2.5rem;
-    --spacer-5: 5rem;
+    --spacer-base: 1rem;
+
+    --spacer-1: calc(var(--spacer-base) * 0.5);
+    --spacer-2: calc(var(--spacer-base) * 1);
+    --spacer-3: calc(var(--spacer-base) * 1.5);
+    --spacer-4: calc(var(--spacer-base) * 2.5);
+    --spacer-5: calc(var(--spacer-base) * 4);
 }
 
 $spacers: (

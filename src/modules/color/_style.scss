@@ -140,6 +140,8 @@ body:not([class*="theme-"]),
         }
     }
 
+    td > a, 
+    .td-content > a,
     p > a:not([class*="text-color-"]) {
         color: var(--link-color);
     }
