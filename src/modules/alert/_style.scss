@@ -15,8 +15,8 @@ In this file:
 // Scoped to Block
 
 %custom-properties {
-    --alert-padding-x: var(--spacer-3);
-    --alert-padding-y: var(--spacer-3);
+    --alert-padding-x: var(--spacer-2);
+    --alert-padding-y: var(--spacer-2);
 
     --alert-title-font-size: inherit;
     --alert-faint-fill-opacity: 0.075;
@@ -112,8 +112,8 @@ In this file:
     grid-template-columns: 1fr auto;
     
     grid-template-areas:
-            "title close"
-            "description description";
+        "title close"
+        "description description";
 
 }
 

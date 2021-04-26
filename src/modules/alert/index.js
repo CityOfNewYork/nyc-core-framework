@@ -16,9 +16,7 @@ export default class Alert {
         </button>`;
 
         alertDismissableList.forEach((alertDismissable) => {
-
-            // const alertTitleBar = alertDismissable.querySelector(".alert__title");
-
+            
             alertDismissable.insertAdjacentHTML('afterbegin', closeButtonHTML);
 
             const alertCloseButton = alertDismissable.querySelector("button");
