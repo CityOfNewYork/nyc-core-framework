@@ -73,6 +73,9 @@
                 <a href="#example-grid">Grid</a>
             </li>
             <li>
+                <a href="#example-icons">Icons</a>
+            </li>
+            <li>
                 <a href="#example-modal">Modal</a>
             </li>
             <li>
@@ -1798,6 +1801,37 @@
 
             <hr>
 
+            <section id="example-icons">
+
+                <header class="margin-y-4">
+                    <h2 class="font-weight-normal">
+                        Icons
+                    </h2>
+                </header>
+
+                <div class="container medium margin-y-4">
+
+                    <div class="form-entry margin-bottom-4">
+
+                        <div class="form-entry__field">
+                            <label class="form-entry__field__label screen-reader-only" for="core-icon-search">Search</label>
+                            <span class="form-entry__field__input">
+                                <span class="nyc_icon_search opacity-40" aria-hidden="true"></span>
+                                <input type="text" name="core-icon-search" id="core-icon-search" placeholder="Filter Icons" autocomplete="off">
+                            </span>
+                        </div>
+
+                    </div>
+                    <!-- .form-entry -->
+
+                    <div class="grid grid--gap-2 grid--cells-4 grid--cells-2--md text-align-center" id="coreIconsGrid"></div>
+
+                </div>
+
+            </section>
+
+            <hr>
+
             <section id="example-modal">
 
                 <header class="margin-y-4">
@@ -2704,23 +2738,6 @@
 
                 <figure class="container medium margin-y-4">
 
-                    <ul class="tabs-nav tabs-nav--horizontal">
-                        <li>
-                            <a href="#1" aria-current="page">
-                                Icons
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#1">
-                                Usage
-                            </a>
-                        </li>
-                    </ul>
-                    
-                </figure>
-
-                <figure class="container medium margin-y-4">
-
                     <div class="tabs" role="tablist">
 
                         <ul class="tabs-nav tabs-nav--horizontal--md">
@@ -3201,6 +3218,74 @@
                 pageLanguage: 'en'
             }, 'google_translate_element');
         }
+    </script>
+
+    <script>
+
+        const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
+        const coreIconsGridView = document.getElementById("coreIconsGrid");
+
+        let coreIconsArray = [];
+
+        const loadCoreIcons = async () => {
+            try {
+                const response = await fetch(coreIconsData);
+                const coreIconData = await response.json();
+
+                coreIconsArray = coreIconData.icons;
+
+                displayIcons(coreIconsArray);
+            
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        let currentView = "Grid";
+
+        const displayIcons = (icons) => {
+
+            const iconGridHTML = icons.map((iconArray) => {
+
+                let name = iconArray.properties.name;
+                // let tags = iconArray.icon.tags;
+
+                return `
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1 border margin-bottom-1">
+                            <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+                                <span class="nyc_icon_${name}" style="font-size: 2.25em !important;"></span>   
+                            </div>
+                        </div>
+                        <p class="font-size-sm">
+                            ${name}
+                        </p>
+                    </div>`;
+
+            }).join('');
+            
+            coreIconsGrid.innerHTML = iconGridHTML;
+        };
+
+        loadCoreIcons();
+
+        // Toggle
+        
+        const searchBar = document.getElementById('core-icon-search');
+
+        searchBar.addEventListener('keyup', (event) => {
+            const searchString = event.target.value.toLowerCase();
+            const filteredIcons = coreIconsArray.filter((iconArray) => {
+                return (
+                    iconArray.properties.name.toLowerCase().includes(searchString) ||
+                    iconArray.icon.tags.toString().includes(searchString)
+                );
+            });
+
+            displayIcons(filteredIcons);
+
+        });
+
     </script>
     
 </body>
