@@ -45,11 +45,6 @@ module.exports = merge(common, {
             template: './index.html',
             filename: 'index.html',
             inject: 'body'
-        }),
-        new HtmlWebpackPlugin({
-            template: './example-landing-page.html',
-            filename: 'example-landing-page.html',
-            inject: 'body'
         })
     ]
 });
