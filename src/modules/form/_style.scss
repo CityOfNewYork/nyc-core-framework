@@ -30,7 +30,7 @@ In this file:
 // Scoped to Root
 
 :root {
-    --form-field-padding-x: var(--spacer-3);
+    --form-field-padding-x: var(--spacer-2);
     --form-field-padding-y: var(--button-padding-y);
 
     --form-field-border-radius: 0.25em;
@@ -212,7 +212,6 @@ fieldset {
         [data-required="true"] & { 
             display: inline-block !important;
         }
-
     }
 }
 
