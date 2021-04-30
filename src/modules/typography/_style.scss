@@ -210,17 +210,46 @@ body {
 }
 
 p, 
-p ~ ul:not([class]),
+p ~ ul,
+p ~ ol,
 blockquote {
     margin-bottom: 1.5em;
 }
 
-p ~ ul:not([class]) {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+p ~ ul,
+p ~ ol {
 
     li {
         margin-bottom: var(--spacer-2);
+    }
+}
+
+p ~ ul {
+    --list-item-padding: 1em;
+
+    li {
+        margin-left: var(--list-item-padding);
+        margin-right: var(--list-item-padding);
+    }
+}
+
+ol {
+    --list-item-padding: 2em;
+    list-style: none;
+
+    counter-reset: list-item-counter;
+  
+    li {
+        position: relative;
+        counter-increment: list-item-counter;
+        padding-left: var(--list-item-padding);
+        padding-right: var(--list-item-padding);
+    }
+
+    li::before {
+        content: counters(list-item-counter, ".") ". ";
+        position: absolute;
+        left: 0;
     }
 }
 
