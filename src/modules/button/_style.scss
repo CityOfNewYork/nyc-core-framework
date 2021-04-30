@@ -24,7 +24,7 @@ In this file:
 
 :root {
     --button-padding-x: 1em;
-    --button-padding-y: 0.75em;
+    --button-padding-y: 0.625em;
 
     --button-font-weight: var(--body-font-weight-bold);
     --button-faint-fill-opacity: 0.05;
@@ -131,7 +131,7 @@ button {
         }
     }
 
-    &:not([class*="--disperse"]){
+    &:not([class*="--disperse"]) {
         .button__text {
             margin-left: 0.25em;
             margin-right: 0.25em;
