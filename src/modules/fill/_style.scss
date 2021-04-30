@@ -8,16 +8,33 @@ In this file:
 
 */
 
+
+////////////////////////////////////////
+// A. Modules
+////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoint/style" as breakpoint;
+
+////////////////////////////////////////
+// A. Variables
+////////////////////////////////////////
+
+// Scoped to Root
+
+:root {
+    --subtle-fill-opacity: 0.075;
+}
+
 // Placeholder
-
-
 
 %fill-element {
     position: absolute;
     content: "";
     top: 0;
     right: 0;
-    bottom: 0;    
+    bottom: 0;
+    left: 0;   
 }    
 
 ////////////////////////////////////////
@@ -25,7 +42,6 @@ In this file:
 ////////////////////////////////////////
 
 .subtle-fill {
-    --subtle-fill-opacity: 0.5;
     position: relative;
 
     &::before {
@@ -35,11 +51,9 @@ In this file:
         pointer-events: none;
 
         background-color: currentColor;
-        background-color: red !important;
-        opacity: var(--subtle-fill-opacity);   
+        opacity: var(--subtle-fill-opacity);    
     }
 }
-
 
 ////////////////////////////////////////
 // B. Gradient Veneer Utility

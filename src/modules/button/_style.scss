@@ -14,6 +14,11 @@ In this file:
 
 */
 
+////////////////////////////////////////
+// A. Modules
+////////////////////////////////////////
+
+@use "../fill/style" as fill;
 @use "../caret/style" as caret;
 
 //////////////////////////////////////////////
@@ -27,7 +32,7 @@ In this file:
     --button-padding-y: 0.625em;
 
     --button-font-weight: var(--body-font-weight-bold);
-    --button-faint-fill-opacity: 0.05;
+
     --button-border-radius: 0.25em;
     
     --button-outline-border-width: calc( var(--default-border-width) * 2);
@@ -69,20 +74,9 @@ button {
     border-radius: var(--button-border-radius);
     transition: opacity 0.5s ease-out;
 
-    &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"])::before {
-        position: absolute;
-        content: "";
-        
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        border-radius: inherit;
-        pointer-events: none;
-
-        background-color: currentColor;
-        opacity: var(--button-faint-fill-opacity);
+    &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"]) {
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.05;
     }
 
     &:hover, 
@@ -90,7 +84,6 @@ button {
     &:active
     {
         opacity: var(--button-opacity-hover);
-        --button-faint-fill-opacity: 0.075;
     }
 
     &:not([class*="button--icon-only"]) {

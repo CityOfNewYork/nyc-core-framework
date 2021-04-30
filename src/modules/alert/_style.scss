@@ -8,6 +8,13 @@ In this file:
 
 */
 
+
+////////////////////////////////////////
+// A. Modules
+////////////////////////////////////////
+
+@use "../fill/style" as fill;
+
 //////////////////////////////////////////////
 // A. Variables
 //////////////////////////////////////////////
@@ -41,19 +48,9 @@ In this file:
         color: inherit !important;
     }
     
-    &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"])::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        border-radius: inherit;
-        pointer-events: none;
-
-        background-color: currentColor;
-        opacity: var(--alert-faint-fill-opacity);    
+    &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"]) {
+        @extend .subtle-fill;
+        --subtle-fill-opacity: 0.125;
     }    
 
     &[class*="border"] {

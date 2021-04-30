@@ -50,7 +50,7 @@ import "./modules/flex";
 import Form from "./modules/form";
 new Form();
 
-import "./modules/gradient";
+import "./modules/fill";
 
 import "./modules/grid";
 

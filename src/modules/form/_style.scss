@@ -22,6 +22,7 @@ In this file:
 @use "../breakpoint/style" as breakpoint;
 @use "../caret/style" as caret;
 @use "../icon/style" as icon;
+@use "../fill/style" as fill;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -125,20 +126,7 @@ fieldset {
     border-radius: var(--form-field-border-radius);
     text-align: right;
     
-    &::before {
-        position: absolute;
-        content: "";
-
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        border-radius: inherit;
-        background-color: currentColor;
-        
-        opacity: 0.05;
-    }
+    @extend .subtle-fill;
 
     [dir="rtl"] & {
         text-align: left;
@@ -466,7 +454,6 @@ fieldset {
 }
 
 .file-upload__drag {
-    position: relative;
     height: 150px;
     
     border-radius: var(--form-field-border-radius);
@@ -482,24 +469,10 @@ fieldset {
 
     font-size: var(--font-size-md);
 
-    &::before {
-        position: absolute;
-        content: "";
-
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        background-color: currentColor;
-        opacity: 0.05;
-    }
+    @extend .subtle-fill;
 
     .active & {
-
-        &::before {
-            opacity: .125;
-        }
+        --subtle-fill-opacity: 0.125;
     }
 }
 
