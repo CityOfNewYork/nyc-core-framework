@@ -29,6 +29,7 @@ In this file:
     --accordion-panel-padding-y: var(--spacer-4);
     
     --accordion-active-color: currentColor;
+
     --accordion-animation: 0.2s ease-out;
 }
 
@@ -86,7 +87,9 @@ In this file:
 
 .accordion__panel {
     overflow: hidden;
+
     transition: max-height var(--accordion-animation);
+    
     max-height: 0;
 }
 

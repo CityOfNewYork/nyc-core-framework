@@ -14,8 +14,9 @@ In this file:
 
 // Scoped to root
 
-:root{
+:root {
     --caret-size: 0.25em;
+
     --caret-margin: 0.375em;
 }
 
@@ -36,8 +37,8 @@ In this file:
 
 .caret {
     display: inline-flex;
-    align-items: center;
     flex-direction: row-reverse;
+    align-items: center;
     justify-content: flex-end;
     
     &::before {
@@ -47,8 +48,10 @@ In this file:
         content: "";
         
         display: inline-block;
-        color: inherit;
+
         margin-left: var(--caret-margin);
+        
+        color: inherit;
     }
 
     [dir="rtl"] & {
