@@ -8,6 +8,8 @@ import "element-closest-polyfill";
 // Modules
 //////////////////////////////////////////////
 
+import "./modules/accents";
+
 import Accessibility from "./modules/accessibility/";
 new Accessibility();
 
@@ -50,7 +52,6 @@ import "./modules/flex";
 import Form from "./modules/form";
 new Form();
 
-import "./modules/fill";
 
 import "./modules/grid";
 

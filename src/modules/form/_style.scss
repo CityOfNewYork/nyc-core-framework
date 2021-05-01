@@ -19,10 +19,10 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
+@use "../accents/style" as accents;
 @use "../breakpoint/style" as breakpoint;
 @use "../caret/style" as caret;
 @use "../icon/style" as icon;
-@use "../fill/style" as fill;
 
 //////////////////////////////////////////////
 // B. Variables

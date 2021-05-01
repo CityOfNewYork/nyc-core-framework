@@ -3,7 +3,10 @@
 In this file:
 
 // A. Modules
-// B. Gradient Veneer Utility
+// B. Variables
+// C. Placeholders
+// D. Subtle Fill Utility
+// E. Gradient Veneer Utility
 // C. Gradient Veneer Modifiers
 
 */
@@ -26,7 +29,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// C. Placeholder
+// C. Placeholders
 ////////////////////////////////////////
 
 %subtle-fill-psuedo {
@@ -49,7 +52,7 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Subtle Fill Utility
+// D. Subtle Fill Utility
 ////////////////////////////////////////
 
 .subtle-fill {
@@ -57,13 +60,13 @@ In this file:
 }
 
 ////////////////////////////////////////
-// B. Gradient Veneer Utility
+// E. Gradient Veneer Utilites
 ////////////////////////////////////////
 
 [class*="gradient-veneer"] {
-    --gradient-direction: to bottom;
     --gradient-start: 50%;
     --gradient-opacity: 1;
+    --gradient-direction: to bottom;
 
     position: relative;
 
@@ -98,10 +101,6 @@ In this file:
         --gradient-direction: to left;
     }
 }
-
-////////////////////////////////////////
-// C. Gradient Veneer Modifiers
-////////////////////////////////////////
 
 .gradient-veneer-top {
     --gradient-direction: to top;
