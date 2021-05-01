@@ -49,7 +49,7 @@ In this file:
     
     &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"]) {
         @extend %subtle-fill-psuedo;
-        --subtle-fill-opacity: 0.125;
+        --subtle-fill-opacity: 0.1;
     }    
 
     &[class*="border"] {
