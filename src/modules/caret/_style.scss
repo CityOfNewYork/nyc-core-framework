@@ -34,7 +34,7 @@ In this file:
 // C. Caret Utility
 ////////////////////////////////////////
 
-.has-caret {
+.caret {
     display: inline-flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -52,8 +52,6 @@ In this file:
     }
 
     [dir="rtl"] & {
-        justify-content: flex-start;
-        
         &::before {
             margin-left: unset;
             margin-right: var(--caret-margin);

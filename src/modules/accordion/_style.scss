@@ -44,14 +44,6 @@ In this file:
 // D. Accordion Elements
 //////////////////////////////////////////////
 
-.accordion__button{
-    padding: var(--accordion-button-padding-y) var(--accordion-button-padding-y);
-} 
-
-.accordion__panel__content {
-    padding: var(--accordion-panel-padding-y) var(--accordion-panel-padding-x);
-}
-
 .accordion__button {
     position: relative;
     
@@ -60,11 +52,13 @@ In this file:
 
     width: 100%;
 
+    padding: var(--accordion-button-padding-y) var(--accordion-button-padding-y);
+
     margin-bottom: 0;
 
-    text-align: inherit;
-    
     cursor: pointer;
+
+    @extend .caret;
 
     &:not(:first-child){
         border-top-width: var(--default-border-width);
@@ -72,16 +66,14 @@ In this file:
         border-top-color: inherit;
     }
 
-    @extend .has-caret;
-
-    &::before{
-       transition: transform var(--accordion-animation);
-    }
-
     &:not([aria-expanded="true"])::before {
         transform: rotate(0deg);
     }
     
+    &::before {
+       transition: transform var(--accordion-animation);
+    }
+
     &[aria-expanded="true"] {
         text-decoration: underline;
         color: var(--accordion-active-color);
@@ -96,4 +88,8 @@ In this file:
     overflow: hidden;
     transition: max-height var(--accordion-animation);
     max-height: 0;
+}
+
+.accordion__panel__content {
+    padding: var(--accordion-panel-padding-y) var(--accordion-panel-padding-x);
 }

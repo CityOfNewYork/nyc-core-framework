@@ -446,7 +446,7 @@ In this file:
     
     > li:not(:last-child) {
         
-        @extend .has-caret;
+        @extend .caret;
         
         &::before {
             margin-left: var(--gap-size) !important;
@@ -461,7 +461,7 @@ In this file:
 ////////////////////////////////////////
 
 [data-toggle="dropdown"]:not([class*="button--icon-only"]) {    
-    @extend .has-caret;
+    @extend .caret;
 
     &[aria-expanded="true"]::before {
         transform: rotate(180deg);
