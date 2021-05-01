@@ -21,7 +21,7 @@ In this file:
 
 // Scoped to Block
 
-%custom-properties {
+%article-vars {
     --article-sidebar-width: 340px;
 }
 
@@ -30,7 +30,7 @@ In this file:
 //////////////////////////////////////////////
 
 .article {
-    @extend %custom-properties;
+    @extend %article-vars;
     
     display: grid;
 }

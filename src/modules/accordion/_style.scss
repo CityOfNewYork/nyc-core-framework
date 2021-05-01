@@ -59,9 +59,11 @@ In this file:
     justify-content: space-between;
 
     width: 100%;
+
     margin-bottom: 0;
 
     text-align: inherit;
+    
     cursor: pointer;
 
     &:not(:first-child){

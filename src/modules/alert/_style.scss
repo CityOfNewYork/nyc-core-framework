@@ -2,8 +2,9 @@
 
 In this file:
 
-// A. Variables
-// B. Alert Block
+// A. Modules
+// B. Variables
+// C. Alert Block
 // C. Alert Elements
 
 */
@@ -15,7 +16,7 @@ In this file:
 @use "../accents/style" as accents;
 
 //////////////////////////////////////////////
-// A. Variables
+// B. Variables
 //////////////////////////////////////////////
 
 // Scoped to Block
@@ -31,7 +32,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Alert Block
+// C. Alert Block
 //////////////////////////////////////////////
 
 .alert {
@@ -58,7 +59,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// C. Alert Elements
+// D. Alert Elements
 //////////////////////////////////////////////
 
 .alert__title, 
@@ -93,6 +94,7 @@ In this file:
 
 .alert__title__text {
     font-weight: var(--body-font-weight-bold);
+
     margin-left: var(--spacer-2);
     margin-right: var(--spacer-2);
 }
@@ -102,6 +104,10 @@ In this file:
         margin-bottom: 0.5em;
     }
 }
+
+//////////////////////////////////////////////
+// D. Alert Dismissable
+//////////////////////////////////////////////
 
 .alert--dismissable { 
     display: grid;
@@ -135,6 +141,7 @@ In this file:
 }
 
 @keyframes fadeOut {
+
   from {
       opacity: 1;
   }
@@ -142,4 +149,5 @@ In this file:
   to {
     opacity: 0;
   }
+  
 }
