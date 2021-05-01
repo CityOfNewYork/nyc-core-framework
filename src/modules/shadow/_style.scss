@@ -21,8 +21,9 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-%custom-properties {
+%box-shadow-vars {
     --base-shadow-unit: 1rem;
+
     --base-shadow-opacity: 0.125;
 }
 
@@ -36,7 +37,7 @@ In this file:
 
 body:not([class*="box-shadow-"]),
 [class*="box-shadow-"] {
-    @extend %custom-properties;
+    @extend %box-shadow-vars;
 
     --shadow-opacity: 0;
 
@@ -87,6 +88,7 @@ body:not([class*="box-shadow-"]){
 screen and (-ms-high-contrast: none) {
     [class*="box-shadow"] {
         --base-shadow-opacity: 0.25;
+
        box-shadow:0 0 1.5rem hsla(0, 0%, 0%, var(--base-shadow-opacity));
     }
 }

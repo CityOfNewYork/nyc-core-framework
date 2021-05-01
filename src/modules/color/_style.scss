@@ -131,7 +131,9 @@ $theme-colors: (
 body:not([class*="theme-"]),
 [class*="theme-"] {
     background-color: var(--background-color);
+
     color: var(--text-color);
+    
     border-color: var(--border-color);
 
     * {
@@ -163,13 +165,15 @@ body:not([class*="theme-"]),
     }
 
     // Alerts
+
     .alert--confirm {
         color: var(--confirm-color);
     }
 
     .alert--confirm--inverse {
-        color: var(--background-color);
         background-color: var(--confirm-color);
+
+        color: var(--background-color);
     }
     
     .alert--warn,
@@ -185,13 +189,14 @@ body:not([class*="theme-"]),
     }
 
     .alert--warn--inverse {
-        color: var(--background-color);
         background-color: var(--warn-color);
+
+        color: var(--background-color);
     }
 
     // Gradient Veneer
 
-    [class*="gradient-veneer"]{
+    [class*="gradient-veneer"] {
         --gradient-color: var(--background-color);
     }
 }

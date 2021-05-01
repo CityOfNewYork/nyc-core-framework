@@ -30,8 +30,8 @@ p > a {
 
 .expanded-link {
     &::before {
-        content: "";
         position: absolute;
+        content: "";
         top: 0;
         right: 0;
         bottom: 0;

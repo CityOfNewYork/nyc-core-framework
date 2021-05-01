@@ -172,16 +172,18 @@ button {
     --button-tooltip-background: hsla(0, 0%, 0%, 0.9);
 
     position: absolute;
-    top: -75000px;
+    top: -150000px;
     left: 50%;
 
     transform: translateX(-50%);
 
     display: block;
 
-    white-space: nowrap;
-
     margin-top: var(--spacer-2);
+
+    padding: 0.5em 1em;
+
+    border-radius: inherit;
 
     background-color: var(--button-tooltip-background);
 
@@ -189,9 +191,7 @@ button {
 
     font-size: var(--font-size-sm);
 
-    padding: 0.5em 1em;
-
-    border-radius: inherit;
+    white-space: nowrap;
 
     pointer-events: none;
 
@@ -236,10 +236,10 @@ button {
     display: flex;
     justify-content: center;
 
-    min-height: var(--button--icon-only-size);
-    
     margin-left: calc(var(--gap-size) * -0.5);
     margin-right: calc(var(--gap-size) * -0.5);
+
+    min-height: var(--button--icon-only-size);
 
     > [class*="button"], 
     button {

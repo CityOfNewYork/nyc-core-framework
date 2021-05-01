@@ -43,13 +43,16 @@ In this file:
         position: relative;
 
         &::before {
-            content: "";
             position: absolute;
+            content: "";
             top: 0;
             right: 0;
             left: 0;
+
             height: var(--tab-accent-bar-size);
+            
             background-color: currentColor;
+            
             opacity: 0.125;
         }
     }
@@ -57,20 +60,26 @@ In this file:
     > li > a,
     > li > button {
         position: relative;
-        padding: var(--tab-button-padding-y) var(--tab-button-padding-x);
-
+        
         display: block;
+
         width: 100%;
+        
+        padding: var(--tab-button-padding-y) var(--tab-button-padding-x);
+        
         text-align: center;
     
         &::before {
-            content: "";
             position: absolute;
+            content: "";
             top: 0;
             right: 0;
-            height: var(--tab-accent-bar-size);
             left: 0;
+
+            height: var(--tab-accent-bar-size);
+            
             background-color: currentColor;
+            
             opacity: 0.0625;
         }
     }
@@ -81,6 +90,7 @@ In this file:
 
         &::before {
             height: var(--tab-accent-bar-size);
+            
             opacity: 1;
         }
     }

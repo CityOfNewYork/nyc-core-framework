@@ -25,7 +25,9 @@ In this file:
     --container-padding-x: var(--spacer-3);
 
     --narrow-width: 40rem; // Approximately 55 characters wide for readability
+    
     --medium-width: calc( var(--narrow-width) * 1.75);
+    
     --wide-width: calc( var(--narrow-width) * 2.5);
 }
 

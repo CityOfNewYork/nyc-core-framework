@@ -1,4 +1,31 @@
+/*
+
+In this file:
+
+// A. Overflow Utilities
+
+*/
+
+//////////////////////////////////////////////
+// A. Overflow Utilities
+//////////////////////////////////////////////
+
+.overflow-visible {
+    overflow: visible;
+}
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+
+.overflow-auto {
+    overflow: auto;
 }

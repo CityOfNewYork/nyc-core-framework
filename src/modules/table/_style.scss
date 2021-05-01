@@ -34,7 +34,9 @@ In this file:
 
 .table {
     table-layout: fixed;
+
     width: 100%;
+    
     border-collapse: collapse;
 
     font-size: var(--font-size-md);
@@ -42,19 +44,23 @@ In this file:
     caption-side: bottom;
 
     caption {
-        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
-        text-align: start;
-        opacity: 0.75;
-        font-size: var(--font-size-sm);
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
+
+        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+        
+        font-size: var(--font-size-sm);
+        
+        text-align: start;
+        
+        opacity: 0.75;
     }
 
     th, 
     td {
+        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
         text-align: inherit;
         vertical-align: top;
-        padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
     }
 
     td {
@@ -63,6 +69,7 @@ In this file:
     }
 
     thead {
+
         th {
             vertical-align: bottom;
         }
@@ -104,6 +111,7 @@ In this file:
 }
 
 [dir="ltr"] .table--edge {
+
     th,
     td {
         &:first-child {
@@ -117,6 +125,7 @@ In this file:
 }
 
 [dir="rtl"] .table--edge {
+
     th,
     td {
         &:first-child {
@@ -194,17 +203,24 @@ In this file:
 
     .table-scroll__help {
         position: relative;
-        z-index: 400;
-        margin-bottom: 0.5rem;
-        opacity: 0.75;
-        font-size: var(--font-size-sm);
 
         display: none;
+        
+        z-index: 400;
+        
+        margin-bottom: 0.5rem;
+        
+        opacity: 0.75;
+        
+        font-size: var(--font-size-sm);
+
     }
 
     .table-scroll__container {
         position: relative;
+
         overflow: auto;
+        
         max-width: 100%;
 
         table {
@@ -220,13 +236,13 @@ In this file:
             bottom: 0;
             left: 50%;
 
-            pointer-events: none;
+            display: none;
             
             -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
             
+            pointer-events: none;
+            
             z-index: 600;
-
-            display: none;
         }
 
         &[data-scrolling=true]::after{
