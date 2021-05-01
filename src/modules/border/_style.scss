@@ -3,10 +3,10 @@
 In this file:
 
 // A. Modules
-// A. Variables
-// B. Responsive Border Utilies
-// C. Border Color Utilities
-// D. Border Radius Utilities
+// B. Variables
+// C. Border Utilies
+// D. Border Color Utilities
+// E. Border Radius Utilities
 
 */
 
@@ -22,6 +22,8 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
+// Scoped to Root
+
 :root {
     --default-border-width: 1px;
     --default-border-style: solid;
@@ -32,11 +34,6 @@ In this file:
 //////////////////////////////////////////////
 // C. Border Utilies
 //////////////////////////////////////////////
-
-hr {
-    border-top-width: var(--default-border-width);
-    border-top-style: var(--default-border-style);
-}
  
 [class*="border"]:not([class*="theme-"]){
     border-color: inherit;
@@ -130,7 +127,7 @@ hr {
 // E. Border Radius Utilities
 //////////////////////////////////////////////
 
-[class*="rounded"]{
+[class*="border-radius"]{
     overflow: hidden;
 }
 
@@ -138,35 +135,35 @@ hr {
     @include breakpoint.breakpoints-up($breakpoint) {
         $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
 
-        .rounded#{$mod} {
+        .border-radius#{$mod} {
             border-radius: var(--border-radius);
         }
 
-        .rounded-top#{$mod} {
+        .border-radius-top#{$mod} {
             border-top-left-radius: var(--border-radius);
             border-top-right-radius: var(--border-radius);
         }
 
-        .rounded-right#{$mod} {
+        .border-radius-right#{$mod} {
             border-top-right-radius: var(--border-radius);
             border-bottom-right-radius: var(--border-radius);
         }
 
-        .rounded-bottom#{$mod} {
+        .border-radius-bottom#{$mod} {
             border-bottom-right-radius: var(--border-radius);
             border-bottom-left-radius: var(--border-radius);
         }
 
-        .rounded-left#{$mod} {
+        .border-radius-left#{$mod} {
             border-top-left-radius: var(--border-radius) !important;
             border-bottom-left-radius: var(--border-radius) !important;
         }
 
-        .rounded-pill#{$mod} {
+        .border-radius-pill#{$mod} {
             border-radius: 40rem;
         }
 
-        .rounded-circle#{$mod} {
+        .border-radius-circle#{$mod} {
             border-radius: 100%;
         }
 

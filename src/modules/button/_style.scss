@@ -29,6 +29,7 @@ In this file:
 
 :root {
     --button-padding-x: 1em;
+    
     --button-padding-y: 0.625em;
 
     --button-font-weight: var(--body-font-weight-bold);
@@ -65,13 +66,19 @@ button {
     --button-opacity-hover: 0.75;
 
     position: relative;
+
     display: inline-block;
-    text-align: center;
+    
     vertical-align: middle;
+    
     line-height: normal;
+    
+    text-align: center;
+    
     cursor: pointer;
 
     border-radius: var(--button-border-radius);
+
     transition: opacity 0.5s ease-out;
 
     &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"]) {
@@ -144,6 +151,7 @@ button {
 .button--icon-only {
     display: inline-flex;
     flex-shrink: 0;
+
     align-items: center;
     justify-content: center;
 
@@ -152,6 +160,7 @@ button {
 
     [class*="_icon"] {
         --icon-size: 1.25em;
+
         display: flex;
     }
 }
@@ -166,15 +175,18 @@ button {
     position: absolute;
     top: -75000px;
     left: 50%;
+
     transform: translateX(-50%);
 
     display: block;
+
     white-space: nowrap;
 
     margin-top: var(--spacer-2);
 
-    color: white;
     background-color: var(--button-tooltip-background);
+
+    color: white;
 
     font-size: var(--font-size-sm);
 
@@ -244,6 +256,7 @@ button {
         padding-bottom: unset;
 
         min-height: 100%;
+
         font-size: 80%; 
     }
 }

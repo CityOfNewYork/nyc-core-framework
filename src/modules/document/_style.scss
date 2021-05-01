@@ -8,7 +8,7 @@ In this file:
 // D. Border Box
 // E. HTML
 // F. Body
-// G. Last Child Margin Bottom
+// G. Horizontal Rule
 
 */
 
@@ -97,6 +97,7 @@ html {
 
     font-size: 1rem;
     line-height: 1.125;
+
     text-size-adjust: 100%;
 
     scroll-behavior: smooth;
@@ -121,4 +122,13 @@ body {
 
     @extend .margin-x-auto;
     @extend .theme-white;
+}
+
+////////////////////////////////////////
+// G. Horizontal Rule 
+////////////////////////////////////////
+
+hr {
+    border-top-width: var(--default-border-width);
+    border-top-style: var(--default-border-style);
 }
