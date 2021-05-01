@@ -25,9 +25,11 @@ In this file:
 //////////////////////////////////////////////
 
 .card {
+    position: relative;
+
     display: flex;
     flex-direction: column;
-    position: relative;
+    
     height: 100%;
 }
 
@@ -36,8 +38,9 @@ In this file:
 //////////////////////////////////////////////
 
 .card__head {
-    font-size: var(--font-size-sm);
     padding: calc( var(--card-padding-y) * 0.5) var(--card-padding-x);
+    
+    font-size: var(--font-size-sm);
 }
 
 .card__body,
