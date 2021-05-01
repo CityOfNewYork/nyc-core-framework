@@ -21,8 +21,7 @@ In this file:
 
 // Scoped to Block
 
-%custom-properties {
-    
+%accordion-vars {
     --accordion-button-padding-x: var(--spacer-3);
     --accordion-button-padding-y: var(--button-padding-y);
 
@@ -38,7 +37,7 @@ In this file:
 //////////////////////////////////////////////
 
 .accordion {
-    @extend %custom-properties;
+    @extend %accordion-vars;
 }
 
 //////////////////////////////////////////////
@@ -59,10 +58,10 @@ In this file:
     display: flex;
     justify-content: space-between;
 
-    margin-bottom: 0;
-    text-align: inherit;
     width: 100%;
+    margin-bottom: 0;
 
+    text-align: inherit;
     cursor: pointer;
 
     &:not(:first-child){

@@ -20,7 +20,7 @@ In this file:
 
 // Scoped to Block
 
-%custom-properties {
+%alert-vars {
     --alert-padding-x: var(--spacer-2);
     --alert-padding-y: var(--spacer-2);
 
@@ -35,7 +35,7 @@ In this file:
 //////////////////////////////////////////////
 
 .alert {
-    @extend %custom-properties;
+    @extend %alert-vars;
     
     position: relative;
     
@@ -43,10 +43,6 @@ In this file:
 
     border-radius: var(--alert-border-radius);
 
-    a {
-        color: inherit !important;
-    }
-    
     &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"]) {
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.1;
@@ -56,6 +52,9 @@ In this file:
         border-color: currentColor !important;
     }
 
+    a {
+        color: inherit !important;
+    }
 }
 
 //////////////////////////////////////////////
@@ -68,17 +67,34 @@ In this file:
 }
 
 .alert__title {
+    display: flex;
+    align-items: center;
+
     font-size: var(--alert-title-font-size);
     
     &:not(:last-child) {
         margin-bottom: 0.25em;
     }
+
+    [class*="icon_"] {
+        --icon-size: 1.25em;
+    }
+
+    &.text-align-center,
+    .text-align-center & {
+        justify-content: center;
+    }
+
+    &.text-align-right,
+    .text-align-right & {
+        justify-content: flex-end;
+    }
 }
 
 .alert__title__text {
     font-weight: var(--body-font-weight-bold);
-    margin-left: var(--spacer-1);
-    margin-right: var(--spacer-1);
+    margin-left: var(--spacer-2);
+    margin-right: var(--spacer-2);
 }
 
 .alert__description {
