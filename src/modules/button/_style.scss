@@ -75,7 +75,7 @@ button {
     transition: opacity 0.5s ease-out;
 
     &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"]) {
-        @extend .subtle-fill;
+        @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.05;
     }
 

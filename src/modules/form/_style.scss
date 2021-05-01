@@ -126,7 +126,7 @@ fieldset {
     border-radius: var(--form-field-border-radius);
     text-align: right;
     
-    @extend .subtle-fill;
+    @extend %subtle-fill-psuedo;
 
     [dir="rtl"] & {
         text-align: left;
@@ -469,7 +469,7 @@ fieldset {
 
     font-size: var(--font-size-md);
 
-    @extend .subtle-fill;
+    @extend %subtle-fill-psuedo;
 
     .active & {
         --subtle-fill-opacity: 0.125;

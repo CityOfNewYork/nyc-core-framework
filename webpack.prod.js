@@ -4,7 +4,7 @@ const common = require('./webpack.common.js');
 const path = require('path');
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
@@ -64,7 +64,7 @@ module.exports = merge(common, {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
-        }), 
-        new OptimizeCssAssetsPlugin()
+        }),
+        new CssMinimizerPlugin()
     ]
 });

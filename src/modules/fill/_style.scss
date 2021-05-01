@@ -8,7 +8,6 @@ In this file:
 
 */
 
-
 ////////////////////////////////////////
 // A. Modules
 ////////////////////////////////////////
@@ -17,7 +16,7 @@ In this file:
 @use "../breakpoint/style" as breakpoint;
 
 ////////////////////////////////////////
-// A. Variables
+// B. Variables
 ////////////////////////////////////////
 
 // Scoped to Root
@@ -26,26 +25,20 @@ In this file:
     --subtle-fill-opacity: 0.075;
 }
 
-// Placeholder
-
-%fill-element {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;   
-}    
-
 ////////////////////////////////////////
-// B. Subtle Fill Utility
+// C. Placeholder
 ////////////////////////////////////////
 
-.subtle-fill {
+%subtle-fill-psuedo {
     position: relative;
 
     &::before {
-        @extend %fill-element;
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;   
 
         border-radius: inherit;
         pointer-events: none;
@@ -53,6 +46,14 @@ In this file:
         background-color: currentColor;
         opacity: var(--subtle-fill-opacity);    
     }
+}
+
+////////////////////////////////////////
+// B. Subtle Fill Utility
+////////////////////////////////////////
+
+.subtle-fill {
+    @extend %subtle-fill-psuedo;
 }
 
 ////////////////////////////////////////
@@ -66,8 +67,13 @@ In this file:
 
     position: relative;
 
-    &::after {
-        @extend %fill-element;
+    &::after {        
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
         background: linear-gradient( var(--gradient-direction), hsla(0, 0%, 100%, 0) var(--gradient-start), var(--gradient-color) );
         background-clip: border-box;
