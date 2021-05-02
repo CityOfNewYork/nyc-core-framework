@@ -71,7 +71,7 @@ In this file:
 .nav:not([class*="nav--divider"]):not([class*="nav--breadcrumb"]) {
 
     > li:not(:last-child) {
-        margin-bottom: calc(var(--nav-gap));
+        margin-bottom: var(--nav-gap);
     }
 
     > li > .button {
@@ -105,21 +105,16 @@ In this file:
         $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
 
         .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
-
-            &:not([class*="nav--gap"]){
-                --nav-gap: 1.5em;
-            }
-        
             display: flex;
             flex-direction: row;
             align-items: center;
 
-            margin-left: calc(var(--nav-gap) * -0.5);
-            margin-right: calc(var(--nav-gap) * -0.5);
+            margin-left: calc(var(--nav-gap) * -1);
+            margin-right: calc(var(--nav-gap) * -1);
 
             > li {
-                margin-left: calc(var(--nav-gap) * 0.5);
-                margin-right: calc(var(--nav-gap) * 0.5);
+                margin-left: var(--nav-gap);
+                margin-right: var(--nav-gap);
                 margin-bottom: 0 !important;
             }
 
@@ -158,12 +153,9 @@ In this file:
     > li > button {
         position: relative;
 
+        display: flex;
+        
         width: 100%;
-    }
-
-    > li > a:not([data-toggle="dropdown"]), 
-    > li > button:not([data-toggle="dropdown"]) {
-        display: block;
     }
 
     > li > a, 
@@ -195,11 +187,9 @@ In this file:
                 flex: 1;
 
                 border-bottom-style: none !important;
-                
-                text-align: center;
             }
 
-            > li:not(:last-child){
+            > li:not(:last-child) {
                 border-right-width: var(--default-border-width);
                 border-right-style: var(--default-border-style);
 
@@ -210,7 +200,8 @@ In this file:
                 }
             }
 
-            [data-toggle="dropdown"] {
+            > li > a, 
+            > li > button {
                 justify-content: center;
             }
 
@@ -327,9 +318,8 @@ In this file:
 .nav__dropdown {
     --dropdown-z-index: 1200;
 
-    @extend .nav;
-
     position: static;
+
     top: 100%;
 
     width: 100%;
@@ -350,6 +340,10 @@ In this file:
 
     &.shown {
         display: block;
+    }
+
+    > li:not(:last-child) {
+        margin-bottom: var(--nav-gap);
     }
 }
 
@@ -452,16 +446,12 @@ In this file:
 
 .primary-nav__menu {
 
-    > ul { 
-        @extend %nav-vars;
-    }
-
     > ul > li {
         position: relative;
+            background-color: aqua;
 
         &:not(:last-child) {
             margin-bottom: var(--nav-gap);
-            background-color: aqua
         }
     }
 
@@ -546,13 +536,6 @@ In this file:
                 padding: unset;
             }
 
-
-            > [class*="__menu"] > ul > li > a {
-                text-align: center;
-                color: red !important;
-        padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
-            }
-
             > [class*="__menu"] > ul {
                 display: flex;
                 flex-direction: row;
@@ -578,10 +561,11 @@ In this file:
                 }
 
                 > li > a {
-                    text-align: center;
-                    display: block;
                     width: 100%;
-                    background-color: violet;
+                    
+                    padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
+                    
+                    text-align: center;
                 }
 
                 [data-toggle="dropdown"] {
