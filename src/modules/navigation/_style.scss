@@ -154,7 +154,7 @@ In this file:
         position: relative;
 
         display: flex;
-        
+
         width: 100%;
     }
 
@@ -361,8 +361,6 @@ In this file:
     align-items: center;
 
     z-index: 1000;
-
-    background-color: antiquewhite;
     
     ul {
         @extend %list-style-nav;
@@ -433,6 +431,7 @@ In this file:
     
     > [class*="__actions"] {
         padding: calc(var(--primary-nav-padding) * 0.5) var(--primary-nav-padding);
+        
         justify-content: space-between;
     }
 
@@ -448,7 +447,6 @@ In this file:
 
     > ul > li {
         position: relative;
-            background-color: aqua;
 
         &:not(:last-child) {
             margin-bottom: var(--nav-gap);
@@ -503,8 +501,8 @@ In this file:
                     > li {
                         display: flex;
 
-                        margin-left: calc(var(--nav-gap) * 0.5);
-                        margin-right: calc(var(--nav-gap) * 0.5);
+                        margin-left: var(--nav-gap);
+                        margin-right: var(--nav-gap);
                         margin-bottom: 0 !important;
                     }
 
@@ -512,6 +510,9 @@ In this file:
                         position: absolute;
 
                         min-width: 200px;
+                        padding: var(--nav-gap);
+                        margin-left: calc(var(--nav-gap) * -1);
+                        margin-right: calc(var(--nav-gap) * -1);
                     }
 
                     > li > a {
@@ -544,9 +545,18 @@ In this file:
                 > li {
                     display: flex;
                     flex: 1;
+
                     margin-bottom: unset !important;
+                    
                     border-bottom-style: none !important;
+                    
                     text-align: center;
+                }
+
+                > li > a, 
+                > li > button,
+                > li > .nav__dropdown {
+                    padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
                 }
 
                 > li:not(:last-child){
@@ -574,7 +584,9 @@ In this file:
 
                 .nav__dropdown {
                     position: absolute;
+
                     width: 100%;
+                    
                     left: 0;
 
                     [dir="rtl"] & {
