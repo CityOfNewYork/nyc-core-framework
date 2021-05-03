@@ -5,10 +5,12 @@ In this file:
 // A. Modules
 // B. Variables
 // C. Selector Resets
-// D. Form Entry Block
-// E. Form Entry Elements
-// F. Form Entry Modifiers
-// G. Browser Behavior Modifications
+// D. Required Indicator
+// E. Form Entry Block
+// F. Form Entry Elements
+// G. Form Feedback
+// H. File Upload
+
 // H. Form Entry within Nav
 // I. Form Feedback and Alerts
 
@@ -48,8 +50,7 @@ input[type="email"],
 input[type="password"],
 input[type="search"],
 select,
-textarea
-{
+textarea {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -94,18 +95,16 @@ legend {
     display: table;
     width: 100%;
     max-width: 100%;
+    float: left;
     margin: 0;
     padding: 0;
-    float: left;
+    color: inherit;
+    line-height: normal;
+    white-space: normal;
 
     + * {
         clear: both;
     }
-
-    color: inherit;
-
-    line-height: normal;
-    white-space: normal;
 }
 
 fieldset {
@@ -117,7 +116,7 @@ fieldset {
 }
 
 //////////////////////////////////////////////
-// D. Form Entry Block
+// D. Required Indicator
 //////////////////////////////////////////////
 
 .required-indicator {
@@ -139,15 +138,19 @@ fieldset {
     opacity: 0.8;
 }
 
+//////////////////////////////////////////////
+// E. Form Entry Block
+//////////////////////////////////////////////
+
 .form-entry {
 
     select,
     textarea,
     input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
-        color: inherit;
-        background-color: transparent;
-        border-radius: inherit;
         border: 0;
+        border-radius: inherit;
+        background-color: transparent;
+        color: inherit;
         width: 100%;
     }
 
@@ -171,7 +174,7 @@ fieldset {
 }
 
 //////////////////////////////////////////////
-// E. Form Entry Elements
+// F. Form Entry Elements
 //////////////////////////////////////////////
 
 .form-entry__field {
@@ -189,13 +192,10 @@ fieldset {
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
 
-
-    // Required Asterisk
-    
     &::after {
+        display: none;
         content: "*";
         margin: auto 0.25rem;
-        display: none;
 
         [data-required="true"] & { 
             display: inline-block !important;
@@ -213,6 +213,7 @@ fieldset {
     position: relative;
 
     border-radius: var(--form-field-border-radius);
+
     overflow: hidden;
 
     select, 
@@ -224,22 +225,24 @@ fieldset {
     }
 
     &::after {
-        content: "";
         position: absolute;
+        content: "";
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
 
         border-radius: inherit;
+
         pointer-events: none;
         
         box-shadow: inset 0 0 0 var(--default-border-width) currentColor;
+        
         transition: box-shadow 200ms;
     }
 
     [dir="rtl"] & {
-        > [class*="nyc_icon"] {
+        > [class*="icon_"] {
             margin-left: unset;
             margin-right: var(--form-field-padding-x);
         }
@@ -259,16 +262,16 @@ fieldset {
     }
 
     > [class*="button--icon-only"] {
+        align-self: stretch;
+
         height: unset;
         width: unset;
 
         padding-left: var(--form-field-padding-x);
         padding-right: var(--form-field-padding-x);
-        
-        align-self: stretch;
     }
 
-    > [class*="nyc_icon"],
+    > [class*="icon_"],
     > .button-group
     {
         margin-left: var(--form-field-padding-x);
@@ -276,25 +279,30 @@ fieldset {
 
     > .button-group {
         margin-right: calc(var(--form-field-padding-x) * 0.5);
+
         font-size: 75%;
     }
-
 }
+
+// Search in Nav
 
 [class*="primary-nav"] .form-entry__field__input::after {
     display: none;
 }
 
-.active .form-entry__field__select::after,
-.active .form-entry__field__input::after,
-.active .form-entry__option > div > label::after {
-    box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
+// Active Fields
+
+.active {
+    .form-entry__field__select::after,
+    .form-entry__field__input::after,
+    .form-entry__option > div > label::after {
+        box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
+    }
 }
 
 // Floating Labels
 
 .form-entry__field--float {
-
     position: relative;
 
     .form-entry__field__label {
@@ -305,10 +313,10 @@ fieldset {
         left: 0;
         z-index: 1000;
 
-        pointer-events: none;
+        padding-top: var(--form-field-padding-y);
+        padding-bottom: var(--form-field-padding-y);
 
-        padding-top: var(--form-field-padding-x);
-        padding-bottom: var(--form-field-padding-x);
+        pointer-events: none;
     }
 
     .active &, 
@@ -319,8 +327,8 @@ fieldset {
             input,
             textarea
             {
-                padding-top: calc( var(--form-field-padding-x) * 1.5);
-                padding-bottom: calc( var(--form-field-padding-x) * 0.5);
+                padding-top: calc( var(--form-field-padding-y) * 1.5);
+                padding-bottom: calc( var(--form-field-padding-y) * 0.5);
             }
 
             select option:first-child {
@@ -329,11 +337,12 @@ fieldset {
         }
 
         .form-entry__field__label {
-            padding: 0;
 
             top: calc( var(--form-field-padding-y) * 0.5);
             right: unset;
             bottom: unset;
+
+            padding: 0;
             
             margin-left: var(--form-field-padding-x);
             margin-right: var(--form-field-padding-x);
@@ -349,11 +358,15 @@ fieldset {
     }
 }
 
-.form-entry__field__help {
-    font-size: 0.8em;
+// Floating Labels
+
+.form-entry__field__help {    
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
+
     margin-top: var(--spacer-2);
+    
+    font-size: 0.8em;
 }
 
 .form-entry__field__select {
@@ -364,7 +377,6 @@ fieldset {
 
         position: absolute;
         content: "";
-        
         right: 0;
         top: 50%;
         
@@ -384,7 +396,7 @@ fieldset {
 }
 
 //////////////////////////////////////////////
-// F. Form Feedback and Alerts
+// G. Form Feedback
 //////////////////////////////////////////////
 
 [data-alert="form-errors"],
@@ -397,12 +409,14 @@ fieldset {
 
     padding-left: var(--form-field-padding-x);
     padding-right: var(--form-field-padding-x);
+
     margin-top: 0.5rem;
 
     > small {
-        font-size: 80%;
         display: flex;
         align-items: center;
+
+        font-size: 80%;
     }
 
     > small > strong {
@@ -412,16 +426,18 @@ fieldset {
 }
 
 .is-invalid {
+
     .form-entry__field__help {
         display: none;
     }
+    
     .form-entry__feedback {
         display: block;
     }
 }
 
 //////////////////////////////////////////////
-// C. File Upload
+// H. File Upload
 //////////////////////////////////////////////
 
 .file-upload {
@@ -431,9 +447,10 @@ fieldset {
     flex-direction: column;
 
     width: 100%;
+
     overflow: hidden;
 
-    padding: var(--form-field-padding-y) var(--form-field-padding-x);
+    padding: var(--form-field-padding-x);
 
     cursor: pointer;
 }
@@ -441,29 +458,31 @@ fieldset {
 .file-upload__input {
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
 
-    opacity: 0.01;
     width: 100%;
-    
+
     z-index: 25;
+    
+    opacity: 0.01;
 
     cursor: pointer;
 }
 
 .file-upload__drag {
-    height: 150px;
-    
-    border-radius: var(--form-field-border-radius);
-    margin-bottom: var(--form-field-padding-y);
-    
     display: flex;
     align-items: center;
     justify-content: center;
 
+    height: 150px;
+
+    margin-bottom: var(--form-field-padding-y);
+
     overflow: hidden;
+    
+    border-radius: var(--form-field-border-radius);
     
     pointer-events: none;
 
@@ -497,17 +516,21 @@ fieldset {
 }
 
 //////////////////////////////////////////////
-// G. Checkbox and Radio Elements
+// I. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
 .form-entry__option {
-    position: relative;
-    display: block;
 
-    border-radius: var(--form-field-border-radius);
+    background-color: antiquewhite;
+    
+    position: relative;
+
+    display: block;
 
     border-style: var(--default-border-style);
     border-width: var(--default-border-width);
+
+    border-radius: var(--form-field-border-radius);
 
     > div {
         position: relative;

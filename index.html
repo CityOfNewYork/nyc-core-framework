@@ -1347,15 +1347,22 @@
                             <span class="required-indicator__text">Indicates Required Fields</span> 
                             <span class="required-indicator__icon">*</span>
                         </p>
-                        
-                        <div class="alert alert--warn--inverse margin-y-4" data-alert="form-errors">
+
+                        <div
+                            class="alert alert--warn alert--warn--inverse margin-y-3"
+                            aria-labelledby="alert-form-example-label"
+                            aria-describedby="alert-form-example-desc"
+                            role="alertdialog"
+                            data-alert="form-errors">
 
                             <div class="alert__title">
                                 <span class="nyc_icon_warn" aria-hidden="true"></span>
-                                <span class="alert__title__text">Warn Title</span>
+                                <span class="alert__title__text" id="alert-form-example-label">
+                                    Alert Title
+                                </span>
                             </div>
 
-                            <div class="alert__description">
+                            <div class="alert__description" id="alert-form-example-desc">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                                     <a href="#1">quos natus aliquam</a>.
