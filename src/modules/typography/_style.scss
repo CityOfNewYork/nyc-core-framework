@@ -199,8 +199,10 @@ $headers: (
 //////////////////////////////////////////////
 
 body {
-    font-size: var(--body-font-size);
     font-family: var(--body-font-family), $base-font-fallbacks;
+
+    font-size: var(--body-font-size);
+    
     font-weight: var(--body-font-weight-normal);
     
     line-height: var(--body-line-height);
@@ -235,22 +237,32 @@ p ~ ul {
 
 ol {
     --list-item-padding: 2em;
+
     list-style: none;
 
     counter-reset: list-item-counter;
   
     li {
         position: relative;
-        counter-increment: list-item-counter;
+        
         padding-left: var(--list-item-padding);
         padding-right: var(--list-item-padding);
+
+        counter-increment: list-item-counter;
     }
 
     li::before {
-        content: counters(list-item-counter, ".") ". ";
         position: absolute;
         left: 0;
+
+        content: counters(list-item-counter, ".") ". ";
+
+        [dir="rtl"] & {
+            left: unset;
+            right: 0;
+        }
     }
+
 }
 
 figure {
