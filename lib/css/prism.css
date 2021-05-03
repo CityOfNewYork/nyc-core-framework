@@ -15,7 +15,7 @@ figure .example + figcaption,
 figure .code-toolbar +figcaption {
 	background-color: var(--dark);
 	color: var(--dark-text);
-	padding: var(--spacer-3);
+	padding: var(--spacer-2);
 	margin-top: unset;
 
 	opacity: 0.9;
@@ -231,7 +231,7 @@ div.code-toolbar {
 div.code-toolbar > .toolbar {
 	display: flex;
 	justify-content: space-between;
-	padding: var(--spacer-3);
+	padding: var(--spacer-2);
 
 	position: absolute;
 	top: 0;
