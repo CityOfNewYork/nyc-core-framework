@@ -10,9 +10,7 @@ In this file:
 // F. Form Entry Elements
 // G. Form Feedback
 // H. File Upload
-
-// H. Form Entry within Nav
-// I. Form Feedback and Alerts
+// I. Checkbox and Radio Elements
 
 */
 
@@ -593,65 +591,70 @@ fieldset {
 
 // Shared Elements
 
-.form-entry__option__radio > label,
-.form-entry__option__check > label, 
-.form-entry__option__switch > label
-{
-    position: relative;
-    color: inherit;
-    display: flex;
-    align-items: baseline;
-    padding-left: 1.25em;
-    width: auto;
-    
-    cursor: pointer;
+.form-entry__option__radio,
+.form-entry__option__check, 
+.form-entry__option__switch {
 
-    [dir="rtl"] & {
-        padding-left: unset;
-        padding-right: 1.25em;
+    > label {
+        position: relative;
+
+        display: flex;
+        align-items: baseline;
+        
+        padding-left: 1.25em;
+
+        width: auto;
+
+        color: inherit;
+        
+        cursor: pointer;
+
+        [dir="rtl"] & {
+            padding-left: unset;
+            padding-right: 1.25em;
+        }
     }
 }
 
-
-
 .form-entry__option__radio > label > input[type="radio"],
 .form-entry__option__check > label > input[type="checkbox"],
-.form-entry__option__switch > label > input[type="checkbox"]
-{
+.form-entry__option__switch > label > input[type="checkbox"] {
     background-color: transparent;
+
     opacity: 0;
 } 
 
 .form-entry__option__radio > label > input ~ .radio__label,
 .form-entry__option__check > label > input ~ .check__label,
-.form-entry__option__switch > label > input ~ .switch__label
-{
+.form-entry__option__switch > label > input ~ .switch__label {
     line-height: var(--body-line-height);
 
     &::before {
         position: absolute;
         top: 0;
         left: 0;
+
         opacity: 0.5;
 
-        font-size: 125%;
         margin-top: -0.125em;
+
+        font-size: 125%;
 
         @extend .nyc_icon_font;
     }
 }
 
-// Form Option Radio
+// Option Radio
 
-.form-entry__option__radio > label > input ~ .radio__label::before{
+.form-entry__option__radio > label > input ~ .radio__label::before {
     content: "\e948";
 }
 
-.form-entry__option__radio > label > input:checked ~ .radio__label::before{
+.form-entry__option__radio > label > input:checked ~ .radio__label::before {
     content: "\e949";
 }
 
-// Form Option Check
+// Option Check
 
 .form-entry__option__check > label > input ~ .check__label::before {
     content: "\e946";
@@ -663,15 +666,13 @@ fieldset {
 
 .form-entry__option__radio > label > input:disabled ~ .radio__label::before,
 .form-entry__option__check > label > input:disabled ~ .check__label::before, 
-.form-entry__option__switch > label > input:disabled ~ .switch__label::before 
-{
+.form-entry__option__switch > label > input:disabled ~ .switch__label::before {
     content: "\e95e";
 }
 
 .form-entry__option__radio > label.disabled,
 .form-entry__option__check > label.disabled,
-.form-entry__option__switch > label.disabled
-{
+.form-entry__option__switch > label.disabled {
     cursor: not-allowed;
 
     [class*="__label"] {
@@ -684,20 +685,20 @@ fieldset {
 
 .form-entry__option__radio > label > input:focus ~ .radio__label,
 .form-entry__option__check > label > input:focus ~ .check__label,
-.form-entry__option__switch > label > input:focus ~ .check__label {
+.form-entry__option__switch > label > input:focus ~ .switch__label {
     text-decoration: underline;
-    &::before{
+
+    &::before {
         opacity: 0.75;
     }
 }
-
 
 // Checked State
 
 .form-entry__option__radio > label > input:checked ~ .radio__label,
 .form-entry__option__check > label > input:checked ~ .check__label,
 .form-entry__option__switch > label > input:checked ~ .switch__label {
-    &::before{
+    &::before {
         opacity: 1;
     }
 }
@@ -730,18 +731,19 @@ fieldset {
 
     .switch__slider {
         position: absolute;
-        width: var(--toggle-switch-width); 
-        height: calc(var(--toggle-switch-width) * 0.5);
         left: -0.125em;
         top: 50%;
+
         transform: translateY(-50%);
         
-
+        width: var(--toggle-switch-width); 
+        height: calc(var(--toggle-switch-width) * 0.5);
+        
         &::before,
-        &::after
-        {
+        &::after {
             position: absolute;
             content: "";
+
             transition: var(--toggle-switch-transition) ease-in-out;
         }
 
@@ -754,36 +756,36 @@ fieldset {
             border-radius: calc(var(--toggle-switch-width) * 0.5);
 
             background-color: currentColor;
+            
             opacity: 0.375;
         }
 
         &::after {
-            height: calc(var(--toggle-switch-width) * 0.5);
-            width: calc(var(--toggle-switch-width) * 0.5);
             top: 0;
             left: 0;
+
+            height: calc(var(--toggle-switch-width) * 0.5);
+            width: calc(var(--toggle-switch-width) * 0.5);
 
             border-width: 2px;
             border-style: solid;
             border-color: transparent;
 
-            background-color: white;
             background-clip: padding-box;
+
+            background-color: white;
 
             border-radius: 100%;
         }
     }
 
     input:checked + .switch__slider::before {
-        opacity: 1;
         background-color: var(--toggle-switch-active-color);
+        
+        opacity: 1;
     }
 
     input:checked + .switch__slider::after {
         left: 50%;
     }
-
-    // input:focus + .switch__slider {
-        // box-shadow: 0 0 4px 1px var(--toggle-switch-active-color);
-    // }
 }
