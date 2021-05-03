@@ -8,9 +8,9 @@ In this file:
 // D. Required Indicator
 // E. Form Entry Block
 // F. Form Entry Elements
-// G. Form Feedback
+// G. Checkbox and Radio Elements
 // H. File Upload
-// I. Checkbox and Radio Elements
+// I. Form Feedback
 
 */
 
@@ -298,7 +298,7 @@ fieldset {
     }
 }
 
-// Floating Labels
+// Floating Label Modifier
 
 .form-entry__field--float {
     position: relative;
@@ -356,7 +356,7 @@ fieldset {
     }
 }
 
-// Floating Labels
+// Form Entry Help
 
 .form-entry__field__help {    
     padding-left: var(--form-field-padding-x);
@@ -394,127 +394,7 @@ fieldset {
 }
 
 //////////////////////////////////////////////
-// G. Form Feedback
-//////////////////////////////////////////////
-
-[data-alert="form-errors"],
-.form-entry__feedback {
-    display: none;
-}
-
-.form-entry__feedback {
-    order: 3;
-
-    padding-left: var(--form-field-padding-x);
-    padding-right: var(--form-field-padding-x);
-
-    margin-top: 0.5rem;
-
-    > small {
-        display: flex;
-        align-items: center;
-
-        font-size: 80%;
-    }
-
-    > small > strong {
-        margin-left: var(--spacer-2);
-        margin-right: var(--spacer-2);
-    }
-}
-
-.is-invalid {
-
-    .form-entry__field__help {
-        display: none;
-    }
-    
-    .form-entry__feedback {
-        display: block;
-    }
-}
-
-//////////////////////////////////////////////
-// H. File Upload
-//////////////////////////////////////////////
-
-.file-upload {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-
-    overflow: hidden;
-
-    padding: var(--form-field-padding-x);
-
-    cursor: pointer;
-}
-
-.file-upload__input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-
-    z-index: 25;
-    
-    opacity: 0.01;
-
-    cursor: pointer;
-}
-
-.file-upload__drag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 150px;
-
-    margin-bottom: var(--form-field-padding-y);
-
-    overflow: hidden;
-    
-    border-radius: var(--form-field-border-radius);
-    
-    pointer-events: none;
-
-    font-size: var(--font-size-md);
-
-    @extend %subtle-fill-psuedo;
-
-    .active & {
-        --subtle-fill-opacity: 0.125;
-    }
-}
-
-.file-upload__drag__text {
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-}
-
-.file-upload__button {
-    position: relative;
-    z-index: 15;
-    pointer-events: none;
-    font-size: var(--font-size-md);
-}
-
-.file-upload__data {
-    display: flex;
-    justify-content: space-between;
-
-    font-size: var(--font-size-md);
-    margin-top: var(--form-field-padding-y);
-}
-
-//////////////////////////////////////////////
-// I. Checkbox and Radio Elements
+// G. Checkbox and Radio Elements
 //////////////////////////////////////////////
 
 .form-entry__option {
@@ -703,26 +583,7 @@ fieldset {
     }
 }
 
-// RTL
-
-[dir="rtl"] {
-    .form-entry__option__radio > label > .radio__label::before,
-    .form-entry__option__radio > label > input[type="radio"],
-
-    .form-entry__option__check > label > .check__label::before,
-    .form-entry__option__check > label > input[type="checkbox"],     
-
-    .form-entry__option__switch > label > .switch__label::before,
-    .form-entry__option__switch > label > input[type="checkbox"]
-    {
-        left: unset;
-        right: 0;
-    }
-}
-
-//////////////////////////////////////////////
-// G. Input Toggle Switch
-//////////////////////////////////////////////
+// Input Toggle Switch
 
 .form-entry__option__switch {
     --toggle-switch-width: 1.5em;
@@ -781,11 +642,148 @@ fieldset {
 
     input:checked + .switch__slider::before {
         background-color: var(--toggle-switch-active-color);
-        
+
         opacity: 1;
     }
 
     input:checked + .switch__slider::after {
         left: 50%;
+    }
+}
+
+// RTL
+
+[dir="rtl"] {
+    .form-entry__option__radio > label > .radio__label::before,
+    .form-entry__option__radio > label > input[type="radio"],
+
+    .form-entry__option__check > label > .check__label::before,
+    .form-entry__option__check > label > input[type="checkbox"],     
+
+    .form-entry__option__switch > label > .switch__label::before,
+    .form-entry__option__switch > label > input[type="checkbox"]
+    {
+        left: unset;
+        right: 0;
+    }
+}
+
+//////////////////////////////////////////////
+// H. File Upload
+//////////////////////////////////////////////
+
+.file-upload {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: var(--form-field-padding-x);
+
+    cursor: pointer;
+}
+
+.file-upload__input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 25;
+    
+    opacity: 0.01;
+
+    cursor: pointer;
+}
+
+.file-upload__drag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 150px;
+
+    margin-bottom: var(--form-field-padding-y);
+
+    overflow: hidden;
+    
+    border-radius: var(--form-field-border-radius);
+    
+    pointer-events: none;
+
+    font-size: var(--font-size-md);
+
+    @extend %subtle-fill-psuedo;
+
+    .active & {
+        --subtle-fill-opacity: 0.125;
+    }
+}
+
+.file-upload__drag__text {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+.file-upload__button {
+    position: relative;
+    z-index: 15;
+    pointer-events: none;
+    font-size: var(--font-size-md);
+}
+
+.file-upload__data {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: var(--font-size-md);
+    margin-top: var(--form-field-padding-y);
+}
+
+//////////////////////////////////////////////
+// I. Form Feedback
+//////////////////////////////////////////////
+
+[data-alert="form-errors"],
+.form-entry__feedback {
+    display: none;
+}
+
+.form-entry__feedback {
+    order: 3;
+
+    padding-left: var(--form-field-padding-x);
+    padding-right: var(--form-field-padding-x);
+
+    margin-top: 0.5rem;
+
+    > small {
+        display: flex;
+        align-items: center;
+
+        font-size: 80%;
+    }
+
+    > small > strong {
+        margin-left: var(--spacer-2);
+        margin-right: var(--spacer-2);
+    }
+}
+
+.is-invalid {
+
+    .form-entry__field__help {
+        display: none;
+    }
+    
+    .form-entry__feedback {
+        display: block;
     }
 }

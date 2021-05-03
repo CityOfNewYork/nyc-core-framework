@@ -17,7 +17,7 @@ In this file:
 // Scoped to Block
 
 %custom-properties {
-    --icon-size: 1em;
+  --icon-size: 1em;
 }
 
 //////////////////////////////////////////////
@@ -86,24 +86,24 @@ In this file:
     }
 
     &::after {
-        content: "";
         position: absolute;
-        left: 0;
+        content: "";
         top: 0;
+        left: 0;
         bottom: 0;
         right: 0;
 
-        border-radius: 100%;
-        
         transform-origin: center;
         transform: scale(0.875);
+        
+        border-radius: 100%;
         
         background-color: white;
 
         z-index: 1;
     }
 
-    &[class*="-express"]::after{
+    &[class*="-express"]::after {
       border-radius: unset;
       transform: rotate(45deg) scale(0.6);
     }
