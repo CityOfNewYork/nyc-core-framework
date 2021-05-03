@@ -78,6 +78,13 @@ In this file:
         min-height: 100%;
     }
 
+    > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
+        margin-left: calc( var(--nav-gap) * -1);
+        margin-right: 0;
+        margin-top: 1rem;
+        width: 240px;
+    }
+
     > li > .nav__dropdown {
         left: 0;
         width: calc(100% + (var(--nav-gap) * 2));
@@ -90,13 +97,6 @@ In this file:
             right: 0;
             text-align: right;
         }
-    }
-
-    > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
-        margin-left: calc( var(--nav-gap) * -1);
-        margin-right: 0;
-        margin-top: 1rem;
-        width: 240px;
     }
 }
 
