@@ -28,9 +28,9 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-// Scoped to Root
+// Scoped to Block
 
-:root {
+%form-field-vars {
     --form-field-padding-x: var(--spacer-2);
     --form-field-padding-y: var(--button-padding-y);
 
@@ -176,6 +176,8 @@ fieldset {
 //////////////////////////////////////////////
 
 .form-entry__field {
+    @extend %form-field-vars;
+
     position: relative;
 
     display: flex;

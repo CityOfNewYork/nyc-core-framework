@@ -19,8 +19,9 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-:root {
-  --modal-padding: var(--spacer-3);
+%modal-vars {
+  --modal-padding-x: var(--spacer-2);
+  --modal-padding-y: var(--spacer-2);
 
   --modal-overlay-opacity: 0.8;
   
@@ -32,8 +33,9 @@ In this file:
 //////////////////////////////////////////////
 
 .modal {
-  position: fixed;
+  @extend %modal-vars;
 
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -78,37 +80,46 @@ In this file:
 //////////////////////////////////////////////
 
 .modal__content {
-  @extend .margin-x-auto;
 
   position: relative;
-  z-index: auto;
-  width: 100%;
-  max-height: calc(100vh - (var(--modal-padding) * 2));
-  background-color: inherit;
-  
+
   display: flex;
   flex-direction: column;
+  
+  max-height: calc(100vh - (var(--modal-padding) * 2));
+  width: 100%;
+
+  z-index: auto;
+  
+  background-color: inherit;
+  
+  @extend .margin-x-auto;
   
   margin-top: var(--modal-padding);
   margin-bottom: var(--modal-padding);
 
 }
 
+.modal__content__head,
+.modal__content__body, 
+.modal__content__foot {
+  padding: var(--modal-padding-y) var(--modal-padding-x);
+}
+
 .modal__content__head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: var(--modal-padding);
 
-  :is(
-    h1, .h1, 
-    h2, .h2, 
-    h3, .h3,
-    h4, .h4, 
-    h5, .h5, 
-    h6, .h6
-  ) {
-      margin-bottom: 0 !important;
+  padding: var(--modal-padding-y) var(--modal-padding-x);
+
+  h1, .h1, 
+  h2, .h2, 
+  h3, .h3,
+  h4, .h4, 
+  h5, .h5, 
+  h6, .h6 {
+    margin-bottom: 0 !important;
   }
 
   button {
@@ -117,11 +128,7 @@ In this file:
 }
 
 .modal__content__body {
-  flex-shrink: 1; 
+  flex-shrink: 1;
+  
   overflow-y: auto;
-}
-
-.modal__content__body, 
-.modal__content__foot {
-  padding: var(--modal-padding);
 }
