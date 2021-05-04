@@ -38,19 +38,14 @@ title: "Accents"
 
 
 <div class="container narrow margin-y-4">
-    <p>
-        Gradient's are a transparent-to-opaque single color. They inherit their color from the nearest
-        ancestrial background color (usually applied with <a href="#1">theme colors</a>). For a gradient that is
-        transparent at the top, and opaque at the bottom, use <code>.gradient-veneer-bottom</code>. 
-    </p>
-    <p>
-        Consider the following visual representing our four directional gradients. Each with a different ancestrial theme applied.
+    <p> For a gradient that is transparent at the top, and opaque at the bottom, use <code>.gradient-veneer-bottom</code>.
+        Consider the following visual representation of the four directional gradients.
     </p>
 </div>
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-3 grid--cells-6--md text-align-center" {{ site.style_default_theme_colors }}>
+    <div class="grid grid--gap-3 grid--cells-6--md font-size-md text-align-center" {{ site.style_default_theme_colors }}>
 
         <div class="grid__cell">
 
@@ -59,11 +54,8 @@ title: "Accents"
                     <img src="{{ site.baseurl }}/images/examples/gradient-veneer-top.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
-                    <div class="margin-bottom-auto padding-2">
+                    <div class="margin-bottom-auto padding-3">
                         <p>
-                            <span class="display-block font-size-md">
-                                Theme: Primary 
-                            </span>
                             <strong>
                                 .gradient-veneer-top
                             </strong>
@@ -81,11 +73,8 @@ title: "Accents"
                     <img src="{{ site.baseurl }}/images/examples/gradient-veneer-right.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
-                    <div class="margin-left-auto padding-2">
+                    <div class="margin-left-auto padding-3">
                         <p>
-                            <span class="display-block font-size-md">
-                                Theme: Secondary
-                            </span>
                             <strong>
                                 .gradient-veneer-right
                             </strong>
@@ -103,11 +92,8 @@ title: "Accents"
                     <img src="{{ site.baseurl }}/images/examples/gradient-veneer-bottom.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
-                    <div class="margin-top-auto padding-2">
+                    <div class="margin-top-auto padding-3">
                         <p>
-                            <span class="display-block font-size-md">
-                                Theme: Dark
-                            </span>
                             <strong>
                                 .gradient-veneer-bottom
                             </strong>
@@ -125,11 +111,8 @@ title: "Accents"
                     <img src="{{ site.baseurl }}/images/examples/gradient-veneer-left.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
-                    <div class="margin-right-auto padding-2">
+                    <div class="margin-right-auto padding-3">
                         <p>
-                            <span class="display-block font-size-md">
-                                Theme: Light
-                            </span>
                             <strong>
                                 .gradient-veneer-left
                             </strong>
@@ -144,6 +127,65 @@ title: "Accents"
 
 </figure>
 
+
+<div class="container narrow margin-y-4">
+    <p>
+        Gradient veneers are a single color, fully transparent to fully opaque. They inherit their color from the nearest
+        ancestrial background color (usually applied with <a href="#1">theme colors</a>).
+    </p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <div class="grid grid--gap-3 grid--cells-6--md font-size-md text-align-center" {{ site.style_default_theme_colors }}>
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-primary border-radius">
+                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                    <img class="opacity-50" src="{{ site.baseurl }}/images/examples/gradient-veneer-bottom-primary.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-top-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-bottom
+                            </strong>
+                            <span class="display-block">
+                                Theme: Primary
+                            </span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-secondary border-radius">
+                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                    <img class="opacity-50" src="{{ site.baseurl }}/images/examples/gradient-veneer-bottom-secondary.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-top-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-bottom
+                            </strong>
+                            <span class="display-block">
+                                Theme: Secondary
+                            </span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+
+</figure>
 <div class="container narrow margin-y-4">
 	<p>
 	    Gradient veneer utilities place the gradient (as a psuedo element) above all child selectors on the <em>z index</em>.
@@ -155,7 +197,7 @@ title: "Accents"
 <figure class="container medium margin-y-4">
 	<pre data-line="3,4,5">
         <code class="language-html">
-            &lt;div class="backdrop theme-dark"&gt;
+            &lt;div class="backdrop theme-primary"&gt;
 
                 &lt;div class="backdrop__image gradient-veneer-bottom"&gt;
                     &lt;img src="..." alt="Placeholder"&gt;
@@ -189,7 +231,7 @@ title: "Accents"
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-4 grid--cells-fill--md" {{ site.style_default_theme_colors }}>
+    <div class="grid grid--gap-3 grid--cells-fill--md" {{ site.style_default_theme_colors }}>
 
         <div class="grid__cell">
 
