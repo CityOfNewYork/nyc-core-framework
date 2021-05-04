@@ -5,7 +5,8 @@ title: "Accents"
 
 <div class="container narrow margin-y-4">
 	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ratione a itaque, facilis quod minima commodi necessitatibus dicta perferendis rem voluptatem veniam iusto nam id modi similique quasi dolore? Impedit?
+	    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ratione a itaque, facilis quod minima commodi
+	    necessitatibus dicta perferendis rem voluptatem veniam iusto nam id modi similique quasi dolore? Impedit?
 	</p>
 </div>
 <!-- .container -->
@@ -17,7 +18,7 @@ title: "Accents"
 	<p>
 	    Apply a directional gradient to any selector using the <code>.gradient-veneer-{x}</code>
 	    utilities. Where <strong><em>x</em></strong> specifies the gradient's direction: <em>top</em>, <em>right</em>, <em>bottom</em>, or
-	    <em>left</em> (Figuire 1 below).
+	    <em>left</em> (Figure 1 below).
 	</p>
 </div>
 
@@ -34,6 +35,7 @@ title: "Accents"
 		<p>Figure 1</p>
 	</figcaption>
 </figure>
+
 
 <div class="container narrow margin-y-4">
     <p>
@@ -171,36 +173,37 @@ title: "Accents"
 	</figcaption>
 </figure>
 
+
 <hr class="section-start" id="Subtle Fill">
 
 <div class="container narrow margin-y-4">
 	<h2>Subtle Fill</h2>
 	<p>
-	    The <code>.subtle-fill</code> utility class is perfect for adding a light background tint to any element. Subtle fills inherit their color from the text color of the element on which they are placed.
+	    The <code>.subtle-fill</code> utility class adds a light tint background to any selector. Subtle
+	    fills inherit their color from the text color of the element on which they are placed.
 	</p>
     <p>
-	    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet beatae dicta placeat rerum voluptates? Iusto aperiam
-	    unde praesentium. Doloribus, perferendis. Minus id autem facere architecto ipsum.
+	    With the card examples below, we can add soft emphasis to the action buttons within the <code>.card__footer</code> selector.
 	</p>
 </div>
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-4 grid--cells-fill--md">
+    <div class="grid grid--gap-4 grid--cells-fill--md" {{ site.style_default_theme_colors }}>
 
         <div class="grid__cell">
 
             <div class="card border">
-            
+
                 <div class="card__body">
-                    <h2 class="h4">Card Title</h2>
+                    <h3 class="h4">Card Title</h3>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
                         ex facilis labore reiciendis.
                     </p>
                 </div>
 
-                <div class="card__foot subtle-fill">
+                <div class="card__foot font-size-md subtle-fill">
                     <ul class="nav nav--horizontal justify-content-between">
                         <li>
                             <a href="#1">Secondary Action</a>
@@ -212,25 +215,21 @@ title: "Accents"
                 </div>
 
             </div>
-            <!-- .card -->
+
         </div>
         <div class="grid__cell">
 
             <div class="card theme-dark">
 
-                <div class="card__head border-bottom">
-                    <p>Card Header</p>
-                </div>
-
                 <div class="card__body">
-                    <h2 class="h4">Card Title</h2>
+                    <h3 class="h4">Card Title</h3>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
                         ex facilis labore reiciendis.
                     </p>
                 </div>
 
-                <div class="card__foot subtle-fill">
+                <div class="card__foot font-size-md subtle-fill">
                     <ul class="nav nav--horizontal justify-content-between">
                         <li>
                             <a href="#1">Secondary Action</a>
@@ -242,9 +241,36 @@ title: "Accents"
                 </div>
 
             </div>
-            <!-- .card -->
         </div>
 
     </div>
 
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+	    Notice the subtle fill appears darker within the <em>white theme</em> card, while appearing lighter on the <em>dark theme</em> card.
+	</p>
+</div>
+
+
+<figure class="container medium margin-y-4">
+	<pre class="hide-toolbar" data-line="7">
+        <code class="language-html">
+            &lt;div class="card theme-dark"&gt;
+
+                &lt;div class="card__body"&gt;
+                    ...
+                &lt;/div&gt;
+
+                &lt;div class="card__foot subtle-fill"&gt;
+                    ...
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 4</p>
+	</figcaption>
 </figure>
