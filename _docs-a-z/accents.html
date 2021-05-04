@@ -15,28 +15,57 @@ title: "Accents"
 <div class="container narrow margin-y-4">
 	<h2>Gradient Veneer</h2>
 	<p>
-	    Apply a directional gradient to any element using the <code>.gradient-veneer-{x}</code> utilities. Where
-	    <strong><em>x</em></strong> specifies the gradient's direction (<em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>).
+	    Apply a directional gradient to any selector using the <code>.gradient-veneer-{x}</code>
+	    utilities. Where <strong><em>x</em></strong> specifies the gradient's direction: <em>top</em>, <em>right</em>, <em>bottom</em>, or
+	    <em>left</em> (Figuire 1 below).
 	</p>
+</div>
+
+<figure class="container narrow margin-y-4">
+	<pre class="hide-toolbar">
+        <code class="language-html">
+                &lt;div class="gradient-veneer-top"&gt;...&lt;/div&gt;
+                &lt;div class="gradient-veneer-right"&gt;...&lt;/div&gt;
+                &lt;div class="gradient-veneer-bottom"&gt;...&lt;/div&gt;
+                &lt;div class="gradient-veneer-left"&gt;...&lt;/div&gt; 
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 1</p>
+	</figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
     <p>
-        For example, use <code>.gradient-veneer-bottom</code> for a gradient that is transparent at the top, and opaque
-        at the bottom. Gradient's are single-color. Their color is inherited from the <a href="#1">theme color</a> applied to its nearest ancestor. 
+        Gradient's are a transparent-to-opaque single color. They inherit their color from the nearest
+        ancestrial background color (usually applied with <a href="#1">theme colors</a>). For a gradient that is
+        transparent at the top, and opaque at the bottom, use <code>.gradient-veneer-bottom</code>. 
+    </p>
+    <p>
+        Consider the following visual representing our four directional gradients. Each with a different ancestrial theme applied.
     </p>
 </div>
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-3 grid--cells-6--md text-align-center font-size-md" {{ site.style_default_theme_colors }}>
+    <div class="grid grid--gap-3 grid--cells-6--md text-align-center" {{ site.style_default_theme_colors }}>
 
         <div class="grid__cell">
 
-            <div class="backdrop theme-dark">
-                <div class="backdrop__image gradient-veneer-top">
-                    <img class="opacity-50" src="{{ site.baseurl }}/images/examples/gradient-veneer-01.jpg" alt="Placeholder">
+            <div class="backdrop theme-primary">
+                <div class="backdrop__image gradient-veneer-top" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.baseurl }}/images/examples/gradient-veneer-top.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
                     <div class="margin-bottom-auto padding-2">
-                        .gradient-veneer-top
+                        <p>
+                            <span class="display-block font-size-md">
+                                Theme: Primary 
+                            </span>
+                            <strong>
+                                .gradient-veneer-top
+                            </strong>
+                        </p> 
                     </div>
                 </div>
             </div>
@@ -45,13 +74,20 @@ title: "Accents"
 
         <div class="grid__cell">
 
-            <div class="backdrop theme-dark">
-                <div class="backdrop__image gradient-veneer-right">
-                    <img class="opacity-50" src="{{ site.baseurl }}/images/examples/gradient-veneer-01.jpg" alt="Placeholder">
+            <div class="backdrop theme-secondary">
+                <div class="backdrop__image gradient-veneer-right" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.baseurl }}/images/examples/gradient-veneer-right.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
                     <div class="margin-left-auto padding-2">
-                        .gradient-veneer-right
+                        <p>
+                            <span class="display-block font-size-md">
+                                Theme: Secondary
+                            </span>
+                            <strong>
+                                .gradient-veneer-right
+                            </strong>
+                        </p> 
                     </div>
                 </div>
             </div>
@@ -61,12 +97,19 @@ title: "Accents"
         <div class="grid__cell">
 
             <div class="backdrop theme-dark">
-                <div class="backdrop__image gradient-veneer-bottom">
-                    <img class="opacity-50" src="{{ site.baseurl }}/images/examples/gradient-veneer-01.jpg" alt="Placeholder">
+                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.baseurl }}/images/examples/gradient-veneer-bottom.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
                     <div class="margin-top-auto padding-2">
-                        .gradient-veneer-bottom
+                        <p>
+                            <span class="display-block font-size-md">
+                                Theme: Dark
+                            </span>
+                            <strong>
+                                .gradient-veneer-bottom
+                            </strong>
+                        </p> 
                     </div>
                 </div>
             </div>
@@ -75,13 +118,20 @@ title: "Accents"
 
         <div class="grid__cell">
 
-            <div class="backdrop theme-dark">
-                <div class="backdrop__image gradient-veneer-left">
-                    <img class="opacity-50" src="{{ site.baseurl }}/images/examples/gradient-veneer-01.jpg" alt="Placeholder">
+            <div class="backdrop theme-light">
+                <div class="backdrop__image gradient-veneer-left" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.baseurl }}/images/examples/gradient-veneer-left.jpg" alt="Placeholder">
                 </div>
                 <div class="backdrop__cover">
                     <div class="margin-right-auto padding-2">
-                        .gradient-veneer-left
+                        <p>
+                            <span class="display-block font-size-md">
+                                Theme: Light
+                            </span>
+                            <strong>
+                                .gradient-veneer-left
+                            </strong>
+                        </p> 
                     </div>
                 </div>
             </div>
@@ -92,21 +142,41 @@ title: "Accents"
 
 </figure>
 
-
 <div class="container narrow margin-y-4">
 	<p>
-	    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet beatae dicta placeat rerum voluptates? Iusto aperiam
-	    unde praesentium. Doloribus, perferendis. Minus id autem facere architecto ipsum.
+	    Gradient veneer utilities place the gradient (as a psuedo element) above all child selectors on the <em>z index</em>.
+	    With the above examples, we applied our gradient veneer utility to the <code>.backdrop-image</code> selector. This
+	    allows the gradient to appear above its child <code>&lt;img&gt;</code> tag (Figure 2, lines 3-5).
 	</p>
 </div>
+
+<figure class="container medium margin-y-4">
+	<pre data-line="3,4,5">
+        <code class="language-html">
+            &lt;div class="backdrop theme-dark"&gt;
+
+                &lt;div class="backdrop__image gradient-veneer-bottom"&gt;
+                    &lt;img src="..." alt="Placeholder"&gt;
+                &lt;/div&gt;
+            
+                &lt;div class="backdrop__cover"&gt;
+                    ...
+                &lt;/div&gt;
+            
+            &lt;/div>
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 2</p>
+	</figcaption>
+</figure>
 
 <hr class="section-start" id="Subtle Fill">
 
 <div class="container narrow margin-y-4">
 	<h2>Subtle Fill</h2>
 	<p>
-	    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet beatae dicta placeat rerum voluptates? Iusto aperiam
-	    unde praesentium. Doloribus, perferendis. Minus id autem facere architecto ipsum.
+	    The <code>.subtle-fill</code> utility class is perfect for adding a light background tint to any element. Subtle fills inherit their color from the text color of the element on which they are placed.
 	</p>
     <p>
 	    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet beatae dicta placeat rerum voluptates? Iusto aperiam
@@ -116,69 +186,65 @@ title: "Accents"
 
 <figure class="container medium margin-y-4">
 
-                    <div class="grid grid--gap-4 grid--cells-fill--md">
+    <div class="grid grid--gap-4 grid--cells-fill--md">
 
-                        <div class="grid__cell">
+        <div class="grid__cell">
 
-                            <div class="card border">
+            <div class="card border">
+            
+                <div class="card__body">
+                    <h2 class="h4">Card Title</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                        ex facilis labore reiciendis.
+                    </p>
+                </div>
 
-                                <div class="card__head border-bottom">
-                                    <p>Card Header</p>
-                                </div>
+                <div class="card__foot subtle-fill">
+                    <ul class="nav nav--horizontal justify-content-between">
+                        <li>
+                            <a href="#1">Secondary Action</a>
+                        </li>
+                        <li>
+                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
+                        </li>
+                    </ul>
+                </div>
 
-                                <div class="card__body">
-                                    <h2 class="h4">Card Title</h2>
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
-                                        ex facilis labore reiciendis.
-                                    </p>
-                                </div>
+            </div>
+            <!-- .card -->
+        </div>
+        <div class="grid__cell">
 
-                                <div class="card__foot subtle-fill">
-                                    <ul class="nav nav--horizontal justify-content-between">
-                                        <li>
-                                            <a href="#1">Secondary Action</a>
-                                        </li>
-                                        <li>
-                                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
-                                        </li>
-                                    </ul>
-                                </div>
+            <div class="card theme-dark">
 
-                            </div>
-                            <!-- .card -->
-                        </div>
-                        <div class="grid__cell">
+                <div class="card__head border-bottom">
+                    <p>Card Header</p>
+                </div>
 
-                            <div class="card theme-dark">
+                <div class="card__body">
+                    <h2 class="h4">Card Title</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                        ex facilis labore reiciendis.
+                    </p>
+                </div>
 
-                                <div class="card__head border-bottom">
-                                    <p>Card Header</p>
-                                </div>
+                <div class="card__foot subtle-fill">
+                    <ul class="nav nav--horizontal justify-content-between">
+                        <li>
+                            <a href="#1">Secondary Action</a>
+                        </li>
+                        <li>
+                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
+                        </li>
+                    </ul>
+                </div>
 
-                                <div class="card__body">
-                                    <h2 class="h4">Card Title</h2>
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
-                                        ex facilis labore reiciendis.
-                                    </p>
-                                </div>
+            </div>
+            <!-- .card -->
+        </div>
 
-                                <div class="card__foot subtle-fill">
-                                    <ul class="nav nav--horizontal justify-content-between">
-                                        <li>
-                                            <a href="#1">Secondary Action</a>
-                                        </li>
-                                        <li>
-                                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
-                                        </li>
-                                    </ul>
-                                </div>
+    </div>
 
-                            </div>
-                            <!-- .card -->
-                        </div>
-
-                    </div>
-
-                </figure>
+</figure>
