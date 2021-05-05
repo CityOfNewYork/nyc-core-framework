@@ -110,7 +110,15 @@
             let properties = customPropertyArray.customProperties;
             let scope = customPropertyArray.scope;
 
-            let slug = type.replace(/\s+/g, '-').toLowerCase();
+            let id = type.replace(/\s+/g, '-').toLowerCase();
+
+            let slug;
+
+            if(type === 'Gradient Veneer' || type === 'Subtle Fill') {
+                slug = 'accents/#' + id;
+            } else {
+                slug = id;
+            }
 
             let cpRows = properties.map((property) => {
                 return `
@@ -134,9 +142,9 @@
             }).join('');
 
             return `
-                <div class="cp-header box-shadow-1" id="cp_${slug}">
+                <div class="cp-header box-shadow-1" id="cp_${id}">
                     <span class="cp-header__title">${type}</span>
-                    <a class="cp-header__link button button--has-icon" href="{{ site.baseurl }}/docs/${slug}/">
+                    <a class="cp-header__link button button--has-icon" href="{{ site.baseurl }}/docs/${slug}">
                         <span class="button__text">Docs</span>
                         <span class="nyc_icon_arrow-right button__icon"></span>
                     </a>

@@ -4,14 +4,29 @@
         "scope" : ".accordion",
         "customProperties": [
             {
-                "name": "accordion-padding-x",
-                "value": "var(--spacer-2)",
-                "description": "Left and right padding of the <em>accordion</em> component button and panel"
+                "name": "accordion-button-padding-x",
+                "value": "var(--spacer-3)",
+                "description": "Left and right padding of the <em>accordion</em> component button"
             },
             {
-                "name": "accordion-padding-y",
-                "value": "0.75",
-                "description": "Top and bottom padding of the <em>accordion</em> component button and panel"
+                "name": "accordion-button-padding-y",
+                "value": "var(--button-padding-y)",
+                "description": "Top and bottom padding of the <em>accordion</em> component button"
+            },
+            {
+                "name": "accordion-panel-padding-x",
+                "value": "var(--spacer-3)",
+                "description": "Left and right padding of the <em>accordion</em> component panel"
+            },
+            {
+                "name": "accordion-panel-padding-y",
+                "value": "var(--spacer-4)",
+                "description": "Top and bottom padding of the <em>accordion</em> component panel"
+            },
+            {
+                "name": "accordion-active-color",
+                "value": "currentColor",
+                "description": "Color of the active (open) accordion button"
             }
         ]
     },
@@ -311,6 +326,23 @@
                 "name": "wide-width",
                 "value": "calc( var(--narrow-width) * 2.5)",
                 "description": "Maximum width of the <em>wide</em> utility class"
+            }
+        ]
+    },
+
+    {
+        "type": "Gradient Veneer",
+        "scope" : ".gradient-veneer",
+        "customProperties": [
+            {
+                "name": "gradient-veneer-start",
+                "value": "25%",
+                "description": "Value of the starting position (percentage) of the <em>gradient veneer</em> utility"
+            },
+            {
+                "name": "gradient-veneer-opacity",
+                "value": "1",
+                "description": "Value of the opacity of the <em>gradient veneer</em> utility"
             }
         ]
     },
