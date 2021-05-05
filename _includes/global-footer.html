@@ -61,8 +61,10 @@
 
 </footer>
 
-{% if page.title == 'Home' %}  
+{% if page.title == 'Home' %}
+
 <script src="{{ site.baseurl }}/dist/js/home.js"></script>
+
 {% endif %}
 
 {% if page.title == 'Customization' %}
@@ -219,9 +221,9 @@
                 }).join('\n');
                 
                 let myClipboardText = `
-:root {
-${myClipboardProperties}
-}`;
+                    :root {
+                        ${myClipboardProperties}
+                    }`;
 
                 // Create an auxiliary hidden input
                 var aux = document.createElement( 'textarea' );
@@ -298,11 +300,6 @@ ${myClipboardProperties}
 
 {% endif %}
 
-{% if page.url contains '/docs' or '/templates' %}
-
-<script src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
-
-{% endif %}
 
 {% if page.title == 'NYC Core Icons' %}
 
@@ -408,6 +405,12 @@ ${myClipboardProperties}
     });
 
 </script>
+
+{% endif %}
+
+{% if page.url contains '/docs' or '/templates' %}
+
+<script defer src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
 
 {% endif %}
 

@@ -8,11 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const getIframeDocHeight = () => {
 
+            alert("Whoa")
+
             let iframeWindowHeight = iframeWindow.document.body.scrollHeight;
+
             iframe.style.height = iframeWindowHeight + 'px';
         }
 
-        iframe.addEventListener('load', getIframeDocHeight);
+        iframe.addEventListener('ready', getIframeDocHeight);
         window.addEventListener('resize', getIframeDocHeight);
 
     }
