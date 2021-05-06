@@ -1,36 +1,28 @@
-/* 
- * 
- * PrismJS 1.19.0
- * https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+sass+scss&plugins=line-highlight+show-language+normalize-whitespace+toolbar+copy-to-clipboard
- * 
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
- * 
- */
+/* Prism CSS */
+
+/* Code blocks */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+:root {
+	--code-font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+/* Code Figure */
+
 figure .example + figcaption,
-figure .code-toolbar +figcaption {
+figure .code-toolbar + figcaption {
 	background-color: var(--dark);
+	
 	color: var(--dark-text);
+	
 	padding: var(--spacer-2);
+
 	margin-top: unset;
 
 	opacity: 0.9;
-}
 
-:root {
-	--code-font-family:
-		'Roboto Mono',
-		Consolas,
-		Monaco,
-		'Andale Mono',
-		'Ubuntu Mono',
-		monospace;
 }
-
 
 code[class*="language-"],
 pre[class*="language-"] {
@@ -61,7 +53,7 @@ pre[class*="language-"] {
 /* Code blocks */
 
 pre[class*="language-"] {
-	padding: 2em 1em;
+	padding: var(--spacer-3) var(--spacer-2);
 	overflow: auto;
 }
 
@@ -69,10 +61,6 @@ pre[class*="language-"] {
 pre[class*="language-"] {
 	overflow-x: scroll;
 	background-color: var(--dark);
-}
-
-pre[class*="language-"]:not([class*="hide-toolbar"]){
-	padding-top: var(--spacer-5);
 }
 
 /* Inline code */
@@ -85,7 +73,7 @@ p > code {
 	
 	font-family: var(--code-font-family);
 	font-size: 0.875em;
-	line-height: 1.4;
+	line-height: 1.5;
     white-space: normal;
 
 	padding: 0.075rem 0.25rem;
@@ -187,18 +175,16 @@ pre[data-line] {
 	position: absolute;
 	left: 0;
 	right: 0;
-	/* padding: inherit 0; */
-	margin-top: var(--spacer-5); /* Same as .prism’s padding-top */
+
+	margin-top: var(--spacer-3); /* Same as .prism’s padding-top */
+
 	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
 
 	pointer-events: none;
 
 	line-height: 1.75;
-	white-space: pre;
-}
 
-.hide-toolbar .line-highlight{
-	margin-top: 2em; 
+	white-space: pre;
 }
 
 .line-highlight:before,
@@ -226,17 +212,16 @@ pre[data-line] {
 
 div.code-toolbar {
 	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: var(--dark);
 }
 
 div.code-toolbar > .toolbar {
 	display: flex;
 	justify-content: space-between;
-	padding: var(--spacer-2);
 
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
+	padding: var(--spacer-2); 
 	
 	border-bottom: 1px solid hsla(0, 0%, 100%, 0.125) !important;
 }
