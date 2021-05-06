@@ -10,7 +10,6 @@
 
 /* Code Figure */
 
-figure .example, 
 figure .code-toolbar,
 figure .example + figcaption,
 figure .code-toolbar + figcaption {

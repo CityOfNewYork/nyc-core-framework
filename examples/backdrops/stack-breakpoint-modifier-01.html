@@ -22,16 +22,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css">
 
     <style>
-        :root{
-            --primary: #25caa4;
-            --secondary: #6500d6;
-            --dark: #262345;
-            --light: #f1f4f6;
-            --primary-text: var(--dark);
-            --secondary-text: white;
+        :root {
             --body-font-family: "neue-haas-grotesk-text";
             --button-font-weight: normal;
-            --header-line-height: 1.2;
         }
     </style>
     
@@ -41,7 +34,7 @@
 
     <main>
 
-        <div class="backdrop backdrop--stack--md theme-dark"  {{ site.style_default_theme_colors }}>
+        <div class="backdrop backdrop--stack--md theme-dark" {{ site.style_default_theme_colors }}>
 
             <div class="backdrop__credit">
                 <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
@@ -54,9 +47,10 @@
             <div class="backdrop__cover">
 
                 <div class="container text-align-center">
+
                     <div class="container medium margin-y-4">
 
-                        <h1 class="banner-headline text-align-center text-shadow--lg margin-bottom-4">
+                        <h1 class="banner-headline text-shadow--lg margin-bottom-4">
                             Lorem ipsum dolor sit amet consectetur
                         </h1>
 
@@ -65,14 +59,12 @@
                             <div class="grid grid--gap-2 grid--cells-fill--sm justify-center">
 
                                 <div class="grid__cell">
-                                    <a class="button theme-primary display-block theme-white box-shadow"
-                                        href="#1">Link</a>
+                                    <a class="button theme-primary width-100 box-shadow-1" href="#1">Link</a>
                                 </div>
                                 <!-- .grid__cell -->
 
                                 <div class="grid__cell">
-                                    <a class="button theme-secondary display-block theme-white box-shadow"
-                                        href="#1">Link</a>
+                                    <a class="button theme-secondary width-100 box-shadow-1" href="#1">Link</a>
                                 </div>
                                 <!-- .grid__cell -->
 
@@ -82,7 +74,7 @@
                         </div>
 
                     </div>
-                    <!-- .container -->
+                    
                 </div>
 
             </div>
