@@ -10,28 +10,33 @@
 
 /* Code Figure */
 
+figure .example, 
+figure .code-toolbar,
 figure .example + figcaption,
 figure .code-toolbar + figcaption {
 	background-color: var(--dark);
-	
-	color: var(--dark-text);
-	
-	padding: var(--spacer-2);
+}
 
+figure .example + figcaption,
+figure .code-toolbar + figcaption {
 	margin-top: unset;
 
-	opacity: 0.9;
+	padding: var(--spacer-2);
 
+	color: var(--dark-text);
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-	background-color: none;
-	color: #ccc;
+	background-color: transparent;
+
+	color: white;
 	
 	font-family: var(--code-font-family);
 	font-size: var(--font-size-md);
-	text-align: left;
+
+	text-align: inherit;
+	
 	white-space: pre;
 
 	word-spacing: normal;
@@ -40,14 +45,51 @@ pre[class*="language-"] {
 
 	line-height: 1.75;
 
+	hyphens: none;
+
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
 
-	hyphens: none;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
+}
+
+/* Inline code */
+
+p > code {
+	--code-color: var(--white-confirm);
+
+	position: relative;
+
+	display: inline-block;
+
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	
+	font-family: var(--code-font-family);
+	font-size: 0.875em;
+	line-height: 1.5;
+
+    white-space: normal;
+
+	color: var(--code-color);
+}
+
+p > code::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: currentColor;
+    
+	border-radius: .25em;
+
+	opacity: .095;
 }
 
 /* Code blocks */
@@ -60,37 +102,107 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	overflow-x: scroll;
-	background-color: var(--dark);
 }
 
-/* Inline code */
+/* Line Highlight */
 
-p > code {
-	--code-color: var(--white-confirm);
-
+pre[data-line] {
 	position: relative;
-	display: inline-block;
+	padding-left: var(--spacer-4);
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+
+	margin-top: var(--spacer-3); /* Same as .prism’s padding-top */
+
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
+
+	pointer-events: none;
+
+	line-height: 1.75;
+
+	white-space: pre;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+	content: attr(data-start);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 1em;
+	color: var(--secondary);
+	font-size: var(--font-size-md);
+	font-weight: bold;
+}
+
+.line-highlight[data-end]:after {
+	content: attr(data-end);
+	top: auto;
+	bottom: .4em;
+}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
+}
+
+/* Code Toolbar */
+
+div.code-toolbar {
+	position: relative;
+
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+div.code-toolbar > .toolbar {
+	display: flex;
+	justify-content: space-between;
+
+	padding: var(--spacer-2); 
 	
-	font-family: var(--code-font-family);
-	font-size: 0.875em;
-	line-height: 1.5;
-    white-space: normal;
-
-	padding: 0.075rem 0.25rem;
-	color: var(--code-color);
+	border-bottom: 1px solid hsla(0, 0%, 100%, 0.125) !important;
 }
 
-p > code::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: currentColor;
-    opacity: .095;
-    border-radius: .25em;
+div.code-toolbar > .toolbar a, 
+div.code-toolbar > .toolbar button {
+	cursor: pointer;
 }
+
+div.code-toolbar > .toolbar button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+
+	font-weight: bold;
+	color: var(--secondary);
+}
+
+.toolbar-item {
+	font-size: var(--font-size-md);
+}
+
+.toolbar-item:nth-child(1) {
+	color: white;
+}
+
+pre.hide-toolbar + div.toolbar {
+	display: none;
+}
+
+/* Code Colors */
 
 .token.comment,
 .token.block-comment,
@@ -166,100 +278,7 @@ p > code::before {
 	color: green;
 }
 
-pre[data-line] {
-	position: relative;
-	padding-left: 3em;
-}
-
-.line-highlight {
-	position: absolute;
-	left: 0;
-	right: 0;
-
-	margin-top: var(--spacer-3); /* Same as .prism’s padding-top */
-
-	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
-
-	pointer-events: none;
-
-	line-height: 1.75;
-
-	white-space: pre;
-}
-
-.line-highlight:before,
-.line-highlight[data-end]:after {
-	content: attr(data-start);
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 1em;
-	color: var(--secondary);
-	font-size: var(--font-size-md);
-	font-weight: bold;
-}
-
-.line-highlight[data-end]:after {
-	content: attr(data-end);
-	top: auto;
-	bottom: .4em;
-}
-
-.line-numbers .line-highlight:before,
-.line-numbers .line-highlight:after {
-	content: none;
-}
-
-div.code-toolbar {
-	position: relative;
-	display: flex;
-	flex-direction: column-reverse;
-	background-color: var(--dark);
-}
-
-div.code-toolbar > .toolbar {
-	display: flex;
-	justify-content: space-between;
-
-	padding: var(--spacer-2); 
-	
-	border-bottom: 1px solid hsla(0, 0%, 100%, 0.125) !important;
-}
-
-div.code-toolbar > .toolbar a, 
-div.code-toolbar > .toolbar button {
-	cursor: pointer;
-}
-
-div.code-toolbar > .toolbar button {
-	background: none;
-	border: 0;
-	color: inherit;
-	font: inherit;
-	line-height: normal;
-	overflow: visible;
-	padding: 0;
-
-	-webkit-user-select: none; /* for button */
-	-moz-user-select: none;
-	-ms-user-select: none;
-
-	font-weight: bold;
-	color: var(--secondary);
-}
-
-
-.toolbar-item {
-	font-size: var(--font-size-md);
-}
-
-.toolbar-item:nth-child(1){
-	color: white;
-}
-
-pre.hide-toolbar + div.toolbar {
-	display: none;
-}
+/* Tree View */
 
 .token.treeview-part .entry-line {
 	position: relative;
@@ -306,8 +325,10 @@ pre.hide-toolbar + div.toolbar {
 }
 
 /* @GENERATED-FONT */
+
 @font-face {
 	font-family: "PrismTreeview";
+
 	/**
 	 * This font is generated from the .svg files in the `icons` folder. See the `treeviewIconFont` function in
 	 * `gulpfile.js/index.js` for more information.
