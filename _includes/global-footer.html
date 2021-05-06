@@ -300,7 +300,6 @@
 
 {% endif %}
 
-
 {% if page.title == 'NYC Core Icons' %}
 
 <script defer src="{{ site.baseurl }}/dist/js/icon_display.js"></script>
@@ -312,6 +311,8 @@
 <script src="{{ site.baseurl }}/lib/js/prism.js"></script>
 
 <script src="{{ site.baseurl }}/dist/js/table_of_contents.js"></script>
+
+<script src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
 
 <script>
 
@@ -405,12 +406,6 @@
     });
 
 </script>
-
-{% endif %}
-
-{% if page.url contains '/docs' or '/templates' %}
-
-<script defer src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
 
 {% endif %}
 
