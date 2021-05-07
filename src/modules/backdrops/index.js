@@ -1,10 +1,10 @@
 import "./_style.scss";
 
 //////////////////////////////////////////////
-// Backdrop
+// Backdrops
 //////////////////////////////////////////////
 
-export default class Backdrop {
+export default class Backdrops {
 
     constructor() {
 

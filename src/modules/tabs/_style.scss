@@ -15,7 +15,7 @@ In this file:
 ////////////////////////////////////////
 
 @use "sass:map";
-@use "../breakpoint/style" as breakpoint;
+@use "../breakpoints/style" as breakpoints;
 
 ////////////////////////////////////////
 // B. Variables
@@ -97,9 +97,9 @@ In this file:
 }
 
 .tabs-nav {
-    @each $breakpoint in map.keys(breakpoint.$breakpoints) {
-        @include breakpoint.breakpoints-up($breakpoint) {
-            $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
+    @each $breakpoint in map.keys(breakpoints.$breakpoints) {
+        @include breakpoints.breakpoints-up($breakpoint) {
+            $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
             &.tabs-nav--horizontal#{$mod} {
                 display: flex;

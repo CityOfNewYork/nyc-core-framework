@@ -4,7 +4,7 @@ import "./_style.scss";
 // Table
 //////////////////////////////////////////////
 
-export default class Table {
+export default class Tables {
 
     constructor() {
 

@@ -14,7 +14,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "../breakpoint/style" as breakpoint;
+@use "../breakpoints/style" as breakpoints;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -201,9 +201,9 @@ body:not([class*="theme-"]),
     }
 }
 
-@each $breakpoint in map.keys(breakpoint.$breakpoints) {
-    @include breakpoint.breakpoints-up($breakpoint) {
-        $mod: breakpoint.breakpoint-modifier($breakpoint, breakpoint.$breakpoints);
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         @each $name, $color-map in $theme-colors {
             $swatch: map.get($color-map, "swatch");

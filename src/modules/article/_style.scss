@@ -13,7 +13,7 @@ In this file:
 // A. Modules
 //////////////////////////////////////////////
 
-@use "../breakpoint/style" as breakpoint;
+@use "../breakpoints/style" as breakpoints;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -43,7 +43,7 @@ In this file:
     overflow: hidden;
 }
 
-@include breakpoint.breakpoints-up(lg) {
+@include breakpoints.breakpoints-up(lg) {
 
     [class*="article"] {
 
@@ -87,7 +87,7 @@ In this file:
     }
 }
 
-@include breakpoint.breakpoints-up(xl) {
+@include breakpoints.breakpoints-up(xl) {
 
     .article--three-column {
         --article-sidebar-width: 260px;

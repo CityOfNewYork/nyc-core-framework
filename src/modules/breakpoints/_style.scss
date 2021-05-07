@@ -38,7 +38,7 @@ $breakpoints: map.merge((null : 0), $breakpoints);
 // C. Breakpoints Functions
 //////////////////////////////////////////////
 
-// Name of the next breakpoint, or null for the last breakpoint.
+// Name of the next breakpoint, or null for the last breakpoints.
 
 @function breakpoint-value($name, $breakpoints) {
   $value: map.get($breakpoints, $name);

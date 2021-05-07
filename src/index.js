@@ -10,37 +10,37 @@ import "element-closest-polyfill";
 
 import "./modules/accents";
 
-import Accessibility from "./modules/accessibility/";
+import Accessibility from "./modules/accessibility";
 new Accessibility();
 
-import Accordion from "./modules/accordion/";
+import Accordion from "./modules/accordion";
 new Accordion();
 
-import Alert from "./modules/alert/";
-new Alert();
+import Alerts from "./modules/alerts";
+new Alerts();
 
-import "./modules/article/";
+import "./modules/article";
 
-import "./modules/aspect-ratio";
+import "./modules/aspect-ratios";
 
-import Backdrop from "./modules/backdrop/";
-new Backdrop();
+import Backdrops from "./modules/backdrops";
+new Backdrops();
 
-import "./modules/border";
+import "./modules/borders";
 
-import "./modules/breakpoint";
+import "./modules/breakpoints";
 
-import Button from "./modules/button/";
-new Button();
+import Buttons from "./modules/buttons/";
+new Buttons();
 
-import "./modules/card";
+import "./modules/cards";
 
 import Collapse from "./modules/collapse";
 new Collapse();
 
 import "./modules/color";
 
-import "./modules/container";
+import "./modules/containers";
 
 import "./modules/display";
 
@@ -49,16 +49,16 @@ new Document();
 
 import "./modules/flex";
 
-import Form from "./modules/form";
-new Form();
+import Forms from "./modules/forms";
+new Forms();
 
 import "./modules/grid";
 
-import "./modules/icon";
+import "./modules/icons";
 
 import "./modules/language";
 
-import "./modules/link";
+import "./modules/links";
 
 import Modal from "./modules/modal";
 new Modal();
@@ -72,17 +72,17 @@ import "./modules/overflow";
 
 import "./modules/position";
 
-import "./modules/shadow";
+import "./modules/shadows";
 
 import "./modules/sizing";
 
 import "./modules/spacing";
 
-import Tab from "./modules/tab";
-new Tab();
+import Tabs from "./modules/tabs";
+new Tabs();
 
-import Table from "./modules/table";
-new Table();
+import Tables from "./modules/tables";
+new Tables();
 
 import Tearsheet from "./modules/tearsheet";
 new Tearsheet();

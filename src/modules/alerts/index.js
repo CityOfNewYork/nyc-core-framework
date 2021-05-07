@@ -4,7 +4,7 @@ import "./_style.scss";
 // Alerts
 //////////////////////////////////////////////
 
-export default class Alert {
+export default class Alerts {
 
     constructor() {
         

@@ -4,7 +4,7 @@ import "./_style.scss";
 // Form
 //////////////////////////////////////////////
 
-export default class Form {
+export default class Forms {
 
     constructor() {
 
