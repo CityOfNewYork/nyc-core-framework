@@ -43,7 +43,7 @@ In this file:
 
     border-radius: var(--alert-border-radius);
 
-    &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-color-"]) {
+    &:not([class*="theme-"]):not([class*="--inverse"]):not([class*="background-"]) {
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.1;
     }    

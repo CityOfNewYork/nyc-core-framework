@@ -132,7 +132,7 @@ body:not([class*="theme-"]),
 [class*="theme-"] {
     background-color: var(--background-color);
 
-    color: var(--text-color);
+    color: var(--text-);
     
     border-color: var(--border-color);
 
@@ -144,7 +144,7 @@ body:not([class*="theme-"]),
 
     td > a, 
     .td-content > a,
-    p > a:not([class*="text-color-"]) {
+    p > a:not([class*="text-"]) {
         color: var(--link-color);
     }
 
@@ -216,19 +216,19 @@ body:not([class*="theme-"]),
 
             .theme-#{$name}#{$mod} {
                 --background-color: #{$swatch};
-                --text-color: #{$text};
+                --text-: #{$text};
                 --border-color: #{$border};
                 --link-color: #{$link};
                 --confirm-color: #{$confirm};
                 --warn-color: #{$warn};
             }
 
-            .background-color-#{$name}#{$mod}{
+            .background-#{$name}#{$mod}{
                 --background-color: #{$swatch};
                 background-color: var(--background-color) !important;
             }
 
-            .text-color-#{$name}#{$mod}{
+            .text-#{$name}#{$mod}{
                 --text-color: #{$swatch};
                 color: var(--text-color) !important;
             }
