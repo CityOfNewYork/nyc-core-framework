@@ -12,9 +12,9 @@ In this file:
 // A. Variables
 ////////////////////////////////////////
 
-// Scoped to root
+// Scoped to Block
 
-:root {
+%caret-vars{
     --caret-size: 0.25em;
 
     --caret-margin: 0.375em;
@@ -36,6 +36,8 @@ In this file:
 ////////////////////////////////////////
 
 .caret {
+    @extend %caret-vars;
+    
     display: flex;
     flex-direction: row-reverse;
     align-items: center;

@@ -16,7 +16,7 @@ In this file:
 
 // Scoped to Block
 
-%custom-properties {
+%icon-font-vars {
   --icon-size: 1em;
 }
 
@@ -26,7 +26,7 @@ In this file:
 
 [class^="nyc_icon_"],
 [class*="nyc_icon_"] {
-  @extend %custom-properties;
+  @extend %icon-font-vars;
   
   font-size: var(--icon-size);
   vertical-align: middle;
