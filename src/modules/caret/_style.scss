@@ -38,7 +38,7 @@ In this file:
 .caret {
     @extend %caret-vars;
     
-    display: flex;
+    display: inline-flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-end;

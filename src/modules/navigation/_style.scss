@@ -387,6 +387,8 @@ In this file:
         display: flex;
         align-items: center;
 
+        background-color: antiquewhite;
+
         padding: var(--primary-nav-padding);
 
         > .button {
@@ -404,7 +406,7 @@ In this file:
     justify-content: space-between;
     align-items: center;
 
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
         "logo buttons"
         "menu menu";
@@ -415,7 +417,20 @@ In this file:
         > ul > li:not(:last-child) {
             margin-bottom: var(--nav-gap);
         }
+
+        .form-entry__field {
+            height: var(--button--icon-only-size);
+
+            border-radius: var(--button-border-radius);
+            border-width: var(--default-border-width);
+            border-style: var(--default-border-style);
+        }
+
+        .form-entry__field__input {
+            min-height: 100%;
+        }
     }
+
 }
 
 [class*="primary-nav--below--"] {
@@ -446,10 +461,6 @@ In this file:
 
 .primary-nav__menu {
 
-    > ul {
-        // background-color: violet;
-    }
-
     > ul > li {
         position: relative;
 
@@ -463,20 +474,8 @@ In this file:
     }
 
     > .form-entry {
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        background-color: yellowgreen;
-        border-radius: var(--button-border-radius);
-        
-        border-width: var(--default-border-width);
-        border-style: var(--default-border-style);
-        margin-top: var(--spacer-2);
 
-        .form-entry__field {
-            --button-padding-y: 0.5em;
-            --form-field-padding-y: var(--button-padding-y);
-        }
+        margin-top: var(--spacer-2);
     }
 
     .nav__dropdown {
