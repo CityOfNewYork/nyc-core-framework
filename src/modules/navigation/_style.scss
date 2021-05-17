@@ -423,10 +423,6 @@ In this file:
             border-width: var(--default-border-width);
             border-style: var(--default-border-style);
         }
-
-        .form-entry__field__input {
-            min-height: 100%;
-        }
     }
 
 }
@@ -471,8 +467,8 @@ In this file:
         @extend .expanded-link;
     }
 
-    > .form-entry {
-
+    > form[role="search"] {
+        background-color: antiquewhite;
         margin-top: var(--spacer-2);
     }
 
@@ -496,9 +492,10 @@ In this file:
             [class*="__menu"] {
                 display: flex !important;
 
-                .form-entry {
-                    margin-top: unset;
-                }
+            }
+
+            form[role="search"] {
+                margin-top: unset;
             }
 
             [class*="__actions"] {
@@ -569,19 +566,6 @@ In this file:
                     flex-grow: 1;
                 }
 
-                > .form-entry {
-                    flex-shrink: 1;
-                    flex-basis: 240px;
-                    
-                    border-left-width: var(--default-border-width);
-                    border-left-style: var(--default-border-style);
-
-                    [dir="rtl"] & {
-                        border-left-width: 0;
-                        border-right-width: var(--default-border-width);
-                        border-right-style: var(--default-border-style);
-                    }
-                }
 
             }
 
@@ -644,6 +628,21 @@ In this file:
                 }
             }
 
+            // mnjbhvjlmknjbhv
+
+                > .form-entry {
+                    // flex-shrink: 1;
+                    // flex-basis: 240px;
+                    
+                    border-left-width: var(--default-border-width);
+                    border-left-style: var(--default-border-style);
+
+                    [dir="rtl"] & {
+                        border-left-width: 0;
+                        border-right-width: var(--default-border-width);
+                        border-right-style: var(--default-border-style);
+                    }
+                }
         }
 
     }
