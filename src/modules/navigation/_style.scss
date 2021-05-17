@@ -468,7 +468,6 @@ In this file:
     }
 
     > form[role="search"] {
-        background-color: antiquewhite;
         margin-top: var(--spacer-2);
     }
 
@@ -494,16 +493,17 @@ In this file:
 
             }
 
-            form[role="search"] {
-                margin-top: unset;
-            }
-
             [class*="__actions"] {
                 padding: var(--primary-nav-padding);
             }
 
             [class*="__actions"] button.mobile-menu-toggle {
                 display: none;
+            }
+
+            form[role="search"] {
+                max-width: 200px;
+                margin-top: unset;
             }
         }
 
@@ -565,8 +565,6 @@ In this file:
                 > ul {
                     flex-grow: 1;
                 }
-
-
             }
 
             > [class*="__menu"] > ul {
@@ -628,21 +626,16 @@ In this file:
                 }
             }
 
-            // mnjbhvjlmknjbhv
+            form[role="search"] {
+                border-left-width: var(--default-border-width);
+                border-left-style: var(--default-border-style);
 
-                > .form-entry {
-                    // flex-shrink: 1;
-                    // flex-basis: 240px;
-                    
-                    border-left-width: var(--default-border-width);
-                    border-left-style: var(--default-border-style);
-
-                    [dir="rtl"] & {
-                        border-left-width: 0;
-                        border-right-width: var(--default-border-width);
-                        border-right-style: var(--default-border-style);
-                    }
+                [dir="rtl"] & {
+                    border-left-width: 0;
+                    border-right-width: var(--default-border-width);
+                    border-right-style: var(--default-border-style);
                 }
+            }
         }
 
     }
