@@ -5,7 +5,8 @@ title: NYC Core Framework
 description: NYC's open source accessible design system
 
 # URL (Local)
-baseurl: '/nyc-core-framework'
+baseurl: ""
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Archive (Append '/version/x.x')
 # baseurl: '/nyc-core-framework/version/1.5'

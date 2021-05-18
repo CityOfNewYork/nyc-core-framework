@@ -63,7 +63,7 @@
 
 {% if page.title == 'Home' %}
 
-<script src="{{ site.baseurl }}/dist/js/home.js"></script>
+<script src="{{ site.url }}/dist/js/home.js"></script>
 
 {% endif %}
 
@@ -71,7 +71,7 @@
 
 <script>
 
-    const customPropertiesData = "{{ site.baseurl }}/lib/json/root-custom-properties.json";
+    const customPropertiesData = "{{ site.url }}/lib/json/root-custom-properties.json";
     const customPropertiesContainer = document.getElementById("all-custom-properties");
     const customPropertiesTable = customPropertiesContainer.querySelector(".table-scroll__container");
 
@@ -146,7 +146,7 @@
             return `
                 <div class="cp-header box-shadow-1" id="cp_${id}">
                     <span class="cp-header__title">${type}</span>
-                    <a class="cp-header__link button button--has-icon" href="{{ site.baseurl }}/docs/${slug}">
+                    <a class="cp-header__link button button--has-icon" href="{{ site.url }}/docs/${slug}">
                         <span class="button__text">Docs</span>
                         <span class="nyc_icon_arrow-right button__icon"></span>
                     </a>
@@ -302,23 +302,23 @@
 
 {% if page.title == 'NYC Core Icons' %}
 
-<script defer src="{{ site.baseurl }}/dist/js/icon_display.js"></script>
+<script defer src="{{ site.url }}/dist/js/icon_display.js"></script>
 
 {% endif %}
 
 {% if page.url contains '/docs' %}
 
-<script src="{{ site.baseurl }}/lib/js/prism.js"></script>
+<script src="{{ site.url }}/lib/js/prism.js"></script>
 
-<script src="{{ site.baseurl }}/dist/js/table_of_contents.js"></script>
+<script src="{{ site.url }}/dist/js/table_of_contents.js"></script>
 
-<script src="{{ site.baseurl }}/dist/js/iframe_height.js"></script>
+<script src="{{ site.url }}/dist/js/iframe_height.js"></script>
 
 <script>
 
     window.addEventListener('DOMContentLoaded', (event) => {
 
-    const docPagesData = "{{ site.baseurl }}/lib/json/documentation-pages.json";
+    const docPagesData = "{{ site.url }}/lib/json/documentation-pages.json";
 
     let allPagesArray = [];
 

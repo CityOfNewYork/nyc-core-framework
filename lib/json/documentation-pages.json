@@ -19,7 +19,7 @@ layout: none
         {
           "title"    : "{{ page.title | escape }}",
           "tags"     : "{{ page.tags | join: ', ' }}",
-          "url"      : "{{ site.baseurl }}{{ page.url }}"
+          "url"      : "{{ site.url }}{{ page.url }}"
         } {% unless forloop.last %},{% endunless %}
         
       {% endfor %}
