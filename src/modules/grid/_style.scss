@@ -34,20 +34,9 @@ $columns: 12;
     min-width: 100%;
 }
 
-[class*="grid__cell"]{
+[class*="grid__cell"] {
     flex: 1 1 100%;
     max-width: 100%;
-}
-
-[class*="grid__cell"] {
-
-    > .grid:not([class*="cols-"]) {
-        height: calc(var(--gap-size) + 100%);
-
-        > [class*="grid__cell"]:not([class*="grid__cell-"]) {
-            width: 100%;
-        }
-    }
 }
 
 //////////////////////////////////////////////
@@ -125,12 +114,13 @@ $columns: 12;
         }
 
         .grid > .grid__cell.grid--cell-fill#{$mod} {
-            flex: 1;
+            flex: 1 !important;
+            max-width: unset;
         }
         
         .grid > .grid__cell.grid--cell-fit#{$mod} {
             flex: none;
-            width: auto;
+            max-width: unset;
         }
     }
 }
