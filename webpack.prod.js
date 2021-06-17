@@ -23,11 +23,7 @@ module.exports = merge(common, {
                     options: {
                         presets: [
                             [
-                                "@babel/preset-env",
-                                {
-                                    "useBuiltIns": "usage",
-                                    "corejs": 3
-                                }
+                                "@babel/preset-env"
                             ]
                         ],
                         plugins: [
