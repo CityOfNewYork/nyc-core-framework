@@ -5,10 +5,7 @@ title: "Grid"
 
 <div class="container narrow margin-y-4">
     <p>
-        Quickly prototype and build responsive layouts with a simple (and familiar) 12 column flexbox grid system. In the spirit of inclusivity we must consider Internet Explorer 11 users. For this reason, our grid system continues to use Flexbox instead of CSS Grid Layout.
-    </p>
-    <p>
-        Future versions of our grid will likely use CSS Grid Layout, when Internet Explorer 11 is finally discontinued.
+        Quickly prototype and build responsive layouts with a simple (and likely familiar) flexbox <a href="https://www.unco.edu/web-communications/blog/understanding-the-12-column-grid.aspx" target="_blank"> 12 column grid</a> system.
     </p>
 </div>
 <!-- .container -->
@@ -49,14 +46,57 @@ title: "Grid"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 1 - Example HTML for a grid with three columns.</p>
+        <p>Figure 1</p>
     </figcaption>
 </figure>
 
-<div class="container narrow margin-y-4 display-none">
+<div class="container narrow margin-y-4">
 
     <p>
-        Padding and marging classes should not be added to <code>.grid</code> or <code>.grid__cell</code> selectors. 
+        The HTML from Figure 1 results in: 
+    </p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+
+    <div class="grid text-align-center font-size-md">
+
+        <div class="grid__cell">
+
+            <div class="subtle-fill padding-2 border">
+                <p>01</p>
+            </div>
+
+        </div>
+
+        <div class="grid__cell">
+
+            <div class="subtle-fill padding-2 border">
+                <p>02</p>
+            </div>
+
+        </div>
+
+        <div class="grid__cell">
+
+            <div class="subtle-fill padding-2 border">
+                <p>03</p>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- .grid -->
+
+</figure>
+
+
+<div class="container narrow margin-y-4">
+
+    <p>
+        The <code>.grid__cell</code> selectors are stacked on top of one another because we have not specified any specific desired widths. 
     </p>
 
 </div>
@@ -68,13 +108,8 @@ title: "Grid"
 
     <h2>Grid Cell Widths</h2>
 
-    <p class="display-none">
-        All <code>.grid__cell</code> selectors occupy 100% of the available width (stacked one above another) until otherwise
-        specified⁠. 
-    </p>
-
     <p>
-        There are several ways to apply widths to grid cells. For equal width cells, apply the <code>.grid--cells-{x}</code> modifier class to the <code>.grid</code> selector, where <em>x</em> equals the desired width.
+        There are several ways to apply widths to grid cells. To apply the same width to all <code>.grid__cell</code> selectors, apply the <code>.grid--cells-{x}</code> modifier class to the <code>.grid</code> selector, where <em>x</em> equals their desired width (From 1-12).
     </p>
     <p>
        For example, to make a three-column grid using the 12 column system, apply <code>.grid--cells-4</code> to <code>.grid</code> (<em>12</em> total columns divided by <em>3</em> columns equals <em>4</em>).
@@ -83,91 +118,180 @@ title: "Grid"
 </div>
 <!-- .container -->
 
-<figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
 
-    <div class="grid grid--gap-1 grid--cells-4 font-size-sm text-align-center text-secondary">
+                <div class="grid grid--cells-4 font-size-md text-align-center">
 
-        <div class="grid__cell">
-            <div class="theme-primary px-1 py-2">
-                <p>Auto</p>
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>01</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>02</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>03</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>04</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>05</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>06</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .grid -->
+
             </div>
         </div>
-        <!-- .grid__cell -->
+        <pre>
+            <code class="language-html">
+                &lt;div class="grid grid--cells-4"&gt;
 
-        <div class="grid__cell">
-            <div class="theme-primary px-1 py-2">
-                <p>Auto</p>
-            </div>
-        </div>
-        <!-- .grid__cell -->
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
 
-        <div class="grid__cell">
-            <div class="theme-primary px-1 py-2">
-                <p>Auto</p>
-            </div>
-        </div>
-        <!-- .grid__cell -->
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
 
-        <div class="grid__cell">
-            <div class="theme-primary px-1 py-2">
-                <p>Auto</p>
-            </div>
-        </div>
-        <!-- .grid__cell -->
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
 
-        <div class="grid__cell">
-            <div class="theme-primary px-1 py-2">
-                <p>Auto</p>
-            </div>
-        </div>
-        <!-- .grid__cell -->
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
 
-        <div class="grid__cell">
-            <div class="theme-primary px-1 py-2">
-                <p>Auto</p>
-            </div>
-        </div>
-        <!-- .grid__cell -->
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
 
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                &lt;/div>
+                <!-- .grid -->
+            </code>
+        </pre>
     </div>
-    <!-- .grid -->
-
-</figure>
-<!-- .container -->
-
-<figure class="container narrow margin-y-4">
-    <pre>
-        <code class="language-html">
-            &lt;div class="grid grid--cells-4"&gt;
-                
-                &lt;div class="grid__cell"&gt;
-                    &lt;!-- ... --&gt;
-                &lt;/div&gt;
-
-                &lt;div class="grid__cell"&gt;
-                    &lt;!-- ... --&gt;
-                &lt;/div&gt;
-
-                &lt;div class="grid__cell"&gt;
-                    &lt;!-- ... --&gt;
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-        </code>
-    </pre>
     <figcaption>
-        <p>Figure 1 - Example HTML for a simple grid with three columns.</p>
+        <p>Figure 2</p>
     </figcaption>
 </figure>
+
 
 <div class="container narrow margin-y-4">
 
     <p>
-        Specific widths can be applied to individual columns. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolor quam maiores distinctio blanditiis quas architecto dolore explicabo ratione numquam. 
+        Specific widths can be applied to individual columns. On any <code>.grid__cell</code> selector, apply the modifier class <code>.grid__cell-{x}</code> where <em>x</em> equals the desired width. 
     </p>
 
 </div>
 <!-- .container -->
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+
+                <div class="grid grid--cells-4 font-size-md text-align-center">
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>01</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>02</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>03</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>04</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell grid--cell-6">
+                        <div class="subtle-fill padding-2 border">
+                            <p>??</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .grid -->
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="grid grid--cells-4"&gt;
+
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                &lt;/div>
+                <!-- .grid -->
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 2</p>
+    </figcaption>
+</figure>
 
 <hr class="section-start">
 
