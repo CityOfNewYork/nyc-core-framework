@@ -34,20 +34,9 @@ $columns: 12;
     min-width: 100%;
 }
 
-[class*="grid__cell"]{
+[class*="grid__cell"] {
     flex: 1 1 100%;
     max-width: 100%;
-}
-
-[class*="grid__cell"] {
-
-    > .grid:not([class*="cols-"]) {
-        height: calc(var(--gap-size) + 100%);
-
-        > [class*="grid__cell"]:not([class*="grid__cell-"]) {
-            width: 100%;
-        }
-    }
 }
 
 //////////////////////////////////////////////
@@ -86,16 +75,16 @@ $columns: 12;
     @include breakpoints.breakpoints-up($breakpoint) {
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
-        .grid--cells-fill#{$mod} > [class*="grid__cell"] {
+        .grid--cell-fill#{$mod} > [class*="grid__cell"] {
             flex: 1;
         }
 
-        .grid--cells-fit#{$mod} > [class*="grid__cell"]{
+        .grid--cell-fit#{$mod} > [class*="grid__cell"] {
             flex: none;
         }
         
         @for $i from 1 through $columns {
-            .grid--cells-#{$i}#{$mod} > [class*="grid__cell"] {
+            .grid--cell-#{$i}#{$mod} > [class*="grid__cell"] {
                 flex: 0 0 100% / $columns * $i;
                 max-width: 100% / $columns * $i;
             }
@@ -118,20 +107,20 @@ $columns: 12;
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         @for $i from 1 through $columns {
-            .grid > .grid__cell-#{$i}#{$mod} {
+            .grid > .grid__cell.grid--cell-#{$i}#{$mod} {
                 flex: 0 0 100% / $columns * $i;
                 max-width: 100% / $columns * $i;
             }
         }
 
-        .grid > .grid__cell-fill#{$mod} {
-            flex: 1;
-            width: auto;
+        .grid > .grid__cell.grid--cell-fill#{$mod} {
+            flex: 1 !important;
+            max-width: unset;
         }
         
-        .grid > .grid__cell-fit#{$mod} {
+        .grid > .grid__cell.grid--cell-fit#{$mod} {
             flex: none;
-            width: auto;
+            max-width: unset;
         }
     }
 }
