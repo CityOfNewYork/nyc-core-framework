@@ -223,12 +223,12 @@ body:not([class*="theme-"]),
                 --warn-color: #{$warn};
             }
 
-            .background-#{$name}#{$mod}{
+            .background-color-#{$name}#{$mod}{
                 --background-color: #{$swatch};
                 background-color: var(--background-color) !important;
             }
 
-            .text-#{$name}#{$mod}{
+            .text-color-#{$name}#{$mod}{
                 --text-color: #{$swatch};
                 color: var(--text-color) !important;
             }

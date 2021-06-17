@@ -124,6 +124,11 @@ $columns: 12;
             }
         }
 
+        .grid > .grid__cell-fill#{$mod} {
+            flex: 1;
+            width: auto;
+        }
+        
         .grid > .grid__cell-fit#{$mod} {
             flex: none;
             width: auto;
