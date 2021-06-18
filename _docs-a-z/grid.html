@@ -439,6 +439,85 @@ title: "Grid"
 </figure>
 
 <div class="container narrow margin-y-4">
+    <h3>Fit and Fill</h3>
+    <p>
+        In addition to the 12 width values, <code>.grid--cell-fit</code> and <code>.grid-cell-fill</code> are available.
+    </p>
+    <p>
+        Using <code>.grid--cell-fit</code> allows the cell's content to determine it's width. While <code>.grid--cell-fill</code> divides uses the remaining available space.
+    </p>
+</div>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="grid grid--cell-fit margin-bottom-1">
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>01</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>02</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>03</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .grid -->
+
+                <div class="grid grid--cell-fill">
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>01</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>02</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>03</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .grid -->
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="grid grid--cell-fit"&gt;
+                    &lt;!-- grid cells ... --&gt;
+                &lt;/div>
+
+                &lt;div class="grid grid--cell-fill"&gt;
+                    &lt;!-- grid cells ... --&gt;
+                &lt;/div>
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 4</p>
+    </figcaption>
+</figure>
+<div class="container narrow margin-y-4">
     <h3>Breakpoint Modifiers</h3>
     <p>
         To create a responsive layout, chain a breakpoint modifier (e.g. <code>.grid--cell-{x}--{y}</code> where <em>x</em> again equals the cell width, and <em>y</em> specifies th desired breakpoint.
@@ -526,13 +605,13 @@ title: "Grid"
                 <div class="grid grid--cell-6 grid--gap-border margin-bottom-1">
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-border</p>
                         </div>
                     </div>
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-border</p>
                         </div>
                     </div>
@@ -543,13 +622,13 @@ title: "Grid"
                 <div class="grid grid--cell-6 grid--gap-1 margin-bottom-1">
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-1</p>
                         </div>
                     </div>
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-1</p>
                         </div>
                     </div>
@@ -560,13 +639,13 @@ title: "Grid"
                 <div class="grid grid--cell-6 grid--gap-2 margin-bottom-1">
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-2</p>
                         </div>
                     </div>
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-2</p>
                         </div>
                     </div>
@@ -577,13 +656,13 @@ title: "Grid"
                 <div class="grid grid--cell-6 grid--gap-3 margin-bottom-1">
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-3</p>
                         </div>
                     </div>
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-3</p>
                         </div>
                     </div>
@@ -594,13 +673,13 @@ title: "Grid"
                 <div class="grid grid--cell-6 grid--gap-4 margin-bottom-1">
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-4</p>
                         </div>
                     </div>
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-4</p>
                         </div>
                     </div>
@@ -611,13 +690,13 @@ title: "Grid"
                 <div class="grid grid--cell-6 grid--gap-5">
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-5</p>
                         </div>
                     </div>
 
                     <div class="grid__cell">
-                        <div class="theme-primary padding-2">
+                        <div class="subtle-fill padding-2 border">
                             <p>.grid--gap-5</p>
                         </div>
                     </div>
@@ -659,6 +738,7 @@ title: "Grid"
         <p>Figure 4</p>
     </figcaption>
 </figure>
+
 
 <div class="container narrow margin-y-4">
     <p>
