@@ -5,7 +5,7 @@ title: "Grid"
 
 <div class="container narrow margin-y-4">
     <p>
-        Quickly prototype and build responsive layouts with a simple (and likely familiar) flexbox <a href="https://www.unco.edu/web-communications/blog/understanding-the-12-column-grid.aspx" target="_blank"> 12 column grid</a> system.
+        Prototype and build responsive layouts with a simple yet powerful flexbox <a href="https://www.unco.edu/web-communications/blog/understanding-the-12-column-grid.aspx" target="_blank"> 12 column grid</a> system.
     </p>
 </div>
 <!-- .container -->
@@ -240,29 +240,23 @@ title: "Grid"
 
 </figure>
 
-
 <div class="container narrow margin-y-4">
-
     <p>
         The <code>.grid__cell</code> selectors inherit the width of their parent <code>.grid</code> and stack on top of one another when a width modifier class is not present. If a width modifier specific to a breakpoint is present, <code>.grid__cell</code> selectors remain stacked until the viewport width reaches that breakpoint. 
     </p>
-
 </div>
 <!-- .container -->
 
-<hr class="section-start" id="grid-cell-width">
+<hr class="section-start" id="cell-width">
 
 <div class="container narrow margin-y-4">
-
-    <h2>Grid Cell Width</h2>
-
+    <h2>Cell Width</h2>
     <p>
         To specify width to grid cells, use the <code>.grid--cell-{x}</code> modifier class, where <em>x</em> equals their desired width (a number from 1 to 12).
     </p>
     <p>
         For example, to make a three-column grid using the 12 column grid system, apply <code>.grid--cell-4</code> directly to the <code>.grid</code> selector (Figure 2, line 1).
     </p>
-
 </div>
 <!-- .container -->
 
@@ -439,12 +433,12 @@ title: "Grid"
 </figure>
 
 <div class="container narrow margin-y-4">
-    <h3>Fit and Fill</h3>
+    <h3>Fill and Fit</h3>
     <p>
-        In addition to the 12 width values, <code>.grid--cell-fit</code> and <code>.grid-cell-fill</code> are available.
+        In addition to the 12 width values, <code>.grid--cell-fill</code> and <code>.grid-cell-fit</code> modifier classes are available.
     </p>
     <p>
-        Using <code>.grid--cell-fit</code> allows the cell's content to determine it's width. While <code>.grid--cell-fill</code> divides uses the remaining available space.
+        Using <code>.grid--cell-fill</code> divides the remaining space (width) and fills it. While <code>.grid--cell-fit</code> allows the cell's content to determine it's width.
     </p>
 </div>
 
@@ -453,7 +447,8 @@ title: "Grid"
         <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
             <div class="container narrow font-size-md text-align-center">
 
-                <div class="grid grid--cell-fit margin-bottom-1">
+
+                <div class="grid grid--cell-fill margin-bottom-2">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -476,7 +471,7 @@ title: "Grid"
                 </div>
                 <!-- .grid -->
 
-                <div class="grid grid--cell-fill">
+                <div class="grid grid--cell-fit">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -504,11 +499,11 @@ title: "Grid"
         <pre>
             <code class="language-html">
                 &lt;div class="grid grid--cell-fit"&gt;
-                    &lt;!-- grid cells ... --&gt;
+                    &lt;!-- ... --&gt;
                 &lt;/div>
 
                 &lt;div class="grid grid--cell-fill"&gt;
-                    &lt;!-- grid cells ... --&gt;
+                    &lt;!-- ... --&gt;
                 &lt;/div>
             </code>
         </pre>
@@ -523,7 +518,7 @@ title: "Grid"
         To create a responsive layout, chain a breakpoint modifier (e.g. <code>.grid--cell-{x}--{y}</code> where <em>x</em> again equals the cell width, and <em>y</em> specifies th desired breakpoint.
     </p>
     <p>
-    For example, to make a three-column layout at the <em>medium</em> breakpoint, apply <code>.grid--cell-4--md</code> to the <code>.grid</code> selector (Figure 4, line 1).
+        For example, to make a three-column layout at the <em>medium</em> breakpoint, apply <code>.grid--cell-4--md</code> to the <code>.grid</code> selector (Figure 4, line 1).
     </p>
 </div>
 
@@ -583,17 +578,13 @@ title: "Grid"
     </figcaption>
 </figure>
 
-<hr class="section-start">
+<hr class="section-start" id="grid-gaps">
 
 <div class="container narrow margin-y-4">
-
     <h2>Grid Gaps</h2>
-
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Autem dolor quam maiores distinctio blanditiis quas architecto dolore explicabo ratione numquam.
+        To add space between grid cells, apply <code>.grid--gap-{x}</code> modifier class to the <code>.grid</code> selector. Here <em>x</em> equals the gap value. The example below shows all available values. The number values align with our global <a href="#1">spacing utilities</a>.
     </p>
-
 </div>
 <!-- .container -->
 
@@ -602,7 +593,7 @@ title: "Grid"
         <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
             <div class="container narrow font-size-md text-align-center">
 
-                <div class="grid grid--cell-6 grid--gap-border margin-bottom-1">
+                <div class="grid grid--cell-6 grid--gap-border margin-bottom-2">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -619,7 +610,7 @@ title: "Grid"
                 </div>
                 <!-- .grid -->
 
-                <div class="grid grid--cell-6 grid--gap-1 margin-bottom-1">
+                <div class="grid grid--cell-6 grid--gap-1 margin-bottom-2">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -636,7 +627,7 @@ title: "Grid"
                 </div>
                 <!-- .grid -->
 
-                <div class="grid grid--cell-6 grid--gap-2 margin-bottom-1">
+                <div class="grid grid--cell-6 grid--gap-2 margin-bottom-2">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -653,7 +644,7 @@ title: "Grid"
                 </div>
                 <!-- .grid -->
 
-                <div class="grid grid--cell-6 grid--gap-3 margin-bottom-1">
+                <div class="grid grid--cell-6 grid--gap-3 margin-bottom-2">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -670,7 +661,7 @@ title: "Grid"
                 </div>
                 <!-- .grid -->
 
-                <div class="grid grid--cell-6 grid--gap-4 margin-bottom-1">
+                <div class="grid grid--cell-6 grid--gap-4 margin-bottom-2">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -742,10 +733,54 @@ title: "Grid"
 
 <div class="container narrow margin-y-4">
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, fugit doloribus. Quis minus vitae enim
-        eligendi modi impedit reiciendis molestiae.
+        Grid gaps apply even horizontal and vertical spacing to cells.
     </p>
 </div>
 <!-- .container -->
 
+
+<figure class="container narrow margin-y-4">
+
+    <div class="grid grid--gap-2 grid--cell-4 text-align-center font-size-md">
+
+        <div class="grid__cell">
+            <div class="subtle-fill padding-2 border">
+                <p>01</p>
+            </div>
+        </div>
+
+        <div class="grid__cell">
+            <div class="subtle-fill padding-2 border">
+                <p>02</p>
+            </div>
+        </div>
+
+        <div class="grid__cell">
+            <div class="subtle-fill padding-2 border">
+                <p>03</p>
+            </div>
+        </div>
+
+        <div class="grid__cell">
+            <div class="subtle-fill padding-2 border">
+                <p>04</p>
+            </div>
+        </div>
+
+        <div class="grid__cell">
+            <div class="subtle-fill padding-2 border">
+                <p>05</p>
+            </div>
+        </div>
+
+        <div class="grid__cell">
+            <div class="subtle-fill padding-2 border">
+                <p>06</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- .grid -->
+
+</figure>
 
