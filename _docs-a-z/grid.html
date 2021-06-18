@@ -10,18 +10,172 @@ title: "Grid"
 </div>
 <!-- .container -->
 
-<hr class="section-start">
+<figure class="container medium margin-y-4">
+
+    <div class="grid grid--gap-border grid--cell-fill text-align-center font-size-md">
+
+        <div class="grid__cell grid--cell-1">
+            <div class="padding-2 theme-primary">
+                <p>1</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-11">
+            <div class="padding-2 theme-primary">
+                <p>11</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-2">
+            <div class="padding-2 theme-primary">
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-10">
+            <div class="padding-2 theme-primary">
+                <p>10</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-3">
+            <div class="padding-2 theme-primary">
+                <p>3</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-9">
+            <div class="padding-2 theme-primary">
+                <p>9</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-4">
+            <div class="padding-2 theme-primary">
+                <p>4</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-8">
+            <div class="padding-2 theme-primary">
+                <p>8</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-5">
+            <div class="padding-2 theme-primary">
+                <p>5</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-7">
+            <div class="padding-2 theme-primary">
+                <p>7</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-6">
+            <div class="padding-2 theme-primary">
+                <p>6</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-6">
+            <div class="padding-2 theme-primary">
+                <p>6</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-4">
+            <div class="padding-2 theme-primary">
+                <p>4</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-4">
+            <div class="padding-2 theme-primary">
+                <p>4</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-4">
+            <div class="padding-2 theme-primary">
+                <p>4</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-3">
+            <div class="padding-2 theme-primary">
+                <p>3</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-3">
+            <div class="padding-2 theme-primary">
+                <p>3</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-3">
+            <div class="padding-2 theme-primary">
+                <p>3</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-3">
+            <div class="padding-2 theme-primary">
+                <p>3</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-2">
+            <div class="padding-2 theme-primary">
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-2">
+            <div class="padding-2 theme-primary">
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-2">
+            <div class="padding-2 theme-primary">
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-2">
+            <div class="padding-2 theme-primary">
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-2">
+            <div class="padding-2 theme-primary">
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="grid__cell grid--cell-2">
+            <div class="padding-2 theme-primary">
+                <p>2</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- .grid -->
+
+</figure>
+
+<hr class="section-start" id="grid-selectors">
 
 <div class="container narrow margin-y-4">
-
     <h2>Grid Selectors</h2>
-
     <p>
         The <em>Grid</em> component requires a parent <code>.grid</code> selector, and at least one instance of a child <code>.grid__cell</code> selector.
     </p>
-    
-    <!-- Columns are 100% wide until otherwise specified. -->
-
 </div>
 <!-- .container -->
 
@@ -72,19 +226,15 @@ title: "Grid"
         </div>
 
         <div class="grid__cell">
-
             <div class="subtle-fill padding-2 border">
                 <p>02</p>
             </div>
-
         </div>
 
         <div class="grid__cell">
-
             <div class="subtle-fill padding-2 border">
                 <p>03</p>
             </div>
-
         </div>
 
     </div>
@@ -96,23 +246,23 @@ title: "Grid"
 <div class="container narrow margin-y-4">
 
     <p>
-        The <code>.grid__cell</code> selectors are stacked on top of one another because we have not specified any specific desired widths. 
+        The <code>.grid__cell</code> selectors inherit the width of their parent <code>.grid</code> and stack on top of one another when a width modifier class is not present. If a width modifier specific to a breakpoint is present, <code>.grid__cell</code> selectors remain stacked until the viewport width reaches that breakpoint. 
     </p>
 
 </div>
 <!-- .container -->
 
-<hr class="section-start">
+<hr class="section-start" id="grid-cell-width">
 
 <div class="container narrow margin-y-4">
 
-    <h2>Grid Cell Widths</h2>
+    <h2>Grid Cell Width</h2>
 
     <p>
-        There are several ways to apply widths to grid cells. To apply the same width to all <code>.grid__cell</code> selectors, apply the <code>.grid--cells-{x}</code> modifier class to the <code>.grid</code> selector, where <em>x</em> equals their desired width (From 1-12).
+        To specify width to grid cells, use the <code>.grid--cell-{x}</code> modifier class, where <em>x</em> equals their desired width (a number from 1 to 12).
     </p>
     <p>
-       For example, to make a three-column grid using the 12 column system, apply <code>.grid--cells-4</code> to <code>.grid</code> (<em>12</em> total columns divided by <em>3</em> columns equals <em>4</em>).
+        For example, to make a three-column grid using the 12 column grid system, apply <code>.grid--cell-4</code> directly to the <code>.grid</code> selector (Figure 2, line 1).
     </p>
 
 </div>
@@ -123,7 +273,7 @@ title: "Grid"
         <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
             <div class="container narrow">
 
-                <div class="grid grid--cells-4 font-size-md text-align-center">
+                <div class="grid grid--cell-4 font-size-md text-align-center">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -166,9 +316,9 @@ title: "Grid"
 
             </div>
         </div>
-        <pre>
+        <pre data-line="1">
             <code class="language-html">
-                &lt;div class="grid grid--cells-4"&gt;
+                &lt;div class="grid grid--cell-4"&gt;
 
                     &lt;div class="grid__cell"&gt;
                         &lt;!-- ... --&gt;
@@ -204,21 +354,22 @@ title: "Grid"
     </figcaption>
 </figure>
 
-
 <div class="container narrow margin-y-4">
-
     <p>
-        Specific widths can be applied to individual columns. On any <code>.grid__cell</code> selector, apply the modifier class <code>.grid__cell-{x}</code> where <em>x</em> equals the desired width. 
+        The <code>.grid--cell-{x}</code> modifier class works on individual <code>.grid__cell</code> selectors, too. 
     </p>
-
+    <p>
+        Extending on the previous example, let's remove the sixth cell and allow the fifth cell to fill the remaining space. On the fifth <code>.grid__cell</code> instance, notice the <code>.grid--cell-8</code> modifier class (Figure 3, line 19).
+    </p>
 </div>
 <!-- .container -->
+
 <figure class="container medium margin-y-4">
     <div class="example">
         <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
             <div class="container narrow">
 
-                <div class="grid grid--cells-4 font-size-md text-align-center">
+                <div class="grid grid--cell-4 font-size-md text-align-center">
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
@@ -240,13 +391,13 @@ title: "Grid"
 
                     <div class="grid__cell">
                         <div class="subtle-fill padding-2 border">
-                            <p>04</p>
+                            <p>03</p>
                         </div>
                     </div>
 
-                    <div class="grid__cell grid--cell-6">
+                    <div class="grid__cell grid--cell-8">
                         <div class="subtle-fill padding-2 border">
-                            <p>??</p>
+                            <p>05</p>
                         </div>
                     </div>
 
@@ -255,9 +406,9 @@ title: "Grid"
 
             </div>
         </div>
-        <pre>
+        <pre data-line="1,19">
             <code class="language-html">
-                &lt;div class="grid grid--cells-4"&gt;
+                &lt;div class="grid grid--cell-4"&gt;
 
                     &lt;div class="grid__cell"&gt;
                         &lt;!-- ... --&gt;
@@ -270,6 +421,68 @@ title: "Grid"
                     &lt;div class="grid__cell"&gt;
                         &lt;!-- ... --&gt;
                     &lt;/div&gt;
+
+                    &lt;div class="grid__cell"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="grid__cell grid--cell-8"&gt;
+                        &lt;!-- ... --&gt;
+                    &lt;/div&gt;
+
+                &lt;/div>
+                <!-- .grid -->
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 3</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        To create a responsive layout, chain a breakpoint modifier (e.g. <code>.grid--cell-{x}--{y}</code> where <em>x</em> again equals the cell width, and <em>y</em> specifies th desired breakpoint.
+    </p>
+    <p>
+    For example, to make a three-column layout at the <em>medium</em> breakpoint, apply <code>.grid--cell-4--md</code> to the <code>.grid</code> selector (Figure 4, line 1).
+    </p>
+</div>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.style_default_theme_colors }}>
+            <div class="container narrow">
+
+                <div class="grid grid--cell-4--md font-size-md text-align-center">
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>01</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>02</p>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill padding-2 border">
+                            <p>03</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .grid -->
+
+            </div>
+        </div>
+        <pre data-line="1">
+            <code class="language-html">
+                &lt;div class="grid grid--cell-4--md"&gt;
 
                     &lt;div class="grid__cell"&gt;
                         &lt;!-- ... --&gt;
@@ -289,7 +502,7 @@ title: "Grid"
         </pre>
     </div>
     <figcaption>
-        <p>Figure 2</p>
+        <p>Figure 4</p>
     </figcaption>
 </figure>
 
@@ -313,7 +526,7 @@ title: "Grid"
 
         <div class="overflow-hidden margin-y-2 theme-light">
 
-            <div class="grid grid--cells-fill grid--gap-border font-size-sm">
+            <div class="grid grid--cell-fill grid--gap-border font-size-sm">
 
                 <div class="grid__cell">
                     <div class="theme-primary px-1 py-2">
@@ -337,7 +550,7 @@ title: "Grid"
 
         <div class="overflow-hidden margin-y-2 theme-light">
 
-            <div class="grid grid--cells-fill grid--gap-1 font-size-sm text-align-center text-secondary">
+            <div class="grid grid--cell-fill grid--gap-1 font-size-sm text-align-center text-secondary">
 
                <div class="grid__cell">
                    <div class="theme-primary px-1 py-2">
@@ -361,7 +574,7 @@ title: "Grid"
 
         <div class="overflow-hidden margin-y-2 theme-light">
 
-            <div class="grid grid--cells-fill grid--gap-2 font-size-sm text-align-center text-secondary">
+            <div class="grid grid--cell-fill grid--gap-2 font-size-sm text-align-center text-secondary">
 
                 <div class="grid__cell">
                     <div class="theme-primary px-1 py-2">
@@ -385,7 +598,7 @@ title: "Grid"
 
         <div class="overflow-hidden margin-y-2 theme-light">
 
-            <div class="grid grid--cells-fill grid--gap-3 font-size-sm text-align-center text-secondary">
+            <div class="grid grid--cell-fill grid--gap-3 font-size-sm text-align-center text-secondary">
 
                 <div class="grid__cell">
                     <div class="theme-primary px-1 py-2">
@@ -409,7 +622,7 @@ title: "Grid"
 
         <div class="overflow-hidden margin-y-2 theme-light">
 
-            <div class="grid grid--cells-fill grid--gap-4 font-size-sm text-align-center text-secondary">
+            <div class="grid grid--cell-fill grid--gap-4 font-size-sm text-align-center text-secondary">
 
                 <div class="grid__cell">
                     <div class="theme-primary px-1 py-2">
@@ -433,7 +646,7 @@ title: "Grid"
 
         <div class="overflow-hidden margin-y-2 theme-light">
 
-            <div class="grid grid--cells-fill grid--gap-5 font-size-sm text-align-center text-secondary">
+            <div class="grid grid--cell-fill grid--gap-5 font-size-sm text-align-center text-secondary">
 
                 <div class="grid__cell">
                     <div class="theme-primary px-1 py-2">
